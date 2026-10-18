@@ -24,20 +24,6 @@ proxies:
     path: /graphql
     headers:
       Host: 69565ce3109804e7813f98ee.mmdbay.blog
-- type: ss
-  cipher: aes-256-cfb
-  password: ZET59LF6DvCC8KVt
-  name: EPODONIOS
-  server: 5.188.181.201
-  port: 9005
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: KnJGad3FqTvjqbaX
-  name: EPODONIOS
-  server: 5.188.181.201
-  port: 9014
-  udp: true
 - type: trojan
   password: humanity
   name: EPODONIOS
@@ -50,13 +36,40 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- type: ss
-  cipher: aes-256-cfb
-  password: VcFuyXvND2yQWSFY
+- type: vless
+  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
   name: EPODONIOS
-  server: 5.188.181.201
-  port: 9054
+  server: 212.227.235.66
+  port: 2053
   udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  reality-opts:
+    public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk
+    short-id: 29e8dcd2b37aaa7f
+- type: trojan
+  password: humanity
+  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
+  server: 212.227.144.37
+  port: 8443
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- type: vless
+  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
+  name: '🏳[www.v2nodes.com] vless- #13'
+  server: 212.227.235.66
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
 - type: vless
   uuid: dbc8a7a7-4c99-4aff-a50a-9940f992ef88
   name: EPODONIOS
@@ -76,42 +89,6 @@ proxies:
   reality-opts:
     public-key: Jh7CocBJSA55VZcLfXwXwoQ_Hi5pV-L1vv1SY-IrSh4
     short-id: 7642ce57308852e7
-- type: vless
-  uuid: a256aa26-c6ae-4abe-8594-6ed98b18bf27
-  name: EPODONIOS
-  server: 213.182.201.134
-  port: 3090
-  udp: true
-  network: grpc
-- type: vless
-  uuid: a256aa26-c6ae-4abe-8594-6ed98b18bf27
-  name: EPODONIOS
-  server: 213.182.201.130
-  port: 3090
-  udp: true
-  network: grpc
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 212.227.144.37
-  port: 8443
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- type: vless
-  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
-  name: '🏳[www.v2nodes.com] vless- #21'
-  server: 212.227.235.66
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
 - type: vless
   uuid: 1e4668ca-6526-84ac-2a53-28bbc209da13
   name: EPODONIOS
@@ -133,14 +110,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
+  - '🏳[www.v2nodes.com] vless- #13'
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #21'
   - EPODONIOS
 - name: SELECT
   type: select
@@ -149,14 +122,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
+  - '🏳[www.v2nodes.com] vless- #13'
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #21'
   - EPODONIOS
 rules:
 - MATCH,SELECT

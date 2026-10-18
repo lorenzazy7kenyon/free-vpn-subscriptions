@@ -11,10 +11,22 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: d54a7512-dda3-4218-8ae7-c591d300fd7c
+  name: EPODONIOS
+  server: 164.37.224.244
+  port: 25239
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.microsoft.com
+  reality-opts:
+    public-key: 0hYbfdNYeWetabbW1wCcrwi0e1VQA45Jhgi42YxU5nk
+    short-id: 9a382b227140e86f
+- type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇸🇬 新加坡 | SGP
-  server: 103.167.151.85
-  port: 8443
+  name: 🇺🇸 美国 | USA
+  server: 43.174.195.1
+  port: 443
   udp: true
   network: ws
   tls: true
@@ -24,6 +36,71 @@ proxies:
     path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
     headers:
       Host: snip.edgeoneai.cc.cd
+- type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 149.88.23.207
+  port: 18000
+  udp: true
+- type: trojan
+  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
+  name: EPODONIOS
+  server: 139.180.146.200
+  port: 8886
+  udp: true
+  sni: 139.180.146.200
+  skip-cert-verify: true
+- type: vless
+  uuid: c538c9dd-2e3f-488f-a8ca-ac5b7c0773f3
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+  server: 47.237.74.17
+  port: 16263
+  udp: true
+  network: tcp
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇸🇬 新加坡 | SGP
+  server: 188.166.234.177
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  name: EPODONIOS
+  server: 3.0.111.82
+  port: 12972
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+- type: vless
+  uuid: f46182d1-e13b-47d3-97e2-fa5426a93e7c
+  name: EPODONIOS
+  server: 45.132.75.213
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: TpWeZocgNOygOhMo0l7oJawPu7STkn9D-SOa0UppcyY
+    short-id: cd7e85995ae2afc9
 - type: vless
   uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
   name: EPODONIOS
@@ -44,6 +121,39 @@ proxies:
   port: 50573
   udp: true
   sni: Telegram-Leviko_v2ray
+- type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  name: EPODONIOS
+  server: 68.183.227.4
+  port: 8080
+  udp: true
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇸🇬 新加坡 | SGP #7'
+  server: 103.195.191.121
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇸🇬 新加坡 | SGP #1'
+  server: 188.166.234.177
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - type: vless
   uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
   name: EPODONIOS
@@ -59,154 +169,19 @@ proxies:
     headers:
       Host: free-server.techsonic.dev
 - type: vless
-  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
+  uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
   name: EPODONIOS
-  server: 147.93.173.45
-  port: 10444
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: video.yandex.ru
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-- type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: EPODONIOS
-  server: 149.88.23.207
-  port: 18000
-  udp: true
-- type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  name: EPODONIOS
-  server: 68.183.227.4
-  port: 8080
-  udp: true
-- type: vless
-  uuid: c538c9dd-2e3f-488f-a8ca-ac5b7c0773f3
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
-  server: 47.237.74.17
-  port: 16263
-  udp: true
-  network: tcp
-- type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
-  server: 139.162.27.96
-  port: 2096
-  udp: true
-  network: ws
-  tls: true
-  servername: free-server.techsonic.dev
-  ws-opts:
-    path: /free-server.techsonic.devfp=chrome
-    headers:
-      Host: free-server.techsonic.dev
-- type: trojan
-  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
-  name: '🇸🇬[www.v2nodes.com] trojan-SG-... #4'
-  server: 139.180.146.200
-  port: 8886
-  udp: true
-  sni: 139.180.146.200
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇸🇬 新加坡 | SGP
-  server: 51.79.156.240
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知102 809.4KB/s
-  server: 149.88.23.202
-  port: 18000
-  udp: true
-- type: vless
-  uuid: 244d9eab-3311-40c7-b47f-4968dc3088a6
-  name: EPODONIOS
-  server: 88.216.191.10
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: si1.lazeroe.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
-    short-id: 868419504747f6de
-- type: vless
-  uuid: c538c9dd-2e3f-488f-a8ca-ac5b7c0773f3
-  name: EPODONIOS
-  server: 47.237.74.17
-  port: 16263
-  udp: true
-  network: tcp
-- type: vless
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
-  name: EPODONIOS
-  server: 18.140.72.106
-  port: 23070
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: px79hKhwQDhnVMdX3CF8dHKQsAVT8-FJ8ilk7JZAO2U
-    short-id: c7f5ef2673cc86bc
-- type: vless
-  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #5'
-  server: 54.169.200.246
-  port: 41688
+  server: 54.251.9.130
+  port: 24146
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
   servername: www.intel.com
   client-fingerprint: chrome
-- type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #9'
-  server: 3.0.111.82
-  port: 12972
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇸🇬 新加坡 | SGP #1'
-  server: 128.1.186.63
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
+  reality-opts:
+    public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
+    short-id: 7205d9079521832c
 - type: vless
   uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
   name: EPODONIOS
@@ -222,117 +197,18 @@ proxies:
     public-key: eC5S3o9uFN6i_YjDjiALCXbc_dzh3kEm2C5zduDGtS8
     short-id: b7dd999667b0406e
 - type: vless
-  uuid: 20ff936a-8eb5-4d27-9cce-93f2016d467b
-  name: 🇸🇬[www.v2nodes.com] vless-SG-1...
-  server: 45.118.133.249
-  port: 443
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
+  server: 139.162.27.96
+  port: 2096
   udp: true
   network: ws
   tls: true
-  servername: free.nadun.store
+  servername: free-server.techsonic.dev
   ws-opts:
-    path: /fp=firefox
+    path: /free-server.techsonic.devfp=chrome
     headers:
-      Host: free.nadun.store
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇸🇬 新加坡 | SGP
-  server: 54.179.212.2
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇸🇬 新加坡 | SGP #2'
-  server: 188.166.234.177
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: EPODONIOS
-  server: 43.174.193.1
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- type: vless
-  uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
-  name: EPODONIOS
-  server: 54.251.9.130
-  port: 24146
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.intel.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
-    short-id: 7205d9079521832c
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇸🇬 新加坡 | SGP #1'
-  server: 178.93.160.236
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: f46182d1-e13b-47d3-97e2-fa5426a93e7c
-  name: '🇸🇬 新加坡 | SGP #3'
-  server: 45.132.75.213
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- type: ss
-  cipher: chacha20-ietf
-  password: asd123456
-  name: EPODONIOS
-  server: 103.36.91.32
-  port: 8388
-  udp: true
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇺🇸 美国 | USA
-  server: 43.174.195.1
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
-    headers:
-      Host: snip.edgeoneai.cc.cd
+      Host: free-server.techsonic.dev
 - type: vless
   uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
   name: '🇸🇬[www.v2nodes.com] vless-SG-1... #4'
@@ -343,10 +219,93 @@ proxies:
   network: tcp
   tls: true
   servername: www.intel.com
-  client-fingerprint: ios
+  client-fingerprint: chrome
+- type: vless
+  uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
+  server: 46.137.202.178
+  port: 12512
+  udp: true
+  network: tcp
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇸🇬 新加坡 | SGP
+  server: 209.97.165.213
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+  name: EPODONIOS
+  server: 18.140.72.106
+  port: 23070
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: px79hKhwQDhnVMdX3CF8dHKQsAVT8-FJ8ilk7JZAO2U
+    short-id: c7f5ef2673cc86bc
+- type: vless
+  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
+  name: EPODONIOS
+  server: 147.93.173.45
+  port: 10444
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: video.yandex.ru
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+- type: vless
+  uuid: 244d9eab-3311-40c7-b47f-4968dc3088a6
+  name: EPODONIOS
+  server: 88.216.191.10
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: si1.lazeroe.com
+  reality-opts:
+    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+    short-id: 868419504747f6de
+- type: vless
+  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  server: 147.93.173.45
+  port: 10444
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: video.yandex.ru
+  client-fingerprint: safari
+- type: vless
+  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #5'
+  server: 54.169.200.246
+  port: 41688
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.intel.com
+  client-fingerprint: chrome
 - type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: EPODONIOS
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #8'
   server: 3.0.111.82
   port: 12972
   udp: true
@@ -355,28 +314,23 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-- type: vless
-  uuid: d54a7512-dda3-4218-8ae7-c591d300fd7c
+- type: ss
+  cipher: chacha20-ietf
+  password: asd123456
   name: EPODONIOS
-  server: 164.37.224.244
-  port: 25239
+  server: 103.36.91.32
+  port: 8388
+  udp: true
+- type: vless
+  uuid: f46182d1-e13b-47d3-97e2-fa5426a93e7c
+  name: 🇸🇬[www.v2nodes.com] vless-SG-1...
+  server: 45.132.75.213
+  port: 2053
   udp: true
   network: tcp
   tls: true
-  servername: www.microsoft.com
-  reality-opts:
-    public-key: 0hYbfdNYeWetabbW1wCcrwi0e1VQA45Jhgi42YxU5nk
-    short-id: 9a382b227140e86f
-- type: trojan
-  password: UX82473651
-  name: EPODONIOS
-  server: 3.1.252.137
-  port: 443
-  udp: true
-  sni: brave-tomcat.rooster465.autos
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 - type: vless
   uuid: c3e2c992-6721-443f-a051-331cb8a29fad
   name: EPODONIOS
@@ -397,75 +351,67 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇬 新加坡 | SGP
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - 🇺🇸 美国 | USA
   - EPODONIOS
   - EPODONIOS
   - '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
-  - '🇸🇬[www.v2nodes.com] trojan-SG-... #4'
   - 🇸🇬 新加坡 | SGP
-  - 未知102 809.4KB/s
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #5'
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #9'
+  - EPODONIOS
+  - EPODONIOS
+  - '🇸🇬 新加坡 | SGP #7'
   - '🇸🇬 新加坡 | SGP #1'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #4'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
+  - 🇸🇬 新加坡 | SGP
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #5'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #8'
   - EPODONIOS
   - 🇸🇬[www.v2nodes.com] vless-SG-1...
-  - 🇸🇬 新加坡 | SGP
-  - '🇸🇬 新加坡 | SGP #2'
-  - EPODONIOS
-  - EPODONIOS
-  - '🇸🇬 新加坡 | SGP #1'
-  - '🇸🇬 新加坡 | SGP #3'
-  - EPODONIOS
-  - 🇺🇸 美国 | USA
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #4'
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇸🇬 新加坡 | SGP
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - 🇺🇸 美国 | USA
   - EPODONIOS
   - EPODONIOS
   - '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
-  - '🇸🇬[www.v2nodes.com] trojan-SG-... #4'
   - 🇸🇬 新加坡 | SGP
-  - 未知102 809.4KB/s
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #5'
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #9'
+  - EPODONIOS
+  - EPODONIOS
+  - '🇸🇬 新加坡 | SGP #7'
   - '🇸🇬 新加坡 | SGP #1'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #4'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
+  - 🇸🇬 新加坡 | SGP
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #5'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #8'
   - EPODONIOS
   - 🇸🇬[www.v2nodes.com] vless-SG-1...
-  - 🇸🇬 新加坡 | SGP
-  - '🇸🇬 新加坡 | SGP #2'
-  - EPODONIOS
-  - EPODONIOS
-  - '🇸🇬 新加坡 | SGP #1'
-  - '🇸🇬 新加坡 | SGP #3'
-  - EPODONIOS
-  - 🇺🇸 美国 | USA
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #4'
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

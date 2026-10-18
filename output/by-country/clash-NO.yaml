@@ -10,6 +10,13 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  name: EPODONIOS
+  server: 185.213.23.63
+  port: 990
+  udp: true
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: '🇳🇴 挪威 | NOR #1'
@@ -23,13 +30,6 @@ proxies:
     path: /fp=chrome
     headers:
       Host: snip.edgeoneai.cc.cd
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-  name: EPODONIOS
-  server: 185.213.23.63
-  port: 990
-  udp: true
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇳🇴 挪威 | NOR
@@ -50,15 +50,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇳🇴 挪威 | NOR #1'
   - EPODONIOS
+  - '🇳🇴 挪威 | NOR #1'
   - 🇳🇴 挪威 | NOR
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇳🇴 挪威 | NOR #1'
   - EPODONIOS
+  - '🇳🇴 挪威 | NOR #1'
   - 🇳🇴 挪威 | NOR
 rules:
 - MATCH,SELECT

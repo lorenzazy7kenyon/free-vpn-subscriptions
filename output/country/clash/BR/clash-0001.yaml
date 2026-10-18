@@ -12,6 +12,19 @@ dns:
 proxies:
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇧🇷 巴西 | BRA #1'
+  server: 104.64.59.9
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇧🇷 巴西 | BRA
   server: 104.64.59.9
   port: 443
@@ -24,32 +37,19 @@ proxies:
     path: /
     headers:
       Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇧🇷 巴西 | BRA #1'
-  server: 104.64.59.9
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇷 巴西 | BRA
   - '🇧🇷 巴西 | BRA #1'
+  - 🇧🇷 巴西 | BRA
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇧🇷 巴西 | BRA
   - '🇧🇷 巴西 | BRA #1'
+  - 🇧🇷 巴西 | BRA
 rules:
 - MATCH,SELECT

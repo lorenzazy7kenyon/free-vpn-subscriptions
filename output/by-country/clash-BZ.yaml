@@ -19,19 +19,6 @@ proxies:
   network: xhttp
   tls: true
   servername: www.customconfig.ir
-- type: vless
-  uuid: 50414e45-4c5f-5a45-5553-d2eb4b611928
-  name: EPODONIOS
-  server: 45.131.211.116
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: smart-smart-245.mahsayasani1028.workers.dev
-  ws-opts:
-    path: /stream/PANEL_ZEUS/d2eb4b611928/loc-3
-    headers:
-      Host: smart-smart-245.mahsayasani1028.workers.dev
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -39,12 +26,10 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

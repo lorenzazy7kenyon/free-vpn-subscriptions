@@ -12,6 +12,19 @@ dns:
 proxies:
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇸🇬 新加坡 | SGP #2'
+  server: 103.161.178.72
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇸🇬 新加坡 | SGP
   server: 103.161.179.171
   port: 443
@@ -51,36 +64,23 @@ proxies:
     path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
     headers:
       Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇸🇬 新加坡 | SGP #2'
-  server: 103.161.178.72
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇸🇬 新加坡 | SGP #2'
   - 🇸🇬 新加坡 | SGP
   - '🇭🇰 香港 | HKG #4'
   - 🇭🇰 香港 | HKG
-  - '🇸🇬 新加坡 | SGP #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇸🇬 新加坡 | SGP #2'
   - 🇸🇬 新加坡 | SGP
   - '🇭🇰 香港 | HKG #4'
   - 🇭🇰 香港 | HKG
-  - '🇸🇬 新加坡 | SGP #2'
 rules:
 - MATCH,SELECT

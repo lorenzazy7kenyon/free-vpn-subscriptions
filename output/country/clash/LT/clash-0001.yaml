@@ -12,6 +12,19 @@ dns:
 proxies:
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇳🇱 荷兰 | NLD #1'
+  server: 130.78.190.134
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇪🇪 爱沙尼亚 | EST
   server: 130.78.190.134
   port: 443
@@ -22,19 +35,6 @@ proxies:
   client-fingerprint: chrome
   ws-opts:
     path: /
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇳🇱 荷兰 | NLD #1'
-  server: 130.78.190.134
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
     headers:
       Host: snip.edgeoneai.cc.cd
 - type: vless
@@ -57,15 +57,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇪 爱沙尼亚 | EST
   - '🇳🇱 荷兰 | NLD #1'
+  - 🇪🇪 爱沙尼亚 | EST
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇪🇪 爱沙尼亚 | EST
   - '🇳🇱 荷兰 | NLD #1'
+  - 🇪🇪 爱沙尼亚 | EST
   - EPODONIOS
 rules:
 - MATCH,SELECT

@@ -11,19 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  name: EPODONIOS
-  server: 150.40.126.24
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: rs5.univesalsrv.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: X8mPYnsoTd8QCnvFZKSy7VvpSn_nrt_NWJkCUJhFCyE
-    short-id: 4872856d5489c37d
-- type: vless
   uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
   name: 🇷🇸[www.v2nodes.com] vless-RS-4...
   server: 185.48.250.113
@@ -36,6 +23,32 @@ proxies:
     path: /proxyip=ProxyIP.CMLiussss.netfp=chrome
     headers:
       Host: cf3.schzyc.cc.cd
+- type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  name: EPODONIOS
+  server: 150.40.126.22
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: rs4.univesalsrv.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: sXsJ4ET-50TYqlhKZf03nPQr2JIy1F0D4m6lOsI0cAs
+    short-id: 861ac7d66953e55f
+- type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  name: EPODONIOS
+  server: 150.40.126.24
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: rs5.univesalsrv.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: X8mPYnsoTd8QCnvFZKSy7VvpSn_nrt_NWJkCUJhFCyE
+    short-id: 4872856d5489c37d
 - type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
@@ -55,15 +68,17 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
   - 🇷🇸[www.v2nodes.com] vless-RS-4...
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - 🇷🇸[www.v2nodes.com] vless-RS-4...
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

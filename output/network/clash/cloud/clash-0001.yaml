@@ -35,7 +35,7 @@ proxies:
       Host: snip.edgeoneai.cc.cd
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: EPODONIOS
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -44,6 +44,13 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  name: EPODONIOS
+  server: 102.37.156.224
+  port: 443
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -52,6 +59,7 @@ proxy-groups:
   proxies:
   - 未知7
   - 🇫🇷 法国 | FRA
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - EPODONIOS
 - name: SELECT
   type: select
@@ -59,6 +67,7 @@ proxy-groups:
   - AUTO
   - 未知7
   - 🇫🇷 法国 | FRA
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - EPODONIOS
 rules:
 - MATCH,SELECT
