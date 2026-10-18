@@ -10,6 +10,18 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: a04c750d-3b71-493b-b2c1-6473ff1209dd
+  name: EPODONIOS
+  server: 79.132.141.248
+  port: 8443
+  udp: true
+  network: tcp
+  tls: true
+  servername: npdev.uk
+  reality-opts:
+    public-key: rp_TkuctK207nrtJP6AYTvsWWkHToQLtRLOSYP3zpg0
+    short-id: ac6bf30f3e
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
@@ -24,20 +36,16 @@ proxies:
   port: 7443
   udp: true
   sni: node18.overcdn.ru
-- type: ss
-  cipher: aes-128-gcm
-  password: 2bf536a4bd6008511734a505d248de2c
-  name: 🏳[www.v2nodes.com] ss-
-  server: 86.106.84.194
-  port: 13261
+- type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  name: '🏳[www.v2nodes.com] vless- #12'
+  server: 208.69.78.217
+  port: 2053
   udp: true
-- type: trojan
-  password: Masir_Sefid
-  name: EPODONIOS
-  server: 84.234.31.249
-  port: 443
-  udp: true
-  sni: store.steampowered.com
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 - type: vless
   uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
   name: EPODONIOS
@@ -51,26 +59,20 @@ proxies:
   reality-opts:
     public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
     short-id: 4be4110078ebed4a
-- type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  name: '🏳[www.v2nodes.com] vless- #6'
-  server: 208.69.78.217
-  port: 2053
+- type: ss
+  cipher: aes-128-gcm
+  password: 2bf536a4bd6008511734a505d248de2c
+  name: '🏳[www.v2nodes.com] ss- #5'
+  server: 86.106.84.194
+  port: 13261
   udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: hysteria2
-  password: 3a702d4d1de4949005d8431220e040fb
-  name: 🛩️61@oneclickvpnkeys
-  server: 152.67.75.161
+- type: trojan
+  password: Masir_Sefid
+  name: EPODONIOS
+  server: 84.234.31.249
   port: 443
   udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: c13f29db6a638ad2b211b9ce2669ef27
+  sni: store.steampowered.com
 - type: hysteria2
   password: capadm96216165
   name: 🇨🇭192087 | ⚡️Telegram = t.me/v...
@@ -81,6 +83,16 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
+- type: hysteria2
+  password: 3a702d4d1de4949005d8431220e040fb
+  name: 🛩️61@oneclickvpnkeys
+  server: 152.67.75.161
+  port: 443
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: c13f29db6a638ad2b211b9ce2669ef27
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -89,23 +101,25 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
-  - 🏳[www.v2nodes.com] ss-
   - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #12'
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #6'
-  - 🛩️61@oneclickvpnkeys
+  - '🏳[www.v2nodes.com] ss- #5'
+  - EPODONIOS
   - 🇨🇭192087 | ⚡️Telegram = t.me/v...
+  - 🛩️61@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
   - EPODONIOS
-  - 🏳[www.v2nodes.com] ss-
   - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #12'
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #6'
-  - 🛩️61@oneclickvpnkeys
+  - '🏳[www.v2nodes.com] ss- #5'
+  - EPODONIOS
   - 🇨🇭192087 | ⚡️Telegram = t.me/v...
+  - 🛩️61@oneclickvpnkeys
 rules:
 - MATCH,SELECT

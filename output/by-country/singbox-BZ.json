@@ -13,8 +13,28 @@
       "uuid": "00600051-7476-4d50-b09b-02f3638c279f"
     },
     {
+      "server": "45.131.211.116",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "smart-smart-245.mahsayasani1028.workers.dev"
+      },
+      "transport": {
+        "headers": {
+          "Host": "smart-smart-245.mahsayasani1028.workers.dev"
+        },
+        "path": "/stream/PANEL_ZEUS/d2eb4b611928/loc-3",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "50414e45-4c5f-5a45-5553-d2eb4b611928"
+    },
+    {
       "interval": "5m",
       "outbounds": [
+        "EPODONIOS",
         "EPODONIOS"
       ],
       "tag": "auto",
@@ -24,6 +44,7 @@
     {
       "outbounds": [
         "auto",
+        "EPODONIOS",
         "EPODONIOS"
       ],
       "tag": "select",

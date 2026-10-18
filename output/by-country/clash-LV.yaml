@@ -10,18 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
-  name: EPODONIOS
-  server: 138.124.63.224
-  port: 8444
-  udp: true
-  network: grpc
-  tls: true
-  servername: github.com
-  reality-opts:
-    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-    short-id: 457fab2ac885dbe0
 - type: trojan
   password: humanity
   name: EPODONIOS
@@ -35,8 +23,21 @@ proxies:
     headers:
       Host: www.pleadcourt.org
 - type: vless
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  name: EPODONIOS
+  server: 185.220.223.24
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: lv.aiage.work
+  reality-opts:
+    public-key: ds-U8G06uZvV9qFhAeO16dwS9Nkcw_coYr_4puEUGFg
+    short-id: 3c6afdc4124d0560
+- type: vless
   uuid: a4801105-c0c7-4cab-87c6-f257ff2afc09
-  name: '🏳[www.v2nodes.com] vless- #36'
+  name: '🏳[www.v2nodes.com] vless- #55'
   server: 31.57.106.241
   port: 443
   udp: true
@@ -45,6 +46,13 @@ proxies:
   tls: true
   servername: www.lmt.lv
   client-fingerprint: firefox
+- type: trojan
+  password: humanity
+  name: '🇳🇱[www.v2nodes.com] trojan-NL-... #12'
+  server: 185.22.172.249
+  port: 443
+  udp: true
+  sni: 185.22.172.249
 - type: vless
   uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
   name: EPODONIOS
@@ -59,28 +67,17 @@ proxies:
     public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
     short-id: 33acba1b
 - type: vless
-  uuid: bc659d88-a1e0-4c65-a49a-7b51b26a7a7f
+  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
   name: EPODONIOS
-  server: 87.192.47.10
-  port: 52006
+  server: 138.124.63.224
+  port: 8444
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: grpc
   tls: true
-  servername: grok.setlisting.ru
-  client-fingerprint: chrome
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 185.22.172.249
-  port: 443
-  udp: true
-  sni: www.pleadcourt.org
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
+  servername: github.com
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+    short-id: 457fab2ac885dbe0
 - type: vless
   uuid: 17acda85-dada-41dd-8add-ad0ad179fc91
   name: EPODONIOS
@@ -88,19 +85,6 @@ proxies:
   port: 8445
   udp: true
   network: tcp
-- type: vless
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  name: EPODONIOS
-  server: 185.220.223.24
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: lv.aiage.work
-  reality-opts:
-    public-key: ds-U8G06uZvV9qFhAeO16dwS9Nkcw_coYr_4puEUGFg
-    short-id: 3c6afdc4124d0560
 - type: hysteria2
   password: 990c8eb6-4c4e-4277-8602-79af8402cdd0
   name: 🇱🇻196239 | ⚡️Telegram = t.me/S...
@@ -116,9 +100,8 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #36'
-  - EPODONIOS
-  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #55'
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #12'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -129,9 +112,8 @@ proxy-groups:
   - AUTO
   - EPODONIOS
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #36'
-  - EPODONIOS
-  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #55'
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #12'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

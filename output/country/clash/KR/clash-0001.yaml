@@ -12,27 +12,6 @@ dns:
 proxies:
 - type: ss
   cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 8008
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: TEzjfAYq2IjtuoS
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 6679
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 9090
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
   password: lGqs95QkFHo2NV
   name: EPODONIOS
   server: 141.164.45.187
@@ -45,24 +24,27 @@ proxies:
   server: 141.164.45.187
   port: 7001
   udp: true
-- type: vmess
-  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
-  alterId: 0
-  cipher: auto
-  network: ws
+- type: ss
+  cipher: aes-256-gcm
+  password: XKFKl2rULjIp74
   name: EPODONIOS
-  server: 183.109.131.75
-  port: 20086
+  server: 141.164.45.187
+  port: 8008
   udp: true
-  ws-opts:
-    path: /
 - type: vless
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  name: '🇰🇷 韩国 | KOR #1'
-  server: 43.202.48.94
-  port: 443
+  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
+  name: EPODONIOS
+  server: 47.80.19.173
+  port: 2053
   udp: true
+  flow: xtls-rprx-vision
   network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms
+    short-id: 3c4041d3
 - type: vless
   uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
   name: 🇰🇷 韩国 | KOR
@@ -78,25 +60,32 @@ proxies:
   port: 6123
   udp: true
 - type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: EPODONIOS
-  server: 3.39.4.109
-  port: 18967
+  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+  name: '🇰🇷 韩国 | KOR #1'
+  server: 43.202.48.94
+  port: 443
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
-  tls: true
-  servername: www.apple.com
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-- type: ss
-  cipher: aes-256-gcm
-  password: ac9c0a7b
+- type: vmess
+  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+  alterId: 0
+  cipher: auto
+  network: tcp
   name: EPODONIOS
-  server: 211.174.113.172
-  port: 49642
+  server: 146.56.112.110
+  port: 8888
   udp: true
+- type: vmess
+  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 183.109.131.75
+  port: 20086
+  udp: true
+  ws-opts:
+    path: /
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -107,11 +96,9 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - '🇰🇷 韩国 | KOR #1'
   - 🇰🇷 韩国 | KOR
   - EPODONIOS
+  - '🇰🇷 韩国 | KOR #1'
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
@@ -122,11 +109,9 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - '🇰🇷 韩国 | KOR #1'
   - 🇰🇷 韩国 | KOR
   - EPODONIOS
+  - '🇰🇷 韩国 | KOR #1'
   - EPODONIOS
   - EPODONIOS
 rules:

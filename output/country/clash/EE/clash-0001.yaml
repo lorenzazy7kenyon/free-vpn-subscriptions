@@ -10,6 +10,13 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: trojan
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  name: EPODONIOS
+  server: 109.206.241.10
+  port: 449
+  udp: true
+  sni: russiapower.accesscam.org
 - type: vless
   uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
   name: EPODONIOS
@@ -24,36 +31,33 @@ proxies:
   reality-opts:
     public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
     short-id: ad6e08b22389abd2
-- type: trojan
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
-  name: 🇪🇪[www.v2nodes.com] trojan-EE-...
-  server: 109.206.241.10
-  port: 449
-  udp: true
-  sni: russiapower.accesscam.org
 - type: vless
-  uuid: 70ad3e9c-89e6-4ee3-91c3-7cb10a4e483a
+  uuid: 43212c32-01f2-4356-b216-67dc1c178262
   name: EPODONIOS
-  server: 165.231.177.114
+  server: 143.246.41.31
   port: 443
   udp: true
-  network: xhttp
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: cab-6ac48f09.ferrin.uk
-  client-fingerprint: chrome
-- type: vless
-  uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
-  name: EPODONIOS
-  server: 201.7.25.100
-  port: 24446
-  udp: true
-  network: grpc
-  tls: true
-  servername: willow.cdn.cachefleet.com
+  servername: ees92.shhflow.xyz
   client-fingerprint: chrome
   reality-opts:
-    public-key: w9JCByLSU3NGciCv2iceOz4TRL4swv8jfIAYoaKSyEw
-    short-id: a0938b702257f780
+    public-key: h1xVB_-djXL6A7tvnnVbjV4bYKplHOuN0bgmFJQE6AE
+    short-id: 7f3a91c2d8e640ab
+- type: vless
+  uuid: 0011d187-d066-48f6-957c-a6983dd63a77
+  name: EPODONIOS
+  server: 138.124.100.29
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: est.netvora.space
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: KEpkyrOY2wV5h8_bA6doDT1e-lFjYd1jGHKDtDl8hSk
+    short-id: 141fb733511e7553
 - type: vless
   uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
   name: EPODONIOS
@@ -83,18 +87,28 @@ proxies:
     public-key: VfyS9hoKlYU2l3oZ-T6RN2JzjWgtrIC7-VjseHCeBGE
     short-id: 0f4dacf33211e04f
 - type: vless
-  uuid: 0011d187-d066-48f6-957c-a6983dd63a77
+  uuid: 70ad3e9c-89e6-4ee3-91c3-7cb10a4e483a
   name: EPODONIOS
-  server: 138.124.100.29
+  server: 165.231.177.114
   port: 443
   udp: true
-  network: tcp
+  network: xhttp
   tls: true
-  servername: est.netvora.space
+  servername: cab-6ac48f09.ferrin.uk
+  client-fingerprint: chrome
+- type: vless
+  uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
+  name: EPODONIOS
+  server: 201.7.25.100
+  port: 24446
+  udp: true
+  network: grpc
+  tls: true
+  servername: willow.cdn.cachefleet.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: KEpkyrOY2wV5h8_bA6doDT1e-lFjYd1jGHKDtDl8hSk
-    short-id: 141fb733511e7553
+    public-key: w9JCByLSU3NGciCv2iceOz4TRL4swv8jfIAYoaKSyEw
+    short-id: a0938b702257f780
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -102,7 +116,8 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - 🇪🇪[www.v2nodes.com] trojan-EE-...
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -113,7 +128,8 @@ proxy-groups:
   proxies:
   - AUTO
   - EPODONIOS
-  - 🇪🇪[www.v2nodes.com] trojan-EE-...
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
