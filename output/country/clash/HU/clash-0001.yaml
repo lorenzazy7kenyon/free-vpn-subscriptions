@@ -13,19 +13,6 @@ proxies:
 - type: vless
   uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
   name: EPODONIOS
-  server: 85.155.242.37
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: hu1.aiage.work
-  reality-opts:
-    public-key: mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg
-    short-id: f8379ce795f2e5ed
-- type: vless
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  name: EPODONIOS
   server: 85.155.242.38
   port: 443
   udp: true
@@ -49,6 +36,19 @@ proxies:
     path: pyip=bpb.yousef.isegaro.comfp=random
     headers:
       Host: free.cndyw.ggff.net
+- type: vless
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  name: EPODONIOS
+  server: 85.155.242.37
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: hu1.aiage.work
+  reality-opts:
+    public-key: mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg
+    short-id: f8379ce795f2e5ed
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -56,14 +56,14 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
   - 🇭🇺[www.v2nodes.com] vless-HU-6...
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
   - 🇭🇺[www.v2nodes.com] vless-HU-6...
+  - EPODONIOS
 rules:
 - MATCH,SELECT

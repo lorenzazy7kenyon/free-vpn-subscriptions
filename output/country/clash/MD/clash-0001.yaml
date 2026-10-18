@@ -11,30 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: 🇲🇩[www.v2nodes.com] vless-MD-4...
-  server: 185.153.198.86
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
-    headers:
-      Host: free.cndyw.ggff.net
-- type: vless
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  name: EPODONIOS
-  server: 89.35.14.33
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: md4.univesalsrv.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: TZVMqglhHzteJ6t34mtku75LKzXNq0CB6glKYMAH6zg
-    short-id: 8e07337954f9823f
-- type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
   server: 89.35.14.32
@@ -47,6 +23,17 @@ proxies:
   reality-opts:
     public-key: q38CddDj2g-XNDc0uW1m6S6b8iGY_Bne2RwX7C_FYCQ
     short-id: 9a72d40f1ff882b3
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: 🇲🇩[www.v2nodes.com] vless-MD-4...
+  server: 185.153.198.86
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
+    headers:
+      Host: free.cndyw.ggff.net
 - type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
@@ -76,6 +63,19 @@ proxies:
 - type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
+  server: 89.35.14.33
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: md4.univesalsrv.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: TZVMqglhHzteJ6t34mtku75LKzXNq0CB6glKYMAH6zg
+    short-id: 8e07337954f9823f
+- type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  name: EPODONIOS
   server: 89.35.14.34
   port: 443
   udp: true
@@ -92,8 +92,8 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇩[www.v2nodes.com] vless-MD-4...
   - EPODONIOS
+  - 🇲🇩[www.v2nodes.com] vless-MD-4...
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -102,8 +102,8 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇲🇩[www.v2nodes.com] vless-MD-4...
   - EPODONIOS
+  - 🇲🇩[www.v2nodes.com] vless-MD-4...
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
