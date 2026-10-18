@@ -1,0 +1,55 @@
+mode: rule
+log-level: info
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- type: vless
+  uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e
+  name: EPODONIOS
+  server: 52.50.233.226
+  port: 22222
+  udp: true
+  network: ws
+  tls: true
+  servername: telegram-channel-vlessconfig.sohala.uk
+  ws-opts:
+    path: /telegram-channel-vlessconfig-ws
+    headers:
+      Host: telegram-channel-vlessconfig.sohala.uk
+- type: vless
+  uuid: b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
+  name: EPODONIOS
+  server: 185.18.221.188
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: rnxq-1lpi3m.linmeisoft.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
+    headers:
+      Host: rnxq-1lpi3m.linmeisoft.com
+proxy-groups:
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - EPODONIOS
+  - EPODONIOS
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - EPODONIOS
+  - EPODONIOS
+rules:
+- MATCH,SELECT

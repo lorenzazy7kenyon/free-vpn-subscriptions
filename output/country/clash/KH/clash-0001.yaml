@@ -1,0 +1,40 @@
+mode: rule
+log-level: info
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- type: vless
+  uuid: 05d7a479-a099-40cf-aecf-41aa934767b0
+  name: EPODONIOS
+  server: 93.152.215.176
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: nl5.hap-plus.ru
+  client-fingerprint: chrome
+  ws-opts:
+    path: /api/v1/events
+    headers:
+      Host: nl5.hap-plus.ru
+proxy-groups:
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - EPODONIOS
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - EPODONIOS
+rules:
+- MATCH,SELECT

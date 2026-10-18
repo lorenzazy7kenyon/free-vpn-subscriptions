@@ -1,0 +1,44 @@
+{
+  "outbounds": [
+    {
+      "password": "humanity",
+      "server": "www.hcaptcha.com",
+      "server_port": 443,
+      "tag": "🇺🇸US美国",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.volumeroot.com"
+      },
+      "transport": {
+        "path": "/assignment",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "🇺🇸US美国"
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "🇺🇸US美国"
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

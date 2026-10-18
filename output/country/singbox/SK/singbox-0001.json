@@ -1,0 +1,78 @@
+{
+  "outbounds": [
+    {
+      "server": "80.243.228.25",
+      "server_port": 2085,
+      "tag": "EPODONIOS",
+      "transport": {
+        "service_name": "vless",
+        "type": "grpc"
+      },
+      "type": "vless",
+      "uuid": "122c1f94-fd58-491e-8b5d-54e4e6175936"
+    },
+    {
+      "server": "80.243.228.51",
+      "server_port": 2085,
+      "tag": "EPODONIOS",
+      "transport": {
+        "service_name": "vless",
+        "type": "grpc"
+      },
+      "type": "vless",
+      "uuid": "2928b6cd-a3f0-44d9-bdfe-71bbb4706326"
+    },
+    {
+      "server": "80.243.228.10",
+      "server_port": 2085,
+      "tag": "EPODONIOS",
+      "transport": {
+        "service_name": "vless",
+        "type": "grpc"
+      },
+      "type": "vless",
+      "uuid": "2be02fad-902b-4b0a-9b50-385d868bedd4"
+    },
+    {
+      "server": "80.243.228.143",
+      "server_port": 2085,
+      "tag": "EPODONIOS",
+      "transport": {
+        "service_name": "vless",
+        "type": "grpc"
+      },
+      "type": "vless",
+      "uuid": "6132cc4c-5913-4165-98c8-8c112e5ffc6a"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS"
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS"
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

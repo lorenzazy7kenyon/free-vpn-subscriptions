@@ -1,0 +1,87 @@
+{
+  "outbounds": [
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "67.159.17.62",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "U_E3xSI6QY_Mj-3zjkB4esvMj0aVvYH6W6oHOR50XBs",
+          "short_id": "10debbdf94767541"
+        },
+        "server_name": "filesconvert.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "1e6fed5b-5edc-4ddb-a268-79d7fae4365c"
+    },
+    {
+      "server": "138.124.90.40",
+      "server_port": 35872,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "PnvtzlkQxMBo2VR7EB4BxqE3EgL6c_92Z8MYijqN2hI",
+          "short_id": "ee740b4fd675"
+        },
+        "server_name": "www.icloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "634394fa-957c-4e1b-ba31-ec2bc417c356"
+    },
+    {
+      "password": "Hc9_NX924RE_Mn948rgrwiub_m93V84nll",
+      "server": "5.254.51.108",
+      "server_port": 9443,
+      "tag": "@v2ray_configs_pools 🌍 ⚡️",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "keyhop-voxility-at.dynuddns.com"
+      },
+      "type": "hysteria2"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "EPODONIOS",
+        "EPODONIOS",
+        "@v2ray_configs_pools 🌍 ⚡️"
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "EPODONIOS",
+        "EPODONIOS",
+        "@v2ray_configs_pools 🌍 ⚡️"
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

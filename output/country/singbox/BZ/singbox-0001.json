@@ -1,0 +1,40 @@
+{
+  "outbounds": [
+    {
+      "server": "45.131.6.242",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.customconfig.ir"
+      },
+      "type": "vless",
+      "uuid": "00600051-7476-4d50-b09b-02f3638c279f"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "EPODONIOS"
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "EPODONIOS"
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

@@ -1,0 +1,40 @@
+mode: rule
+log-level: info
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- type: vless
+  uuid: 9638a83e-f1f7-4cc8-a602-924965d9534f
+  name: EPODONIOS
+  server: 23.251.56.78
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: E6Y9lNizCXo8tJ6EXwLYQIjyIwmxIs4foyRlY2MgkjA
+    short-id: 59ccabb0a1483c4b
+proxy-groups:
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - EPODONIOS
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - EPODONIOS
+rules:
+- MATCH,SELECT

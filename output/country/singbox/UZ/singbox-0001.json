@@ -1,0 +1,52 @@
+{
+  "outbounds": [
+    {
+      "server": "157.22.133.130",
+      "server_port": 2087,
+      "tag": "EPODONIOS",
+      "transport": {
+        "path": "/5021201ef53f",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "e6d369db-22be-4f30-8685-455c717aaa8c"
+    },
+    {
+      "server": "157.22.133.130",
+      "server_port": 2087,
+      "tag": "EPODONIOS",
+      "transport": {
+        "path": "/5021201ef53f",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "e6d369db-22be-4f30-8685-455c717aaa8c"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "EPODONIOS",
+        "EPODONIOS"
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "EPODONIOS",
+        "EPODONIOS"
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

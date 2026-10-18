@@ -1,0 +1,47 @@
+{
+  "outbounds": [
+    {
+      "server": "202.37.33.80",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "support.zoom.us.yxls.eu.cc"
+      },
+      "transport": {
+        "headers": {
+          "Host": "support.zoom.us.yxls.eu.cc"
+        },
+        "path": "/id-tksi/?TELEGRAM-leviconfigs_leviconfigs?ed=512",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "5aafc2be-9348-4dec-b896-f4a91253bbca"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "EPODONIOS"
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "EPODONIOS"
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

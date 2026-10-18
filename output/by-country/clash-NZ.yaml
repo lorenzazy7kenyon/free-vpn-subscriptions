@@ -1,0 +1,39 @@
+mode: rule
+log-level: info
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- type: vless
+  uuid: 5aafc2be-9348-4dec-b896-f4a91253bbca
+  name: EPODONIOS
+  server: 202.37.33.80
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: support.zoom.us.yxls.eu.cc
+  ws-opts:
+    path: /id-tksi/?TELEGRAM-leviconfigs_leviconfigs?ed=512
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+proxy-groups:
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - EPODONIOS
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - EPODONIOS
+rules:
+- MATCH,SELECT

@@ -1,0 +1,117 @@
+mode: rule
+log-level: info
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- type: vless
+  uuid: 06d44c57-8e1a-41f4-b9c4-65d35869e078
+  name: EPODONIOS
+  server: 78.17.158.16
+  port: 13868
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.ea.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: W24D31y_1ZaASX1bq3d85DQaQd_3NcJQCvg1wmCn-Uo
+    short-id: e852dc
+- type: vless
+  uuid: 1e4668ca-6526-84ac-2a53-28bbc209da13
+  name: EPODONIOS
+  server: 170.168.97.6
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: download.nvidia.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+- type: vless
+  uuid: 2ee26119-94e5-40b4-ba3a-16354021b600
+  name: EPODONIOS
+  server: 185.18.250.127
+  port: 2096
+  udp: true
+  network: ws
+  tls: true
+  servername: 69565ce3109804e7813f98ee.mmdbay.blog
+  client-fingerprint: chrome
+  ws-opts:
+    path: /graphql
+    headers:
+      Host: 69565ce3109804e7813f98ee.mmdbay.blog
+- type: vless
+  uuid: a256aa26-c6ae-4abe-8594-6ed98b18bf27
+  name: EPODONIOS
+  server: 213.182.201.134
+  port: 3090
+  udp: true
+  network: grpc
+- type: vless
+  uuid: 9e739716-99c0-53e0-96c6-d0fde1a16b1d
+  name: EPODONIOS
+  server: 79.143.92.57
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: gitlab.io
+  reality-opts:
+    public-key: 8IZiiBEPszvgBeDmpdO2hpSi4K9_dm_fzNCrNxOprRY
+    short-id: c86d3b1b
+- type: vless
+  uuid: a256aa26-c6ae-4abe-8594-6ed98b18bf27
+  name: EPODONIOS
+  server: 213.182.201.130
+  port: 3090
+  udp: true
+  network: grpc
+- type: vless
+  uuid: d2042070-c247-4226-a3ac-15337923e00d
+  name: EPODONIOS
+  server: 45.196.208.84
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: storage.yandex.net
+  reality-opts:
+    public-key: zr8_rtHm86s_G1gfRwNtunStGngYZSdYkA3PyBFXpDg
+    short-id: 28047c78b3f5ee2c
+proxy-groups:
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+rules:
+- MATCH,SELECT

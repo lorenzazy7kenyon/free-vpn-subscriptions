@@ -1,0 +1,115 @@
+mode: rule
+log-level: info
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  name: EPODONIOS
+  server: 89.35.14.30
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: md1.univesalsrv.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: xWejOQUn2koOUorUPSrHMLM-lyHlZ441KzxKc9bLmkY
+    short-id: 221ba6174224ca5b
+- type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  name: EPODONIOS
+  server: 89.35.14.31
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: md2.univesalsrv.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: JXFsWHYjhAcR-7yz9tuCTMdcfuiyC9a-C9ewA55Z63o
+    short-id: d36a38659ce106cb
+- type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  name: EPODONIOS
+  server: 89.35.14.34
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: md5.univesalsrv.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 99MRki6b93wC-hhDHe9yq3IXE3KtPGw4RkFAnpI-8gg
+    short-id: aa9884f2982b7d3c
+- type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  name: EPODONIOS
+  server: 89.35.14.32
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: md3.univesalsrv.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: q38CddDj2g-XNDc0uW1m6S6b8iGY_Bne2RwX7C_FYCQ
+    short-id: 9a72d40f1ff882b3
+- type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  name: EPODONIOS
+  server: 89.35.14.33
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: md4.univesalsrv.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: TZVMqglhHzteJ6t34mtku75LKzXNq0CB6glKYMAH6zg
+    short-id: 8e07337954f9823f
+- type: vless
+  uuid: b406bc51-9002-474c-beae-b194b02c91da
+  name: EPODONIOS
+  server: 144.31.131.241
+  port: 8443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: mold.speedload.online
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs
+    short-id: a20d3ed244c76426
+proxy-groups:
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+rules:
+- MATCH,SELECT

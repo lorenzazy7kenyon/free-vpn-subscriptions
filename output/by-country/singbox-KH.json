@@ -1,0 +1,51 @@
+{
+  "outbounds": [
+    {
+      "server": "93.152.215.176",
+      "server_port": 8443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "nl5.hap-plus.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "nl5.hap-plus.ru"
+        },
+        "path": "/api/v1/events",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "05d7a479-a099-40cf-aecf-41aa934767b0"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "EPODONIOS"
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "EPODONIOS"
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

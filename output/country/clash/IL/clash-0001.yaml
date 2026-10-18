@@ -1,0 +1,69 @@
+mode: rule
+log-level: info
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- type: vless
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  name: EPODONIOS
+  server: 212.179.49.187
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: eu-central.cendora.ru
+  reality-opts:
+    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
+    short-id: 00bca5982f82d083
+- type: vless
+  uuid: adf1fac3-cf57-ff40-574c-cf514457eb3f
+  name: EPODONIOS
+  server: 83.143.106.4
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: res.cdn.office.net
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 4g8R0-Acc1LjppgvUopldH0Wg3JA2tPXvYB96aJnigo
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: EPODONIOS
+  server: 185.253.75.119
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: ccc.010304.xyz
+proxy-groups:
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+rules:
+- MATCH,SELECT

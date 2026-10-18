@@ -1,0 +1,37 @@
+mode: rule
+log-level: info
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- type: vless
+  uuid: cd842ef8-9577-47f3-83ca-627147ed291b
+  name: EPODONIOS
+  server: 38.54.59.209
+  port: 2087
+  udp: true
+  network: ws
+  ws-opts:
+    path: /d1000b16fe76
+    headers:
+      Host: Telegram-Leviko_v2ray
+proxy-groups:
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - EPODONIOS
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - EPODONIOS
+rules:
+- MATCH,SELECT

@@ -1,0 +1,83 @@
+{
+  "outbounds": [
+    {
+      "server": "1.1.1.1",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "1.1.1.1"
+      },
+      "transport": {
+        "headers": {
+          "Host": "1.1.1.1"
+        },
+        "path": "/?TELEGRAM--v2ray_configs_pools?ed=512",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "obfs": {
+        "password": "850a3fb1cd33a28f12d837578ae1a2e7",
+        "type": "salamander"
+      },
+      "password": "633bc3be486b646190661ac2387c150a",
+      "server": "152.67.115.203",
+      "server_port": 443,
+      "tag": "🇦🇺 澳大利亚 | AUS",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "www.bing.com"
+      },
+      "type": "hysteria2"
+    },
+    {
+      "obfs": {
+        "password": "b42d90fa667942aebc734d60",
+        "type": "salamander"
+      },
+      "password": "b42d90fa667942aebc734d60",
+      "server": "137.23.2.56",
+      "server_port": 20000,
+      "tag": "برای اتصال دائمی جوین شو🥏 Tele...",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "rmgyvpn.rest"
+      },
+      "type": "hysteria2"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "EPODONIOS",
+        "🇦🇺 澳大利亚 | AUS",
+        "برای اتصال دائمی جوین شو🥏 Tele..."
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "EPODONIOS",
+        "🇦🇺 澳大利亚 | AUS",
+        "برای اتصال دائمی جوین شو🥏 Tele..."
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

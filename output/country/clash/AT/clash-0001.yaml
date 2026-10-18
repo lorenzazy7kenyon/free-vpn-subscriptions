@@ -1,0 +1,64 @@
+mode: rule
+log-level: info
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- type: vless
+  uuid: 1e6fed5b-5edc-4ddb-a268-79d7fae4365c
+  name: EPODONIOS
+  server: 67.159.17.62
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: filesconvert.org
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: U_E3xSI6QY_Mj-3zjkB4esvMj0aVvYH6W6oHOR50XBs
+    short-id: 10debbdf94767541
+- type: vless
+  uuid: 634394fa-957c-4e1b-ba31-ec2bc417c356
+  name: EPODONIOS
+  server: 138.124.90.40
+  port: 35872
+  udp: true
+  network: xhttp
+  tls: true
+  servername: www.icloud.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: PnvtzlkQxMBo2VR7EB4BxqE3EgL6c_92Z8MYijqN2hI
+    short-id: ee740b4fd675
+- type: hysteria2
+  password: Hc9_NX924RE_Mn948rgrwiub_m93V84nll
+  name: '@v2ray_configs_pools 🌍 ⚡️'
+  server: 5.254.51.108
+  port: 9443
+  udp: true
+  sni: keyhop-voxility-at.dynuddns.com
+proxy-groups:
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - EPODONIOS
+  - EPODONIOS
+  - '@v2ray_configs_pools 🌍 ⚡️'
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - EPODONIOS
+  - EPODONIOS
+  - '@v2ray_configs_pools 🌍 ⚡️'
+rules:
+- MATCH,SELECT

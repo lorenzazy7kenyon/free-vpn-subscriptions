@@ -1,0 +1,162 @@
+{
+  "outbounds": [
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "78.17.158.16",
+      "server_port": 13868,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "W24D31y_1ZaASX1bq3d85DQaQd_3NcJQCvg1wmCn-Uo",
+          "short_id": "e852dc"
+        },
+        "server_name": "www.ea.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "06d44c57-8e1a-41f4-b9c4-65d35869e078"
+    },
+    {
+      "server": "170.168.97.6",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
+        },
+        "server_name": "download.nvidia.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "1e4668ca-6526-84ac-2a53-28bbc209da13"
+    },
+    {
+      "server": "185.18.250.127",
+      "server_port": 2096,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "69565ce3109804e7813f98ee.mmdbay.blog",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "69565ce3109804e7813f98ee.mmdbay.blog"
+        },
+        "path": "/graphql",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "2ee26119-94e5-40b4-ba3a-16354021b600"
+    },
+    {
+      "server": "213.182.201.134",
+      "server_port": 3090,
+      "tag": "EPODONIOS",
+      "transport": {
+        "service_name": "vless",
+        "type": "grpc"
+      },
+      "type": "vless",
+      "uuid": "a256aa26-c6ae-4abe-8594-6ed98b18bf27"
+    },
+    {
+      "server": "79.143.92.57",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "8IZiiBEPszvgBeDmpdO2hpSi4K9_dm_fzNCrNxOprRY",
+          "short_id": "c86d3b1b"
+        },
+        "server_name": "gitlab.io"
+      },
+      "type": "vless",
+      "uuid": "9e739716-99c0-53e0-96c6-d0fde1a16b1d"
+    },
+    {
+      "server": "213.182.201.130",
+      "server_port": 3090,
+      "tag": "EPODONIOS",
+      "transport": {
+        "service_name": "vless",
+        "type": "grpc"
+      },
+      "type": "vless",
+      "uuid": "a256aa26-c6ae-4abe-8594-6ed98b18bf27"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "45.196.208.84",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "zr8_rtHm86s_G1gfRwNtunStGngYZSdYkA3PyBFXpDg",
+          "short_id": "28047c78b3f5ee2c"
+        },
+        "server_name": "storage.yandex.net"
+      },
+      "type": "vless",
+      "uuid": "d2042070-c247-4226-a3ac-15337923e00d"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS"
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS"
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

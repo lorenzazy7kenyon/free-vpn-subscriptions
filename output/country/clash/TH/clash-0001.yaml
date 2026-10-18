@@ -1,0 +1,63 @@
+mode: rule
+log-level: info
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- type: vless
+  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  name: EPODONIOS
+  server: 103.86.49.57
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: aIs.SpEeDtEsT.nEt
+- type: vless
+  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  name: EPODONIOS
+  server: 103.86.49.57
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: aIs.SpEeDtEsT.nEt
+- type: vless
+  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  name: EPODONIOS
+  server: 116.206.124.228
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: aIs.SpEeDtEsT.nEt
+proxy-groups:
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+rules:
+- MATCH,SELECT

@@ -1,0 +1,35 @@
+mode: rule
+log-level: info
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- type: vless
+  uuid: 00600051-7476-4d50-b09b-02f3638c279f
+  name: EPODONIOS
+  server: 45.131.6.242
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: www.customconfig.ir
+proxy-groups:
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - EPODONIOS
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - EPODONIOS
+rules:
+- MATCH,SELECT
