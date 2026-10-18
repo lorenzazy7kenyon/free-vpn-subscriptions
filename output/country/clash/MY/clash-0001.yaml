@@ -10,19 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇸🇬 新加坡 | SGP #5'
-  server: 149.118.155.105
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
 - type: trojan
   password: 5931134d1cde66bf83a54acdfebe7ab2
   name: 🇲🇾[www.v2nodes.com] trojan-MY-...
@@ -49,14 +36,12 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇸🇬 新加坡 | SGP #5'
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇸🇬 新加坡 | SGP #5'
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
 rules:

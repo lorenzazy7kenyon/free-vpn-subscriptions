@@ -23,33 +23,6 @@ proxies:
     headers:
       Host: www.calmlunch.com
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇩🇪 德国 | DEU
-  server: 213.176.94.31
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇩🇪 德国 | DEU #6'
-  server: 213.176.94.31
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
   uuid: 1e6fed5b-5edc-4ddb-a268-79d7fae4365c
   name: EPODONIOS
   server: 67.159.17.62
@@ -77,8 +50,6 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - 🇩🇪 德国 | DEU
-  - '🇩🇪 德国 | DEU #6'
   - EPODONIOS
   - '@v2ray_configs_pools 🌍 ⚡️'
 - name: SELECT
@@ -86,8 +57,6 @@ proxy-groups:
   proxies:
   - AUTO
   - EPODONIOS
-  - 🇩🇪 德国 | DEU
-  - '🇩🇪 德国 | DEU #6'
   - EPODONIOS
   - '@v2ray_configs_pools 🌍 ⚡️'
 rules:

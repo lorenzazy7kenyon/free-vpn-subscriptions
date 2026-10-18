@@ -26,21 +26,8 @@ proxies:
       Host: snip.edgeoneai.cc.cd
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇸🇬 新加坡 | SGP #8'
-  server: 103.161.178.72
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇸🇬 新加坡 | SGP
-  server: 103.161.178.215
+  name: 🇭🇰 香港 | HKG
+  server: 103.38.236.248
   port: 443
   udp: true
   network: ws
@@ -58,14 +45,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇸🇬 新加坡 | SGP
-  - '🇸🇬 新加坡 | SGP #8'
-  - 🇸🇬 新加坡 | SGP
+  - 🇭🇰 香港 | HKG
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇸🇬 新加坡 | SGP
-  - '🇸🇬 新加坡 | SGP #8'
-  - 🇸🇬 新加坡 | SGP
+  - 🇭🇰 香港 | HKG
 rules:
 - MATCH,SELECT

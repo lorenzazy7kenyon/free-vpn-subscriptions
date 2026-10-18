@@ -3,46 +3,6 @@
     {
       "server": "141.98.233.6",
       "server_port": 443,
-      "tag": "🇧🇪 比利时 | BEL #1",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "snip.edgeoneai.cc.cd"
-      },
-      "transport": {
-        "headers": {
-          "Host": "snip.edgeoneai.cc.cd"
-        },
-        "path": "/fp=chrome",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "109.69.218.168",
-      "server_port": 443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc"
-        },
-        "server_name": "agile-raptor.cdn.cachefleet.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "c28ee61d-0d43-4e69-8e6a-6397ed0ffc03"
-    },
-    {
-      "server": "141.98.233.6",
-      "server_port": 443,
       "tag": "🇧🇪 比利时 | BEL",
       "tls": {
         "enabled": true,
@@ -81,12 +41,52 @@
       "uuid": "2a12bb81-f3a3-41bb-99ab-36febf676b4a"
     },
     {
+      "flow": "xtls-rprx-vision",
+      "server": "109.69.218.168",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc"
+        },
+        "server_name": "agile-raptor.cdn.cachefleet.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "c28ee61d-0d43-4e69-8e6a-6397ed0ffc03"
+    },
+    {
+      "server": "141.98.233.6",
+      "server_port": 443,
+      "tag": "🇧🇪 比利时 | BEL #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "snip.edgeoneai.cc.cd"
+      },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        },
+        "path": "/fp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "🇧🇪 比利时 | BEL #1",
-        "EPODONIOS",
         "🇧🇪 比利时 | BEL",
-        "EPODONIOS"
+        "EPODONIOS",
+        "EPODONIOS",
+        "🇧🇪 比利时 | BEL #1"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -95,10 +95,10 @@
     {
       "outbounds": [
         "auto",
-        "🇧🇪 比利时 | BEL #1",
-        "EPODONIOS",
         "🇧🇪 比利时 | BEL",
-        "EPODONIOS"
+        "EPODONIOS",
+        "EPODONIOS",
+        "🇧🇪 比利时 | BEL #1"
       ],
       "tag": "select",
       "type": "selector"

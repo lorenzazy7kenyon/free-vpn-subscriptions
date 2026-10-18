@@ -46,6 +46,20 @@ proxies:
     path: /fp=androidsecurity=tls
     headers:
       Host: proxy-1cu.pages.dev
+- type: vless
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  name: EPODONIOS
+  server: 173.242.63.235
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: edgetunnel-4uw.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: edgetunnel-4uw.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -55,6 +69,7 @@ proxy-groups:
   - EPODONIOS
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
   - 🇺🇦[www.v2nodes.com] vless-UA-4...
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
@@ -62,5 +77,6 @@ proxy-groups:
   - EPODONIOS
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
   - 🇺🇦[www.v2nodes.com] vless-UA-4...
+  - EPODONIOS
 rules:
 - MATCH,SELECT

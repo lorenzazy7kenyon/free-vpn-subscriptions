@@ -24,13 +24,31 @@ proxies:
     path: /cart/docs/www/proxyip=108.160.132.132
     headers:
       Host: lucasjow.us.ci
-- type: ss
-  cipher: aes-256-gcm
-  password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
+- type: vless
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
   name: EPODONIOS
-  server: 67.159.18.34
-  port: 17001
+  server: 31.77.126.2
+  port: 443
   udp: true
+  network: ws
+  tls: true
+  servername: lucasjow.us.ci
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
+    headers:
+      Host: lucasjow.us.ci
+- type: trojan
+  password: humanity
+  name: EPODONIOS
+  server: 31.77.126.2
+  port: 443
+  udp: true
+  sni: www.volumeroot.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.volumeroot.com
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: EPODONIOS
@@ -44,6 +62,13 @@ proxies:
     path: /
     headers:
       Host: ccc.010304.xyz
+- type: ss
+  cipher: aes-256-gcm
+  password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
+  name: EPODONIOS
+  server: 67.159.18.34
+  port: 17001
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -53,10 +78,14 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

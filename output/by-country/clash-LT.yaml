@@ -22,20 +22,6 @@ proxies:
     headers:
       Host: vms.lifetime06.workers.dev
 - type: vless
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-  name: EPODONIOS
-  server: 84.32.109.20
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: litv.nztvpn.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 3jySGemfaqPZ2vM66Qtzo5SotO3eoRn1FeGaKp6KBQ4
-    short-id: 0da7e14db353e7d0
-- type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: '🇪🇪 爱沙尼亚 | EST #1'
   server: 130.78.190.134
@@ -48,6 +34,20 @@ proxies:
     path: /fp=chrome
     headers:
       Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 6656cc0a-5908-4d04-a436-64f5843c0c7a
+  name: EPODONIOS
+  server: 147.45.217.140
+  port: 21731
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: metrika.yandex.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: QeLV1NQeTG3e1DRFSNnK_f9Ca5Gf9smexICxtr27WUA
+    short-id: 0446eb17
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇪🇪 爱沙尼亚 | EST
@@ -77,19 +77,33 @@ proxies:
     public-key: QeLV1NQeTG3e1DRFSNnK_f9Ca5Gf9smexICxtr27WUA
     short-id: 0446eb17
 - type: vless
-  uuid: 6656cc0a-5908-4d04-a436-64f5843c0c7a
+  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
   name: EPODONIOS
-  server: 147.45.217.140
-  port: 21731
+  server: 84.32.109.20
+  port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: metrika.yandex.ru
+  servername: litv.nztvpn.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: QeLV1NQeTG3e1DRFSNnK_f9Ca5Gf9smexICxtr27WUA
-    short-id: 0446eb17
+    public-key: 3jySGemfaqPZ2vM66Qtzo5SotO3eoRn1FeGaKp6KBQ4
+    short-id: 0da7e14db353e7d0
+- type: vless
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  name: EPODONIOS
+  server: 144.31.243.120
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: edgetunnel-4uw.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: edgetunnel-4uw.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -97,9 +111,10 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
   - '🇪🇪 爱沙尼亚 | EST #1'
+  - EPODONIOS
   - 🇪🇪 爱沙尼亚 | EST
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
@@ -107,9 +122,10 @@ proxy-groups:
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
   - '🇪🇪 爱沙尼亚 | EST #1'
+  - EPODONIOS
   - 🇪🇪 爱沙尼亚 | EST
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 rules:
