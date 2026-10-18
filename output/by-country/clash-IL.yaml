@@ -11,19 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  name: EPODONIOS
-  server: 212.179.49.187
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: eu-central.cendora.ru
-  reality-opts:
-    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
-    short-id: 00bca5982f82d083
-- type: vless
   uuid: adf1fac3-cf57-ff40-574c-cf514457eb3f
   name: EPODONIOS
   server: 83.143.106.4
@@ -49,6 +36,30 @@ proxies:
     path: /
     headers:
       Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
+  server: 185.253.75.119
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
+  server: 185.253.75.119
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=chromesecurity=tls
+    headers:
+      Host: ccc.010304.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -57,13 +68,15 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
+  - '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
+  - '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
+  - '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
+  - '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
 rules:
 - MATCH,SELECT

@@ -22,6 +22,30 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: skXBkyphBIt0TWVM0R5U3U-8UG0cuW00ONkaQpJ-OxU
+- type: vless
+  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
+  name: 🇺🇦[www.v2nodes.com] vless-UA-4...
+  server: 213.111.148.137
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=androidsecurity=tls
+    headers:
+      Host: proxy-1cu.pages.dev
+- type: vless
+  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
+  name: '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
+  server: 213.111.148.137
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: proxy-1cu.pages.dev
+  ws-opts:
+    path: /fp=android
+    headers:
+      Host: proxy-1cu.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -29,10 +53,14 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - 🇺🇦[www.v2nodes.com] vless-UA-4...
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - 🇺🇦[www.v2nodes.com] vless-UA-4...
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
 rules:
 - MATCH,SELECT

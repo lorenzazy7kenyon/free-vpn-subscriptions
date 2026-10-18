@@ -1,25 +1,6 @@
 {
   "outbounds": [
     {
-      "server": "52.50.233.226",
-      "server_port": 22222,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "telegram-channel-vlessconfig.sohala.uk"
-      },
-      "transport": {
-        "headers": {
-          "Host": "telegram-channel-vlessconfig.sohala.uk"
-        },
-        "path": "/telegram-channel-vlessconfig-ws",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "05519058-d2ac-4f28-9e4a-2b2a1386749e"
-    },
-    {
       "server": "185.18.221.188",
       "server_port": 443,
       "tag": "EPODONIOS",
@@ -43,8 +24,25 @@
       "uuid": "b0a100ee-c397-43f2-bdae-2adfb7a0d4e5"
     },
     {
+      "method": "chacha20-ietf-poly1305",
+      "password": "imq0vLikbOx4THZP",
+      "server": "20.107.193.38",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "type": "ss"
+    },
+    {
+      "method": "chacha20-ietf-poly1305",
+      "password": "zziXHDOFXc4qRjoj",
+      "server": "20.107.184.151",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "type": "ss"
+    },
+    {
       "interval": "5m",
       "outbounds": [
+        "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS"
       ],
@@ -55,6 +53,7 @@
     {
       "outbounds": [
         "auto",
+        "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS"
       ],

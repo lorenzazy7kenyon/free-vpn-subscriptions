@@ -11,19 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e
-  name: EPODONIOS
-  server: 52.50.233.226
-  port: 22222
-  udp: true
-  network: ws
-  tls: true
-  servername: telegram-channel-vlessconfig.sohala.uk
-  ws-opts:
-    path: /telegram-channel-vlessconfig-ws
-    headers:
-      Host: telegram-channel-vlessconfig.sohala.uk
-- type: vless
   uuid: b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
   name: EPODONIOS
   server: 185.18.221.188
@@ -37,6 +24,20 @@ proxies:
     path: /b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
     headers:
       Host: rnxq-1lpi3m.linmeisoft.com
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: imq0vLikbOx4THZP
+  name: EPODONIOS
+  server: 20.107.193.38
+  port: 443
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: zziXHDOFXc4qRjoj
+  name: EPODONIOS
+  server: 20.107.184.151
+  port: 443
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -45,10 +46,12 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 rules:

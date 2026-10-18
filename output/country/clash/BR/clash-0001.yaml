@@ -11,30 +11,45 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 9638a83e-f1f7-4cc8-a602-924965d9534f
-  name: EPODONIOS
-  server: 23.251.56.78
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇧🇷 巴西 | BRA #1'
+  server: 104.64.59.9
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: ws
   tls: true
-  servername: www.cloudflare.com
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇧🇷 巴西 | BRA
+  server: 104.64.59.9
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
   client-fingerprint: chrome
-  reality-opts:
-    public-key: E6Y9lNizCXo8tJ6EXwLYQIjyIwmxIs4foyRlY2MgkjA
-    short-id: 59ccabb0a1483c4b
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
+  - '🇧🇷 巴西 | BRA #1'
+  - 🇧🇷 巴西 | BRA
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
+  - '🇧🇷 巴西 | BRA #1'
+  - 🇧🇷 巴西 | BRA
 rules:
 - MATCH,SELECT

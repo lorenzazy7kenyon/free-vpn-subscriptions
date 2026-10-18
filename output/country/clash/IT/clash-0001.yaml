@@ -12,6 +12,60 @@ dns:
 proxies:
 - type: vless
   uuid: 244d9eab-3311-40c7-b47f-4968dc3088a6
+  name: 🇮🇹[www.v2nodes.com] vless-IT-1...
+  server: 195.231.37.150
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: tcpit3.figurapn.ru
+  client-fingerprint: chrome
+- type: vless
+  uuid: 932b2343-2a3b-45c2-9699-7642a85abdc1
+  name: EPODONIOS
+  server: 43.249.72.254
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: default.ssl.fastly.net
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: henzoo.global.ssl.fastly.net
+- type: vless
+  uuid: 932b2343-2a3b-45c2-9699-7642a85abdc1
+  name: EPODONIOS
+  server: 43.249.72.254
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: default.ssl.fastly.net
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: henzoo.global.ssl.fastly.net
+- type: vless
+  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
+  name: EPODONIOS
+  server: 204.216.216.23
+  port: 10086
+  udp: true
+  network: tcp
+- type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 89.41.172.85
+  port: 22324
+  udp: true
+- type: vless
+  uuid: 244d9eab-3311-40c7-b47f-4968dc3088a6
   name: EPODONIOS
   server: 195.231.37.150
   port: 443
@@ -24,123 +78,29 @@ proxies:
     public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
     short-id: 868419504747f6de
 - type: vless
-  uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
-  name: EPODONIOS
-  server: 31.76.113.240
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: nvidia.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
-    short-id: db04ce8bdb8900f1
-- type: vless
-  uuid: 932b2343-2a3b-45c2-9699-7642a85abdc1
-  name: EPODONIOS
-  server: 43.249.72.254
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: default.ssl.fastly.net
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: henzoo.global.ssl.fastly.net
-- type: vless
-  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
-  name: EPODONIOS
-  server: 151.115.164.134
-  port: 8880
-  udp: true
-  network: grpc
-- type: vless
-  uuid: 932b2343-2a3b-45c2-9699-7642a85abdc1
-  name: EPODONIOS
-  server: 43.249.72.254
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: default.ssl.fastly.net
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: henzoo.global.ssl.fastly.net
-- type: vless
-  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
-  name: EPODONIOS
-  server: 151.115.164.43
-  port: 8880
-  udp: true
-  network: grpc
-- type: vless
-  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
-  name: EPODONIOS
-  server: 151.115.165.172
-  port: 8880
-  udp: true
-  network: grpc
-- type: vless
-  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
-  name: EPODONIOS
-  server: 151.115.166.68
-  port: 8880
-  udp: true
-  network: grpc
-- type: vless
-  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
-  name: EPODONIOS
-  server: 151.115.164.37
-  port: 8880
-  udp: true
-  network: grpc
-- type: vless
-  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
-  name: EPODONIOS
-  server: 151.115.167.190
-  port: 8880
-  udp: true
-  network: grpc
-- type: vless
-  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
-  name: EPODONIOS
-  server: 151.115.167.188
-  port: 8880
-  udp: true
-  network: grpc
-- type: vless
-  uuid: b91abe1a-80ca-417b-998b-2b542661c16f
-  name: EPODONIOS
-  server: 57.131.42.58
-  port: 8008
-  udp: true
-  network: xhttp
-  tls: true
-  servername: play.google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: yGB6HD9OYiD77YWTH1YxcG9yIYkyeEYOEcHL-WnwQn8
-    short-id: 5f9a
-- type: vless
   uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
   name: EPODONIOS
   server: 204.216.216.23
   port: 10086
   udp: true
   network: tcp
-- type: vless
-  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
+- type: ss
+  cipher: aes-256-gcm
+  password: itzvpn@321
   name: EPODONIOS
-  server: 204.216.216.23
-  port: 10086
+  server: 57.131.48.45
+  port: 8388
+  udp: true
+- type: vless
+  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
+  name: '🇮🇹[www.v2nodes.com] vless-IT-1... #1'
+  server: 57.131.38.163
+  port: 2053
   udp: true
   network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 - type: vless
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   name: EPODONIOS
@@ -154,6 +114,13 @@ proxies:
     path: /glasspanel/guest000_0_5de14443985f/
     headers:
       Host: fzo5i.ir46.90k.hh.ov0.kdns.fr
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: EPODONIOS
+  server: 185.164.175.81
+  port: 19999
+  udp: true
 - type: vless
   uuid: dc2259c4-388e-4285-ba18-df619b6672b6
   name: EPODONIOS
@@ -167,26 +134,13 @@ proxies:
   reality-opts:
     public-key: R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU
     short-id: cd6065902eea7a02
-- type: vless
-  uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-  name: EPODONIOS
-  server: 31.76.113.26
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: it.s3-cloud.xyz
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-    short-id: 7a3f9e2b1c8d4f6a
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇮🇹[www.v2nodes.com] vless-IT-1...
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -194,13 +148,7 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - '🇮🇹[www.v2nodes.com] vless-IT-1... #1'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -208,6 +156,7 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
+  - 🇮🇹[www.v2nodes.com] vless-IT-1...
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -215,13 +164,7 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - '🇮🇹[www.v2nodes.com] vless-IT-1... #1'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

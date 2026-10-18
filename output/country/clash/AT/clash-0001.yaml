@@ -10,6 +10,32 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: trojan
+  password: humanity
+  name: EPODONIOS
+  server: 212.183.88.136
+  port: 443
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇩🇪 德国 | DEU
+  server: 213.176.94.31
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - type: vless
   uuid: 1e6fed5b-5edc-4ddb-a268-79d7fae4365c
   name: EPODONIOS
@@ -25,18 +51,18 @@ proxies:
     public-key: U_E3xSI6QY_Mj-3zjkB4esvMj0aVvYH6W6oHOR50XBs
     short-id: 10debbdf94767541
 - type: vless
-  uuid: 634394fa-957c-4e1b-ba31-ec2bc417c356
-  name: EPODONIOS
-  server: 138.124.90.40
-  port: 35872
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇩🇪 德国 | DEU #6'
+  server: 213.176.94.31
+  port: 443
   udp: true
-  network: xhttp
+  network: ws
   tls: true
-  servername: www.icloud.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: PnvtzlkQxMBo2VR7EB4BxqE3EgL6c_92Z8MYijqN2hI
-    short-id: ee740b4fd675
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - type: hysteria2
   password: Hc9_NX924RE_Mn948rgrwiub_m93V84nll
   name: '@v2ray_configs_pools 🌍 ⚡️'
@@ -51,14 +77,18 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - 🇩🇪 德国 | DEU
   - EPODONIOS
+  - '🇩🇪 德国 | DEU #6'
   - '@v2ray_configs_pools 🌍 ⚡️'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - 🇩🇪 德国 | DEU
   - EPODONIOS
+  - '🇩🇪 德国 | DEU #6'
   - '@v2ray_configs_pools 🌍 ⚡️'
 rules:
 - MATCH,SELECT

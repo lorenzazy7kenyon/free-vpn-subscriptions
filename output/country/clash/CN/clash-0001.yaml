@@ -10,17 +10,26 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: EPODONIOS
-  server: 176.124.223.30
-  port: 8880
+- type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  network: tcp
+  name: 🇨🇳_CN_中国
+  server: 112.132.215.108
+  port: 50002
   udp: true
+- type: vmess
+  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
+  alterId: 0
+  cipher: auto
   network: ws
+  name: EPODONIOS
+  server: 120.48.133.162
+  port: 10086
+  udp: true
   ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime38.workers.dev
+    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
 - type: vless
   uuid: 72d334af-a4e9-ed8f-cbec-75317ce0b463
   name: EPODONIOS
@@ -33,18 +42,46 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+- type: vmess
+  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 39.108.113.127
+  port: 10086
+  udp: true
+  ws-opts:
+    path: /
+- type: vmess
+  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 120.48.133.162
+  port: 10086
+  udp: true
+  ws-opts:
+    path: /?Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇨🇳_CN_中国
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇨🇳_CN_中国
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 rules:

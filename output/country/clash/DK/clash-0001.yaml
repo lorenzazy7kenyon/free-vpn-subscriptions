@@ -10,31 +10,32 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 267b3a79-81f2-42ac-a409-c23b05b6329d
-  name: EPODONIOS
-  server: 87.58.158.82
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知121
+  server: 193.180.211.155
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
   tls: true
-  servername: dk7.bbobr.win
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: zBNHm7DwlBZ2rfu2F5e3jMsmR2q74KpS2L6EavCVmkA
-    short-id: f6985908fcb5612f
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
+  - 未知121
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
+  - 未知121
 rules:
 - MATCH,SELECT

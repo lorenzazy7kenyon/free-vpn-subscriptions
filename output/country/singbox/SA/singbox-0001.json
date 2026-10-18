@@ -1,0 +1,44 @@
+{
+  "outbounds": [
+    {
+      "server": "81.208.170.142",
+      "server_port": 1500,
+      "tag": "🇸🇦[www.v2nodes.com] vless-SA-1...",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.ebay.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "e332f028-d343-5b44-8016-b3130f39e133"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "🇸🇦[www.v2nodes.com] vless-SA-1..."
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "🇸🇦[www.v2nodes.com] vless-SA-1..."
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

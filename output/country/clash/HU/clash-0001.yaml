@@ -11,20 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 219762a7-b918-4e2b-8a3d-d309ef98bb61
-  name: EPODONIOS
-  server: 45.195.111.108
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: storage.yandex.net
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
-    short-id: f4b4a6365558ea2e
-- type: vless
   uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
   name: EPODONIOS
   server: 85.155.242.37
@@ -50,6 +36,19 @@ proxies:
   reality-opts:
     public-key: mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg
     short-id: f8379ce795f2e5ed
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: 🇭🇺[www.v2nodes.com] vless-HU-6...
+  server: 37.221.210.113
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: free.cndyw.ggff.net
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=random
+    headers:
+      Host: free.cndyw.ggff.net
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -58,13 +57,13 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
+  - 🇭🇺[www.v2nodes.com] vless-HU-6...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
+  - 🇭🇺[www.v2nodes.com] vless-HU-6...
 rules:
 - MATCH,SELECT

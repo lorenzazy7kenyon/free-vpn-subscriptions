@@ -11,32 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 06d44c57-8e1a-41f4-b9c4-65d35869e078
-  name: EPODONIOS
-  server: 78.17.158.16
-  port: 13868
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.ea.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: W24D31y_1ZaASX1bq3d85DQaQd_3NcJQCvg1wmCn-Uo
-    short-id: e852dc
-- type: vless
-  uuid: 1e4668ca-6526-84ac-2a53-28bbc209da13
-  name: EPODONIOS
-  server: 170.168.97.6
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: download.nvidia.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
-- type: vless
   uuid: 2ee26119-94e5-40b4-ba3a-16354021b600
   name: EPODONIOS
   server: 185.18.250.127
@@ -50,6 +24,75 @@ proxies:
     path: /graphql
     headers:
       Host: 69565ce3109804e7813f98ee.mmdbay.blog
+- type: trojan
+  password: humanity
+  name: EPODONIOS
+  server: 185.114.72.31
+  port: 2053
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- type: ss
+  cipher: aes-256-cfb
+  password: KnJGad3FqTvjqbaX
+  name: 🇪🇸ES-5.188.181.201-4942
+  server: 5.188.181.201
+  port: 9014
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: VcFuyXvND2yQWSFY
+  name: 🇪🇸ES-5.188.181.201-5082
+  server: 5.188.181.201
+  port: 9054
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: JdmRK9gMEqFgs8nP
+  name: 🇪🇸ES-5.188.181.201-4943
+  server: 5.188.181.201
+  port: 9003
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: M3t2ZEQcMGRWBjRa
+  name: 🇪🇸ES-5.188.181.201-4941
+  server: 5.188.181.201
+  port: 9011
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: ZET59LF6DvCC8KVt
+  name: 🇪🇸ES-5.188.181.201-4940
+  server: 5.188.181.201
+  port: 9005
+  udp: true
+- type: vless
+  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
+  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
+  server: 212.227.235.66
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: trojan
+  password: humanity
+  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
+  server: 212.227.144.37
+  port: 8443
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
 - type: vless
   uuid: a256aa26-c6ae-4abe-8594-6ed98b18bf27
   name: EPODONIOS
@@ -58,18 +101,6 @@ proxies:
   udp: true
   network: grpc
 - type: vless
-  uuid: 9e739716-99c0-53e0-96c6-d0fde1a16b1d
-  name: EPODONIOS
-  server: 79.143.92.57
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: gitlab.io
-  reality-opts:
-    public-key: 8IZiiBEPszvgBeDmpdO2hpSi4K9_dm_fzNCrNxOprRY
-    short-id: c86d3b1b
-- type: vless
   uuid: a256aa26-c6ae-4abe-8594-6ed98b18bf27
   name: EPODONIOS
   server: 213.182.201.130
@@ -77,18 +108,26 @@ proxies:
   udp: true
   network: grpc
 - type: vless
-  uuid: d2042070-c247-4226-a3ac-15337923e00d
+  uuid: 1e4668ca-6526-84ac-2a53-28bbc209da13
   name: EPODONIOS
-  server: 45.196.208.84
+  server: 170.168.97.6
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: xhttp
   tls: true
-  servername: storage.yandex.net
+  servername: download.nvidia.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: zr8_rtHm86s_G1gfRwNtunStGngYZSdYkA3PyBFXpDg
-    short-id: 28047c78b3f5ee2c
+    public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+- type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知94
+  server: 85.90.217.42
+  port: 22324
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -97,21 +136,33 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
+  - 🇪🇸ES-5.188.181.201-4942
+  - 🇪🇸ES-5.188.181.201-5082
+  - 🇪🇸ES-5.188.181.201-4943
+  - 🇪🇸ES-5.188.181.201-4941
+  - 🇪🇸ES-5.188.181.201-4940
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - 未知94
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
   - EPODONIOS
+  - 🇪🇸ES-5.188.181.201-4942
+  - 🇪🇸ES-5.188.181.201-5082
+  - 🇪🇸ES-5.188.181.201-4943
+  - 🇪🇸ES-5.188.181.201-4941
+  - 🇪🇸ES-5.188.181.201-4940
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - 未知94
 rules:
 - MATCH,SELECT

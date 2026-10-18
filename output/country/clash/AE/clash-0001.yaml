@@ -11,17 +11,18 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 2bb8b13c-b3f0-2552-da05-d0929bfb36db
+  uuid: dca945d2-6d9b-434f-8754-3626a6a75e21
   name: EPODONIOS
-  server: 45.88.13.5
-  port: 8443
+  server: 94.140.0.74
+  port: 2087
   udp: true
-  network: grpc
+  network: ws
   tls: true
-  servername: download.nvidia.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: FOQzn10eHqu4F5xOxiXW2bTDG8lH4TdOXP6A5rDqKFk
+  servername: aza002.vaslbash.site
+  ws-opts:
+    path: /
+    headers:
+      Host: aza002.vaslbash.site
 - type: vless
   uuid: 98d0fa1b-d778-477e-b897-4e2569c53178
   name: EPODONIOS
@@ -36,54 +37,6 @@ proxies:
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
 - type: vless
-  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
-  name: EPODONIOS
-  server: 95.174.68.188
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 95.174.68.188
-- type: vless
-  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
-  name: EPODONIOS
-  server: 95.174.68.188
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 95.174.68.188
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: EPODONIOS
-  server: 95.182.95.178
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- type: vless
-  uuid: dca945d2-6d9b-434f-8754-3626a6a75e21
-  name: EPODONIOS
-  server: 94.140.0.74
-  port: 2087
-  udp: true
-  network: ws
-  tls: true
-  servername: aza002.vaslbash.site
-  ws-opts:
-    path: /
-    headers:
-      Host: aza002.vaslbash.site
-- type: vless
   uuid: f8842728-bf43-47e2-83bf-283e21f33664
   name: EPODONIOS
   server: 94.249.188.202
@@ -97,6 +50,82 @@ proxies:
   reality-opts:
     public-key: TdLpPmh5-Tbcj3bUPp7uw9znQ_Asao8z9jG7Eccrhwk
     short-id: 7887c27d
+- type: vless
+  uuid: 2bb8b13c-b3f0-2552-da05-d0929bfb36db
+  name: EPODONIOS
+  server: 45.88.13.5
+  port: 8443
+  udp: true
+  network: grpc
+  tls: true
+  servername: download.nvidia.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: FOQzn10eHqu4F5xOxiXW2bTDG8lH4TdOXP6A5rDqKFk
+- type: vless
+  uuid: 9737cc16-7266-45ce-94d9-6e05a45e0b9c
+  name: '🇷🇺 俄罗斯 | RUS #2'
+  server: 188.72.103.4
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: ru.nnight.cfd
+  client-fingerprint: firefox
+- type: vless
+  uuid: 9737cc16-7266-45ce-94d9-6e05a45e0b9c
+  name: 🇷🇺 俄罗斯 | RUS
+  server: 188.72.103.4
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: ru.nnight.cfd
+  client-fingerprint: firefox
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  server: 147.78.0.186
+  port: 8443
+  udp: true
+  network: ws
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
+    headers:
+      Host: free.cndyw.ggff.net
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: 🇦🇪[www.v2nodes.com] vless-AE-4...
+  server: 147.78.0.186
+  port: 2053
+  udp: true
+  network: ws
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
+    headers:
+      Host: free.cndyw.ggff.net
+- type: vless
+  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
+  name: EPODONIOS
+  server: 95.174.68.188
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 95.174.68.188
+- type: vless
+  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
+  name: EPODONIOS
+  server: 95.174.68.188
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 95.174.68.188
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -107,7 +136,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
+  - '🇷🇺 俄罗斯 | RUS #2'
+  - 🇷🇺 俄罗斯 | RUS
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  - 🇦🇪[www.v2nodes.com] vless-AE-4...
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
@@ -118,7 +150,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
+  - '🇷🇺 俄罗斯 | RUS #2'
+  - 🇷🇺 俄罗斯 | RUS
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  - 🇦🇪[www.v2nodes.com] vless-AE-4...
   - EPODONIOS
   - EPODONIOS
 rules:

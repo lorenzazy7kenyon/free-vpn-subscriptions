@@ -10,131 +10,13 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 14eb2c19-89ba-4a10-bd52-cbf6a5f5cae0
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
   name: EPODONIOS
-  server: 194.110.207.48
-  port: 443
+  server: 185.213.23.63
+  port: 990
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: kibi-institut.de
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-- type: vless
-  uuid: 20000024-8788-9182-f000-a35f2e23a020
-  name: EPODONIOS
-  server: 185.243.218.182
-  port: 322
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: wyrebyte.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: T7JiblULt3JN3iWxcGPD9E912LAneFSPA3J05PD9MjA
-    short-id: 2757df499273bcb2
-- type: vless
-  uuid: 202e15ee-7e79-40ad-979f-700e100c21c5
-  name: EPODONIOS
-  server: 194.110.207.70
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: frantax.my3cx.de
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-- type: vless
-  uuid: 3aca1bad-80ce-4567-8e0a-4a6a12be61f1
-  name: EPODONIOS
-  server: 194.110.207.70
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: frantax.my3cx.de
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-- type: vless
-  uuid: 676e31b1-da5a-49ae-86d5-803031549189
-  name: EPODONIOS
-  server: 194.110.207.59
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: kibi-institut.de
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: mWzXDVWUhjGcuizZHA-rEnRpxv2wgeSZUIuHmQdteiA
-    short-id: f576da5e05a1d4d2
-- type: vless
-  uuid: 702c098f-a29a-415d-af86-cf72a437c200
-  name: EPODONIOS
-  server: 38.180.1.198
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: cenl.org
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: jwdDqazbeRaR7gxqjBTFaC566Nv10tJewF9tlKrp-Wk
-    short-id: e520d0583ca8295d
-- type: vless
-  uuid: bd5186bb-8223-46b7-bb55-4345988ec205
-  name: EPODONIOS
-  server: 194.110.207.70
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: frantax.my3cx.de
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-- type: vless
-  uuid: d551dc1e-a0d3-4d52-a8bb-756cb9dac0b2
-  name: EPODONIOS
-  server: 194.110.207.48
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: kibi-institut.de
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-- type: vless
-  uuid: e75ad2eb-6c1f-45ce-8023-f5f10875df66
-  name: EPODONIOS
-  server: 185.90.61.3
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ca9.eu-cdn294.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: B1g2P-3yW3cQW0WZweSPKUP3lZSQ5pgr8doCYvA0cRg
-    short-id: df3dc12b0b9b0c93
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -142,26 +24,10 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

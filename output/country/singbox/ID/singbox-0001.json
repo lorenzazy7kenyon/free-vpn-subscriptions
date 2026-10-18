@@ -17,9 +17,45 @@
       "uuid": "ad4492d1-6858-4841-bd50-1dff56dedcb7"
     },
     {
+      "flow": "xtls-rprx-vision",
+      "server": "103.172.197.2",
+      "server_port": 29172,
+      "tag": "🇮🇩[www.v2nodes.com] vless-ID-1...",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "aws.amazon.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "3977434d-6a9b-4858-8ced-80326ba5e367"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "103.172.197.3",
+      "server_port": 16006,
+      "tag": "🇮🇩[www.v2nodes.com] vless-ID-1... #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "f8c9d2a1-da40-4f90-b671-11772a0b13d6"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "EPODONIOS"
+        "EPODONIOS",
+        "🇮🇩[www.v2nodes.com] vless-ID-1...",
+        "🇮🇩[www.v2nodes.com] vless-ID-1... #1"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -28,7 +64,9 @@
     {
       "outbounds": [
         "auto",
-        "EPODONIOS"
+        "EPODONIOS",
+        "🇮🇩[www.v2nodes.com] vless-ID-1...",
+        "🇮🇩[www.v2nodes.com] vless-ID-1... #1"
       ],
       "tag": "select",
       "type": "selector"

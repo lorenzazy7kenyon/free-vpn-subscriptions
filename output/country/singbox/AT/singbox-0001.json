@@ -1,6 +1,48 @@
 {
   "outbounds": [
     {
+      "password": "humanity",
+      "server": "212.183.88.136",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.calmlunch.com"
+      },
+      "transport": {
+        "headers": {
+          "Host": "www.calmlunch.com"
+        },
+        "path": "/assignment",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
+      "server": "213.176.94.31",
+      "server_port": 443,
+      "tag": "🇩🇪 德国 | DEU",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "snip.edgeoneai.cc.cd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        },
+        "path": "/",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+    },
+    {
       "flow": "xtls-rprx-vision",
       "server": "67.159.17.62",
       "server_port": 443,
@@ -23,25 +65,23 @@
       "uuid": "1e6fed5b-5edc-4ddb-a268-79d7fae4365c"
     },
     {
-      "server": "138.124.90.40",
-      "server_port": 35872,
-      "tag": "EPODONIOS",
+      "server": "213.176.94.31",
+      "server_port": 443,
+      "tag": "🇩🇪 德国 | DEU #6",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "PnvtzlkQxMBo2VR7EB4BxqE3EgL6c_92Z8MYijqN2hI",
-          "short_id": "ee740b4fd675"
+        "server_name": "snip.edgeoneai.cc.cd"
+      },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
         },
-        "server_name": "www.icloud.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "path": "/fp=chrome",
+        "type": "ws"
       },
       "type": "vless",
-      "uuid": "634394fa-957c-4e1b-ba31-ec2bc417c356"
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
     },
     {
       "password": "Hc9_NX924RE_Mn948rgrwiub_m93V84nll",
@@ -59,7 +99,9 @@
       "interval": "5m",
       "outbounds": [
         "EPODONIOS",
+        "🇩🇪 德国 | DEU",
         "EPODONIOS",
+        "🇩🇪 德国 | DEU #6",
         "@v2ray_configs_pools 🌍 ⚡️"
       ],
       "tag": "auto",
@@ -70,7 +112,9 @@
       "outbounds": [
         "auto",
         "EPODONIOS",
+        "🇩🇪 德国 | DEU",
         "EPODONIOS",
+        "🇩🇪 德国 | DEU #6",
         "@v2ray_configs_pools 🌍 ⚡️"
       ],
       "tag": "select",

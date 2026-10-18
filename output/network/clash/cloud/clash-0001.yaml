@@ -10,60 +10,33 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 0970324b-8c61-4ae7-8c3f-385a6f1e17e4
+- type: vmess
+  uuid: 9fa732d6-dcd6-47bb-c255-094bad71765d
+  alterId: 0
+  cipher: auto
+  network: tcp
   name: EPODONIOS
-  server: 194.76.173.6
-  port: 2053
+  server: 154.64.239.22
+  port: 26421
   udp: true
+- type: vmess
+  uuid: ae6672dd-ff20-453f-ed98-47a078bd0cbc
+  alterId: 0
+  cipher: auto
   network: ws
-  tls: true
-  servername: vpn47.cc.cd
-  client-fingerprint: chrome
+  name: EPODONIOS
+  server: 38.45.66.187
+  port: 12288
+  udp: true
   ws-opts:
     path: /
-    headers:
-      Host: vpn47.cc.cd
 - type: vless
-  uuid: 1a795c71-65e2-4c0c-ad22-b7d4fa2c678f
+  uuid: a309e7fe-b532-4461-bfea-6aa21c9bb978
   name: EPODONIOS
-  server: 13.140.89.167
-  port: 8080
-  udp: true
-  network: grpc
-  tls: true
-  servername: www.goo.gl
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: qSKOk8Ag2Qwn4_QNulh5J64YMC2qp_Zxvb3W2TrerRM
-    short-id: c8fd
-- type: vless
-  uuid: 3430793e-837c-47f2-8c8c-a3520d4217c2
-  name: EPODONIOS
-  server: 2.28.232.213
-  port: 2125
+  server: 178.104.171.255
+  port: 330
   udp: true
   network: tcp
-- type: vless
-  uuid: 3430793e-837c-47f2-8c8c-a3520d4217c2
-  name: EPODONIOS
-  server: 2.28.232.213
-  port: 2125
-  udp: true
-  network: tcp
-- type: vless
-  uuid: a5ce10af-5e95-4eb3-ab87-bf4f95cb059b
-  name: EPODONIOS
-  server: 212.100.171.154
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.google.com
-  reality-opts:
-    public-key: 8u8r2iWMt8Isz2ZNRbn3g4cfldhcePRB-1hxGYLTnSg
-    short-id: aa6582cf25e243ce
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   name: EPODONIOS
@@ -75,72 +48,13 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
-- type: vless
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
   name: EPODONIOS
-  server: 212.74.39.214
-  port: 8080
-  udp: true
-  network: tcp
-- type: vless
-  uuid: a309e7fe-b532-4461-bfea-6aa21c9bb978
-  name: EPODONIOS
-  server: 178.104.171.255
-  port: 330
-  udp: true
-  network: tcp
-- type: vless
-  uuid: be32aec6-9dde-4365-b574-2e0023462084
-  name: EPODONIOS
-  server: 141.11.45.214
-  port: 8080
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: net.hostingdata.ir
-- type: vless
-  uuid: c2b0f077-5ef5-462f-b70c-cefb718b1155
-  name: EPODONIOS
-  server: 165.245.241.161
-  port: 440
-  udp: true
-  network: tcp
-- type: vless
-  uuid: f1349fb7-899b-4076-ad67-c2cc6e4bd1f9
-  name: EPODONIOS
-  server: 140.233.177.28
-  port: 39521
-  udp: true
-  network: tcp
-- type: vless
-  uuid: e8358eb5-7210-4cf8-982f-68af141b7694
-  name: EPODONIOS
-  server: 56.69.159.191
-  port: 53271
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.tesla.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1P58ZYmo81kPDnL4U7SnEUA-aT2R86l-o6dbFXoeDjc
-    short-id: 0a9bd9db19578964
-- type: vless
-  uuid: f774f037-6320-42e3-a97b-6d4a1f018dd5
-  name: EPODONIOS
-  server: 2.28.142.170
+  server: 102.37.156.224
   port: 443
   udp: true
-  network: xhttp
-  tls: true
-  servername: germanytest.tulnaro.ir
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: IqFTx4k5VQydmffvavaOHDXBtdgDxX26A6NtsVvDfhw
-    short-id: d485c3d5248d6b51
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -152,26 +66,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
