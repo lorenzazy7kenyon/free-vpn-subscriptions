@@ -24,6 +24,20 @@ proxies:
       Host: www.calmlunch.com
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇩🇪 德国 | DEU
+  server: 213.176.94.31
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: '🇩🇪 德国 | DEU #6'
   server: 213.176.94.31
   port: 443
@@ -49,20 +63,6 @@ proxies:
   reality-opts:
     public-key: U_E3xSI6QY_Mj-3zjkB4esvMj0aVvYH6W6oHOR50XBs
     short-id: 10debbdf94767541
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇩🇪 德国 | DEU
-  server: 213.176.94.31
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: snip.edgeoneai.cc.cd
 - type: hysteria2
   password: Hc9_NX924RE_Mn948rgrwiub_m93V84nll
   name: '@v2ray_configs_pools 🌍 ⚡️'
@@ -77,18 +77,18 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - 🇩🇪 德国 | DEU
   - '🇩🇪 德国 | DEU #6'
   - EPODONIOS
-  - 🇩🇪 德国 | DEU
   - '@v2ray_configs_pools 🌍 ⚡️'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - 🇩🇪 德国 | DEU
   - '🇩🇪 德国 | DEU #6'
   - EPODONIOS
-  - 🇩🇪 德国 | DEU
   - '@v2ray_configs_pools 🌍 ⚡️'
 rules:
 - MATCH,SELECT

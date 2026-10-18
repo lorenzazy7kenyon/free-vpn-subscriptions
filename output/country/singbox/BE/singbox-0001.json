@@ -1,23 +1,6 @@
 {
   "outbounds": [
     {
-      "flow": "xtls-rprx-vision",
-      "server": "109.69.218.217",
-      "server_port": 443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "8hse7wRRL-F66rQ-aAeetKTw0MSeJC7Rr6EaDeLzdCU"
-        },
-        "server_name": "kind-wolf.cdn.cachefleet.com"
-      },
-      "type": "vless",
-      "uuid": "2a12bb81-f3a3-41bb-99ab-36febf676b4a"
-    },
-    {
       "server": "141.98.233.6",
       "server_port": 443,
       "tag": "🇧🇪 比利时 | BEL #1",
@@ -81,12 +64,29 @@
       "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
     },
     {
+      "flow": "xtls-rprx-vision",
+      "server": "109.69.218.217",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "8hse7wRRL-F66rQ-aAeetKTw0MSeJC7Rr6EaDeLzdCU"
+        },
+        "server_name": "kind-wolf.cdn.cachefleet.com"
+      },
+      "type": "vless",
+      "uuid": "2a12bb81-f3a3-41bb-99ab-36febf676b4a"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "EPODONIOS",
         "🇧🇪 比利时 | BEL #1",
         "EPODONIOS",
-        "🇧🇪 比利时 | BEL"
+        "🇧🇪 比利时 | BEL",
+        "EPODONIOS"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -95,10 +95,10 @@
     {
       "outbounds": [
         "auto",
-        "EPODONIOS",
         "🇧🇪 比利时 | BEL #1",
         "EPODONIOS",
-        "🇧🇪 比利时 | BEL"
+        "🇧🇪 比利时 | BEL",
+        "EPODONIOS"
       ],
       "tag": "select",
       "type": "selector"

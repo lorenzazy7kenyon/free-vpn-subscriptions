@@ -10,26 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: 9fa732d6-dcd6-47bb-c255-094bad71765d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: EPODONIOS
-  server: 154.64.239.22
-  port: 26421
-  udp: true
-- type: vmess
-  uuid: ae6672dd-ff20-453f-ed98-47a078bd0cbc
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: EPODONIOS
-  server: 38.45.66.187
-  port: 12288
-  udp: true
-  ws-opts:
-    path: /
 - type: vless
   uuid: a309e7fe-b532-4461-bfea-6aa21c9bb978
   name: EPODONIOS
@@ -39,7 +19,7 @@ proxies:
   network: tcp
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: EPODONIOS
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -55,6 +35,15 @@ proxies:
   server: 102.37.156.224
   port: 443
   udp: true
+- type: vmess
+  uuid: 9fa732d6-dcd6-47bb-c255-094bad71765d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 154.64.239.22
+  port: 26421
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -62,8 +51,7 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
@@ -71,8 +59,7 @@ proxy-groups:
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - EPODONIOS
   - EPODONIOS
 rules:
