@@ -10,19 +10,14 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-256-gcm
-  password: lGqs95QkFHo2NV
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 5498
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 7001
+- type: vmess
+  uuid: 35aa0fda-175a-4aec-c468-0231dee1a121
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知151 564.0KB/s
+  server: 43.108.103.167
+  port: 123
   udp: true
 - type: ss
   cipher: aes-256-gcm
@@ -30,6 +25,20 @@ proxies:
   name: EPODONIOS
   server: 141.164.45.187
   port: 8008
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+  name: EPODONIOS
+  server: 141.164.45.187
+  port: 9090
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  name: EPODONIOS
+  server: 141.164.45.187
+  port: 7001
   udp: true
 - type: vless
   uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
@@ -45,6 +54,24 @@ proxies:
   reality-opts:
     public-key: DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms
     short-id: 3c4041d3
+- type: vmess
+  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 183.109.131.75
+  port: 20086
+  udp: true
+  ws-opts:
+    path: /
+- type: ss
+  cipher: aes-256-gcm
+  password: TEzjfAYq2IjtuoS
+  name: EPODONIOS
+  server: 141.164.45.187
+  port: 6679
+  udp: true
 - type: vless
   uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
   name: 🇰🇷 韩国 | KOR
@@ -52,6 +79,13 @@ proxies:
   port: 443
   udp: true
   network: http
+- type: ss
+  cipher: aes-256-gcm
+  password: lGqs95QkFHo2NV
+  name: EPODONIOS
+  server: 141.164.45.187
+  port: 5498
+  udp: true
 - type: ss
   cipher: aes-256-cfb
   password: qwerREWQ@@
@@ -75,44 +109,39 @@ proxies:
   server: 146.56.112.110
   port: 8888
   udp: true
-- type: vmess
-  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: EPODONIOS
-  server: 183.109.131.75
-  port: 20086
-  udp: true
-  ws-opts:
-    path: /
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 未知151 564.0KB/s
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - 🇰🇷 韩国 | KOR
   - EPODONIOS
-  - '🇰🇷 韩国 | KOR #1'
   - EPODONIOS
+  - '🇰🇷 韩国 | KOR #1'
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 未知151 564.0KB/s
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - 🇰🇷 韩国 | KOR
   - EPODONIOS
-  - '🇰🇷 韩国 | KOR #1'
   - EPODONIOS
+  - '🇰🇷 韩国 | KOR #1'
   - EPODONIOS
 rules:
 - MATCH,SELECT

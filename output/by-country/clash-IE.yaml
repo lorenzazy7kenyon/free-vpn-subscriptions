@@ -10,20 +10,15 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  name: 🇮🇪 爱尔兰 | IRL
-  server: 108.130.238.169
-  port: 443
-  udp: true
-  network: http
-- type: vless
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  name: '🇮🇪 爱尔兰 | IRL #1'
-  server: 108.130.238.169
-  port: 443
-  udp: true
+- type: vmess
+  uuid: 2387bfbc-10a6-4bd7-dc55-7cba954ce6e8
+  alterId: 0
+  cipher: auto
   network: tcp
+  name: EPODONIOS
+  server: 54.229.151.97
+  port: 59236
+  udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: zziXHDOFXc4qRjoj
@@ -37,15 +32,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇪 爱尔兰 | IRL
-  - '🇮🇪 爱尔兰 | IRL #1'
+  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇮🇪 爱尔兰 | IRL
-  - '🇮🇪 爱尔兰 | IRL #1'
+  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

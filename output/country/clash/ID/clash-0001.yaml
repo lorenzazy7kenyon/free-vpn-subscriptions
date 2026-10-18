@@ -25,6 +25,17 @@ proxies:
     public-key: ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU
 - type: vless
   uuid: f8c9d2a1-da40-4f90-b671-11772a0b13d6
+  name: '🇮🇩[www.v2nodes.com] vless-ID-1... #1'
+  server: 103.172.197.3
+  port: 16006
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: f8c9d2a1-da40-4f90-b671-11772a0b13d6
   name: 🇮🇩[www.v2nodes.com] vless-ID-1...
   server: 103.172.197.3
   port: 16006
@@ -41,17 +52,6 @@ proxies:
   tls: true
   servername: aws.amazon.com
   client-fingerprint: chrome
-- type: vless
-  uuid: f8c9d2a1-da40-4f90-b671-11772a0b13d6
-  name: '🇮🇩[www.v2nodes.com] vless-ID-1... #1'
-  server: 103.172.197.3
-  port: 16006
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -59,16 +59,16 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - '🇮🇩[www.v2nodes.com] vless-ID-1... #1'
   - 🇮🇩[www.v2nodes.com] vless-ID-1...
   - '🏳[www.v2nodes.com] vless- #41'
-  - '🇮🇩[www.v2nodes.com] vless-ID-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - '🇮🇩[www.v2nodes.com] vless-ID-1... #1'
   - 🇮🇩[www.v2nodes.com] vless-ID-1...
   - '🏳[www.v2nodes.com] vless- #41'
-  - '🇮🇩[www.v2nodes.com] vless-ID-1... #1'
 rules:
 - MATCH,SELECT

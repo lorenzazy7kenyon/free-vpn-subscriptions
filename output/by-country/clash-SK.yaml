@@ -19,19 +19,6 @@ proxies:
   network: grpc
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇸🇰 斯洛伐克 | SVK #1'
-  server: 185.112.249.201
-  port: 2053
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇸🇰 斯洛伐克 | SVK
   server: 185.112.249.201
   port: 2053
@@ -58,6 +45,19 @@ proxies:
     path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
     headers:
       Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇸🇰 斯洛伐克 | SVK #1'
+  server: 185.112.249.201
+  port: 2053
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -65,16 +65,16 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - 🇸🇰 斯洛伐克 | SVK
+  - 🇸🇰 斯洛伐克 | SVK
   - '🇸🇰 斯洛伐克 | SVK #1'
-  - 🇸🇰 斯洛伐克 | SVK
-  - 🇸🇰 斯洛伐克 | SVK
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - 🇸🇰 斯洛伐克 | SVK
+  - 🇸🇰 斯洛伐克 | SVK
   - '🇸🇰 斯洛伐克 | SVK #1'
-  - 🇸🇰 斯洛伐克 | SVK
-  - 🇸🇰 斯洛伐克 | SVK
 rules:
 - MATCH,SELECT
