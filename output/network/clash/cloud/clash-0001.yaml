@@ -10,9 +10,25 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知27
+  server: 82.152.197.167
+  port: 20004
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  name: EPODONIOS
+  server: 102.37.156.224
+  port: 443
+  udp: true
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -21,26 +37,21 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
-  name: EPODONIOS
-  server: 102.37.156.224
-  port: 443
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - 未知27
   - EPODONIOS
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - 未知27
   - EPODONIOS
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
 rules:
 - MATCH,SELECT

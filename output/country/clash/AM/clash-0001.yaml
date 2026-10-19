@@ -11,6 +11,19 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: f667a096-5231-4cfb-8759-92bb32473139
+  name: EPODONIOS
+  server: 77.91.68.70
+  port: 55983
+  udp: true
+  network: tcp
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg
+    short-id: 0e
+- type: vless
   uuid: 4ad3dbf5-2005-4d96-b56c-a0ca9905cab6
   name: EPODONIOS
   server: 88.218.92.41
@@ -54,12 +67,14 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - EPODONIOS
   - 🇦🇲[www.v2nodes.com] vless-AM-1...
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - EPODONIOS
   - 🇦🇲[www.v2nodes.com] vless-AM-1...
   - EPODONIOS

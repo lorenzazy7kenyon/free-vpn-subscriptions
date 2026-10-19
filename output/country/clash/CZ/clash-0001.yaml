@@ -45,21 +45,9 @@ proxies:
   network: ws
   tls: true
   servername: ccc.010304.xyz
+  client-fingerprint: chrome
   ws-opts:
     path: /
-    headers:
-      Host: ccc.010304.xyz
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: EPODONIOS
-  server: 31.77.126.2
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  ws-opts:
-    path: /fp
     headers:
       Host: ccc.010304.xyz
 - type: vless
@@ -74,6 +62,19 @@ proxies:
   client-fingerprint: chrome
   ws-opts:
     path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: EPODONIOS
+  server: 31.77.126.2
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /fp
     headers:
       Host: ccc.010304.xyz
 - type: ss

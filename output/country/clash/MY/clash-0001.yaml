@@ -31,33 +31,30 @@ proxies:
     headers:
       Host: ccc.010304.xyz
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇸🇬 新加坡 | SGP
-  server: 76.13.188.13
-  port: 8443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: EPODONIOS
+  server: 216.173.67.59
+  port: 443
   udp: true
   network: ws
   tls: true
-  servername: snip.edgeoneai.cc.cd
+  servername: ccc.010304.xyz
   client-fingerprint: chrome
   ws-opts:
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+    path: /
     headers:
-      Host: snip.edgeoneai.cc.cd
+      Host: ccc.010304.xyz
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇸🇬 新加坡 | SGP
-  server: 187.52.127.204
-  port: 8443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: 🇸🇬[www.v2nodes.com] vless-SG
+  server: 216.173.67.59
+  port: 443
   udp: true
   network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
   ws-opts:
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+    path: /fp=chromesecurity=tls
     headers:
-      Host: snip.edgeoneai.cc.cd
+      Host: ccc.010304.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -66,15 +63,15 @@ proxy-groups:
   proxies:
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
-  - 🇸🇬 新加坡 | SGP
-  - 🇸🇬 新加坡 | SGP
+  - EPODONIOS
+  - 🇸🇬[www.v2nodes.com] vless-SG
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
-  - 🇸🇬 新加坡 | SGP
-  - 🇸🇬 新加坡 | SGP
+  - EPODONIOS
+  - 🇸🇬[www.v2nodes.com] vless-SG
 rules:
 - MATCH,SELECT

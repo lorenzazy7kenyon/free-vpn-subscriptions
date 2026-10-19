@@ -12,21 +12,37 @@ dns:
 proxies:
 - type: vless
   uuid: 06e177f7-240d-4687-bd85-235505801a5e
-  name: EPODONIOS
+  name: '🏳[www.v2nodes.com] vless- #46'
   server: 60.248.219.54
   port: 443
   udp: true
   network: ws
-  tls: true
-  servername: ty986gfazs.cainiaohub.xyz
   ws-opts:
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530security=tls
     headers:
       Host: ty986gfazs.cainiaohub.xyz
+- type: vmess
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+  alterId: 0
+  cipher: auto
+  network: raw
+  name: TW3 40.2KB/s
+  server: 165.154.195.38
+  port: 35034
+  udp: true
+- type: vmess
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 165.154.195.38
+  port: 35034
+  udp: true
 - type: vless
   uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  name: '🇹🇼[www.v2nodes.com] vless-TW-1... #1'
-  server: 59.125.69.23
+  name: '🇹🇼 🇨🇳 台湾 | TWN #1'
+  server: 60.248.219.53
   port: 443
   udp: true
   network: ws
@@ -36,19 +52,39 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530fp=chrome
     headers:
       Host: ty986gfazs.cainiaohub.xyz
+- type: vless
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  name: 🇹🇼 🇨🇳 台湾 | TWN
+  server: 60.248.219.53
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ty986gfazs.cainiaohub.xyz
+  client-fingerprint: chrome
+  ws-opts:
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🏳[www.v2nodes.com] vless- #46'
+  - TW3 40.2KB/s
   - EPODONIOS
-  - '🇹🇼[www.v2nodes.com] vless-TW-1... #1'
+  - '🇹🇼 🇨🇳 台湾 | TWN #1'
+  - 🇹🇼 🇨🇳 台湾 | TWN
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🏳[www.v2nodes.com] vless- #46'
+  - TW3 40.2KB/s
   - EPODONIOS
-  - '🇹🇼[www.v2nodes.com] vless-TW-1... #1'
+  - '🇹🇼 🇨🇳 台湾 | TWN #1'
+  - 🇹🇼 🇨🇳 台湾 | TWN
 rules:
 - MATCH,SELECT

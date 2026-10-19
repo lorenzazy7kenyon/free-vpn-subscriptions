@@ -10,83 +10,10 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
-  name: 🇪🇪[www.v2nodes.com] trojan-EE-...
-  server: 109.206.241.10
-  port: 449
-  udp: true
-  sni: russiapower.accesscam.org
 - type: vless
   uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
   name: EPODONIOS
   server: 89.125.13.202
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: d3-ee1.cloud-cdn.xyz
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
-    short-id: ad6e08b22389abd2
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知147
-  server: 5.101.122.59
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-- type: vless
-  uuid: 0011d187-d066-48f6-957c-a6983dd63a77
-  name: EPODONIOS
-  server: 138.124.100.29
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: est.netvora.space
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: KEpkyrOY2wV5h8_bA6doDT1e-lFjYd1jGHKDtDl8hSk
-    short-id: 141fb733511e7553
-- type: vless
-  uuid: 70ad3e9c-89e6-4ee3-91c3-7cb10a4e483a
-  name: EPODONIOS
-  server: 165.231.177.114
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: cab-6ac48f09.ferrin.uk
-  client-fingerprint: chrome
-- type: vless
-  uuid: 7b571245-ec1e-44b1-bb5a-f7c61157d2c4
-  name: EPODONIOS
-  server: 201.7.25.208
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ee.api-yandex.net
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: VfyS9hoKlYU2l3oZ-T6RN2JzjWgtrIC7-VjseHCeBGE
-    short-id: 0f4dacf33211e04f
-- type: vless
-  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-  name: EPODONIOS
-  server: 163.245.52.91
   port: 443
   udp: true
   flow: xtls-rprx-vision
@@ -110,31 +37,87 @@ proxies:
   reality-opts:
     public-key: w9JCByLSU3NGciCv2iceOz4TRL4swv8jfIAYoaKSyEw
     short-id: a0938b702257f780
+- type: vless
+  uuid: 70ad3e9c-89e6-4ee3-91c3-7cb10a4e483a
+  name: EPODONIOS
+  server: 165.231.177.114
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: cab-6ac48f09.ferrin.uk
+  client-fingerprint: chrome
+- type: vless
+  uuid: 0011d187-d066-48f6-957c-a6983dd63a77
+  name: EPODONIOS
+  server: 138.124.100.29
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: est.netvora.space
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: KEpkyrOY2wV5h8_bA6doDT1e-lFjYd1jGHKDtDl8hSk
+    short-id: 141fb733511e7553
+- type: vless
+  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
+  name: EPODONIOS
+  server: 163.245.52.91
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: d3-ee1.cloud-cdn.xyz
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
+    short-id: ad6e08b22389abd2
+- type: trojan
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  name: 🇪🇪[www.v2nodes.com] trojan-EE-...
+  server: 109.206.241.10
+  port: 449
+  udp: true
+  sni: russiapower.accesscam.org
+- type: vless
+  uuid: 7b571245-ec1e-44b1-bb5a-f7c61157d2c4
+  name: EPODONIOS
+  server: 201.7.25.208
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ee.api-yandex.net
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: VfyS9hoKlYU2l3oZ-T6RN2JzjWgtrIC7-VjseHCeBGE
+    short-id: 0f4dacf33211e04f
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - 🇪🇪[www.v2nodes.com] trojan-EE-...
-  - EPODONIOS
-  - 未知147
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - 🇪🇪[www.v2nodes.com] trojan-EE-...
-  - EPODONIOS
-  - 未知147
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

@@ -20,19 +20,6 @@ proxies:
   tls: true
   servername: www.ebay.com
   client-fingerprint: chrome
-- type: vless
-  uuid: e332f028-d343-5b44-8016-b3130f39e133
-  name: EPODONIOS
-  server: 81.208.170.142
-  port: 1500
-  udp: true
-  network: grpc
-  tls: true
-  servername: www.ebay.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: VQxVgczORkbSNdDrkNOYs6zMBINpViztTKDuWCeQsVE
-    short-id: 775eb6408888248e
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -40,12 +27,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇸🇦[www.v2nodes.com] vless-SA-1...
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇸🇦[www.v2nodes.com] vless-SA-1...
-  - EPODONIOS
 rules:
 - MATCH,SELECT

@@ -10,52 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  network: tcp
-  name: 🇨🇳_CN_中国
-  server: 112.132.215.108
-  port: 50002
-  udp: true
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知85
-  server: 162.4.136.79
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-- type: vmess
-  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: EPODONIOS
-  server: 120.48.133.162
-  port: 10086
-  udp: true
-  ws-opts:
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-- type: vmess
-  uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇨🇳_CN_中国
-  server: 39.108.113.127
-  port: 10086
-  udp: true
-  ws-opts:
-    path: /
 - type: vless
   uuid: 72d334af-a4e9-ed8f-cbec-75317ce0b463
   name: EPODONIOS
@@ -68,16 +22,48 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
-- type: vless
-  uuid: dca8685b-2f38-389a-3b18-502cd5300ea0
-  name: 🇫🇮FI_1|1.1MB/s
-  server: 122.8.45.3
-  port: 443
+- type: vmess
+  uuid: 2b910c43-51e3-4b15-9be8-b658106ba35e
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知128
+  server: 39.108.113.127
+  port: 10086
   udp: true
+  ws-opts:
+    path: /
+- type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
   network: tcp
-  tls: true
-  servername: cdn.steamstatic.com
-  client-fingerprint: chrome
+  name: 🇨🇳_CN_中国
+  server: 112.132.215.108
+  port: 50002
+  udp: true
+- type: vmess
+  uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇨🇳_CN_中国
+  server: 39.108.113.127
+  port: 10086
+  udp: true
+  ws-opts:
+    path: /
+- type: vmess
+  uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 120.48.133.162
+  port: 10086
+  udp: true
+  ws-opts:
+    path: /
 - type: vmess
   uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
   alterId: 0
@@ -90,41 +76,39 @@ proxies:
   ws-opts:
     path: /?Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN
 - type: vmess
-  uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
+  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
   alterId: 0
   cipher: auto
   network: ws
-  name: 🇨🇳_CN_中国
+  name: EPODONIOS
   server: 120.48.133.162
   port: 10086
   udp: true
   ws-opts:
-    path: /
+    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇳_CN_中国
-  - 未知85
   - EPODONIOS
+  - 未知128
+  - 🇨🇳_CN_中国
   - 🇨🇳_CN_中国
   - EPODONIOS
-  - 🇫🇮FI_1|1.1MB/s
   - EPODONIOS
-  - 🇨🇳_CN_中国
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇨🇳_CN_中国
-  - 未知85
   - EPODONIOS
+  - 未知128
+  - 🇨🇳_CN_中国
   - 🇨🇳_CN_中国
   - EPODONIOS
-  - 🇫🇮FI_1|1.1MB/s
   - EPODONIOS
-  - 🇨🇳_CN_中国
+  - EPODONIOS
 rules:
 - MATCH,SELECT
