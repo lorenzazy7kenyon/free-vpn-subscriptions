@@ -24,20 +24,6 @@ proxies:
   reality-opts:
     public-key: 3jySGemfaqPZ2vM66Qtzo5SotO3eoRn1FeGaKp6KBQ4
     short-id: 0da7e14db353e7d0
-- type: vless
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
-  name: EPODONIOS
-  server: 144.31.243.120
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: edgetunnel-4uw.pages.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: edgetunnel-4uw.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -45,12 +31,10 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

@@ -10,13 +10,30 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: 80L0GT8FBWLLP39qdXJCtYRRqD1yG_ut
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
   name: EPODONIOS
-  server: 82.163.7.43
-  port: 7443
+  server: 132.243.175.144
+  port: 8388
   udp: true
-  sni: node18.overcdn.ru
+- type: ss
+  cipher: aes-128-gcm
+  password: 2bf536a4bd6008511734a505d248de2c
+  name: '🏳[www.v2nodes.com] ss- #3'
+  server: 86.106.84.194
+  port: 13261
+  udp: true
+- type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  server: 208.69.78.217
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 - type: vless
   uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
   name: EPODONIOS
@@ -37,30 +54,6 @@ proxies:
   port: 443
   udp: true
   sni: store.steampowered.com
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
-  name: EPODONIOS
-  server: 132.243.175.144
-  port: 8388
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: 2bf536a4bd6008511734a505d248de2c
-  name: '🏳[www.v2nodes.com] ss- #1'
-  server: 86.106.84.194
-  port: 13261
-  udp: true
-- type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  server: 208.69.78.217
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
 - type: hysteria2
   password: capadm96216165
   name: 🇨🇭192087 | ⚡️Telegram = t.me/v...
@@ -78,22 +71,20 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - '🏳[www.v2nodes.com] ss- #1'
+  - '🏳[www.v2nodes.com] ss- #3'
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - EPODONIOS
+  - EPODONIOS
   - 🇨🇭192087 | ⚡️Telegram = t.me/v...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - '🏳[www.v2nodes.com] ss- #1'
+  - '🏳[www.v2nodes.com] ss- #3'
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - EPODONIOS
+  - EPODONIOS
   - 🇨🇭192087 | ⚡️Telegram = t.me/v...
 rules:
 - MATCH,SELECT

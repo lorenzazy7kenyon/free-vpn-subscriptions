@@ -23,20 +23,6 @@ proxies:
     headers:
       Host: www.calmlunch.com
 - type: vless
-  uuid: 75079a7f-75b5-418b-8a65-f7b2f438cd4a
-  name: EPODONIOS
-  server: 159.195.240.82
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: vie1.tsumshop.org
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: tzOeyllk2VtPXZ_BJ2lOZcGtsnn41ZHBa9dE6s9sFiQ
-    short-id: c8c75aaf699259b4
-- type: vless
   uuid: 1e6fed5b-5edc-4ddb-a268-79d7fae4365c
   name: EPODONIOS
   server: 67.159.17.62
@@ -65,13 +51,11 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
   - '@v2ray_configs_pools 🌍 ⚡️'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - '@v2ray_configs_pools 🌍 ⚡️'

@@ -11,19 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: '🏳[www.v2nodes.com] vless- #24'
-  server: 85.90.197.156
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: free.cndyw.ggff.net
-  ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=random
-    headers:
-      Host: free.cndyw.ggff.net
-- type: vless
   uuid: 8f704ed6-9a1a-4d04-94dd-1bff501716de
   name: 🇬🇷[www.v2nodes.com] vless-GR-1...
   server: 85.90.197.220
@@ -34,19 +21,32 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: '🏳[www.v2nodes.com] vless- #19'
+  server: 85.90.197.156
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: free.cndyw.ggff.net
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=random
+    headers:
+      Host: free.cndyw.ggff.net
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #24'
   - 🇬🇷[www.v2nodes.com] vless-GR-1...
+  - '🏳[www.v2nodes.com] vless- #19'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #24'
   - 🇬🇷[www.v2nodes.com] vless-GR-1...
+  - '🏳[www.v2nodes.com] vless- #19'
 rules:
 - MATCH,SELECT

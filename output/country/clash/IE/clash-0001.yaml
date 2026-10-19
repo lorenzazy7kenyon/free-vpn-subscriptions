@@ -17,6 +17,29 @@ proxies:
   server: 20.223.172.81
   port: 443
   udp: true
+- type: vmess
+  uuid: 2387bfbc-10a6-4bd7-dc55-7cba954ce6e8
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 54.229.151.97
+  port: 59236
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: znEtjgHLXH4FBLic
+  name: EPODONIOS
+  server: 74.234.59.81
+  port: 443
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: YF329KNGVTUZ1qrH
+  name: EPODONIOS
+  server: 20.123.1.55
+  port: 443
+  udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: zziXHDOFXc4qRjoj
@@ -32,10 +55,16 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 rules:
