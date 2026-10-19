@@ -10,18 +10,20 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: bpb-trojan
+- type: vless
+  uuid: 5dc9999b-9810-4704-ab10-5d1691daeab6
   name: EPODONIOS
-  server: 190.93.244.202
-  port: 443
+  server: 190.93.245.189
+  port: 2083
   udp: true
-  sni: fcspring.ggff.net
   network: ws
+  tls: true
+  servername: p2.mxpaystore.xyz
+  client-fingerprint: chrome
   ws-opts:
-    path: /tr?ed
+    path: /mxgrid
     headers:
-      Host: fcspring.ggff.net
+      Host: p2.mxpaystore.xyz
 - type: trojan
   password: humanity
   name: EPODONIOS
@@ -34,6 +36,18 @@ proxies:
     path: /assignment
     headers:
       Host: www.pleadcourt.org
+- type: trojan
+  password: bpb-trojan
+  name: EPODONIOS
+  server: 190.93.244.202
+  port: 443
+  udp: true
+  sni: fcspring.ggff.net
+  network: ws
+  ws-opts:
+    path: /tr?ed
+    headers:
+      Host: fcspring.ggff.net
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -42,10 +56,12 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 rules:

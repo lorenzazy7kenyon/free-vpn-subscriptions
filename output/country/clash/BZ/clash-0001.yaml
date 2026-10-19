@@ -10,6 +10,19 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: f491cbe4-7548-446c-8d3e-64008e3b1325
+  alterId: 0
+  cipher: none
+  network: ws
+  name: 未知143
+  server: 45.131.208.228
+  port: 80
+  udp: true
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: dl3.127.0.0.1.control.控制.kонтроль.cводкаhовостей.農達懲罰.wonkacapitano.buzz.
 - type: vless
   uuid: 00600051-7476-4d50-b09b-02f3638c279f
   name: EPODONIOS
@@ -25,11 +38,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 未知143
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 未知143
   - EPODONIOS
 rules:
 - MATCH,SELECT

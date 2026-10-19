@@ -1,23 +1,27 @@
 {
   "outbounds": [
     {
-      "password": "bpb-trojan",
-      "server": "190.93.244.202",
-      "server_port": 443,
+      "server": "190.93.245.189",
+      "server_port": 2083,
       "tag": "EPODONIOS",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "fcspring.ggff.net"
+        "server_name": "p2.mxpaystore.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "headers": {
-          "Host": "fcspring.ggff.net"
+          "Host": "p2.mxpaystore.xyz"
         },
-        "path": "/tr?ed",
+        "path": "/mxgrid",
         "type": "ws"
       },
-      "type": "trojan"
+      "type": "vless",
+      "uuid": "5dc9999b-9810-4704-ab10-5d1691daeab6"
     },
     {
       "password": "humanity",
@@ -39,8 +43,28 @@
       "type": "trojan"
     },
     {
+      "password": "bpb-trojan",
+      "server": "190.93.244.202",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "fcspring.ggff.net"
+      },
+      "transport": {
+        "headers": {
+          "Host": "fcspring.ggff.net"
+        },
+        "path": "/tr?ed",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
       "interval": "5m",
       "outbounds": [
+        "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS"
       ],
@@ -51,6 +75,7 @@
     {
       "outbounds": [
         "auto",
+        "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS"
       ],

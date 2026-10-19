@@ -11,29 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 0a1497e6-0570-40a2-84ce-e522eda1c6a4
-  name: EPODONIOS
-  server: 46.28.67.118
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: www.olx.ro
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 9xwvSAOWL36GC2_oNuy0APzirpqSYzd8vKPmGINnzjA
-- type: vless
-  uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
-  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
-  server: 146.70.124.85
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.datadoghq.com
-  client-fingerprint: chrome
-- type: vless
   uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
   name: EPODONIOS
   server: 46.28.67.55
@@ -47,20 +24,6 @@ proxies:
     public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
     short-id: d06d78e974491b6e
 - type: vless
-  uuid: d6b59299-2f48-4e9b-9130-b9e9cb5d0a51
-  name: EPODONIOS
-  server: 85.90.196.203
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ro1.hat.onl
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc
-    short-id: 76132b3b39704c44
-- type: vless
   uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
   name: '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
   server: 46.28.67.55
@@ -71,6 +34,29 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- type: vless
+  uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
+  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
+  server: 146.70.124.85
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.datadoghq.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 0a1497e6-0570-40a2-84ce-e522eda1c6a4
+  name: EPODONIOS
+  server: 46.28.67.118
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: www.olx.ro
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 9xwvSAOWL36GC2_oNuy0APzirpqSYzd8vKPmGINnzjA
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: QFWzCw2uX9B9i6qAYeFBIE
@@ -81,7 +67,7 @@ proxies:
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: U83u9OGpvSatIUW7LsWffr
-  name: 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  name: EPODONIOS
   server: 194.68.44.42
   port: 64546
   udp: true
@@ -92,22 +78,20 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
   - EPODONIOS
   - EPODONIOS
-  - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
   - EPODONIOS
-  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
   - EPODONIOS
   - EPODONIOS
-  - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
   - EPODONIOS
-  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 rules:
 - MATCH,SELECT

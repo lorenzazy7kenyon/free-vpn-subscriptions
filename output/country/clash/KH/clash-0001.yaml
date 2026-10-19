@@ -12,6 +12,19 @@ dns:
 proxies:
 - type: vless
   uuid: 05d7a479-a099-40cf-aecf-41aa934767b0
+  name: 🇰🇭[www.v2nodes.com] vless-KH-1...
+  server: 93.152.215.176
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: nl5.hap-plus.ru
+  ws-opts:
+    path: /api/v1/eventsfp=chrome
+    headers:
+      Host: nl5.hap-plus.ru
+- type: vless
+  uuid: 05d7a479-a099-40cf-aecf-41aa934767b0
   name: EPODONIOS
   server: 93.152.215.176
   port: 8443
@@ -30,11 +43,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇰🇭[www.v2nodes.com] vless-KH-1...
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇰🇭[www.v2nodes.com] vless-KH-1...
   - EPODONIOS
 rules:
 - MATCH,SELECT

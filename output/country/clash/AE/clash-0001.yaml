@@ -37,20 +37,6 @@ proxies:
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
 - type: vless
-  uuid: f8842728-bf43-47e2-83bf-283e21f33664
-  name: EPODONIOS
-  server: 94.249.188.202
-  port: 43000
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: 94.249.188.202
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: TdLpPmh5-Tbcj3bUPp7uw9znQ_Asao8z9jG7Eccrhwk
-    short-id: 7887c27d
-- type: vless
   uuid: 2bb8b13c-b3f0-2552-da05-d0929bfb36db
   name: EPODONIOS
   server: 45.88.13.5
@@ -63,25 +49,34 @@ proxies:
   reality-opts:
     public-key: FOQzn10eHqu4F5xOxiXW2bTDG8lH4TdOXP6A5rDqKFk
 - type: vless
+  uuid: 9737cc16-7266-45ce-94d9-6e05a45e0b9c
+  name: 🇷🇺 俄罗斯 | RUS
+  server: 188.72.103.4
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: ru.nnight.cfd
+  client-fingerprint: firefox
+- type: vless
+  uuid: 9737cc16-7266-45ce-94d9-6e05a45e0b9c
+  name: '🇷🇺 俄罗斯 | RUS #4'
+  server: 188.72.103.4
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: ru.nnight.cfd
+  client-fingerprint: firefox
+- type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: 🇦🇪[www.v2nodes.com] vless-AE-4...
+  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
   server: 147.78.0.186
   port: 2053
   udp: true
   network: ws
   ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
-    headers:
-      Host: free.cndyw.ggff.net
-- type: vless
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
-  server: 147.78.0.186
-  port: 8443
-  udp: true
-  network: ws
-  ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
+    path: pyip=bpb.yousef.isegaro.comfp=chromesecurity=tls
     headers:
       Host: free.cndyw.ggff.net
 - type: vless
@@ -95,6 +90,42 @@ proxies:
     path: /vless
     headers:
       Host: 95.174.68.188
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  server: 147.78.0.186
+  port: 8443
+  udp: true
+  network: ws
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
+    headers:
+      Host: free.cndyw.ggff.net
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: 🇦🇪[www.v2nodes.com] vless-AE-4...
+  server: 147.78.0.186
+  port: 2053
+  udp: true
+  network: ws
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
+    headers:
+      Host: free.cndyw.ggff.net
+- type: vless
+  uuid: f8842728-bf43-47e2-83bf-283e21f33664
+  name: EPODONIOS
+  server: 94.249.188.202
+  port: 43000
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 94.249.188.202
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: TdLpPmh5-Tbcj3bUPp7uw9znQ_Asao8z9jG7Eccrhwk
+    short-id: 7887c27d
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -104,9 +135,12 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - 🇦🇪[www.v2nodes.com] vless-AE-4...
+  - 🇷🇺 俄罗斯 | RUS
+  - '🇷🇺 俄罗斯 | RUS #4'
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  - EPODONIOS
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  - 🇦🇪[www.v2nodes.com] vless-AE-4...
   - EPODONIOS
 - name: SELECT
   type: select
@@ -115,9 +149,12 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - 🇦🇪[www.v2nodes.com] vless-AE-4...
+  - 🇷🇺 俄罗斯 | RUS
+  - '🇷🇺 俄罗斯 | RUS #4'
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  - EPODONIOS
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  - 🇦🇪[www.v2nodes.com] vless-AE-4...
   - EPODONIOS
 rules:
 - MATCH,SELECT
