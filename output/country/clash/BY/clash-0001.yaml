@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
-  name: EPODONIOS
+  name: 🇧🇾[www.v2nodes.com] vless-BY-1...
   server: 178.172.227.124
   port: 14430
   udp: true
@@ -32,32 +32,19 @@ proxies:
     path: /vless
     headers:
       Host: 95.128.71.79
-- type: vless
-  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
-  name: 🇧🇾[www.v2nodes.com] vless-BY-1...
-  server: 178.172.227.124
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 178.172.227.124
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
 rules:
 - MATCH,SELECT

@@ -1,23 +1,25 @@
 {
   "outbounds": [
     {
-      "server": "141.98.233.6",
+      "alter_id": 0,
+      "security": "auto",
+      "server": "35.241.172.224",
       "server_port": 443,
-      "tag": "🇧🇪 比利时 | BEL #1",
+      "tag": "未知18",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "snip.edgeoneai.cc.cd"
+        "server_name": "renderer-stream-2-62.mirra.now"
       },
       "transport": {
         "headers": {
-          "Host": "snip.edgeoneai.cc.cd"
+          "Host": "renderer-stream-2-62.mirra.now"
         },
-        "path": "/fp=chrome",
+        "path": "/api/v1/gpu-stream/socket",
         "type": "ws"
       },
-      "type": "vless",
-      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+      "type": "vmess",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154"
     },
     {
       "flow": "xtls-rprx-vision",
@@ -41,6 +43,25 @@
       "uuid": "c28ee61d-0d43-4e69-8e6a-6397ed0ffc03"
     },
     {
+      "server": "141.98.233.6",
+      "server_port": 443,
+      "tag": "🇧🇪 比利时 | BEL #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "snip.edgeoneai.cc.cd"
+      },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        },
+        "path": "/fp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+    },
+    {
       "flow": "xtls-rprx-vision",
       "server": "109.69.218.217",
       "server_port": 443,
@@ -58,33 +79,12 @@
       "uuid": "2a12bb81-f3a3-41bb-99ab-36febf676b4a"
     },
     {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "35.241.172.224",
-      "server_port": 443,
-      "tag": "未知18",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "renderer-stream-2-62.mirra.now"
-      },
-      "transport": {
-        "headers": {
-          "Host": "renderer-stream-2-62.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket",
-        "type": "ws"
-      },
-      "type": "vmess",
-      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154"
-    },
-    {
       "interval": "5m",
       "outbounds": [
+        "未知18",
+        "EPODONIOS",
         "🇧🇪 比利时 | BEL #1",
-        "EPODONIOS",
-        "EPODONIOS",
-        "未知18"
+        "EPODONIOS"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -93,10 +93,10 @@
     {
       "outbounds": [
         "auto",
+        "未知18",
+        "EPODONIOS",
         "🇧🇪 比利时 | BEL #1",
-        "EPODONIOS",
-        "EPODONIOS",
-        "未知18"
+        "EPODONIOS"
       ],
       "tag": "select",
       "type": "selector"

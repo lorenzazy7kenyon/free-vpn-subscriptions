@@ -11,6 +11,20 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 4ad3dbf5-2005-4d96-b56c-a0ca9905cab6
+  name: EPODONIOS
+  server: 88.218.92.41
+  port: 24694
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: metrika.yandex.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: kaPztgo_2b2CKxytGWXzn6EauyNKr6Ho8xerGpSS-SQ
+    short-id: '58301280'
+- type: vless
   uuid: f667a096-5231-4cfb-8759-92bb32473139
   name: 🇦🇲[www.v2nodes.com] vless-AM-1...
   server: 77.91.68.70
@@ -33,50 +47,21 @@ proxies:
   reality-opts:
     public-key: nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg
     short-id: 0e
-- type: vless
-  uuid: 4ad3dbf5-2005-4d96-b56c-a0ca9905cab6
-  name: EPODONIOS
-  server: 88.218.92.41
-  port: 24694
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: metrika.yandex.ru
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: kaPztgo_2b2CKxytGWXzn6EauyNKr6Ho8xerGpSS-SQ
-    short-id: '58301280'
-- type: vless
-  uuid: f667a096-5231-4cfb-8759-92bb32473139
-  name: EPODONIOS
-  server: 77.91.68.70
-  port: 55983
-  udp: true
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg
-    short-id: 0e
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - EPODONIOS
   - 🇦🇲[www.v2nodes.com] vless-AM-1...
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - 🇦🇲[www.v2nodes.com] vless-AM-1...
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

@@ -1,6 +1,18 @@
 {
   "outbounds": [
     {
+      "server": "45.131.6.242",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.customconfig.ir"
+      },
+      "type": "vless",
+      "uuid": "00600051-7476-4d50-b09b-02f3638c279f"
+    },
+    {
       "alter_id": 0,
       "security": "none",
       "server": "45.131.208.228",
@@ -17,22 +29,10 @@
       "uuid": "f491cbe4-7548-446c-8d3e-64008e3b1325"
     },
     {
-      "server": "45.131.6.242",
-      "server_port": 443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.customconfig.ir"
-      },
-      "type": "vless",
-      "uuid": "00600051-7476-4d50-b09b-02f3638c279f"
-    },
-    {
       "interval": "5m",
       "outbounds": [
-        "未知143",
-        "EPODONIOS"
+        "EPODONIOS",
+        "未知143"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -41,8 +41,8 @@
     {
       "outbounds": [
         "auto",
-        "未知143",
-        "EPODONIOS"
+        "EPODONIOS",
+        "未知143"
       ],
       "tag": "select",
       "type": "selector"

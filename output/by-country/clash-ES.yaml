@@ -24,18 +24,6 @@ proxies:
     path: /graphql
     headers:
       Host: 69565ce3109804e7813f98ee.mmdbay.blog
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 185.114.72.31
-  port: 2053
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
 - type: ss
   cipher: aes-256-cfb
   password: XPtzA9sCug3SPR4c
@@ -50,18 +38,11 @@ proxies:
   server: 5.188.181.201
   port: 9027
   udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: UkXRsXvR6buDMG2Y
-  name: 🇪🇸ES-5.188.181.201-5377
-  server: 5.188.181.201
-  port: 9001
-  udp: true
 - type: trojan
   password: humanity
-  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  server: 212.227.144.37
-  port: 8443
+  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
+  server: 185.114.72.31
+  port: 2053
   udp: true
   sni: www.calmlunch.com
   network: ws
@@ -69,6 +50,16 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
+- type: vless
+  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
+  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
+  server: 212.227.235.66
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 - type: vless
   uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
   name: EPODONIOS
@@ -82,15 +73,19 @@ proxies:
     public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk
     short-id: 29e8dcd2b37aaa7f
 - type: vless
-  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
-  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
-  server: 212.227.235.66
-  port: 2053
+  uuid: b89c2d37-1c91-4ef1-a89d-b5dc48f3cc5f
+  name: EPODONIOS
+  server: 213.182.201.134
+  port: 3090
   udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
+  network: grpc
+- type: vless
+  uuid: b89c2d37-1c91-4ef1-a89d-b5dc48f3cc5f
+  name: EPODONIOS
+  server: 213.182.201.137
+  port: 3090
+  udp: true
+  network: grpc
 - type: vless
   uuid: dbc8a7a7-4c99-4aff-a50a-9940f992ef88
   name: EPODONIOS
@@ -142,13 +137,13 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
   - 🇪🇸ES-5.188.181.201-5379
   - 🇪🇸ES-5.188.181.201-5378
-  - 🇪🇸ES-5.188.181.201-5377
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - EPODONIOS
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -159,13 +154,13 @@ proxy-groups:
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
   - 🇪🇸ES-5.188.181.201-5379
   - 🇪🇸ES-5.188.181.201-5378
-  - 🇪🇸ES-5.188.181.201-5377
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - EPODONIOS
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

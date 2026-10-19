@@ -32,6 +32,39 @@ proxies:
     path: /
     headers:
       Host: fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir
+- type: vless
+  uuid: 0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6
+  name: EPODONIOS
+  server: 185.143.234.238
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pgcfws-r4
+    headers:
+      Host: uu.caroptions.ir
+- type: vless
+  uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
+  name: EPODONIOS
+  server: 185.143.234.238
+  port: 2086
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: parsi.parsi.sbs
+- type: vless
+  uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
+  name: EPODONIOS
+  server: 185.143.233.238
+  port: 2086
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: parsi.parsi.sbs
 - type: vmess
   uuid: b831381d-6324-4d53-ad4f-8cda48b30811
   alterId: 0
@@ -56,39 +89,6 @@ proxies:
     path: /
     headers:
       Host: api.artaluxa.ir
-- type: vless
-  uuid: 0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6
-  name: EPODONIOS
-  server: 185.143.234.238
-  port: 80
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pgcfws-r4
-    headers:
-      Host: uu.caroptions.ir
-- type: vless
-  uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
-  name: EPODONIOS
-  server: 185.143.233.238
-  port: 2086
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: parsi.parsi.sbs
-- type: vless
-  uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
-  name: EPODONIOS
-  server: 185.143.234.238
-  port: 2086
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: parsi.parsi.sbs
 - type: vmess
   uuid: fd26012b-e43b-4d6f-814f-c2c058e0d2eb
   alterId: 0
@@ -103,18 +103,23 @@ proxies:
     headers:
       Host: cdn.tr.one.nemava.com
 - type: vless
-  uuid: bc6c9172-07cc-47ff-91c7-e9e277539e77
+  uuid: 30fcec7f-164b-465c-87f4-b93784a6056b
   name: EPODONIOS
-  server: 2.144.28.28
-  port: 443
+  server: 185.226.140.140
+  port: 8880
   udp: true
   network: ws
-  tls: true
-  servername: vip2.polnejat.ir
   ws-opts:
-    path: /nova-6757d8
+    path: /
     headers:
-      Host: vip2.polnejat.ir
+      Host: azsv1.drpingservice.com
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: pLGCPnj2WgzxX1IedW8yd7trwRlXqjLa
+  name: EPODONIOS
+  server: 109.122.251.86
+  port: 20700
+  udp: true
 - type: vless
   uuid: 950ec237-e75f-4e99-9557-6545784d4202
   name: EPODONIOS
@@ -142,24 +147,6 @@ proxies:
   reality-opts:
     public-key: KX755gv-2X6CXLfWm33OmTc3zHKHcNQK7nPZ06nki1U
     short-id: 429e38fcd14a06a8
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: pLGCPnj2WgzxX1IedW8yd7trwRlXqjLa
-  name: EPODONIOS
-  server: 109.122.251.86
-  port: 20700
-  udp: true
-- type: vless
-  uuid: 30fcec7f-164b-465c-87f4-b93784a6056b
-  name: EPODONIOS
-  server: 185.226.140.140
-  port: 8880
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: azsv1.drpingservice.com
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -178,7 +165,6 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
@@ -191,7 +177,6 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - 未知121
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

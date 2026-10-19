@@ -10,96 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: jNyPnuL1dS5CZLfr6AeO8/CtbUvT3MIOWAaSwoJlTkc=:qKqgMJPzm/OIdljS+Q1vRGcQfIgAFGVr+dWGhkzEuaY=
-  name: EPODONIOS
-  server: 13.140.91.117
-  port: 25111
-  udp: true
-- type: vmess
-  uuid: 54327b73-3ce6-437d-9d00-3d6398d9f9f5
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: EPODONIOS
-  server: 13.140.91.117
-  port: 36154
-  udp: true
-- type: trojan
-  password: qnJtB11d8nYi7h0vEZUuaA/552vPJu4EU4R7u6elt08=
-  name: EPODONIOS
-  server: 13.140.91.117
-  port: 11128
-  udp: true
-  sni: 13.140.91.117
-- type: vmess
-  uuid: 3796d9ef-02ac-447c-a8bf-30789f5c58b3
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: EPODONIOS
-  server: 13.140.91.117
-  port: 36154
-  udp: true
-- type: vmess
-  uuid: b2fd9449-458a-4243-bbf9-5735070d6817
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: EPODONIOS
-  server: 13.140.91.117
-  port: 36154
-  udp: true
-- type: trojan
-  password: OpjCKODVTBraYcv12EFPOaral+oiAPdOTlA0Dv9O+fE=
-  name: EPODONIOS
-  server: 13.140.91.117
-  port: 11128
-  udp: true
-  sni: 13.140.91.117
-- type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: jNyPnuL1dS5CZLfr6AeO8/CtbUvT3MIOWAaSwoJlTkc=:OpjCKODVTBraYcv12EFPOaral+oiAPdOTlA0Dv9O+fE=
-  name: EPODONIOS
-  server: 13.140.91.117
-  port: 25111
-  udp: true
-- type: vless
-  uuid: b2fd9449-458a-4243-bbf9-5735070d6817
-  name: EPODONIOS
-  server: 13.140.91.117
-  port: 23808
-  udp: true
-  network: tcp
-- type: vless
-  uuid: 3796d9ef-02ac-447c-a8bf-30789f5c58b3
-  name: EPODONIOS
-  server: 13.140.91.117
-  port: 23808
-  udp: true
-  network: tcp
-- type: vless
-  uuid: 54327b73-3ce6-437d-9d00-3d6398d9f9f5
-  name: EPODONIOS
-  server: 13.140.91.117
-  port: 23808
-  udp: true
-  network: tcp
-- type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: jNyPnuL1dS5CZLfr6AeO8/CtbUvT3MIOWAaSwoJlTkc=:qnJtB11d8nYi7h0vEZUuaA/552vPJu4EU4R7u6elt08=
-  name: EPODONIOS
-  server: 13.140.91.117
-  port: 25111
-  udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
-  name: EPODONIOS
-  server: 102.37.156.224
-  port: 443
-  udp: true
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
@@ -111,41 +21,26 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  name: EPODONIOS
+  server: 102.37.156.224
+  port: 443
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - EPODONIOS
 rules:
 - MATCH,SELECT

@@ -10,40 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: dca8685b-2f38-389a-3b18-502cd5300ea0
-  name: EPODONIOS
-  server: 122.8.45.3
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: cdn.steamstatic.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: jYD82Xg6TRu2lR0XINMWxKb8dNycDwF-H28ZrtiafUo
-- type: vless
-  uuid: 72d334af-a4e9-ed8f-cbec-75317ce0b463
-  name: EPODONIOS
-  server: 122.8.44.9
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: download.nvidia.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
-- type: vless
-  uuid: dca8685b-2f38-389a-3b18-502cd5300ea0
-  name: 🇫🇮FI_1|1.1MB/s
-  server: 122.8.45.3
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: cdn.steamstatic.com
-  client-fingerprint: chrome
 - type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   alterId: 64
@@ -69,17 +35,6 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
 - type: vmess
-  uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇨🇳_CN_中国
-  server: 39.108.113.127
-  port: 10086
-  udp: true
-  ws-opts:
-    path: /
-- type: vmess
   uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
   alterId: 0
   cipher: auto
@@ -90,6 +45,39 @@ proxies:
   udp: true
   ws-opts:
     path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+- type: vmess
+  uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇨🇳_CN_中国
+  server: 39.108.113.127
+  port: 10086
+  udp: true
+  ws-opts:
+    path: /
+- type: vless
+  uuid: 72d334af-a4e9-ed8f-cbec-75317ce0b463
+  name: EPODONIOS
+  server: 122.8.44.9
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: download.nvidia.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+- type: vless
+  uuid: dca8685b-2f38-389a-3b18-502cd5300ea0
+  name: 🇫🇮FI_1|1.1MB/s
+  server: 122.8.45.3
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: cdn.steamstatic.com
+  client-fingerprint: chrome
 - type: vmess
   uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
   alterId: 0
@@ -118,26 +106,24 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
-  - 🇫🇮FI_1|1.1MB/s
   - 🇨🇳_CN_中国
   - 未知85
+  - EPODONIOS
   - 🇨🇳_CN_中国
   - EPODONIOS
+  - 🇫🇮FI_1|1.1MB/s
   - EPODONIOS
   - 🇨🇳_CN_中国
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
-  - 🇫🇮FI_1|1.1MB/s
   - 🇨🇳_CN_中国
   - 未知85
+  - EPODONIOS
   - 🇨🇳_CN_中国
   - EPODONIOS
+  - 🇫🇮FI_1|1.1MB/s
   - EPODONIOS
   - 🇨🇳_CN_中国
 rules:
