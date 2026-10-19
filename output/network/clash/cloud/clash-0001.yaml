@@ -10,15 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知7
-  server: 82.152.197.167
-  port: 20004
-  udp: true
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇫🇷 法国 | FRA
@@ -33,6 +24,45 @@ proxies:
     path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
     headers:
       Host: snip.edgeoneai.cc.cd
+- type: vmess
+  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知7
+  server: 82.152.197.167
+  port: 20004
+  udp: true
+- type: trojan
+  password: qnJtB11d8nYi7h0vEZUuaA/552vPJu4EU4R7u6elt08=
+  name: EPODONIOS
+  server: 13.140.91.117
+  port: 11128
+  udp: true
+  sni: 13.140.91.117
+- type: vmess
+  uuid: 3796d9ef-02ac-447c-a8bf-30789f5c58b3
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 13.140.91.117
+  port: 36154
+  udp: true
+- type: vless
+  uuid: 3796d9ef-02ac-447c-a8bf-30789f5c58b3
+  name: EPODONIOS
+  server: 13.140.91.117
+  port: 23808
+  udp: true
+  network: tcp
+- type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: jNyPnuL1dS5CZLfr6AeO8/CtbUvT3MIOWAaSwoJlTkc=:qnJtB11d8nYi7h0vEZUuaA/552vPJu4EU4R7u6elt08=
+  name: EPODONIOS
+  server: 13.140.91.117
+  port: 25111
+  udp: true
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
@@ -57,16 +87,24 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知7
   - 🇫🇷 法国 | FRA
+  - 未知7
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知7
   - 🇫🇷 法国 | FRA
+  - 未知7
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - EPODONIOS
 rules:

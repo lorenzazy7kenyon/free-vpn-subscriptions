@@ -10,32 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 903883c7-e62f-436e-a28c-e777637bb757
-  name: EPODONIOS
-  server: 190.93.244.209
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: loaD-Bal-AC000A.sTAGiNg-Api-78c1a1.WorKErs.deV
-  client-fingerprint: chrome
-  ws-opts:
-    path: /vl/7yxyRoUx67K43EW4zOdKqawWj2mXHsfh?ed=2560
-    headers:
-      Host: LOAd-bal-Ac000a.StaGInG-aPi-78C1A1.wOrkeRs.dEV
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 190.93.245.148
-  port: 443
-  udp: true
-  sni: www.pleadcourt.org
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
 - type: trojan
   password: bpb-trojan
   name: EPODONIOS
@@ -48,6 +22,18 @@ proxies:
     path: /tr?ed
     headers:
       Host: fcspring.ggff.net
+- type: trojan
+  password: humanity
+  name: EPODONIOS
+  server: 190.93.245.148
+  port: 443
+  udp: true
+  sni: www.pleadcourt.org
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -56,12 +42,10 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 rules:

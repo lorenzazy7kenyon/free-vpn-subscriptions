@@ -12,14 +12,16 @@ dns:
 proxies:
 - type: vless
   uuid: dca8685b-2f38-389a-3b18-502cd5300ea0
-  name: 🇫🇮FI_1|3.3MB/s
+  name: EPODONIOS
   server: 122.8.45.3
   port: 443
   udp: true
-  network: tcp
+  network: xhttp
   tls: true
   servername: cdn.steamstatic.com
   client-fingerprint: chrome
+  reality-opts:
+    public-key: jYD82Xg6TRu2lR0XINMWxKb8dNycDwF-H28ZrtiafUo
 - type: vless
   uuid: 72d334af-a4e9-ed8f-cbec-75317ce0b463
   name: EPODONIOS
@@ -37,7 +39,7 @@ proxies:
   alterId: 64
   cipher: auto
   network: tcp
-  name: 🇨🇳_CN_中国
+  name: EPODONIOS
   server: 112.132.215.108
   port: 50002
   udp: true
@@ -63,24 +65,37 @@ proxies:
   udp: true
   ws-opts:
     path: /?Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN
+- type: vmess
+  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 39.108.113.127
+  port: 10086
+  udp: true
+  ws-opts:
+    path: /
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇮FI_1|3.3MB/s
   - EPODONIOS
-  - 🇨🇳_CN_中国
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇫🇮FI_1|3.3MB/s
   - EPODONIOS
-  - 🇨🇳_CN_中国
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 rules:

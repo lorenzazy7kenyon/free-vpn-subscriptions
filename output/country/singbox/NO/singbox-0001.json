@@ -1,33 +1,6 @@
 {
   "outbounds": [
     {
-      "method": "chacha20-ietf-poly1305",
-      "password": "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=",
-      "server": "185.213.23.63",
-      "server_port": 990,
-      "tag": "EPODONIOS",
-      "type": "ss"
-    },
-    {
-      "server": "185.14.97.217",
-      "server_port": 8443,
-      "tag": "🇳🇴 挪威 | NOR #1",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "snip.edgeoneai.cc.cd"
-      },
-      "transport": {
-        "headers": {
-          "Host": "snip.edgeoneai.cc.cd"
-        },
-        "path": "/fp=chrome",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
-    },
-    {
       "server": "185.14.97.217",
       "server_port": 8443,
       "tag": "🇳🇴 挪威 | NOR",
@@ -51,11 +24,29 @@
       "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
     },
     {
+      "server": "185.14.97.217",
+      "server_port": 8443,
+      "tag": "🇳🇴 挪威 | NOR #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "snip.edgeoneai.cc.cd"
+      },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        },
+        "path": "/fp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "EPODONIOS",
-        "🇳🇴 挪威 | NOR #1",
-        "🇳🇴 挪威 | NOR"
+        "🇳🇴 挪威 | NOR",
+        "🇳🇴 挪威 | NOR #1"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -64,9 +55,8 @@
     {
       "outbounds": [
         "auto",
-        "EPODONIOS",
-        "🇳🇴 挪威 | NOR #1",
-        "🇳🇴 挪威 | NOR"
+        "🇳🇴 挪威 | NOR",
+        "🇳🇴 挪威 | NOR #1"
       ],
       "tag": "select",
       "type": "selector"

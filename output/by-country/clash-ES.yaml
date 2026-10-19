@@ -26,7 +26,7 @@ proxies:
       Host: 69565ce3109804e7813f98ee.mmdbay.blog
 - type: trojan
   password: humanity
-  name: EPODONIOS
+  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
   server: 185.114.72.31
   port: 2053
   udp: true
@@ -36,6 +36,29 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
+- type: vless
+  uuid: 0d4c981f-687e-4e33-b934-4cbe64e896ed
+  name: EPODONIOS
+  server: 213.182.201.133
+  port: 3090
+  udp: true
+  network: grpc
+- type: vless
+  uuid: e64a2fae-1815-463a-9a74-18a8690931c2
+  name: EPODONIOS
+  server: 196.245.172.85
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: esp.spacessupport.com
+- type: vless
+  uuid: 0d4c981f-687e-4e33-b934-4cbe64e896ed
+  name: EPODONIOS
+  server: 213.182.201.133
+  port: 3090
+  udp: true
+  network: grpc
 - type: vless
   uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
   name: EPODONIOS
@@ -61,16 +84,6 @@ proxies:
     headers:
       Host: www.calmlunch.com
 - type: vless
-  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
-  name: '🏳[www.v2nodes.com] vless- #13'
-  server: 212.227.235.66
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-- type: vless
   uuid: dbc8a7a7-4c99-4aff-a50a-9940f992ef88
   name: EPODONIOS
   server: 213.182.201.11
@@ -78,17 +91,15 @@ proxies:
   udp: true
   network: grpc
 - type: vless
-  uuid: c379d8e4-c67d-42ec-a3ed-ca99d1ad0546
-  name: EPODONIOS
-  server: 196.245.52.149
-  port: 25535
+  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
+  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
+  server: 212.227.235.66
+  port: 2053
   udp: true
   network: tcp
   tls: true
-  servername: www.microsoft.com
-  reality-opts:
-    public-key: Jh7CocBJSA55VZcLfXwXwoQ_Hi5pV-L1vv1SY-IrSh4
-    short-id: 7642ce57308852e7
+  servername: www.apple.com
+  client-fingerprint: chrome
 - type: vless
   uuid: 1e4668ca-6526-84ac-2a53-28bbc209da13
   name: EPODONIOS
@@ -108,24 +119,28 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - '🏳[www.v2nodes.com] vless- #13'
   - EPODONIOS
-  - EPODONIOS
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - '🏳[www.v2nodes.com] vless- #13'
   - EPODONIOS
-  - EPODONIOS
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
   - EPODONIOS
 rules:
 - MATCH,SELECT
