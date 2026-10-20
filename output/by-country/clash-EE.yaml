@@ -10,13 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
-  name: 🇪🇪[www.v2nodes.com] trojan-EE-...
-  server: 109.206.241.10
-  port: 449
-  udp: true
-  sni: russiapower.accesscam.org
 - type: vless
   uuid: 0011d187-d066-48f6-957c-a6983dd63a77
   name: EPODONIOS
@@ -31,9 +24,29 @@ proxies:
     public-key: KEpkyrOY2wV5h8_bA6doDT1e-lFjYd1jGHKDtDl8hSk
     short-id: 141fb733511e7553
 - type: vless
+  uuid: a04c750d-3b71-493b-b2c1-6473ff1209dd
+  name: EPODONIOS
+  server: 185.255.178.28
+  port: 8443
+  udp: true
+  network: tcp
+  tls: true
+  servername: npdev.uk
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: pbsZ_WKQppqB0qF2zgcgwRhy8wnRtPy26sDDp3uqxl4
+    short-id: b7e3f4bc485bc37b
+- type: trojan
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  name: 🇪🇪[www.v2nodes.com] trojan-EE-...
+  server: 109.206.241.10
+  port: 449
+  udp: true
+  sni: russiapower.accesscam.org
+- type: vless
   uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
   name: EPODONIOS
-  server: 163.245.52.91
+  server: 89.125.13.202
   port: 443
   udp: true
   flow: xtls-rprx-vision
@@ -59,20 +72,6 @@ proxies:
     public-key: VfyS9hoKlYU2l3oZ-T6RN2JzjWgtrIC7-VjseHCeBGE
     short-id: 0f4dacf33211e04f
 - type: vless
-  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-  name: EPODONIOS
-  server: 89.125.13.202
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: d3-ee1.cloud-cdn.xyz
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
-    short-id: ad6e08b22389abd2
-- type: vless
   uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
   name: EPODONIOS
   server: 201.7.25.100
@@ -91,9 +90,9 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - EPODONIOS
+  - EPODONIOS
   - 🇪🇪[www.v2nodes.com] trojan-EE-...
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -101,9 +100,9 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
+  - EPODONIOS
   - 🇪🇪[www.v2nodes.com] trojan-EE-...
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

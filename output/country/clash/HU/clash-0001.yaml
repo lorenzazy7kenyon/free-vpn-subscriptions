@@ -25,20 +25,6 @@ proxies:
     public-key: mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg
     short-id: f8379ce795f2e5ed
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇭🇺 匈牙利 | HUN
-  server: 194.71.130.208
-  port: 2087
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
   uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
   name: '🇭🇺[www.v2nodes.com] vless-HU-1... #1'
   server: 85.155.242.38
@@ -49,17 +35,6 @@ proxies:
   tls: true
   servername: hu1.aiage.work
   client-fingerprint: chrome
-- type: vless
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: 🇭🇺[www.v2nodes.com] vless-HU-6...
-  server: 37.221.210.113
-  port: 8443
-  udp: true
-  network: ws
-  ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=chromesecurity=tls
-    headers:
-      Host: free.cndyw.ggff.net
 - type: vless
   uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
   name: EPODONIOS
@@ -76,17 +51,29 @@ proxies:
     short-id: f8379ce795f2e5ed
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇭🇺 匈牙利 | HUN #1'
+  name: 🇭🇺 匈牙利 | HUN
   server: 194.71.130.208
   port: 2087
   udp: true
   network: ws
   tls: true
   servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
   ws-opts:
-    path: /fp=chrome
+    path: /
     headers:
       Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: 🇭🇺[www.v2nodes.com] vless-HU-6...
+  server: 37.221.210.113
+  port: 8443
+  udp: true
+  network: ws
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=chromesecurity=tls
+    headers:
+      Host: free.cndyw.ggff.net
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -94,20 +81,18 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - 🇭🇺 匈牙利 | HUN
   - '🇭🇺[www.v2nodes.com] vless-HU-1... #1'
-  - 🇭🇺[www.v2nodes.com] vless-HU-6...
   - EPODONIOS
-  - '🇭🇺 匈牙利 | HUN #1'
+  - 🇭🇺 匈牙利 | HUN
+  - 🇭🇺[www.v2nodes.com] vless-HU-6...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - 🇭🇺 匈牙利 | HUN
   - '🇭🇺[www.v2nodes.com] vless-HU-1... #1'
-  - 🇭🇺[www.v2nodes.com] vless-HU-6...
   - EPODONIOS
-  - '🇭🇺 匈牙利 | HUN #1'
+  - 🇭🇺 匈牙利 | HUN
+  - 🇭🇺[www.v2nodes.com] vless-HU-6...
 rules:
 - MATCH,SELECT

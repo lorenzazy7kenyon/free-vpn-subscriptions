@@ -10,13 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-128-gcm
-  password: 2bf536a4bd6008511734a505d248de2c
-  name: 🏳[www.v2nodes.com] ss-
-  server: 86.106.84.194
-  port: 13261
-  udp: true
 - type: trojan
   password: 80L0GT8FBWLLP39qdXJCtYRRqD1yG_ut
   name: EPODONIOS
@@ -31,6 +24,13 @@ proxies:
   port: 443
   udp: true
   sni: store.steampowered.com
+- type: ss
+  cipher: aes-128-gcm
+  password: 2bf536a4bd6008511734a505d248de2c
+  name: '🏳[www.v2nodes.com] ss- #1'
+  server: 86.106.84.194
+  port: 13261
+  udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
@@ -77,9 +77,9 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🏳[www.v2nodes.com] ss-
   - EPODONIOS
   - EPODONIOS
+  - '🏳[www.v2nodes.com] ss- #1'
   - EPODONIOS
   - EPODONIOS
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
@@ -88,9 +88,9 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🏳[www.v2nodes.com] ss-
   - EPODONIOS
   - EPODONIOS
+  - '🏳[www.v2nodes.com] ss- #1'
   - EPODONIOS
   - EPODONIOS
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'

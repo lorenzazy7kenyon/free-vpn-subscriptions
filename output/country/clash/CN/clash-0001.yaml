@@ -23,26 +23,6 @@ proxies:
   reality-opts:
     public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
 - type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  network: tcp
-  name: 🇨🇳_CN_中国
-  server: 112.132.215.108
-  port: 50002
-  udp: true
-- type: vmess
-  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: EPODONIOS
-  server: 120.48.133.162
-  port: 10086
-  udp: true
-  ws-opts:
-    path: /?Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN
-- type: vmess
   uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
   alterId: 0
   cipher: auto
@@ -63,6 +43,17 @@ proxies:
   port: 10086
   udp: true
   ws-opts:
+    path: /?Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN
+- type: vmess
+  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 120.48.133.162
+  port: 10086
+  udp: true
+  ws-opts:
     path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
 proxy-groups:
 - name: AUTO
@@ -73,7 +64,6 @@ proxy-groups:
   - EPODONIOS
   - 🇨🇳_CN_中国
   - EPODONIOS
-  - 🇨🇳_CN_中国
   - EPODONIOS
 - name: SELECT
   type: select
@@ -82,7 +72,6 @@ proxy-groups:
   - EPODONIOS
   - 🇨🇳_CN_中国
   - EPODONIOS
-  - 🇨🇳_CN_中国
   - EPODONIOS
 rules:
 - MATCH,SELECT
