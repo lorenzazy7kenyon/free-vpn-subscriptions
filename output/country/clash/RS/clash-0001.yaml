@@ -11,6 +11,20 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇷🇸 塞尔维亚 | SRB
+  server: 178.208.86.182
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
   uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
   name: 🇷🇸[www.v2nodes.com] vless-RS-4...
   server: 185.48.250.113
@@ -26,16 +40,16 @@ proxies:
 - type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
-  server: 150.40.126.22
+  server: 150.40.126.19
   port: 443
   udp: true
   network: grpc
   tls: true
-  servername: rs4.univesalsrv.com
+  servername: rs2.univesalsrv.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: sXsJ4ET-50TYqlhKZf03nPQr2JIy1F0D4m6lOsI0cAs
-    short-id: 861ac7d66953e55f
+    public-key: tL16MVY08r-7YDXb1_gxuBBWInpSFp97ZLJ_ax3R2iE
+    short-id: 1469af2040b7c323
 - type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
@@ -52,16 +66,16 @@ proxies:
 - type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
-  server: 150.40.126.19
+  server: 150.40.126.22
   port: 443
   udp: true
   network: grpc
   tls: true
-  servername: rs2.univesalsrv.com
+  servername: rs4.univesalsrv.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: tL16MVY08r-7YDXb1_gxuBBWInpSFp97ZLJ_ax3R2iE
-    short-id: 1469af2040b7c323
+    public-key: sXsJ4ET-50TYqlhKZf03nPQr2JIy1F0D4m6lOsI0cAs
+    short-id: 861ac7d66953e55f
 - type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
@@ -81,6 +95,7 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇷🇸 塞尔维亚 | SRB
   - 🇷🇸[www.v2nodes.com] vless-RS-4...
   - EPODONIOS
   - EPODONIOS
@@ -90,6 +105,7 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
+  - 🇷🇸 塞尔维亚 | SRB
   - 🇷🇸[www.v2nodes.com] vless-RS-4...
   - EPODONIOS
   - EPODONIOS

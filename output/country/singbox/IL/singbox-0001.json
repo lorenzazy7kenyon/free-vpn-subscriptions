@@ -23,21 +23,7 @@
     {
       "server": "185.253.75.119",
       "server_port": 443,
-      "tag": "🇮🇱[www.v2nodes.com] vless-IL-1... #1",
-      "transport": {
-        "headers": {
-          "Host": "ccc.010304.xyz"
-        },
-        "path": "/fp=chromesecurity=tls",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "d342d11e-d224-4463-b982-532309285094"
-    },
-    {
-      "server": "185.253.75.119",
-      "server_port": 443,
-      "tag": "🇮🇱 以色列 | ISR",
+      "tag": "EPODONIOS",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -58,11 +44,74 @@
       "uuid": "d342d11e-d224-4463-b982-532309285094"
     },
     {
+      "server": "185.253.75.119",
+      "server_port": 443,
+      "tag": "🇮🇱[www.v2nodes.com] vless-IL-1... #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "ccc.010304.xyz"
+      },
+      "transport": {
+        "headers": {
+          "Host": "ccc.010304.xyz"
+        },
+        "path": "/fp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "d342d11e-d224-4463-b982-532309285094"
+    },
+    {
+      "server": "185.241.7.178",
+      "server_port": 443,
+      "tag": "🇮🇱 以色列 | ISR",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "snip.edgeoneai.cc.cd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        },
+        "path": "/",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+    },
+    {
+      "server": "185.241.7.178",
+      "server_port": 443,
+      "tag": "🇮🇱 以色列 | ISR #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "snip.edgeoneai.cc.cd"
+      },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        },
+        "path": "/fp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+    },
+    {
       "interval": "5m",
       "outbounds": [
         "EPODONIOS",
+        "EPODONIOS",
         "🇮🇱[www.v2nodes.com] vless-IL-1... #1",
-        "🇮🇱 以色列 | ISR"
+        "🇮🇱 以色列 | ISR",
+        "🇮🇱 以色列 | ISR #1"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -72,8 +121,10 @@
       "outbounds": [
         "auto",
         "EPODONIOS",
+        "EPODONIOS",
         "🇮🇱[www.v2nodes.com] vless-IL-1... #1",
-        "🇮🇱 以色列 | ISR"
+        "🇮🇱 以色列 | ISR",
+        "🇮🇱 以色列 | ISR #1"
       ],
       "tag": "select",
       "type": "selector"

@@ -22,17 +22,6 @@ proxies:
     headers:
       Host: worker3.gisenoj224.workers.dev
 - type: vless
-  uuid: 38dd06a1-e1cb-492b-bb87-218ce05d0d67
-  name: EPODONIOS
-  server: 185.143.233.5
-  port: 80
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir
-- type: vless
   uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
   name: EPODONIOS
   server: 185.143.233.238
@@ -55,16 +44,16 @@ proxies:
     headers:
       Host: parsi.parsi.sbs
 - type: vless
-  uuid: f3ab8321-0c15-4c9a-9917-3f1b6706ab12
+  uuid: 38dd06a1-e1cb-492b-bb87-218ce05d0d67
   name: EPODONIOS
-  server: 185.143.234.122
+  server: 185.143.233.5
   port: 80
   udp: true
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: api.artaluxa.ir
+      Host: fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir
 - type: vmess
   uuid: b831381d-6324-4d53-ad4f-8cda48b30811
   alterId: 0
@@ -90,6 +79,28 @@ proxies:
     headers:
       Host: uu.caroptions.ir
 - type: vless
+  uuid: f3ab8321-0c15-4c9a-9917-3f1b6706ab12
+  name: EPODONIOS
+  server: 185.143.234.122
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: api.artaluxa.ir
+- type: vmess
+  uuid: 13554232-b7f1-4391-bb1c-9c3f114f3525
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 193.24.120.240
+  port: 4412
+  udp: true
+  tls: true
+  servername: 193.24.120.240
+- type: vless
   uuid: 950ec237-e75f-4e99-9557-6545784d4202
   name: EPODONIOS
   server: 94.182.131.101
@@ -113,13 +124,6 @@ proxies:
     path: /
     headers:
       Host: azsv1.drpingservice.com
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: pLGCPnj2WgzxX1IedW8yd7trwRlXqjLa
-  name: EPODONIOS
-  server: 109.122.251.86
-  port: 20700
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test

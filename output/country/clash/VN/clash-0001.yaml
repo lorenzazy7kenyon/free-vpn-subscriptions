@@ -12,22 +12,8 @@ dns:
 proxies:
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇻🇳 越南 | VNM
+  name: 🇸🇬 新加坡 | SGP
   server: 103.161.178.215
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇻🇳 越南 | VNM
-  server: 103.38.236.248
   port: 443
   udp: true
   network: ws
@@ -44,13 +30,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇻🇳 越南 | VNM
-  - 🇻🇳 越南 | VNM
+  - 🇸🇬 新加坡 | SGP
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇻🇳 越南 | VNM
-  - 🇻🇳 越南 | VNM
+  - 🇸🇬 新加坡 | SGP
 rules:
 - MATCH,SELECT

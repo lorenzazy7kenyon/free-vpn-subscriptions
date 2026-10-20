@@ -11,6 +11,19 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 07104d25-afc5-4b3b-a871-c729c57de047
+  name: EPODONIOS
+  server: 94.26.41.225
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: qq.remnahoysry.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Abp__UEbRjj_fRvYa_u-B-I8XoHVUkGmc1ofMBMqHT4
+- type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
   server: 45.9.156.28
@@ -26,16 +39,16 @@ proxies:
 - type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
-  server: 45.9.156.27
+  server: 45.9.156.24
   port: 443
   udp: true
   network: grpc
   tls: true
-  servername: bg3.univesalsrv.com
+  servername: bg2.univesalsrv.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: XBfCioniAKXgKYBUVnvBXu80AIaIa4SpAB3w8qeF7Gk
-    short-id: 1be1bd931c98c84a
+    public-key: 0f0dh_FUju5cHgQcIwUjHvxQb9aIZ00p0kZRHeE7Ey4
+    short-id: 501ab3325b77e1ca
 - type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
@@ -52,16 +65,16 @@ proxies:
 - type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
-  server: 45.9.156.24
+  server: 45.9.156.27
   port: 443
   udp: true
   network: grpc
   tls: true
-  servername: bg2.univesalsrv.com
+  servername: bg3.univesalsrv.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 0f0dh_FUju5cHgQcIwUjHvxQb9aIZ00p0kZRHeE7Ey4
-    short-id: 501ab3325b77e1ca
+    public-key: XBfCioniAKXgKYBUVnvBXu80AIaIa4SpAB3w8qeF7Gk
+    short-id: 1be1bd931c98c84a
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -72,10 +85,12 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

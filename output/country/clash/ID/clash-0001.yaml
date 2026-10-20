@@ -11,36 +11,30 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 3977434d-6a9b-4858-8ced-80326ba5e367
-  name: 🇮🇩[www.v2nodes.com] vless-ID-1...
-  server: 103.172.197.2
-  port: 29172
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇮🇩 印尼 | IDN
+  server: 172.232.236.252
+  port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: ws
   tls: true
-  servername: aws.amazon.com
+  servername: snip.edgeoneai.cc.cd
   client-fingerprint: chrome
-- type: vless
-  uuid: f8c9d2a1-da40-4f90-b671-11772a0b13d6
-  name: '🇮🇩[www.v2nodes.com] vless-ID-1... #1'
-  server: 103.172.197.3
-  port: 16006
-  udp: true
-  network: tcp
+  ws-opts:
+    path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
-  - '🇮🇩[www.v2nodes.com] vless-ID-1... #1'
+  - 🇮🇩 印尼 | IDN
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
-  - '🇮🇩[www.v2nodes.com] vless-ID-1... #1'
+  - 🇮🇩 印尼 | IDN
 rules:
 - MATCH,SELECT

@@ -11,20 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-  name: EPODONIOS
-  server: 89.125.13.202
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: d3-ee1.cloud-cdn.xyz
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
-    short-id: ad6e08b22389abd2
-- type: vless
   uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
   name: EPODONIOS
   server: 201.7.25.100
@@ -37,6 +23,19 @@ proxies:
   reality-opts:
     public-key: w9JCByLSU3NGciCv2iceOz4TRL4swv8jfIAYoaKSyEw
     short-id: a0938b702257f780
+- type: vless
+  uuid: 0011d187-d066-48f6-957c-a6983dd63a77
+  name: EPODONIOS
+  server: 138.124.100.29
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: est.netvora.space
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: KEpkyrOY2wV5h8_bA6doDT1e-lFjYd1jGHKDtDl8hSk
+    short-id: 141fb733511e7553
 - type: vless
   uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
   name: EPODONIOS
@@ -51,13 +50,20 @@ proxies:
   reality-opts:
     public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
     short-id: ad6e08b22389abd2
-- type: trojan
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+- type: vless
+  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
   name: EPODONIOS
-  server: 109.206.241.10
-  port: 449
+  server: 89.125.13.202
+  port: 443
   udp: true
-  sni: russiapower.accesscam.org
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: d3-ee1.cloud-cdn.xyz
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
+    short-id: ad6e08b22389abd2
 - type: vless
   uuid: 7b571245-ec1e-44b1-bb5a-f7c61157d2c4
   name: EPODONIOS
@@ -72,19 +78,13 @@ proxies:
   reality-opts:
     public-key: VfyS9hoKlYU2l3oZ-T6RN2JzjWgtrIC7-VjseHCeBGE
     short-id: 0f4dacf33211e04f
-- type: vless
-  uuid: 0011d187-d066-48f6-957c-a6983dd63a77
-  name: EPODONIOS
-  server: 138.124.100.29
-  port: 443
+- type: trojan
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  name: 🇪🇪[www.v2nodes.com] trojan-EE-...
+  server: 109.206.241.10
+  port: 449
   udp: true
-  network: tcp
-  tls: true
-  servername: est.netvora.space
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: KEpkyrOY2wV5h8_bA6doDT1e-lFjYd1jGHKDtDl8hSk
-    short-id: 141fb733511e7553
+  sni: russiapower.accesscam.org
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -96,7 +96,7 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
+  - 🇪🇪[www.v2nodes.com] trojan-EE-...
 - name: SELECT
   type: select
   proxies:
@@ -106,6 +106,6 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
+  - 🇪🇪[www.v2nodes.com] trojan-EE-...
 rules:
 - MATCH,SELECT

@@ -1,34 +1,32 @@
 {
   "outbounds": [
     {
-      "flow": "xtls-rprx-vision",
-      "server": "103.172.197.2",
-      "server_port": 29172,
-      "tag": "🇮🇩[www.v2nodes.com] vless-ID-1...",
+      "server": "172.232.236.252",
+      "server_port": 443,
+      "tag": "🇮🇩 印尼 | IDN",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "aws.amazon.com",
+        "server_name": "snip.edgeoneai.cc.cd",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        },
+        "path": "/fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome",
+        "type": "ws"
+      },
       "type": "vless",
-      "uuid": "3977434d-6a9b-4858-8ced-80326ba5e367"
-    },
-    {
-      "server": "103.172.197.3",
-      "server_port": 16006,
-      "tag": "🇮🇩[www.v2nodes.com] vless-ID-1... #1",
-      "type": "vless",
-      "uuid": "f8c9d2a1-da40-4f90-b671-11772a0b13d6"
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇮🇩[www.v2nodes.com] vless-ID-1...",
-        "🇮🇩[www.v2nodes.com] vless-ID-1... #1"
+        "🇮🇩 印尼 | IDN"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -37,8 +35,7 @@
     {
       "outbounds": [
         "auto",
-        "🇮🇩[www.v2nodes.com] vless-ID-1...",
-        "🇮🇩[www.v2nodes.com] vless-ID-1... #1"
+        "🇮🇩 印尼 | IDN"
       ],
       "tag": "select",
       "type": "selector"

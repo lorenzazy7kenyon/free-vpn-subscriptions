@@ -1,6 +1,27 @@
 {
   "outbounds": [
     {
+      "alter_id": 0,
+      "security": "auto",
+      "server": "178.248.75.57",
+      "server_port": 443,
+      "tag": "未知112",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "renderer-stream-2-62.mirra.now"
+      },
+      "transport": {
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket",
+        "type": "ws"
+      },
+      "type": "vmess",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154"
+    },
+    {
       "server": "31.56.177.95",
       "server_port": 8445,
       "tag": "EPODONIOS",
@@ -36,125 +57,6 @@
     {
       "alter_id": 0,
       "security": "auto",
-      "server": "178.248.75.57",
-      "server_port": 443,
-      "tag": "未知112",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "renderer-stream-2-62.mirra.now"
-      },
-      "transport": {
-        "headers": {
-          "Host": "renderer-stream-2-62.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket",
-        "type": "ws"
-      },
-      "type": "vmess",
-      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154"
-    },
-    {
-      "server": "31.56.177.95",
-      "server_port": 8445,
-      "tag": "EPODONIOS",
-      "type": "vless",
-      "uuid": "17acda85-dada-41dd-8add-ad0ad179fc91"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "138.124.180.137",
-      "server_port": 443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c",
-          "short_id": "33acba1b"
-        },
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "5234b2b7-5e07-422c-8159-d62a676c00c6"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "31.57.106.241",
-      "server_port": 443,
-      "tag": "🇱🇻[www.v2nodes.com] vless-LV-1... #1",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.lmt.lv",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "type": "vless",
-      "uuid": "a4801105-c0c7-4cab-87c6-f257ff2afc09"
-    },
-    {
-      "server": "138.124.63.224",
-      "server_port": 8444,
-      "tag": "🇱🇻 拉脱维亚 | LVA",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "github.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "service_name": "GunService",
-        "type": "grpc"
-      },
-      "type": "vless",
-      "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309"
-    },
-    {
-      "server": "138.124.63.224",
-      "server_port": 8444,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
-          "short_id": "457fab2ac885dbe0"
-        },
-        "server_name": "github.com"
-      },
-      "transport": {
-        "service_name": "GunService",
-        "type": "grpc"
-      },
-      "type": "vless",
-      "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309"
-    },
-    {
-      "password": "humanity",
-      "server": "185.22.172.249",
-      "server_port": 443,
-      "tag": "🇳🇱[www.v2nodes.com] trojan-NL-... #10",
-      "tls": {
-        "enabled": true,
-        "insecure": false
-      },
-      "type": "trojan"
-    },
-    {
-      "alter_id": 0,
-      "security": "auto",
       "server": "85.159.228.232",
       "server_port": 443,
       "tag": "未知106",
@@ -174,19 +76,51 @@
       "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154"
     },
     {
+      "flow": "xtls-rprx-vision",
+      "server": "31.57.106.241",
+      "server_port": 443,
+      "tag": "🇱🇻[www.v2nodes.com] vless-LV-1... #2",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.lmt.lv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "a4801105-c0c7-4cab-87c6-f257ff2afc09"
+    },
+    {
+      "password": "humanity",
+      "server": "185.22.172.249",
+      "server_port": 443,
+      "tag": "🇳🇱[www.v2nodes.com] trojan-NL-... #10",
+      "tls": {
+        "enabled": true,
+        "insecure": false
+      },
+      "type": "trojan"
+    },
+    {
+      "server": "31.56.177.95",
+      "server_port": 8445,
+      "tag": "EPODONIOS",
+      "type": "vless",
+      "uuid": "17acda85-dada-41dd-8add-ad0ad179fc91"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "EPODONIOS",
-        "EPODONIOS",
-        "EPODONIOS",
         "未知112",
         "EPODONIOS",
         "EPODONIOS",
-        "🇱🇻[www.v2nodes.com] vless-LV-1... #1",
-        "🇱🇻 拉脱维亚 | LVA",
         "EPODONIOS",
+        "未知106",
+        "🇱🇻[www.v2nodes.com] vless-LV-1... #2",
         "🇳🇱[www.v2nodes.com] trojan-NL-... #10",
-        "未知106"
+        "EPODONIOS"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -195,17 +129,14 @@
     {
       "outbounds": [
         "auto",
-        "EPODONIOS",
-        "EPODONIOS",
-        "EPODONIOS",
         "未知112",
         "EPODONIOS",
         "EPODONIOS",
-        "🇱🇻[www.v2nodes.com] vless-LV-1... #1",
-        "🇱🇻 拉脱维亚 | LVA",
         "EPODONIOS",
+        "未知106",
+        "🇱🇻[www.v2nodes.com] vless-LV-1... #2",
         "🇳🇱[www.v2nodes.com] trojan-NL-... #10",
-        "未知106"
+        "EPODONIOS"
       ],
       "tag": "select",
       "type": "selector"

@@ -10,6 +10,18 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 72d334af-a4e9-ed8f-cbec-75317ce0b463
+  name: EPODONIOS
+  server: 122.8.44.9
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: download.nvidia.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
 - type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   alterId: 64
@@ -19,6 +31,17 @@ proxies:
   server: 112.132.215.108
   port: 50002
   udp: true
+- type: vmess
+  uuid: 2b910c43-51e3-4b15-9be8-b658106ba35e
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知11
+  server: 39.108.113.127
+  port: 10086
+  udp: true
+  ws-opts:
+    path: /
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
@@ -34,40 +57,6 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
-- type: vless
-  uuid: 72d334af-a4e9-ed8f-cbec-75317ce0b463
-  name: EPODONIOS
-  server: 122.8.44.9
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: download.nvidia.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
-- type: vmess
-  uuid: 2b910c43-51e3-4b15-9be8-b658106ba35e
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知11
-  server: 39.108.113.127
-  port: 10086
-  udp: true
-  ws-opts:
-    path: /
-- type: vmess
-  uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇨🇳_CN_中国
-  server: 39.108.113.127
-  port: 10086
-  udp: true
-  ws-opts:
-    path: /
 - type: vmess
   uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
   alterId: 0
@@ -107,11 +96,10 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇳_CN_中国
-  - 未知127
   - EPODONIOS
-  - 未知11
   - 🇨🇳_CN_中国
+  - 未知11
+  - 未知127
   - 🇨🇳_CN_中国
   - EPODONIOS
   - EPODONIOS
@@ -119,11 +107,10 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇳_CN_中国
-  - 未知127
   - EPODONIOS
-  - 未知11
   - 🇨🇳_CN_中国
+  - 未知11
+  - 未知127
   - 🇨🇳_CN_中国
   - EPODONIOS
   - EPODONIOS
