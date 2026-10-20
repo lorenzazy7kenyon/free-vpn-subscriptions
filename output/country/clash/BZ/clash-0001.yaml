@@ -10,26 +10,30 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 00600051-7476-4d50-b09b-02f3638c279f
-  name: EPODONIOS
-  server: 45.131.6.242
-  port: 443
+- type: vmess
+  uuid: 9ac947aa-de86-41c3-9a60-4c061c7c95f0
+  alterId: 0
+  cipher: none
+  network: ws
+  name: 未知121
+  server: 45.131.209.253
+  port: 80
   udp: true
-  network: xhttp
-  tls: true
-  servername: www.customconfig.ir
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: dl3.plot.cценарий.劇情голов0рез.fir3brand.煽動者追逐雷恩.погонезаpейн.wonkacapitano.buzz.
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
+  - 未知121
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
+  - 未知121
 rules:
 - MATCH,SELECT

@@ -10,6 +10,13 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: tfAcRikawhNoZAhu
+  name: EPODONIOS
+  server: 139.84.247.164
+  port: 8388
+  udp: true
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: '🇿🇦 南非 | ZAF #1'
@@ -25,6 +32,20 @@ proxies:
       Host: snip.edgeoneai.cc.cd
 - type: ss
   cipher: chacha20-ietf-poly1305
+  password: BhYMkBpjAjE6ixSw
+  name: EPODONIOS
+  server: 20.164.211.25
+  port: 443
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: Xsy8Ox4yOV3xLlpxtjzs3X
+  name: EPODONIOS
+  server: 102.133.165.160
+  port: 16233
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
   password: 93F6FFBh3CZiBUsG
   name: EPODONIOS
   server: 102.133.227.3
@@ -37,26 +58,13 @@ proxies:
   server: 102.37.156.224
   port: 443
   udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: Xsy8Ox4yOV3xLlpxtjzs3X
-  name: EPODONIOS
-  server: 102.133.165.160
-  port: 16233
-  udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: BhYMkBpjAjE6ixSw
-  name: EPODONIOS
-  server: 20.164.211.25
-  port: 443
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - EPODONIOS
   - '🇿🇦 南非 | ZAF #1'
   - EPODONIOS
   - EPODONIOS
@@ -66,6 +74,7 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - '🇿🇦 南非 | ZAF #1'
   - EPODONIOS
   - EPODONIOS

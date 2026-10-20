@@ -21,20 +21,7 @@ proxies:
   servername: ccc.010304.xyz
   client-fingerprint: chrome
   ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: EPODONIOS
-  server: 31.77.126.2
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  ws-opts:
-    path: /fp
+    path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
 - type: vless
@@ -48,7 +35,7 @@ proxies:
   servername: ccc.010304.xyz
   client-fingerprint: chrome
   ws-opts:
-    path: /fp=chrome
+    path: /
     headers:
       Host: ccc.010304.xyz
 - type: vless
@@ -65,6 +52,26 @@ proxies:
     path: /cart/docs/www/proxyip=108.160.132.132
     headers:
       Host: lucasjow.us.ci
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecu
+  server: 31.77.126.2
+  port: 443
+  udp: true
+  network: tcp
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: EPODONIOS
+  server: 31.77.126.2
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /fp
+    headers:
+      Host: ccc.010304.xyz
 - type: trojan
   password: humanity
   name: EPODONIOS
@@ -77,13 +84,6 @@ proxies:
     path: /assignment
     headers:
       Host: www.volumeroot.com
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecu
-  server: 31.77.126.2
-  port: 443
-  udp: true
-  network: tcp
 - type: ss
   cipher: aes-256-gcm
   password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
@@ -100,9 +100,9 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecu
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
@@ -111,9 +111,9 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecu
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

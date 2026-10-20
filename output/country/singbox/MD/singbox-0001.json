@@ -1,27 +1,29 @@
 {
   "outbounds": [
     {
-      "server": "185.153.198.86",
+      "server": "89.35.14.30",
       "server_port": 443,
       "tag": "EPODONIOS",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "free.cndyw.ggff.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "xWejOQUn2koOUorUPSrHMLM-lyHlZ441KzxKc9bLmkY",
+          "short_id": "221ba6174224ca5b"
+        },
+        "server_name": "md1.univesalsrv.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "headers": {
-          "Host": "free.cndyw.ggff.net"
-        },
-        "path": "pyip=bpb.yousef.isegaro.com",
-        "type": "ws"
+        "service_name": "hub.v1.RelayService",
+        "type": "grpc"
       },
       "type": "vless",
-      "uuid": "04c808e2-0b59-47b0-a54b-32fc7ef1c902"
+      "uuid": "2f35965a-9a9b-45fd-ba32-987296dfb6be"
     },
     {
       "server": "89.35.14.31",
@@ -43,31 +45,6 @@
       },
       "transport": {
         "service_name": "hub.v1.SyncService",
-        "type": "grpc"
-      },
-      "type": "vless",
-      "uuid": "2f35965a-9a9b-45fd-ba32-987296dfb6be"
-    },
-    {
-      "server": "89.35.14.33",
-      "server_port": 443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "TZVMqglhHzteJ6t34mtku75LKzXNq0CB6glKYMAH6zg",
-          "short_id": "8e07337954f9823f"
-        },
-        "server_name": "md4.univesalsrv.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "service_name": "hub.v1.ApiService",
         "type": "grpc"
       },
       "type": "vless",
@@ -99,7 +76,7 @@
       "uuid": "2f35965a-9a9b-45fd-ba32-987296dfb6be"
     },
     {
-      "server": "89.35.14.30",
+      "server": "89.35.14.33",
       "server_port": 443,
       "tag": "EPODONIOS",
       "tls": {
@@ -107,21 +84,44 @@
         "insecure": false,
         "reality": {
           "enabled": true,
-          "public_key": "xWejOQUn2koOUorUPSrHMLM-lyHlZ441KzxKc9bLmkY",
-          "short_id": "221ba6174224ca5b"
+          "public_key": "TZVMqglhHzteJ6t34mtku75LKzXNq0CB6glKYMAH6zg",
+          "short_id": "8e07337954f9823f"
         },
-        "server_name": "md1.univesalsrv.com",
+        "server_name": "md4.univesalsrv.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "service_name": "hub.v1.RelayService",
+        "service_name": "hub.v1.ApiService",
         "type": "grpc"
       },
       "type": "vless",
       "uuid": "2f35965a-9a9b-45fd-ba32-987296dfb6be"
+    },
+    {
+      "server": "185.153.198.86",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "free.cndyw.ggff.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "free.cndyw.ggff.net"
+        },
+        "path": "pyip=bpb.yousef.isegaro.com",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "04c808e2-0b59-47b0-a54b-32fc7ef1c902"
     },
     {
       "server": "89.35.14.34",

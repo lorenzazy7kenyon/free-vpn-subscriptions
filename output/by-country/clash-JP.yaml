@@ -11,34 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
-  name: EPODONIOS
-  server: 154.31.114.248
-  port: 50159
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
-    short-id: 091e1c5db8451757
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: EPODONIOS
-  server: 149.22.87.241
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: EPODONIOS
-  server: 149.22.87.204
-  port: 443
-  udp: true
-- type: vless
   uuid: 309b0ce3-09a8-4883-bfe4-bd56e215be44
   name: EPODONIOS
   server: 31.76.91.138
@@ -51,6 +23,27 @@ proxies:
   reality-opts:
     public-key: JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4
     short-id: c226283c4de5b1ad
+- type: ss
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
+  name: EPODONIOS
+  server: 84.247.155.196
+  port: 443
+  udp: true
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: EPODONIOS
+  server: 45.8.173.99
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
   name: EPODONIOS
@@ -66,27 +59,80 @@ proxies:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
 - type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  name: '🏳[www.v2nodes.com] vless- #41'
-  server: 130.94.67.40
-  port: 80
+  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
+  name: EPODONIOS
+  server: 154.31.114.248
+  port: 50159
   udp: true
-  network: ws
-  ws-opts:
-    path: /platform118
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
+    short-id: 091e1c5db8451757
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇯🇵 日本 | JPN #5'
-  server: 161.33.192.73
+  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+  name: EPODONIOS
+  server: 142.91.108.25
   port: 443
   udp: true
-  network: ws
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
+  servername: jp3.nztvpn.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
+    short-id: ea36c03d86f91287
+- type: trojan
+  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
+  name: EPODONIOS
+  server: 45.32.52.173
+  port: 8886
+  udp: true
+  sni: 45.32.52.173
+  skip-cert-verify: true
+- type: ss
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
+  name: EPODONIOS
+  server: 84.247.155.196
+  port: 80
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: EPODONIOS
+  server: 149.22.87.241
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: EPODONIOS
+  server: 149.22.87.204
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: EPODONIOS
+  server: 149.22.87.240
+  port: 443
+  udp: true
+- type: vless
+  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #11'
+  server: 142.91.108.25
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: jp3.nztvpn.com
+  client-fingerprint: chrome
 - type: vless
   uuid: 982edbef-3c5b-486f-baf3-813a1f8ad660
   name: '🇯🇵 日本 | JPN #5'
@@ -112,45 +158,6 @@ proxies:
   reality-opts:
     public-key: 6N5z8vKZQR7YXVjOKwH5uVH-fESVWBscCTp75BrGlCM
     short-id: ecdf75157a3b899f
-- type: trojan
-  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
-  name: EPODONIOS
-  server: 45.32.52.173
-  port: 8886
-  udp: true
-  sni: 45.32.52.173
-  skip-cert-verify: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: EPODONIOS
-  server: 149.22.87.240
-  port: 443
-  udp: true
-- type: vless
-  uuid: 17c125c4-32cf-4962-bc00-64501a965e56
-  name: '🇯🇵 日本 | JPN #3'
-  server: 131.186.60.56
-  port: 8080
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.japan.go.jp
-  client-fingerprint: chrome
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇯🇵 日本 | JPN #7'
-  server: 54.64.190.109
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇯🇵 日本 | JPN
@@ -165,73 +172,34 @@ proxies:
     path: /
     headers:
       Host: snip.edgeoneai.cc.cd
-- type: ss
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-  name: EPODONIOS
-  server: 84.247.155.196
-  port: 443
-  udp: true
-- type: vless
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-  name: EPODONIOS
-  server: 142.91.108.25
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: jp3.nztvpn.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
-    short-id: ea36c03d86f91287
-- type: ss
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-  name: EPODONIOS
-  server: 84.247.155.196
-  port: 80
-  udp: true
 - type: vmess
-  uuid: f23bb427c1f94373876c2f43e9f790f3
+  uuid: 1c3fb1c0-1204-49db-b842-f72d50f014c1
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知32
-  server: 210.138.37.53
+  name: 未知149
+  server: 212.135.211.242
   port: 443
   udp: true
   tls: true
-  servername: DrBKg16eGf3FZlM3.v.3dns.vip
+  servername: aus.lovehk.xyz
   ws-opts:
-    path: /ws-vmess
+    path: /Sydney3
     headers:
-      Host: DrBKg16eGf3FZlM3.v.3dns.vip
+      Host: aus.lovehk.xyz
 - type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: EPODONIOS
-  server: 3.114.220.22
-  port: 10583
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-- type: vless
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
-  server: 142.91.108.25
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇯🇵 日本 | JPN #7'
+  server: 54.64.190.109
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: ws
   tls: true
-  servername: jp3.nztvpn.com
-  client-fingerprint: chrome
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - type: vmess
   uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
   alterId: 0
@@ -245,19 +213,6 @@ proxies:
     path: /cctv13.m3u8
     headers:
       Host: 168.138.43.75
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇯🇵 日本 | JPN #3'
-  server: 66.245.220.243
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
 - type: vmess
   uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
   alterId: 0
@@ -284,13 +239,56 @@ proxies:
     path: /fp=chrome
     headers:
       Host: snip.edgeoneai.cc.cd
-- type: ss
-  cipher: aes-256-gcm
-  password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
-  name: EPODONIOS
-  server: 191.223.221.53
-  port: 8388
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇯🇵 日本 | JPN #3'
+  server: 66.245.220.243
+  port: 443
   udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vmess
+  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知82
+  server: 140.83.57.20
+  port: 13118
+  udp: true
+  tls: true
+  servername: sg.11160321.de5.net
+  ws-opts:
+    path: /
+    headers:
+      Host: sg.11160321.de5.net
+- type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  name: EPODONIOS
+  server: 3.114.220.22
+  port: 10583
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+- type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
+  server: 130.94.67.40
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /platform118
 - type: ss
   cipher: aes-256-gcm
   password: BeaUf9c0AEWH40Pu
@@ -305,23 +303,16 @@ proxies:
   port: 443
   udp: true
   network: tcp
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+- type: ss
+  cipher: aes-256-gcm
+  password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
   name: EPODONIOS
-  server: 45.8.173.99
-  port: 443
+  server: 191.223.221.53
+  port: 8388
   udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-    headers:
-      Host: snip.edgeoneai.cc.cd
 - type: hysteria2
   password: FizGVblL7_JqY-tzhmuhXWOAZw8DnwQZ
-  name: 🇯🇵 日本 | JPN 3
+  name: 🇯🇵 日本 | JPN
   server: 131.186.60.56
   port: 8090
   udp: true
@@ -338,30 +329,29 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #41'
-  - '🇯🇵 日本 | JPN #5'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #11'
   - '🇯🇵 日本 | JPN #5'
   - 🇯🇵 日本 | JPN
-  - EPODONIOS
-  - EPODONIOS
-  - '🇯🇵 日本 | JPN #3'
+  - 🇯🇵 日本 | JPN
+  - 未知149
   - '🇯🇵 日本 | JPN #7'
-  - 🇯🇵 日本 | JPN
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - 未知32
-  - EPODONIOS
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
-  - EPODONIOS
-  - '🇯🇵 日本 | JPN #3'
   - EPODONIOS
   - '🇯🇵 日本 | JPN #2'
+  - '🇯🇵 日本 | JPN #3'
+  - 未知82
+  - EPODONIOS
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - 🇯🇵 日本 | JPN 3
+  - 🇯🇵 日本 | JPN
 - name: SELECT
   type: select
   proxies:
@@ -371,29 +361,28 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #41'
-  - '🇯🇵 日本 | JPN #5'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #11'
   - '🇯🇵 日本 | JPN #5'
   - 🇯🇵 日本 | JPN
-  - EPODONIOS
-  - EPODONIOS
-  - '🇯🇵 日本 | JPN #3'
+  - 🇯🇵 日本 | JPN
+  - 未知149
   - '🇯🇵 日本 | JPN #7'
-  - 🇯🇵 日本 | JPN
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - 未知32
-  - EPODONIOS
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
-  - EPODONIOS
-  - '🇯🇵 日本 | JPN #3'
   - EPODONIOS
   - '🇯🇵 日本 | JPN #2'
+  - '🇯🇵 日本 | JPN #3'
+  - 未知82
+  - EPODONIOS
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - 🇯🇵 日本 | JPN 3
+  - 🇯🇵 日本 | JPN
 rules:
 - MATCH,SELECT
