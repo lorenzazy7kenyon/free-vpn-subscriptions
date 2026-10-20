@@ -10,19 +10,13 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
-  name: EPODONIOS
-  server: 201.7.25.100
-  port: 24446
+- type: trojan
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  name: 🇪🇪[www.v2nodes.com] trojan-EE-...
+  server: 109.206.241.10
+  port: 449
   udp: true
-  network: grpc
-  tls: true
-  servername: willow.cdn.cachefleet.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: w9JCByLSU3NGciCv2iceOz4TRL4swv8jfIAYoaKSyEw
-    short-id: a0938b702257f780
+  sni: russiapower.accesscam.org
 - type: vless
   uuid: 0011d187-d066-48f6-957c-a6983dd63a77
   name: EPODONIOS
@@ -51,6 +45,20 @@ proxies:
     public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
     short-id: ad6e08b22389abd2
 - type: vless
+  uuid: 7b571245-ec1e-44b1-bb5a-f7c61157d2c4
+  name: EPODONIOS
+  server: 201.7.25.208
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ee.api-yandex.net
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: VfyS9hoKlYU2l3oZ-T6RN2JzjWgtrIC7-VjseHCeBGE
+    short-id: 0f4dacf33211e04f
+- type: vless
   uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
   name: EPODONIOS
   server: 89.125.13.202
@@ -65,47 +73,39 @@ proxies:
     public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
     short-id: ad6e08b22389abd2
 - type: vless
-  uuid: 7b571245-ec1e-44b1-bb5a-f7c61157d2c4
+  uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
   name: EPODONIOS
-  server: 201.7.25.208
-  port: 443
+  server: 201.7.25.100
+  port: 24446
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: grpc
   tls: true
-  servername: ee.api-yandex.net
+  servername: willow.cdn.cachefleet.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: VfyS9hoKlYU2l3oZ-T6RN2JzjWgtrIC7-VjseHCeBGE
-    short-id: 0f4dacf33211e04f
-- type: trojan
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
-  name: 🇪🇪[www.v2nodes.com] trojan-EE-...
-  server: 109.206.241.10
-  port: 449
-  udp: true
-  sni: russiapower.accesscam.org
+    public-key: w9JCByLSU3NGciCv2iceOz4TRL4swv8jfIAYoaKSyEw
+    short-id: a0938b702257f780
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - 🇪🇪[www.v2nodes.com] trojan-EE-...
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - 🇪🇪[www.v2nodes.com] trojan-EE-...
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
 rules:
 - MATCH,SELECT

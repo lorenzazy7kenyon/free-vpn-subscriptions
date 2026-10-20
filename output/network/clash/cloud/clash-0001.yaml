@@ -10,6 +10,21 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知126
+  server: 140.83.57.20
+  port: 13118
+  udp: true
+  tls: true
+  servername: sg.11160321.de5.net
+  ws-opts:
+    path: /
+    headers:
+      Host: sg.11160321.de5.net
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇩🇪 德国 | DEU
@@ -24,15 +39,6 @@ proxies:
     path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
     headers:
       Host: snip.edgeoneai.cc.cd
-- type: vmess
-  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知40
-  server: 82.152.197.167
-  port: 20004
-  udp: true
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
@@ -64,16 +70,16 @@ proxies:
       Host: 13.140.56.100
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
+  password: 93F6FFBh3CZiBUsG
   name: EPODONIOS
-  server: 102.37.156.224
+  server: 102.133.227.3
   port: 443
   udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: 93F6FFBh3CZiBUsG
+  password: aduB9HGxQHjA2SBMRjkHX6
   name: EPODONIOS
-  server: 102.133.227.3
+  server: 102.37.156.224
   port: 443
   udp: true
 proxy-groups:
@@ -82,8 +88,8 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 未知126
   - 🇩🇪 德国 | DEU
-  - 未知40
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
   - EPODONIOS
@@ -93,8 +99,8 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
+  - 未知126
   - 🇩🇪 德国 | DEU
-  - 未知40
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
   - EPODONIOS
