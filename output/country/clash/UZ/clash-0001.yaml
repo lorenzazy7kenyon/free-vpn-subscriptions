@@ -11,36 +11,45 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: e6d369db-22be-4f30-8685-455c717aaa8c
-  name: EPODONIOS
-  server: 157.22.133.130
-  port: 2087
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇵🇱 波兰 | POL
+  server: 157.22.128.7
+  port: 443
   udp: true
   network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
   ws-opts:
-    path: /5021201ef53f
+    path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - type: vless
-  uuid: e6d369db-22be-4f30-8685-455c717aaa8c
-  name: EPODONIOS
-  server: 157.22.133.130
-  port: 2087
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: '🏳[www.v2nodes.com] vless- #46'
+  server: 157.22.128.7
+  port: 443
   udp: true
   network: ws
+  tls: true
+  servername: free.cndyw.ggff.net
   ws-opts:
-    path: /5021201ef53f
+    path: pyip=bpb.yousef.isegaro.comfp=random
+    headers:
+      Host: free.cndyw.ggff.net
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
+  - 🇵🇱 波兰 | POL
+  - '🏳[www.v2nodes.com] vless- #46'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
+  - 🇵🇱 波兰 | POL
+  - '🏳[www.v2nodes.com] vless- #46'
 rules:
 - MATCH,SELECT

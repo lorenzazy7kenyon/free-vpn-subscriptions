@@ -11,6 +11,33 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇲🇾 马来西亚 | MYS #2'
+  server: 72.60.236.128
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇲🇾 马来西亚 | MYS
+  server: 72.60.236.128
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: 🇲🇾[www.v2nodes.com] vless-MY-5...
   server: 216.173.67.59
@@ -36,12 +63,16 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇲🇾 马来西亚 | MYS #2'
+  - 🇲🇾 马来西亚 | MYS
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇲🇾 马来西亚 | MYS #2'
+  - 🇲🇾 马来西亚 | MYS
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
 rules:

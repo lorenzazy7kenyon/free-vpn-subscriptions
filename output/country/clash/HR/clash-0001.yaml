@@ -23,6 +23,16 @@ proxies:
   reality-opts:
     public-key: 8bhS-nnIN67a292RpJsCPzXQy4CzpzOVLTPn5CiAFyg
     short-id: 6ba7b810
+- type: vless
+  uuid: 8179d7cc-82bc-4eae-a97f-5d30c6c2a812
+  name: 🇭🇷[www.v2nodes.com] vless-HR-1...
+  server: 2.56.175.179
+  port: 9443
+  udp: true
+  network: grpc
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -30,10 +40,12 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - 🇭🇷[www.v2nodes.com] vless-HR-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - 🇭🇷[www.v2nodes.com] vless-HR-1...
 rules:
 - MATCH,SELECT

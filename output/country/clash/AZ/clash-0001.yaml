@@ -36,6 +36,19 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: SHDdd617KLHHb0qlQFOHepeHFl_Ch2i-K7o891uyo2M
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇦🇿 AZ_19 #1'
+  server: 94.20.154.66
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -44,11 +57,13 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
+  - '🇦🇿 AZ_19 #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
   - EPODONIOS
+  - '🇦🇿 AZ_19 #1'
 rules:
 - MATCH,SELECT

@@ -24,21 +24,9 @@ proxies:
     path: /graphql
     headers:
       Host: 69565ce3109804e7813f98ee.mmdbay.blog
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 185.114.72.31
-  port: 2053
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
 - type: vless
   uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
-  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #4'
+  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #3'
   server: 212.227.235.66
   port: 2053
   udp: true
@@ -63,26 +51,36 @@ proxies:
 - type: vless
   uuid: b89c2d37-1c91-4ef1-a89d-b5dc48f3cc5f
   name: EPODONIOS
-  server: 213.182.201.137
+  server: 213.182.201.134
   port: 3090
   udp: true
   network: grpc
 - type: vless
   uuid: b89c2d37-1c91-4ef1-a89d-b5dc48f3cc5f
   name: EPODONIOS
-  server: 213.182.201.134
+  server: 213.182.201.137
   port: 3090
   udp: true
   network: grpc
-- type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知157
-  server: 85.90.217.42
-  port: 22324
+- type: trojan
+  password: humanity
+  name: EPODONIOS
+  server: 185.114.72.31
+  port: 2053
   udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- type: vless
+  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+  name: '🇪🇸 西班牙 | ESP #1'
+  server: 51.92.25.174
+  port: 443
+  udp: true
+  network: tcp
 - type: vless
   uuid: 1e4668ca-6526-84ac-2a53-28bbc209da13
   name: EPODONIOS
@@ -102,26 +100,26 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #4'
-  - EPODONIOS
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #3'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - 未知157
+  - EPODONIOS
+  - EPODONIOS
+  - '🇪🇸 西班牙 | ESP #1'
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #4'
-  - EPODONIOS
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #3'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - 未知157
+  - EPODONIOS
+  - EPODONIOS
+  - '🇪🇸 西班牙 | ESP #1'
   - EPODONIOS
 rules:
 - MATCH,SELECT

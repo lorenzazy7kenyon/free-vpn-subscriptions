@@ -11,6 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  name: 🇷🇴[www.v2nodes.com] vless-RO-1...
+  server: 46.28.67.55
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: vless
   uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
   name: EPODONIOS
   server: 146.70.124.85
@@ -26,7 +37,7 @@ proxies:
     short-id: fe24f8a0a560056e
 - type: vless
   uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
-  name: 🇷🇴[www.v2nodes.com] vless-RO-1...
+  name: '🏳[www.v2nodes.com] vless- #47'
   server: 146.70.124.85
   port: 443
   udp: true
@@ -47,17 +58,6 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: 9xwvSAOWL36GC2_oNuy0APzirpqSYzd8vKPmGINnzjA
-- type: vless
-  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
-  server: 46.28.67.55
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: QFWzCw2uX9B9i6qAYeFBIE
@@ -82,7 +82,7 @@ proxies:
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: U83u9OGpvSatIUW7LsWffr
-  name: 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  name: '🏳[www.v2nodes.com] ss- #7'
   server: 194.68.44.42
   port: 64546
   udp: true
@@ -92,23 +92,23 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
   - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - EPODONIOS
-  - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
+  - '🏳[www.v2nodes.com] vless- #47'
   - EPODONIOS
   - EPODONIOS
-  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - EPODONIOS
+  - '🏳[www.v2nodes.com] ss- #7'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - EPODONIOS
-  - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
+  - '🏳[www.v2nodes.com] vless- #47'
   - EPODONIOS
   - EPODONIOS
-  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - EPODONIOS
+  - '🏳[www.v2nodes.com] ss- #7'
 rules:
 - MATCH,SELECT

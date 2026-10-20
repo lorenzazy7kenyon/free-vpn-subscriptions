@@ -1,6 +1,48 @@
 {
   "outbounds": [
     {
+      "server": "72.60.236.128",
+      "server_port": 8443,
+      "tag": "🇲🇾 马来西亚 | MYS #2",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "snip.edgeoneai.cc.cd"
+      },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        },
+        "path": "/fp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+    },
+    {
+      "server": "72.60.236.128",
+      "server_port": 8443,
+      "tag": "🇲🇾 马来西亚 | MYS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "snip.edgeoneai.cc.cd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        },
+        "path": "/",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+    },
+    {
       "server": "216.173.67.59",
       "server_port": 443,
       "tag": "🇲🇾[www.v2nodes.com] vless-MY-5...",
@@ -33,6 +75,8 @@
     {
       "interval": "5m",
       "outbounds": [
+        "🇲🇾 马来西亚 | MYS #2",
+        "🇲🇾 马来西亚 | MYS",
         "🇲🇾[www.v2nodes.com] vless-MY-5...",
         "🇲🇾[www.v2nodes.com] trojan-MY-..."
       ],
@@ -43,6 +87,8 @@
     {
       "outbounds": [
         "auto",
+        "🇲🇾 马来西亚 | MYS #2",
+        "🇲🇾 马来西亚 | MYS",
         "🇲🇾[www.v2nodes.com] vless-MY-5...",
         "🇲🇾[www.v2nodes.com] trojan-MY-..."
       ],

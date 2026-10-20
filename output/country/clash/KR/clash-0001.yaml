@@ -10,6 +10,40 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇰🇷 韩国 | KOR
+  server: 141.164.56.22
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: EPODONIOS
+  server: 211.178.105.134
+  port: 6123
+  udp: true
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇰🇷 韩国 | KOR #2'
+  server: 141.164.56.22
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - type: vmess
   uuid: 41a7089a-040b-4538-8b8d-010902405bde
   alterId: 0
@@ -19,43 +53,44 @@ proxies:
   server: 140.238.2.250
   port: 443
   udp: true
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇰🇷 韩国 | KOR
-  server: 141.164.52.204
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇰🇷 韩国 | KOR
-  server: 123.111.169.70
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: snip.edgeoneai.cc.cd
 - type: vmess
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+  uuid: fa0702f4-8ec9-48e5-9b53-a0afb7c3717e
   alterId: 0
   cipher: auto
-  network: tcp
-  name: 未知115
-  server: 146.56.112.110
-  port: 8888
+  network: ws
+  name: 🇰🇷KR-193.122.119.64-0035
+  server: 193.122.119.64
+  port: 80
   udp: true
+  ws-opts:
+    path: /
+    headers:
+      Host: dm.toutiao.com
+- type: vless
+  uuid: 17c125c4-32cf-4962-bc00-64501a965e56
+  name: 🇰🇷 韩国 | KOR
+  server: 144.24.77.185
+  port: 8080
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.korea.net
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: l8pmRRQbIW6ElyaAQBUaWm4M14XqwtDbOJZXefDO4hs
+    short-id: 1d15daf7c72d3d10
+- type: vless
+  uuid: 17c125c4-32cf-4962-bc00-64501a965e56
+  name: '🇰🇷 韩国 | KOR #1'
+  server: 144.24.77.185
+  port: 8080
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.korea.net
+  client-fingerprint: chrome
 - type: ss
   cipher: aes-256-gcm
   password: ac9c0a7b
@@ -63,34 +98,54 @@ proxies:
   server: 211.174.113.172
   port: 49642
   udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: EPODONIOS
-  server: 211.178.105.134
-  port: 6123
+- type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知125
+  server: 132.145.80.230
+  port: 80
   udp: true
+  ws-opts:
+    path: /cctv13.m3u8
+- type: hysteria2
+  password: FizGVblL7_JqY-tzhmuhXWOAZw8DnwQZ
+  name: 🇰🇷 韩国 | KOR 5
+  server: 144.24.77.185
+  port: 8090
+  udp: true
+  sni: 144.24.77.185
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
   - 🇰🇷 韩国 | KOR
+  - EPODONIOS
+  - '🇰🇷 韩国 | KOR #2'
+  - EPODONIOS
+  - 🇰🇷KR-193.122.119.64-0035
   - 🇰🇷 韩国 | KOR
-  - 未知115
+  - '🇰🇷 韩国 | KOR #1'
   - EPODONIOS
-  - EPODONIOS
+  - 未知125
+  - 🇰🇷 韩国 | KOR 5
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - 🇰🇷 韩国 | KOR
+  - EPODONIOS
+  - '🇰🇷 韩国 | KOR #2'
+  - EPODONIOS
+  - 🇰🇷KR-193.122.119.64-0035
   - 🇰🇷 韩国 | KOR
-  - 未知115
+  - '🇰🇷 韩国 | KOR #1'
   - EPODONIOS
-  - EPODONIOS
+  - 未知125
+  - 🇰🇷 韩国 | KOR 5
 rules:
 - MATCH,SELECT
