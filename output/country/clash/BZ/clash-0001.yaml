@@ -21,19 +21,6 @@ proxies:
     path: /
     headers:
       Host: vms.lifetime04.workers.dev
-- type: vmess
-  uuid: f491cbe4-7548-446c-8d3e-64008e3b1325
-  alterId: 0
-  cipher: none
-  network: ws
-  name: 未知55
-  server: 45.131.208.228
-  port: 80
-  udp: true
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: dl3.127.0.0.1.control.控制.kонтроль.cводкаhовостей.農達懲罰.wonkacapitano.buzz.
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -41,12 +28,10 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - 未知55
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - 未知55
 rules:
 - MATCH,SELECT

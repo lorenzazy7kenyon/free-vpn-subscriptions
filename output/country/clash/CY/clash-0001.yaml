@@ -24,7 +24,7 @@ proxies:
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: '🇨🇾 塞浦路斯 | CYP #1'
-  server: 194.55.164.118
+  server: 194.55.166.65
   port: 443
   udp: true
   network: ws
@@ -36,15 +36,16 @@ proxies:
       Host: snip.edgeoneai.cc.cd
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇬🇧GB_8|1.5MB/s
+  name: 🇨🇾 塞浦路斯 | CYP
   server: 194.55.166.65
-  port: 2087
+  port: 443
   udp: true
   network: ws
   tls: true
   servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
   ws-opts:
-    path: /fp=chrome
+    path: /
     headers:
       Host: snip.edgeoneai.cc.cd
 proxy-groups:
@@ -55,13 +56,13 @@ proxy-groups:
   proxies:
   - 🇨🇾[www.v2nodes.com] vless-CY-1...
   - '🇨🇾 塞浦路斯 | CYP #1'
-  - 🇬🇧GB_8|1.5MB/s
+  - 🇨🇾 塞浦路斯 | CYP
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇨🇾[www.v2nodes.com] vless-CY-1...
   - '🇨🇾 塞浦路斯 | CYP #1'
-  - 🇬🇧GB_8|1.5MB/s
+  - 🇨🇾 塞浦路斯 | CYP
 rules:
 - MATCH,SELECT

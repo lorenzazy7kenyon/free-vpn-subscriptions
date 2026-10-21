@@ -11,20 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: b24ad12f-f6ce-4f0b-a264-d58a76104026
-  name: EPODONIOS
-  server: 50.7.43.117
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: pt3.magazinnarubeva.ru
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: trN5x0amt2YuVzF2vZnK294YBAuh_zl5QkZjPyWz-TI
-    short-id: 8718c58d3d51db59
-- type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇪🇸 西班牙 | ESP
   server: 195.133.92.228
@@ -38,19 +24,33 @@ proxies:
     path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
     headers:
       Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: b24ad12f-f6ce-4f0b-a264-d58a76104026
+  name: EPODONIOS
+  server: 50.7.43.117
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: pt3.magazinnarubeva.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: trN5x0amt2YuVzF2vZnK294YBAuh_zl5QkZjPyWz-TI
+    short-id: 8718c58d3d51db59
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
   - 🇪🇸 西班牙 | ESP
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - 🇪🇸 西班牙 | ESP
+  - EPODONIOS
 rules:
 - MATCH,SELECT
