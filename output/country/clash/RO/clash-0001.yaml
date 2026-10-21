@@ -33,6 +33,20 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - type: vless
+  uuid: d6b59299-2f48-4e9b-9130-b9e9cb5d0a51
+  name: EPODONIOS
+  server: 85.90.196.203
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ro1.hat.onl
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc
+    short-id: 76132b3b39704c44
+- type: vless
   uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
   name: EPODONIOS
   server: 146.70.124.85
@@ -82,7 +96,7 @@ proxies:
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: U83u9OGpvSatIUW7LsWffr
-  name: '🏳[www.v2nodes.com] ss- #4'
+  name: 🇷🇴[www.v2nodes.com] ss-RO-1595...
   server: 194.68.44.42
   port: 64546
   udp: true
@@ -98,7 +112,8 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🏳[www.v2nodes.com] ss- #4'
+  - EPODONIOS
+  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 - name: SELECT
   type: select
   proxies:
@@ -109,6 +124,7 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🏳[www.v2nodes.com] ss- #4'
+  - EPODONIOS
+  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 rules:
 - MATCH,SELECT

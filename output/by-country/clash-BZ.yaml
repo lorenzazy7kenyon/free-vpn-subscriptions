@@ -10,6 +10,17 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: EPODONIOS
+  server: 45.131.209.30
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime04.workers.dev
 - type: vmess
   uuid: 9ac947aa-de86-41c3-9a60-4c061c7c95f0
   alterId: 0
@@ -29,11 +40,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - EPODONIOS
   - 未知121
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - 未知121
 rules:
 - MATCH,SELECT

@@ -18,22 +18,18 @@ proxies:
   udp: true
   sni: node18.overcdn.ru
 - type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  server: 208.69.78.217
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: trojan
-  password: Masir_Sefid
+  uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
   name: EPODONIOS
-  server: 84.234.31.249
+  server: 179.43.170.84
   port: 443
   udp: true
-  sni: store.steampowered.com
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: si2.greenzone12.com
+  reality-opts:
+    public-key: hyOYRfDSIYyqALQt3N2H0RjK8gbV1JvPTkNACC4PJF8
+    short-id: 8718c58d3d51db59
 - type: vless
   uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
   name: EPODONIOS
@@ -54,6 +50,16 @@ proxies:
   server: 132.243.175.144
   port: 8388
   udp: true
+- type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  server: 208.69.78.217
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 - type: hysteria2
   password: capadm96216165
   name: 🇨🇭192087 | ⚡️Telegram = t.me/v...
@@ -71,20 +77,20 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - 🇨🇭192087 | ⚡️Telegram = t.me/v...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - 🇨🇭192087 | ⚡️Telegram = t.me/v...
 rules:
 - MATCH,SELECT

@@ -12,10 +12,17 @@ dns:
 proxies:
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: tfAcRikawhNoZAhu
+  password: BhYMkBpjAjE6ixSw
   name: EPODONIOS
-  server: 139.84.247.164
-  port: 8388
+  server: 20.164.211.25
+  port: 443
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  name: EPODONIOS
+  server: 102.37.156.224
+  port: 443
   udp: true
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
@@ -32,9 +39,9 @@ proxies:
       Host: snip.edgeoneai.cc.cd
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: BhYMkBpjAjE6ixSw
+  password: 93F6FFBh3CZiBUsG
   name: EPODONIOS
-  server: 20.164.211.25
+  server: 102.133.227.3
   port: 443
   udp: true
 - type: ss
@@ -44,20 +51,6 @@ proxies:
   server: 102.133.165.160
   port: 16233
   udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 93F6FFBh3CZiBUsG
-  name: EPODONIOS
-  server: 102.133.227.3
-  port: 443
-  udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
-  name: EPODONIOS
-  server: 102.37.156.224
-  port: 443
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -65,9 +58,8 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - EPODONIOS
   - '🇿🇦 南非 | ZAF #1'
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
@@ -75,9 +67,8 @@ proxy-groups:
   proxies:
   - AUTO
   - EPODONIOS
+  - EPODONIOS
   - '🇿🇦 南非 | ZAF #1'
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 rules:

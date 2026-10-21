@@ -18,6 +18,19 @@ proxies:
   udp: true
   sni: 47.250.84.25
 - type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: 🇲🇾[www.v2nodes.com] vless-MY-5...
+  server: 216.173.67.59
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇲🇾 马来西亚 | MYS
   server: 72.60.236.128
@@ -31,19 +44,6 @@ proxies:
     path: /
     headers:
       Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: 🇲🇾[www.v2nodes.com] vless-MY-5...
-  server: 216.173.67.59
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: ccc.010304.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -51,14 +51,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
-  - 🇲🇾 马来西亚 | MYS
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
+  - 🇲🇾 马来西亚 | MYS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
-  - 🇲🇾 马来西亚 | MYS
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
+  - 🇲🇾 马来西亚 | MYS
 rules:
 - MATCH,SELECT

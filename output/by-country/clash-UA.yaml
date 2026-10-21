@@ -23,19 +23,22 @@ proxies:
   reality-opts:
     public-key: skXBkyphBIt0TWVM0R5U3U-8UG0cuW00ONkaQpJ-OxU
 - type: vless
-  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-  name: 🇺🇦[www.v2nodes.com] vless-UA-4...
-  server: 213.111.148.137
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇦🇹 奥地利 | AUT
+  server: 173.242.51.189
   port: 443
   udp: true
   network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
   ws-opts:
-    path: /fp=androidsecurity=tls
+    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
     headers:
-      Host: proxy-1cu.pages.dev
+      Host: snip.edgeoneai.cc.cd
 - type: vless
   uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-  name: '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
+  name: '🇺🇦[www.v2nodes.com] vless-UA-1... #5'
   server: 213.111.148.137
   port: 443
   udp: true
@@ -46,6 +49,17 @@ proxies:
     path: /fp=android
     headers:
       Host: proxy-1cu.pages.dev
+- type: vless
+  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
+  name: 🇺🇦[www.v2nodes.com] vless-UA-4...
+  server: 213.111.148.137
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=androidsecurity=tls
+    headers:
+      Host: proxy-1cu.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -53,14 +67,16 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - 🇦🇹 奥地利 | AUT
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #5'
   - 🇺🇦[www.v2nodes.com] vless-UA-4...
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - 🇦🇹 奥地利 | AUT
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #5'
   - 🇺🇦[www.v2nodes.com] vless-UA-4...
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
 rules:
 - MATCH,SELECT
