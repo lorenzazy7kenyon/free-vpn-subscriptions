@@ -12,18 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: 🇵🇱[www.v2nodes.com] vless-PL-4...
-  server: 157.22.128.7
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
-    headers:
-      Host: free.cndyw.ggff.net
-- type: vless
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: '🏳[www.v2nodes.com] vless- #20'
+  name: '🏳[www.v2nodes.com] vless- #36'
   server: 157.22.128.7
   port: 443
   udp: true
@@ -32,6 +21,17 @@ proxies:
   servername: free.cndyw.ggff.net
   ws-opts:
     path: pyip=bpb.yousef.isegaro.comfp=random
+    headers:
+      Host: free.cndyw.ggff.net
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: 🇵🇱[www.v2nodes.com] vless-PL-4...
+  server: 157.22.128.7
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
     headers:
       Host: free.cndyw.ggff.net
 - type: vless
@@ -54,15 +54,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🏳[www.v2nodes.com] vless- #36'
   - 🇵🇱[www.v2nodes.com] vless-PL-4...
-  - '🏳[www.v2nodes.com] vless- #20'
   - 🇵🇱 波兰 | POL
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🏳[www.v2nodes.com] vless- #36'
   - 🇵🇱[www.v2nodes.com] vless-PL-4...
-  - '🏳[www.v2nodes.com] vless- #20'
   - 🇵🇱 波兰 | POL
 rules:
 - MATCH,SELECT

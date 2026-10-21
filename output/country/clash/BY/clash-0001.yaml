@@ -23,6 +23,17 @@ proxies:
       Host: 178.172.227.124
 - type: vless
   uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
+  name: '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
+  server: 95.128.71.79
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 95.128.71.79
+- type: vless
+  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
   name: EPODONIOS
   server: 95.128.71.79
   port: 10444
@@ -34,17 +45,6 @@ proxies:
   reality-opts:
     public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
     short-id: 8debcf36f1cc69ff
-- type: vless
-  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
-  name: '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
-  server: 95.128.71.79
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 95.128.71.79
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -52,14 +52,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
-  - EPODONIOS
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
-  - EPODONIOS
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
+  - EPODONIOS
 rules:
 - MATCH,SELECT

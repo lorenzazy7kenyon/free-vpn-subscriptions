@@ -11,65 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  name: '🏳[www.v2nodes.com] vless- #23'
-  server: 46.28.67.55
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
-  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
-  server: 146.70.124.85
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.datadoghq.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 0a1497e6-0570-40a2-84ce-e522eda1c6a4
-  name: EPODONIOS
-  server: 46.28.67.118
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: www.olx.ro
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 9xwvSAOWL36GC2_oNuy0APzirpqSYzd8vKPmGINnzjA
-- type: vless
-  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-  name: EPODONIOS
-  server: 109.104.106.149
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: d3-ro.cloud-cdn.xyz
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: a_v5l6R-rpVGlENLeONW4sz-GdRwIoDqISOWXGov8nw
-    short-id: 87709fed663228e5
-- type: vless
-  uuid: e5544327-834c-455a-9db5-2454c788fa17
-  name: 🇷🇴[www.v2nodes.com] vless-RO-1...
-  server: 109.104.106.101
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: d1-ro.cloud-cdn.xyz
-  client-fingerprint: edge
-- type: vless
   uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
   name: EPODONIOS
   server: 146.70.124.85
@@ -83,6 +24,40 @@ proxies:
   reality-opts:
     public-key: byzvlw97wjAAAfHs5AZRV0P0H6_JKBEZ4yfLS0HNewE
     short-id: fe24f8a0a560056e
+- type: vless
+  uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
+  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
+  server: 146.70.124.85
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.datadoghq.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #3'
+  server: 46.28.67.55
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 0a1497e6-0570-40a2-84ce-e522eda1c6a4
+  name: EPODONIOS
+  server: 46.28.67.118
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: www.olx.ro
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 9xwvSAOWL36GC2_oNuy0APzirpqSYzd8vKPmGINnzjA
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: QFWzCw2uX9B9i6qAYeFBIE
@@ -90,6 +65,19 @@ proxies:
   server: 154.46.31.106
   port: 443
   udp: true
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇷🇴 罗马尼亚 | ROU #1'
+  server: 81.181.166.197
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - type: vmess
   uuid: 1e9edd93-f160-4a4a-b369-2e5194b1932a
   alterId: 0
@@ -116,26 +104,24 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #23'
+  - EPODONIOS
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
+  - '🇷🇴[www.v2nodes.com] vless-RO-1... #3'
   - EPODONIOS
   - EPODONIOS
-  - 🇷🇴[www.v2nodes.com] vless-RO-1...
-  - EPODONIOS
-  - EPODONIOS
+  - '🇷🇴 罗马尼亚 | ROU #1'
   - 未知57
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #23'
+  - EPODONIOS
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
+  - '🇷🇴[www.v2nodes.com] vless-RO-1... #3'
   - EPODONIOS
   - EPODONIOS
-  - 🇷🇴[www.v2nodes.com] vless-RO-1...
-  - EPODONIOS
-  - EPODONIOS
+  - '🇷🇴 罗马尼亚 | ROU #1'
   - 未知57
   - EPODONIOS
 rules:
