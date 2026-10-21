@@ -1,30 +1,38 @@
 {
   "outbounds": [
     {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "2.58.104.11",
-      "server_port": 8443,
-      "tag": "🇲🇾 马来西亚 | MYS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "my.frnhk.xyz"
-      },
+      "server": "192.65.217.30",
+      "server_port": 8880,
+      "tag": "🇺🇸US_4|1.7MB/s",
       "transport": {
         "headers": {
-          "Host": "my.frnhk.xyz"
+          "Host": "vms.lifetime37.workers.dev"
         },
-        "path": "/KualaLumpur1",
+        "path": "/",
         "type": "ws"
       },
-      "type": "vmess",
-      "uuid": "6006c9a2-c0a2-4cda-80f2-405b0d790fc8"
+      "type": "vless",
+      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    },
+    {
+      "server": "103.169.142.30",
+      "server_port": 8880,
+      "tag": "🇺🇸US_6|1.5MB/s",
+      "transport": {
+        "headers": {
+          "Host": "vms.lifetime38.workers.dev"
+        },
+        "path": "/",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇲🇾 马来西亚 | MYS"
+        "🇺🇸US_4|1.7MB/s",
+        "🇺🇸US_6|1.5MB/s"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -33,7 +41,8 @@
     {
       "outbounds": [
         "auto",
-        "🇲🇾 马来西亚 | MYS"
+        "🇺🇸US_4|1.7MB/s",
+        "🇺🇸US_6|1.5MB/s"
       ],
       "tag": "select",
       "type": "selector"

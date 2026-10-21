@@ -10,21 +10,46 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知82
-  server: 140.83.57.20
-  port: 13118
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇩🇪 德国 | DEU #6'
+  server: 155.117.234.52
+  port: 443
   udp: true
+  network: ws
   tls: true
-  servername: sg.11160321.de5.net
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇩🇪 德国 | DEU
+  server: 141.11.187.33
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
   ws-opts:
     path: /
     headers:
-      Host: sg.11160321.de5.net
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇩🇪 德国 | DEU #17'
+  server: 141.11.187.33
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - type: vless
   uuid: 35eb914a-f7c2-4ffa-8503-1bf30df0f1a5
   name: EPODONIOS
@@ -39,15 +64,6 @@ proxies:
   reality-opts:
     public-key: rtYs5r9380Y2zvtXBFfaBbnypJQ7_1x_uYu0cLpOXk4
     short-id: d8fee47b2d3d94
-- type: vmess
-  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知90
-  server: 82.152.197.167
-  port: 20004
-  udp: true
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
@@ -84,38 +100,31 @@ proxies:
   server: 102.37.156.224
   port: 443
   udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 93F6FFBh3CZiBUsG
-  name: EPODONIOS
-  server: 102.133.227.3
-  port: 443
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知82
+  - '🇩🇪 德国 | DEU #6'
+  - 🇩🇪 德国 | DEU
+  - '🇩🇪 德国 | DEU #17'
   - EPODONIOS
-  - 未知90
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
-  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知82
+  - '🇩🇪 德国 | DEU #6'
+  - 🇩🇪 德国 | DEU
+  - '🇩🇪 德国 | DEU #17'
   - EPODONIOS
-  - 未知90
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
-  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

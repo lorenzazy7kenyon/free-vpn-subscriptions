@@ -25,6 +25,19 @@ proxies:
     public-key: 3jySGemfaqPZ2vM66Qtzo5SotO3eoRn1FeGaKp6KBQ4
     short-id: 0da7e14db353e7d0
 - type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇸🇬SG_4|1.0MB/s
+  server: 130.78.190.134
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chromefp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
   uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
   name: EPODONIOS
   server: 144.31.243.120
@@ -45,12 +58,14 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - 🇸🇬SG_4|1.0MB/s
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - 🇸🇬SG_4|1.0MB/s
   - EPODONIOS
 rules:
 - MATCH,SELECT

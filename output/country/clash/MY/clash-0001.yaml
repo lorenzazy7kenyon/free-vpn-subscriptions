@@ -30,20 +30,6 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇲🇾 马来西亚 | MYS
-  server: 72.60.236.128
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -52,13 +38,11 @@ proxy-groups:
   proxies:
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
-  - 🇲🇾 马来西亚 | MYS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
-  - 🇲🇾 马来西亚 | MYS
 rules:
 - MATCH,SELECT

@@ -10,32 +10,41 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: 6006c9a2-c0a2-4cda-80f2-405b0d790fc8
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇲🇾 马来西亚 | MYS
-  server: 2.58.104.11
-  port: 8443
+- type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: 🇺🇸US_4|1.7MB/s
+  server: 192.65.217.30
+  port: 8880
   udp: true
-  tls: true
-  servername: my.frnhk.xyz
+  network: ws
   ws-opts:
-    path: /KualaLumpur1
+    path: /
     headers:
-      Host: my.frnhk.xyz
+      Host: vms.lifetime37.workers.dev
+- type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: 🇺🇸US_6|1.5MB/s
+  server: 103.169.142.30
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime38.workers.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇾 马来西亚 | MYS
+  - 🇺🇸US_4|1.7MB/s
+  - 🇺🇸US_6|1.5MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇲🇾 马来西亚 | MYS
+  - 🇺🇸US_4|1.7MB/s
+  - 🇺🇸US_6|1.5MB/s
 rules:
 - MATCH,SELECT
