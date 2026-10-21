@@ -12,9 +12,43 @@ dns:
 proxies:
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
+  server: 165.245.182.116
+  port: 443
+  udp: true
+  network: tcp
+- type: vless
+  uuid: 35eb914a-f7c2-4ffa-8503-1bf30df0f1a5
+  name: EPODONIOS
+  server: 13.140.92.21
+  port: 80
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: rtYs5r9380Y2zvtXBFfaBbnypJQ7_1x_uYu0cLpOXk4
+    short-id: d8fee47b2d3d94
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: '🇩🇪 德国 | DEU #6'
   server: 155.117.234.52
   port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇩🇪 德国 | DEU #17'
+  server: 141.11.187.33
+  port: 8443
   udp: true
   network: ws
   tls: true
@@ -38,40 +72,6 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇩🇪 德国 | DEU #17'
-  server: 141.11.187.33
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 35eb914a-f7c2-4ffa-8503-1bf30df0f1a5
-  name: EPODONIOS
-  server: 13.140.92.21
-  port: 80
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: rtYs5r9380Y2zvtXBFfaBbnypJQ7_1x_uYu0cLpOXk4
-    short-id: d8fee47b2d3d94
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
-  server: 165.245.182.116
-  port: 443
-  udp: true
-  network: tcp
-- type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   name: EPODONIOS
   server: 13.140.56.100
@@ -84,7 +84,7 @@ proxies:
       Host: 13.140.56.100
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  name: EPODONIOS
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -106,25 +106,25 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇩🇪 德国 | DEU #6'
-  - 🇩🇪 德国 | DEU
-  - '🇩🇪 德国 | DEU #17'
-  - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - '🇩🇪 德国 | DEU #6'
+  - '🇩🇪 德国 | DEU #17'
+  - 🇩🇪 德国 | DEU
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇩🇪 德国 | DEU #6'
-  - 🇩🇪 德国 | DEU
-  - '🇩🇪 德国 | DEU #17'
-  - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - '🇩🇪 德国 | DEU #6'
+  - '🇩🇪 德国 | DEU #17'
+  - 🇩🇪 德国 | DEU
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

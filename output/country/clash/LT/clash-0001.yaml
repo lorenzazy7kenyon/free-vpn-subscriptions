@@ -11,19 +11,16 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   name: EPODONIOS
-  server: 84.32.109.20
-  port: 443
+  server: 88.216.69.30
+  port: 8880
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: litv.nztvpn.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 3jySGemfaqPZ2vM66Qtzo5SotO3eoRn1FeGaKp6KBQ4
-    short-id: 0da7e14db353e7d0
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime06.workers.dev
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇸🇬SG_4|1.0MB/s
@@ -38,19 +35,19 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
 - type: vless
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
   name: EPODONIOS
-  server: 144.31.243.120
-  port: 8443
+  server: 84.32.109.20
+  port: 443
   udp: true
-  network: ws
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: edgetunnel-4uw.pages.dev
+  servername: litv.nztvpn.com
   client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: edgetunnel-4uw.pages.dev
+  reality-opts:
+    public-key: 3jySGemfaqPZ2vM66Qtzo5SotO3eoRn1FeGaKp6KBQ4
+    short-id: 0da7e14db353e7d0
 proxy-groups:
 - name: AUTO
   type: url-test

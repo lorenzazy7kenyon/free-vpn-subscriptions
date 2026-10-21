@@ -21,27 +21,6 @@ proxies:
   tls: true
   servername: www.lmt.lv
   client-fingerprint: firefox
-- type: vless
-  uuid: 17acda85-dada-41dd-8add-ad0ad179fc91
-  name: EPODONIOS
-  server: 31.56.177.95
-  port: 8445
-  udp: true
-  network: tcp
-- type: vless
-  uuid: bd4badaa-e3a5-48a5-aaf3-2d01b5c17ea5
-  name: EPODONIOS
-  server: 31.56.177.95
-  port: 8445
-  udp: true
-  network: tcp
-- type: trojan
-  password: humanity
-  name: '🇳🇱[www.v2nodes.com] trojan-NL-... #13'
-  server: 185.22.172.249
-  port: 443
-  udp: true
-  sni: 185.22.172.249
 - type: trojan
   password: humanity
   name: EPODONIOS
@@ -54,6 +33,27 @@ proxies:
     path: /assignment
     headers:
       Host: www.pleadcourt.org
+- type: trojan
+  password: humanity
+  name: '🇳🇱[www.v2nodes.com] trojan-NL-... #13'
+  server: 185.22.172.249
+  port: 443
+  udp: true
+  sni: 185.22.172.249
+- type: vless
+  uuid: bd4badaa-e3a5-48a5-aaf3-2d01b5c17ea5
+  name: EPODONIOS
+  server: 31.56.177.95
+  port: 8445
+  udp: true
+  network: tcp
+- type: vless
+  uuid: 17acda85-dada-41dd-8add-ad0ad179fc91
+  name: EPODONIOS
+  server: 31.56.177.95
+  port: 8445
+  udp: true
+  network: tcp
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -62,8 +62,8 @@ proxy-groups:
   proxies:
   - '🇱🇻[www.v2nodes.com] vless-LV-1... #2'
   - EPODONIOS
-  - EPODONIOS
   - '🇳🇱[www.v2nodes.com] trojan-NL-... #13'
+  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
@@ -71,8 +71,8 @@ proxy-groups:
   - AUTO
   - '🇱🇻[www.v2nodes.com] vless-LV-1... #2'
   - EPODONIOS
-  - EPODONIOS
   - '🇳🇱[www.v2nodes.com] trojan-NL-... #13'
+  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

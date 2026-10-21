@@ -11,19 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇬🇧GB_8|1.5MB/s
-  server: 194.55.166.65
-  port: 2087
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: 🇨🇾[www.v2nodes.com] vless-CY-1...
   server: 194.55.166.65
@@ -47,21 +34,34 @@ proxies:
     path: /fp=chrome
     headers:
       Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇬🇧GB_8|1.5MB/s
+  server: 194.55.166.65
+  port: 2087
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧GB_8|1.5MB/s
   - 🇨🇾[www.v2nodes.com] vless-CY-1...
   - '🇨🇾 塞浦路斯 | CYP #1'
+  - 🇬🇧GB_8|1.5MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇬🇧GB_8|1.5MB/s
   - 🇨🇾[www.v2nodes.com] vless-CY-1...
   - '🇨🇾 塞浦路斯 | CYP #1'
+  - 🇬🇧GB_8|1.5MB/s
 rules:
 - MATCH,SELECT
