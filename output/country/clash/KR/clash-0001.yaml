@@ -37,20 +37,6 @@ proxies:
     path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome
     headers:
       Host: snip.edgeoneai.cc.cd
-- type: ss
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 9090
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 7001
-  udp: true
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇰🇷 韩国 | KOR
@@ -65,26 +51,6 @@ proxies:
     path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
     headers:
       Host: snip.edgeoneai.cc.cd
-- type: ss
-  cipher: aes-256-gcm
-  password: TEzjfAYq2IjtuoS
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 6697
-  udp: true
-- type: vmess
-  uuid: fa0702f4-8ec9-48e5-9b53-a0afb7c3717e
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: EPODONIOS
-  server: 193.122.119.64
-  port: 80
-  udp: true
-  ws-opts:
-    path: /
-    headers:
-      Host: dm.toutiao.com
 - type: vless
   uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
   name: EPODONIOS
@@ -99,6 +65,19 @@ proxies:
   reality-opts:
     public-key: DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms
     short-id: 3c4041d3
+- type: vmess
+  uuid: fa0702f4-8ec9-48e5-9b53-a0afb7c3717e
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 193.122.119.64
+  port: 80
+  udp: true
+  ws-opts:
+    path: /
+    headers:
+      Host: dm.toutiao.com
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: '🇰🇷 韩国 | KOR #1'
@@ -112,6 +91,20 @@ proxies:
     path: /fp=chromefp=chrome
     headers:
       Host: snip.edgeoneai.cc.cd
+- type: trojan
+  password: UX82473651
+  name: EPODONIOS
+  server: 3.39.225.215
+  port: 443
+  udp: true
+  sni: kind-stork.rooster465.autos
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: EPODONIOS
+  server: 211.178.105.134
+  port: 6123
+  udp: true
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: '🇰🇷 韩国 | KOR #2'
@@ -126,27 +119,18 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
 - type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
+  cipher: aes-256-gcm
+  password: lGqs95QkFHo2NV
   name: EPODONIOS
-  server: 211.178.105.134
-  port: 6123
+  server: 141.164.45.187
+  port: 5498
   udp: true
-- type: trojan
-  password: UX82473651
+- type: ss
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
   name: EPODONIOS
-  server: 3.39.225.215
-  port: 443
-  udp: true
-  sni: kind-stork.rooster465.autos
-- type: vmess
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: EPODONIOS
-  server: 146.56.112.110
-  port: 8888
+  server: 141.164.45.187
+  port: 7001
   udp: true
 proxy-groups:
 - name: AUTO
@@ -156,15 +140,13 @@ proxy-groups:
   proxies:
   - '🇰🇷 韩国 | KOR #3'
   - 🇰🇷 韩国 | KOR
-  - EPODONIOS
-  - EPODONIOS
   - 🇰🇷 韩国 | KOR
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
   - '🇰🇷 韩国 | KOR #1'
-  - '🇰🇷 韩国 | KOR #2'
   - EPODONIOS
+  - EPODONIOS
+  - '🇰🇷 韩国 | KOR #2'
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
@@ -173,15 +155,13 @@ proxy-groups:
   - AUTO
   - '🇰🇷 韩国 | KOR #3'
   - 🇰🇷 韩国 | KOR
-  - EPODONIOS
-  - EPODONIOS
   - 🇰🇷 韩国 | KOR
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
   - '🇰🇷 韩国 | KOR #1'
-  - '🇰🇷 韩国 | KOR #2'
   - EPODONIOS
+  - EPODONIOS
+  - '🇰🇷 韩国 | KOR #2'
   - EPODONIOS
   - EPODONIOS
 rules:

@@ -11,6 +11,28 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇫🇷 法国 | FRA #1'
+  server: 178.104.16.207
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chromefp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vmess
+  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知46
+  server: 82.152.197.167
+  port: 20003
+  udp: true
+- type: vless
   uuid: 35eb914a-f7c2-4ffa-8503-1bf30df0f1a5
   name: EPODONIOS
   server: 13.140.92.21
@@ -26,34 +48,14 @@ proxies:
     short-id: d8fee47b2d3d94
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇫🇷 法国 | FRA #1'
-  server: 178.104.16.207
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chromefp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   server: 165.245.182.116
   port: 443
   udp: true
   network: tcp
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
-  name: EPODONIOS
-  server: 102.37.156.224
-  port: 443
-  udp: true
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: EPODONIOS
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -62,25 +64,34 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  name: EPODONIOS
+  server: 102.37.156.224
+  port: 443
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
   - '🇫🇷 法国 | FRA #1'
-  - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
+  - 未知46
   - EPODONIOS
+  - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - '🇫🇷 法国 | FRA #1'
-  - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
+  - 未知46
   - EPODONIOS
+  - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - EPODONIOS
 rules:
 - MATCH,SELECT

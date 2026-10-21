@@ -36,6 +36,17 @@ proxies:
   uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
   name: EPODONIOS
   server: 95.128.71.79
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 95.128.71.79
+- type: vless
+  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
+  name: EPODONIOS
+  server: 95.128.71.79
   port: 10444
   udp: true
   flow: xtls-rprx-vision
@@ -54,12 +65,14 @@ proxy-groups:
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
+  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

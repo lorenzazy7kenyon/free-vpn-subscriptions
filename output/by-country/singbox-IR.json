@@ -15,20 +15,6 @@
       "uuid": "74ed78f1-4095-47e6-b043-094e494fb7e5"
     },
     {
-      "server": "185.143.234.238",
-      "server_port": 2086,
-      "tag": "EPODONIOS",
-      "transport": {
-        "headers": {
-          "Host": "parsi.parsi.sbs"
-        },
-        "path": "/",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "1ee1f28d-4975-4d7c-95c7-76172c20eed5"
-    },
-    {
       "server": "185.143.233.238",
       "server_port": 2086,
       "tag": "EPODONIOS",
@@ -88,17 +74,17 @@
     },
     {
       "server": "185.143.234.238",
-      "server_port": 80,
+      "server_port": 2086,
       "tag": "EPODONIOS",
       "transport": {
         "headers": {
-          "Host": "uu.caroptions.ir"
+          "Host": "parsi.parsi.sbs"
         },
-        "path": "/pgcfws-r4",
+        "path": "/",
         "type": "ws"
       },
       "type": "vless",
-      "uuid": "0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6"
+      "uuid": "1ee1f28d-4975-4d7c-95c7-76172c20eed5"
     },
     {
       "server": "185.226.140.140",
@@ -113,6 +99,27 @@
       },
       "type": "vless",
       "uuid": "30fcec7f-164b-465c-87f4-b93784a6056b"
+    },
+    {
+      "server": "193.228.169.77",
+      "server_port": 31443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "XIA1VUWGFvaXW6V7i3Va9WzEuqnfCkbGTF2GEvWDFDE",
+          "short_id": "25897668e9b96209"
+        },
+        "server_name": "gtv1.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "d4331e8b-2954-4c03-8df3-73ff7a2d73d5"
     },
     {
       "server": "94.182.131.101",
@@ -144,29 +151,40 @@
       "type": "ss"
     },
     {
-      "server": "193.228.169.77",
-      "server_port": 31443,
+      "method": "aes-256-gcm",
+      "password": "ZDgzMjZlMTA2NTNhNjNkNGU0ZTJiMDgwOWVlZDVi",
+      "server": "188.121.123.142",
+      "server_port": 9142,
       "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "XIA1VUWGFvaXW6V7i3Va9WzEuqnfCkbGTF2GEvWDFDE",
-          "short_id": "25897668e9b96209"
+      "type": "ss"
+    },
+    {
+      "method": "aes-256-gcm",
+      "password": "ZTY1Mzg2MDNmNzM5MmVlOWMzMmVlMWUwNDVhZWJh",
+      "server": "188.121.123.142",
+      "server_port": 9112,
+      "tag": "EPODONIOS",
+      "type": "ss"
+    },
+    {
+      "server": "185.143.234.238",
+      "server_port": 80,
+      "tag": "EPODONIOS",
+      "transport": {
+        "headers": {
+          "Host": "uu.caroptions.ir"
         },
-        "server_name": "gtv1.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "path": "/pgcfws-r4",
+        "type": "ws"
       },
       "type": "vless",
-      "uuid": "d4331e8b-2954-4c03-8df3-73ff7a2d73d5"
+      "uuid": "0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6"
     },
     {
       "interval": "5m",
       "outbounds": [
+        "EPODONIOS",
+        "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
@@ -186,6 +204,8 @@
     {
       "outbounds": [
         "auto",
+        "EPODONIOS",
+        "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",

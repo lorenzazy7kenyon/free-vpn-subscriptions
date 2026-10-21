@@ -24,17 +24,6 @@ proxies:
 - type: vless
   uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
   name: EPODONIOS
-  server: 185.143.234.238
-  port: 2086
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: parsi.parsi.sbs
-- type: vless
-  uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
-  name: EPODONIOS
   server: 185.143.233.238
   port: 2086
   udp: true
@@ -79,16 +68,16 @@ proxies:
     headers:
       Host: fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir
 - type: vless
-  uuid: 0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6
+  uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
   name: EPODONIOS
   server: 185.143.234.238
-  port: 80
+  port: 2086
   udp: true
   network: ws
   ws-opts:
-    path: /pgcfws-r4
+    path: /
     headers:
-      Host: uu.caroptions.ir
+      Host: parsi.parsi.sbs
 - type: vless
   uuid: 30fcec7f-164b-465c-87f4-b93784a6056b
   name: EPODONIOS
@@ -100,6 +89,19 @@ proxies:
     path: /
     headers:
       Host: azsv1.drpingservice.com
+- type: vless
+  uuid: d4331e8b-2954-4c03-8df3-73ff7a2d73d5
+  name: EPODONIOS
+  server: 193.228.169.77
+  port: 31443
+  udp: true
+  network: tcp
+  tls: true
+  servername: gtv1.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: XIA1VUWGFvaXW6V7i3Va9WzEuqnfCkbGTF2GEvWDFDE
+    short-id: 25897668e9b96209
 - type: vless
   uuid: 950ec237-e75f-4e99-9557-6545784d4202
   name: EPODONIOS
@@ -120,19 +122,31 @@ proxies:
   server: 109.122.251.86
   port: 20700
   udp: true
-- type: vless
-  uuid: d4331e8b-2954-4c03-8df3-73ff7a2d73d5
+- type: ss
+  cipher: aes-256-gcm
+  password: ZDgzMjZlMTA2NTNhNjNkNGU0ZTJiMDgwOWVlZDVi
   name: EPODONIOS
-  server: 193.228.169.77
-  port: 31443
+  server: 188.121.123.142
+  port: 9142
   udp: true
-  network: tcp
-  tls: true
-  servername: gtv1.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: XIA1VUWGFvaXW6V7i3Va9WzEuqnfCkbGTF2GEvWDFDE
-    short-id: 25897668e9b96209
+- type: ss
+  cipher: aes-256-gcm
+  password: ZTY1Mzg2MDNmNzM5MmVlOWMzMmVlMWUwNDVhZWJh
+  name: EPODONIOS
+  server: 188.121.123.142
+  port: 9112
+  udp: true
+- type: vless
+  uuid: 0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6
+  name: EPODONIOS
+  server: 185.143.234.238
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pgcfws-r4
+    headers:
+      Host: uu.caroptions.ir
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -150,10 +164,14 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

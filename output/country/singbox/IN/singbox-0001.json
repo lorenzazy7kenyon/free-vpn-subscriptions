@@ -1,17 +1,25 @@
 {
   "outbounds": [
     {
-      "server": "194.61.31.126",
-      "server_port": 2053,
+      "flow": "xtls-rprx-vision",
+      "server": "172.105.252.35",
+      "server_port": 443,
       "tag": "EPODONIOS",
       "tls": {
         "enabled": true,
+        "insecure": true,
+        "server_name": "in-full.privateip.net"
+      },
+      "type": "vless",
+      "uuid": "99de7aac-d2a5-48fd-92cb-d1e6c3c719a4"
+    },
+    {
+      "server": "194.61.31.126",
+      "server_port": 2053,
+      "tag": "🇮🇳[www.v2nodes.com] vless-IN-1... #3",
+      "tls": {
+        "enabled": true,
         "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU",
-          "short_id": "9980e0609b0d3891"
-        },
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
@@ -37,6 +45,41 @@
       "type": "ss"
     },
     {
+      "server": "194.61.31.126",
+      "server_port": 2053,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU",
+          "short_id": "9980e0609b0d3891"
+        },
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "1d4e18bd-1f26-4915-b35a-7ace4826e76a"
+    },
+    {
+      "server": "13.140.56.100",
+      "server_port": 14430,
+      "tag": "🇮🇳[www.v2nodes.com] vless-IN-1... #1",
+      "transport": {
+        "headers": {
+          "Host": "13.140.56.100"
+        },
+        "path": "/vless",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
+    },
+    {
       "server": "5.253.29.254",
       "server_port": 10443,
       "tag": "EPODONIOS",
@@ -45,16 +88,51 @@
     },
     {
       "flow": "xtls-rprx-vision",
-      "server": "172.105.252.35",
+      "server": "165.99.222.161",
       "server_port": 443,
       "tag": "EPODONIOS",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "in-full.privateip.net"
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "SC6AnZ_BlvDruiGFpDRno9b1V3wMmq9gjB-KEHHUlE4"
+        },
+        "server_name": "in1.vkusnews.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "type": "vless",
-      "uuid": "99de7aac-d2a5-48fd-92cb-d1e6c3c719a4"
+      "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6"
+    },
+    {
+      "server": "5.253.29.254",
+      "server_port": 14430,
+      "tag": "EPODONIOS",
+      "transport": {
+        "headers": {
+          "Host": "5.253.29.254"
+        },
+        "path": "/vless",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "c7c27192-60a5-4ce1-b613-95270d82309d"
+    },
+    {
+      "alter_id": 0,
+      "security": "auto",
+      "server": "152.67.8.205",
+      "server_port": 80,
+      "tag": "EPODONIOS",
+      "transport": {
+        "path": "/",
+        "type": "ws"
+      },
+      "type": "vmess",
+      "uuid": "9db4c708-aef8-4359-821b-38e47990be0d"
     },
     {
       "flow": "xtls-rprx-vision",
@@ -79,36 +157,6 @@
       "uuid": "511c1563-2cb6-4064-abc6-a59ee49818a8"
     },
     {
-      "server": "194.61.31.126",
-      "server_port": 2053,
-      "tag": "🇮🇳[www.v2nodes.com] vless-IN-1... #2",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "1d4e18bd-1f26-4915-b35a-7ace4826e76a"
-    },
-    {
-      "server": "13.140.56.100",
-      "server_port": 14430,
-      "tag": "EPODONIOS",
-      "transport": {
-        "headers": {
-          "Host": "13.140.56.100"
-        },
-        "path": "/vless",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
-    },
-    {
       "flow": "xtls-rprx-vision",
       "server": "5.253.42.164",
       "server_port": 40443,
@@ -131,71 +179,15 @@
       "uuid": "e99ba96d-dec8-42eb-be53-19e71eef7cab"
     },
     {
-      "flow": "xtls-rprx-vision",
-      "server": "5.253.28.224",
-      "server_port": 40443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw",
-          "short_id": "68a8"
-        },
-        "server_name": "deepl.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "af5eac96-e478-488a-bc8c-45269d7e8847"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "165.99.222.161",
-      "server_port": 443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "SC6AnZ_BlvDruiGFpDRno9b1V3wMmq9gjB-KEHHUlE4"
-        },
-        "server_name": "in1.vkusnews.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6"
-    },
-    {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "152.67.8.205",
-      "server_port": 80,
-      "tag": "EPODONIOS",
-      "transport": {
-        "path": "/",
-        "type": "ws"
-      },
-      "type": "vmess",
-      "uuid": "9db4c708-aef8-4359-821b-38e47990be0d"
-    },
-    {
       "interval": "5m",
       "outbounds": [
         "EPODONIOS",
+        "🇮🇳[www.v2nodes.com] vless-IN-1... #3",
         "🇮🇳[www.v2nodes.com] vless-IN-1...",
         "EPODONIOS",
         "EPODONIOS",
+        "🇮🇳[www.v2nodes.com] vless-IN-1... #1",
         "EPODONIOS",
-        "EPODONIOS",
-        "🇮🇳[www.v2nodes.com] vless-IN-1... #2",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
@@ -210,12 +202,12 @@
       "outbounds": [
         "auto",
         "EPODONIOS",
+        "🇮🇳[www.v2nodes.com] vless-IN-1... #3",
         "🇮🇳[www.v2nodes.com] vless-IN-1...",
         "EPODONIOS",
         "EPODONIOS",
+        "🇮🇳[www.v2nodes.com] vless-IN-1... #1",
         "EPODONIOS",
-        "EPODONIOS",
-        "🇮🇳[www.v2nodes.com] vless-IN-1... #2",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",

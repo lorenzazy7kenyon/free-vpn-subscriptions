@@ -30,6 +30,13 @@ proxies:
   server: 130.49.189.158
   port: 43558
   udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: jIlQi9jGPJd7KHMx6Y4+JbaNoWSWfe2A73U4J4o0Qrs=
+  name: EPODONIOS
+  server: 130.49.189.158
+  port: 43558
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -38,10 +45,12 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 rules:

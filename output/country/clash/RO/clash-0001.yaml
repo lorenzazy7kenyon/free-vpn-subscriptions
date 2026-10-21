@@ -25,19 +25,8 @@ proxies:
     public-key: byzvlw97wjAAAfHs5AZRV0P0H6_JKBEZ4yfLS0HNewE
     short-id: fe24f8a0a560056e
 - type: vless
-  uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
-  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
-  server: 146.70.124.85
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.datadoghq.com
-  client-fingerprint: chrome
-- type: vless
   uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #3'
+  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
   server: 46.28.67.55
   port: 443
   udp: true
@@ -58,6 +47,31 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: 9xwvSAOWL36GC2_oNuy0APzirpqSYzd8vKPmGINnzjA
+- type: vless
+  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  name: EPODONIOS
+  server: 46.28.67.55
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
+    short-id: d06d78e974491b6e
+- type: vless
+  uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
+  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
+  server: 146.70.124.85
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.datadoghq.com
+  client-fingerprint: chrome
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: QFWzCw2uX9B9i6qAYeFBIE
@@ -78,19 +92,6 @@ proxies:
     path: /fp=chrome
     headers:
       Host: snip.edgeoneai.cc.cd
-- type: vmess
-  uuid: 1e9edd93-f160-4a4a-b369-2e5194b1932a
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知57
-  server: 78.154.103.45
-  port: 11901
-  udp: true
-  ws-opts:
-    path: /Telegram=@AmyraxVPN
-    headers:
-      Host: 78.154.103.45
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: U83u9OGpvSatIUW7LsWffr
@@ -106,11 +107,11 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
-  - '🇷🇴[www.v2nodes.com] vless-RO-1... #3'
   - EPODONIOS
+  - EPODONIOS
+  - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
   - EPODONIOS
   - '🇷🇴 罗马尼亚 | ROU #1'
-  - 未知57
   - EPODONIOS
 - name: SELECT
   type: select
@@ -118,11 +119,11 @@ proxy-groups:
   - AUTO
   - EPODONIOS
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
-  - '🇷🇴[www.v2nodes.com] vless-RO-1... #3'
   - EPODONIOS
+  - EPODONIOS
+  - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
   - EPODONIOS
   - '🇷🇴 罗马尼亚 | ROU #1'
-  - 未知57
   - EPODONIOS
 rules:
 - MATCH,SELECT

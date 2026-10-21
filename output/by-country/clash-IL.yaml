@@ -23,43 +23,28 @@ proxies:
   reality-opts:
     public-key: 4g8R0-Acc1LjppgvUopldH0Wg3JA2tPXvYB96aJnigo
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇮🇱 以色列 | ISR
-  server: 185.239.48.154
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇮🇱 以色列 | ISR #2'
-  server: 185.239.48.154
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🏳[www.v2nodes.com] vless- #24'
+  name: EPODONIOS
   server: 185.253.75.119
   port: 443
   udp: true
   network: ws
   tls: true
   servername: ccc.010304.xyz
+  client-fingerprint: chrome
   ws-opts:
-    path: /fp=chrome
+    path: /
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
+  server: 185.253.75.119
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=chromesecurity=tls
     headers:
       Host: ccc.010304.xyz
 - type: vless
@@ -75,6 +60,33 @@ proxies:
     path: /events/classfp=chrome
     headers:
       Host: vp7.1145678.xyz
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇮🇱 以色列 | ISR #2'
+  server: 185.239.48.154
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇮🇱 以色列 | ISR
+  server: 185.239.48.154
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -82,18 +94,20 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - 🇮🇱 以色列 | ISR
-  - '🇮🇱 以色列 | ISR #2'
-  - '🏳[www.v2nodes.com] vless- #24'
+  - EPODONIOS
+  - '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
   - '🇮🇱 以色列 | ISR #1'
+  - '🇮🇱 以色列 | ISR #2'
+  - 🇮🇱 以色列 | ISR
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - 🇮🇱 以色列 | ISR
-  - '🇮🇱 以色列 | ISR #2'
-  - '🏳[www.v2nodes.com] vless- #24'
+  - EPODONIOS
+  - '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
   - '🇮🇱 以色列 | ISR #1'
+  - '🇮🇱 以色列 | ISR #2'
+  - 🇮🇱 以色列 | ISR
 rules:
 - MATCH,SELECT

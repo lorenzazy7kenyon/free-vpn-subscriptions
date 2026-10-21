@@ -19,23 +19,9 @@ proxies:
   sni: www.calmlunch.com
   network: ws
   ws-opts:
-    path: /assignment
+    path: //assignment
     headers:
       Host: www.calmlunch.com
-- type: vless
-  uuid: 1e6fed5b-5edc-4ddb-a268-79d7fae4365c
-  name: EPODONIOS
-  server: 67.159.17.62
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: filesconvert.org
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: U_E3xSI6QY_Mj-3zjkB4esvMj0aVvYH6W6oHOR50XBs
-    short-id: 10debbdf94767541
 - type: vless
   uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
   name: EPODONIOS
@@ -64,13 +50,11 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
   - '@v2ray_configs_pools 🌍 ⚡️'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - '@v2ray_configs_pools 🌍 ⚡️'
