@@ -11,6 +11,18 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 2bb8b13c-b3f0-2552-da05-d0929bfb36db
+  name: EPODONIOS
+  server: 104.245.240.4
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: download.nvidia.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: skXBkyphBIt0TWVM0R5U3U-8UG0cuW00ONkaQpJ-OxU
+- type: vless
   uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
   name: '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
   server: 213.111.148.137
@@ -36,18 +48,6 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
 - type: vless
-  uuid: 2bb8b13c-b3f0-2552-da05-d0929bfb36db
-  name: EPODONIOS
-  server: 104.245.240.4
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: download.nvidia.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: skXBkyphBIt0TWVM0R5U3U-8UG0cuW00ONkaQpJ-OxU
-- type: vless
   uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
   name: '🇺🇦[www.v2nodes.com] vless-UA-1... #6'
   server: 213.111.148.137
@@ -66,17 +66,17 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - EPODONIOS
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
   - 🇦🇹 奥地利 | AUT
-  - EPODONIOS
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #6'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
   - 🇦🇹 奥地利 | AUT
-  - EPODONIOS
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #6'
 rules:
 - MATCH,SELECT

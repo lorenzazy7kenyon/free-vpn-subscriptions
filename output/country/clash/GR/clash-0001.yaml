@@ -32,20 +32,6 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- type: vless
-  uuid: 8f704ed6-9a1a-4d04-94dd-1bff501716de
-  name: EPODONIOS
-  server: 85.90.197.220
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4
-    short-id: 94acb54627612d43
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -54,13 +40,11 @@ proxy-groups:
   proxies:
   - 🇬🇷[www.v2nodes.com] vless-GR-3...
   - 🇬🇷[www.v2nodes.com] vless-GR-1...
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇬🇷[www.v2nodes.com] vless-GR-3...
   - 🇬🇷[www.v2nodes.com] vless-GR-1...
-  - EPODONIOS
 rules:
 - MATCH,SELECT

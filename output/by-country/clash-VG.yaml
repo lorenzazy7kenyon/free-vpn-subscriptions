@@ -11,6 +11,20 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 50414e45-4c5f-5a45-5553-eb719e39bd09
+  name: EPODONIOS
+  server: 104.234.239.92
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: hqzxcaeyukms.z2zptsequlds.workers.dev
+  client-fingerprint: unsafe
+  ws-opts:
+    path: /stream/PANEL_ZEUS/eb719e39bd09
+    headers:
+      Host: hqzxcaeyukms.z2zptsequlds.workers.dev
+- type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   name: EPODONIOS
   server: 45.142.120.30
@@ -32,6 +46,17 @@ proxies:
     path: /pulsefp=chromesecurity=tls
     headers:
       Host: parsa-panel-u48we.wotic15356.workers.dev
+- type: vless
+  uuid: 50414e45-4c5f-5a45-5553-eb719e39bd09
+  name: EPODONIOS
+  server: 104.234.239.92
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /stream/PANEL_ZEUS/eb719e39bd09
+    headers:
+      Host: hqzxcaeyukms.z2zptsequlds.workers.dev
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -39,12 +64,16 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - EPODONIOS
   - 🇸🇬[www.v2nodes.com] vless-SG-9...
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - EPODONIOS
   - 🇸🇬[www.v2nodes.com] vless-SG-9...
+  - EPODONIOS
 rules:
 - MATCH,SELECT

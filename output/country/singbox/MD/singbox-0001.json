@@ -20,6 +20,29 @@
       "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
     },
     {
+      "server": "130.78.185.4",
+      "server_port": 443,
+      "tag": "🇦🇹 奥地利 | AUT",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "snip.edgeoneai.cc.cd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        },
+        "path": "/",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+    },
+    {
       "server": "89.35.14.32",
       "server_port": 443,
       "tag": "EPODONIOS",
@@ -45,27 +68,29 @@
       "uuid": "2f35965a-9a9b-45fd-ba32-987296dfb6be"
     },
     {
-      "server": "130.78.185.4",
+      "server": "89.35.14.33",
       "server_port": 443,
-      "tag": "🇦🇹 奥地利 | AUT",
+      "tag": "EPODONIOS",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "snip.edgeoneai.cc.cd",
+        "reality": {
+          "enabled": true,
+          "public_key": "TZVMqglhHzteJ6t34mtku75LKzXNq0CB6glKYMAH6zg",
+          "short_id": "8e07337954f9823f"
+        },
+        "server_name": "md4.univesalsrv.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "headers": {
-          "Host": "snip.edgeoneai.cc.cd"
-        },
-        "path": "/",
-        "type": "ws"
+        "service_name": "hub.v1.ApiService",
+        "type": "grpc"
       },
       "type": "vless",
-      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+      "uuid": "2f35965a-9a9b-45fd-ba32-987296dfb6be"
     },
     {
       "server": "89.35.14.34",
@@ -118,31 +143,6 @@
       "uuid": "2f35965a-9a9b-45fd-ba32-987296dfb6be"
     },
     {
-      "server": "89.35.14.33",
-      "server_port": 443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "TZVMqglhHzteJ6t34mtku75LKzXNq0CB6glKYMAH6zg",
-          "short_id": "8e07337954f9823f"
-        },
-        "server_name": "md4.univesalsrv.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "service_name": "hub.v1.ApiService",
-        "type": "grpc"
-      },
-      "type": "vless",
-      "uuid": "2f35965a-9a9b-45fd-ba32-987296dfb6be"
-    },
-    {
       "server": "89.35.14.31",
       "server_port": 443,
       "tag": "EPODONIOS",
@@ -171,8 +171,8 @@
       "interval": "5m",
       "outbounds": [
         "🇦🇹 奥地利 | AUT #1",
-        "EPODONIOS",
         "🇦🇹 奥地利 | AUT",
+        "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
@@ -186,8 +186,8 @@
       "outbounds": [
         "auto",
         "🇦🇹 奥地利 | AUT #1",
-        "EPODONIOS",
         "🇦🇹 奥地利 | AUT",
+        "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
