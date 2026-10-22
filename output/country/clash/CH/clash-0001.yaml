@@ -11,26 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
-  name: EPODONIOS
-  server: 179.43.170.84
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: si2.greenzone12.com
-  reality-opts:
-    public-key: hyOYRfDSIYyqALQt3N2H0RjK8gbV1JvPTkNACC4PJF8
-    short-id: 8718c58d3d51db59
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
-  name: EPODONIOS
-  server: 132.243.175.144
-  port: 8388
-  udp: true
-- type: vless
   uuid: ef8907eb-8bb5-4735-80f2-1d0068500d95
   name: EPODONIOS
   server: 116.204.164.17
@@ -44,9 +24,16 @@ proxies:
     path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
     headers:
       Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
+  name: EPODONIOS
+  server: 132.243.175.144
+  port: 8388
+  udp: true
 - type: vless
   uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  name: 🇨🇭[www.v2nodes.com] vless-CH-1...
   server: 208.69.78.217
   port: 2053
   udp: true
@@ -72,8 +59,7 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - 🇨🇭[www.v2nodes.com] vless-CH-1...
   - 🇨🇭192087 | ⚡️Telegram = t.me/v...
 - name: SELECT
   type: select
@@ -81,8 +67,7 @@ proxy-groups:
   - AUTO
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - 🇨🇭[www.v2nodes.com] vless-CH-1...
   - 🇨🇭192087 | ⚡️Telegram = t.me/v...
 rules:
 - MATCH,SELECT

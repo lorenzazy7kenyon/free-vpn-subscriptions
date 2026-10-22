@@ -11,32 +11,26 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇫🇷 法国 | FRA #1'
-  server: 178.104.16.207
-  port: 443
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  name: EPODONIOS
+  server: 212.74.39.214
+  port: 8080
   udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chromefp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
+  network: tcp
 - type: vmess
   uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
   alterId: 0
   cipher: auto
   network: tcp
-  name: 未知46
+  name: 未知103
   server: 82.152.197.167
-  port: 20003
+  port: 20004
   udp: true
 - type: vless
-  uuid: 102a4847-6c83-4bff-a316-21cae57e5653
-  name: EPODONIOS
-  server: 13.140.82.137
-  port: 44904
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
+  server: 165.245.182.116
+  port: 443
   udp: true
   network: tcp
 - type: vless
@@ -73,13 +67,6 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
-  server: 165.245.182.116
-  port: 443
-  udp: true
-  network: tcp
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: aduB9HGxQHjA2SBMRjkHX6
@@ -93,25 +80,23 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇫🇷 法国 | FRA #1'
-  - 未知46
   - EPODONIOS
+  - 未知103
+  - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
   - EPODONIOS
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
-  - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇫🇷 法国 | FRA #1'
-  - 未知46
   - EPODONIOS
+  - 未知103
+  - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
   - EPODONIOS
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
-  - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
 rules:
 - MATCH,SELECT

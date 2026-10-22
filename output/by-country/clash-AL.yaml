@@ -25,18 +25,29 @@ proxies:
     short-id: 8718c58d3d51db59
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: jIlQi9jGPJd7KHMx6Y4+JbaNoWSWfe2A73U4J4o0Qrs=
+  password: eicdhshSrFLCx/sZ1PSpuKyoVWGZpU95tFS4iGC1c04=
   name: EPODONIOS
   server: 130.49.189.158
   port: 43558
   udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: eicdhshSrFLCx/sZ1PSpuKyoVWGZpU95tFS4iGC1c04=
+  password: jIlQi9jGPJd7KHMx6Y4+JbaNoWSWfe2A73U4J4o0Qrs=
   name: EPODONIOS
   server: 130.49.189.158
   port: 43558
   udp: true
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: 🇦🇱[www.v2nodes.com] vless-AL-1...
+  server: 89.125.139.115
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
+    headers:
+      Host: free.cndyw.ggff.net
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -46,6 +57,7 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - 🇦🇱[www.v2nodes.com] vless-AL-1...
 - name: SELECT
   type: select
   proxies:
@@ -53,5 +65,6 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - 🇦🇱[www.v2nodes.com] vless-AL-1...
 rules:
 - MATCH,SELECT

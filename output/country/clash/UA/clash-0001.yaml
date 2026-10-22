@@ -11,6 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: 🇺🇸US_2|3.0MB/s
+  server: 89.116.180.40
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: vms.lifetime09.workers.dev
+- type: vless
   uuid: 2bb8b13c-b3f0-2552-da05-d0929bfb36db
   name: EPODONIOS
   server: 104.245.240.4
@@ -52,6 +63,7 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇺🇸US_2|3.0MB/s
   - EPODONIOS
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #5'
   - 🇺🇦[www.v2nodes.com] vless-UA-4...
@@ -59,6 +71,7 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
+  - 🇺🇸US_2|3.0MB/s
   - EPODONIOS
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #5'
   - 🇺🇦[www.v2nodes.com] vless-UA-4...

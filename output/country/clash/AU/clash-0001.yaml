@@ -12,18 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: 🇺🇸US_4|1.7MB/s
-  server: 192.65.217.30
-  port: 8880
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime37.workers.dev
-- type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: 🇺🇸US_6|1.5MB/s
+  name: 🇺🇸US_7|2.2MB/s
   server: 103.169.142.30
   port: 8880
   udp: true
@@ -32,19 +21,30 @@ proxies:
     path: /
     headers:
       Host: vms.lifetime38.workers.dev
+- type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: 🇺🇸US_6|1.5MB/s
+  server: 192.65.217.30
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime37.workers.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸US_4|1.7MB/s
+  - 🇺🇸US_7|2.2MB/s
   - 🇺🇸US_6|1.5MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇺🇸US_4|1.7MB/s
+  - 🇺🇸US_7|2.2MB/s
   - 🇺🇸US_6|1.5MB/s
 rules:
 - MATCH,SELECT

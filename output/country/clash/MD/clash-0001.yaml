@@ -22,32 +22,6 @@ proxies:
     headers:
       Host: free.cndyw.ggff.net
 - type: vless
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  name: EPODONIOS
-  server: 89.35.14.34
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: md5.univesalsrv.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 99MRki6b93wC-hhDHe9yq3IXE3KtPGw4RkFAnpI-8gg
-    short-id: aa9884f2982b7d3c
-- type: vless
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  name: EPODONIOS
-  server: 89.35.14.31
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: md2.univesalsrv.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: JXFsWHYjhAcR-7yz9tuCTMdcfuiyC9a-C9ewA55Z63o
-    short-id: d36a38659ce106cb
-- type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇦🇹 奥地利 | AUT
   server: 130.78.185.4
@@ -77,6 +51,32 @@ proxies:
 - type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
+  server: 89.35.14.31
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: md2.univesalsrv.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: JXFsWHYjhAcR-7yz9tuCTMdcfuiyC9a-C9ewA55Z63o
+    short-id: d36a38659ce106cb
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇦🇹 奥地利 | AUT #1'
+  server: 130.78.185.4
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  name: EPODONIOS
   server: 89.35.14.30
   port: 443
   udp: true
@@ -100,6 +100,19 @@ proxies:
   reality-opts:
     public-key: TZVMqglhHzteJ6t34mtku75LKzXNq0CB6glKYMAH6zg
     short-id: 8e07337954f9823f
+- type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  name: EPODONIOS
+  server: 89.35.14.34
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: md5.univesalsrv.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 99MRki6b93wC-hhDHe9yq3IXE3KtPGw4RkFAnpI-8gg
+    short-id: aa9884f2982b7d3c
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -107,9 +120,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇲🇩[www.v2nodes.com] vless-MD-4...
-  - EPODONIOS
-  - EPODONIOS
   - 🇦🇹 奥地利 | AUT
+  - EPODONIOS
+  - EPODONIOS
+  - '🇦🇹 奥地利 | AUT #1'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -118,9 +132,10 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇲🇩[www.v2nodes.com] vless-MD-4...
-  - EPODONIOS
-  - EPODONIOS
   - 🇦🇹 奥地利 | AUT
+  - EPODONIOS
+  - EPODONIOS
+  - '🇦🇹 奥地利 | AUT #1'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

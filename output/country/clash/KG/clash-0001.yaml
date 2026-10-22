@@ -12,6 +12,19 @@ dns:
 proxies:
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇰🇬 KG_131 #1'
+  server: 188.240.213.98
+  port: 2053
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇰🇬 KG_131
   server: 188.240.213.98
   port: 2053
@@ -30,11 +43,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇰🇬 KG_131 #1'
   - 🇰🇬 KG_131
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇰🇬 KG_131 #1'
   - 🇰🇬 KG_131
 rules:
 - MATCH,SELECT
