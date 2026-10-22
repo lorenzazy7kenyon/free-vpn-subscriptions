@@ -12,10 +12,17 @@ dns:
 proxies:
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
+  password: tfAcRikawhNoZAhu
   name: EPODONIOS
-  server: 102.37.156.224
-  port: 443
+  server: 139.84.247.164
+  port: 8388
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: Xsy8Ox4yOV3xLlpxtjzs3X
+  name: EPODONIOS
+  server: 102.133.165.160
+  port: 16233
   udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
@@ -26,24 +33,11 @@ proxies:
   udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: Xsy8Ox4yOV3xLlpxtjzs3X
+  password: aduB9HGxQHjA2SBMRjkHX6
   name: EPODONIOS
-  server: 102.133.165.160
-  port: 16233
-  udp: true
-- type: vless
-  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
-  name: '🇿🇦 南非 | ZAF #1'
-  server: 139.84.242.103
+  server: 102.37.156.224
   port: 443
   udp: true
-  network: ws
-  tls: true
-  servername: vlso5.1d.mom
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: vlso5.1d.mom
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -53,7 +47,7 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🇿🇦 南非 | ZAF #1'
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
@@ -61,6 +55,6 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🇿🇦 南非 | ZAF #1'
+  - EPODONIOS
 rules:
 - MATCH,SELECT

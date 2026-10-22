@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇮🇪 爱尔兰 | IRL
+  name: 🇮🇸 冰岛 | ISL
   server: 167.148.156.160
   port: 8443
   udp: true
@@ -24,17 +24,32 @@ proxies:
     path: /
     headers:
       Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇮🇸 冰岛 | ISL #1'
+  server: 167.148.156.160
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇪 爱尔兰 | IRL
+  - 🇮🇸 冰岛 | ISL
+  - '🇮🇸 冰岛 | ISL #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇮🇪 爱尔兰 | IRL
+  - 🇮🇸 冰岛 | ISL
+  - '🇮🇸 冰岛 | ISL #1'
 rules:
 - MATCH,SELECT

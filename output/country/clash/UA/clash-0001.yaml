@@ -11,17 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: 🇺🇸US_2|3.0MB/s
-  server: 89.116.180.40
-  port: 8880
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vms.lifetime09.workers.dev
-- type: vless
   uuid: 2bb8b13c-b3f0-2552-da05-d0929bfb36db
   name: EPODONIOS
   server: 104.245.240.4
@@ -48,7 +37,7 @@ proxies:
       Host: proxy-1cu.pages.dev
 - type: vless
   uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-  name: 🇺🇦[www.v2nodes.com] vless-UA-4...
+  name: '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
   server: 213.111.148.137
   port: 443
   udp: true
@@ -57,23 +46,53 @@ proxies:
     path: /fp=androidsecurity=tls
     headers:
       Host: proxy-1cu.pages.dev
+- type: vless
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  name: EPODONIOS
+  server: 173.242.63.235
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: edgetunnel-4uw.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: edgetunnel-4uw.pages.dev
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇦🇹 奥地利 | AUT
+  server: 173.242.51.189
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+    headers:
+      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸US_2|3.0MB/s
   - EPODONIOS
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #5'
-  - 🇺🇦[www.v2nodes.com] vless-UA-4...
+  - '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
+  - EPODONIOS
+  - 🇦🇹 奥地利 | AUT
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇺🇸US_2|3.0MB/s
   - EPODONIOS
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #5'
-  - 🇺🇦[www.v2nodes.com] vless-UA-4...
+  - '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
+  - EPODONIOS
+  - 🇦🇹 奥地利 | AUT
 rules:
 - MATCH,SELECT

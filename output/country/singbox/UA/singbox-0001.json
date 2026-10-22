@@ -1,20 +1,6 @@
 {
   "outbounds": [
     {
-      "server": "89.116.180.40",
-      "server_port": 8880,
-      "tag": "🇺🇸US_2|3.0MB/s",
-      "transport": {
-        "headers": {
-          "Host": "vms.lifetime09.workers.dev"
-        },
-        "path": "/?ed=2560",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    },
-    {
       "server": "104.245.240.4",
       "server_port": 443,
       "tag": "EPODONIOS",
@@ -56,7 +42,7 @@
     {
       "server": "213.111.148.137",
       "server_port": 443,
-      "tag": "🇺🇦[www.v2nodes.com] vless-UA-4...",
+      "tag": "🇦🇹[www.v2nodes.com] vless-AT-3... #1",
       "transport": {
         "headers": {
           "Host": "proxy-1cu.pages.dev"
@@ -68,12 +54,59 @@
       "uuid": "40af9131-d540-448a-bc56-5bba147a1dc3"
     },
     {
+      "server": "173.242.63.235",
+      "server_port": 8443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "edgetunnel-4uw.pages.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "edgetunnel-4uw.pages.dev"
+        },
+        "path": "/",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "fdc48be3-a615-41ac-8bd1-ed844c931048"
+    },
+    {
+      "server": "173.242.51.189",
+      "server_port": 443,
+      "tag": "🇦🇹 奥地利 | AUT",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "snip.edgeoneai.cc.cd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        },
+        "path": "/fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "🇺🇸US_2|3.0MB/s",
         "EPODONIOS",
         "🇺🇦[www.v2nodes.com] vless-UA-1... #5",
-        "🇺🇦[www.v2nodes.com] vless-UA-4..."
+        "🇦🇹[www.v2nodes.com] vless-AT-3... #1",
+        "EPODONIOS",
+        "🇦🇹 奥地利 | AUT"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -82,10 +115,11 @@
     {
       "outbounds": [
         "auto",
-        "🇺🇸US_2|3.0MB/s",
         "EPODONIOS",
         "🇺🇦[www.v2nodes.com] vless-UA-1... #5",
-        "🇺🇦[www.v2nodes.com] vless-UA-4..."
+        "🇦🇹[www.v2nodes.com] vless-AT-3... #1",
+        "EPODONIOS",
+        "🇦🇹 奥地利 | AUT"
       ],
       "tag": "select",
       "type": "selector"

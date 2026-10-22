@@ -11,19 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇵🇱 波兰 | POL #2'
-  server: 91.149.167.147
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
   uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
   name: 🇧🇾[www.v2nodes.com] vless-BY-1...
   server: 178.172.227.124
@@ -34,20 +21,6 @@ proxies:
     path: /vless
     headers:
       Host: 178.172.227.124
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇵🇱 波兰 | POL
-  server: 91.149.167.147
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: snip.edgeoneai.cc.cd
 - type: vless
   uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
   name: '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
@@ -65,17 +38,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇵🇱 波兰 | POL #2'
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
-  - 🇵🇱 波兰 | POL
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇵🇱 波兰 | POL #2'
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
-  - 🇵🇱 波兰 | POL
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
 rules:
 - MATCH,SELECT

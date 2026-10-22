@@ -11,40 +11,40 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: 🇺🇸US_7|2.2MB/s
-  server: 103.169.142.30
-  port: 8880
+  uuid: 7a6e1e77-46ed-4f3f-960e-8f49810f0255
+  name: EPODONIOS
+  server: 3.24.240.43
+  port: 8080
   udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime38.workers.dev
-- type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: 🇺🇸US_6|1.5MB/s
-  server: 192.65.217.30
-  port: 8880
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.australia.gov.au
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: aNDybVWg8W1Qsb9axMedBFNakasmttOLEjg2vU1XjRM
+    short-id: bfedcdcbaade3176
+- type: hysteria2
+  password: Un62Uyh8P2Scl8x-9DSxFnpNO4GBs4pw
+  name: 🇦🇺198211 | ⚡️Telegram = t.me/S...
+  server: 3.24.240.43
+  port: 8090
   udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime37.workers.dev
+  sni: 3.24.240.43
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸US_7|2.2MB/s
-  - 🇺🇸US_6|1.5MB/s
+  - EPODONIOS
+  - 🇦🇺198211 | ⚡️Telegram = t.me/S...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇺🇸US_7|2.2MB/s
-  - 🇺🇸US_6|1.5MB/s
+  - EPODONIOS
+  - 🇦🇺198211 | ⚡️Telegram = t.me/S...
 rules:
 - MATCH,SELECT

@@ -32,6 +32,17 @@ proxies:
   port: 50002
   udp: true
 - type: vmess
+  uuid: 7547daaa-1577-49b0-9519-bd1823add1a7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 39.108.113.127
+  port: 10086
+  udp: true
+  ws-opts:
+    path: /
+- type: vmess
   uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
   alterId: 0
   cipher: auto
@@ -51,10 +62,12 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
