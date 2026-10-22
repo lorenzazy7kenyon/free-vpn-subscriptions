@@ -19,22 +19,9 @@ proxies:
   sni: www.calmlunch.com
   network: ws
   ws-opts:
-    path: /assignment
+    path: //assignment
     headers:
       Host: www.calmlunch.com
-- type: vless
-  uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
-  name: EPODONIOS
-  server: 66.90.106.228
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: au1.wolffast.net
-  reality-opts:
-    public-key: hyOYRfDSIYyqALQt3N2H0RjK8gbV1JvPTkNACC4PJF8
-    short-id: 8718c58d3d51db59
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: '🇦🇹 奥地利 | AUT #2'
@@ -62,6 +49,19 @@ proxies:
     path: /
     headers:
       Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
+  name: EPODONIOS
+  server: 66.90.106.228
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: au1.wolffast.net
+  reality-opts:
+    public-key: hyOYRfDSIYyqALQt3N2H0RjK8gbV1JvPTkNACC4PJF8
+    short-id: 8718c58d3d51db59
 - type: hysteria2
   password: Hc9_NX924RE_Mn948rgrwiub_m93V84nll
   name: '@v2ray_configs_pools 🌍 ⚡️'
@@ -76,18 +76,18 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
   - '🇦🇹 奥地利 | AUT #2'
   - 🇦🇹 奥地利 | AUT
+  - EPODONIOS
   - '@v2ray_configs_pools 🌍 ⚡️'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
   - '🇦🇹 奥地利 | AUT #2'
   - 🇦🇹 奥地利 | AUT
+  - EPODONIOS
   - '@v2ray_configs_pools 🌍 ⚡️'
 rules:
 - MATCH,SELECT

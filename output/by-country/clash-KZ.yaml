@@ -47,27 +47,6 @@ proxies:
     path: /vpnjantit
     headers:
       Host: kz1.vpnjantit.com
-- type: vless
-  uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
-  name: 🇰🇿[www.v2nodes.com] vless-KZ-1...
-  server: 109.248.170.119
-  port: 13447
-  udp: true
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-- type: vmess
-  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知52
-  server: 38.107.234.57
-  port: 80
-  udp: true
-  ws-opts:
-    path: /vmess/
 - type: vmess
   uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
   alterId: 0
@@ -81,6 +60,42 @@ proxies:
     path: /
     headers:
       Host: viber.com
+- type: vless
+  uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
+  name: EPODONIOS
+  server: 109.248.170.119
+  port: 13447
+  udp: true
+  network: tcp
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: _0wM2ep44eAcrgf5PflKaBivknCWT6kMvQBQUoScCkE
+    short-id: '83'
+- type: vmess
+  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 38.107.234.57
+  port: 80
+  udp: true
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: viber.com
+- type: vless
+  uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
+  name: 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  server: 109.248.170.119
+  port: 13447
+  udp: true
+  network: tcp
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: chrome
 - type: vless
   uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
   name: '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
@@ -100,9 +115,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - 🇰🇿[www.v2nodes.com] vless-KZ-1...
-  - 未知52
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - 🇰🇿[www.v2nodes.com] vless-KZ-1...
   - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
 - name: SELECT
   type: select
@@ -111,9 +127,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - 🇰🇿[www.v2nodes.com] vless-KZ-1...
-  - 未知52
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - 🇰🇿[www.v2nodes.com] vless-KZ-1...
   - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
 rules:
 - MATCH,SELECT

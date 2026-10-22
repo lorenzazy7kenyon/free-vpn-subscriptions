@@ -11,20 +11,35 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 0a1497e6-0570-40a2-84ce-e522eda1c6a4
+  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
   name: EPODONIOS
-  server: 46.28.67.118
+  server: 46.28.67.55
   port: 443
   udp: true
-  network: xhttp
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: www.olx.ro
+  servername: www.cloudflare.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 9xwvSAOWL36GC2_oNuy0APzirpqSYzd8vKPmGINnzjA
+    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
+    short-id: d06d78e974491b6e
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇷🇴 罗马尼亚 | ROU #1'
+  server: 212.81.59.35
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - type: vless
   uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
+  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
   server: 46.28.67.55
   port: 443
   udp: true
@@ -40,6 +55,18 @@ proxies:
   server: 154.46.31.106
   port: 443
   udp: true
+- type: vless
+  uuid: 0a1497e6-0570-40a2-84ce-e522eda1c6a4
+  name: EPODONIOS
+  server: 46.28.67.118
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: www.olx.ro
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 9xwvSAOWL36GC2_oNuy0APzirpqSYzd8vKPmGINnzjA
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: U83u9OGpvSatIUW7LsWffr
@@ -54,7 +81,9 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
+  - '🇷🇴 罗马尼亚 | ROU #1'
+  - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
@@ -62,7 +91,9 @@ proxy-groups:
   proxies:
   - AUTO
   - EPODONIOS
-  - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
+  - '🇷🇴 罗马尼亚 | ROU #1'
+  - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 rules:

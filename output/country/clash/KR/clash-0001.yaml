@@ -11,6 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 132.145.80.230
+  port: 80
+  udp: true
+  ws-opts:
+    path: /cctv13.m3u8
+- type: vmess
   uuid: fa0702f4-8ec9-48e5-9b53-a0afb7c3717e
   alterId: 0
   cipher: auto
@@ -23,44 +34,12 @@ proxies:
     path: /
     headers:
       Host: dm.toutiao.com
-- type: vmess
-  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: EPODONIOS
-  server: 183.109.131.75
-  port: 20086
-  udp: true
-  ws-opts:
-    path: /
 - type: ss
   cipher: aes-256-cfb
   password: qwerREWQ@@
   name: EPODONIOS
   server: 211.178.105.134
   port: 6123
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 9090
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: PCnnH6SQSnfoS27
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 8091
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: TEzjfAYq2IjtuoS
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 6679
   udp: true
 - type: vless
   uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
@@ -78,40 +57,39 @@ proxies:
     short-id: e04a526b0b09c765
 - type: ss
   cipher: aes-256-gcm
-  password: lGqs95QkFHo2NV
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 5498
-  udp: true
-- type: vless
-  uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: '🇰🇷 韩国 | KOR #2'
-  server: 13.209.18.208
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: api-prod.mkt.ponpish.kr
-  client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-gcm
   password: RexnBgU7EV5ADxG
   name: EPODONIOS
   server: 141.164.45.187
   port: 7001
   udp: true
-- type: vmess
-  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
-  alterId: 0
-  cipher: auto
-  network: ws
+- type: ss
+  cipher: aes-256-gcm
+  password: lGqs95QkFHo2NV
   name: EPODONIOS
-  server: 183.109.131.75
-  port: 20086
+  server: 141.164.45.187
+  port: 5498
   udp: true
-  ws-opts:
-    path: /?ed=2048@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN
+- type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+  name: EPODONIOS
+  server: 141.164.45.187
+  port: 9090
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: TEzjfAYq2IjtuoS
+  name: EPODONIOS
+  server: 141.164.45.187
+  port: 6679
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: TEzjfAYq2IjtuoS
+  name: EPODONIOS
+  server: 141.164.45.187
+  port: 6697
+  udp: true
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   name: '🇰🇷 韩国 | KOR #3'
@@ -129,12 +107,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - 🇰🇷 韩国 | KOR
   - EPODONIOS
-  - '🇰🇷 韩国 | KOR #2'
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - '🇰🇷 韩国 | KOR #3'
@@ -145,12 +121,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - 🇰🇷 韩国 | KOR
   - EPODONIOS
-  - '🇰🇷 韩国 | KOR #2'
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - '🇰🇷 韩国 | KOR #3'

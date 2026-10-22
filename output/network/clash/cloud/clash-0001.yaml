@@ -17,15 +17,13 @@ proxies:
   port: 8080
   udp: true
   network: tcp
-- type: vmess
-  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知103
-  server: 82.152.197.167
-  port: 20004
+- type: vless
+  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+  name: EPODONIOS
+  server: 35.42.165.43
+  port: 443
   udp: true
+  network: tcp
 - type: vless
   uuid: 35eb914a-f7c2-4ffa-8503-1bf30df0f1a5
   name: EPODONIOS
@@ -41,10 +39,10 @@ proxies:
     public-key: rtYs5r9380Y2zvtXBFfaBbnypJQ7_1x_uYu0cLpOXk4
     short-id: d8fee47b2d3d94
 - type: vless
-  uuid: 102a4847-6c83-4bff-a316-21cae57e5653
-  name: EPODONIOS
-  server: 13.140.82.137
-  port: 44904
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
+  server: 165.245.182.116
+  port: 443
   udp: true
   network: tcp
 - type: vless
@@ -58,7 +56,7 @@ proxies:
     path: /vless
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  name: EPODONIOS
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -75,10 +73,10 @@ proxies:
   port: 443
   udp: true
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
-  server: 165.245.182.116
-  port: 443
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  name: 🇨🇦[www.v2nodes.com] vless-CA-1...
+  server: 212.74.39.214
+  port: 8080
   udp: true
   network: tcp
 proxy-groups:
@@ -88,24 +86,24 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - 未知103
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - 🇨🇦[www.v2nodes.com] vless-CA-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - 未知103
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - 🇨🇦[www.v2nodes.com] vless-CA-1...
 rules:
 - MATCH,SELECT
