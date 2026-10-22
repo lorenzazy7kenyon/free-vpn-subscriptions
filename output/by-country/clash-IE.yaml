@@ -10,20 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: dIuRNbl5mM2ac6d0
-  name: EPODONIOS
-  server: 104.46.14.31
-  port: 443
-  udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: jb1nb2FljOMJtUpg
-  name: EPODONIOS
-  server: 104.46.14.31
-  port: 443
-  udp: true
 - type: vless
   uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
   name: '🇮🇪 爱尔兰 | IRL #1'
@@ -33,16 +19,25 @@ proxies:
   network: tcp
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: Ku7fFxSguCfCFOhY
+  password: LVMlhvK82To1FGsy
   name: EPODONIOS
   server: 20.166.51.228
   port: 443
   udp: true
+- type: vmess
+  uuid: 2387bfbc-10a6-4bd7-dc55-7cba954ce6e8
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 54.229.151.97
+  port: 59236
+  udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: zziXHDOFXc4qRjoj
+  password: Ku7fFxSguCfCFOhY
   name: EPODONIOS
-  server: 20.107.184.151
+  server: 20.166.51.228
   port: 443
   udp: true
 - type: ss
@@ -52,15 +47,22 @@ proxies:
   server: 20.123.1.55
   port: 443
   udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: zziXHDOFXc4qRjoj
+  name: EPODONIOS
+  server: 20.107.184.151
+  port: 443
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
   - '🇮🇪 爱尔兰 | IRL #1'
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -68,9 +70,9 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
   - '🇮🇪 爱尔兰 | IRL #1'
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

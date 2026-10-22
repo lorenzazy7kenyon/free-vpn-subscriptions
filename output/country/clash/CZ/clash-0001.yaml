@@ -26,36 +26,24 @@ proxies:
       Host: ccc.010304.xyz
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
-  name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecu
-  server: 31.77.126.2
-  port: 443
-  udp: true
-  network: tcp
-- type: vless
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
   name: EPODONIOS
   server: 31.77.126.2
   port: 443
   udp: true
   network: ws
   tls: true
-  servername: lucasjow.us.ci
+  servername: ccc.010304.xyz
   ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    path: /fp
     headers:
-      Host: lucasjow.us.ci
-- type: trojan
-  password: humanity
-  name: EPODONIOS
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecu
   server: 31.77.126.2
   port: 443
   udp: true
-  sni: www.volumeroot.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.volumeroot.com
+  network: tcp
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: EPODONIOS
@@ -70,19 +58,18 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
+- type: trojan
+  password: humanity
   name: EPODONIOS
   server: 31.77.126.2
   port: 443
   udp: true
+  sni: www.volumeroot.com
   network: ws
-  tls: true
-  servername: ccc.010304.xyz
   ws-opts:
-    path: /fp
+    path: /assignment
     headers:
-      Host: ccc.010304.xyz
+      Host: www.volumeroot.com
 - type: ss
   cipher: aes-256-gcm
   password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
@@ -97,9 +84,8 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecu
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -108,9 +94,8 @@ proxy-groups:
   proxies:
   - AUTO
   - EPODONIOS
+  - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecu
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

@@ -11,28 +11,19 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 8179d7cc-82bc-4eae-a97f-5d30c6c2a812
+  uuid: 5c8950a3-2142-42c9-b414-fa34526ff25f
   name: EPODONIOS
-  server: 2.56.175.179
-  port: 9443
+  server: 5.181.2.168
+  port: 443
   udp: true
-  network: grpc
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: itunes.apple.com
+  servername: hr1-4v.zvcorp24.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 8bhS-nnIN67a292RpJsCPzXQy4CzpzOVLTPn5CiAFyg
-    short-id: 6ba7b810
-- type: vless
-  uuid: 8179d7cc-82bc-4eae-a97f-5d30c6c2a812
-  name: 🇫🇮FI_1|2.0MB/s
-  server: 2.56.175.179
-  port: 9443
-  udp: true
-  network: grpc
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
+    public-key: FSoosmyb1Odcc6yucO4B-0YC0fKytdBbvuwJKn7Wbkg
+    short-id: 86afa150bc3a48f6
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -40,12 +31,10 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - 🇫🇮FI_1|2.0MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - 🇫🇮FI_1|2.0MB/s
 rules:
 - MATCH,SELECT

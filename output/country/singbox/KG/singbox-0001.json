@@ -3,17 +3,21 @@
     {
       "server": "188.240.213.98",
       "server_port": 2053,
-      "tag": "🇰🇬 KG_111 #1",
+      "tag": "🇰🇬 KG_131",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "snip.edgeoneai.cc.cd"
+        "server_name": "snip.edgeoneai.cc.cd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "headers": {
           "Host": "snip.edgeoneai.cc.cd"
         },
-        "path": "/fp=chrome",
+        "path": "/",
         "type": "ws"
       },
       "type": "vless",
@@ -22,7 +26,7 @@
     {
       "interval": "5m",
       "outbounds": [
-        "🇰🇬 KG_111 #1"
+        "🇰🇬 KG_131"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -31,7 +35,7 @@
     {
       "outbounds": [
         "auto",
-        "🇰🇬 KG_111 #1"
+        "🇰🇬 KG_131"
       ],
       "tag": "select",
       "type": "selector"

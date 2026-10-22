@@ -24,20 +24,6 @@ proxies:
     public-key: 4g8R0-Acc1LjppgvUopldH0Wg3JA2tPXvYB96aJnigo
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
-  name: EPODONIOS
-  server: 185.253.75.119
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
   name: '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
   server: 185.253.75.119
   port: 443
@@ -47,19 +33,6 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: ccc.010304.xyz
-- type: vless
-  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-  name: '🇮🇱 以色列 | ISR #1'
-  server: 64.177.66.9
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: vp7.1145678.xyz
-  ws-opts:
-    path: /events/classfp=chrome
-    headers:
-      Host: vp7.1145678.xyz
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: '🇮🇱 以色列 | ISR #2'
@@ -74,19 +47,18 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇮🇱 以色列 | ISR
-  server: 185.239.48.154
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  name: '🇮🇱 以色列 | ISR #1'
+  server: 64.177.66.9
   port: 8443
   udp: true
   network: ws
   tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
+  servername: vp7.1145678.xyz
   ws-opts:
-    path: /
+    path: /events/classfp=chrome
     headers:
-      Host: snip.edgeoneai.cc.cd
+      Host: vp7.1145678.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -94,20 +66,16 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
   - '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
-  - '🇮🇱 以色列 | ISR #1'
   - '🇮🇱 以色列 | ISR #2'
-  - 🇮🇱 以色列 | ISR
+  - '🇮🇱 以色列 | ISR #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
   - '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
-  - '🇮🇱 以色列 | ISR #1'
   - '🇮🇱 以色列 | ISR #2'
-  - 🇮🇱 以色列 | ISR
+  - '🇮🇱 以色列 | ISR #1'
 rules:
 - MATCH,SELECT

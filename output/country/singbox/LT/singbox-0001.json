@@ -15,9 +15,56 @@
       "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d"
     },
     {
+      "flow": "xtls-rprx-vision",
+      "server": "84.32.215.96",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "5pR15ATlWW3tVzfnMN3xoiN56LjIUbhnOMp37ZvTFUc",
+          "short_id": "d44d6d46"
+        },
+        "server_name": "app26.betust.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "3b1fa839-2cb9-4511-9711-08800450aea3"
+    },
+    {
+      "server": "185.80.131.40",
+      "server_port": 443,
+      "tag": "🇱🇹 立陶宛 | LTU",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "snip.edgeoneai.cc.cd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        },
+        "path": "/fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "EPODONIOS"
+        "EPODONIOS",
+        "EPODONIOS",
+        "🇱🇹 立陶宛 | LTU"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -26,7 +73,9 @@
     {
       "outbounds": [
         "auto",
-        "EPODONIOS"
+        "EPODONIOS",
+        "EPODONIOS",
+        "🇱🇹 立陶宛 | LTU"
       ],
       "tag": "select",
       "type": "selector"
