@@ -10,23 +10,24 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: b24ad12f-f6ce-4f0b-a264-d58a76104026
-  name: EPODONIOS
-  server: 151.123.187.198
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: al2.magazinnarubeva.ru
-  reality-opts:
-    public-key: trN5x0amt2YuVzF2vZnK294YBAuh_zl5QkZjPyWz-TI
-    short-id: 8718c58d3d51db59
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: nQeEoXC5Yl5PZnPLvKUpFTU9cyQcNG902zpibWkwGbo=
-  name: 🏳[www.v2nodes.com] ss-
+  password: jIlQi9jGPJd7KHMx6Y4+JbaNoWSWfe2A73U4J4o0Qrs=
+  name: EPODONIOS
+  server: 130.49.189.158
+  port: 43558
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ziOeKejhhw+fmWet+xvuJsVJH7U9DvSWq1hlqtaKv+I=
+  name: EPODONIOS
+  server: 130.49.189.158
+  port: 43558
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: eicdhshSrFLCx/sZ1PSpuKyoVWGZpU95tFS4iGC1c04=
+  name: EPODONIOS
   server: 130.49.189.158
   port: 43558
   udp: true
@@ -43,18 +44,24 @@ proxies:
       Host: free.cndyw.ggff.net
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: jIlQi9jGPJd7KHMx6Y4+JbaNoWSWfe2A73U4J4o0Qrs=
-  name: EPODONIOS
+  password: nQeEoXC5Yl5PZnPLvKUpFTU9cyQcNG902zpibWkwGbo=
+  name: 🇦🇱[www.v2nodes.com] ss-AL-1490...
   server: 130.49.189.158
   port: 43558
   udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: eicdhshSrFLCx/sZ1PSpuKyoVWGZpU95tFS4iGC1c04=
+- type: vless
+  uuid: b24ad12f-f6ce-4f0b-a264-d58a76104026
   name: EPODONIOS
-  server: 130.49.189.158
-  port: 43558
+  server: 151.123.187.198
+  port: 443
   udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: al2.magazinnarubeva.ru
+  reality-opts:
+    public-key: trN5x0amt2YuVzF2vZnK294YBAuh_zl5QkZjPyWz-TI
+    short-id: 8718c58d3d51db59
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -62,18 +69,20 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - 🏳[www.v2nodes.com] ss-
-  - 🇦🇱[www.v2nodes.com] vless-AL-1...
   - EPODONIOS
+  - EPODONIOS
+  - 🇦🇱[www.v2nodes.com] vless-AL-1...
+  - 🇦🇱[www.v2nodes.com] ss-AL-1490...
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - 🏳[www.v2nodes.com] ss-
-  - 🇦🇱[www.v2nodes.com] vless-AL-1...
   - EPODONIOS
+  - EPODONIOS
+  - 🇦🇱[www.v2nodes.com] vless-AL-1...
+  - 🇦🇱[www.v2nodes.com] ss-AL-1490...
   - EPODONIOS
 rules:
 - MATCH,SELECT

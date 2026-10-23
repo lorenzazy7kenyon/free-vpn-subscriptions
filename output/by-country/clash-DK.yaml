@@ -20,16 +20,6 @@ proxies:
   tls: true
   servername: speedtest.net
   client-fingerprint: chrome
-- type: vless
-  uuid: 08a8298f-1c76-476b-ae87-7c94a9dd5e80
-  name: EPODONIOS
-  server: 140.248.69.254
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: firefox.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -37,12 +27,10 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

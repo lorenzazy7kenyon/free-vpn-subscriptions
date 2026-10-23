@@ -24,6 +24,19 @@ proxies:
   reality-opts:
     public-key: 5pR15ATlWW3tVzfnMN3xoiN56LjIUbhnOMp37ZvTFUc
     short-id: d44d6d46
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇪🇪EE_3|3.0MB/s
+  server: 130.78.190.134
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -31,10 +44,12 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - 🇪🇪EE_3|3.0MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - 🇪🇪EE_3|3.0MB/s
 rules:
 - MATCH,SELECT

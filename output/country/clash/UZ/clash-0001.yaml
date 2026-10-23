@@ -12,17 +12,6 @@ dns:
 proxies:
 - type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #8'
-  server: 157.22.128.7
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
-    headers:
-      Host: free.cndyw.ggff.net
-- type: vless
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: 🇵🇱[www.v2nodes.com] vless-PL-4...
   server: 157.22.128.7
   port: 443
@@ -34,19 +23,30 @@ proxies:
     path: pyip=bpb.yousef.isegaro.comfp=random
     headers:
       Host: free.cndyw.ggff.net
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #8'
+  server: 157.22.128.7
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
+    headers:
+      Host: free.cndyw.ggff.net
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #8'
   - 🇵🇱[www.v2nodes.com] vless-PL-4...
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #8'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #8'
   - 🇵🇱[www.v2nodes.com] vless-PL-4...
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #8'
 rules:
 - MATCH,SELECT

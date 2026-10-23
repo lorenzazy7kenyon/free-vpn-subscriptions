@@ -24,18 +24,18 @@ proxies:
     headers:
       Host: aza002.vaslbash.site
 - type: vless
-  uuid: 98d0fa1b-d778-477e-b897-4e2569c53178
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
   name: EPODONIOS
-  server: 128.254.186.11
-  port: 443
+  server: 77.232.140.7
+  port: 8443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: ws
   tls: true
-  servername: mother-earth.fyi
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: speed.dulacloud.store
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
 - type: vless
   uuid: f8842728-bf43-47e2-83bf-283e21f33664
   name: EPODONIOS
@@ -51,6 +51,33 @@ proxies:
     public-key: TdLpPmh5-Tbcj3bUPp7uw9znQ_Asao8z9jG7Eccrhwk
     short-id: 7887c27d
 - type: vless
+  uuid: 98d0fa1b-d778-477e-b897-4e2569c53178
+  name: EPODONIOS
+  server: 128.254.186.11
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: mother-earth.fyi
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+- type: vless
+  uuid: fe089a78-9a49-4eb1-ba74-1c1de210d0b9
+  name: EPODONIOS
+  server: 46.8.100.16
+  port: 8080
+  udp: true
+  network: tcp
+- type: vless
+  uuid: fe089a78-9a49-4eb1-ba74-1c1de210d0b9
+  name: EPODONIOS
+  server: 46.8.100.16
+  port: 8080
+  udp: true
+  network: tcp
+- type: vless
   uuid: 2bb8b13c-b3f0-2552-da05-d0929bfb36db
   name: EPODONIOS
   server: 45.88.13.5
@@ -63,17 +90,6 @@ proxies:
   reality-opts:
     public-key: FOQzn10eHqu4F5xOxiXW2bTDG8lH4TdOXP6A5rDqKFk
 - type: vless
-  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
-  name: EPODONIOS
-  server: 95.174.68.188
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 95.174.68.188
-- type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
   server: 147.78.0.186
@@ -84,6 +100,17 @@ proxies:
     path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
     headers:
       Host: free.cndyw.ggff.net
+- type: vless
+  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
+  name: EPODONIOS
+  server: 95.174.68.188
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 95.174.68.188
 - type: vless
   uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   name: EPODONIOS
@@ -106,7 +133,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
@@ -117,7 +147,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT
