@@ -29,15 +29,6 @@ proxies:
   port: 8445
   udp: true
   network: tcp
-- type: vmess
-  uuid: 803cd116-56f6-4680-9ef7-82e2ded5810b
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知9
-  server: 95.182.80.242
-  port: 443
-  udp: true
 - type: trojan
   password: humanity
   name: EPODONIOS
@@ -50,6 +41,17 @@ proxies:
     path: /assignment
     headers:
       Host: www.pleadcourt.org
+- type: vless
+  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
+  name: 🇱🇻[www.v2nodes.com] vless-LV-1...
+  server: 195.123.208.32
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -58,15 +60,15 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
-  - 未知9
   - EPODONIOS
+  - 🇱🇻[www.v2nodes.com] vless-LV-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
   - EPODONIOS
-  - 未知9
   - EPODONIOS
+  - 🇱🇻[www.v2nodes.com] vless-LV-1...
 rules:
 - MATCH,SELECT

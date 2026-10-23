@@ -24,27 +24,6 @@ proxies:
     path: /graphql
     headers:
       Host: 69565ce3109804e7813f98ee.mmdbay.blog
-- type: ss
-  cipher: aes-256-cfb
-  password: JdmRK9gMEqFgs8nP
-  name: EPODONIOS
-  server: 5.188.181.201
-  port: 9003
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: GA9KzeEgvfxNrgmM
-  name: EPODONIOS
-  server: 5.188.181.201
-  port: 9019
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: M3t2ZEQcMGRWBjRa
-  name: 🇪🇸ES-5.188.181.201-4753
-  server: 5.188.181.201
-  port: 9011
-  udp: true
 - type: trojan
   password: humanity
   name: '🏳[www.v2nodes.com] trojan- #4'
@@ -62,7 +41,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
-  name: 🇪🇸ES-212.227.228.91-0019
+  name: EPODONIOS
   server: 212.227.228.91
   port: 10000
   udp: true
@@ -72,7 +51,7 @@ proxies:
       Host: 212.227.228.91
 - type: vless
   uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
-  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #4'
+  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #5'
   server: 212.227.235.66
   port: 2053
   udp: true
@@ -80,33 +59,6 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: firefox
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: JIJhc9gJ9Y7i
-  name: EPODONIOS
-  server: 113.30.149.199
-  port: 443
-  udp: true
-- type: vless
-  uuid: 8d4c35bd-d04a-43fe-8390-47133ab90dbf
-  name: EPODONIOS
-  server: 45.198.54.249
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: 6a4a06t.es3.h1clayd.click
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: rHCPMrwRVCwxdwv4YOCso7zlYTPoX8w7x1f5Yqv2bGM
-    short-id: b73ab21227d33c1e
-- type: vless
-  uuid: 309ab2c5-2516-4aff-a673-dd03262480a0
-  name: EPODONIOS
-  server: 213.182.201.133
-  port: 3090
-  udp: true
-  network: grpc
 - type: vless
   uuid: b89c2d37-1c91-4ef1-a89d-b5dc48f3cc5f
   name: EPODONIOS
@@ -129,17 +81,43 @@ proxies:
   udp: true
   network: grpc
 - type: vless
-  uuid: 1e4668ca-6526-84ac-2a53-28bbc209da13
+  uuid: 309ab2c5-2516-4aff-a673-dd03262480a0
   name: EPODONIOS
-  server: 170.168.97.6
+  server: 213.182.201.133
+  port: 3090
+  udp: true
+  network: grpc
+- type: vless
+  uuid: 8d4c35bd-d04a-43fe-8390-47133ab90dbf
+  name: EPODONIOS
+  server: 45.198.54.249
   port: 443
   udp: true
-  network: xhttp
+  network: tcp
   tls: true
-  servername: download.nvidia.com
+  servername: 6a4a06t.es3.h1clayd.click
   client-fingerprint: chrome
   reality-opts:
-    public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    public-key: rHCPMrwRVCwxdwv4YOCso7zlYTPoX8w7x1f5Yqv2bGM
+    short-id: b73ab21227d33c1e
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: JIJhc9gJ9Y7i
+  name: EPODONIOS
+  server: 113.30.149.199
+  port: 443
+  udp: true
+- type: vless
+  uuid: 897d47f8-4dd5-42a1-bcd0-bef19caff55a
+  name: 🇪🇸[www.v2nodes.com] vless-ES-1...
+  server: 193.238.154.78
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 - type: vless
   uuid: 897d47f8-4dd5-42a1-bcd0-bef19caff55a
   name: EPODONIOS
@@ -153,6 +131,18 @@ proxies:
   reality-opts:
     public-key: 4eE3K8Eac-ELze-LwRyJolqmhPqgCVqwQM1DKu6i0Ts
     short-id: e93d46ee3735069e
+- type: vless
+  uuid: 1e4668ca-6526-84ac-2a53-28bbc209da13
+  name: EPODONIOS
+  server: 170.168.97.6
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: download.nvidia.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -160,18 +150,16 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - 🇪🇸ES-5.188.181.201-4753
   - '🏳[www.v2nodes.com] trojan- #4'
-  - 🇪🇸ES-212.227.228.91-0019
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #4'
+  - EPODONIOS
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #5'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - 🇪🇸[www.v2nodes.com] vless-ES-1...
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
@@ -179,18 +167,16 @@ proxy-groups:
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - 🇪🇸ES-5.188.181.201-4753
   - '🏳[www.v2nodes.com] trojan- #4'
-  - 🇪🇸ES-212.227.228.91-0019
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #4'
+  - EPODONIOS
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #5'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - 🇪🇸[www.v2nodes.com] vless-ES-1...
   - EPODONIOS
   - EPODONIOS
 rules:

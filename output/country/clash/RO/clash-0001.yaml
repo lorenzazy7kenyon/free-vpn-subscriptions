@@ -48,6 +48,13 @@ proxies:
     path: /fp=chrome
     headers:
       Host: snip.edgeoneai.cc.cd
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
+  name: EPODONIOS
+  server: 154.46.31.106
+  port: 443
+  udp: true
 - type: vless
   uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
   name: 🇷🇴 罗马尼亚 | ROU
@@ -73,19 +80,25 @@ proxies:
   tls: true
   servername: backend.mskvibe.fyi
   client-fingerprint: firefox
+- type: vmess
+  uuid: 1e9edd93-f160-4a4a-b369-2e5194b1932a
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知79
+  server: 78.154.103.45
+  port: 11901
+  udp: true
+  ws-opts:
+    path: /Telegram=@AmyraxVPN
+    headers:
+      Host: 78.154.103.45
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: U83u9OGpvSatIUW7LsWffr
   name: EPODONIOS
   server: 194.68.44.42
   port: 64546
-  udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
-  name: EPODONIOS
-  server: 154.46.31.106
-  port: 443
   udp: true
 proxy-groups:
 - name: AUTO
@@ -96,9 +109,10 @@ proxy-groups:
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
   - 🇷🇴 罗马尼亚 | ROU
   - '🇷🇴 罗马尼亚 | ROU #2'
+  - EPODONIOS
   - 🇷🇴 罗马尼亚 | ROU
   - '🇷🇴 罗马尼亚 | ROU #1'
-  - EPODONIOS
+  - 未知79
   - EPODONIOS
 - name: SELECT
   type: select
@@ -107,9 +121,10 @@ proxy-groups:
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
   - 🇷🇴 罗马尼亚 | ROU
   - '🇷🇴 罗马尼亚 | ROU #2'
+  - EPODONIOS
   - 🇷🇴 罗马尼亚 | ROU
   - '🇷🇴 罗马尼亚 | ROU #1'
-  - EPODONIOS
+  - 未知79
   - EPODONIOS
 rules:
 - MATCH,SELECT

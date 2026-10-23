@@ -10,6 +10,26 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: ec3c8b97-f308-4fee-aa16-95e2c7595acd
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 185.212.149.7
+  port: 52080
+  udp: true
+- type: vless
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
+  server: 45.144.234.157
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
 - type: vless
   uuid: 61bd5829-a243-4548-97f0-a210c2069fec
   name: EPODONIOS
@@ -39,27 +59,6 @@ proxies:
     public-key: FuKGULeQ9xZMJN8hWz6J_49tDJKT9HA-nsAXOOVRmyM
     short-id: ff867ed245c73f43
 - type: vless
-  uuid: fd260c22-c5a9-47fc-bb68-5b3e890ee7c4
-  name: EPODONIOS
-  server: 31.76.8.154
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: fi2.yservice.help
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: -qLezG1nUEtvOJi-Ra7WRYv-aHkv3PSefEuXpWV2G04
-    short-id: abcd1234
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: TmXSpcRBbhvHDg66bo2w89bToxQsbMoa
-  name: EPODONIOS
-  server: 31.76.30.79
-  port: 10808
-  udp: true
-- type: vless
   uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
   name: EPODONIOS
   server: 144.31.232.104
@@ -73,29 +72,26 @@ proxies:
   reality-opts:
     public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
     short-id: 4be4110078ebed4a
-- type: vless
-  uuid: 741809be-e44e-000b-b411-bf66f0ae3860
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: TmXSpcRBbhvHDg66bo2w89bToxQsbMoa
   name: EPODONIOS
-  server: 152.233.71.81
+  server: 31.76.30.79
+  port: 10808
+  udp: true
+- type: vless
+  uuid: 8535e46f-4c0b-4b02-9369-d4d553c9a892
+  name: EPODONIOS
+  server: 78.17.116.201
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: brointelengence.com
-  client-fingerprint: chrome
+  servername: www.nokia.com
+  client-fingerprint: firefox
   reality-opts:
-    public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
-    short-id: 1c3e8241a8743df9
-- type: vmess
-  uuid: ec3c8b97-f308-4fee-aa16-95e2c7595acd
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: EPODONIOS
-  server: 185.212.149.7
-  port: 52080
-  udp: true
+    public-key: ho99K9SlOhJxolr4nVfw8SV4Z1yI22KaKaxUfk2o8jE
 - type: vless
   uuid: fe551942-d6e5-4361-ae5c-1f2e9077cd79
   name: EPODONIOS
@@ -110,16 +106,157 @@ proxies:
     public-key: 32XFmS-ifqooBFY89KNP3ZrqgSBOd3vel9GlNinL6yw
     short-id: '03'
 - type: vless
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
-  server: 45.144.234.157
-  port: 14430
+  uuid: 741809be-e44e-000b-b411-bf66f0ae3860
+  name: EPODONIOS
+  server: 152.233.71.81
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: brointelengence.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
+    short-id: 1c3e8241a8743df9
+- type: vless
+  uuid: fd260c22-c5a9-47fc-bb68-5b3e890ee7c4
+  name: EPODONIOS
+  server: 31.76.8.154
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: fi2.yservice.help
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: -qLezG1nUEtvOJi-Ra7WRYv-aHkv3PSefEuXpWV2G04
+    short-id: abcd1234
+- type: vless
+  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
+  server: 95.216.27.15
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.google.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: b869a8d0-0733-4346-8d1c-c1230a78651c
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
+  server: 45.145.12.148
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: max.ru
+  client-fingerprint: chrome
+- type: vless
+  uuid: 6bda1096-457f-4c70-9698-65eb5eee163b
+  name: EPODONIOS
+  server: 77.42.28.120
+  port: 2087
+  udp: true
+  network: tcp
+- type: vless
+  uuid: 912ae4b3-a85a-477e-8b82-54fb8324d758
+  name: EPODONIOS
+  server: 157.180.92.241
+  port: 1975
+  udp: true
+  network: xhttp
+  tls: true
+  servername: play.google.com:443
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: icgUw8JlpIsxpwwvyYKlVXqU2_b4Sao0tHPazP-ugzs
+    short-id: e876d099f59ac59d
+- type: vless
+  uuid: 455cfdc6-9abf-4e40-863f-5ff6cc63457c
+  name: '🏳[www.v2nodes.com] vless- #10'
+  server: 107.181.151.241
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.microsoft.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 2a52bf1e-2bb2-402b-8284-6df456dde283
+  name: EPODONIOS
+  server: 65.109.188.155
+  port: 443
   udp: true
   network: ws
+  tls: true
+  servername: app.sinaam84.ir
+  client-fingerprint: chrome
   ws-opts:
-    path: /vless
+    path: /gfnYsJH9jfjxSRpRwtHgDe6fAddXvVGR
     headers:
-      Host: 45.144.234.157
+      Host: app.sinaam84.ir
+- type: vless
+  uuid: 348daee0-e494-4e96-aa93-884c2079c7ef
+  name: EPODONIOS
+  server: 195.226.92.131
+  port: 8443
+  udp: true
+  network: tcp
+  tls: true
+  servername: master-proxy.lighthouselabs.online
+- type: vless
+  uuid: 8f67e374-53d9-43bb-85c9-a459a959cd1b
+  name: EPODONIOS
+  server: 194.77.71.152
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 1.1.1.1
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: e7i5my9c3knQgYrKCJ0pVJEPt8ZDTdbcmCtzK7IQU2Y
+    short-id: 74bd7db505e16e3f
+- type: trojan
+  password: humanity
+  name: EPODONIOS
+  server: 46.62.204.134
+  port: 443
+  udp: true
+  sni: www.pleadcourt.org
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
+- type: vless
+  uuid: d6752c6b-80ae-4a91-b446-bb330f7f8177
+  name: EPODONIOS
+  server: 94.156.79.93
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.foxsports.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: _0fpFqEEuCso3B8K7AAcMjctwG_xfCxO2PdKzGd_-hg
+    short-id: 88a13cf2655c
+- type: vless
+  uuid: 05bfcbaa-cba0-4bce-9103-09fe3f5f0667
+  name: EPODONIOS
+  server: 65.109.238.140
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: hel1.nordlinkcloud.com
+  client-fingerprint: firefox
 - type: vless
   uuid: 1a5e7720-abf3-4b9b-bc9b-9a900a04b434
   name: EPODONIOS
@@ -158,123 +295,7 @@ proxies:
   network: tcp
   tls: true
   servername: www.microsoft.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 455cfdc6-9abf-4e40-863f-5ff6cc63457c
-  name: '🏳[www.v2nodes.com] vless- #11'
-  server: 107.181.151.241
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.microsoft.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: d6752c6b-80ae-4a91-b446-bb330f7f8177
-  name: EPODONIOS
-  server: 94.156.79.93
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.foxsports.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: _0fpFqEEuCso3B8K7AAcMjctwG_xfCxO2PdKzGd_-hg
-    short-id: 88a13cf2655c
-- type: vless
-  uuid: 8f67e374-53d9-43bb-85c9-a459a959cd1b
-  name: EPODONIOS
-  server: 194.77.71.152
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: 1.1.1.1
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: e7i5my9c3knQgYrKCJ0pVJEPt8ZDTdbcmCtzK7IQU2Y
-    short-id: 74bd7db505e16e3f
-- type: vless
-  uuid: 912ae4b3-a85a-477e-8b82-54fb8324d758
-  name: EPODONIOS
-  server: 157.180.92.241
-  port: 1975
-  udp: true
-  network: xhttp
-  tls: true
-  servername: play.google.com:443
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: icgUw8JlpIsxpwwvyYKlVXqU2_b4Sao0tHPazP-ugzs
-    short-id: e876d099f59ac59d
-- type: vless
-  uuid: 05bfcbaa-cba0-4bce-9103-09fe3f5f0667
-  name: EPODONIOS
-  server: 65.109.238.140
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: hel1.nordlinkcloud.com
   client-fingerprint: firefox
-- type: vless
-  uuid: 67eb6b17-7797-4ded-bf52-423c4c5f6cbd
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #7'
-  server: 87.239.249.137
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.foxsports.com
-  client-fingerprint: chrome
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 46.62.204.134
-  port: 443
-  udp: true
-  sni: www.pleadcourt.org
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
-- type: vless
-  uuid: 6bda1096-457f-4c70-9698-65eb5eee163b
-  name: EPODONIOS
-  server: 77.42.28.120
-  port: 2087
-  udp: true
-  network: tcp
-- type: vless
-  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
-  server: 95.216.27.15
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.google.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 2a52bf1e-2bb2-402b-8284-6df456dde283
-  name: EPODONIOS
-  server: 65.109.188.155
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: app.sinaam84.ir
-  client-fingerprint: chrome
-  ws-opts:
-    path: /gfnYsJH9jfjxSRpRwtHgDe6fAddXvVGR
-    headers:
-      Host: app.sinaam84.ir
 - type: vless
   uuid: 67eb6b17-7797-4ded-bf52-423c4c5f6cbd
   name: EPODONIOS
@@ -290,46 +311,30 @@ proxies:
     public-key: G7bpUPFSW28-oE6ff8qZac1_apU6PiJ-GHmi7tAPDSY
     short-id: 91af08b1ce1f
 - type: vless
-  uuid: 348daee0-e494-4e96-aa93-884c2079c7ef
-  name: EPODONIOS
-  server: 195.226.92.131
-  port: 8443
-  udp: true
-  network: tcp
-  tls: true
-  servername: master-proxy.lighthouselabs.online
-- type: vless
-  uuid: b869a8d0-0733-4346-8d1c-c1230a78651c
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
-  server: 45.145.12.148
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: max.ru
-  client-fingerprint: chrome
-- type: vless
-  uuid: 8535e46f-4c0b-4b02-9369-d4d553c9a892
-  name: EPODONIOS
-  server: 78.17.116.201
+  uuid: 67eb6b17-7797-4ded-bf52-423c4c5f6cbd
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #7'
+  server: 87.239.249.137
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.nokia.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: ho99K9SlOhJxolr4nVfw8SV4Z1yI22KaKaxUfk2o8jE
-- type: hysteria2
-  password: 77f73bd5-51bf-4143-8ebd-02f56ba376f4
-  name: 🇫🇮@Azaranv2ray
-  server: 79.137.206.157
-  port: 21000
+  servername: www.foxsports.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 88742d38-3f5c-4b9c-b256-7df5db8257ec
+  name: EPODONIOS
+  server: 107.181.151.128
+  port: 443
   udp: true
-  sni: hy.kirian.su
-  obfs: salamander
-  obfs-password: 9VK3Nqd0bcXGPxcay9hRLY28HBtKo5
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.mozilla.org
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
+    short-id: 8f79726c5002
 - type: hysteria2
   password: 6aab8efdf13945829ae3699c342be406
   name: Telegram:@v2rayng3
@@ -339,6 +344,15 @@ proxies:
   sni: fiproxy1.lockdwn.com
   obfs: salamander
   obfs-password: uw9b2qq5rx
+- type: hysteria2
+  password: 77f73bd5-51bf-4143-8ebd-02f56ba376f4
+  name: 🇫🇮@Azaranv2ray
+  server: 79.137.206.157
+  port: 21000
+  udp: true
+  sni: hy.kirian.su
+  obfs: salamander
+  obfs-password: 9VK3Nqd0bcXGPxcay9hRLY28HBtKo5
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -346,64 +360,66 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
   - EPODONIOS
   - EPODONIOS
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
-  - '🏳[www.v2nodes.com] vless- #11'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #7'
   - EPODONIOS
   - EPODONIOS
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
   - EPODONIOS
-  - 🇫🇮@Azaranv2ray
+  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #10'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
+  - EPODONIOS
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #7'
+  - EPODONIOS
   - Telegram:@v2rayng3
+  - 🇫🇮@Azaranv2ray
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
   - EPODONIOS
   - EPODONIOS
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
-  - '🏳[www.v2nodes.com] vless- #11'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #7'
   - EPODONIOS
   - EPODONIOS
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
   - EPODONIOS
-  - 🇫🇮@Azaranv2ray
+  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #10'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
+  - EPODONIOS
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #7'
+  - EPODONIOS
   - Telegram:@v2rayng3
+  - 🇫🇮@Azaranv2ray
 rules:
 - MATCH,SELECT
