@@ -24,13 +24,16 @@ proxies:
   reality-opts:
     public-key: 7ReQIe2kMtP4rCrptgH5glkOM-JGcSAPzHNxOED-Z0s
     short-id: 247fd6dab1a34a48
-- type: trojan
-  password: 8bS8vVC5CQ2GsckhMh8IT1jv
+- type: vless
+  uuid: 4f5e791a-1c8e-4313-b36e-13103fc07609
   name: EPODONIOS
-  server: 193.124.46.65
+  server: 78.135.73.49
   port: 443
   udp: true
-  sni: 193.124.46.65
+  network: xhttp
+  tls: true
+  servername: tr1.vpsphones.site
+  client-fingerprint: chrome
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: '🏳[www.v2nodes.com] vless- #1'
@@ -42,6 +45,17 @@ proxies:
   servername: ccc.010304.xyz
   ws-opts:
     path: /fp=chromefp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
+  server: 155.103.71.142
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=chromefp=chromesecurity=tls
     headers:
       Host: ccc.010304.xyz
 - type: vless
@@ -58,6 +72,38 @@ proxies:
   reality-opts:
     public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
     short-id: f46cd3ea3d1eb72d
+- type: trojan
+  password: 8bS8vVC5CQ2GsckhMh8IT1jv
+  name: EPODONIOS
+  server: 193.124.46.65
+  port: 443
+  udp: true
+  sni: 193.124.46.65
+- type: vless
+  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
+  name: 🇹🇷[www.v2nodes.com] vless-TR-1...
+  server: 78.135.73.47
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.datadoghq.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
+  name: 🇹🇷 土耳其 | TUR
+  server: 194.116.236.113
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: api.mskvibe.fyi
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 13nLTYkdBEFR-A4CfK2beOx-5LKEsXh1QHPq8Kt52BQ
+    short-id: 7271129440ade8fa
 - type: vless
   uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
   name: '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
@@ -83,16 +129,46 @@ proxies:
     public-key: ptE_QnAka3pXNEf8BYKpA9CHdgj4U4xXTixjYWOji0U
     short-id: 68d2eb23
 - type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
-  server: 155.103.71.142
-  port: 443
+  uuid: bf155a74-0560-46ff-ba40-9c8d34917f0e
+  name: EPODONIOS
+  server: 188.132.174.125
+  port: 5589
   udp: true
-  network: ws
-  ws-opts:
-    path: /fp=chromefp=chromesecurity=tls
-    headers:
-      Host: ccc.010304.xyz
+  network: tcp
+  tls: true
+  servername: play.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: rlWw1txOKfyTIegqGc5YUQo1CxqZEXBPeQZppA6H014
+    short-id: 8f798d413a5dbf01
+- type: vmess
+  uuid: 0b4313e0-4f7b-45fb-8552-a60d130c84d2
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 206.1.100.161
+  port: 8080
+  udp: true
+- type: vless
+  uuid: a346c521-7a7f-452b-9356-a4893feb5982
+  name: '🏳[www.v2nodes.com] vless- #38'
+  server: 62.133.63.45
+  port: 8444
+  udp: true
+  network: grpc
+  tls: true
+  servername: github.com
+  client-fingerprint: chrome
+- type: vmess
+  uuid: e2adaa66-0a40-4e48-a53d-e349e7ac3b80
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 206.1.99.36
+  port: 58202
+  udp: true
 - type: vless
   uuid: 7d5cdbb1-9632-483a-9b50-27932cfa9390
   name: EPODONIOS
@@ -115,62 +191,6 @@ proxies:
     short-id: 9e419c0759b54d6f
 - type: vless
   uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  name: '🏳[www.v2nodes.com] vless- #38'
-  server: 62.133.63.45
-  port: 8444
-  udp: true
-  network: grpc
-  tls: true
-  servername: github.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
-  name: 🇹🇷[www.v2nodes.com] vless-TR-1...
-  server: 78.135.73.47
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.datadoghq.com
-  client-fingerprint: chrome
-- type: vmess
-  uuid: e2adaa66-0a40-4e48-a53d-e349e7ac3b80
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: EPODONIOS
-  server: 206.1.99.36
-  port: 58202
-  udp: true
-- type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: ADzlhA3ndouUCY3JbLddR/jwgYY7IDGc1T+5DuCix9Y=:KyFe2akGo5hcrswbMkD2+BM52si+D7lzyccZFTd4xaU=
-  name: EPODONIOS
-  server: 206.1.100.83
-  port: 25178
-  udp: true
-- type: vless
-  uuid: 4f5e791a-1c8e-4313-b36e-13103fc07609
-  name: EPODONIOS
-  server: 78.135.73.49
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: tr1.vpsphones.site
-  client-fingerprint: chrome
-- type: vmess
-  uuid: 0b4313e0-4f7b-45fb-8552-a60d130c84d2
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: EPODONIOS
-  server: 206.1.100.161
-  port: 8080
-  udp: true
-- type: vless
-  uuid: a346c521-7a7f-452b-9356-a4893feb5982
   name: EPODONIOS
   server: 62.133.63.45
   port: 8444
@@ -182,29 +202,13 @@ proxies:
   reality-opts:
     public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
     short-id: 457fab2ac885dbe0
-- type: vless
-  uuid: bf155a74-0560-46ff-ba40-9c8d34917f0e
+- type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: ADzlhA3ndouUCY3JbLddR/jwgYY7IDGc1T+5DuCix9Y=:KyFe2akGo5hcrswbMkD2+BM52si+D7lzyccZFTd4xaU=
   name: EPODONIOS
-  server: 188.132.174.125
-  port: 5589
+  server: 206.1.100.83
+  port: 25178
   udp: true
-  network: tcp
-  tls: true
-  servername: play.google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: rlWw1txOKfyTIegqGc5YUQo1CxqZEXBPeQZppA6H014
-    short-id: 8f798d413a5dbf01
-- type: hysteria2
-  password: c8ed6cd1-6566-4f7a-819e-1c55b2b360c9
-  name: 🇹🇷 土耳其 | TUR
-  server: 153.56.210.134
-  port: 34121
-  udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: 9a33460c-b037-47aa-a606-d04211f4e0ec
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -214,21 +218,21 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - '🏳[www.v2nodes.com] vless- #1'
-  - EPODONIOS
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
-  - EPODONIOS
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
   - EPODONIOS
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #38'
   - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - 🇹🇷 土耳其 | TUR
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #38'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
@@ -236,20 +240,20 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - '🏳[www.v2nodes.com] vless- #1'
-  - EPODONIOS
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
-  - EPODONIOS
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
   - EPODONIOS
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #38'
   - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - 🇹🇷 土耳其 | TUR
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #38'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
 rules:
 - MATCH,SELECT

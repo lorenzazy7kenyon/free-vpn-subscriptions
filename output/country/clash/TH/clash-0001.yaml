@@ -10,17 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  name: EPODONIOS
-  server: 103.86.49.57
-  port: 80
-  udp: true
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: aIs.SpEeDtEsT.nEt
 - type: ss
   cipher: aes-256-gcm
   password: sxajCTwrlK0zl+zmHpX0p0jXIfatnzlLzWlSQ950L1c=
@@ -39,6 +28,31 @@ proxies:
     path: /ws
     headers:
       Host: aIs.SpEeDtEsT.nEt
+- type: vless
+  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  name: EPODONIOS
+  server: 103.86.49.57
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: aIs.SpEeDtEsT.nEt
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇸🇬 新加坡 | SGP
+  server: 103.107.53.42
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -48,6 +62,7 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - 🇸🇬 新加坡 | SGP
 - name: SELECT
   type: select
   proxies:
@@ -55,5 +70,6 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - 🇸🇬 新加坡 | SGP
 rules:
 - MATCH,SELECT

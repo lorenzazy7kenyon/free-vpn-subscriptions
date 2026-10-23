@@ -11,6 +11,20 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇧🇪 比利时 | BEL
+  server: 141.98.233.6
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
   uuid: 2a12bb81-f3a3-41bb-99ab-36febf676b4a
   name: EPODONIOS
   server: 109.69.218.217
@@ -41,12 +55,14 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇧🇪 比利时 | BEL
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇧🇪 比利时 | BEL
   - EPODONIOS
   - EPODONIOS
 rules:

@@ -11,6 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: EPODONIOS
+  server: 45.142.120.30
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime08.workers.dev
+- type: vless
   uuid: 50414e45-4c5f-5a45-5553-eb719e39bd09
   name: EPODONIOS
   server: 104.234.239.92
@@ -24,28 +35,6 @@ proxies:
     path: /stream/PANEL_ZEUS/eb719e39bd09
     headers:
       Host: hqzxcaeyukms.z2zptsequlds.workers.dev
-- type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: EPODONIOS
-  server: 45.142.120.30
-  port: 8880
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime08.workers.dev
-- type: vless
-  uuid: 70756c73-0000-4000-8000-650000000000
-  name: 🇸🇬[www.v2nodes.com] vless-SG-9...
-  server: 104.234.239.139
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pulsefp=chromesecurity=tls
-    headers:
-      Host: parsa-panel-u48we.wotic15356.workers.dev
 - type: vless
   uuid: 50414e45-4c5f-5a45-5553-eb719e39bd09
   name: EPODONIOS
@@ -65,7 +54,6 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
-  - 🇸🇬[www.v2nodes.com] vless-SG-9...
   - EPODONIOS
 - name: SELECT
   type: select
@@ -73,7 +61,6 @@ proxy-groups:
   - AUTO
   - EPODONIOS
   - EPODONIOS
-  - 🇸🇬[www.v2nodes.com] vless-SG-9...
   - EPODONIOS
 rules:
 - MATCH,SELECT

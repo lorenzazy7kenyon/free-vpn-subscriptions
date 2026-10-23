@@ -11,19 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇸🇬SG_3|1.3MB/s
-  server: 130.78.190.134
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
   uuid: 3b1fa839-2cb9-4511-9711-08800450aea3
   name: EPODONIOS
   server: 84.32.215.96
@@ -43,13 +30,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇬SG_3|1.3MB/s
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇸🇬SG_3|1.3MB/s
   - EPODONIOS
 rules:
 - MATCH,SELECT
