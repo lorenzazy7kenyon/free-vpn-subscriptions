@@ -11,17 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
-  name: EPODONIOS
-  server: 178.172.227.124
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 178.172.227.124
-- type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇵🇱 波兰 | POL
   server: 185.179.82.246
@@ -63,7 +52,6 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
   - 🇵🇱 波兰 | POL
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
@@ -71,7 +59,6 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - 🇵🇱 波兰 | POL
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'

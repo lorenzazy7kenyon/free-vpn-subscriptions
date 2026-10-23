@@ -10,6 +10,52 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  name: '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
+  server: 212.74.39.214
+  port: 8080
+  udp: true
+  network: tcp
+- type: vless
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  name: EPODONIOS
+  server: 212.74.39.214
+  port: 8080
+  udp: true
+  network: tcp
+- type: vmess
+  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知15
+  server: 82.152.197.167
+  port: 20003
+  udp: true
+- type: vmess
+  uuid: 06d4d001-4168-4876-9416-7caecf578f40
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 178.105.168.171
+  port: 2110
+  udp: true
+- type: vless
+  uuid: 35eb914a-f7c2-4ffa-8503-1bf30df0f1a5
+  name: EPODONIOS
+  server: 13.140.92.21
+  port: 80
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: rtYs5r9380Y2zvtXBFfaBbnypJQ7_1x_uYu0cLpOXk4
+    short-id: d8fee47b2d3d94
 - type: vmess
   uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
   alterId: 0
@@ -26,42 +72,28 @@ proxies:
     headers:
       Host: sg.11160321.de5.net
 - type: vless
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  server: 13.140.56.100
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 93F6FFBh3CZiBUsG
   name: EPODONIOS
-  server: 212.74.39.214
-  port: 8080
+  server: 102.133.227.3
+  port: 443
   udp: true
-  network: tcp
-- type: vless
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  name: '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
-  server: 212.74.39.214
-  port: 8080
-  udp: true
-  network: tcp
-- type: vmess
-  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知15
-  server: 82.152.197.167
-  port: 20003
-  udp: true
-- type: vless
-  uuid: 35eb914a-f7c2-4ffa-8503-1bf30df0f1a5
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
   name: EPODONIOS
-  server: 13.140.92.21
-  port: 80
+  server: 102.37.156.224
+  port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: rtYs5r9380Y2zvtXBFfaBbnypJQ7_1x_uYu0cLpOXk4
-    short-id: d8fee47b2d3d94
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
@@ -83,58 +115,37 @@ proxies:
     path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
     headers:
       Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
-  server: 13.140.56.100
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 93F6FFBh3CZiBUsG
-  name: EPODONIOS
-  server: 102.133.227.3
-  port: 443
-  udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
-  name: EPODONIOS
-  server: 102.37.156.224
-  port: 443
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知151
-  - EPODONIOS
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
+  - EPODONIOS
   - 未知15
   - EPODONIOS
+  - EPODONIOS
+  - 未知151
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - EPODONIOS
+  - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
-  - EPODONIOS
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
-  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知151
-  - EPODONIOS
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
+  - EPODONIOS
   - 未知15
   - EPODONIOS
+  - EPODONIOS
+  - 未知151
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - EPODONIOS
+  - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
-  - EPODONIOS
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
-  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

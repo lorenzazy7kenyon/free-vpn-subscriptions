@@ -1,6 +1,36 @@
 {
   "outbounds": [
     {
+      "password": "humanity",
+      "server": "185.22.172.249",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.pleadcourt.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "www.pleadcourt.org"
+        },
+        "path": "/assignment",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
+      "server": "31.56.177.95",
+      "server_port": 8445,
+      "tag": "EPODONIOS",
+      "type": "vless",
+      "uuid": "17acda85-dada-41dd-8add-ad0ad179fc91"
+    },
+    {
       "alter_id": 0,
       "security": "auto",
       "server": "95.182.80.242",
@@ -29,17 +59,11 @@
       "type": "trojan"
     },
     {
-      "server": "31.56.177.95",
-      "server_port": 8445,
-      "tag": "EPODONIOS",
-      "type": "vless",
-      "uuid": "17acda85-dada-41dd-8add-ad0ad179fc91"
-    },
-    {
       "interval": "5m",
       "outbounds": [
-        "未知9",
         "EPODONIOS",
+        "EPODONIOS",
+        "未知9",
         "EPODONIOS"
       ],
       "tag": "auto",
@@ -49,8 +73,9 @@
     {
       "outbounds": [
         "auto",
-        "未知9",
         "EPODONIOS",
+        "EPODONIOS",
+        "未知9",
         "EPODONIOS"
       ],
       "tag": "select",

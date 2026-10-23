@@ -10,6 +10,20 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
+  name: EPODONIOS
+  server: 27.50.49.154
+  port: 2083
+  udp: true
+  network: ws
+  tls: true
+  servername: proxy-34l.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: proxy-34l.pages.dev
 - type: trojan
   password: mitivpn
   name: EPODONIOS
@@ -49,55 +63,17 @@ proxies:
     path: /
     headers:
       Host: snip.edgeoneai.cc.cd
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 219.76.13.177
-  port: 443
-  udp: true
-  sni: www.pleadcourt.org
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
 - type: vmess
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
   alterId: 0
   cipher: auto
   network: ws
   name: EPODONIOS
   server: 47.244.120.197
-  port: 44867
+  port: 36703
   udp: true
   ws-opts:
     path: /arki?ed=2048
-- type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: EPODONIOS
-  server: 8.218.195.61
-  port: 443
-  udp: true
-  tls: true
-  servername: EX1oGt73NzPQKAc2.v.3dns.vip
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: EX1oGt73NzPQKAc2.v.3dns.vip
-- type: vmess
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: EPODONIOS
-  server: 47.244.120.197
-  port: 44867
-  udp: true
-  ws-opts:
-    path: /arki
 - type: vless
   uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
   name: '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
@@ -105,6 +81,40 @@ proxies:
   port: 13779
   udp: true
   network: tcp
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇭🇰 香港 | HKG #2'
+  server: 163.53.18.35
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: cdc86ade-9bc3-41eb-a7b9-879130378820
+  name: EPODONIOS
+  server: 118.26.59.85
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.bing.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: -Ngz1wsLiTc5fP1MdkFMS2oor1jRoFLAYD8oOgybGFw
+    short-id: e6d2c443d8f7702a
+- type: trojan
+  password: humanity
+  name: '🇳🇱[www.v2nodes.com] trojan-NL-... #8'
+  server: 219.76.13.177
+  port: 443
+  udp: true
+  sni: 219.76.13.177
 - type: vless
   uuid: daf0c4cb-3541-4f20-bc71-cc9d94bb17bc
   name: EPODONIOS
@@ -124,26 +134,12 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
-  name: EPODONIOS
+  name: 🇨🇳CN-47.244.120.197-0187
   server: 47.244.120.197
   port: 36703
   udp: true
   ws-opts:
-    path: /arki?ed=2048
-- type: vless
-  uuid: cdc86ade-9bc3-41eb-a7b9-879130378820
-  name: EPODONIOS
-  server: 118.26.59.85
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.bing.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: -Ngz1wsLiTc5fP1MdkFMS2oor1jRoFLAYD8oOgybGFw
-    short-id: e6d2c443d8f7702a
+    path: /
 - type: ss
   cipher: chacha20-ietf
   password: asd123456
@@ -151,6 +147,31 @@ proxies:
   server: 103.149.182.79
   port: 8388
   udp: true
+- type: vless
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  name: EPODONIOS
+  server: 103.180.20.108
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: ty986gfazs.cainiaohub.xyz
+  client-fingerprint: chrome
+  ws-opts:
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+- type: vmess
+  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 156.245.232.239
+  port: 35043
+  udp: true
+  ws-opts:
+    path: /
 - type: vless
   uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   name: '🏳[www.v2nodes.com] vless- #14'
@@ -167,17 +188,6 @@ proxies:
 - type: vless
   uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   name: '🏳[www.v2nodes.com] vless- #15'
-  server: 103.180.20.176
-  port: 8443
-  udp: true
-  network: ws
-  ws-opts:
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530security=tls
-    headers:
-      Host: tse1.mm.bing.net
-- type: vless
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  name: '🇭🇰 香港 | HKG #1'
   server: 103.180.20.108
   port: 8443
   udp: true
@@ -190,18 +200,39 @@ proxies:
       Host: ty986gfazs.cainiaohub.xyz
 - type: vless
   uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  name: 🇭🇰 香港 | HKG
-  server: 103.180.20.108
+  name: '🇭🇰 香港 | HKG #1'
+  server: 103.180.20.176
   port: 8443
   udp: true
   network: ws
-  tls: true
-  servername: ty986gfazs.cainiaohub.xyz
-  client-fingerprint: chrome
   ws-opts:
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530security=tls
     headers:
-      Host: ty986gfazs.cainiaohub.xyz
+      Host: tse1.mm.bing.net
+- type: trojan
+  password: XuMweB2PWs
+  name: EPODONIOS
+  server: 2.27.109.179
+  port: 45464
+  udp: true
+  sni: 2.27.109.179.sslip.io
+- type: vless
+  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
+  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
+  server: 195.58.144.56
+  port: 11907
+  udp: true
+  network: tcp
+  tls: true
+  servername: 195.58.144.56
+  client-fingerprint: chrome
+- type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  name: '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
+  server: 154.21.203.106
+  port: 51279
+  udp: true
+  network: tcp
 - type: vless
   uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
   name: 🇹🇭[www.v2nodes.com] vless-TH-1...
@@ -215,29 +246,11 @@ proxies:
   client-fingerprint: chrome
 - type: vless
   uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  name: '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
+  name: 🇹🇭[www.v2nodes.com] vless-TH-1...
   server: 154.21.203.106
-  port: 51279
+  port: 21033
   udp: true
   network: tcp
-- type: trojan
-  password: XuMweB2PWs
-  name: EPODONIOS
-  server: 2.27.109.179
-  port: 45464
-  udp: true
-  sni: 2.27.109.179.sslip.io
-- type: vmess
-  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: EPODONIOS
-  server: 156.245.232.239
-  port: 35043
-  udp: true
-  ws-opts:
-    path: /
 - type: vless
   uuid: 41a7af38-0bb1-4493-aa8d-634af0c2548b
   name: '🏳[www.v2nodes.com] vless- #13'
@@ -263,27 +276,17 @@ proxies:
   reality-opts:
     public-key: 09XPceP705hC-5sEDXDSLeL2eMOrF-mFISK8JaJ7q2g
     short-id: 09353d6dc5b789
-- type: vless
-  uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
-  name: 🇭🇰[www.v2nodes.com] vless-HK-1...
-  server: 156.226.168.221
-  port: 35193
+- type: vmess
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇨🇳CN-47.244.120.197-4840
+  server: 47.244.120.197
+  port: 44867
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
-  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
-  server: 195.58.144.56
-  port: 11907
-  udp: true
-  network: tcp
-  tls: true
-  servername: 195.58.144.56
-  client-fingerprint: chrome
+  ws-opts:
+    path: /arki?ed=2048
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -291,56 +294,58 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - EPODONIOS
   - '🇯🇵 日本 | JPN #2'
   - 🇯🇵 日本 | JPN
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
+  - '🇭🇰 香港 | HKG #2'
   - EPODONIOS
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #8'
+  - EPODONIOS
+  - 🇨🇳CN-47.244.120.197-0187
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - '🏳[www.v2nodes.com] vless- #14'
   - '🏳[www.v2nodes.com] vless- #15'
   - '🇭🇰 香港 | HKG #1'
-  - 🇭🇰 香港 | HKG
-  - 🇹🇭[www.v2nodes.com] vless-TH-1...
+  - EPODONIOS
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
   - '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
-  - EPODONIOS
-  - EPODONIOS
+  - 🇹🇭[www.v2nodes.com] vless-TH-1...
+  - 🇹🇭[www.v2nodes.com] vless-TH-1...
   - '🏳[www.v2nodes.com] vless- #13'
   - EPODONIOS
-  - 🇭🇰[www.v2nodes.com] vless-HK-1...
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
+  - 🇨🇳CN-47.244.120.197-4840
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - EPODONIOS
   - '🇯🇵 日本 | JPN #2'
   - 🇯🇵 日本 | JPN
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
+  - '🇭🇰 香港 | HKG #2'
   - EPODONIOS
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #8'
+  - EPODONIOS
+  - 🇨🇳CN-47.244.120.197-0187
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - '🏳[www.v2nodes.com] vless- #14'
   - '🏳[www.v2nodes.com] vless- #15'
   - '🇭🇰 香港 | HKG #1'
-  - 🇭🇰 香港 | HKG
-  - 🇹🇭[www.v2nodes.com] vless-TH-1...
+  - EPODONIOS
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
   - '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
-  - EPODONIOS
-  - EPODONIOS
+  - 🇹🇭[www.v2nodes.com] vless-TH-1...
+  - 🇹🇭[www.v2nodes.com] vless-TH-1...
   - '🏳[www.v2nodes.com] vless- #13'
   - EPODONIOS
-  - 🇭🇰[www.v2nodes.com] vless-HK-1...
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
+  - 🇨🇳CN-47.244.120.197-4840
 rules:
 - MATCH,SELECT

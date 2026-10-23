@@ -23,6 +23,15 @@ proxies:
   reality-opts:
     public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
 - type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  network: tcp
+  name: 🇨🇳_CN_中国
+  server: 112.132.215.108
+  port: 50002
+  udp: true
+- type: vmess
   uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
   alterId: 0
   cipher: auto
@@ -33,26 +42,6 @@ proxies:
   udp: true
   ws-opts:
     path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-- type: vmess
-  uuid: 2b910c43-51e3-4b15-9be8-b658106ba35e
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知119
-  server: 39.108.113.127
-  port: 10086
-  udp: true
-  ws-opts:
-    path: /
-- type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  network: tcp
-  name: EPODONIOS
-  server: 112.132.215.108
-  port: 50002
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -60,16 +49,14 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
-  - 未知119
+  - 🇨🇳_CN_中国
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
-  - 未知119
+  - 🇨🇳_CN_中国
   - EPODONIOS
 rules:
 - MATCH,SELECT

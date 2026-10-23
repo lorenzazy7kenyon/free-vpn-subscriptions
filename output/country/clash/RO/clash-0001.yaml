@@ -23,31 +23,6 @@ proxies:
   client-fingerprint: chrome
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇷🇴 罗马尼亚 | ROU #2'
-  server: 212.81.59.35
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 0a1497e6-0570-40a2-84ce-e522eda1c6a4
-  name: EPODONIOS
-  server: 46.28.67.118
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: www.olx.ro
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 9xwvSAOWL36GC2_oNuy0APzirpqSYzd8vKPmGINnzjA
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇷🇴 罗马尼亚 | ROU
   server: 212.81.59.35
   port: 443
@@ -60,13 +35,19 @@ proxies:
     path: /
     headers:
       Host: snip.edgeoneai.cc.cd
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
-  name: EPODONIOS
-  server: 154.46.31.106
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇷🇴 罗马尼亚 | ROU #2'
+  server: 212.81.59.35
   port: 443
   udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - type: vless
   uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
   name: 🇷🇴 罗马尼亚 | ROU
@@ -99,6 +80,13 @@ proxies:
   server: 194.68.44.42
   port: 64546
   udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
+  name: EPODONIOS
+  server: 154.46.31.106
+  port: 443
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -106,24 +94,22 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
-  - '🇷🇴 罗马尼亚 | ROU #2'
-  - EPODONIOS
   - 🇷🇴 罗马尼亚 | ROU
-  - EPODONIOS
+  - '🇷🇴 罗马尼亚 | ROU #2'
   - 🇷🇴 罗马尼亚 | ROU
   - '🇷🇴 罗马尼亚 | ROU #1'
+  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
-  - '🇷🇴 罗马尼亚 | ROU #2'
-  - EPODONIOS
   - 🇷🇴 罗马尼亚 | ROU
-  - EPODONIOS
+  - '🇷🇴 罗马尼亚 | ROU #2'
   - 🇷🇴 罗马尼亚 | ROU
   - '🇷🇴 罗马尼亚 | ROU #1'
+  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

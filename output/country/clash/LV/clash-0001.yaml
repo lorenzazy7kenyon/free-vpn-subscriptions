@@ -10,6 +10,25 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: trojan
+  password: humanity
+  name: EPODONIOS
+  server: 185.22.172.249
+  port: 443
+  udp: true
+  sni: www.pleadcourt.org
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
+- type: vless
+  uuid: 17acda85-dada-41dd-8add-ad0ad179fc91
+  name: EPODONIOS
+  server: 31.56.177.95
+  port: 8445
+  udp: true
+  network: tcp
 - type: vmess
   uuid: 803cd116-56f6-4680-9ef7-82e2ded5810b
   alterId: 0
@@ -31,28 +50,23 @@ proxies:
     path: /assignment
     headers:
       Host: www.pleadcourt.org
-- type: vless
-  uuid: 17acda85-dada-41dd-8add-ad0ad179fc91
-  name: EPODONIOS
-  server: 31.56.177.95
-  port: 8445
-  udp: true
-  network: tcp
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知9
   - EPODONIOS
+  - EPODONIOS
+  - 未知9
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知9
   - EPODONIOS
+  - EPODONIOS
+  - 未知9
   - EPODONIOS
 rules:
 - MATCH,SELECT

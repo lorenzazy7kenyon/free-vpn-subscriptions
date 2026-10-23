@@ -11,6 +11,32 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  name: EPODONIOS
+  server: 173.242.63.235
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: edgetunnel-4uw.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: edgetunnel-4uw.pages.dev
+- type: vless
+  uuid: 2bb8b13c-b3f0-2552-da05-d0929bfb36db
+  name: EPODONIOS
+  server: 104.245.240.4
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: download.nvidia.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: skXBkyphBIt0TWVM0R5U3U-8UG0cuW00ONkaQpJ-OxU
+- type: vless
   uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
   name: '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
   server: 213.111.148.137
@@ -34,49 +60,23 @@ proxies:
     path: /fp=androidsecurity=tls
     headers:
       Host: proxy-1cu.pages.dev
-- type: vless
-  uuid: 2bb8b13c-b3f0-2552-da05-d0929bfb36db
-  name: EPODONIOS
-  server: 104.245.240.4
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: download.nvidia.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: skXBkyphBIt0TWVM0R5U3U-8UG0cuW00ONkaQpJ-OxU
-- type: vless
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
-  name: EPODONIOS
-  server: 173.242.63.235
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: edgetunnel-4uw.pages.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: edgetunnel-4uw.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - EPODONIOS
+  - EPODONIOS
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
-  - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
+  - EPODONIOS
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
-  - EPODONIOS
-  - EPODONIOS
 rules:
 - MATCH,SELECT

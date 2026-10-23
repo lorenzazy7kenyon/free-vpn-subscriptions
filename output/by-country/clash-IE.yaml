@@ -17,6 +17,22 @@ proxies:
   server: 74.234.59.81
   port: 443
   udp: true
+- type: vmess
+  uuid: 2387bfbc-10a6-4bd7-dc55-7cba954ce6e8
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 54.229.151.97
+  port: 59236
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: Ds3hlPero5ov6gae
+  name: EPODONIOS
+  server: 20.223.233.241
+  port: 443
+  udp: true
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: '🇮🇪 爱尔兰 | IRL #1'
@@ -46,13 +62,6 @@ proxies:
       Host: snip.edgeoneai.cc.cd
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: YF329KNGVTUZ1qrH
-  name: EPODONIOS
-  server: 20.123.1.55
-  port: 443
-  udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
   password: zziXHDOFXc4qRjoj
   name: EPODONIOS
   server: 20.107.184.151
@@ -65,18 +74,20 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - '🇮🇪 爱尔兰 | IRL #1'
   - 🇮🇪 爱尔兰 | IRL
-  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - '🇮🇪 爱尔兰 | IRL #1'
   - 🇮🇪 爱尔兰 | IRL
-  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

@@ -10,6 +10,16 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 633c1bb0-60d5-41fb-a9c4-11f408b264ec
+  name: EPODONIOS
+  server: 140.248.69.254
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: speedtest.net
+  client-fingerprint: chrome
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
@@ -25,29 +35,19 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
-- type: vless
-  uuid: 633c1bb0-60d5-41fb-a9c4-11f408b264ec
-  name: EPODONIOS
-  server: 140.248.69.254
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: speedtest.net
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知14
   - EPODONIOS
+  - 未知14
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知14
   - EPODONIOS
+  - 未知14
 rules:
 - MATCH,SELECT
