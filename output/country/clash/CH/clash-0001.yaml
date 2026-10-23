@@ -10,6 +10,31 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: ef8907eb-8bb5-4735-80f2-1d0068500d95
+  name: EPODONIOS
+  server: 116.204.164.17
+  port: 7443
+  udp: true
+  network: ws
+  tls: true
+  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    headers:
+      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+- type: vless
+  uuid: bfd81b63-a43d-4c27-b71d-2c948cfc4ab2
+  name: 🇨🇭CH_2|1.6MB/s
+  server: 179.237.109.135
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: seznam.cz
+  client-fingerprint: chrome
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
@@ -32,6 +57,16 @@ proxies:
     short-id: 8718c58d3d51db59
 - type: vless
   uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  name: 🇨🇭[www.v2nodes.com] vless-CH-1...
+  server: 208.69.78.217
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
   name: EPODONIOS
   server: 208.69.78.217
   port: 2053
@@ -42,30 +77,6 @@ proxies:
   reality-opts:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
     short-id: ad86e2d52ff40ebd
-- type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  name: 🇨🇭[www.v2nodes.com] vless-CH-1...
-  server: 208.69.78.217
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: ef8907eb-8bb5-4735-80f2-1d0068500d95
-  name: EPODONIOS
-  server: 116.204.164.17
-  port: 7443
-  udp: true
-  network: ws
-  tls: true
-  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-    headers:
-      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
 - type: hysteria2
   password: capadm96216165
   name: 🇨🇭192087 | ⚡️Telegram = t.me/v...
@@ -83,6 +94,7 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - 🇨🇭CH_2|1.6MB/s
   - EPODONIOS
   - EPODONIOS
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
@@ -93,6 +105,7 @@ proxy-groups:
   proxies:
   - AUTO
   - EPODONIOS
+  - 🇨🇭CH_2|1.6MB/s
   - EPODONIOS
   - EPODONIOS
   - 🇨🇭[www.v2nodes.com] vless-CH-1...

@@ -11,18 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 0a1497e6-0570-40a2-84ce-e522eda1c6a4
-  name: EPODONIOS
-  server: 46.28.67.118
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: www.olx.ro
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 9xwvSAOWL36GC2_oNuy0APzirpqSYzd8vKPmGINnzjA
-- type: vless
   uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
   name: '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
   server: 46.28.67.55
@@ -35,7 +23,7 @@ proxies:
   client-fingerprint: chrome
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇷🇴 罗马尼亚 | ROU #1'
+  name: '🇷🇴 罗马尼亚 | ROU #2'
   server: 212.81.59.35
   port: 443
   udp: true
@@ -46,6 +34,32 @@ proxies:
     path: /fp=chrome
     headers:
       Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 0a1497e6-0570-40a2-84ce-e522eda1c6a4
+  name: EPODONIOS
+  server: 46.28.67.118
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: www.olx.ro
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 9xwvSAOWL36GC2_oNuy0APzirpqSYzd8vKPmGINnzjA
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇷🇴 罗马尼亚 | ROU
+  server: 212.81.59.35
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: QFWzCw2uX9B9i6qAYeFBIE
@@ -53,10 +67,35 @@ proxies:
   server: 154.46.31.106
   port: 443
   udp: true
+- type: vless
+  uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
+  name: 🇷🇴 罗马尼亚 | ROU
+  server: 87.58.205.242
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: backend.mskvibe.fyi
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 13nLTYkdBEFR-A4CfK2beOx-5LKEsXh1QHPq8Kt52BQ
+    short-id: 7271129440ade8fa
+- type: vless
+  uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
+  name: '🇷🇴 罗马尼亚 | ROU #1'
+  server: 87.58.205.242
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: backend.mskvibe.fyi
+  client-fingerprint: firefox
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: U83u9OGpvSatIUW7LsWffr
-  name: 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  name: EPODONIOS
   server: 194.68.44.42
   port: 64546
   udp: true
@@ -66,19 +105,25 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
+  - '🇷🇴 罗马尼亚 | ROU #2'
+  - EPODONIOS
+  - 🇷🇴 罗马尼亚 | ROU
+  - EPODONIOS
+  - 🇷🇴 罗马尼亚 | ROU
   - '🇷🇴 罗马尼亚 | ROU #1'
   - EPODONIOS
-  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
+  - '🇷🇴 罗马尼亚 | ROU #2'
+  - EPODONIOS
+  - 🇷🇴 罗马尼亚 | ROU
+  - EPODONIOS
+  - 🇷🇴 罗马尼亚 | ROU
   - '🇷🇴 罗马尼亚 | ROU #1'
   - EPODONIOS
-  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 rules:
 - MATCH,SELECT

@@ -1,6 +1,42 @@
 {
   "outbounds": [
     {
+      "flow": "xtls-rprx-vision",
+      "server": "46.28.67.55",
+      "server_port": 443,
+      "tag": "🇷🇴[www.v2nodes.com] vless-RO-1... #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "d1a6a033-fdbd-46a6-a177-3370ba042b9f"
+    },
+    {
+      "server": "212.81.59.35",
+      "server_port": 443,
+      "tag": "🇷🇴 罗马尼亚 | ROU #2",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "snip.edgeoneai.cc.cd"
+      },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        },
+        "path": "/fp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+    },
+    {
       "server": "46.28.67.118",
       "server_port": 443,
       "tag": "EPODONIOS",
@@ -21,36 +57,23 @@
       "uuid": "0a1497e6-0570-40a2-84ce-e522eda1c6a4"
     },
     {
-      "flow": "xtls-rprx-vision",
-      "server": "46.28.67.55",
+      "server": "212.81.59.35",
       "server_port": 443,
-      "tag": "🇷🇴[www.v2nodes.com] vless-RO-1... #1",
+      "tag": "🇷🇴 罗马尼亚 | ROU",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "www.cloudflare.com",
+        "server_name": "snip.edgeoneai.cc.cd",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
-      "type": "vless",
-      "uuid": "d1a6a033-fdbd-46a6-a177-3370ba042b9f"
-    },
-    {
-      "server": "212.81.59.35",
-      "server_port": 443,
-      "tag": "🇷🇴 罗马尼亚 | ROU #1",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "snip.edgeoneai.cc.cd"
-      },
       "transport": {
         "headers": {
           "Host": "snip.edgeoneai.cc.cd"
         },
-        "path": "/fp=chrome",
+        "path": "/",
         "type": "ws"
       },
       "type": "vless",
@@ -65,21 +88,63 @@
       "type": "ss"
     },
     {
+      "flow": "xtls-rprx-vision",
+      "server": "87.58.205.242",
+      "server_port": 443,
+      "tag": "🇷🇴 罗马尼亚 | ROU",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "13nLTYkdBEFR-A4CfK2beOx-5LKEsXh1QHPq8Kt52BQ",
+          "short_id": "7271129440ade8fa"
+        },
+        "server_name": "backend.mskvibe.fyi",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "9c794bb7-54fe-4acd-844a-a26209af36c3"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "87.58.205.242",
+      "server_port": 443,
+      "tag": "🇷🇴 罗马尼亚 | ROU #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "backend.mskvibe.fyi",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "9c794bb7-54fe-4acd-844a-a26209af36c3"
+    },
+    {
       "method": "chacha20-ietf-poly1305",
       "password": "U83u9OGpvSatIUW7LsWffr",
       "server": "194.68.44.42",
       "server_port": 64546,
-      "tag": "🇷🇴[www.v2nodes.com] ss-RO-1595...",
+      "tag": "EPODONIOS",
       "type": "ss"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "EPODONIOS",
         "🇷🇴[www.v2nodes.com] vless-RO-1... #1",
-        "🇷🇴 罗马尼亚 | ROU #1",
+        "🇷🇴 罗马尼亚 | ROU #2",
         "EPODONIOS",
-        "🇷🇴[www.v2nodes.com] ss-RO-1595..."
+        "🇷🇴 罗马尼亚 | ROU",
+        "EPODONIOS",
+        "🇷🇴 罗马尼亚 | ROU",
+        "🇷🇴 罗马尼亚 | ROU #1",
+        "EPODONIOS"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -88,11 +153,14 @@
     {
       "outbounds": [
         "auto",
-        "EPODONIOS",
         "🇷🇴[www.v2nodes.com] vless-RO-1... #1",
-        "🇷🇴 罗马尼亚 | ROU #1",
+        "🇷🇴 罗马尼亚 | ROU #2",
         "EPODONIOS",
-        "🇷🇴[www.v2nodes.com] ss-RO-1595..."
+        "🇷🇴 罗马尼亚 | ROU",
+        "EPODONIOS",
+        "🇷🇴 罗马尼亚 | ROU",
+        "🇷🇴 罗马尼亚 | ROU #1",
+        "EPODONIOS"
       ],
       "tag": "select",
       "type": "selector"

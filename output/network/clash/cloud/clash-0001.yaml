@@ -10,13 +10,21 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  name: '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
-  server: 212.74.39.214
-  port: 8080
+- type: vmess
+  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知151
+  server: 140.83.57.20
+  port: 13118
   udp: true
-  network: tcp
+  tls: true
+  servername: sg.11160321.de5.net
+  ws-opts:
+    path: /
+    headers:
+      Host: sg.11160321.de5.net
 - type: vless
   uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
   name: EPODONIOS
@@ -25,19 +33,21 @@ proxies:
   udp: true
   network: tcp
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇩🇪 德国 | DEU
-  server: 2.28.42.209
-  port: 8443
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  name: '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
+  server: 212.74.39.214
+  port: 8080
   udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
-    headers:
-      Host: snip.edgeoneai.cc.cd
+  network: tcp
+- type: vmess
+  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知15
+  server: 82.152.197.167
+  port: 20003
+  udp: true
 - type: vless
   uuid: 35eb914a-f7c2-4ffa-8503-1bf30df0f1a5
   name: EPODONIOS
@@ -53,18 +63,12 @@ proxies:
     public-key: rtYs5r9380Y2zvtXBFfaBbnypJQ7_1x_uYu0cLpOXk4
     short-id: d8fee47b2d3d94
 - type: vless
-  uuid: 97716a8d-a5cc-49dd-9344-f6d2024232ac
-  name: EPODONIOS
-  server: 13.140.89.57
-  port: 8080
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
+  server: 165.245.182.116
+  port: 443
   udp: true
-  network: grpc
-  tls: true
-  servername: ftp.heanet.ie
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: SuhNo5t_p0bqCifW5_aRa8wEHX_nNYjCHQawnCmTU3w
-    short-id: 2d5461a491048f
+  network: tcp
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: EPODONIOS
@@ -80,20 +84,6 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
-  server: 165.245.182.116
-  port: 443
-  udp: true
-  network: tcp
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 93F6FFBh3CZiBUsG
-  name: EPODONIOS
-  server: 102.133.227.3
-  port: 443
-  udp: true
-- type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   name: '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
   server: 13.140.56.100
@@ -102,6 +92,13 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 93F6FFBh3CZiBUsG
+  name: EPODONIOS
+  server: 102.133.227.3
+  port: 443
+  udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: aduB9HGxQHjA2SBMRjkHX6
@@ -115,29 +112,29 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 未知151
+  - EPODONIOS
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
-  - EPODONIOS
-  - 🇩🇪 德国 | DEU
-  - EPODONIOS
-  - EPODONIOS
+  - 未知15
   - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
+  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 未知151
+  - EPODONIOS
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
-  - EPODONIOS
-  - 🇩🇪 德国 | DEU
-  - EPODONIOS
-  - EPODONIOS
+  - 未知15
   - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
+  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

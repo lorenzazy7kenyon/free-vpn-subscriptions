@@ -1,6 +1,20 @@
 {
   "outbounds": [
     {
+      "server": "88.216.69.30",
+      "server_port": 8880,
+      "tag": "EPODONIOS",
+      "transport": {
+        "headers": {
+          "Host": "vms.lifetime06.workers.dev"
+        },
+        "path": "/",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    },
+    {
       "flow": "xtls-rprx-vision",
       "server": "84.32.215.96",
       "server_port": 443,
@@ -25,11 +39,15 @@
     {
       "server": "130.78.190.134",
       "server_port": 443,
-      "tag": "🇪🇪EE_3|3.0MB/s",
+      "tag": "🇪🇪 爱沙尼亚 | EST",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "snip.edgeoneai.cc.cd"
+        "server_name": "snip.edgeoneai.cc.cd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "headers": {
@@ -45,7 +63,8 @@
       "interval": "5m",
       "outbounds": [
         "EPODONIOS",
-        "🇪🇪EE_3|3.0MB/s"
+        "EPODONIOS",
+        "🇪🇪 爱沙尼亚 | EST"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -55,7 +74,8 @@
       "outbounds": [
         "auto",
         "EPODONIOS",
-        "🇪🇪EE_3|3.0MB/s"
+        "EPODONIOS",
+        "🇪🇪 爱沙尼亚 | EST"
       ],
       "tag": "select",
       "type": "selector"

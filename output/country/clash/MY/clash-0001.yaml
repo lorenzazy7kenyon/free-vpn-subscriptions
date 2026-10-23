@@ -10,39 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇸🇬 新加坡 | SGP #7'
-  server: 45.194.27.99
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇸🇬 新加坡 | SGP #1'
-  server: 166.88.194.74
-  port: 2087
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: trojan
-  password: 5931134d1cde66bf83a54acdfebe7ab2
-  name: EPODONIOS
-  server: 47.250.84.25
-  port: 443
-  udp: true
-  sni: moltbot.doctoroyy.net
 - type: vmess
   uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
   alterId: 0
@@ -52,33 +19,13 @@ proxies:
   server: 47.250.135.244
   port: 10000
   udp: true
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇸🇬 新加坡 | SGP
-  server: 45.194.27.99
+- type: trojan
+  password: 5931134d1cde66bf83a54acdfebe7ab2
+  name: EPODONIOS
+  server: 47.250.84.25
   port: 443
   udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇸🇬 新加坡 | SGP #5'
-  server: 87.76.160.237
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
+  sni: moltbot.doctoroyy.net
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: 🇲🇾[www.v2nodes.com] vless-MY-5...
@@ -98,23 +45,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇸🇬 新加坡 | SGP #7'
-  - '🇸🇬 新加坡 | SGP #1'
   - EPODONIOS
   - EPODONIOS
-  - 🇸🇬 新加坡 | SGP
-  - '🇸🇬 新加坡 | SGP #5'
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇸🇬 新加坡 | SGP #7'
-  - '🇸🇬 新加坡 | SGP #1'
   - EPODONIOS
   - EPODONIOS
-  - 🇸🇬 新加坡 | SGP
-  - '🇸🇬 新加坡 | SGP #5'
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
 rules:
 - MATCH,SELECT

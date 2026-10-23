@@ -10,28 +10,15 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: humanity
-  name: '🇳🇱[www.v2nodes.com] trojan-NL-... #12'
-  server: 185.22.172.249
-  port: 443
-  udp: true
-  sni: 185.22.172.249
 - type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  uuid: 803cd116-56f6-4680-9ef7-82e2ded5810b
   alterId: 0
   cipher: auto
-  network: ws
-  name: 未知6
-  server: 85.159.228.232
+  network: tcp
+  name: 未知9
+  server: 95.182.80.242
   port: 443
   udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
 - type: trojan
   password: humanity
   name: EPODONIOS
@@ -51,34 +38,21 @@ proxies:
   port: 8445
   udp: true
   network: tcp
-- type: vmess
-  uuid: 803cd116-56f6-4680-9ef7-82e2ded5810b
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知61
-  server: 95.182.80.242
-  port: 443
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇳🇱[www.v2nodes.com] trojan-NL-... #12'
-  - 未知6
+  - 未知9
   - EPODONIOS
   - EPODONIOS
-  - 未知61
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇳🇱[www.v2nodes.com] trojan-NL-... #12'
-  - 未知6
+  - 未知9
   - EPODONIOS
   - EPODONIOS
-  - 未知61
 rules:
 - MATCH,SELECT

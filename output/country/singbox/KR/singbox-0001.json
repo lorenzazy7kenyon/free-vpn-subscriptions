@@ -1,7 +1,52 @@
 {
   "outbounds": [
     {
-      "server": "158.247.222.168",
+      "flow": "xtls-rprx-vision-udp443",
+      "server": "158.247.241.102",
+      "server_port": 443,
+      "tag": "🇰🇷KR_1|2.0MB/s",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "583cc910-b57c-4dd0-a4a7-cea51a30b032"
+    },
+    {
+      "alter_id": 0,
+      "security": "auto",
+      "server": "140.238.2.250",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "type": "vmess",
+      "uuid": "41a7089a-040b-4538-8b8d-010902405bde"
+    },
+    {
+      "server": "103.218.173.218",
+      "server_port": 443,
+      "tag": "🇰🇷 韩国 | KOR #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "snip.edgeoneai.cc.cd"
+      },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        },
+        "path": "/fp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+    },
+    {
+      "server": "103.218.173.218",
       "server_port": 443,
       "tag": "🇰🇷 韩国 | KOR",
       "tls": {
@@ -24,32 +69,12 @@
       "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
     },
     {
-      "server": "158.247.222.168",
-      "server_port": 443,
-      "tag": "🇰🇷 韩国 | KOR #2",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "snip.edgeoneai.cc.cd"
-      },
-      "transport": {
-        "headers": {
-          "Host": "snip.edgeoneai.cc.cd"
-        },
-        "path": "/fp=chrome",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
-    },
-    {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "140.238.2.250",
-      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "TEzjfAYq2IjtuoS",
+      "server": "141.164.45.187",
+      "server_port": 6697,
       "tag": "EPODONIOS",
-      "type": "vmess",
-      "uuid": "41a7089a-040b-4538-8b8d-010902405bde"
+      "type": "ss"
     },
     {
       "method": "aes-256-cfb",
@@ -60,58 +85,41 @@
       "type": "ss"
     },
     {
-      "server": "3.38.190.222",
-      "server_port": 443,
-      "tag": "🇰🇷 韩国 | KOR #1",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "snip.edgeoneai.cc.cd"
-      },
-      "transport": {
-        "headers": {
-          "Host": "snip.edgeoneai.cc.cd"
-        },
-        "path": "/fp=chrome",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+      "method": "aes-256-gcm",
+      "password": "lGqs95QkFHo2NV",
+      "server": "141.164.45.187",
+      "server_port": 5498,
+      "tag": "EPODONIOS",
+      "type": "ss"
     },
     {
-      "password": "7e68e32f-8015-4f37-9082-70e8b0b58043",
-      "server": "13.209.81.208",
-      "server_port": 443,
-      "tag": "🇰🇷 韩国 | KOR #2",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.bing.com"
-      },
-      "type": "hysteria2"
+      "method": "aes-256-gcm",
+      "password": "TEzjfAYq2IjtuoS",
+      "server": "141.164.45.187",
+      "server_port": 6679,
+      "tag": "EPODONIOS",
+      "type": "ss"
     },
     {
-      "password": "7e68e32f-8015-4f37-9082-70e8b0b58043",
-      "server": "43.202.58.174",
-      "server_port": 443,
-      "tag": "🇰🇷 韩国 | KOR #1",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.bing.com"
-      },
-      "type": "hysteria2"
+      "method": "aes-256-gcm",
+      "password": "Y6R9pAtvxxzmGC",
+      "server": "141.164.45.187",
+      "server_port": 9090,
+      "tag": "EPODONIOS",
+      "type": "ss"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇰🇷 韩国 | KOR",
-        "🇰🇷 韩国 | KOR #2",
-        "EPODONIOS",
+        "🇰🇷KR_1|2.0MB/s",
         "EPODONIOS",
         "🇰🇷 韩国 | KOR #1",
-        "🇰🇷 韩国 | KOR #2",
-        "🇰🇷 韩国 | KOR #1"
+        "🇰🇷 韩国 | KOR",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -120,13 +128,15 @@
     {
       "outbounds": [
         "auto",
-        "🇰🇷 韩国 | KOR",
-        "🇰🇷 韩国 | KOR #2",
-        "EPODONIOS",
+        "🇰🇷KR_1|2.0MB/s",
         "EPODONIOS",
         "🇰🇷 韩国 | KOR #1",
-        "🇰🇷 韩国 | KOR #2",
-        "🇰🇷 韩国 | KOR #1"
+        "🇰🇷 韩国 | KOR",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS"
       ],
       "tag": "select",
       "type": "selector"
