@@ -1,21 +1,49 @@
 {
   "outbounds": [
     {
-      "password": "Un62Uyh8P2Scl8x-9DSxFnpNO4GBs4pw",
-      "server": "3.24.240.43",
-      "server_port": 8090,
-      "tag": "🇦🇺198211 | ⚡️Telegram = t.me/S...",
+      "flow": "xtls-rprx-vision",
+      "server": "51.161.204.244",
+      "server_port": 443,
+      "tag": "EPODONIOS",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "3.24.240.43"
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "gCAazs5uxNuMZIxfDdw8wPE0nwKY4QfBfBkQveKAkEk",
+          "short_id": "0ad08b47f498efd2"
+        },
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
-      "type": "hysteria2"
+      "type": "vless",
+      "uuid": "36e89875-9c53-482b-bc41-d3890e9da176"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "51.161.204.244",
+      "server_port": 443,
+      "tag": "🇦🇺[www.v2nodes.com] vless-AU-1...",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "36e89875-9c53-482b-bc41-d3890e9da176"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇦🇺198211 | ⚡️Telegram = t.me/S..."
+        "EPODONIOS",
+        "🇦🇺[www.v2nodes.com] vless-AU-1..."
       ],
       "tag": "auto",
       "type": "urltest",
@@ -24,7 +52,8 @@
     {
       "outbounds": [
         "auto",
-        "🇦🇺198211 | ⚡️Telegram = t.me/S..."
+        "EPODONIOS",
+        "🇦🇺[www.v2nodes.com] vless-AU-1..."
       ],
       "tag": "select",
       "type": "selector"

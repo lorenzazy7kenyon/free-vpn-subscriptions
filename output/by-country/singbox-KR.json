@@ -1,12 +1,78 @@
 {
   "outbounds": [
     {
-      "method": "aes-256-cfb",
-      "password": "qwerREWQ@@",
-      "server": "211.178.105.134",
-      "server_port": 6123,
+      "alter_id": 0,
+      "security": "auto",
+      "server": "132.145.80.230",
+      "server_port": 80,
       "tag": "EPODONIOS",
-      "type": "ss"
+      "transport": {
+        "headers": {
+          "Host": "kr02.a0a.xyz"
+        },
+        "path": "/cctv13.m3u8",
+        "type": "ws"
+      },
+      "type": "vmess",
+      "uuid": "5155860e-d07d-46c3-9128-3afbd84626c7"
+    },
+    {
+      "server": "158.247.222.168",
+      "server_port": 443,
+      "tag": "🇰🇷KR_2|2.3MB/s",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "snip.edgeoneai.cc.cd"
+      },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        },
+        "path": "/fp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "64.176.231.183",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "GR_zPAgxF9PZ70Z9UpSmMlcd2STyoAC0fZTSHkTTCGE",
+          "short_id": "ca193e889d958f81"
+        },
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "583cc910-b57c-4dd0-a4a7-cea51a30b032"
+    },
+    {
+      "flow": "xtls-rprx-vision-udp443",
+      "server": "158.247.241.102",
+      "server_port": 443,
+      "tag": "🇰🇷KR_1|3.1MB/s",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "583cc910-b57c-4dd0-a4a7-cea51a30b032"
     },
     {
       "server": "3.38.190.222",
@@ -32,28 +98,6 @@
       "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
     },
     {
-      "flow": "xtls-rprx-vision",
-      "server": "3.39.4.109",
-      "server_port": 13672,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "short_id": "48050fab"
-        },
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9"
-    },
-    {
       "server": "3.38.190.222",
       "server_port": 443,
       "tag": "🇰🇷 韩国 | KOR #2",
@@ -73,47 +117,42 @@
       "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
     },
     {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "146.56.112.110",
-      "server_port": 8888,
-      "tag": "未知134 284.5KB/s",
-      "type": "vmess",
-      "uuid": "e7c302f3-90d6-42dd-9d7d-94a3683a3707"
-    },
-    {
-      "server": "13.209.84.147",
+      "flow": "xtls-rprx-vision",
+      "server": "54.180.151.244",
       "server_port": 443,
       "tag": "🇰🇷 韩国 | KOR #1",
-      "type": "vless",
-      "uuid": "7060231d-b9ba-495f-a218-bf427940cf3e"
-    },
-    {
-      "server": "158.247.222.168",
-      "server_port": 443,
-      "tag": "🇰🇷KR_1|1.5MB/s",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "snip.edgeoneai.cc.cd"
-      },
-      "transport": {
-        "headers": {
-          "Host": "snip.edgeoneai.cc.cd"
-        },
-        "path": "/fp=chrome",
-        "type": "ws"
+        "server_name": "www.wawabit.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "type": "vless",
-      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+      "uuid": "7e68e32f-8015-4f37-9082-70e8b0b58043"
     },
     {
-      "method": "aes-256-gcm",
-      "password": "TEzjfAYq2IjtuoS",
-      "server": "141.164.45.187",
-      "server_port": 6697,
+      "server": "151.245.106.49",
+      "server_port": 2053,
       "tag": "EPODONIOS",
-      "type": "ss"
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo",
+          "short_id": "429499c03d4cc8a0"
+        },
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "a2de9567-9646-45a9-a410-7303a43bdb6c"
     },
     {
       "flow": "xtls-rprx-vision",
@@ -138,44 +177,62 @@
       "uuid": "7e68e32f-8015-4f37-9082-70e8b0b58043"
     },
     {
-      "method": "aes-256-gcm",
-      "password": "lGqs95QkFHo2NV",
-      "server": "141.164.45.187",
-      "server_port": 5498,
+      "method": "aes-256-cfb",
+      "password": "qwerREWQ@@",
+      "server": "211.178.105.134",
+      "server_port": 6123,
       "tag": "EPODONIOS",
       "type": "ss"
     },
     {
-      "method": "aes-256-gcm",
-      "password": "Y6R9pAtvxxzmGC",
-      "server": "141.164.45.187",
-      "server_port": 9090,
+      "flow": "xtls-rprx-vision",
+      "server": "158.247.241.102",
+      "server_port": 443,
       "tag": "EPODONIOS",
-      "type": "ss"
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "GR_zPAgxF9PZ70Z9UpSmMlcd2STyoAC0fZTSHkTTCGE",
+          "short_id": "ca193e889d958f81"
+        },
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "583cc910-b57c-4dd0-a4a7-cea51a30b032"
     },
     {
-      "method": "aes-256-gcm",
-      "password": "TEzjfAYq2IjtuoS",
-      "server": "141.164.45.187",
-      "server_port": 6679,
-      "tag": "EPODONIOS",
-      "type": "ss"
+      "password": "i4XPm2Ip7f9IAqbB",
+      "server": "3.35.177.133",
+      "server_port": 16001,
+      "tag": "🇰🇷 韩国 | KOR",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "kor-ls-8.nebulacloud.win"
+      },
+      "type": "hysteria2"
     },
     {
       "interval": "5m",
       "outbounds": [
         "EPODONIOS",
-        "🇰🇷 韩国 | KOR",
+        "🇰🇷KR_2|2.3MB/s",
         "EPODONIOS",
+        "🇰🇷KR_1|3.1MB/s",
+        "🇰🇷 韩国 | KOR",
         "🇰🇷 韩国 | KOR #2",
-        "未知134 284.5KB/s",
         "🇰🇷 韩国 | KOR #1",
-        "🇰🇷KR_1|1.5MB/s",
         "EPODONIOS",
         "🇰🇷 韩国 | KOR",
         "EPODONIOS",
         "EPODONIOS",
-        "EPODONIOS"
+        "🇰🇷 韩国 | KOR"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -185,17 +242,17 @@
       "outbounds": [
         "auto",
         "EPODONIOS",
-        "🇰🇷 韩国 | KOR",
+        "🇰🇷KR_2|2.3MB/s",
         "EPODONIOS",
+        "🇰🇷KR_1|3.1MB/s",
+        "🇰🇷 韩国 | KOR",
         "🇰🇷 韩国 | KOR #2",
-        "未知134 284.5KB/s",
         "🇰🇷 韩国 | KOR #1",
-        "🇰🇷KR_1|1.5MB/s",
         "EPODONIOS",
         "🇰🇷 韩国 | KOR",
         "EPODONIOS",
         "EPODONIOS",
-        "EPODONIOS"
+        "🇰🇷 韩国 | KOR"
       ],
       "tag": "select",
       "type": "selector"

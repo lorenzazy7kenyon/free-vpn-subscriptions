@@ -10,25 +10,44 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: hysteria2
-  password: Un62Uyh8P2Scl8x-9DSxFnpNO4GBs4pw
-  name: 🇦🇺198211 | ⚡️Telegram = t.me/S...
-  server: 3.24.240.43
-  port: 8090
+- type: vless
+  uuid: 36e89875-9c53-482b-bc41-d3890e9da176
+  name: EPODONIOS
+  server: 51.161.204.244
+  port: 443
   udp: true
-  sni: 3.24.240.43
-  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: gCAazs5uxNuMZIxfDdw8wPE0nwKY4QfBfBkQveKAkEk
+    short-id: 0ad08b47f498efd2
+- type: vless
+  uuid: 36e89875-9c53-482b-bc41-d3890e9da176
+  name: 🇦🇺[www.v2nodes.com] vless-AU-1...
+  server: 51.161.204.244
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇺198211 | ⚡️Telegram = t.me/S...
+  - EPODONIOS
+  - 🇦🇺[www.v2nodes.com] vless-AU-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇦🇺198211 | ⚡️Telegram = t.me/S...
+  - EPODONIOS
+  - 🇦🇺[www.v2nodes.com] vless-AU-1...
 rules:
 - MATCH,SELECT

@@ -12,7 +12,21 @@ dns:
 proxies:
 - type: vless
   uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
+  name: EPODONIOS
+  server: 46.28.67.55
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
+    short-id: d06d78e974491b6e
+- type: vless
+  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
   server: 46.28.67.55
   port: 443
   udp: true
@@ -34,6 +48,20 @@ proxies:
   reality-opts:
     public-key: byjOBWoaPgKQoy7yj91s7Uavs9VNpBns773wt-UeRxM
     short-id: 3e0c480d
+- type: vless
+  uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
+  name: EPODONIOS
+  server: 82.117.255.174
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 0QDBHaCRO2dPeeSVy3B3R_U12ZOvbvWl1JTFW_ZcpD0
+    short-id: 31e91d43e553bf32
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: QFWzCw2uX9B9i6qAYeFBIE
@@ -41,12 +69,23 @@ proxies:
   server: 154.46.31.106
   port: 443
   udp: true
+- type: vless
+  uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
+  name: 🇷🇴[www.v2nodes.com] vless-RO-1...
+  server: 82.117.255.174
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 - type: vmess
   uuid: 1e9edd93-f160-4a4a-b369-2e5194b1932a
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知79
+  name: 未知136
   server: 78.154.103.45
   port: 11901
   udp: true
@@ -54,19 +93,6 @@ proxies:
     path: /Telegram=@AmyraxVPN
     headers:
       Host: 78.154.103.45
-- type: vless
-  uuid: d49e6f64-2a62-4fc6-8dde-9ab1bdf12c02
-  name: EPODONIOS
-  server: 87.58.205.88
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: v_s3GW5_7jvB081tdUeyoDUUTq6fZwqKbVS7CdvLFA0
-    short-id: 72cd47c079c0a3df
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: U83u9OGpvSatIUW7LsWffr
@@ -80,21 +106,25 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
+  - EPODONIOS
+  - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
   - EPODONIOS
   - EPODONIOS
-  - 未知79
   - EPODONIOS
+  - 🇷🇴[www.v2nodes.com] vless-RO-1...
+  - 未知136
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
+  - EPODONIOS
+  - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
   - EPODONIOS
   - EPODONIOS
-  - 未知79
   - EPODONIOS
+  - 🇷🇴[www.v2nodes.com] vless-RO-1...
+  - 未知136
   - EPODONIOS
 rules:
 - MATCH,SELECT

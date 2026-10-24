@@ -23,6 +23,32 @@ proxies:
     path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
     headers:
       Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇰🇬 KG_106 #1'
+  server: 188.240.213.98
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇰🇬KG_1|1.5MB/s
+  server: 193.36.95.34
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -30,10 +56,14 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - '🇰🇬 KG_106 #1'
+  - 🇰🇬KG_1|1.5MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - '🇰🇬 KG_106 #1'
+  - 🇰🇬KG_1|1.5MB/s
 rules:
 - MATCH,SELECT

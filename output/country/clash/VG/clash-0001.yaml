@@ -21,6 +21,19 @@ proxies:
     path: /
     headers:
       Host: vms.lifetime08.workers.dev
+- type: vless
+  uuid: 70756c73-0000-4000-8000-650000000000
+  name: '🇸🇬[www.v2nodes.com] vless-SG #2'
+  server: 104.234.239.139
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: parsa-panel-u48we.wotic15356.workers.dev
+  ws-opts:
+    path: /pulsefp=chrome
+    headers:
+      Host: parsa-panel-u48we.wotic15356.workers.dev
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -28,10 +41,12 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - '🇸🇬[www.v2nodes.com] vless-SG #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - '🇸🇬[www.v2nodes.com] vless-SG #2'
 rules:
 - MATCH,SELECT

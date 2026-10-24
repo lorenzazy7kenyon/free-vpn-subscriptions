@@ -24,6 +24,20 @@ proxies:
     path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
     headers:
       Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
+  name: 🇻🇳[www.v2nodes.com] vless-VN-1...
+  server: 150.95.109.109
+  port: 2086
+  udp: true
+  network: tcp
+- type: vless
+  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
+  name: EPODONIOS
+  server: 150.95.109.109
+  port: 2086
+  udp: true
+  network: tcp
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -31,10 +45,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇸🇬 新加坡 | SGP
+  - 🇻🇳[www.v2nodes.com] vless-VN-1...
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇸🇬 新加坡 | SGP
+  - 🇻🇳[www.v2nodes.com] vless-VN-1...
+  - EPODONIOS
 rules:
 - MATCH,SELECT
