@@ -11,20 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇸🇬 新加坡 | SGP
-  server: 160.30.50.48
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
   uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
   name: 🇻🇳[www.v2nodes.com] vless-VN-1...
   server: 150.95.109.109
@@ -37,13 +23,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇬 新加坡 | SGP
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇸🇬 新加坡 | SGP
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
 rules:
 - MATCH,SELECT

@@ -10,30 +10,30 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  name: EPODONIOS
-  server: 45.131.7.7
-  port: 8443
-  udp: true
+- type: vmess
+  uuid: 9ac947aa-de86-41c3-9a60-4c061c7c95f0
+  alterId: 0
+  cipher: none
   network: ws
-  tls: true
-  servername: speed.dulacloud.store
+  name: 未知149
+  server: 45.131.209.253
+  port: 80
+  udp: true
   ws-opts:
-    path: /dula?Telegram-WangCai2
+    path: /vmess
     headers:
-      Host: speed.dulacloud.store
+      Host: dl3.plot.cценарий.劇情голов0рез.fir3brand.煽動者追逐雷恩.погонезаpейн.wonkacapitano.buzz.
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
+  - 未知149
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
+  - 未知149
 rules:
 - MATCH,SELECT

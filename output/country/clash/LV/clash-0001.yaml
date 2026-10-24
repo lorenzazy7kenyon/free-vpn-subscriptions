@@ -10,17 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
-  name: 🇱🇻[www.v2nodes.com] vless-LV-1...
-  server: 195.123.208.32
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
 - type: trojan
   password: humanity
   name: EPODONIOS
@@ -34,6 +23,17 @@ proxies:
     headers:
       Host: www.pleadcourt.org
 - type: vless
+  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
+  name: 🇱🇻[www.v2nodes.com] vless-LV-1...
+  server: 195.123.208.32
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- type: vless
   uuid: 17acda85-dada-41dd-8add-ad0ad179fc91
   name: EPODONIOS
   server: 31.56.177.95
@@ -46,15 +46,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇻[www.v2nodes.com] vless-LV-1...
   - EPODONIOS
+  - 🇱🇻[www.v2nodes.com] vless-LV-1...
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇱🇻[www.v2nodes.com] vless-LV-1...
   - EPODONIOS
+  - 🇱🇻[www.v2nodes.com] vless-LV-1...
   - EPODONIOS
 rules:
 - MATCH,SELECT

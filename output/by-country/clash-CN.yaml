@@ -27,10 +27,32 @@ proxies:
   alterId: 64
   cipher: auto
   network: tcp
-  name: 🇨🇳_CN_中国
+  name: EPODONIOS
   server: 112.132.215.108
   port: 50002
   udp: true
+- type: vmess
+  uuid: 2b910c43-51e3-4b15-9be8-b658106ba35e
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知161
+  server: 120.48.133.162
+  port: 10086
+  udp: true
+  ws-opts:
+    path: /
+- type: vmess
+  uuid: a01e5d56-464f-45b9-b600-164db4700162
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇨🇳_CN_中国
+  server: 120.48.133.162
+  port: 10086
+  udp: true
+  ws-opts:
+    path: /
 - type: vmess
   uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
   alterId: 0
@@ -49,6 +71,8 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - EPODONIOS
+  - 未知161
   - 🇨🇳_CN_中国
   - EPODONIOS
 - name: SELECT
@@ -56,6 +80,8 @@ proxy-groups:
   proxies:
   - AUTO
   - EPODONIOS
+  - EPODONIOS
+  - 未知161
   - 🇨🇳_CN_中国
   - EPODONIOS
 rules:
