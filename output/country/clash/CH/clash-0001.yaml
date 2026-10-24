@@ -10,19 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
-  name: EPODONIOS
-  server: 179.43.170.84
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: si2.greenzone12.com
-  reality-opts:
-    public-key: hyOYRfDSIYyqALQt3N2H0RjK8gbV1JvPTkNACC4PJF8
-    short-id: 8718c58d3d51db59
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
@@ -45,16 +32,18 @@ proxies:
     public-key: D3LM6JIYP6kL--jSCj-BPj-qy-J7rzX0Jp9Z4ygNeV4
     short-id: 7791e189a518d69e
 - type: vless
-  uuid: bfd81b63-a43d-4c27-b71d-2c948cfc4ab2
-  name: 🇨🇭CH_2|1.6MB/s
-  server: 179.237.109.135
+  uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
+  name: EPODONIOS
+  server: 179.43.170.84
   port: 443
   udp: true
-  flow: xtls-rprx-vision-udp443
+  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: seznam.cz
-  client-fingerprint: chrome
+  servername: si2.greenzone12.com
+  reality-opts:
+    public-key: hyOYRfDSIYyqALQt3N2H0RjK8gbV1JvPTkNACC4PJF8
+    short-id: 8718c58d3d51db59
 - type: vless
   uuid: ef8907eb-8bb5-4735-80f2-1d0068500d95
   name: EPODONIOS
@@ -79,18 +68,6 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  name: EPODONIOS
-  server: 208.69.78.217
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  reality-opts:
-    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
-    short-id: ad86e2d52ff40ebd
 - type: hysteria2
   password: capadm96216165
   name: 🇨🇭192087 | ⚡️Telegram = t.me/v...
@@ -110,10 +87,8 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - 🇨🇭CH_2|1.6MB/s
   - EPODONIOS
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
-  - EPODONIOS
   - 🇨🇭192087 | ⚡️Telegram = t.me/v...
 - name: SELECT
   type: select
@@ -122,10 +97,8 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - 🇨🇭CH_2|1.6MB/s
   - EPODONIOS
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
-  - EPODONIOS
   - 🇨🇭192087 | ⚡️Telegram = t.me/v...
 rules:
 - MATCH,SELECT

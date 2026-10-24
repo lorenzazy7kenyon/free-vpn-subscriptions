@@ -11,19 +11,18 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
   name: EPODONIOS
-  server: 185.193.31.7
-  port: 8443
+  server: 83.168.69.15
+  port: 56229
   udp: true
-  network: ws
+  network: grpc
   tls: true
-  servername: speed.dulacloud.store
+  servername: github.com
   client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
+  reality-opts:
+    public-key: PQLbmvCHSAwuq_Ka1W-6gQxQA_vIjItozo3Jbqkg9Xk
+    short-id: a411cc
 - type: vless
   uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a
   name: EPODONIOS
@@ -37,42 +36,6 @@ proxies:
   reality-opts:
     public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho
     short-id: 2f49bccf11150ef2
-- type: vless
-  uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
-  name: EPODONIOS
-  server: 144.31.0.140
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: api.sakhalin.fyi
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 13nLTYkdBEFR-A4CfK2beOx-5LKEsXh1QHPq8Kt52BQ
-    short-id: 7271129440ade8fa
-- type: vless
-  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
-  name: EPODONIOS
-  server: 177.1.192.72
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: addons.mozilla.org
-  reality-opts:
-    public-key: y3YCXTqEVks0nGfiSwJ43ol4pY69-mWFUZsdmveoVDM
-    short-id: 46455ff0
-- type: vless
-  uuid: 51a1fd52-fd88-4905-a976-35e44be28e4b
-  name: EPODONIOS
-  server: 2.26.225.89
-  port: 8443
-  udp: true
-  network: tcp
-  tls: true
-  servername: pl.flen-vpn.xyz
 - type: vless
   uuid: 702c098f-a29a-415d-af86-cf72a437c200
   name: EPODONIOS
@@ -88,26 +51,6 @@ proxies:
     public-key: jwdDqazbeRaR7gxqjBTFaC566Nv10tJewF9tlKrp-Wk
     short-id: e520d0583ca8295d
 - type: vless
-  uuid: 7ab86f1f-871e-4de6-9dae-7addf6dc976c
-  name: EPODONIOS
-  server: 151.241.166.159
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: pl-hsts.zloygo.com
-  reality-opts:
-    public-key: tPhBRGpTbyaPFF3W0wpqncSrdNsV5I-eyM3S9CZoeCQ
-    short-id: 9a26e586f8cadc07
-- type: trojan
-  password: pkj3BBnG2NE4wD-72SwgzNcfaHSes-dr
-  name: EPODONIOS
-  server: 191.44.113.95
-  port: 443
-  udp: true
-  sni: 16.img.avito.st
-- type: vless
   uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
   name: EPODONIOS
   server: 103.167.234.179
@@ -120,27 +63,13 @@ proxies:
   reality-opts:
     public-key: trN5x0amt2YuVzF2vZnK294YBAuh_zl5QkZjPyWz-TI
     short-id: 8718c58d3d51db59
-- type: vless
-  uuid: c18b978e-1c4e-415c-8bea-07942b563a64
+- type: trojan
+  password: pkj3BBnG2NE4wD-72SwgzNcfaHSes-dr
   name: EPODONIOS
-  server: 103.167.234.26
+  server: 191.44.113.95
   port: 443
   udp: true
-  network: ws
-  tls: true
-  servername: shuma.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: shuma.ccwu.cc
-- type: vless
-  uuid: e7e1e726-b30f-477a-a308-3138e62a8d21
-  name: EPODONIOS
-  server: 45.144.48.81
-  port: 45780
-  udp: true
-  network: tcp
+  sni: 16.img.avito.st
 - type: vless
   uuid: 616c7b3b-41f4-4038-88c6-d6fedd0ae4a7
   name: EPODONIOS
@@ -156,18 +85,18 @@ proxies:
     public-key: PKlt_5ASsz137EvA9SKSadtjEv1k_U7VRtoelKCgADs
     short-id: 9ea74b83f4993ca9
 - type: vless
-  uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
+  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
   name: EPODONIOS
-  server: 185.16.38.132
+  server: 177.1.192.72
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: pl1.magazinnarubeva.ru
+  servername: addons.mozilla.org
   reality-opts:
-    public-key: jIq_COD-tIXTvgDn-TslFGtB_a8HVgUOOIlUByv8fkg
-    short-id: 8718c58d3d51db59
+    public-key: y3YCXTqEVks0nGfiSwJ43ol4pY69-mWFUZsdmveoVDM
+    short-id: 46455ff0
 - type: vless
   uuid: 8a9c586c-4b2c-49e5-9e78-97408bf58500
   name: EPODONIOS
@@ -182,6 +111,20 @@ proxies:
   reality-opts:
     public-key: E12wXXagR8xuql7KlWCLTgMaXj74JcU__lg66yz6iTw
 - type: vless
+  uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
+  name: EPODONIOS
+  server: 144.31.0.140
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: api.sakhalin.fyi
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 13nLTYkdBEFR-A4CfK2beOx-5LKEsXh1QHPq8Kt52BQ
+    short-id: 7271129440ade8fa
+- type: vless
   uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
   name: EPODONIOS
   server: 2.59.253.251
@@ -195,6 +138,19 @@ proxies:
   reality-opts:
     public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
     short-id: db04ce8bdb8900f1
+- type: vless
+  uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
+  name: EPODONIOS
+  server: 185.16.38.132
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: pl1.magazinnarubeva.ru
+  reality-opts:
+    public-key: jIq_COD-tIXTvgDn-TslFGtB_a8HVgUOOIlUByv8fkg
+    short-id: 8718c58d3d51db59
 - type: trojan
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   name: EPODONIOS
@@ -202,6 +158,30 @@ proxies:
   port: 443
   udp: true
   sni: 31.133.0.186
+  skip-cert-verify: true
+- type: vless
+  uuid: 51a1fd52-fd88-4905-a976-35e44be28e4b
+  name: EPODONIOS
+  server: 2.26.225.89
+  port: 8443
+  udp: true
+  network: tcp
+  tls: true
+  servername: pl.flen-vpn.xyz
+- type: vless
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
+  name: EPODONIOS
+  server: 82.118.22.161
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
 - type: vless
   uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
   name: '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
@@ -213,6 +193,44 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: safari
+- type: vless
+  uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
+  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #3'
+  server: 150.251.113.34
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 8zw5j9h
+  name: EPODONIOS
+  server: 54.36.174.134
+  port: 443
+  udp: true
+- type: vless
+  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+  name: EPODONIOS
+  server: 54.37.136.194
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
+    short-id: 50ba05992b05c1c3
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ytw2awn
+  name: EPODONIOS
+  server: 54.36.174.140
+  port: 443
+  udp: true
 - type: vless
   uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
   name: '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
@@ -230,17 +248,6 @@ proxies:
   server: 54.36.174.134
   port: 443
   udp: true
-- type: vless
-  uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #3'
-  server: 150.251.113.34
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 - type: vmess
   uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
   alterId: 0
@@ -254,20 +261,6 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: ytw2awn
-  name: EPODONIOS
-  server: 54.36.174.140
-  port: 443
-  udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 8zw5j9h
-  name: EPODONIOS
-  server: 54.36.174.134
-  port: 443
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -288,13 +281,12 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
-  - EPODONIOS
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #3'
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
@@ -315,13 +307,12 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
-  - EPODONIOS
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #3'
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
   - EPODONIOS
   - EPODONIOS
 rules:

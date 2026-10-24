@@ -11,19 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  name: EPODONIOS
-  server: 45.9.156.42
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: bg5.univesalsrv.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: RDWvDEygSk1eyAQhIK95H9EteFbrS2d9JEjBrco54Bw
-    short-id: 1a3102bb8e51399e
-- type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: '🇧🇬 保加利亚 | BGR #1'
   server: 104.152.48.248
@@ -49,6 +36,33 @@ proxies:
   reality-opts:
     public-key: 0f0dh_FUju5cHgQcIwUjHvxQb9aIZ00p0kZRHeE7Ey4
     short-id: 501ab3325b77e1ca
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: EPODONIOS
+  server: 103.249.134.29
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: free.cndyw.ggff.net
+  client-fingerprint: chrome
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.com
+    headers:
+      Host: free.cndyw.ggff.net
+- type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  name: EPODONIOS
+  server: 45.9.156.42
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: bg5.univesalsrv.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: RDWvDEygSk1eyAQhIK95H9EteFbrS2d9JEjBrco54Bw
+    short-id: 1a3102bb8e51399e
 - type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
@@ -81,8 +95,9 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
   - '🇧🇬 保加利亚 | BGR #1'
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -90,8 +105,9 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - '🇧🇬 保加利亚 | BGR #1'
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

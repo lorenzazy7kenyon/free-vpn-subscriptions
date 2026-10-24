@@ -11,32 +11,19 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇪🇪 爱沙尼亚 | EST
-  server: 130.78.190.134
-  port: 443
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  name: EPODONIOS
+  server: 144.31.243.120
+  port: 8443
   udp: true
   network: ws
   tls: true
-  servername: snip.edgeoneai.cc.cd
+  servername: edgetunnel-4uw.pages.dev
   client-fingerprint: chrome
   ws-opts:
-    path: /fp=chrome
+    path: /
     headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇪🇪 爱沙尼亚 | EST #1'
-  server: 130.78.190.134
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chromefp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
+      Host: edgetunnel-4uw.pages.dev
 - type: vless
   uuid: 3b1fa839-2cb9-4511-9711-08800450aea3
   name: EPODONIOS
@@ -51,36 +38,18 @@ proxies:
   reality-opts:
     public-key: 5pR15ATlWW3tVzfnMN3xoiN56LjIUbhnOMp37ZvTFUc
     short-id: d44d6d46
-- type: vless
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
-  name: EPODONIOS
-  server: 144.31.243.120
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: edgetunnel-4uw.pages.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: edgetunnel-4uw.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇪 爱沙尼亚 | EST
-  - '🇪🇪 爱沙尼亚 | EST #1'
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇪🇪 爱沙尼亚 | EST
-  - '🇪🇪 爱沙尼亚 | EST #1'
   - EPODONIOS
   - EPODONIOS
 rules:

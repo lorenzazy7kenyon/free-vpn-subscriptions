@@ -33,6 +33,17 @@ proxies:
     headers:
       Host: parsi.parsi.sbs
 - type: vless
+  uuid: 0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6
+  name: EPODONIOS
+  server: 185.143.234.238
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pgcfws-r4
+    headers:
+      Host: uu.caroptions.ir
+- type: vless
   uuid: f3ab8321-0c15-4c9a-9917-3f1b6706ab12
   name: EPODONIOS
   server: 185.143.234.122
@@ -57,52 +68,27 @@ proxies:
     headers:
       Host: koochehpas.com
 - type: vless
-  uuid: 0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6
+  uuid: 38dd06a1-e1cb-492b-bb87-218ce05d0d67
   name: EPODONIOS
-  server: 185.143.234.238
+  server: 185.143.233.5
   port: 80
   udp: true
   network: ws
   ws-opts:
-    path: /pgcfws-r4
+    path: /
     headers:
-      Host: uu.caroptions.ir
-- type: ss
-  cipher: aes-128-gcm
-  password: db2cf3e21c83483c9084b9db1bd469fb
-  name: EPODONIOS
-  server: 87.107.114.123
-  port: 500
-  udp: true
+      Host: fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir
 - type: vless
-  uuid: 950ec237-e75f-4e99-9557-6545784d4202
+  uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
   name: EPODONIOS
-  server: 94.182.131.101
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: youtu.be
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: fPjow17wDX8YJG89j9lraSqv54yvuS21lq3lJiAX_g0
-    short-id: 489861db
-- type: vless
-  uuid: fb5c43f4-bd23-453d-a3cf-45ad5b9c020b
-  name: EPODONIOS
-  server: 85.133.244.214
-  port: 443
+  server: 185.143.233.238
+  port: 2086
   udp: true
   network: ws
   ws-opts:
     path: /
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: pLGCPnj2WgzxX1IedW8yd7trwRlXqjLa
-  name: EPODONIOS
-  server: 109.122.251.86
-  port: 20700
-  udp: true
+    headers:
+      Host: parsi.parsi.sbs
 - type: vless
   uuid: 59fd7a11-62e5-48bc-bd5f-39d67539f150
   name: EPODONIOS
@@ -116,17 +102,20 @@ proxies:
   reality-opts:
     public-key: -l1xlrYsq1pzXuuwR-cD-N4rbW7Ey1RGp5Tv3jPgVRk
     short-id: f2a6f2b79ee4829a
-- type: vless
-  uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 9LHLa1Ck2eRIOmJOWp2XRRACgFGAY_3g
   name: EPODONIOS
-  server: 185.143.233.238
-  port: 2086
+  server: 87.107.114.100
+  port: 902
   udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: parsi.parsi.sbs
+- type: ss
+  cipher: aes-128-gcm
+  password: db2cf3e21c83483c9084b9db1bd469fb
+  name: EPODONIOS
+  server: 87.107.114.123
+  port: 500
+  udp: true
 - type: vless
   uuid: 30fcec7f-164b-465c-87f4-b93784a6056b
   name: EPODONIOS
@@ -138,17 +127,51 @@ proxies:
     path: /
     headers:
       Host: azsv1.drpingservice.com
-- type: vless
-  uuid: 38dd06a1-e1cb-492b-bb87-218ce05d0d67
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: pLGCPnj2WgzxX1IedW8yd7trwRlXqjLa
   name: EPODONIOS
-  server: 185.143.233.5
-  port: 80
+  server: 109.122.251.86
+  port: 20700
+  udp: true
+- type: vless
+  uuid: fb5c43f4-bd23-453d-a3cf-45ad5b9c020b
+  name: EPODONIOS
+  server: 85.133.244.214
+  port: 443
   udp: true
   network: ws
   ws-opts:
     path: /
-    headers:
-      Host: fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir
+- type: vless
+  uuid: 950ec237-e75f-4e99-9557-6545784d4202
+  name: EPODONIOS
+  server: 94.182.131.101
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: youtu.be
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: fPjow17wDX8YJG89j9lraSqv54yvuS21lq3lJiAX_g0
+    short-id: 489861db
+- type: vmess
+  uuid: a68a9f14-4075-4b50-8ee0-3820442d789a
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 194.32.213.2
+  port: 49951
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 9LHLa1Ck2eRIOmJOWp2XRRACgFGAY_3g
+  name: EPODONIOS
+  server: 87.107.114.102
+  port: 904
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -168,10 +191,16 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

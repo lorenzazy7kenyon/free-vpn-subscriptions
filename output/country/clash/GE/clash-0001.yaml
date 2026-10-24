@@ -12,19 +12,6 @@ dns:
 proxies:
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇬🇪GE_1|1.4MB/s
-  server: 194.135.119.82
-  port: 2053
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chromefp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: '🇬🇪 GE_51 #1'
   server: 194.135.119.82
   port: 2053
@@ -42,13 +29,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇪GE_1|1.4MB/s
   - '🇬🇪 GE_51 #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇬🇪GE_1|1.4MB/s
   - '🇬🇪 GE_51 #1'
 rules:
 - MATCH,SELECT

@@ -11,58 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 8d790ba0-5407-441b-b545-8ab369c591ce
-  name: EPODONIOS
-  server: 13.143.239.125
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: g1.coconutsvpn.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: XW-uVSKkZJB14OFKOePhEE4UnrAOI4VfuAQQZ_gI3E0
-    short-id: 848eb46fd7a0e43d
-- type: vless
-  uuid: 7b571245-ec1e-44b1-bb5a-f7c61157d2c4
-  name: EPODONIOS
-  server: 201.7.25.208
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ee.api-yandex.net
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: VfyS9hoKlYU2l3oZ-T6RN2JzjWgtrIC7-VjseHCeBGE
-    short-id: 0f4dacf33211e04f
-- type: vless
-  uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
-  name: EPODONIOS
-  server: 201.7.25.100
-  port: 24446
-  udp: true
-  network: grpc
-  tls: true
-  servername: willow.cdn.cachefleet.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: w9JCByLSU3NGciCv2iceOz4TRL4swv8jfIAYoaKSyEw
-    short-id: a0938b702257f780
-- type: vless
-  uuid: 185e2bb3-2934-48d0-bbd5-dd20d16e83ee
-  name: 🇪🇪[www.v2nodes.com] vless-EE-1...
-  server: 93.89.220.37
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ibm.com
-  client-fingerprint: chrome
-- type: vless
   uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
   name: EPODONIOS
   server: 89.125.13.202
@@ -91,16 +39,19 @@ proxies:
     public-key: 13nLTYkdBEFR-A4CfK2beOx-5LKEsXh1QHPq8Kt52BQ
     short-id: 7271129440ade8fa
 - type: vless
-  uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
-  server: 138.124.4.224
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇺🇸 美国 | USA
+  server: 13.143.182.82
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: ws
   tls: true
-  servername: login.sakhweb.fyi
-  client-fingerprint: firefox
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - type: vless
   uuid: 185e2bb3-2934-48d0-bbd5-dd20d16e83ee
   name: EPODONIOS
@@ -115,16 +66,46 @@ proxies:
     public-key: lwKaUQ81wJUJRsqAPsfTPj5V_f9N50UYEwzRI_nuq2g
     short-id: e88cb983f3c97528
 - type: vless
-  uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  server: 5.189.254.168
-  port: 2053
+  uuid: 7b571245-ec1e-44b1-bb5a-f7c61157d2c4
+  name: EPODONIOS
+  server: 201.7.25.208
+  port: 443
   udp: true
-  network: ws
-  ws-opts:
-    path: /proxyip=ProxyIP.CMLiussss.netfp=chromesecurity=tls
-    headers:
-      Host: cf3.schzyc.cc.cd
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ee.api-yandex.net
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: VfyS9hoKlYU2l3oZ-T6RN2JzjWgtrIC7-VjseHCeBGE
+    short-id: 0f4dacf33211e04f
+- type: vless
+  uuid: 8d790ba0-5407-441b-b545-8ab369c591ce
+  name: EPODONIOS
+  server: 13.143.239.125
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: g1.coconutsvpn.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: XW-uVSKkZJB14OFKOePhEE4UnrAOI4VfuAQQZ_gI3E0
+    short-id: 848eb46fd7a0e43d
+- type: vless
+  uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
+  name: EPODONIOS
+  server: 201.7.25.100
+  port: 24446
+  udp: true
+  network: grpc
+  tls: true
+  servername: willow.cdn.cachefleet.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: w9JCByLSU3NGciCv2iceOz4TRL4swv8jfIAYoaKSyEw
+    short-id: a0938b702257f780
 - type: vless
   uuid: cba98ec5-9f00-4ada-a0ce-f490257af2ee
   name: EPODONIOS
@@ -138,6 +119,28 @@ proxies:
   reality-opts:
     public-key: 8PGoRfefKAWaX4N7rqWyIap71L6JOL15feshsAoOphM
     short-id: 89a72356470b2478
+- type: vless
+  uuid: 185e2bb3-2934-48d0-bbd5-dd20d16e83ee
+  name: 🇪🇪[www.v2nodes.com] vless-EE-1...
+  server: 93.89.220.37
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ibm.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
+  server: 5.189.254.168
+  port: 2053
+  udp: true
+  network: ws
+  ws-opts:
+    path: /proxyip=ProxyIP.CMLiussss.netfp=chromesecurity=tls
+    headers:
+      Host: cf3.schzyc.cc.cd
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -146,27 +149,27 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
+  - 🇺🇸 美国 | USA
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - 🇪🇪[www.v2nodes.com] vless-EE-1...
-  - EPODONIOS
-  - EPODONIOS
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
-  - EPODONIOS
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
   - EPODONIOS
+  - 🇺🇸 美国 | USA
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - 🇪🇪[www.v2nodes.com] vless-EE-1...
-  - EPODONIOS
-  - EPODONIOS
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
-  - EPODONIOS
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - EPODONIOS
 rules:
 - MATCH,SELECT

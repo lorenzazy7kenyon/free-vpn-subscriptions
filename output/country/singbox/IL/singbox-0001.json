@@ -23,20 +23,6 @@
     {
       "server": "185.253.75.119",
       "server_port": 443,
-      "tag": "🇮🇱[www.v2nodes.com] vless-IL-1...",
-      "transport": {
-        "headers": {
-          "Host": "ccc.010304.xyz"
-        },
-        "path": "/fp=chromesecurity=tls",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "d342d11e-d224-4463-b982-532309285094"
-    },
-    {
-      "server": "185.253.75.119",
-      "server_port": 443,
       "tag": "🇮🇱[www.v2nodes.com] vless-IL-1... #1",
       "tls": {
         "enabled": true,
@@ -54,11 +40,57 @@
       "uuid": "d342d11e-d224-4463-b982-532309285094"
     },
     {
+      "server": "185.253.75.119",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "ccc.010304.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "ccc.010304.xyz"
+        },
+        "path": "/",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "d342d11e-d224-4463-b982-532309285094"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "77.91.69.169",
+      "server_port": 19226,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "PQjgf7GxBd2tDXf0zl9Z5rTZo7LdsWj0hGZLH-lJ-Uk",
+          "short_id": "7c"
+        },
+        "server_name": "yahoo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "f0b144bd-4c44-440d-b630-d79ec82cad3a"
+    },
+    {
       "interval": "5m",
       "outbounds": [
         "EPODONIOS",
-        "🇮🇱[www.v2nodes.com] vless-IL-1...",
-        "🇮🇱[www.v2nodes.com] vless-IL-1... #1"
+        "🇮🇱[www.v2nodes.com] vless-IL-1... #1",
+        "EPODONIOS",
+        "EPODONIOS"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -68,8 +100,9 @@
       "outbounds": [
         "auto",
         "EPODONIOS",
-        "🇮🇱[www.v2nodes.com] vless-IL-1...",
-        "🇮🇱[www.v2nodes.com] vless-IL-1... #1"
+        "🇮🇱[www.v2nodes.com] vless-IL-1... #1",
+        "EPODONIOS",
+        "EPODONIOS"
       ],
       "tag": "select",
       "type": "selector"

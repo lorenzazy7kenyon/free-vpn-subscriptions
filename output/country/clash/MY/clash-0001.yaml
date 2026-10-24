@@ -11,13 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
-  name: 🇲🇾[www.v2nodes.com] vless-MY-1...
-  server: 111.90.143.184
-  port: 61111
-  udp: true
-  network: tcp
-- type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: 🇲🇾[www.v2nodes.com] vless-MY-5...
   server: 216.173.67.59
@@ -28,6 +21,40 @@ proxies:
   servername: ccc.010304.xyz
   ws-opts:
     path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+  name: 🇲🇾[www.v2nodes.com] vless-MY-1...
+  server: 111.90.143.184
+  port: 61111
+  udp: true
+  network: tcp
+- type: vless
+  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+  name: EPODONIOS
+  server: 111.90.143.184
+  port: 61111
+  udp: true
+  network: grpc
+  tls: true
+  servername: github.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: jT5prLDhvJ86zZVz5pDX907oQbeZ0Hyb_VcDSiJxQQU
+    short-id: 1378f725da558887
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: EPODONIOS
+  server: 216.173.67.59
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
     headers:
       Host: ccc.010304.xyz
 - type: trojan
@@ -43,15 +70,19 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇾[www.v2nodes.com] vless-MY-1...
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
+  - 🇲🇾[www.v2nodes.com] vless-MY-1...
+  - EPODONIOS
+  - EPODONIOS
   - '🏳[www.v2nodes.com] trojan- #6'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇲🇾[www.v2nodes.com] vless-MY-1...
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
+  - 🇲🇾[www.v2nodes.com] vless-MY-1...
+  - EPODONIOS
+  - EPODONIOS
   - '🏳[www.v2nodes.com] trojan- #6'
 rules:
 - MATCH,SELECT
