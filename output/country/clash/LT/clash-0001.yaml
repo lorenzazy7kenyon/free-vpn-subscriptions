@@ -37,20 +37,6 @@ proxies:
     headers:
       Host: server8.9966338.xyz
 - type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-  name: EPODONIOS
-  server: 88.216.69.253
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: a.cwvps.eu.org
-  client-fingerprint: unsafe
-  ws-opts:
-    path: /ws
-    headers:
-      Host: a.cwvps.eu.org
-- type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   name: 🇸🇬[www.v2nodes.com] vless-SG
   server: 88.216.69.30
@@ -61,20 +47,6 @@ proxies:
     path: /
     headers:
       Host: vms.lifetime06.workers.dev
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: EPODONIOS
-  server: 88.216.69.253
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  client-fingerprint: unsafe
-  ws-opts:
-    path: /fp
-    headers:
-      Host: ccc.010304.xyz
 - type: vless
   uuid: 3b1fa839-2cb9-4511-9711-08800450aea3
   name: EPODONIOS
@@ -89,13 +61,26 @@ proxies:
   reality-opts:
     public-key: 5pR15ATlWW3tVzfnMN3xoiN56LjIUbhnOMp37ZvTFUc
     short-id: d44d6d46
+- type: vless
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  name: EPODONIOS
+  server: 144.31.243.120
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: edgetunnel-4uw.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: edgetunnel-4uw.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - 🇸🇬[www.v2nodes.com] vless-SG
@@ -105,7 +90,6 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - 🇸🇬[www.v2nodes.com] vless-SG

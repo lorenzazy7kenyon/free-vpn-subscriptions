@@ -11,6 +11,19 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: c28ee61d-0d43-4e69-8e6a-6397ed0ffc03
+  name: EPODONIOS
+  server: 109.69.218.168
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: agile-raptor.cdn.cachefleet.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc
+- type: vless
   uuid: 2a12bb81-f3a3-41bb-99ab-36febf676b4a
   name: EPODONIOS
   server: 109.69.218.217
@@ -37,19 +50,6 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
-- type: vless
-  uuid: c28ee61d-0d43-4e69-8e6a-6397ed0ffc03
-  name: EPODONIOS
-  server: 109.69.218.168
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: agile-raptor.cdn.cachefleet.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -57,14 +57,14 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - 未知97
   - EPODONIOS
+  - 未知97
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - 未知97
   - EPODONIOS
+  - 未知97
 rules:
 - MATCH,SELECT

@@ -10,6 +10,17 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: EPODONIOS
+  server: 212.183.88.30
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed
+    headers:
+      Host: vms.lifetime23.workers.dev
 - type: trojan
   password: humanity
   name: EPODONIOS
@@ -22,17 +33,6 @@ proxies:
     path: //assignment
     headers:
       Host: www.calmlunch.com
-- type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: EPODONIOS
-  server: 212.183.88.30
-  port: 8880
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: vms.lifetime23.workers.dev
 - type: vless
   uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
   name: EPODONIOS

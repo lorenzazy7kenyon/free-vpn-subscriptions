@@ -24,45 +24,6 @@ proxies:
     path: /
     headers:
       Host: ccc.010304.xyz
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 31.77.126.2
-  port: 443
-  udp: true
-  sni: www.volumeroot.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.volumeroot.com
-- type: vless
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  name: EPODONIOS
-  server: 31.77.126.2
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: lucasjow.us.ci
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
-    headers:
-      Host: lucasjow.us.ci
-- type: vless
-  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
-  name: EPODONIOS
-  server: 195.123.245.241
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw
-    short-id: 23d0950d60bc0d5b
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecu
@@ -71,16 +32,18 @@ proxies:
   udp: true
   network: tcp
 - type: vless
-  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
-  name: '🏳[www.v2nodes.com] vless- #4'
-  server: 195.123.245.241
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: EPODONIOS
+  server: 31.77.126.2
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: ws
   tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /fp
+    headers:
+      Host: ccc.010304.xyz
 - type: vless
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   name: EPODONIOS
@@ -95,13 +58,29 @@ proxies:
     path: /cart/docs/www/proxyip=108.160.132.132
     headers:
       Host: lucasjow.us.ci
-- type: ss
-  cipher: aes-256-gcm
-  password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
+- type: trojan
+  password: humanity
   name: EPODONIOS
-  server: 67.159.18.34
-  port: 17001
+  server: 31.77.126.2
+  port: 443
   udp: true
+  sni: www.volumeroot.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.volumeroot.com
+- type: vless
+  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
+  name: '🏳[www.v2nodes.com] vless- #4'
+  server: 195.123.245.241
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 - type: vless
   uuid: bfd81b63-a43d-4c27-b71d-2c948cfc4ab2
   name: EPODONIOS
@@ -123,26 +102,22 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecu
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - '🏳[www.v2nodes.com] vless- #4'
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecu
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - '🏳[www.v2nodes.com] vless- #4'
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

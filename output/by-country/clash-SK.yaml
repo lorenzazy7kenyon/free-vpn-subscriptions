@@ -11,19 +11,18 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 9b18ccef-b9e0-41d1-8990-9d970569e142
+  uuid: 689a62e4-37e7-41de-9e6a-f2a56368c9e2
   name: EPODONIOS
-  server: 185.112.249.201
-  port: 8443
+  server: 45.129.141.154
+  port: 443
   udp: true
-  network: ws
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: web-socket.tgdaosheng.ggff.net
-  client-fingerprint: chrome
-  ws-opts:
-    path: /proxyip=bpb.yousef.isegaro.comfp=chrome
-    headers:
-      Host: web-socket.tgdaosheng.ggff.net
+  servername: www.websupport.sk
+  reality-opts:
+    public-key: breG0HwhH88ppAzFb4ZiWvhJjDAQCXJvIG6Ef95MXis
+    short-id: ef
 proxy-groups:
 - name: AUTO
   type: url-test

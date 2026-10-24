@@ -10,9 +10,29 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 132.145.80.230
+  port: 80
+  udp: true
+  ws-opts:
+    path: /cctv13.m3u8
+- type: vmess
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 140.238.2.250
+  port: 443
+  udp: true
 - type: vless
   uuid: 583cc910-b57c-4dd0-a4a7-cea51a30b032
-  name: EPODONIOS
+  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
   server: 64.176.231.183
   port: 443
   udp: true
@@ -21,9 +41,13 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: GR_zPAgxF9PZ70Z9UpSmMlcd2STyoAC0fZTSHkTTCGE
-    short-id: ca193e889d958f81
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: EPODONIOS
+  server: 211.178.105.134
+  port: 6123
+  udp: true
 - type: vless
   uuid: 583cc910-b57c-4dd0-a4a7-cea51a30b032
   name: EPODONIOS
@@ -38,57 +62,21 @@ proxies:
   reality-opts:
     public-key: GR_zPAgxF9PZ70Z9UpSmMlcd2STyoAC0fZTSHkTTCGE
     short-id: ca193e889d958f81
-- type: vless
-  uuid: 583cc910-b57c-4dd0-a4a7-cea51a30b032
-  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
-  server: 64.176.231.183
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
+- type: ss
+  cipher: aes-256-gcm
+  password: TEzjfAYq2IjtuoS
   name: EPODONIOS
-  server: 47.80.19.173
-  port: 2053
+  server: 141.164.45.187
+  port: 6697
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms
-    short-id: 3c4041d3
 - type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
   alterId: 0
   cipher: auto
-  network: ws
+  network: tcp
   name: EPODONIOS
-  server: 132.145.80.230
-  port: 80
-  udp: true
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: kr02.a0a.xyz
-- type: ss
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 9090
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: lGqs95QkFHo2NV
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 5498
+  server: 146.56.112.110
+  port: 8888
   udp: true
 - type: ss
   cipher: aes-256-gcm
@@ -99,10 +87,10 @@ proxies:
   udp: true
 - type: ss
   cipher: aes-256-gcm
-  password: TEzjfAYq2IjtuoS
+  password: Y6R9pAtvxxzmGC
   name: EPODONIOS
   server: 141.164.45.187
-  port: 6697
+  port: 9090
   udp: true
 - type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
@@ -119,25 +107,12 @@ proxies:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
 - type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
+  cipher: aes-256-gcm
+  password: lGqs95QkFHo2NV
   name: EPODONIOS
-  server: 211.178.105.134
-  port: 6123
+  server: 141.164.45.187
+  port: 5498
   udp: true
-- type: vless
-  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
-  name: EPODONIOS
-  server: 151.245.106.49
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
-    short-id: 429499c03d4cc8a0
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   name: '🇰🇷 韩国 | KOR #1'
@@ -163,7 +138,6 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
   - '🇰🇷 韩国 | KOR #1'
 - name: SELECT
   type: select
@@ -172,7 +146,6 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
