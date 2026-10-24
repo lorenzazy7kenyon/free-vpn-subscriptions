@@ -10,29 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 99de7aac-d2a5-48fd-92cb-d1e6c3c719a4
-  name: EPODONIOS
-  server: 172.105.252.35
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: in-full.privateip.net
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: '🇮🇳 印度 | IND #1'
-  server: 216.10.243.159
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
 - type: ss
   cipher: aes-256-gcm
   password: RexnBgU7EV5ADxG
@@ -52,6 +29,30 @@ proxies:
   client-fingerprint: chrome
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇮🇳 印度 | IND #1'
+  server: 216.10.243.159
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
+  name: EPODONIOS
+  server: 5.253.29.254
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 5.253.29.254
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: 🇮🇳 印度 | IND
   server: 216.10.243.159
   port: 443
@@ -66,7 +67,7 @@ proxies:
       Host: snip.edgeoneai.cc.cd
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: '🏳[www.v2nodes.com] vless- #20'
+  name: EPODONIOS
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -76,16 +77,30 @@ proxies:
     headers:
       Host: 13.140.56.100
 - type: vmess
-  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  uuid: f23bb427c1f94373876c2f43e9f790f3
   alterId: 0
   cipher: auto
   network: ws
-  name: EPODONIOS
-  server: 152.67.8.205
-  port: 80
+  name: 未知54
+  server: 20.235.220.189
+  port: 443
   udp: true
+  tls: true
+  servername: 6JDvArazgU3qQR6Q.v.3dns.vip
   ws-opts:
-    path: /
+    path: /ws-vmess
+    headers:
+      Host: 6JDvArazgU3qQR6Q.v.3dns.vip
+- type: vless
+  uuid: 99de7aac-d2a5-48fd-92cb-d1e6c3c719a4
+  name: EPODONIOS
+  server: 172.105.252.35
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: in-full.privateip.net
 - type: vless
   uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8
   name: EPODONIOS
@@ -100,20 +115,24 @@ proxies:
   reality-opts:
     public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
     short-id: 88b6
-- type: vless
-  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
-  name: EPODONIOS
-  server: 5.253.42.164
-  port: 40443
+- type: ss
+  cipher: aes-256-gcm
+  password: GEdoeeqLZtkJRgSa
+  name: 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  server: 139.84.166.47
+  port: 8388
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: deepl.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
-    short-id: 68a8
+- type: vmess
+  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 152.67.8.205
+  port: 80
+  udp: true
+  ws-opts:
+    path: /
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -121,26 +140,30 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
   - '🇮🇳 印度 | IND #1'
   - EPODONIOS
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
   - 🇮🇳 印度 | IND
-  - '🏳[www.v2nodes.com] vless- #20'
+  - EPODONIOS
+  - 未知54
   - EPODONIOS
   - EPODONIOS
+  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
   - '🇮🇳 印度 | IND #1'
   - EPODONIOS
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
   - 🇮🇳 印度 | IND
-  - '🏳[www.v2nodes.com] vless- #20'
+  - EPODONIOS
+  - 未知54
   - EPODONIOS
   - EPODONIOS
+  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
   - EPODONIOS
 rules:
 - MATCH,SELECT

@@ -10,37 +10,40 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 31.57.190.34
-  port: 443
-  udp: true
-  sni: www.pleadcourt.org
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 31.57.190.71
-  port: 443
-  udp: true
-  sni: www.pleadcourt.org
-  network: ws
-  ws-opts:
-    path: /assignment
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
-  name: EPODONIOS
+  name: '🇪🇸[www.v2nodes.com] vless-ES-2... #3'
   server: 31.57.190.89
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=chromefp=chromesecurity=tls
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇪🇸[www.v2nodes.com] vless-ES-4... #1'
+  server: 31.57.190.15
   port: 443
   udp: true
   network: ws
   tls: true
   servername: ccc.010304.xyz
+  ws-opts:
+    path: /fp=chromefp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: EPODONIOS
+  server: 31.57.190.50
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  client-fingerprint: chrome
   ws-opts:
     path: /
     headers:
@@ -73,15 +76,39 @@ proxies:
     path: /cart/docs/www/proxyip=108.160.132.132
     headers:
       Host: lucasjow.us.ci
+- type: trojan
+  password: humanity
+  name: EPODONIOS
+  server: 31.57.190.71
+  port: 443
+  udp: true
+  sni: www.pleadcourt.org
+  network: ws
+  ws-opts:
+    path: /assignment
+- type: trojan
+  password: humanity
+  name: EPODONIOS
+  server: 31.57.190.34
+  port: 443
+  udp: true
+  sni: www.pleadcourt.org
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇪🇸[www.v2nodes.com] vless-ES-2... #3'
-  server: 31.57.190.89
+  name: EPODONIOS
+  server: 31.57.190.50
   port: 443
   udp: true
   network: ws
+  tls: true
+  servername: ccc.010304.xyz
   ws-opts:
-    path: /fp=chromefp=chromesecurity=tls
+    path: /fp
     headers:
       Host: ccc.010304.xyz
 - type: vless
@@ -99,7 +126,18 @@ proxies:
       Host: ccc.010304.xyz
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🏳[www.v2nodes.com] vless- #12'
+  name: '🇪🇸[www.v2nodes.com] vless-ES-2... #1'
+  server: 31.57.190.15
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fpsecurity=tls
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🏳[www.v2nodes.com] vless- #11'
   server: 31.57.190.89
   port: 443
   udp: true
@@ -108,31 +146,99 @@ proxies:
     path: /security=tls
     headers:
       Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: EPODONIOS
+  server: 31.57.190.89
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: EPODONIOS
+  server: 31.57.190.15
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /fp
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: EPODONIOS
+  server: 31.57.190.15
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  client-fingerprint: chrome
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: EPODONIOS
+  server: 31.57.190.15
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: ccc.010304.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - '🇪🇸[www.v2nodes.com] vless-ES-2... #3'
+  - '🇪🇸[www.v2nodes.com] vless-ES-4... #1'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - 🇪🇸[www.v2nodes.com] vless-ES-2...
-  - '🏳[www.v2nodes.com] vless- #12'
+  - '🇪🇸[www.v2nodes.com] vless-ES-2... #1'
+  - '🏳[www.v2nodes.com] vless- #11'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - '🇪🇸[www.v2nodes.com] vless-ES-2... #3'
+  - '🇪🇸[www.v2nodes.com] vless-ES-4... #1'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - 🇪🇸[www.v2nodes.com] vless-ES-2...
-  - '🏳[www.v2nodes.com] vless- #12'
+  - '🇪🇸[www.v2nodes.com] vless-ES-2... #1'
+  - '🏳[www.v2nodes.com] vless- #11'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
 rules:
 - MATCH,SELECT

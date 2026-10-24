@@ -10,6 +10,18 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: trojan
+  password: bpb-trojan
+  name: EPODONIOS
+  server: 190.93.244.202
+  port: 443
+  udp: true
+  sni: fcspring.ggff.net
+  network: ws
+  ws-opts:
+    path: /tr?ed
+    headers:
+      Host: fcspring.ggff.net
 - type: vless
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   name: EPODONIOS
@@ -39,32 +51,6 @@ proxies:
     headers:
       Host: lucasjow.us.ci
 - type: trojan
-  password: bpb-trojan
-  name: EPODONIOS
-  server: 190.93.244.202
-  port: 443
-  udp: true
-  sni: fcspring.ggff.net
-  network: ws
-  ws-opts:
-    path: /tr?ed
-    headers:
-      Host: fcspring.ggff.net
-- type: vless
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  name: EPODONIOS
-  server: 190.93.246.21
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: chrome
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-    headers:
-      Host: lucasjow.us.ci
-- type: trojan
   password: humanity
   name: EPODONIOS
   server: 190.93.245.148
@@ -86,12 +72,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

@@ -37,8 +37,20 @@ proxies:
     headers:
       Host: www.pleadcourt.org
 - type: trojan
-  password: humanity
+  password: 5504eaa8-1395-402f-8e0e-75ecd762e627
   name: EPODONIOS
+  server: 109.234.211.232
+  port: 443
+  udp: true
+  sni: nat11.outsidemyheart.space
+  network: ws
+  ws-opts:
+    path: /w4e5yh0p945y3
+    headers:
+      Host: nat11.outsidemyheart.space
+- type: trojan
+  password: humanity
+  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #4'
   server: 185.114.72.31
   port: 2053
   udp: true
@@ -61,18 +73,38 @@ proxies:
     path: /vpnjantit
     headers:
       Host: 212.227.228.91
-- type: trojan
-  password: humanity
-  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  server: 212.227.144.37
-  port: 8443
+- type: vless
+  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+  name: 🇪🇸 西班牙 | ESP
+  server: 18.101.197.136
+  port: 443
   udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
+  network: http
+- type: vless
+  uuid: 1e4668ca-6526-84ac-2a53-28bbc209da13
+  name: EPODONIOS
+  server: 170.168.97.6
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: download.nvidia.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+- type: vless
+  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
+  name: EPODONIOS
+  server: 212.227.235.66
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk
+    short-id: 29e8dcd2b37aaa7f
 - type: vless
   uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
   name: '🇪🇸[www.v2nodes.com] vless-ES-1... #5'
@@ -84,79 +116,12 @@ proxies:
   servername: www.apple.com
   client-fingerprint: firefox
 - type: vless
-  uuid: f8b74d3c-4c21-4667-a3e7-412d8a5598f6
-  name: EPODONIOS
-  server: 213.182.201.15
-  port: 3090
-  udp: true
-  network: grpc
-- type: vless
   uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  name: '🇪🇸 西班牙 | ESP #1'
+  name: 🇪🇸ES_1|2.4MB/s
   server: 18.101.197.136
   port: 443
   udp: true
   network: tcp
-- type: vless
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  name: 🇪🇸 西班牙 | ESP
-  server: 18.101.197.136
-  port: 443
-  udp: true
-  network: http
-- type: vless
-  uuid: caf3d607-95c9-4ea0-98b5-864027056ba0
-  name: EPODONIOS
-  server: 37.143.130.108
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: es1.accessboy.com
-  reality-opts:
-    public-key: 1TtWNQhTJr_3H7-ypMw4EiLzVxy22AzUtMiE5JmQMl4
-    short-id: 1c5869a95671bcb0
-- type: vless
-  uuid: 12c53e32-e589-47d6-b857-e4132294f767
-  name: EPODONIOS
-  server: 46.28.71.247
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
-    short-id: 0dfc23fe80778c00
-- type: vless
-  uuid: 21f5ba17-28ea-4fd0-9c8f-80e2b91df5f1
-  name: EPODONIOS
-  server: 5.180.173.130
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: lstu.ru
-  reality-opts:
-    public-key: e0RV9wRJdsQbQ0ugn5QUhJcTgWsSTVsKQTXMKweMDUg
-- type: vless
-  uuid: 897d47f8-4dd5-42a1-bcd0-bef19caff55a
-  name: EPODONIOS
-  server: 193.238.154.78
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 4eE3K8Eac-ELze-LwRyJolqmhPqgCVqwQM1DKu6i0Ts
-    short-id: e93d46ee3735069e
 - type: vless
   uuid: 12c53e32-e589-47d6-b857-e4132294f767
   name: 🇪🇸[www.v2nodes.com] vless-ES-1...
@@ -170,7 +135,7 @@ proxies:
   client-fingerprint: firefox
 - type: vless
   uuid: 897d47f8-4dd5-42a1-bcd0-bef19caff55a
-  name: '🏳[www.v2nodes.com] vless- #9'
+  name: '🏳[www.v2nodes.com] vless- #8'
   server: 193.238.154.78
   port: 443
   udp: true
@@ -179,18 +144,6 @@ proxies:
   tls: true
   servername: gateway.icloud.com
   client-fingerprint: chrome
-- type: vless
-  uuid: 1e4668ca-6526-84ac-2a53-28bbc209da13
-  name: EPODONIOS
-  server: 170.168.97.6
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: download.nvidia.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
 - type: vless
   uuid: 76b6a658-ce80-4500-b24d-404c94639ac6
   name: '🇭🇰 香港 | HKG #4'
@@ -225,19 +178,15 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #4'
   - EPODONIOS
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #5'
-  - EPODONIOS
-  - '🇪🇸 西班牙 | ESP #1'
   - 🇪🇸 西班牙 | ESP
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #5'
+  - 🇪🇸ES_1|2.4MB/s
   - 🇪🇸[www.v2nodes.com] vless-ES-1...
-  - '🏳[www.v2nodes.com] vless- #9'
-  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #8'
   - '🇭🇰 香港 | HKG #4'
   - 🇭🇰 香港 | HKG
 - name: SELECT
@@ -247,19 +196,15 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #4'
   - EPODONIOS
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #5'
-  - EPODONIOS
-  - '🇪🇸 西班牙 | ESP #1'
   - 🇪🇸 西班牙 | ESP
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #5'
+  - 🇪🇸ES_1|2.4MB/s
   - 🇪🇸[www.v2nodes.com] vless-ES-1...
-  - '🏳[www.v2nodes.com] vless- #9'
-  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #8'
   - '🇭🇰 香港 | HKG #4'
   - 🇭🇰 香港 | HKG
 rules:

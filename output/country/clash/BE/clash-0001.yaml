@@ -22,6 +22,21 @@ proxies:
   servername: kind-wolf.cdn.cachefleet.com
   reality-opts:
     public-key: 8hse7wRRL-F66rQ-aAeetKTw0MSeJC7Rr6EaDeLzdCU
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知97
+  server: 35.241.172.224
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
 - type: vless
   uuid: c28ee61d-0d43-4e69-8e6a-6397ed0ffc03
   name: EPODONIOS
@@ -42,12 +57,14 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - 未知97
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - 未知97
   - EPODONIOS
 rules:
 - MATCH,SELECT

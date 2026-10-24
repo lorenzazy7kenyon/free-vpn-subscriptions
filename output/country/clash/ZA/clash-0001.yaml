@@ -12,10 +12,17 @@ dns:
 proxies:
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: Xsy8Ox4yOV3xLlpxtjzs3X
+  password: tfAcRikawhNoZAhu
   name: EPODONIOS
-  server: 102.133.165.160
-  port: 16233
+  server: 139.84.247.164
+  port: 8388
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  name: EPODONIOS
+  server: 102.37.156.224
+  port: 443
   udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
@@ -26,10 +33,10 @@ proxies:
   udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
+  password: Xsy8Ox4yOV3xLlpxtjzs3X
   name: EPODONIOS
-  server: 102.37.156.224
-  port: 443
+  server: 102.133.165.160
+  port: 16233
   udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
@@ -48,10 +55,12 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

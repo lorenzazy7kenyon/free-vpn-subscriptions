@@ -21,6 +21,23 @@ proxies:
   servername: de.lezzatzone.ir
   client-fingerprint: chrome
 - type: vless
+  uuid: dca945d2-6d9b-434f-8754-3626a6a75e21
+  name: EPODONIOS
+  server: 45.130.125.160
+  port: 2095
+  udp: true
+  network: httpupgrade
+- type: vless
+  uuid: dd24f07d-5ed1-4e51-8073-5733e904fa88
+  name: EPODONIOS
+  server: 45.130.125.76
+  port: 2096
+  udp: true
+  network: grpc
+  tls: true
+  servername: THin-MInDwHvf6bQUdn.SaMSUNGoveNs.ir
+  client-fingerprint: chrome
+- type: vless
   uuid: 47422044-85e3-426b-b6c4-3588cb24a3e5
   name: EPODONIOS
   server: 45.130.125.160
@@ -33,16 +50,6 @@ proxies:
     path: /ae-bo
     headers:
       Host: s.blibli.com.cyylr.eu.cc
-- type: vless
-  uuid: 965fef48-24c7-4727-b51e-6d3b2b8873c8
-  name: EPODONIOS
-  server: 45.130.125.158
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: mahsa97.manhamunamkeyeruz.ir
-  client-fingerprint: chrome
 - type: vless
   uuid: ac006062-f051-43c6-bd4c-f409285c8635
   name: EPODONIOS
@@ -67,12 +74,17 @@ proxies:
     headers:
       Host: drrfddgbv.turbooserver.net.tr
 - type: vless
-  uuid: dca945d2-6d9b-434f-8754-3626a6a75e21
+  uuid: d98c757d-2be3-49ff-8b9f-76ffdc924a61
   name: EPODONIOS
-  server: 45.130.125.160
-  port: 2095
+  server: 45.130.125.66
+  port: 443
   udp: true
-  network: httpupgrade
+  network: ws
+  tls: true
+  servername: chrome.yas-nowin.ir
+  client-fingerprint: chrome
+  ws-opts:
+    path: /cloud-vps
 - type: vless
   uuid: dc8a9493-c54a-459e-d060-81a700000001
   name: EPODONIOS
@@ -84,9 +96,20 @@ proxies:
     path: /sync
     headers:
       Host: nahan-core.netizo09.workers.dev
+- type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: '🇸🇬[www.v2nodes.com] vless-SG #4'
+  server: 45.130.125.30
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime58.workers.dev
 - type: trojan
   password: humanity
-  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #6'
+  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
   server: 45.130.125.160
   port: 443
   udp: true
@@ -110,26 +133,14 @@ proxies:
     headers:
       Host: ads.ruangguru.com.cyylr.eu.cc
 - type: vless
-  uuid: d98c757d-2be3-49ff-8b9f-76ffdc924a61
+  uuid: 965fef48-24c7-4727-b51e-6d3b2b8873c8
   name: EPODONIOS
-  server: 45.130.125.66
+  server: 45.130.125.158
   port: 443
   udp: true
-  network: ws
+  network: xhttp
   tls: true
-  servername: chrome.yas-nowin.ir
-  client-fingerprint: chrome
-  ws-opts:
-    path: /cloud-vps
-- type: vless
-  uuid: dd24f07d-5ed1-4e51-8073-5733e904fa88
-  name: EPODONIOS
-  server: 45.130.125.76
-  port: 2096
-  udp: true
-  network: grpc
-  tls: true
-  servername: THin-MInDwHvf6bQUdn.SaMSUNGoveNs.ir
+  servername: mahsa97.manhamunamkeyeruz.ir
   client-fingerprint: chrome
 - type: vless
   uuid: b69b43d1-091d-4d7c-90b2-7a8bbad9d6a9
@@ -144,17 +155,6 @@ proxies:
     path: /eyJqdW5rIjoiY0U2T212Y21yeEhUZHRKYSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
     headers:
       Host: BItter-CreDIT-61b8.b76EbA0aBb.wORkerS.dEv
-- type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: '🇸🇬[www.v2nodes.com] vless-SG #4'
-  server: 45.130.125.30
-  port: 8880
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime58.workers.dev
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -168,12 +168,12 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #6'
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
   - '🇸🇬[www.v2nodes.com] vless-SG #4'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
@@ -185,11 +185,11 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #6'
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
   - '🇸🇬[www.v2nodes.com] vless-SG #4'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
 rules:
 - MATCH,SELECT

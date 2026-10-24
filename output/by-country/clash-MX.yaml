@@ -10,6 +10,13 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: ss
+  cipher: aes-256-gcm
+  password: BWyPPTusFKhGgzKh
+  name: 🇲🇽[www.v2nodes.com] ss-MX-1564...
+  server: 64.177.90.30
+  port: 8388
+  udp: true
 - type: vless
   uuid: 0575005f-0ba9-4d6d-85e0-4a6a8cbafc1b
   name: '🇲🇽[www.v2nodes.com] vless-MX-1... #2'
@@ -29,11 +36,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇲🇽[www.v2nodes.com] ss-MX-1564...
   - '🇲🇽[www.v2nodes.com] vless-MX-1... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇲🇽[www.v2nodes.com] ss-MX-1564...
   - '🇲🇽[www.v2nodes.com] vless-MX-1... #2'
 rules:
 - MATCH,SELECT
