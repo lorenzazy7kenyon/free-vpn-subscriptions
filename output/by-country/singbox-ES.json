@@ -24,26 +24,33 @@
       "uuid": "2ee26119-94e5-40b4-ba3a-16354021b600"
     },
     {
-      "method": "aes-256-cfb",
-      "password": "JdmRK9gMEqFgs8nP",
-      "server": "5.188.181.201",
-      "server_port": 9003,
+      "password": "humanity",
+      "server": "109.234.211.232",
+      "server_port": 443,
       "tag": "EPODONIOS",
-      "type": "ss"
-    },
-    {
-      "method": "aes-256-cfb",
-      "password": "M3t2ZEQcMGRWBjRa",
-      "server": "5.188.181.201",
-      "server_port": 9011,
-      "tag": "EPODONIOS",
-      "type": "ss"
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.pleadcourt.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "www.pleadcourt.org"
+        },
+        "path": "/assignment",
+        "type": "ws"
+      },
+      "type": "trojan"
     },
     {
       "password": "humanity",
       "server": "185.114.72.31",
       "server_port": 2053,
-      "tag": "🇫🇷[www.v2nodes.com] trojan-FR-... #4",
+      "tag": "EPODONIOS",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -75,6 +82,25 @@
       "uuid": "21790ffe-4f82-11ed-bec7-03f211755ed3"
     },
     {
+      "password": "humanity",
+      "server": "212.227.144.37",
+      "server_port": 8443,
+      "tag": "🇫🇷[www.v2nodes.com] trojan-FR-... #2",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.calmlunch.com"
+      },
+      "transport": {
+        "headers": {
+          "Host": "www.calmlunch.com"
+        },
+        "path": "/assignment",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
       "server": "212.227.235.66",
       "server_port": 2053,
       "tag": "🇪🇸[www.v2nodes.com] vless-ES-1... #5",
@@ -91,25 +117,6 @@
       "uuid": "ead0dd61-d398-40ad-80d6-a0e1e516d7d3"
     },
     {
-      "password": "humanity",
-      "server": "212.227.144.37",
-      "server_port": 8443,
-      "tag": "🇫🇷[www.v2nodes.com] trojan-FR-... #1",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.calmlunch.com"
-      },
-      "transport": {
-        "headers": {
-          "Host": "www.calmlunch.com"
-        },
-        "path": "/assignment",
-        "type": "ws"
-      },
-      "type": "trojan"
-    },
-    {
       "server": "213.182.201.15",
       "server_port": 3090,
       "tag": "EPODONIOS",
@@ -121,27 +128,11 @@
       "uuid": "f8b74d3c-4c21-4667-a3e7-412d8a5598f6"
     },
     {
-      "server": "141.253.194.63",
+      "server": "18.101.197.136",
       "server_port": 443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "shephe.dpdns.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "headers": {
-          "Host": "shephe.dpdns.org"
-        },
-        "path": "/",
-        "type": "ws"
-      },
+      "tag": "🇪🇸 西班牙 | ESP #1",
       "type": "vless",
-      "uuid": "9e3132b8-b595-444a-833a-2de44789f9d7"
+      "uuid": "7060231d-b9ba-495f-a218-bf427940cf3e"
     },
     {
       "server": "18.101.197.136",
@@ -151,11 +142,61 @@
       "uuid": "7060231d-b9ba-495f-a218-bf427940cf3e"
     },
     {
-      "server": "18.101.197.136",
+      "flow": "xtls-rprx-vision",
+      "server": "37.143.130.108",
       "server_port": 443,
-      "tag": "🇪🇸 西班牙 | ESP #1",
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "1TtWNQhTJr_3H7-ypMw4EiLzVxy22AzUtMiE5JmQMl4",
+          "short_id": "1c5869a95671bcb0"
+        },
+        "server_name": "es1.accessboy.com"
+      },
       "type": "vless",
-      "uuid": "7060231d-b9ba-495f-a218-bf427940cf3e"
+      "uuid": "caf3d607-95c9-4ea0-98b5-864027056ba0"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "46.28.71.247",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE",
+          "short_id": "0dfc23fe80778c00"
+        },
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "12c53e32-e589-47d6-b857-e4132294f767"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "5.180.173.130",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "e0RV9wRJdsQbQ0ugn5QUhJcTgWsSTVsKQTXMKweMDUg"
+        },
+        "server_name": "lstu.ru"
+      },
+      "type": "vless",
+      "uuid": "21f5ba17-28ea-4fd0-9c8f-80e2b91df5f1"
     },
     {
       "flow": "xtls-rprx-vision",
@@ -170,16 +211,37 @@
           "public_key": "4eE3K8Eac-ELze-LwRyJolqmhPqgCVqwQM1DKu6i0Ts",
           "short_id": "e93d46ee3735069e"
         },
-        "server_name": "gateway.icloud.com"
+        "server_name": "gateway.icloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "type": "vless",
       "uuid": "897d47f8-4dd5-42a1-bcd0-bef19caff55a"
     },
     {
       "flow": "xtls-rprx-vision",
-      "server": "193.238.154.78",
+      "server": "46.28.71.247",
       "server_port": 443,
       "tag": "🇪🇸[www.v2nodes.com] vless-ES-1...",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "12c53e32-e589-47d6-b857-e4132294f767"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "193.238.154.78",
+      "server_port": 443,
+      "tag": "🏳[www.v2nodes.com] vless- #9",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -216,6 +278,23 @@
       "flow": "xtls-rprx-vision",
       "server": "67.159.47.235",
       "server_port": 2091,
+      "tag": "🇭🇰 香港 | HKG #4",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "76b6a658-ce80-4500-b24d-404c94639ac6"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "67.159.47.235",
+      "server_port": 2091,
       "tag": "🇭🇰 香港 | HKG",
       "tls": {
         "enabled": true,
@@ -235,64 +314,26 @@
       "uuid": "76b6a658-ce80-4500-b24d-404c94639ac6"
     },
     {
-      "flow": "xtls-rprx-vision",
-      "server": "67.159.47.235",
-      "server_port": 2091,
-      "tag": "🇭🇰 香港 | HKG #4",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "76b6a658-ce80-4500-b24d-404c94639ac6"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "46.28.71.247",
-      "server_port": 443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE",
-          "short_id": "0dfc23fe80778c00"
-        },
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "12c53e32-e589-47d6-b857-e4132294f767"
-    },
-    {
       "interval": "5m",
       "outbounds": [
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
-        "🇫🇷[www.v2nodes.com] trojan-FR-... #4",
         "EPODONIOS",
+        "🇫🇷[www.v2nodes.com] trojan-FR-... #2",
         "🇪🇸[www.v2nodes.com] vless-ES-1... #5",
-        "🇫🇷[www.v2nodes.com] trojan-FR-... #1",
         "EPODONIOS",
-        "EPODONIOS",
-        "🇪🇸 西班牙 | ESP",
         "🇪🇸 西班牙 | ESP #1",
+        "🇪🇸 西班牙 | ESP",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
         "EPODONIOS",
         "🇪🇸[www.v2nodes.com] vless-ES-1...",
+        "🏳[www.v2nodes.com] vless- #9",
         "EPODONIOS",
-        "🇭🇰 香港 | HKG",
         "🇭🇰 香港 | HKG #4",
-        "EPODONIOS"
+        "🇭🇰 香港 | HKG"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -304,20 +345,21 @@
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
-        "🇫🇷[www.v2nodes.com] trojan-FR-... #4",
         "EPODONIOS",
+        "🇫🇷[www.v2nodes.com] trojan-FR-... #2",
         "🇪🇸[www.v2nodes.com] vless-ES-1... #5",
-        "🇫🇷[www.v2nodes.com] trojan-FR-... #1",
         "EPODONIOS",
-        "EPODONIOS",
-        "🇪🇸 西班牙 | ESP",
         "🇪🇸 西班牙 | ESP #1",
+        "🇪🇸 西班牙 | ESP",
+        "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
         "EPODONIOS",
         "🇪🇸[www.v2nodes.com] vless-ES-1...",
+        "🏳[www.v2nodes.com] vless- #9",
         "EPODONIOS",
-        "🇭🇰 香港 | HKG",
         "🇭🇰 香港 | HKG #4",
-        "EPODONIOS"
+        "🇭🇰 香港 | HKG"
       ],
       "tag": "select",
       "type": "selector"

@@ -1,25 +1,6 @@
 {
   "outbounds": [
     {
-      "password": "humanity",
-      "server": "94.158.219.126",
-      "server_port": 443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.pleadcourt.org"
-      },
-      "transport": {
-        "headers": {
-          "Host": "www.pleadcourt.org"
-        },
-        "path": "/assignment",
-        "type": "ws"
-      },
-      "type": "trojan"
-    },
-    {
       "flow": "xtls-rprx-vision",
       "server": "195.123.208.32",
       "server_port": 443,
@@ -44,10 +25,52 @@
       "uuid": "17acda85-dada-41dd-8add-ad0ad179fc91"
     },
     {
+      "password": "humanity",
+      "server": "94.158.219.126",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.pleadcourt.org"
+      },
+      "transport": {
+        "headers": {
+          "Host": "www.pleadcourt.org"
+        },
+        "path": "/assignment",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "138.124.180.137",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c",
+          "short_id": "33acba1b"
+        },
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "5234b2b7-5e07-422c-8159-d62a676c00c6"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "EPODONIOS",
         "🇱🇻[www.v2nodes.com] vless-LV-1...",
+        "EPODONIOS",
+        "EPODONIOS",
         "EPODONIOS"
       ],
       "tag": "auto",
@@ -57,8 +80,9 @@
     {
       "outbounds": [
         "auto",
-        "EPODONIOS",
         "🇱🇻[www.v2nodes.com] vless-LV-1...",
+        "EPODONIOS",
+        "EPODONIOS",
         "EPODONIOS"
       ],
       "tag": "select",

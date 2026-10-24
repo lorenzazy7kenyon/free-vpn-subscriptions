@@ -11,8 +11,62 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
   name: EPODONIOS
+  server: 88.216.69.253
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: server8.9966338.xyz
+  client-fingerprint: unsafe
+  ws-opts:
+    path: /fdtiouasopeiyre0r95y8
+    headers:
+      Host: server8.9966338.xyz
+- type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  name: EPODONIOS
+  server: 88.216.69.253
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: a.cwvps.eu.org
+  client-fingerprint: unsafe
+  ws-opts:
+    path: /ws
+    headers:
+      Host: a.cwvps.eu.org
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: EPODONIOS
+  server: 88.216.69.253
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  client-fingerprint: unsafe
+  ws-opts:
+    path: /fp
+    headers:
+      Host: ccc.010304.xyz
+- type: trojan
+  password: humanity
+  name: EPODONIOS
+  server: 88.216.69.253
+  port: 443
+  udp: true
+  sni: www.pleadcourt.org
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
+- type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: 🇸🇬[www.v2nodes.com] vless-SG
   server: 88.216.69.30
   port: 8880
   udp: true
@@ -35,20 +89,6 @@ proxies:
   reality-opts:
     public-key: 5pR15ATlWW3tVzfnMN3xoiN56LjIUbhnOMp37ZvTFUc
     short-id: d44d6d46
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇪🇪 爱沙尼亚 | EST
-  server: 130.78.190.134
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -57,13 +97,19 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
-  - 🇪🇪 爱沙尼亚 | EST
+  - EPODONIOS
+  - EPODONIOS
+  - 🇸🇬[www.v2nodes.com] vless-SG
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
   - EPODONIOS
-  - 🇪🇪 爱沙尼亚 | EST
+  - EPODONIOS
+  - EPODONIOS
+  - 🇸🇬[www.v2nodes.com] vless-SG
+  - EPODONIOS
 rules:
 - MATCH,SELECT

@@ -33,18 +33,32 @@ proxies:
   server: 74.234.59.81
   port: 443
   udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: zziXHDOFXc4qRjoj
-  name: EPODONIOS
-  server: 20.107.184.151
+- type: vless
+  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+  name: '🇮🇪 爱尔兰 | IRL #2'
+  server: 52.31.133.142
   port: 443
   udp: true
+  network: tcp
+- type: vless
+  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+  name: '🇮🇪 爱尔兰 | IRL #1'
+  server: 54.154.201.249
+  port: 443
+  udp: true
+  network: tcp
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: YF329KNGVTUZ1qrH
   name: EPODONIOS
   server: 20.123.1.55
+  port: 443
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: zziXHDOFXc4qRjoj
+  name: EPODONIOS
+  server: 20.107.184.151
   port: 443
   udp: true
 proxy-groups:
@@ -56,6 +70,8 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - '🇮🇪 爱尔兰 | IRL #2'
+  - '🇮🇪 爱尔兰 | IRL #1'
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
@@ -65,6 +81,8 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - '🇮🇪 爱尔兰 | IRL #2'
+  - '🇮🇪 爱尔兰 | IRL #1'
   - EPODONIOS
   - EPODONIOS
 rules:

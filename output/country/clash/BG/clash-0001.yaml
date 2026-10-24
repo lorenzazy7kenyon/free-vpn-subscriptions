@@ -11,18 +11,31 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: '🇧🇬 保加利亚 | BGR #1'
+  server: 13.140.29.253
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
-  server: 45.9.156.24
+  server: 45.9.156.27
   port: 443
   udp: true
   network: grpc
   tls: true
-  servername: bg2.univesalsrv.com
+  servername: bg3.univesalsrv.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 0f0dh_FUju5cHgQcIwUjHvxQb9aIZ00p0kZRHeE7Ey4
-    short-id: 501ab3325b77e1ca
+    public-key: XBfCioniAKXgKYBUVnvBXu80AIaIa4SpAB3w8qeF7Gk
+    short-id: 1be1bd931c98c84a
 - type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
@@ -52,22 +65,23 @@ proxies:
 - type: vless
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   name: EPODONIOS
-  server: 45.9.156.27
+  server: 45.9.156.24
   port: 443
   udp: true
   network: grpc
   tls: true
-  servername: bg3.univesalsrv.com
+  servername: bg2.univesalsrv.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: XBfCioniAKXgKYBUVnvBXu80AIaIa4SpAB3w8qeF7Gk
-    short-id: 1be1bd931c98c84a
+    public-key: 0f0dh_FUju5cHgQcIwUjHvxQb9aIZ00p0kZRHeE7Ey4
+    short-id: 501ab3325b77e1ca
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇧🇬 保加利亚 | BGR #1'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -76,6 +90,7 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
+  - '🇧🇬 保加利亚 | BGR #1'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

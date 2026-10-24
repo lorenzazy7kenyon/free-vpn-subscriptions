@@ -11,18 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: adf1fac3-cf57-ff40-574c-cf514457eb3f
-  name: EPODONIOS
-  server: 83.143.106.4
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: res.cdn.office.net
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 4g8R0-Acc1LjppgvUopldH0Wg3JA2tPXvYB96aJnigo
-- type: vless
   uuid: f0b144bd-4c44-440d-b630-d79ec82cad3a
   name: EPODONIOS
   server: 77.91.69.169
@@ -37,19 +25,16 @@ proxies:
     public-key: PQjgf7GxBd2tDXf0zl9Z5rTZo7LdsWj0hGZLH-lJ-Uk
     short-id: 7c
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇮🇱 以色列 | ISR
-  server: 185.239.48.154
-  port: 8443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
+  server: 185.253.75.119
+  port: 443
   udp: true
   network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
   ws-opts:
-    path: /
+    path: /fp=chromesecurity=tls
     headers:
-      Host: snip.edgeoneai.cc.cd
+      Host: ccc.010304.xyz
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
@@ -76,6 +61,32 @@ proxies:
     path: /fp=chrome
     headers:
       Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇮🇱 以色列 | ISR
+  server: 185.239.48.154
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: adf1fac3-cf57-ff40-574c-cf514457eb3f
+  name: EPODONIOS
+  server: 83.143.106.4
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: res.cdn.office.net
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 4g8R0-Acc1LjppgvUopldH0Wg3JA2tPXvYB96aJnigo
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -83,18 +94,20 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
-  - 🇮🇱 以色列 | ISR
+  - '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
   - '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
   - '🇮🇱 以色列 | ISR #1'
+  - 🇮🇱 以色列 | ISR
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
-  - 🇮🇱 以色列 | ISR
+  - '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
   - '🇮🇱[www.v2nodes.com] vless-IL-1... #1'
   - '🇮🇱 以色列 | ISR #1'
+  - 🇮🇱 以色列 | ISR
+  - EPODONIOS
 rules:
 - MATCH,SELECT

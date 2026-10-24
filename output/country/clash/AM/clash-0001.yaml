@@ -31,6 +31,15 @@ proxies:
   servername: yahoo.com
   client-fingerprint: chrome
 - type: vless
+  uuid: f7376394-cd54-11f1-bb6a-bff6d0326f6a
+  name: EPODONIOS
+  server: 194.36.37.59
+  port: 10004
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vpnjantit
+- type: vless
   uuid: f667a096-5231-4cfb-8759-92bb32473139
   name: EPODONIOS
   server: 77.91.68.70
@@ -52,15 +61,6 @@ proxies:
   network: ws
   ws-opts:
     path: /vpnjantit
-- type: vless
-  uuid: f7376394-cd54-11f1-bb6a-bff6d0326f6a
-  name: EPODONIOS
-  server: 194.36.37.59
-  port: 10004
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vpnjantit
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -70,8 +70,8 @@ proxy-groups:
   - '🇦🇲[www.v2nodes.com] vless-AM-1... #1'
   - '🇦🇲[www.v2nodes.com] vless-AM-1... #2'
   - EPODONIOS
-  - 🇦🇲[www.v2nodes.com] vless-AM-1...
   - EPODONIOS
+  - 🇦🇲[www.v2nodes.com] vless-AM-1...
 - name: SELECT
   type: select
   proxies:
@@ -79,7 +79,7 @@ proxy-groups:
   - '🇦🇲[www.v2nodes.com] vless-AM-1... #1'
   - '🇦🇲[www.v2nodes.com] vless-AM-1... #2'
   - EPODONIOS
-  - 🇦🇲[www.v2nodes.com] vless-AM-1...
   - EPODONIOS
+  - 🇦🇲[www.v2nodes.com] vless-AM-1...
 rules:
 - MATCH,SELECT

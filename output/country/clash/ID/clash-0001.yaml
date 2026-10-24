@@ -10,31 +10,25 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇮🇩 印尼 | IDN
-  server: 172.232.236.252
-  port: 443
+- type: hysteria2
+  password: 78585441-c8b3-40fb-9b94-15edd312fdcf
+  name: '🇮🇩 印尼 | IDN #1'
+  server: 202.155.14.134
+  port: 55555
   udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
+  sni: www.bing.com
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇩 印尼 | IDN
+  - '🇮🇩 印尼 | IDN #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇮🇩 印尼 | IDN
+  - '🇮🇩 印尼 | IDN #1'
 rules:
 - MATCH,SELECT
