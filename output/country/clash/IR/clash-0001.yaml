@@ -22,6 +22,17 @@ proxies:
     headers:
       Host: worker3.gisenoj224.workers.dev
 - type: vless
+  uuid: 0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6
+  name: EPODONIOS
+  server: 185.143.234.238
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pgcfws-r4
+    headers:
+      Host: uu.caroptions.ir
+- type: vless
   uuid: f3ab8321-0c15-4c9a-9917-3f1b6706ab12
   name: EPODONIOS
   server: 185.143.234.122
@@ -32,17 +43,6 @@ proxies:
     path: /
     headers:
       Host: api.artaluxa.ir
-- type: vless
-  uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
-  name: EPODONIOS
-  server: 185.143.234.238
-  port: 2086
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: parsi.parsi.sbs
 - type: vmess
   uuid: b831381d-6324-4d53-ad4f-8cda48b30811
   alterId: 0
@@ -57,27 +57,16 @@ proxies:
     headers:
       Host: koochehpas.com
 - type: vless
-  uuid: 0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6
+  uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
   name: EPODONIOS
   server: 185.143.234.238
-  port: 80
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pgcfws-r4
-    headers:
-      Host: uu.caroptions.ir
-- type: vless
-  uuid: 38dd06a1-e1cb-492b-bb87-218ce05d0d67
-  name: EPODONIOS
-  server: 185.143.233.5
-  port: 80
+  port: 2086
   udp: true
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir
+      Host: parsi.parsi.sbs
 - type: vless
   uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
   name: EPODONIOS
@@ -89,6 +78,17 @@ proxies:
     path: /
     headers:
       Host: parsi.parsi.sbs
+- type: vless
+  uuid: 38dd06a1-e1cb-492b-bb87-218ce05d0d67
+  name: EPODONIOS
+  server: 185.143.233.5
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: 9LHLa1Ck2eRIOmJOWp2XRRACgFGAY_3g
@@ -96,6 +96,19 @@ proxies:
   server: 87.107.114.100
   port: 902
   udp: true
+- type: vless
+  uuid: 59fd7a11-62e5-48bc-bd5f-39d67539f150
+  name: EPODONIOS
+  server: 94.139.180.178
+  port: 3350
+  udp: true
+  network: xhttp
+  tls: true
+  servername: play.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: -l1xlrYsq1pzXuuwR-cD-N4rbW7Ey1RGp5Tv3jPgVRk
+    short-id: f2a6f2b79ee4829a
 - type: vless
   uuid: 950ec237-e75f-4e99-9557-6545784d4202
   name: EPODONIOS
@@ -109,15 +122,20 @@ proxies:
   reality-opts:
     public-key: fPjow17wDX8YJG89j9lraSqv54yvuS21lq3lJiAX_g0
     short-id: 489861db
-- type: vless
-  uuid: fb5c43f4-bd23-453d-a3cf-45ad5b9c020b
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: pLGCPnj2WgzxX1IedW8yd7trwRlXqjLa
   name: EPODONIOS
-  server: 85.133.244.214
-  port: 443
+  server: 109.122.251.86
+  port: 20700
   udp: true
-  network: ws
-  ws-opts:
-    path: /
+- type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: SOg9NNrasz6s7bbtrDE7Fw==:iVNr4jrtlOQ790pRwaKn0A==
+  name: EPODONIOS
+  server: 81.12.35.246
+  port: 8443
+  udp: true
 - type: vless
   uuid: 30fcec7f-164b-465c-87f4-b93784a6056b
   name: EPODONIOS
@@ -129,24 +147,6 @@ proxies:
     path: /
     headers:
       Host: azsv1.drpingservice.com
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: pLGCPnj2WgzxX1IedW8yd7trwRlXqjLa
-  name: EPODONIOS
-  server: 109.122.251.86
-  port: 20700
-  udp: true
-- type: vless
-  uuid: 5e9d217c-0f9f-4c8c-aa79-a600baa8765b
-  name: EPODONIOS
-  server: 2.144.22.87
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: api.bgp6.ir
-  client-fingerprint: chrome
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: 9LHLa1Ck2eRIOmJOWp2XRRACgFGAY_3g

@@ -24,6 +24,47 @@ proxies:
     short-id: 9922313fffed1c63
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: 🇩🇪 德国 | DEU
+  server: 2.28.42.209
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- type: vless
+  uuid: 35eb914a-f7c2-4ffa-8503-1bf30df0f1a5
+  name: EPODONIOS
+  server: 13.140.92.21
+  port: 80
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: rtYs5r9380Y2zvtXBFfaBbnypJQ7_1x_uYu0cLpOXk4
+    short-id: d8fee47b2d3d94
+- type: vless
+  uuid: fb765a76-2060-4641-85ef-7f105291a5ed
+  name: EPODONIOS
+  server: 13.140.84.224
+  port: 8080
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.goo.gl
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 9biluVYF5OTaHEoOKf2_HU38ij1wcCVB-64sBVCbaRw
+    short-id: 70a1
+- type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: EPODONIOS
   server: 165.245.182.116
   port: 443
@@ -43,76 +84,16 @@ proxies:
   port: 443
   udp: true
   network: tcp
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇩🇪 德国 | DEU
-  server: 2.28.42.209
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- type: vless
-  uuid: 31f98b64-ed37-48c4-845f-bc7bf5a4d413
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 93F6FFBh3CZiBUsG
   name: EPODONIOS
-  server: 13.140.84.224
-  port: 8080
+  server: 102.133.227.3
+  port: 443
   udp: true
-  network: tcp
-  tls: true
-  servername: www.goo.gl
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 9biluVYF5OTaHEoOKf2_HU38ij1wcCVB-64sBVCbaRw
-    short-id: '984667'
-- type: vless
-  uuid: fb765a76-2060-4641-85ef-7f105291a5ed
-  name: EPODONIOS
-  server: 13.140.84.224
-  port: 8080
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.goo.gl
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 9biluVYF5OTaHEoOKf2_HU38ij1wcCVB-64sBVCbaRw
-    short-id: 70a1
-- type: vless
-  uuid: 35eb914a-f7c2-4ffa-8503-1bf30df0f1a5
-  name: EPODONIOS
-  server: 13.140.92.21
-  port: 80
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: rtYs5r9380Y2zvtXBFfaBbnypJQ7_1x_uYu0cLpOXk4
-    short-id: d8fee47b2d3d94
-- type: vless
-  uuid: 948df76f-505d-4608-9c76-a933ee3ccc76
-  name: EPODONIOS
-  server: 46.250.240.80
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: CYFeysLf--_IVhxQOCd3ZxLrAVWFFOkJzvIGHOVXN3E
-    short-id: 4cc9dc65f7770115
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: EPODONIOS
+  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -128,13 +109,6 @@ proxies:
   server: 102.37.156.224
   port: 443
   udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 93F6FFBh3CZiBUsG
-  name: EPODONIOS
-  server: 102.133.227.3
-  port: 443
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -142,30 +116,26 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
-  - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - 🇩🇪 德国 | DEU
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
-  - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - 🇩🇪 德国 | DEU
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
   - EPODONIOS
 rules:
 - MATCH,SELECT

@@ -31,13 +31,6 @@ proxies:
   port: 2086
   udp: true
   network: tcp
-- type: vless
-  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
-  name: EPODONIOS
-  server: 150.95.109.109
-  port: 2086
-  udp: true
-  network: tcp
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -46,13 +39,11 @@ proxy-groups:
   proxies:
   - 🇸🇬 新加坡 | SGP
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇸🇬 新加坡 | SGP
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
-  - EPODONIOS
 rules:
 - MATCH,SELECT

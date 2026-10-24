@@ -1,15 +1,27 @@
 {
   "outbounds": [
     {
-      "server": "80.243.228.130",
-      "server_port": 2085,
+      "server": "185.112.249.201",
+      "server_port": 8443,
       "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "web-socket.tgdaosheng.ggff.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
-        "service_name": "vless",
-        "type": "grpc"
+        "headers": {
+          "Host": "web-socket.tgdaosheng.ggff.net"
+        },
+        "path": "/proxyip=bpb.yousef.isegaro.comfp=chrome",
+        "type": "ws"
       },
       "type": "vless",
-      "uuid": "4dc8093e-4eff-410b-bc14-b69f78209414"
+      "uuid": "9b18ccef-b9e0-41d1-8990-9d970569e142"
     },
     {
       "interval": "5m",

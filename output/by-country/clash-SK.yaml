@@ -11,12 +11,19 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 4dc8093e-4eff-410b-bc14-b69f78209414
+  uuid: 9b18ccef-b9e0-41d1-8990-9d970569e142
   name: EPODONIOS
-  server: 80.243.228.130
-  port: 2085
+  server: 185.112.249.201
+  port: 8443
   udp: true
-  network: grpc
+  network: ws
+  tls: true
+  servername: web-socket.tgdaosheng.ggff.net
+  client-fingerprint: chrome
+  ws-opts:
+    path: /proxyip=bpb.yousef.isegaro.comfp=chrome
+    headers:
+      Host: web-socket.tgdaosheng.ggff.net
 proxy-groups:
 - name: AUTO
   type: url-test

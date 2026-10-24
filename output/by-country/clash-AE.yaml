@@ -74,17 +74,6 @@ proxies:
     headers:
       Host: uae.unixzone.us
 - type: vless
-  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
-  name: EPODONIOS
-  server: 95.174.68.188
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 95.174.68.188
-- type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
   server: 147.78.0.186
@@ -95,6 +84,17 @@ proxies:
     path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
     headers:
       Host: free.cndyw.ggff.net
+- type: vless
+  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
+  name: EPODONIOS
+  server: 95.174.68.188
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 95.174.68.188
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -106,8 +106,8 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
@@ -117,7 +117,7 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  - EPODONIOS
 rules:
 - MATCH,SELECT
