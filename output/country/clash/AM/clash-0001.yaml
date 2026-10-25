@@ -21,6 +21,15 @@ proxies:
   servername: yahoo.com
   client-fingerprint: chrome
 - type: vless
+  uuid: f7376394-cd54-11f1-bb6a-bff6d0326f6a
+  name: 🇦🇲[www.v2nodes.com] vless-AM-1...
+  server: 194.36.37.59
+  port: 10004
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vpnjantit
+- type: vless
   uuid: b8df3f50-ffef-4c7e-9ef3-d5b156a47c02
   name: '🇦🇲[www.v2nodes.com] vless-AM-1... #1'
   server: 88.218.95.88
@@ -30,15 +39,6 @@ proxies:
   tls: true
   servername: www.google.com
   client-fingerprint: chrome
-- type: vless
-  uuid: f7376394-cd54-11f1-bb6a-bff6d0326f6a
-  name: 🇦🇲[www.v2nodes.com] vless-AM-1...
-  server: 194.36.37.59
-  port: 10004
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vpnjantit
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -46,14 +46,14 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇦🇲[www.v2nodes.com] vless-AM-1... #2'
-  - '🇦🇲[www.v2nodes.com] vless-AM-1... #1'
   - 🇦🇲[www.v2nodes.com] vless-AM-1...
+  - '🇦🇲[www.v2nodes.com] vless-AM-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇦🇲[www.v2nodes.com] vless-AM-1... #2'
-  - '🇦🇲[www.v2nodes.com] vless-AM-1... #1'
   - 🇦🇲[www.v2nodes.com] vless-AM-1...
+  - '🇦🇲[www.v2nodes.com] vless-AM-1... #1'
 rules:
 - MATCH,SELECT

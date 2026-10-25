@@ -10,44 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: EPODONIOS
-  server: 132.145.80.230
-  port: 80
-  udp: true
-  ws-opts:
-    path: /cctv13.m3u8
-- type: vmess
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: EPODONIOS
-  server: 140.238.2.250
-  port: 443
-  udp: true
-- type: vless
-  uuid: 583cc910-b57c-4dd0-a4a7-cea51a30b032
-  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
-  server: 64.176.231.183
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: EPODONIOS
-  server: 211.178.105.134
-  port: 6123
-  udp: true
 - type: vless
   uuid: 583cc910-b57c-4dd0-a4a7-cea51a30b032
   name: EPODONIOS
@@ -62,21 +24,61 @@ proxies:
   reality-opts:
     public-key: GR_zPAgxF9PZ70Z9UpSmMlcd2STyoAC0fZTSHkTTCGE
     short-id: ca193e889d958f81
-- type: ss
-  cipher: aes-256-gcm
-  password: TEzjfAYq2IjtuoS
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 6697
+- type: vless
+  uuid: 583cc910-b57c-4dd0-a4a7-cea51a30b032
+  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
+  server: 64.176.231.183
+  port: 443
   udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 - type: vmess
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
   alterId: 0
   cipher: auto
   network: tcp
   name: EPODONIOS
-  server: 146.56.112.110
-  port: 8888
+  server: 140.238.2.250
+  port: 443
+  udp: true
+- type: vmess
+  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 183.109.131.75
+  port: 20086
+  udp: true
+  ws-opts:
+    path: /
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: EPODONIOS
+  server: 211.178.105.134
+  port: 6123
+  udp: true
+- type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 132.145.80.230
+  port: 80
+  udp: true
+  ws-opts:
+    path: /cctv13.m3u8
+- type: ss
+  cipher: aes-256-gcm
+  password: lGqs95QkFHo2NV
+  name: EPODONIOS
+  server: 141.164.45.187
+  port: 5498
   udp: true
 - type: ss
   cipher: aes-256-gcm
@@ -92,27 +94,14 @@ proxies:
   server: 141.164.45.187
   port: 9090
   udp: true
-- type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: EPODONIOS
-  server: 3.39.4.109
-  port: 13672
+- type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: 🇰🇷 韩国 | KOR
+  server: 54.180.251.157
+  port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-- type: ss
-  cipher: aes-256-gcm
-  password: lGqs95QkFHo2NV
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 5498
-  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   name: '🇰🇷 韩国 | KOR #1'
@@ -128,7 +117,6 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - EPODONIOS
   - EPODONIOS
@@ -137,14 +125,13 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
+  - 🇰🇷 韩国 | KOR
   - '🇰🇷 韩国 | KOR #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - EPODONIOS
   - EPODONIOS
@@ -153,7 +140,7 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
+  - 🇰🇷 韩国 | KOR
   - '🇰🇷 韩国 | KOR #1'
 rules:
 - MATCH,SELECT

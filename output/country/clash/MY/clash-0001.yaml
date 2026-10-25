@@ -11,6 +11,20 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+  name: '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
+  server: 111.90.143.184
+  port: 61111
+  udp: true
+  network: tcp
+- type: trojan
+  password: 5931134d1cde66bf83a54acdfebe7ab2
+  name: 🇲🇾[www.v2nodes.com] trojan-MY-...
+  server: 47.250.84.25
+  port: 443
+  udp: true
+  sni: 47.250.84.25
+- type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: '🏳[www.v2nodes.com] vless- #29'
   server: 216.173.67.59
@@ -24,13 +38,6 @@ proxies:
     headers:
       Host: ccc.010304.xyz
 - type: vless
-  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
-  name: '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
-  server: 111.90.143.184
-  port: 61111
-  udp: true
-  network: tcp
-- type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: 🇸🇬[www.v2nodes.com] vless-SG-9...
   server: 216.173.67.59
@@ -41,30 +48,23 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: ccc.010304.xyz
-- type: trojan
-  password: 5931134d1cde66bf83a54acdfebe7ab2
-  name: 🇲🇾[www.v2nodes.com] trojan-MY-...
-  server: 47.250.84.25
-  port: 443
-  udp: true
-  sni: 47.250.84.25
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #29'
   - '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
-  - 🇸🇬[www.v2nodes.com] vless-SG-9...
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
+  - '🏳[www.v2nodes.com] vless- #29'
+  - 🇸🇬[www.v2nodes.com] vless-SG-9...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #29'
   - '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
-  - 🇸🇬[www.v2nodes.com] vless-SG-9...
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
+  - '🏳[www.v2nodes.com] vless- #29'
+  - 🇸🇬[www.v2nodes.com] vless-SG-9...
 rules:
 - MATCH,SELECT

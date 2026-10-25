@@ -20,6 +20,16 @@ proxies:
   tls: true
   servername: speedtest.net
   client-fingerprint: chrome
+- type: vless
+  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
+  name: '🏳[www.v2nodes.com] vless- #7'
+  server: 193.233.253.180
+  port: 8444
+  udp: true
+  network: grpc
+  tls: true
+  servername: github.com
+  client-fingerprint: chrome
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
@@ -35,16 +45,6 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
-- type: vless
-  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
-  name: '🏳[www.v2nodes.com] vless- #7'
-  server: 193.233.253.180
-  port: 8444
-  udp: true
-  network: grpc
-  tls: true
-  servername: github.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -52,14 +52,14 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - 未知94
   - '🏳[www.v2nodes.com] vless- #7'
+  - 未知94
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - 未知94
   - '🏳[www.v2nodes.com] vless- #7'
+  - 未知94
 rules:
 - MATCH,SELECT

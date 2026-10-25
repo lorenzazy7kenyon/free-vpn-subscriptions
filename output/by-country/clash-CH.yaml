@@ -10,20 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: bfd81b63-a43d-4c27-b71d-2c948cfc4ab2
-  name: EPODONIOS
-  server: 179.237.109.135
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: seznam.cz
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: D3LM6JIYP6kL--jSCj-BPj-qy-J7rzX0Jp9Z4ygNeV4
-    short-id: 7791e189a518d69e
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
@@ -43,18 +29,29 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: firefox
 - type: vless
-  uuid: 7709550d-d2f1-67b1-b268-614431b073c5
+  uuid: bfd81b63-a43d-4c27-b71d-2c948cfc4ab2
   name: EPODONIOS
-  server: 83.228.251.63
-  port: 8080
+  server: 179.237.109.135
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: seznam.cz
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: D3LM6JIYP6kL--jSCj-BPj-qy-J7rzX0Jp9Z4ygNeV4
+    short-id: 7791e189a518d69e
+- type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  server: 208.69.78.217
+  port: 2053
   udp: true
   network: tcp
   tls: true
-  servername: play.google.com
+  servername: www.apple.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: j7qXqDT_IDpoN1CiO_TN6GZsWbvykcc5w_usWPTfyhw
-    short-id: 15a0582e
 - type: vless
   uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
   name: EPODONIOS
@@ -69,25 +66,18 @@ proxies:
     public-key: hyOYRfDSIYyqALQt3N2H0RjK8gbV1JvPTkNACC4PJF8
     short-id: 8718c58d3d51db59
 - type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  server: 208.69.78.217
-  port: 2053
+  uuid: 7709550d-d2f1-67b1-b268-614431b073c5
+  name: EPODONIOS
+  server: 83.228.251.63
+  port: 8080
   udp: true
   network: tcp
   tls: true
-  servername: www.apple.com
+  servername: play.google.com
   client-fingerprint: chrome
-- type: hysteria2
-  password: capadm96216165
-  name: 🇨🇭192087 | ⚡️Telegram = t.me/v...
-  server: 208.69.78.217
-  port: 443
-  udp: true
-  sni: vpn.local
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
+  reality-opts:
+    public-key: j7qXqDT_IDpoN1CiO_TN6GZsWbvykcc5w_usWPTfyhw
+    short-id: 15a0582e
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -95,22 +85,20 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
   - EPODONIOS
-  - EPODONIOS
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  - 🇨🇭192087 | ⚡️Telegram = t.me/v...
+  - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
   - EPODONIOS
-  - EPODONIOS
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  - 🇨🇭192087 | ⚡️Telegram = t.me/v...
+  - EPODONIOS
+  - EPODONIOS
 rules:
 - MATCH,SELECT
