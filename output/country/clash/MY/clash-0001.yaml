@@ -12,6 +12,19 @@ dns:
 proxies:
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
+  name: 🇲🇾[www.v2nodes.com] vless-MY-5...
+  server: 216.173.67.59
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
   name: 🇸🇬[www.v2nodes.com] vless-SG-9...
   server: 216.173.67.59
   port: 443
@@ -27,6 +40,16 @@ proxies:
   server: 111.90.143.184
   port: 61111
   udp: true
+  network: grpc
+  tls: true
+  servername: github.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+  name: '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
+  server: 111.90.143.184
+  port: 61111
+  udp: true
   network: tcp
 - type: trojan
   password: 5931134d1cde66bf83a54acdfebe7ab2
@@ -35,48 +58,25 @@ proxies:
   port: 443
   udp: true
   sni: moltbot.doctoroyy.net
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: 🇲🇾[www.v2nodes.com] vless-MY-5...
-  server: 216.173.67.59
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- type: vless
-  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
-  name: '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
-  server: 111.90.143.184
-  port: 61111
-  udp: true
-  network: grpc
-  tls: true
-  servername: github.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇲🇾[www.v2nodes.com] vless-MY-5...
   - 🇸🇬[www.v2nodes.com] vless-SG-9...
   - '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
-  - EPODONIOS
-  - 🇲🇾[www.v2nodes.com] vless-MY-5...
   - '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇲🇾[www.v2nodes.com] vless-MY-5...
   - 🇸🇬[www.v2nodes.com] vless-SG-9...
   - '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
-  - EPODONIOS
-  - 🇲🇾[www.v2nodes.com] vless-MY-5...
   - '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
+  - EPODONIOS
 rules:
 - MATCH,SELECT

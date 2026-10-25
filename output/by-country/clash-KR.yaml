@@ -10,24 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: EPODONIOS
-  server: 211.178.105.134
-  port: 6123
-  udp: true
-- type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: EPODONIOS
-  server: 132.145.80.230
-  port: 80
-  udp: true
-  ws-opts:
-    path: /cctv13.m3u8
 - type: vless
   uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
   name: '🇰🇷 韩国 | KOR #2'
@@ -35,13 +17,20 @@ proxies:
   port: 443
   udp: true
   network: tcp
-- type: ss
-  cipher: aes-256-gcm
-  password: TEzjfAYq2IjtuoS
+- type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
   name: EPODONIOS
-  server: 141.164.45.187
-  port: 6697
+  server: 3.39.4.109
+  port: 13672
   udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
 - type: ss
   cipher: aes-256-gcm
   password: lGqs95QkFHo2NV
@@ -63,15 +52,21 @@ proxies:
   server: 141.164.45.187
   port: 6679
   udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: EPODONIOS
+  server: 211.178.105.134
+  port: 6123
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
   - '🇰🇷 韩国 | KOR #2'
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -80,9 +75,8 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
   - '🇰🇷 韩国 | KOR #2'
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

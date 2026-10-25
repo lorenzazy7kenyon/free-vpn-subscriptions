@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  name: '🏳[www.v2nodes.com] vless- #22'
+  name: '🏳[www.v2nodes.com] vless- #25'
   server: 46.28.67.55
   port: 443
   udp: true
@@ -20,17 +20,6 @@ proxies:
   network: tcp
   tls: true
   servername: www.cloudflare.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
-  name: 🇷🇴[www.v2nodes.com] vless-RO-1...
-  server: 82.117.255.174
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
   client-fingerprint: chrome
 - type: vless
   uuid: 9c54d883-97a8-4b49-af23-fe052eff2c3a
@@ -45,13 +34,17 @@ proxies:
   reality-opts:
     public-key: byjOBWoaPgKQoy7yj91s7Uavs9VNpBns773wt-UeRxM
     short-id: 3e0c480d
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: U83u9OGpvSatIUW7LsWffr
-  name: EPODONIOS
-  server: 194.68.44.42
-  port: 64546
+- type: vless
+  uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
+  name: 🇷🇴[www.v2nodes.com] vless-RO-1...
+  server: 82.117.255.174
+  port: 443
   udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: QFWzCw2uX9B9i6qAYeFBIE
@@ -59,24 +52,31 @@ proxies:
   server: 154.46.31.106
   port: 443
   udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: U83u9OGpvSatIUW7LsWffr
+  name: EPODONIOS
+  server: 194.68.44.42
+  port: 64546
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #22'
-  - 🇷🇴[www.v2nodes.com] vless-RO-1...
+  - '🏳[www.v2nodes.com] vless- #25'
   - EPODONIOS
+  - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #22'
-  - 🇷🇴[www.v2nodes.com] vless-RO-1...
+  - '🏳[www.v2nodes.com] vless- #25'
   - EPODONIOS
+  - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - EPODONIOS
   - EPODONIOS
 rules:

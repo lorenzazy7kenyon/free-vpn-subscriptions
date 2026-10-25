@@ -10,6 +10,19 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 06d4d001-4168-4876-9416-7caecf578f40
+  name: EPODONIOS
+  server: 178.105.168.171
+  port: 1870
+  udp: true
+  network: tcp
+  tls: true
+  servername: bimeh.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: fvs6pc3p8Ub1jfix7hPWPjKIkOrOwCjaZUEJX41Qvz8
+    short-id: de3d508c9f31e5
 - type: vmess
   uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
   alterId: 0
@@ -34,26 +47,19 @@ proxies:
     public-key: rtYs5r9380Y2zvtXBFfaBbnypJQ7_1x_uYu0cLpOXk4
     short-id: d8fee47b2d3d94
 - type: vless
+  uuid: d67f70b9-3666-4448-9c27-3b263f6eb89c
+  name: EPODONIOS
+  server: 13.140.90.105
+  port: 443
+  udp: true
+  network: tcp
+- type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   server: 165.245.182.116
   port: 443
   udp: true
   network: tcp
-- type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: EPODONIOS
-  server: 165.245.182.116
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-    headers:
-      Host: snip.edgeoneai.cc.cd
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: aduB9HGxQHjA2SBMRjkHX6
@@ -70,7 +76,7 @@ proxies:
   udp: true
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -85,23 +91,25 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - EPODONIOS
   - 未知155
+  - EPODONIOS
   - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - 未知155
+  - EPODONIOS
   - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
 rules:
 - MATCH,SELECT

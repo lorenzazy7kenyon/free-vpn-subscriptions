@@ -19,7 +19,7 @@ proxies:
   sni: www.calmlunch.com
   network: ws
   ws-opts:
-    path: //assignment
+    path: /assignment
     headers:
       Host: www.calmlunch.com
 - type: vless
@@ -42,6 +42,14 @@ proxies:
   port: 9443
   udp: true
   sni: keyhop-voxility-at.dynuddns.com
+- type: hysteria2
+  password: krdyzYNnXFQqyPtjiXw9lQ
+  name: 🇦🇹199941 | ⚡️Telegram = t.me/S...
+  server: 68.210.96.82
+  port: 8443
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -51,6 +59,7 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - '@v2ray_configs_pools 🌍 ⚡️'
+  - 🇦🇹199941 | ⚡️Telegram = t.me/S...
 - name: SELECT
   type: select
   proxies:
@@ -58,5 +67,6 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - '@v2ray_configs_pools 🌍 ⚡️'
+  - 🇦🇹199941 | ⚡️Telegram = t.me/S...
 rules:
 - MATCH,SELECT

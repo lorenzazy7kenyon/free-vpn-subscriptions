@@ -11,19 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
-  uuid: 9ac947aa-de86-41c3-9a60-4c061c7c95f0
-  alterId: 0
-  cipher: none
-  network: ws
-  name: 未知78
-  server: 45.131.209.253
-  port: 80
-  udp: true
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: dl3.plot.cценарий.劇情голов0рез.fir3brand.煽動者追逐雷恩.погонезаpейн.wonkacapitano.buzz.
-- type: vmess
   uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
   alterId: 0
   cipher: auto
@@ -38,19 +25,32 @@ proxies:
     path: /dongtaiwang.com
     headers:
       Host: clash6.ssr-free.xyz
+- type: vmess
+  uuid: 9ac947aa-de86-41c3-9a60-4c061c7c95f0
+  alterId: 0
+  cipher: none
+  network: ws
+  name: 未知78
+  server: 45.131.209.253
+  port: 80
+  udp: true
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: dl3.plot.cценарий.劇情голов0рез.fir3brand.煽動者追逐雷恩.погонезаpейн.wonkacapitano.buzz.
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知78
   - EPODONIOS
+  - 未知78
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知78
   - EPODONIOS
+  - 未知78
 rules:
 - MATCH,SELECT
