@@ -11,12 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  name: 🇪🇸 西班牙 | ESP
-  server: 35.42.86.46
-  port: 443
+  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
+  name: EPODONIOS
+  server: 46.250.250.149
+  port: 2053
   udp: true
-  network: http
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  reality-opts:
+    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
+    short-id: 9922313fffed1c63
 - type: vless
   uuid: 35eb914a-f7c2-4ffa-8503-1bf30df0f1a5
   name: EPODONIOS
@@ -45,43 +50,6 @@ proxies:
     public-key: 9biluVYF5OTaHEoOKf2_HU38ij1wcCVB-64sBVCbaRw
     short-id: 70a1
 - type: vless
-  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
-  name: EPODONIOS
-  server: 46.250.250.149
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  reality-opts:
-    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
-    short-id: 9922313fffed1c63
-- type: vless
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
-  server: 13.140.56.100
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 13.140.56.100
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
-  name: EPODONIOS
-  server: 102.37.156.224
-  port: 443
-  udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 93F6FFBh3CZiBUsG
-  name: EPODONIOS
-  server: 102.133.227.3
-  port: 443
-  udp: true
-- type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: EPODONIOS
   server: 165.245.182.116
@@ -102,33 +70,56 @@ proxies:
   port: 443
   udp: true
   network: tcp
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 93F6FFBh3CZiBUsG
+  name: EPODONIOS
+  server: 102.133.227.3
+  port: 443
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  name: EPODONIOS
+  server: 102.37.156.224
+  port: 443
+  udp: true
+- type: vless
+  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  server: 13.140.56.100
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 13.140.56.100
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇸 西班牙 | ESP
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - 🇮🇳[www.v2nodes.com] vless-IN-1...
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
+  - EPODONIOS
+  - EPODONIOS
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇪🇸 西班牙 | ESP
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - 🇮🇳[www.v2nodes.com] vless-IN-1...
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
+  - EPODONIOS
+  - EPODONIOS
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
 rules:
 - MATCH,SELECT

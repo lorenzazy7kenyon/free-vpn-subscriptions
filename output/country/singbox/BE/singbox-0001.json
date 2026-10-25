@@ -1,25 +1,21 @@
 {
   "outbounds": [
     {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "35.241.172.224",
+      "flow": "xtls-rprx-vision",
+      "server": "109.69.218.217",
       "server_port": 443,
-      "tag": "未知97",
+      "tag": "EPODONIOS",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "renderer-stream-2-62.mirra.now"
-      },
-      "transport": {
-        "headers": {
-          "Host": "renderer-stream-2-62.mirra.now"
+        "reality": {
+          "enabled": true,
+          "public_key": "8hse7wRRL-F66rQ-aAeetKTw0MSeJC7Rr6EaDeLzdCU"
         },
-        "path": "/api/v1/gpu-stream/socket",
-        "type": "ws"
+        "server_name": "kind-wolf.cdn.cachefleet.com"
       },
-      "type": "vmess",
-      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154"
+      "type": "vless",
+      "uuid": "2a12bb81-f3a3-41bb-99ab-36febf676b4a"
     },
     {
       "flow": "xtls-rprx-vision",
@@ -43,26 +39,8 @@
       "uuid": "c28ee61d-0d43-4e69-8e6a-6397ed0ffc03"
     },
     {
-      "flow": "xtls-rprx-vision",
-      "server": "109.69.218.217",
-      "server_port": 443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "8hse7wRRL-F66rQ-aAeetKTw0MSeJC7Rr6EaDeLzdCU"
-        },
-        "server_name": "kind-wolf.cdn.cachefleet.com"
-      },
-      "type": "vless",
-      "uuid": "2a12bb81-f3a3-41bb-99ab-36febf676b4a"
-    },
-    {
       "interval": "5m",
       "outbounds": [
-        "未知97",
         "EPODONIOS",
         "EPODONIOS"
       ],
@@ -73,7 +51,6 @@
     {
       "outbounds": [
         "auto",
-        "未知97",
         "EPODONIOS",
         "EPODONIOS"
       ],

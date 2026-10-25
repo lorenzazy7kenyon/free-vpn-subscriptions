@@ -11,19 +11,19 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
-  name: '🇦🇺[www.v2nodes.com] vless-AU-1... #1'
-  server: 51.161.204.242
-  port: 443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: 🇺🇸US_1|2.1MB/s
+  server: 103.169.142.30
+  port: 8880
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime38.workers.dev
 - type: vless
   uuid: 36e89875-9c53-482b-bc41-d3890e9da176
-  name: 🇦🇺[www.v2nodes.com] vless-AU-1...
+  name: 🏳[www.v2nodes.com] vless-
   server: 51.161.204.244
   port: 443
   udp: true
@@ -34,7 +34,7 @@ proxies:
   client-fingerprint: firefox
 - type: vless
   uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
-  name: EPODONIOS
+  name: 🇦🇺[www.v2nodes.com] vless-AU-1...
   server: 51.161.204.242
   port: 443
   udp: true
@@ -43,24 +43,21 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: a2qGjvUPq6Nz5FTbn_MSHp-055q2h8YXqIL5VIJ5zwE
-    short-id: d15c17cef9b2e456
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇦🇺[www.v2nodes.com] vless-AU-1... #1'
+  - 🇺🇸US_1|2.1MB/s
+  - 🏳[www.v2nodes.com] vless-
   - 🇦🇺[www.v2nodes.com] vless-AU-1...
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇦🇺[www.v2nodes.com] vless-AU-1... #1'
+  - 🇺🇸US_1|2.1MB/s
+  - 🏳[www.v2nodes.com] vless-
   - 🇦🇺[www.v2nodes.com] vless-AU-1...
-  - EPODONIOS
 rules:
 - MATCH,SELECT

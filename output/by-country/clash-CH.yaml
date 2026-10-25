@@ -29,30 +29,6 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: firefox
 - type: vless
-  uuid: bfd81b63-a43d-4c27-b71d-2c948cfc4ab2
-  name: EPODONIOS
-  server: 179.237.109.135
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: seznam.cz
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: D3LM6JIYP6kL--jSCj-BPj-qy-J7rzX0Jp9Z4ygNeV4
-    short-id: 7791e189a518d69e
-- type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  server: 208.69.78.217
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
   uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
   name: EPODONIOS
   server: 179.43.170.84
@@ -78,6 +54,30 @@ proxies:
   reality-opts:
     public-key: j7qXqDT_IDpoN1CiO_TN6GZsWbvykcc5w_usWPTfyhw
     short-id: 15a0582e
+- type: vless
+  uuid: bfd81b63-a43d-4c27-b71d-2c948cfc4ab2
+  name: EPODONIOS
+  server: 179.237.109.135
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: seznam.cz
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: D3LM6JIYP6kL--jSCj-BPj-qy-J7rzX0Jp9Z4ygNeV4
+    short-id: 7791e189a518d69e
+- type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  server: 208.69.78.217
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -87,9 +87,9 @@ proxy-groups:
   - EPODONIOS
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
@@ -97,8 +97,8 @@ proxy-groups:
   - EPODONIOS
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  - EPODONIOS
-  - EPODONIOS
 rules:
 - MATCH,SELECT

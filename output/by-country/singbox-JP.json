@@ -1,6 +1,31 @@
 {
   "outbounds": [
     {
+      "server": "31.76.91.138",
+      "server_port": 2087,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4",
+          "short_id": "c226283c4de5b1ad"
+        },
+        "server_name": "ads.x5.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "service_name": "grpc",
+        "type": "grpc"
+      },
+      "type": "vless",
+      "uuid": "309b0ce3-09a8-4883-bfe4-bd56e215be44"
+    },
+    {
       "flow": "xtls-rprx-vision",
       "server": "154.31.114.248",
       "server_port": 50159,
@@ -23,29 +48,17 @@
       "uuid": "d56624b2-35bb-468c-9b2a-e0b0df7230c1"
     },
     {
-      "method": "aes-128-gcm",
-      "password": "shadowsocks",
-      "server": "149.22.87.204",
-      "server_port": 443,
+      "alter_id": 0,
+      "security": "auto",
+      "server": "172.111.146.64",
+      "server_port": 80,
       "tag": "EPODONIOS",
-      "type": "ss"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "103.75.118.228",
-      "server_port": 11452,
-      "tag": "🇯🇵[www.v2nodes.com] vless-JP-1... #7",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+      "transport": {
+        "path": "/vmess/",
+        "type": "ws"
       },
-      "type": "vless",
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9"
+      "type": "vmess",
+      "uuid": "05b8c783-7f59-47f9-9923-06a465679f6a"
     },
     {
       "alter_id": 0,
@@ -59,6 +72,14 @@
       },
       "type": "vmess",
       "uuid": "05b8c783-7f59-47f9-9923-06a465679f6a"
+    },
+    {
+      "method": "aes-128-gcm",
+      "password": "shadowsocks",
+      "server": "149.22.87.204",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "type": "ss"
     },
     {
       "method": "aes-128-gcm",
@@ -88,7 +109,7 @@
       "flow": "xtls-rprx-vision",
       "server": "103.75.118.228",
       "server_port": 12683,
-      "tag": "🏳[www.v2nodes.com] vless- #19",
+      "tag": "🏳[www.v2nodes.com] vless- #20",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -102,28 +123,21 @@
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9"
     },
     {
-      "server": "45.8.173.253",
-      "server_port": 443,
+      "password": "e26a229d-e8f2-4ff9-8c7d-58a9d83ee437",
+      "server": "45.32.52.173",
+      "server_port": 8886,
       "tag": "🇯🇵 日本 | JPN #1",
       "tls": {
         "enabled": true,
-        "insecure": false,
-        "server_name": "snip.edgeoneai.cc.cd"
+        "insecure": true,
+        "server_name": "45.32.52.173"
       },
-      "transport": {
-        "headers": {
-          "Host": "snip.edgeoneai.cc.cd"
-        },
-        "path": "/fp=chrome",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+      "type": "trojan"
     },
     {
-      "server": "13.231.172.130",
+      "server": "45.8.173.253",
       "server_port": 443,
-      "tag": "🇯🇵 日本 | JPN #2",
+      "tag": "🇯🇵 日本 | JPN #1",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -177,10 +191,29 @@
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9"
     },
     {
+      "server": "13.231.172.130",
+      "server_port": 443,
+      "tag": "🇯🇵 日本 | JPN #2",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "snip.edgeoneai.cc.cd"
+      },
+      "transport": {
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        },
+        "path": "/fp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+    },
+    {
       "flow": "xtls-rprx-vision",
       "server": "3.114.220.22",
       "server_port": 19645,
-      "tag": "🏳[www.v2nodes.com] vless- #20",
+      "tag": "🏳[www.v2nodes.com] vless- #21",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -192,78 +225,6 @@
       },
       "type": "vless",
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9"
-    },
-    {
-      "server": "3.112.67.101",
-      "server_port": 443,
-      "tag": "🇯🇵 日本 | JPN",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "snip.edgeoneai.cc.cd",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "headers": {
-          "Host": "snip.edgeoneai.cc.cd"
-        },
-        "path": "/fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
-    },
-    {
-      "server": "31.76.91.138",
-      "server_port": 2087,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4",
-          "short_id": "c226283c4de5b1ad"
-        },
-        "server_name": "ads.x5.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "service_name": "grpc",
-        "type": "grpc"
-      },
-      "type": "vless",
-      "uuid": "309b0ce3-09a8-4883-bfe4-bd56e215be44"
-    },
-    {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "168.138.43.75",
-      "server_port": 80,
-      "tag": "EPODONIOS",
-      "transport": {
-        "headers": {
-          "Host": "168.138.43.75"
-        },
-        "path": "/cctv13.m3u8",
-        "type": "ws"
-      },
-      "type": "vmess",
-      "uuid": "11c3627f-31e8-4695-dfbd-34076e2f1f5d"
-    },
-    {
-      "method": "aes-256-gcm",
-      "password": "3eOFeNssde7PYYMv",
-      "server": "84.247.155.196",
-      "server_port": 443,
-      "tag": "EPODONIOS",
-      "type": "ss"
     },
     {
       "server": "200.180.163.38",
@@ -289,31 +250,6 @@
       "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
     },
     {
-      "method": "aes-256-gcm",
-      "password": "3eOFeNssde7PYYMv",
-      "server": "84.247.155.196",
-      "server_port": 80,
-      "tag": "EPODONIOS",
-      "type": "ss"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "3.114.220.22",
-      "server_port": 10583,
-      "tag": "🇯🇵[www.v2nodes.com] vless-JP-1... #8",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9"
-    },
-    {
       "server": "60.130.209.253",
       "server_port": 443,
       "tag": "🇯🇵 日本 | JPN #4",
@@ -333,17 +269,20 @@
       "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5"
     },
     {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "172.111.146.64",
+      "method": "aes-256-gcm",
+      "password": "3eOFeNssde7PYYMv",
+      "server": "84.247.155.196",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "type": "ss"
+    },
+    {
+      "method": "aes-256-gcm",
+      "password": "3eOFeNssde7PYYMv",
+      "server": "84.247.155.196",
       "server_port": 80,
       "tag": "EPODONIOS",
-      "transport": {
-        "path": "/vmess/",
-        "type": "ws"
-      },
-      "type": "vmess",
-      "uuid": "05b8c783-7f59-47f9-9923-06a465679f6a"
+      "type": "ss"
     },
     {
       "method": "aes-256-gcm",
@@ -385,51 +324,42 @@
       "uuid": "e01fcb68-3112-49da-b85d-dffb799cfc9b"
     },
     {
-      "flow": "xtls-rprx-vision",
-      "server": "156.246.88.125",
-      "server_port": 26518,
+      "alter_id": 0,
+      "security": "auto",
+      "server": "168.138.43.75",
+      "server_port": 80,
       "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "1fa6iCY7vhoQyKu91FeaK04FN-mr1qeHnrtdyLZ79mk",
-          "short_id": "6caead99"
+      "transport": {
+        "headers": {
+          "Host": "168.138.43.75"
         },
-        "server_name": "github.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "path": "/cctv13.m3u8",
+        "type": "ws"
       },
-      "type": "vless",
-      "uuid": "e01fcb68-3112-49da-b85d-dffb799cfc9b"
+      "type": "vmess",
+      "uuid": "11c3627f-31e8-4695-dfbd-34076e2f1f5d"
     },
     {
       "interval": "5m",
       "outbounds": [
         "EPODONIOS",
         "EPODONIOS",
-        "🇯🇵[www.v2nodes.com] vless-JP-1... #7",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
-        "🏳[www.v2nodes.com] vless- #19",
+        "EPODONIOS",
+        "EPODONIOS",
+        "🏳[www.v2nodes.com] vless- #20",
         "🇯🇵 日本 | JPN #1",
-        "🇯🇵 日本 | JPN #2",
+        "🇯🇵 日本 | JPN #1",
         "🇯🇵 日本 | JPN #3",
         "EPODONIOS",
-        "🏳[www.v2nodes.com] vless- #20",
-        "🇯🇵 日本 | JPN",
+        "🇯🇵 日本 | JPN #2",
+        "🏳[www.v2nodes.com] vless- #21",
         "EPODONIOS",
-        "EPODONIOS",
-        "EPODONIOS",
-        "EPODONIOS",
-        "EPODONIOS",
-        "🇯🇵[www.v2nodes.com] vless-JP-1... #8",
         "🇯🇵 日本 | JPN #4",
+        "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
@@ -446,25 +376,22 @@
         "auto",
         "EPODONIOS",
         "EPODONIOS",
-        "🇯🇵[www.v2nodes.com] vless-JP-1... #7",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
-        "🏳[www.v2nodes.com] vless- #19",
+        "EPODONIOS",
+        "EPODONIOS",
+        "🏳[www.v2nodes.com] vless- #20",
         "🇯🇵 日本 | JPN #1",
-        "🇯🇵 日本 | JPN #2",
+        "🇯🇵 日本 | JPN #1",
         "🇯🇵 日本 | JPN #3",
         "EPODONIOS",
-        "🏳[www.v2nodes.com] vless- #20",
-        "🇯🇵 日本 | JPN",
+        "🇯🇵 日本 | JPN #2",
+        "🏳[www.v2nodes.com] vless- #21",
         "EPODONIOS",
-        "EPODONIOS",
-        "EPODONIOS",
-        "EPODONIOS",
-        "EPODONIOS",
-        "🇯🇵[www.v2nodes.com] vless-JP-1... #8",
         "🇯🇵 日本 | JPN #4",
+        "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",

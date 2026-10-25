@@ -10,6 +10,17 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: 🇸🇬[www.v2nodes.com] vless-SG
+  server: 88.216.69.30
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime06.workers.dev
 - type: trojan
   password: humanity
   name: EPODONIOS
@@ -22,17 +33,6 @@ proxies:
     path: /assignment
     headers:
       Host: www.pleadcourt.org
-- type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: 🇸🇬[www.v2nodes.com] vless-SG
-  server: 88.216.69.30
-  port: 8880
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime06.workers.dev
 - type: vless
   uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
   name: EPODONIOS
@@ -67,16 +67,16 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
   - 🇸🇬[www.v2nodes.com] vless-SG
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - 🇸🇬[www.v2nodes.com] vless-SG
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 rules:

@@ -1,6 +1,37 @@
 {
   "outbounds": [
     {
+      "server": "103.169.142.30",
+      "server_port": 8880,
+      "tag": "🇺🇸US_1|2.1MB/s",
+      "transport": {
+        "headers": {
+          "Host": "vms.lifetime38.workers.dev"
+        },
+        "path": "/",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "51.161.204.244",
+      "server_port": 443,
+      "tag": "🏳[www.v2nodes.com] vless-",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "36e89875-9c53-482b-bc41-d3890e9da176"
+    },
+    {
       "flow": "xtls-rprx-vision",
       "server": "51.161.204.242",
       "server_port": 443,
@@ -20,6 +51,8 @@
     {
       "interval": "5m",
       "outbounds": [
+        "🇺🇸US_1|2.1MB/s",
+        "🏳[www.v2nodes.com] vless-",
         "🇦🇺[www.v2nodes.com] vless-AU-1..."
       ],
       "tag": "auto",
@@ -29,6 +62,8 @@
     {
       "outbounds": [
         "auto",
+        "🇺🇸US_1|2.1MB/s",
+        "🏳[www.v2nodes.com] vless-",
         "🇦🇺[www.v2nodes.com] vless-AU-1..."
       ],
       "tag": "select",
