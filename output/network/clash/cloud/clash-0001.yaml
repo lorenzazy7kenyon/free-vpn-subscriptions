@@ -10,6 +10,21 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知10
+  server: 140.83.57.20
+  port: 13118
+  udp: true
+  tls: true
+  servername: sg.11160321.de5.net
+  ws-opts:
+    path: /
+    headers:
+      Host: sg.11160321.de5.net
 - type: vless
   uuid: 35eb914a-f7c2-4ffa-8503-1bf30df0f1a5
   name: EPODONIOS
@@ -24,18 +39,6 @@ proxies:
   reality-opts:
     public-key: rtYs5r9380Y2zvtXBFfaBbnypJQ7_1x_uYu0cLpOXk4
     short-id: d8fee47b2d3d94
-- type: vless
-  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
-  name: EPODONIOS
-  server: 46.250.250.149
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  reality-opts:
-    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
-    short-id: 9922313fffed1c63
 - type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
@@ -59,16 +62,16 @@ proxies:
       Host: snip.edgeoneai.cc.cd
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: 93F6FFBh3CZiBUsG
+  password: aduB9HGxQHjA2SBMRjkHX6
   name: EPODONIOS
-  server: 102.133.227.3
+  server: 102.37.156.224
   port: 443
   udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
+  password: 93F6FFBh3CZiBUsG
   name: EPODONIOS
-  server: 102.37.156.224
+  server: 102.133.227.3
   port: 443
   udp: true
 - type: vless
@@ -88,7 +91,7 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
+  - 未知10
   - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
@@ -99,7 +102,7 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
+  - 未知10
   - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS

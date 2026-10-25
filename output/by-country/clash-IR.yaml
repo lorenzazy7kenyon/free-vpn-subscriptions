@@ -22,6 +22,17 @@ proxies:
     headers:
       Host: worker3.gisenoj224.workers.dev
 - type: vless
+  uuid: f3ab8321-0c15-4c9a-9917-3f1b6706ab12
+  name: EPODONIOS
+  server: 185.143.234.122
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: api.artaluxa.ir
+- type: vless
   uuid: 0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6
   name: EPODONIOS
   server: 185.143.234.238
@@ -32,6 +43,17 @@ proxies:
     path: /pgcfws-r4
     headers:
       Host: uu.caroptions.ir
+- type: vless
+  uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
+  name: EPODONIOS
+  server: 185.143.233.238
+  port: 2086
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: parsi.parsi.sbs
 - type: vmess
   uuid: b831381d-6324-4d53-ad4f-8cda48b30811
   alterId: 0
@@ -46,16 +68,16 @@ proxies:
     headers:
       Host: koochehpas.com
 - type: vless
-  uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
+  uuid: 38dd06a1-e1cb-492b-bb87-218ce05d0d67
   name: EPODONIOS
-  server: 185.143.233.238
-  port: 2086
+  server: 185.143.233.5
+  port: 80
   udp: true
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: parsi.parsi.sbs
+      Host: fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir
 - type: vless
   uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
   name: EPODONIOS
@@ -68,27 +90,42 @@ proxies:
     headers:
       Host: parsi.parsi.sbs
 - type: vless
-  uuid: f3ab8321-0c15-4c9a-9917-3f1b6706ab12
+  uuid: b2a5be99-cc0a-4eb3-9509-c14212a7b407
   name: EPODONIOS
-  server: 185.143.234.122
+  server: 62.60.207.73
   port: 80
   udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: api.artaluxa.ir
+  network: xhttp
+  tls: true
+  servername: 62.60.207.73
+  client-fingerprint: chrome
+- type: ss
+  cipher: aes-256-gcm
+  password: ZGUwMWE1ZmIyZjA0ODQ5ZmE0NTk2MDIwNjIwNjFj
+  name: EPODONIOS
+  server: 37.32.30.203
+  port: 9147
+  udp: true
 - type: vless
-  uuid: 38dd06a1-e1cb-492b-bb87-218ce05d0d67
+  uuid: 950ec237-e75f-4e99-9557-6545784d4202
   name: EPODONIOS
-  server: 185.143.233.5
-  port: 80
+  server: 94.182.131.101
+  port: 443
   udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir
+  network: tcp
+  tls: true
+  servername: youtu.be
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: fPjow17wDX8YJG89j9lraSqv54yvuS21lq3lJiAX_g0
+    short-id: 489861db
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: pLGCPnj2WgzxX1IedW8yd7trwRlXqjLa
+  name: EPODONIOS
+  server: 109.122.251.86
+  port: 20700
+  udp: true
 - type: vless
   uuid: 30fcec7f-164b-465c-87f4-b93784a6056b
   name: EPODONIOS
@@ -101,32 +138,38 @@ proxies:
     headers:
       Host: azsv1.drpingservice.com
 - type: ss
-  cipher: aes-256-gcm
-  password: ZGUwMWE1ZmIyZjA0ODQ5ZmE0NTk2MDIwNjIwNjFj
+  cipher: 2022-blake3-aes-128-gcm
+  password: Dig9t4E8rdydV1374b3Euw==:hsUs4xy/0HlH4h5HKYMCFQ==
   name: EPODONIOS
-  server: 37.32.30.203
-  port: 9147
+  server: 81.12.35.246
+  port: 8080
   udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: pLGCPnj2WgzxX1IedW8yd7trwRlXqjLa
+- type: vmess
+  uuid: 1a9cb3d5-b858-4662-adeb-bb98bc29e668
+  alterId: 0
+  cipher: auto
+  network: ws
   name: EPODONIOS
-  server: 109.122.251.86
-  port: 20700
+  server: 194.32.213.40
+  port: 16990
   udp: true
-- type: vless
-  uuid: 43ecd724-6148-49d3-9e00-609e2d3c05d5
-  name: EPODONIOS
-  server: 89.45.68.194
-  port: 3570
-  udp: true
-  network: tcp
   tls: true
-  servername: sheets.google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 23--GkjUax0cCnXtnqrD9VtAVZftA4ObXOzCNy0uaBA
-    short-id: 9c5eda5e06390754
+  servername: 194.32.213.40
+  ws-opts:
+    path: /
+- type: vmess
+  uuid: fd26012b-e43b-4d6f-814f-c2c058e0d2eb
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知15
+  server: 185.143.232.178
+  port: 8080
+  udp: true
+  ws-opts:
+    path: /s2BSpP6uUOPQ499phpYH87TsXl
+    headers:
+      Host: cdn.tr.one.nemava.com
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -144,6 +187,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - 未知15
 - name: SELECT
   type: select
   proxies:
@@ -159,5 +206,9 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - 未知15
 rules:
 - MATCH,SELECT

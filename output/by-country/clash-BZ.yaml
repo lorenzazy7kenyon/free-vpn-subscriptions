@@ -11,29 +11,31 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
-  uuid: f491cbe4-7548-446c-8d3e-64008e3b1325
+  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
   alterId: 0
-  cipher: none
+  cipher: auto
   network: ws
-  name: 未知43
-  server: 45.131.208.228
-  port: 80
+  name: 🏁RELAY-203.30.191.19-0995
+  server: 203.30.191.19
+  port: 443
   udp: true
+  tls: true
+  servername: clash6.ssr-free.xyz
   ws-opts:
-    path: /vmess
+    path: /dongtaiwang.com
     headers:
-      Host: dl3.127.0.0.1.control.控制.kонтроль.cводкаhовостей.農達懲罰.wonkacapitano.buzz.
+      Host: clash6.ssr-free.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知43
+  - 🏁RELAY-203.30.191.19-0995
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知43
+  - 🏁RELAY-203.30.191.19-0995
 rules:
 - MATCH,SELECT

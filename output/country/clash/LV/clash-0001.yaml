@@ -17,6 +17,16 @@ proxies:
   port: 8445
   udp: true
   network: tcp
+- type: trojan
+  password: humanity
+  name: EPODONIOS
+  server: 85.31.102.163
+  port: 443
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
 - type: vless
   uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
   name: 🇱🇻[www.v2nodes.com] vless-LV-1...
@@ -28,6 +38,20 @@ proxies:
   tls: true
   servername: gateway.icloud.com
   client-fingerprint: chrome
+- type: vless
+  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
+  name: EPODONIOS
+  server: 195.123.208.32
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ICrsmE5hqN7IsDIyHPG2WkDUUFK_VEj9yobLv8zuDwk
+    short-id: 757b9e1ef18e60f0
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -35,12 +59,16 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - EPODONIOS
   - 🇱🇻[www.v2nodes.com] vless-LV-1...
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - EPODONIOS
   - 🇱🇻[www.v2nodes.com] vless-LV-1...
+  - EPODONIOS
 rules:
 - MATCH,SELECT

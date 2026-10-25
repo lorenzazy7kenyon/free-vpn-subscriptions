@@ -24,30 +24,6 @@ proxies:
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
 - type: vless
-  uuid: fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87
-  name: '🇬🇧 英国 | GBR #8'
-  server: 185.88.173.215
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gb.ozon.ru
-  client-fingerprint: firefox
-- type: vless
-  uuid: fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87
-  name: 🇬🇧 英国 | GBR
-  server: 185.88.173.215
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gb.ozon.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-- type: vless
   uuid: 146eb6cf-a99c-4022-85ca-022cf81502dc
   name: EPODONIOS
   server: 195.74.93.254
@@ -62,19 +38,63 @@ proxies:
     public-key: 7ReQIe2kMtP4rCrptgH5glkOM-JGcSAPzHNxOED-Z0s
     short-id: 247fd6dab1a34a48
 - type: vless
-  uuid: 85163fd9-6f73-4eea-b1df-3b327dacbabf
+  uuid: a346c521-7a7f-452b-9356-a4893feb5982
   name: EPODONIOS
-  server: 83.217.9.140
-  port: 43000
+  server: 62.133.63.45
+  port: 8444
+  udp: true
+  network: grpc
+  tls: true
+  servername: github.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+    short-id: 457fab2ac885dbe0
+- type: vmess
+  uuid: 01c3e638-85d9-4907-a7cc-9c951a98d255
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 206.1.101.206
+  port: 8080
+  udp: true
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇧🇬[www.v2nodes.com] vless-BG-3... #2'
+  server: 155.103.71.142
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=chromefp=chromesecurity=tls
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
+  name: '🏳[www.v2nodes.com] vless- #26'
+  server: 78.135.73.47
+  port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: 83.217.9.140
+  servername: www.datadoghq.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: EPODONIOS
+  server: 155.103.71.142
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
   client-fingerprint: chrome
-  reality-opts:
-    public-key: ptE_QnAka3pXNEf8BYKpA9CHdgj4U4xXTixjYWOji0U
-    short-id: 68d2eb23
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
 - type: vless
   uuid: a346c521-7a7f-452b-9356-a4893feb5982
   name: 🇹🇷[www.v2nodes.com] vless-TR-1...
@@ -86,19 +106,8 @@ proxies:
   servername: github.com
   client-fingerprint: chrome
 - type: vless
-  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
-  name: '🏳[www.v2nodes.com] vless- #29'
-  server: 78.135.73.47
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.datadoghq.com
-  client-fingerprint: firefox
-- type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🏳[www.v2nodes.com] vless- #1'
+  name: EPODONIOS
   server: 155.103.71.142
   port: 443
   udp: true
@@ -116,17 +125,23 @@ proxies:
   port: 443
   udp: true
   sni: 193.124.46.65
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇧🇬[www.v2nodes.com] vless-BG-3... #2'
-  server: 155.103.71.142
-  port: 443
+- type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: ADzlhA3ndouUCY3JbLddR/jwgYY7IDGc1T+5DuCix9Y=:KyFe2akGo5hcrswbMkD2+BM52si+D7lzyccZFTd4xaU=
+  name: EPODONIOS
+  server: 206.1.100.83
+  port: 25178
   udp: true
-  network: ws
-  ws-opts:
-    path: /fp=chromefp=chromesecurity=tls
-    headers:
-      Host: ccc.010304.xyz
+- type: vless
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  name: '🏳[www.v2nodes.com] vless- #27'
+  server: 151.241.226.201
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
 - type: vless
   uuid: bf155a74-0560-46ff-ba40-9c8d34917f0e
   name: EPODONIOS
@@ -140,15 +155,6 @@ proxies:
   reality-opts:
     public-key: rlWw1txOKfyTIegqGc5YUQo1CxqZEXBPeQZppA6H014
     short-id: 8f798d413a5dbf01
-- type: vmess
-  uuid: d7b688b5-91f0-40f8-8e8f-0245d83662b0
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: EPODONIOS
-  server: 212.87.198.27
-  port: 8080
-  udp: true
 - type: vless
   uuid: 7d5cdbb1-9632-483a-9b50-27932cfa9390
   name: EPODONIOS
@@ -157,22 +163,19 @@ proxies:
   udp: true
   network: tcp
 - type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  name: '🏳[www.v2nodes.com] vless- #30'
-  server: 151.241.226.201
-  port: 2053
+  uuid: 85163fd9-6f73-4eea-b1df-3b327dacbabf
+  name: EPODONIOS
+  server: 83.217.9.140
+  port: 43000
   udp: true
+  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-- type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: ADzlhA3ndouUCY3JbLddR/jwgYY7IDGc1T+5DuCix9Y=:KyFe2akGo5hcrswbMkD2+BM52si+D7lzyccZFTd4xaU=
-  name: EPODONIOS
-  server: 206.1.100.83
-  port: 25178
-  udp: true
+  servername: 83.217.9.140
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ptE_QnAka3pXNEf8BYKpA9CHdgj4U4xXTixjYWOji0U
+    short-id: 68d2eb23
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -180,38 +183,38 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - '🇬🇧 英国 | GBR #8'
-  - 🇬🇧 英国 | GBR
   - EPODONIOS
   - EPODONIOS
-  - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - '🏳[www.v2nodes.com] vless- #29'
-  - '🏳[www.v2nodes.com] vless- #1'
   - EPODONIOS
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #2'
+  - '🏳[www.v2nodes.com] vless- #26'
+  - EPODONIOS
+  - 🇹🇷[www.v2nodes.com] vless-TR-1...
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #30'
+  - '🏳[www.v2nodes.com] vless- #27'
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - '🇬🇧 英国 | GBR #8'
-  - 🇬🇧 英国 | GBR
   - EPODONIOS
   - EPODONIOS
-  - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - '🏳[www.v2nodes.com] vless- #29'
-  - '🏳[www.v2nodes.com] vless- #1'
   - EPODONIOS
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #2'
+  - '🏳[www.v2nodes.com] vless- #26'
+  - EPODONIOS
+  - 🇹🇷[www.v2nodes.com] vless-TR-1...
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #30'
+  - '🏳[www.v2nodes.com] vless- #27'
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

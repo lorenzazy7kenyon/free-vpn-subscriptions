@@ -23,19 +23,16 @@ proxies:
   reality-opts:
     public-key: skXBkyphBIt0TWVM0R5U3U-8UG0cuW00ONkaQpJ-OxU
 - type: vless
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
-  name: EPODONIOS
-  server: 173.242.63.235
-  port: 8443
+  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
+  name: '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
+  server: 213.111.148.137
+  port: 443
   udp: true
   network: ws
-  tls: true
-  servername: edgetunnel-4uw.pages.dev
-  client-fingerprint: chrome
   ws-opts:
-    path: /
+    path: /fp=androidsecurity=tls
     headers:
-      Host: edgetunnel-4uw.pages.dev
+      Host: proxy-1cu.pages.dev
 - type: vless
   uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
   name: '🇺🇦[www.v2nodes.com] vless-UA-1... #9'
@@ -49,17 +46,6 @@ proxies:
     path: /fp=android
     headers:
       Host: proxy-1cu.pages.dev
-- type: vless
-  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-  name: '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
-  server: 213.111.148.137
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: /fp=androidsecurity=tls
-    headers:
-      Host: proxy-1cu.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -67,16 +53,14 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #9'
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #9'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #9'
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #9'
 rules:
 - MATCH,SELECT

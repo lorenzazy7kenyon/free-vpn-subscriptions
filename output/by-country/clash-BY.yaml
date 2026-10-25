@@ -21,30 +21,19 @@ proxies:
   servername: ae9pzoazs7.hat.onl
   client-fingerprint: firefox
 - type: vless
-  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
-  name: EPODONIOS
-  server: 95.128.71.79
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 95.128.71.79
-- type: vless
   uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
-  name: 🇧🇾[www.v2nodes.com] vless-BY-1...
-  server: 178.172.227.124
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 178.172.227.124
-- type: vless
-  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
   name: '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
+  server: 178.172.227.124
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 178.172.227.124
+- type: vless
+  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
+  name: '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
   server: 95.128.71.79
   port: 14430
   udp: true
@@ -54,16 +43,16 @@ proxies:
     headers:
       Host: 95.128.71.79
 - type: vless
-  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
+  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
   name: EPODONIOS
-  server: 178.172.227.124
+  server: 95.128.71.79
   port: 14430
   udp: true
   network: ws
   ws-opts:
     path: /vless
     headers:
-      Host: 178.172.227.124
+      Host: 95.128.71.79
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -71,18 +60,16 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇧🇾 BY_22
-  - EPODONIOS
-  - 🇧🇾[www.v2nodes.com] vless-BY-1...
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇧🇾 BY_22
-  - EPODONIOS
-  - 🇧🇾[www.v2nodes.com] vless-BY-1...
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
   - EPODONIOS
 rules:
 - MATCH,SELECT

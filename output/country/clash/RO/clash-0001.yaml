@@ -11,17 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  name: '🏳[www.v2nodes.com] vless- #25'
-  server: 46.28.67.55
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- type: vless
   uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
   name: 🇷🇴[www.v2nodes.com] vless-RO-1...
   server: 82.117.255.174
@@ -32,6 +21,31 @@ proxies:
   tls: true
   servername: gateway.icloud.com
   client-fingerprint: chrome
+- type: vless
+  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  name: EPODONIOS
+  server: 46.28.67.55
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
+    short-id: d06d78e974491b6e
+- type: vless
+  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  name: '🏳[www.v2nodes.com] vless- #22'
+  server: 46.28.67.55
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: QFWzCw2uX9B9i6qAYeFBIE
@@ -39,6 +53,20 @@ proxies:
   server: 154.46.31.106
   port: 443
   udp: true
+- type: vless
+  uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
+  name: EPODONIOS
+  server: 82.117.255.174
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 0QDBHaCRO2dPeeSVy3B3R_U12ZOvbvWl1JTFW_ZcpD0
+    short-id: 31e91d43e553bf32
 - type: vless
   uuid: 9c54d883-97a8-4b49-af23-fe052eff2c3a
   name: EPODONIOS
@@ -65,8 +93,10 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #25'
   - 🇷🇴[www.v2nodes.com] vless-RO-1...
+  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #22'
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -74,8 +104,10 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #25'
   - 🇷🇴[www.v2nodes.com] vless-RO-1...
+  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #22'
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

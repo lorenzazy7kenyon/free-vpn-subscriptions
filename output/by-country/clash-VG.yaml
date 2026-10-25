@@ -11,29 +11,71 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 70756c73-0000-4000-8000-650000000000
-  name: '🇸🇬[www.v2nodes.com] vless-SG #2'
-  server: 104.234.239.139
+  uuid: 50414e45-4c5f-5a45-5553-eb719e39bd09
+  name: EPODONIOS
+  server: 104.234.239.92
   port: 443
   udp: true
   network: ws
   tls: true
-  servername: parsa-panel-u48we.wotic15356.workers.dev
+  servername: hqzxcaeyukms.z2zptsequlds.workers.dev
+  client-fingerprint: unsafe
   ws-opts:
-    path: /pulsefp=chrome
+    path: /stream/PANEL_ZEUS/eb719e39bd09
     headers:
-      Host: parsa-panel-u48we.wotic15356.workers.dev
+      Host: hqzxcaeyukms.z2zptsequlds.workers.dev
+- type: vless
+  uuid: 50414e45-4c5f-5a45-5553-eb719e39bd09
+  name: EPODONIOS
+  server: 104.234.239.92
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /stream/PANEL_ZEUS/eb719e39bd09
+    headers:
+      Host: hqzxcaeyukms.z2zptsequlds.workers.dev
+- type: trojan
+  password: 50414e45-4c5f-5a45-5553-eb719e39bd09
+  name: EPODONIOS
+  server: 104.234.239.92
+  port: 80
+  udp: true
+  sni: hqzxcaeyukms.z2zptsequlds.workers.dev
+  network: ws
+  ws-opts:
+    path: /stream/PANEL_ZEUS/eb719e39bd09
+    headers:
+      Host: hqzxcaeyukms.z2zptsequlds.workers.dev
+- type: trojan
+  password: 50414e45-4c5f-5a45-5553-eb719e39bd09
+  name: EPODONIOS
+  server: 104.234.239.92
+  port: 443
+  udp: true
+  sni: hqzxcaeyukms.z2zptsequlds.workers.dev
+  network: ws
+  ws-opts:
+    path: /stream/PANEL_ZEUS/eb719e39bd09
+    headers:
+      Host: hqzxcaeyukms.z2zptsequlds.workers.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇸🇬[www.v2nodes.com] vless-SG #2'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇸🇬[www.v2nodes.com] vless-SG #2'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
 rules:
 - MATCH,SELECT
