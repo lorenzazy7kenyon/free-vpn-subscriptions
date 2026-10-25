@@ -10,13 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
-  name: EPODONIOS
-  server: 132.243.175.144
-  port: 8388
-  udp: true
 - type: vless
   uuid: 3950b45e-740d-4dca-ac95-505ec8534592
   name: 🇨🇭[www.v2nodes.com] vless-CH-1...
@@ -28,6 +21,27 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: firefox
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
+  name: EPODONIOS
+  server: 132.243.175.144
+  port: 8388
+  udp: true
+- type: vless
+  uuid: bfd81b63-a43d-4c27-b71d-2c948cfc4ab2
+  name: EPODONIOS
+  server: 179.237.109.135
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: seznam.cz
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: D3LM6JIYP6kL--jSCj-BPj-qy-J7rzX0Jp9Z4ygNeV4
+    short-id: 7791e189a518d69e
 - type: vless
   uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
   name: EPODONIOS
@@ -55,20 +69,6 @@ proxies:
     public-key: j7qXqDT_IDpoN1CiO_TN6GZsWbvykcc5w_usWPTfyhw
     short-id: 15a0582e
 - type: vless
-  uuid: bfd81b63-a43d-4c27-b71d-2c948cfc4ab2
-  name: EPODONIOS
-  server: 179.237.109.135
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: seznam.cz
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: D3LM6JIYP6kL--jSCj-BPj-qy-J7rzX0Jp9Z4ygNeV4
-    short-id: 7791e189a518d69e
-- type: vless
   uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
   name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
   server: 208.69.78.217
@@ -78,27 +78,39 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
+- type: hysteria2
+  password: capadm96216165
+  name: 🇨🇭192087 | ⚡️Telegram = t.me/v...
+  server: 208.69.78.217
+  port: 443
+  udp: true
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - 🇨🇭192087 | ⚡️Telegram = t.me/v...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - 🇨🇭192087 | ⚡️Telegram = t.me/v...
 rules:
 - MATCH,SELECT

@@ -1,14 +1,6 @@
 {
   "outbounds": [
     {
-      "method": "chacha20-ietf-poly1305",
-      "password": "e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3",
-      "server": "132.243.175.144",
-      "server_port": 8388,
-      "tag": "EPODONIOS",
-      "type": "ss"
-    },
-    {
       "flow": "xtls-rprx-vision",
       "server": "45.90.59.15",
       "server_port": 443,
@@ -24,6 +16,36 @@
       },
       "type": "vless",
       "uuid": "3950b45e-740d-4dca-ac95-505ec8534592"
+    },
+    {
+      "method": "chacha20-ietf-poly1305",
+      "password": "e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3",
+      "server": "132.243.175.144",
+      "server_port": 8388,
+      "tag": "EPODONIOS",
+      "type": "ss"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "179.237.109.135",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "D3LM6JIYP6kL--jSCj-BPj-qy-J7rzX0Jp9Z4ygNeV4",
+          "short_id": "7791e189a518d69e"
+        },
+        "server_name": "seznam.cz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "bfd81b63-a43d-4c27-b71d-2c948cfc4ab2"
     },
     {
       "flow": "xtls-rprx-vision",
@@ -65,28 +87,6 @@
       "uuid": "7709550d-d2f1-67b1-b268-614431b073c5"
     },
     {
-      "flow": "xtls-rprx-vision",
-      "server": "179.237.109.135",
-      "server_port": 443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "D3LM6JIYP6kL--jSCj-BPj-qy-J7rzX0Jp9Z4ygNeV4",
-          "short_id": "7791e189a518d69e"
-        },
-        "server_name": "seznam.cz",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "bfd81b63-a43d-4c27-b71d-2c948cfc4ab2"
-    },
-    {
       "server": "208.69.78.217",
       "server_port": 2053,
       "tag": "🇨🇭[www.v2nodes.com] vless-CH-1... #1",
@@ -103,14 +103,31 @@
       "uuid": "c0dd6d59-1573-43af-8b70-1470b2632a6d"
     },
     {
+      "obfs": {
+        "password": "mbQXP2ASuHbF6ZPq",
+        "type": "salamander"
+      },
+      "password": "capadm96216165",
+      "server": "208.69.78.217",
+      "server_port": 443,
+      "tag": "🇨🇭192087 | ⚡️Telegram = t.me/v...",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "vpn.local"
+      },
+      "type": "hysteria2"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "EPODONIOS",
         "🇨🇭[www.v2nodes.com] vless-CH-1...",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
-        "🇨🇭[www.v2nodes.com] vless-CH-1... #1"
+        "EPODONIOS",
+        "🇨🇭[www.v2nodes.com] vless-CH-1... #1",
+        "🇨🇭192087 | ⚡️Telegram = t.me/v..."
       ],
       "tag": "auto",
       "type": "urltest",
@@ -119,12 +136,13 @@
     {
       "outbounds": [
         "auto",
-        "EPODONIOS",
         "🇨🇭[www.v2nodes.com] vless-CH-1...",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
-        "🇨🇭[www.v2nodes.com] vless-CH-1... #1"
+        "EPODONIOS",
+        "🇨🇭[www.v2nodes.com] vless-CH-1... #1",
+        "🇨🇭192087 | ⚡️Telegram = t.me/v..."
       ],
       "tag": "select",
       "type": "selector"

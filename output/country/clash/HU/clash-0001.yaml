@@ -22,6 +22,16 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
+- type: vless
+  uuid: 7f6adf9d-42f1-4fec-ab22-fb7f66bf3adc
+  name: 🇭🇺 匈牙利 | HUN
+  server: 13.143.191.7
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: edv6f206j8ujw.hat.onl
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -29,10 +39,12 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - 🇭🇺 匈牙利 | HUN
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - 🇭🇺 匈牙利 | HUN
 rules:
 - MATCH,SELECT

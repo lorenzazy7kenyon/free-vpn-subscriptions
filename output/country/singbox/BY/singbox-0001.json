@@ -1,18 +1,24 @@
 {
   "outbounds": [
     {
-      "server": "178.172.227.124",
-      "server_port": 14430,
-      "tag": "🇧🇾[www.v2nodes.com] vless-BY-1...",
+      "server": "13.143.188.31",
+      "server_port": 443,
+      "tag": "🇧🇾 BY_22",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "ae9pzoazs7.hat.onl",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
       "transport": {
-        "headers": {
-          "Host": "178.172.227.124"
-        },
-        "path": "/vless",
-        "type": "ws"
+        "service_name": "v1.segment.YI61ONxTtmADr1b7.ts",
+        "type": "grpc"
       },
       "type": "vless",
-      "uuid": "1af36694-b548-4b18-89a0-bc076eab4ed7"
+      "uuid": "7f6adf9d-42f1-4fec-ab22-fb7f66bf3adc"
     },
     {
       "server": "95.128.71.79",
@@ -29,6 +35,20 @@
       "uuid": "8cef7621-c6f0-486e-b51d-59c30c5b0b25"
     },
     {
+      "server": "178.172.227.124",
+      "server_port": 14430,
+      "tag": "🇧🇾[www.v2nodes.com] vless-BY-1...",
+      "transport": {
+        "headers": {
+          "Host": "178.172.227.124"
+        },
+        "path": "/vless",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "1af36694-b548-4b18-89a0-bc076eab4ed7"
+    },
+    {
       "server": "95.128.71.79",
       "server_port": 14430,
       "tag": "🇧🇾[www.v2nodes.com] vless-BY-1... #1",
@@ -43,11 +63,27 @@
       "uuid": "8cef7621-c6f0-486e-b51d-59c30c5b0b25"
     },
     {
+      "server": "178.172.227.124",
+      "server_port": 14430,
+      "tag": "EPODONIOS",
+      "transport": {
+        "headers": {
+          "Host": "178.172.227.124"
+        },
+        "path": "/vless",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "1af36694-b548-4b18-89a0-bc076eab4ed7"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "🇧🇾[www.v2nodes.com] vless-BY-1...",
+        "🇧🇾 BY_22",
         "EPODONIOS",
-        "🇧🇾[www.v2nodes.com] vless-BY-1... #1"
+        "🇧🇾[www.v2nodes.com] vless-BY-1...",
+        "🇧🇾[www.v2nodes.com] vless-BY-1... #1",
+        "EPODONIOS"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -56,9 +92,11 @@
     {
       "outbounds": [
         "auto",
-        "🇧🇾[www.v2nodes.com] vless-BY-1...",
+        "🇧🇾 BY_22",
         "EPODONIOS",
-        "🇧🇾[www.v2nodes.com] vless-BY-1... #1"
+        "🇧🇾[www.v2nodes.com] vless-BY-1...",
+        "🇧🇾[www.v2nodes.com] vless-BY-1... #1",
+        "EPODONIOS"
       ],
       "tag": "select",
       "type": "selector"
