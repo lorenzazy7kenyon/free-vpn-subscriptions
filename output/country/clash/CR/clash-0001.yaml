@@ -10,18 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 190.93.245.148
-  port: 443
-  udp: true
-  sni: www.pleadcourt.org
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
 - type: vless
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   name: EPODONIOS
@@ -50,6 +38,18 @@ proxies:
     path: /?TELEGRAM--------ICV2RAY?ed=2560
     headers:
       Host: lucasjow.us.ci
+- type: trojan
+  password: humanity
+  name: EPODONIOS
+  server: 190.93.245.148
+  port: 443
+  udp: true
+  sni: www.pleadcourt.org
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
 - type: trojan
   password: bpb-trojan
   name: EPODONIOS

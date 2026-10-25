@@ -12,6 +12,17 @@ dns:
 proxies:
 - type: vless
   uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
+  name: 🇦🇺[www.v2nodes.com] vless-AU-1...
+  server: 51.161.204.242
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
   name: EPODONIOS
   server: 51.161.204.242
   port: 443
@@ -24,17 +35,6 @@ proxies:
   reality-opts:
     public-key: a2qGjvUPq6Nz5FTbn_MSHp-055q2h8YXqIL5VIJ5zwE
     short-id: d15c17cef9b2e456
-- type: vless
-  uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
-  name: 🇦🇺[www.v2nodes.com] vless-AU-1...
-  server: 51.161.204.242
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 - type: vless
   uuid: 36e89875-9c53-482b-bc41-d3890e9da176
   name: 🏳[www.v2nodes.com] vless-
@@ -52,15 +52,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
   - 🇦🇺[www.v2nodes.com] vless-AU-1...
+  - EPODONIOS
   - 🏳[www.v2nodes.com] vless-
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - 🇦🇺[www.v2nodes.com] vless-AU-1...
+  - EPODONIOS
   - 🏳[www.v2nodes.com] vless-
 rules:
 - MATCH,SELECT
