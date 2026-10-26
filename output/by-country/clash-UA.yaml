@@ -11,6 +11,27 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 6538f5c3-5b01-4956-a8e6-47688c01c42e
+  name: EPODONIOS
+  server: 104.143.223.236
+  port: 2085
+  udp: true
+  network: grpc
+- type: vless
+  uuid: 6538f5c3-5b01-4956-a8e6-47688c01c42e
+  name: EPODONIOS
+  server: 104.143.223.66
+  port: 2085
+  udp: true
+  network: grpc
+- type: vless
+  uuid: dde8219d-a988-4944-b220-0444f8dde681
+  name: EPODONIOS
+  server: 104.143.223.120
+  port: 2085
+  udp: true
+  network: grpc
+- type: vless
   uuid: 2bb8b13c-b3f0-2552-da05-d0929bfb36db
   name: EPODONIOS
   server: 104.245.240.4
@@ -24,7 +45,18 @@ proxies:
     public-key: skXBkyphBIt0TWVM0R5U3U-8UG0cuW00ONkaQpJ-OxU
 - type: vless
   uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-  name: '🇺🇦[www.v2nodes.com] vless-UA-1... #9'
+  name: '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
+  server: 213.111.148.137
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=androidsecurity=tls
+    headers:
+      Host: proxy-1cu.pages.dev
+- type: vless
+  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
+  name: '🇺🇦[www.v2nodes.com] vless-UA-1... #8'
   server: 213.111.148.137
   port: 443
   udp: true
@@ -35,17 +67,6 @@ proxies:
     path: /fp=android
     headers:
       Host: proxy-1cu.pages.dev
-- type: vless
-  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-  name: '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
-  server: 213.111.148.137
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: /fp=androidsecurity=tls
-    headers:
-      Host: proxy-1cu.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -53,14 +74,20 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #9'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #8'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #9'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #8'
 rules:
 - MATCH,SELECT

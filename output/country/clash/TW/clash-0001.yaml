@@ -36,6 +36,20 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: ty986gfazs.cainiaohub.xyz
+- type: vless
+  uuid: 06e177f7-240d-4687-bd85-235505801a5e
+  name: 🇹🇼 🇨🇳 台湾 | TWN
+  server: 59.125.69.24
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ty986gfazs.cainiaohub.xyz
+  client-fingerprint: chrome
+  ws-opts:
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -44,11 +58,13 @@ proxy-groups:
   proxies:
   - '🇹🇼[www.v2nodes.com] vless-TW-1... #1'
   - EPODONIOS
+  - 🇹🇼 🇨🇳 台湾 | TWN
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇹🇼[www.v2nodes.com] vless-TW-1... #1'
   - EPODONIOS
+  - 🇹🇼 🇨🇳 台湾 | TWN
 rules:
 - MATCH,SELECT

@@ -15,18 +15,53 @@
       "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d"
     },
     {
-      "method": "aes-256-gcm",
-      "password": "owVdNnQcdPgthSyX",
-      "server": "216.128.168.190",
-      "server_port": 8388,
-      "tag": "🇧🇷[www.v2nodes.com] ss-BR-1562...",
-      "type": "ss"
+      "server": "185.133.35.56",
+      "server_port": 2083,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "titp.iranroyalzhin.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "titp.iranroyalzhin.ir"
+        },
+        "path": "/",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "2445edef-76b7-4713-87b9-ed6aa0b1a2c9"
+    },
+    {
+      "server": "185.133.35.56",
+      "server_port": 2083,
+      "tag": "🇩🇪DE_9|2.3MB/s",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "titp.iranroyalzhin.ir"
+      },
+      "transport": {
+        "headers": {
+          "Host": "titp.iranroyalzhin.ir"
+        },
+        "path": "/fp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "2445edef-76b7-4713-87b9-ed6aa0b1a2c9"
     },
     {
       "interval": "5m",
       "outbounds": [
         "EPODONIOS",
-        "🇧🇷[www.v2nodes.com] ss-BR-1562..."
+        "EPODONIOS",
+        "🇩🇪DE_9|2.3MB/s"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -36,7 +71,8 @@
       "outbounds": [
         "auto",
         "EPODONIOS",
-        "🇧🇷[www.v2nodes.com] ss-BR-1562..."
+        "EPODONIOS",
+        "🇩🇪DE_9|2.3MB/s"
       ],
       "tag": "select",
       "type": "selector"

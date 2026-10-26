@@ -23,6 +23,13 @@ proxies:
   reality-opts:
     public-key: fvs6pc3p8Ub1jfix7hPWPjKIkOrOwCjaZUEJX41Qvz8
     short-id: de3d508c9f31e5
+- type: vless
+  uuid: 51dd4fe8-b731-42a0-8dbd-23cca2955b13
+  name: EPODONIOS
+  server: 13.140.90.105
+  port: 443
+  udp: true
+  network: tcp
 - type: vmess
   uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
   alterId: 0
@@ -47,6 +54,13 @@ proxies:
     public-key: rtYs5r9380Y2zvtXBFfaBbnypJQ7_1x_uYu0cLpOXk4
     short-id: d8fee47b2d3d94
 - type: vless
+  uuid: 41121194-3e34-4779-9877-fa3a23cd37a1
+  name: EPODONIOS
+  server: 13.140.90.105
+  port: 443
+  udp: true
+  network: tcp
+- type: vless
   uuid: d67f70b9-3666-4448-9c27-3b263f6eb89c
   name: EPODONIOS
   server: 13.140.90.105
@@ -62,21 +76,21 @@ proxies:
   network: tcp
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
-  name: EPODONIOS
-  server: 102.37.156.224
-  port: 443
-  udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
   password: 93F6FFBh3CZiBUsG
   name: EPODONIOS
   server: 102.133.227.3
   port: 443
   udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  name: EPODONIOS
+  server: 102.37.156.224
+  port: 443
+  udp: true
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -92,24 +106,28 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - EPODONIOS
   - 未知155
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
   - EPODONIOS
-  - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - EPODONIOS
   - 未知155
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
   - EPODONIOS
   - EPODONIOS
-  - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
 rules:
 - MATCH,SELECT

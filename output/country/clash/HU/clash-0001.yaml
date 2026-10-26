@@ -10,16 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 7f6adf9d-42f1-4fec-ab22-fb7f66bf3adc
-  name: EPODONIOS
-  server: 13.143.191.7
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: edv6f206j8ujw.hat.onl
-  client-fingerprint: chrome
 - type: trojan
   password: humanity
   name: EPODONIOS
@@ -32,6 +22,16 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
+- type: vless
+  uuid: 7f6adf9d-42f1-4fec-ab22-fb7f66bf3adc
+  name: EPODONIOS
+  server: 13.143.191.7
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: edv6f206j8ujw.hat.onl
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test

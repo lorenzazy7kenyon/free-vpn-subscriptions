@@ -11,54 +11,16 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 50414e45-4c5f-5a45-5553-eb719e39bd09
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   name: EPODONIOS
-  server: 104.234.239.92
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: hqzxcaeyukms.z2zptsequlds.workers.dev
-  client-fingerprint: unsafe
-  ws-opts:
-    path: /stream/PANEL_ZEUS/eb719e39bd09
-    headers:
-      Host: hqzxcaeyukms.z2zptsequlds.workers.dev
-- type: vless
-  uuid: 50414e45-4c5f-5a45-5553-eb719e39bd09
-  name: EPODONIOS
-  server: 104.234.239.92
-  port: 80
+  server: 45.142.120.40
+  port: 8880
   udp: true
   network: ws
   ws-opts:
-    path: /stream/PANEL_ZEUS/eb719e39bd09
+    path: /?ed=2560
     headers:
-      Host: hqzxcaeyukms.z2zptsequlds.workers.dev
-- type: trojan
-  password: 50414e45-4c5f-5a45-5553-eb719e39bd09
-  name: EPODONIOS
-  server: 104.234.239.92
-  port: 80
-  udp: true
-  sni: hqzxcaeyukms.z2zptsequlds.workers.dev
-  network: ws
-  ws-opts:
-    path: /stream/PANEL_ZEUS/eb719e39bd09
-    headers:
-      Host: hqzxcaeyukms.z2zptsequlds.workers.dev
-- type: trojan
-  password: 50414e45-4c5f-5a45-5553-eb719e39bd09
-  name: EPODONIOS
-  server: 104.234.239.92
-  port: 443
-  udp: true
-  sni: hqzxcaeyukms.z2zptsequlds.workers.dev
-  network: ws
-  ws-opts:
-    path: /stream/PANEL_ZEUS/eb719e39bd09
-    headers:
-      Host: hqzxcaeyukms.z2zptsequlds.workers.dev
+      Host: vms.lifetime08.workers.dev
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -66,16 +28,10 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

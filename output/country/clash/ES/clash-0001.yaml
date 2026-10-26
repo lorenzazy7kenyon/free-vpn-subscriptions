@@ -10,6 +10,14 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: trojan
+  password: humanity
+  name: 🇪🇸 西班牙 | ESP
+  server: 185.18.250.252
+  port: 443
+  udp: true
+  sni: www.calmlunch.com
+  skip-cert-verify: true
 - type: vless
   uuid: 2ee26119-94e5-40b4-ba3a-16354021b600
   name: EPODONIOS
@@ -48,6 +56,13 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
+- type: ss
+  cipher: aes-256-cfb
+  password: EXN3S3eQpjE7EJu8
+  name: EPODONIOS
+  server: 5.188.181.201
+  port: 9027
+  udp: true
 - type: vless
   uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
   name: '🇪🇸[www.v2nodes.com] vless-ES-1... #4'
@@ -59,17 +74,6 @@ proxies:
   servername: www.apple.com
   client-fingerprint: firefox
 - type: vless
-  uuid: 897d47f8-4dd5-42a1-bcd0-bef19caff55a
-  name: '🏳[www.v2nodes.com] vless- #8'
-  server: 193.238.154.78
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- type: vless
   uuid: 7f6adf9d-42f1-4fec-ab22-fb7f66bf3adc
   name: EPODONIOS
   server: 46.28.71.135
@@ -78,17 +82,6 @@ proxies:
   network: grpc
   tls: true
   servername: l97bke0sf1.hat.onl
-- type: vless
-  uuid: 12c53e32-e589-47d6-b857-e4132294f767
-  name: '🏳[www.v2nodes.com] vless- #7'
-  server: 46.28.71.247
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
 - type: vless
   uuid: 12c53e32-e589-47d6-b857-e4132294f767
   name: EPODONIOS
@@ -104,6 +97,17 @@ proxies:
     public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
     short-id: 0dfc23fe80778c00
 - type: vless
+  uuid: 897d47f8-4dd5-42a1-bcd0-bef19caff55a
+  name: '🏳[www.v2nodes.com] vless- #8'
+  server: 193.238.154.78
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- type: vless
   uuid: 1e4668ca-6526-84ac-2a53-28bbc209da13
   name: EPODONIOS
   server: 170.168.97.6
@@ -115,6 +119,17 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+- type: vless
+  uuid: 12c53e32-e589-47d6-b857-e4132294f767
+  name: '🏳[www.v2nodes.com] vless- #7'
+  server: 46.28.71.247
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 - type: vless
   uuid: 76b6a658-ce80-4500-b24d-404c94639ac6
   name: '🇭🇰 香港 | HKG #2'
@@ -132,29 +147,33 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇪🇸 西班牙 | ESP
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #4'
+  - EPODONIOS
+  - EPODONIOS
   - '🏳[www.v2nodes.com] vless- #8'
   - EPODONIOS
   - '🏳[www.v2nodes.com] vless- #7'
-  - EPODONIOS
-  - EPODONIOS
   - '🇭🇰 香港 | HKG #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇪🇸 西班牙 | ESP
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #4'
+  - EPODONIOS
+  - EPODONIOS
   - '🏳[www.v2nodes.com] vless- #8'
   - EPODONIOS
   - '🏳[www.v2nodes.com] vless- #7'
-  - EPODONIOS
-  - EPODONIOS
   - '🇭🇰 香港 | HKG #2'
 rules:
 - MATCH,SELECT

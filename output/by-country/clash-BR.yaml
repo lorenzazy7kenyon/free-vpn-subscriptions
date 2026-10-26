@@ -21,13 +21,33 @@ proxies:
     path: /?ed=2560
     headers:
       Host: vms.lifetime19.workers.dev
-- type: ss
-  cipher: aes-256-gcm
-  password: owVdNnQcdPgthSyX
-  name: 🇧🇷[www.v2nodes.com] ss-BR-1562...
-  server: 216.128.168.190
-  port: 8388
+- type: vless
+  uuid: 2445edef-76b7-4713-87b9-ed6aa0b1a2c9
+  name: EPODONIOS
+  server: 185.133.35.56
+  port: 2083
   udp: true
+  network: ws
+  tls: true
+  servername: titp.iranroyalzhin.ir
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: titp.iranroyalzhin.ir
+- type: vless
+  uuid: 2445edef-76b7-4713-87b9-ed6aa0b1a2c9
+  name: 🇩🇪DE_9|2.3MB/s
+  server: 185.133.35.56
+  port: 2083
+  udp: true
+  network: ws
+  tls: true
+  servername: titp.iranroyalzhin.ir
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: titp.iranroyalzhin.ir
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -35,12 +55,14 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - 🇧🇷[www.v2nodes.com] ss-BR-1562...
+  - EPODONIOS
+  - 🇩🇪DE_9|2.3MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - 🇧🇷[www.v2nodes.com] ss-BR-1562...
+  - EPODONIOS
+  - 🇩🇪DE_9|2.3MB/s
 rules:
 - MATCH,SELECT

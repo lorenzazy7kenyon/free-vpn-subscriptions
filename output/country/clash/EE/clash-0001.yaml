@@ -11,30 +11,18 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
+  uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
   name: EPODONIOS
-  server: 138.124.4.224
-  port: 443
+  server: 201.7.25.100
+  port: 24446
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: grpc
   tls: true
-  servername: login.sakhweb.fyi
+  servername: willow.cdn.cachefleet.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 13nLTYkdBEFR-A4CfK2beOx-5LKEsXh1QHPq8Kt52BQ
-    short-id: 7271129440ade8fa
-- type: vless
-  uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
-  server: 138.124.4.224
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: login.sakhweb.fyi
-  client-fingerprint: firefox
+    public-key: w9JCByLSU3NGciCv2iceOz4TRL4swv8jfIAYoaKSyEw
+    short-id: a0938b702257f780
 - type: vless
   uuid: 7b571245-ec1e-44b1-bb5a-f7c61157d2c4
   name: EPODONIOS
@@ -50,39 +38,26 @@ proxies:
     public-key: VfyS9hoKlYU2l3oZ-T6RN2JzjWgtrIC7-VjseHCeBGE
     short-id: 0f4dacf33211e04f
 - type: vless
-  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-  name: EPODONIOS
-  server: 89.125.13.202
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: d3-ee1.cloud-cdn.xyz
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
-    short-id: ad6e08b22389abd2
-- type: vless
-  uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
-  name: EPODONIOS
-  server: 201.7.25.100
-  port: 24446
-  udp: true
-  network: grpc
-  tls: true
-  servername: willow.cdn.cachefleet.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: w9JCByLSU3NGciCv2iceOz4TRL4swv8jfIAYoaKSyEw
-    short-id: a0938b702257f780
-- type: vless
   uuid: 185e2bb3-2934-48d0-bbd5-dd20d16e83ee
   name: '🏳[www.v2nodes.com] vless- #6'
   server: 93.89.220.37
   port: 443
   udp: true
   network: tcp
+- type: vless
+  uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
+  name: EPODONIOS
+  server: 138.124.4.224
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: login.sakhweb.fyi
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 13nLTYkdBEFR-A4CfK2beOx-5LKEsXh1QHPq8Kt52BQ
+    short-id: 7271129440ade8fa
 - type: vless
   uuid: 185e2bb3-2934-48d0-bbd5-dd20d16e83ee
   name: EPODONIOS
@@ -97,16 +72,16 @@ proxies:
     public-key: lwKaUQ81wJUJRsqAPsfTPj5V_f9N50UYEwzRI_nuq2g
     short-id: e88cb983f3c97528
 - type: vless
-  uuid: 185e2bb3-2934-48d0-bbd5-dd20d16e83ee
-  name: 🇪🇪[www.v2nodes.com] vless-EE-1...
-  server: 93.89.220.37
+  uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
+  server: 138.124.4.224
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: ibm.com
-  client-fingerprint: chrome
+  servername: login.sakhweb.fyi
+  client-fingerprint: firefox
 - type: vless
   uuid: cba98ec5-9f00-4ada-a0ce-f490257af2ee
   name: EPODONIOS
@@ -127,26 +102,22 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
   - '🏳[www.v2nodes.com] vless- #6'
   - EPODONIOS
-  - 🇪🇪[www.v2nodes.com] vless-EE-1...
+  - EPODONIOS
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
   - '🏳[www.v2nodes.com] vless- #6'
   - EPODONIOS
-  - 🇪🇪[www.v2nodes.com] vless-EE-1...
+  - EPODONIOS
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
   - EPODONIOS
 rules:
 - MATCH,SELECT

@@ -1,0 +1,39 @@
+{
+  "outbounds": [
+    {
+      "server": "93.190.9.232",
+      "server_port": 3090,
+      "tag": "EPODONIOS",
+      "transport": {
+        "service_name": "vless",
+        "type": "grpc"
+      },
+      "type": "vless",
+      "uuid": "dde8219d-a988-4944-b220-0444f8dde681"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "EPODONIOS"
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "EPODONIOS"
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

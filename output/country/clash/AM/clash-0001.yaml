@@ -11,8 +11,18 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: f667a096-5231-4cfb-8759-92bb32473139
+  uuid: b8df3f50-ffef-4c7e-9ef3-d5b156a47c02
   name: '🇦🇲[www.v2nodes.com] vless-AM-1... #1'
+  server: 88.218.95.88
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: www.google.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: f667a096-5231-4cfb-8759-92bb32473139
+  name: '🇦🇲[www.v2nodes.com] vless-AM-1... #2'
   server: 77.91.68.70
   port: 55983
   udp: true
@@ -30,16 +40,6 @@ proxies:
   ws-opts:
     path: /vpnjantit
 - type: vless
-  uuid: b8df3f50-ffef-4c7e-9ef3-d5b156a47c02
-  name: 🇦🇲[www.v2nodes.com] vless-AM-1...
-  server: 88.218.95.88
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: www.google.com
-  client-fingerprint: chrome
-- type: vless
   uuid: f7376394-cd54-11f1-bb6a-bff6d0326f6a
   name: 🇦🇲[www.v2nodes.com] vless-AM-1...
   server: 194.36.37.59
@@ -55,16 +55,16 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇦🇲[www.v2nodes.com] vless-AM-1... #1'
+  - '🇦🇲[www.v2nodes.com] vless-AM-1... #2'
   - EPODONIOS
-  - 🇦🇲[www.v2nodes.com] vless-AM-1...
   - 🇦🇲[www.v2nodes.com] vless-AM-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇦🇲[www.v2nodes.com] vless-AM-1... #1'
+  - '🇦🇲[www.v2nodes.com] vless-AM-1... #2'
   - EPODONIOS
-  - 🇦🇲[www.v2nodes.com] vless-AM-1...
   - 🇦🇲[www.v2nodes.com] vless-AM-1...
 rules:
 - MATCH,SELECT

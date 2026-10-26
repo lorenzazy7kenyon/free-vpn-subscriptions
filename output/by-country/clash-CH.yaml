@@ -10,6 +10,32 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 7709550d-d2f1-67b1-b268-614431b073c5
+  name: EPODONIOS
+  server: 83.228.251.63
+  port: 8080
+  udp: true
+  network: tcp
+  tls: true
+  servername: play.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: j7qXqDT_IDpoN1CiO_TN6GZsWbvykcc5w_usWPTfyhw
+    short-id: 15a0582e
+- type: vless
+  uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
+  name: EPODONIOS
+  server: 179.43.170.84
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: si2.greenzone12.com
+  reality-opts:
+    public-key: hyOYRfDSIYyqALQt3N2H0RjK8gbV1JvPTkNACC4PJF8
+    short-id: 8718c58d3d51db59
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
@@ -43,34 +69,8 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: firefox
 - type: vless
-  uuid: 7709550d-d2f1-67b1-b268-614431b073c5
-  name: EPODONIOS
-  server: 83.228.251.63
-  port: 8080
-  udp: true
-  network: tcp
-  tls: true
-  servername: play.google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: j7qXqDT_IDpoN1CiO_TN6GZsWbvykcc5w_usWPTfyhw
-    short-id: 15a0582e
-- type: vless
-  uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
-  name: EPODONIOS
-  server: 179.43.170.84
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: si2.greenzone12.com
-  reality-opts:
-    public-key: hyOYRfDSIYyqALQt3N2H0RjK8gbV1JvPTkNACC4PJF8
-    short-id: 8718c58d3d51db59
-- type: vless
   uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  name: 🇨🇭[www.v2nodes.com] vless-CH-1...
+  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
   server: 208.69.78.217
   port: 2053
   udp: true
@@ -78,16 +78,6 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: hysteria2
-  password: capadm96216165
-  name: 🇨🇭192087 | ⚡️Telegram = t.me/v...
-  server: 208.69.78.217
-  port: 443
-  udp: true
-  sni: vpn.local
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
 - type: hysteria2
   password: 84a506ca5aca505696a454d828420b3f
   name: 🍄‍🟫74@oneclickvpnkeys
@@ -104,11 +94,10 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
-  - 🇨🇭[www.v2nodes.com] vless-CH-1...
   - EPODONIOS
   - EPODONIOS
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
-  - 🇨🇭192087 | ⚡️Telegram = t.me/v...
+  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
   - 🍄‍🟫74@oneclickvpnkeys
 - name: SELECT
   type: select
@@ -116,11 +105,10 @@ proxy-groups:
   - AUTO
   - EPODONIOS
   - EPODONIOS
-  - 🇨🇭[www.v2nodes.com] vless-CH-1...
   - EPODONIOS
   - EPODONIOS
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
-  - 🇨🇭192087 | ⚡️Telegram = t.me/v...
+  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
   - 🍄‍🟫74@oneclickvpnkeys
 rules:
 - MATCH,SELECT
