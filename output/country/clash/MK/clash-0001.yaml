@@ -12,6 +12,17 @@ dns:
 proxies:
 - type: vless
   uuid: 0869a7d7-b8e8-42be-8bca-84b0ab07744a
+  name: '🇲🇰 北马其顿 | MKD #1'
+  server: 89.185.82.151
+  port: 10443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: stackoverflow.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: 0869a7d7-b8e8-42be-8bca-84b0ab07744a
   name: 🇲🇰 北马其顿 | MKD
   server: 89.185.82.151
   port: 10443
@@ -24,30 +35,19 @@ proxies:
   reality-opts:
     public-key: XNfikFybWtjJjWU7-QBGrr-D9YUW0uSK_sR7mDDUmRU
     short-id: 6ba85179
-- type: vless
-  uuid: 0869a7d7-b8e8-42be-8bca-84b0ab07744a
-  name: '🇲🇰 北马其顿 | MKD #1'
-  server: 89.185.82.151
-  port: 10443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: stackoverflow.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇰 北马其顿 | MKD
   - '🇲🇰 北马其顿 | MKD #1'
+  - 🇲🇰 北马其顿 | MKD
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇲🇰 北马其顿 | MKD
   - '🇲🇰 北马其顿 | MKD #1'
+  - 🇲🇰 北马其顿 | MKD
 rules:
 - MATCH,SELECT

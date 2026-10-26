@@ -13,17 +13,6 @@ proxies:
 - type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   name: EPODONIOS
-  server: 77.75.199.30
-  port: 8880
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime59.workers.dev
-- type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: EPODONIOS
   server: 195.85.59.30
   port: 8880
   udp: true
@@ -32,6 +21,17 @@ proxies:
     path: /
     headers:
       Host: vms.lifetime58.workers.dev
+- type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: EPODONIOS
+  server: 77.75.199.30
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime59.workers.dev
 proxy-groups:
 - name: AUTO
   type: url-test

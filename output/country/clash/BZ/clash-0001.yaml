@@ -10,17 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: EPODONIOS
-  server: 45.131.210.30
-  port: 8880
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime05.workers.dev
 - type: vmess
   uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
   alterId: 0
@@ -36,6 +25,17 @@ proxies:
     path: /
     headers:
       Host: clash6.ssr-free.xyz
+- type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: EPODONIOS
+  server: 45.131.210.30
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime05.workers.dev
 proxy-groups:
 - name: AUTO
   type: url-test
