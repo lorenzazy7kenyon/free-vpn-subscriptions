@@ -11,19 +11,16 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   name: EPODONIOS
-  server: 51.161.204.242
-  port: 443
+  server: 192.65.217.30
+  port: 8880
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: a2qGjvUPq6Nz5FTbn_MSHp-055q2h8YXqIL5VIJ5zwE
-    short-id: d15c17cef9b2e456
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime37.workers.dev
 - type: vless
   uuid: 36e89875-9c53-482b-bc41-d3890e9da176
   name: 🏳[www.v2nodes.com] vless-
@@ -35,17 +32,6 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- type: vless
-  uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
-  name: 🇦🇺[www.v2nodes.com] vless-AU-1...
-  server: 51.161.204.242
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -54,13 +40,11 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - 🏳[www.v2nodes.com] vless-
-  - 🇦🇺[www.v2nodes.com] vless-AU-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
   - 🏳[www.v2nodes.com] vless-
-  - 🇦🇺[www.v2nodes.com] vless-AU-1...
 rules:
 - MATCH,SELECT

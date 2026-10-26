@@ -1,25 +1,6 @@
 {
   "outbounds": [
     {
-      "password": "humanity",
-      "server": "185.225.68.232",
-      "server_port": 443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.calmlunch.com"
-      },
-      "transport": {
-        "headers": {
-          "Host": "www.calmlunch.com"
-        },
-        "path": "/assignment",
-        "type": "ws"
-      },
-      "type": "trojan"
-    },
-    {
       "server": "13.143.191.7",
       "server_port": 443,
       "tag": "EPODONIOS",
@@ -40,10 +21,49 @@
       "uuid": "7f6adf9d-42f1-4fec-ab22-fb7f66bf3adc"
     },
     {
+      "password": "humanity",
+      "server": "185.225.68.232",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.calmlunch.com"
+      },
+      "transport": {
+        "headers": {
+          "Host": "www.calmlunch.com"
+        },
+        "path": "/assignment",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
+      "server": "37.221.210.113",
+      "server_port": 8443,
+      "tag": "🇭🇺[www.v2nodes.com] vless-HU-6...",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "free.cndyw.ggff.net"
+      },
+      "transport": {
+        "headers": {
+          "Host": "free.cndyw.ggff.net"
+        },
+        "path": "pyip=bpb.yousef.isegaro.comfp=random",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "04c808e2-0b59-47b0-a54b-32fc7ef1c902"
+    },
+    {
       "interval": "5m",
       "outbounds": [
         "EPODONIOS",
-        "EPODONIOS"
+        "EPODONIOS",
+        "🇭🇺[www.v2nodes.com] vless-HU-6..."
       ],
       "tag": "auto",
       "type": "urltest",
@@ -53,7 +73,8 @@
       "outbounds": [
         "auto",
         "EPODONIOS",
-        "EPODONIOS"
+        "EPODONIOS",
+        "🇭🇺[www.v2nodes.com] vless-HU-6..."
       ],
       "tag": "select",
       "type": "selector"

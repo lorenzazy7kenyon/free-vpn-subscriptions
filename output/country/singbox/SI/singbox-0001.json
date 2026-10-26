@@ -1,0 +1,64 @@
+{
+  "outbounds": [
+    {
+      "flow": "xtls-rprx-vision-udp443",
+      "server": "92.42.201.102",
+      "server_port": 443,
+      "tag": "🇸🇮SI_2|1.5MB/s",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "node-slo01.rkitman.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "d0c8aa8d-a535-432a-b521-21f0e561f643"
+    },
+    {
+      "flow": "xtls-rprx-vision-udp443",
+      "server": "92.42.201.107",
+      "server_port": 443,
+      "tag": "🇸🇮SI_1|2.7MB/s",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "node-slo02.rkitman.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "d0c8aa8d-a535-432a-b521-21f0e561f643"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "🇸🇮SI_2|1.5MB/s",
+        "🇸🇮SI_1|2.7MB/s"
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "🇸🇮SI_2|1.5MB/s",
+        "🇸🇮SI_1|2.7MB/s"
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

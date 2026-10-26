@@ -10,40 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: EPODONIOS
-  server: 132.145.80.230
-  port: 80
-  udp: true
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: kr02.a0a.xyz
-- type: vless
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  name: '🇰🇷 韩国 | KOR #2'
-  server: 54.180.133.191
-  port: 443
-  udp: true
-  network: tcp
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: EPODONIOS
-  server: 211.178.105.134
-  port: 6123
-  udp: true
-- type: vless
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  name: 🇰🇷 韩国 | KOR
-  server: 54.180.133.191
-  port: 443
-  udp: true
-  network: http
 - type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
   name: EPODONIOS
@@ -66,12 +32,30 @@ proxies:
   port: 6679
   udp: true
 - type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: EPODONIOS
+  server: 211.178.105.134
+  port: 6123
+  udp: true
+- type: ss
   cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
+  password: e4FCWrgpkji3QY
   name: EPODONIOS
   server: 141.164.45.187
-  port: 9090
+  port: 9101
   udp: true
+- type: vless
+  uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: '🇰🇷 韩国 | KOR #2'
+  server: 52.79.147.10
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ezdiatech.com
+  client-fingerprint: chrome
 - type: ss
   cipher: aes-256-gcm
   password: lGqs95QkFHo2NV
@@ -79,6 +63,34 @@ proxies:
   server: 141.164.45.187
   port: 5498
   udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+  name: EPODONIOS
+  server: 141.164.45.187
+  port: 9090
+  udp: true
+- type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 132.145.80.230
+  port: 80
+  udp: true
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: kr02.a0a.xyz
+- type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: '🇰🇷 韩国 | KOR #1'
+  server: 52.79.147.10
+  port: 443
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -86,24 +98,26 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - '🇰🇷 韩国 | KOR #2'
   - EPODONIOS
-  - 🇰🇷 韩国 | KOR
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - '🇰🇷 韩国 | KOR #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - '🇰🇷 韩国 | KOR #2'
   - EPODONIOS
-  - 🇰🇷 韩国 | KOR
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - '🇰🇷 韩国 | KOR #1'
 rules:
 - MATCH,SELECT

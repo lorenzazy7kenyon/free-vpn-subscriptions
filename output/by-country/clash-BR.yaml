@@ -11,16 +11,18 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: EPODONIOS
-  server: 45.194.53.30
-  port: 8880
+  uuid: 2445edef-76b7-4713-87b9-ed6aa0b1a2c9
+  name: '🇩🇪 德国 | DEU #8'
+  server: 185.133.35.56
+  port: 2083
   udp: true
   network: ws
+  tls: true
+  servername: titp.iranroyalzhin.ir
   ws-opts:
-    path: /?ed=2560
+    path: /fp=chrome
     headers:
-      Host: vms.lifetime19.workers.dev
+      Host: titp.iranroyalzhin.ir
 - type: vless
   uuid: 2445edef-76b7-4713-87b9-ed6aa0b1a2c9
   name: EPODONIOS
@@ -35,34 +37,19 @@ proxies:
     path: /
     headers:
       Host: titp.iranroyalzhin.ir
-- type: vless
-  uuid: 2445edef-76b7-4713-87b9-ed6aa0b1a2c9
-  name: 🇩🇪DE_9|2.3MB/s
-  server: 185.133.35.56
-  port: 2083
-  udp: true
-  network: ws
-  tls: true
-  servername: titp.iranroyalzhin.ir
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: titp.iranroyalzhin.ir
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇩🇪 德国 | DEU #8'
   - EPODONIOS
-  - EPODONIOS
-  - 🇩🇪DE_9|2.3MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇩🇪 德国 | DEU #8'
   - EPODONIOS
-  - EPODONIOS
-  - 🇩🇪DE_9|2.3MB/s
 rules:
 - MATCH,SELECT

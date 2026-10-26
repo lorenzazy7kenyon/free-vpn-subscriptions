@@ -1,0 +1,50 @@
+mode: rule
+log-level: info
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- type: vless
+  uuid: d0c8aa8d-a535-432a-b521-21f0e561f643
+  name: 🇸🇮SI_2|1.5MB/s
+  server: 92.42.201.102
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: node-slo01.rkitman.ru
+  client-fingerprint: firefox
+- type: vless
+  uuid: d0c8aa8d-a535-432a-b521-21f0e561f643
+  name: 🇸🇮SI_1|2.7MB/s
+  server: 92.42.201.107
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: node-slo02.rkitman.ru
+  client-fingerprint: firefox
+proxy-groups:
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇸🇮SI_2|1.5MB/s
+  - 🇸🇮SI_1|2.7MB/s
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - 🇸🇮SI_2|1.5MB/s
+  - 🇸🇮SI_1|2.7MB/s
+rules:
+- MATCH,SELECT
