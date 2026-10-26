@@ -12,18 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: d0c8aa8d-a535-432a-b521-21f0e561f643
-  name: 🇸🇮SI_2|1.5MB/s
-  server: 92.42.201.102
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision-udp443
-  network: tcp
-  tls: true
-  servername: node-slo01.rkitman.ru
-  client-fingerprint: firefox
-- type: vless
-  uuid: d0c8aa8d-a535-432a-b521-21f0e561f643
-  name: 🇸🇮SI_1|2.7MB/s
+  name: RU_speednode_0034
   server: 92.42.201.107
   port: 443
   udp: true
@@ -38,13 +27,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇮SI_2|1.5MB/s
-  - 🇸🇮SI_1|2.7MB/s
+  - RU_speednode_0034
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇸🇮SI_2|1.5MB/s
-  - 🇸🇮SI_1|2.7MB/s
+  - RU_speednode_0034
 rules:
 - MATCH,SELECT

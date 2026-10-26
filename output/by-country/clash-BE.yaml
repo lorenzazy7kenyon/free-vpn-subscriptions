@@ -26,18 +26,6 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
 - type: vless
-  uuid: 2a12bb81-f3a3-41bb-99ab-36febf676b4a
-  name: EPODONIOS
-  server: 109.69.218.217
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: kind-wolf.cdn.cachefleet.com
-  reality-opts:
-    public-key: 8hse7wRRL-F66rQ-aAeetKTw0MSeJC7Rr6EaDeLzdCU
-- type: vless
   uuid: c28ee61d-0d43-4e69-8e6a-6397ed0ffc03
   name: EPODONIOS
   server: 109.69.218.168
@@ -51,15 +39,17 @@ proxies:
   reality-opts:
     public-key: cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc
 - type: vless
-  uuid: 7f6adf9d-42f1-4fec-ab22-fb7f66bf3adc
+  uuid: 2a12bb81-f3a3-41bb-99ab-36febf676b4a
   name: EPODONIOS
-  server: 13.143.186.63
+  server: 109.69.218.217
   port: 443
   udp: true
-  network: grpc
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: k1qqse81xfbu.hat.onl
-  client-fingerprint: chrome
+  servername: kind-wolf.cdn.cachefleet.com
+  reality-opts:
+    public-key: 8hse7wRRL-F66rQ-aAeetKTw0MSeJC7Rr6EaDeLzdCU
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -69,13 +59,11 @@ proxy-groups:
   - 未知136
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 未知136
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 rules:

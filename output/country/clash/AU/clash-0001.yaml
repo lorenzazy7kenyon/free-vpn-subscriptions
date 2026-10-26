@@ -13,6 +13,17 @@ proxies:
 - type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   name: EPODONIOS
+  server: 103.169.142.30
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime38.workers.dev
+- type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: EPODONIOS
   server: 192.65.217.30
   port: 8880
   udp: true
@@ -23,7 +34,7 @@ proxies:
       Host: vms.lifetime37.workers.dev
 - type: vless
   uuid: 36e89875-9c53-482b-bc41-d3890e9da176
-  name: 🏳[www.v2nodes.com] vless-
+  name: '🏳[www.v2nodes.com] vless- #3'
   server: 51.161.204.244
   port: 443
   udp: true
@@ -39,12 +50,14 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - 🏳[www.v2nodes.com] vless-
+  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #3'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - 🏳[www.v2nodes.com] vless-
+  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #3'
 rules:
 - MATCH,SELECT

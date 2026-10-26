@@ -11,42 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 608af979-75ff-4480-b1fd-9c4a36962835
-  name: '🇻🇳 越南 | VNM #1'
-  server: 163.61.182.194
-  port: 34646
-  udp: true
-  network: tcp
-  tls: true
-  servername: api.receptivity.io
-  client-fingerprint: chrome
-- type: vless
-  uuid: 608af979-75ff-4480-b1fd-9c4a36962835
-  name: 🇻🇳 越南 | VNM
-  server: 163.61.182.194
-  port: 34646
-  udp: true
-  network: tcp
-  tls: true
-  servername: api.receptivity.io
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: UuXUXzPnZM8IY-D5bQPy4iBIzEpK4PJFEOJzeObISRA
-    short-id: 4710d669
-- type: vless
-  uuid: 608af979-75ff-4480-b1fd-9c4a36962835
-  name: EPODONIOS
-  server: 163.61.182.194
-  port: 34646
-  udp: true
-  network: tcp
-  tls: true
-  servername: api.receptivity.io
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: UuXUXzPnZM8IY-D5bQPy4iBIzEpK4PJFEOJzeObISRA
-    short-id: 4710d669
-- type: vless
   uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
   name: 🇻🇳[www.v2nodes.com] vless-VN-1...
   server: 150.95.109.109
@@ -59,17 +23,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇻🇳 越南 | VNM #1'
-  - 🇻🇳 越南 | VNM
-  - EPODONIOS
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇻🇳 越南 | VNM #1'
-  - 🇻🇳 越南 | VNM
-  - EPODONIOS
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
 rules:
 - MATCH,SELECT

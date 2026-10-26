@@ -10,27 +10,23 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: EPODONIOS
+  server: 45.131.210.30
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime05.workers.dev
 - type: vmess
   uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
   alterId: 0
   cipher: auto
   network: ws
   name: EPODONIOS
-  server: 203.30.191.19
-  port: 443
-  udp: true
-  tls: true
-  servername: clash6.ssr-free.xyz
-  ws-opts:
-    path: /dongtaiwang.com
-    headers:
-      Host: clash6.ssr-free.xyz
-- type: vmess
-  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🏁RELAY-203.30.191.19-0207
   server: 203.30.191.19
   port: 443
   udp: true
@@ -47,12 +43,12 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - 🏁RELAY-203.30.191.19-0207
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - 🏁RELAY-203.30.191.19-0207
+  - EPODONIOS
 rules:
 - MATCH,SELECT

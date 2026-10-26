@@ -12,17 +12,6 @@
       "uuid": "6538f5c3-5b01-4956-a8e6-47688c01c42e"
     },
     {
-      "server": "104.143.223.120",
-      "server_port": 2085,
-      "tag": "EPODONIOS",
-      "transport": {
-        "service_name": "vless",
-        "type": "grpc"
-      },
-      "type": "vless",
-      "uuid": "dde8219d-a988-4944-b220-0444f8dde681"
-    },
-    {
       "server": "104.143.223.66",
       "server_port": 2085,
       "tag": "EPODONIOS",
@@ -32,6 +21,17 @@
       },
       "type": "vless",
       "uuid": "6538f5c3-5b01-4956-a8e6-47688c01c42e"
+    },
+    {
+      "server": "104.143.223.120",
+      "server_port": 2085,
+      "tag": "EPODONIOS",
+      "transport": {
+        "service_name": "vless",
+        "type": "grpc"
+      },
+      "type": "vless",
+      "uuid": "dde8219d-a988-4944-b220-0444f8dde681"
     },
     {
       "server": "104.245.240.4",
@@ -54,18 +54,27 @@
       "uuid": "2bb8b13c-b3f0-2552-da05-d0929bfb36db"
     },
     {
-      "server": "213.111.148.137",
-      "server_port": 443,
-      "tag": "🇦🇹[www.v2nodes.com] vless-AT-3... #1",
+      "server": "173.242.63.235",
+      "server_port": 8443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "edgetunnel-4uw.pages.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
         "headers": {
-          "Host": "proxy-1cu.pages.dev"
+          "Host": "edgetunnel-4uw.pages.dev"
         },
-        "path": "/fp=androidsecurity=tls",
+        "path": "/",
         "type": "ws"
       },
       "type": "vless",
-      "uuid": "40af9131-d540-448a-bc56-5bba147a1dc3"
+      "uuid": "fdc48be3-a615-41ac-8bd1-ed844c931048"
     },
     {
       "server": "213.111.148.137",
@@ -87,14 +96,29 @@
       "uuid": "40af9131-d540-448a-bc56-5bba147a1dc3"
     },
     {
+      "server": "213.111.148.137",
+      "server_port": 443,
+      "tag": "🇦🇹[www.v2nodes.com] vless-AT-3... #1",
+      "transport": {
+        "headers": {
+          "Host": "proxy-1cu.pages.dev"
+        },
+        "path": "/fp=androidsecurity=tls",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "40af9131-d540-448a-bc56-5bba147a1dc3"
+    },
+    {
       "interval": "5m",
       "outbounds": [
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
-        "🇦🇹[www.v2nodes.com] vless-AT-3... #1",
-        "🇺🇦[www.v2nodes.com] vless-UA-1... #7"
+        "EPODONIOS",
+        "🇺🇦[www.v2nodes.com] vless-UA-1... #7",
+        "🇦🇹[www.v2nodes.com] vless-AT-3... #1"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -107,8 +131,9 @@
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
-        "🇦🇹[www.v2nodes.com] vless-AT-3... #1",
-        "🇺🇦[www.v2nodes.com] vless-UA-1... #7"
+        "EPODONIOS",
+        "🇺🇦[www.v2nodes.com] vless-UA-1... #7",
+        "🇦🇹[www.v2nodes.com] vless-AT-3... #1"
       ],
       "tag": "select",
       "type": "selector"
