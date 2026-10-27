@@ -13,17 +13,6 @@ proxies:
 - type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   name: EPODONIOS
-  server: 192.65.217.30
-  port: 8880
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime37.workers.dev
-- type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: EPODONIOS
   server: 103.169.142.30
   port: 8880
   udp: true
@@ -33,8 +22,46 @@ proxies:
     headers:
       Host: vms.lifetime38.workers.dev
 - type: vless
+  uuid: 00000000-0000-0000-0000-000000000000
+  name: EPODONIOS
+  server: 1.1.1.1
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: 1.1.1.1
+  ws-opts:
+    path: /
+    headers:
+      Host: 1.1.1.1
+- type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: EPODONIOS
+  server: 192.65.217.30
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime37.workers.dev
+- type: vless
   uuid: 36e89875-9c53-482b-bc41-d3890e9da176
-  name: '🏳[www.v2nodes.com] vless- #3'
+  name: EPODONIOS
+  server: 51.161.204.244
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: gCAazs5uxNuMZIxfDdw8wPE0nwKY4QfBfBkQveKAkEk
+    short-id: 0ad08b47f498efd2
+- type: vless
+  uuid: 36e89875-9c53-482b-bc41-d3890e9da176
+  name: '🏳[www.v2nodes.com] vless- #4'
   server: 51.161.204.244
   port: 443
   udp: true
@@ -51,13 +78,17 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #3'
+  - EPODONIOS
+  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #4'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #3'
+  - EPODONIOS
+  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #4'
 rules:
 - MATCH,SELECT

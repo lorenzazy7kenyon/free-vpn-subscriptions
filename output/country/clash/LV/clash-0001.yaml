@@ -10,20 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
-  name: EPODONIOS
-  server: 138.124.180.137
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
-    short-id: 33acba1b
 - type: trojan
   password: humanity
   name: EPODONIOS
@@ -36,7 +22,7 @@ proxies:
     path: /assignment
 - type: vless
   uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
-  name: '🏳[www.v2nodes.com] vless- #50'
+  name: '🏳[www.v2nodes.com] vless- #43'
   server: 195.123.208.32
   port: 443
   udp: true
@@ -52,14 +38,12 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #50'
+  - '🏳[www.v2nodes.com] vless- #43'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #50'
+  - '🏳[www.v2nodes.com] vless- #43'
 rules:
 - MATCH,SELECT

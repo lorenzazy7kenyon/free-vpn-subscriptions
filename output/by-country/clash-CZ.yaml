@@ -10,81 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知100
-  server: 195.85.23.225
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: EPODONIOS
-  server: 31.77.126.2
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecu
-  server: 31.77.126.2
-  port: 443
-  udp: true
-  network: tcp
-- type: vless
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  name: EPODONIOS
-  server: 31.77.126.2
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: lucasjow.us.ci
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
-    headers:
-      Host: lucasjow.us.ci
-- type: vless
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  name: EPODONIOS
-  server: 31.77.126.2
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: unsafe
-  ws-opts:
-    path: /cart/docs/www/proxyip=108.160.132.132
-    headers:
-      Host: lucasjow.us.ci
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 31.77.126.2
-  port: 443
-  udp: true
-  sni: www.volumeroot.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.volumeroot.com
 - type: vless
   uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
   name: '🏳[www.v2nodes.com] vless- #14'
@@ -110,31 +35,34 @@ proxies:
   reality-opts:
     public-key: D3LM6JIYP6kL--jSCj-BPj-qy-J7rzX0Jp9Z4ygNeV4
     short-id: 7791e189a518d69e
+- type: vless
+  uuid: 689a62e4-37e7-41de-9e6a-f2a56368c9e2
+  name: EPODONIOS
+  server: 178.208.80.70
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.google.co.uk
+  reality-opts:
+    public-key: LeUrd_GQtz8W6BKaL4R5R16UYRhfzyQ3G9AKBEHOLGg
+    short-id: '02'
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知100
-  - EPODONIOS
-  - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecu
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - '🏳[www.v2nodes.com] vless- #14'
+  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知100
-  - EPODONIOS
-  - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecu
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - '🏳[www.v2nodes.com] vless- #14'
+  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

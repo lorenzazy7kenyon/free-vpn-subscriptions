@@ -10,30 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 72d334af-a4e9-ed8f-cbec-75317ce0b463
-  name: EPODONIOS
-  server: 122.8.44.9
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: download.nvidia.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
-- type: vless
-  uuid: e37a629f-9558-c70f-abf2-f9555ef54c9e
-  name: EPODONIOS
-  server: 122.8.46.3
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: cdn.steamstatic.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: sRTNjrosfFSiuQX7Yt7Ub5DJvFznfHSC3nlzFQ3H2WU
 - type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   alterId: 64
@@ -43,32 +19,6 @@ proxies:
   server: 112.132.215.108
   port: 50002
   udp: true
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知97
-  server: 162.4.136.79
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-- type: vmess
-  uuid: 2b910c43-51e3-4b15-9be8-b658106ba35e
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知61
-  server: 39.108.113.127
-  port: 10086
-  udp: true
-  ws-opts:
-    path: /
 - type: vmess
   uuid: a01e5d56-464f-45b9-b600-164db4700162
   alterId: 0
@@ -91,29 +41,47 @@ proxies:
   udp: true
   ws-opts:
     path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+- type: vmess
+  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 39.108.113.127
+  port: 10086
+  udp: true
+  ws-opts:
+    path: /
+- type: vmess
+  uuid: 2b910c43-51e3-4b15-9be8-b658106ba35e
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知24
+  server: 39.108.113.127
+  port: 10086
+  udp: true
+  ws-opts:
+    path: /
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
   - 🇨🇳_CN_中国
-  - 未知97
-  - 未知61
   - 🇨🇳_CN_中国
   - EPODONIOS
+  - EPODONIOS
+  - 未知24
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
   - 🇨🇳_CN_中国
-  - 未知97
-  - 未知61
   - 🇨🇳_CN_中国
   - EPODONIOS
+  - EPODONIOS
+  - 未知24
 rules:
 - MATCH,SELECT

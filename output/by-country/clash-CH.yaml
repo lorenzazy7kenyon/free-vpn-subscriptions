@@ -10,26 +10,31 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
-  name: EPODONIOS
-  server: 132.243.175.144
-  port: 8388
-  udp: true
 - type: vless
-  uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
+  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
   name: EPODONIOS
-  server: 179.43.170.84
+  server: 45.90.59.15
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: si2.greenzone12.com
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: hyOYRfDSIYyqALQt3N2H0RjK8gbV1JvPTkNACC4PJF8
-    short-id: 8718c58d3d51db59
+    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
+    short-id: 19253fae84102271
+- type: vless
+  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
+  name: 🇨🇭[www.v2nodes.com] vless-CH-1...
+  server: 45.90.59.15
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 - type: vless
   uuid: bfd81b63-a43d-4c27-b71d-2c948cfc4ab2
   name: EPODONIOS
@@ -45,17 +50,6 @@ proxies:
     public-key: D3LM6JIYP6kL--jSCj-BPj-qy-J7rzX0Jp9Z4ygNeV4
     short-id: 7791e189a518d69e
 - type: vless
-  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
-  name: 🇨🇭[www.v2nodes.com] vless-CH-1...
-  server: 45.90.59.15
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- type: vless
   uuid: 7709550d-d2f1-67b1-b268-614431b073c5
   name: EPODONIOS
   server: 83.228.251.63
@@ -69,8 +63,28 @@ proxies:
     public-key: j7qXqDT_IDpoN1CiO_TN6GZsWbvykcc5w_usWPTfyhw
     short-id: 15a0582e
 - type: vless
+  uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
+  name: EPODONIOS
+  server: 179.43.170.84
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: si2.greenzone12.com
+  reality-opts:
+    public-key: hyOYRfDSIYyqALQt3N2H0RjK8gbV1JvPTkNACC4PJF8
+    short-id: 8718c58d3d51db59
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
+  name: EPODONIOS
+  server: 132.243.175.144
+  port: 8388
+  udp: true
+- type: vless
   uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  name: '🏳[www.v2nodes.com] vless- #13'
   server: 208.69.78.217
   port: 2053
   udp: true
@@ -93,22 +107,24 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
   - EPODONIOS
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #13'
   - 🍄‍🟫74@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
   - EPODONIOS
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #13'
   - 🍄‍🟫74@oneclickvpnkeys
 rules:
 - MATCH,SELECT

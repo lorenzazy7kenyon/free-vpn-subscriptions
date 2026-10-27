@@ -1,25 +1,6 @@
 {
   "outbounds": [
     {
-      "password": "humanity",
-      "server": "185.225.68.232",
-      "server_port": 443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.calmlunch.com"
-      },
-      "transport": {
-        "headers": {
-          "Host": "www.calmlunch.com"
-        },
-        "path": "/assignment",
-        "type": "ws"
-      },
-      "type": "trojan"
-    },
-    {
       "server": "13.143.191.7",
       "server_port": 443,
       "tag": "🇭🇺[www.v2nodes.com] vless-HU-1...",
@@ -54,11 +35,30 @@
       "uuid": "04c808e2-0b59-47b0-a54b-32fc7ef1c902"
     },
     {
+      "password": "humanity",
+      "server": "185.225.68.232",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.calmlunch.com"
+      },
+      "transport": {
+        "headers": {
+          "Host": "www.calmlunch.com"
+        },
+        "path": "/assignment",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "EPODONIOS",
         "🇭🇺[www.v2nodes.com] vless-HU-1...",
-        "🇭🇺[www.v2nodes.com] vless-HU-6..."
+        "🇭🇺[www.v2nodes.com] vless-HU-6...",
+        "EPODONIOS"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -67,9 +67,9 @@
     {
       "outbounds": [
         "auto",
-        "EPODONIOS",
         "🇭🇺[www.v2nodes.com] vless-HU-1...",
-        "🇭🇺[www.v2nodes.com] vless-HU-6..."
+        "🇭🇺[www.v2nodes.com] vless-HU-6...",
+        "EPODONIOS"
       ],
       "tag": "select",
       "type": "selector"

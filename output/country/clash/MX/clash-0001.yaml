@@ -11,6 +11,26 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  name: EPODONIOS
+  server: 149.104.90.21
+  port: 19167
+  udp: true
+  network: tcp
+  tls: true
+  servername: mx001.zestapp778.com
+- type: vless
+  uuid: caf3d607-95c9-4ea0-98b5-864027056ba0
+  name: 🇲🇽MX_2|2.0MB/s
+  server: 147.78.1.73
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: mx1.accessboy.com
+  client-fingerprint: firefox
+- type: vless
   uuid: 0575005f-0ba9-4d6d-85e0-4a6a8cbafc1b
   name: '🇲🇽[www.v2nodes.com] vless-MX-1... #3'
   server: 131.196.253.141
@@ -24,26 +44,34 @@ proxies:
     headers:
       Host: kclx.eu.org
 - type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  uuid: 3e21e3d3-6d26-4155-b851-764dd8e8c6b5
   name: EPODONIOS
-  server: 149.104.90.21
-  port: 19167
+  server: 156.252.229.11
+  port: 8443
   udp: true
   network: tcp
   tls: true
-  servername: mx001.zestapp778.com
+  servername: play.googleapis.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
+    short-id: 974f7f8f
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - EPODONIOS
+  - 🇲🇽MX_2|2.0MB/s
   - '🇲🇽[www.v2nodes.com] vless-MX-1... #3'
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
+  - 🇲🇽MX_2|2.0MB/s
   - '🇲🇽[www.v2nodes.com] vless-MX-1... #3'
   - EPODONIOS
 rules:

@@ -2,6 +2,23 @@
   "outbounds": [
     {
       "flow": "xtls-rprx-vision",
+      "server": "195.123.245.241",
+      "server_port": 443,
+      "tag": "🏳[www.v2nodes.com] vless- #14",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "gateway.icloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "7c053ca8-38cc-45e2-930c-eda1fd66f903"
+    },
+    {
+      "flow": "xtls-rprx-vision",
       "server": "46.36.44.220",
       "server_port": 443,
       "tag": "EPODONIOS",
@@ -24,26 +41,28 @@
     },
     {
       "flow": "xtls-rprx-vision",
-      "server": "195.123.245.241",
+      "server": "178.208.80.70",
       "server_port": 443,
-      "tag": "🏳[www.v2nodes.com] vless- #14",
+      "tag": "EPODONIOS",
       "tls": {
         "enabled": true,
-        "insecure": false,
-        "server_name": "gateway.icloud.com",
-        "utls": {
+        "insecure": true,
+        "reality": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
+          "public_key": "LeUrd_GQtz8W6BKaL4R5R16UYRhfzyQ3G9AKBEHOLGg",
+          "short_id": "02"
+        },
+        "server_name": "www.google.co.uk"
       },
       "type": "vless",
-      "uuid": "7c053ca8-38cc-45e2-930c-eda1fd66f903"
+      "uuid": "689a62e4-37e7-41de-9e6a-f2a56368c9e2"
     },
     {
       "interval": "5m",
       "outbounds": [
+        "🏳[www.v2nodes.com] vless- #14",
         "EPODONIOS",
-        "🏳[www.v2nodes.com] vless- #14"
+        "EPODONIOS"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -52,8 +71,9 @@
     {
       "outbounds": [
         "auto",
+        "🏳[www.v2nodes.com] vless- #14",
         "EPODONIOS",
-        "🏳[www.v2nodes.com] vless- #14"
+        "EPODONIOS"
       ],
       "tag": "select",
       "type": "selector"

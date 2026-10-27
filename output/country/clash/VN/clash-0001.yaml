@@ -12,6 +12,13 @@ dns:
 proxies:
 - type: vless
   uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
+  name: EPODONIOS
+  server: 150.95.109.109
+  port: 2086
+  udp: true
+  network: tcp
+- type: vless
+  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
   name: 🇻🇳[www.v2nodes.com] vless-VN-1...
   server: 150.95.109.109
   port: 2086
@@ -23,11 +30,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - EPODONIOS
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
 rules:
 - MATCH,SELECT

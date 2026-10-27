@@ -11,17 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: EPODONIOS
-  server: 88.216.69.30
-  port: 8880
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime06.workers.dev
-- type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: EPODONIOS
   server: 88.216.69.253
@@ -69,12 +58,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
