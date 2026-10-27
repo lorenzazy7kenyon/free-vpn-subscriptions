@@ -10,25 +10,31 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: hysteria2
-  password: 78585441-c8b3-40fb-9b94-15edd312fdcf
-  name: '🇮🇩 印尼 | IDN #1'
-  server: 202.155.14.134
-  port: 55555
+- type: vless
+  uuid: 7d9dbe01-f192-436e-b6d5-533fc3c998e0
+  name: EPODONIOS
+  server: 103.150.192.28
+  port: 443
   udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
+  network: ws
+  tls: true
+  servername: nova-relay-d9g973.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /ws?ip=103.150.192.28:443
+    headers:
+      Host: nova-relay-d9g973.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇮🇩 印尼 | IDN #1'
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇮🇩 印尼 | IDN #1'
+  - EPODONIOS
 rules:
 - MATCH,SELECT

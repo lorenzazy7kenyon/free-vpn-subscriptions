@@ -21,6 +21,20 @@ proxies:
   ws-opts:
     path: /assignment
 - type: vless
+  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
+  name: EPODONIOS
+  server: 138.124.180.137
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
+    short-id: 33acba1b
+- type: vless
   uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
   name: 🇱🇻[www.v2nodes.com] vless-LV-1...
   server: 195.123.208.32
@@ -45,6 +59,20 @@ proxies:
   reality-opts:
     public-key: NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo
     short-id: 5c256336e3b673fa
+- type: vless
+  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
+  name: EPODONIOS
+  server: 195.123.208.32
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ICrsmE5hqN7IsDIyHPG2WkDUUFK_VEj9yobLv8zuDwk
+    short-id: 757b9e1ef18e60f0
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -52,14 +80,18 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - EPODONIOS
   - 🇱🇻[www.v2nodes.com] vless-LV-1...
   - 🇱🇻 拉脱维亚 | LVA
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - EPODONIOS
   - 🇱🇻[www.v2nodes.com] vless-LV-1...
   - 🇱🇻 拉脱维亚 | LVA
+  - EPODONIOS
 rules:
 - MATCH,SELECT

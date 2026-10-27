@@ -21,6 +21,28 @@ proxies:
     path: /sVnT0vhrV7WAl52Z
     headers:
       Host: worker3.gisenoj224.workers.dev
+- type: vless
+  uuid: 38dd06a1-e1cb-492b-bb87-218ce05d0d67
+  name: EPODONIOS
+  server: 185.143.233.5
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir
+- type: vless
+  uuid: 0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6
+  name: EPODONIOS
+  server: 185.143.234.238
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pgcfws-r4
+    headers:
+      Host: uu.caroptions.ir
 - type: vmess
   uuid: b831381d-6324-4d53-ad4f-8cda48b30811
   alterId: 0
@@ -57,28 +79,6 @@ proxies:
     headers:
       Host: parsi.parsi.sbs
 - type: vless
-  uuid: 38dd06a1-e1cb-492b-bb87-218ce05d0d67
-  name: EPODONIOS
-  server: 185.143.233.5
-  port: 80
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir
-- type: vless
-  uuid: 0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6
-  name: EPODONIOS
-  server: 185.143.234.238
-  port: 80
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pgcfws-r4
-    headers:
-      Host: uu.caroptions.ir
-- type: vless
   uuid: 950ec237-e75f-4e99-9557-6545784d4202
   name: EPODONIOS
   server: 94.182.131.101
@@ -91,6 +91,13 @@ proxies:
   reality-opts:
     public-key: fPjow17wDX8YJG89j9lraSqv54yvuS21lq3lJiAX_g0
     short-id: 489861db
+- type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: Dig9t4E8rdydV1374b3Euw==:hsUs4xy/0HlH4h5HKYMCFQ==
+  name: EPODONIOS
+  server: 81.12.35.246
+  port: 8080
+  udp: true
 - type: vless
   uuid: 30fcec7f-164b-465c-87f4-b93784a6056b
   name: EPODONIOS
@@ -111,17 +118,17 @@ proxies:
   udp: true
 - type: ss
   cipher: aes-256-gcm
-  password: ZGUwMWE1ZmIyZjA0ODQ5ZmE0NTk2MDIwNjIwNjFj
+  password: Y2NmZTljMDgyOWQwZmU3ZTkxMDFjMTc3OGI0Mjk2
   name: EPODONIOS
   server: 37.32.30.203
   port: 9147
   udp: true
 - type: ss
-  cipher: 2022-blake3-aes-128-gcm
-  password: Dig9t4E8rdydV1374b3Euw==:hsUs4xy/0HlH4h5HKYMCFQ==
+  cipher: aes-256-gcm
+  password: MDdlY2U5MWJhN2FlZDgyYmI4NGQ2OTE0YzE4MmE3
   name: EPODONIOS
-  server: 81.12.35.246
-  port: 8080
+  server: 188.121.121.176
+  port: 9118
   udp: true
 proxy-groups:
 - name: AUTO
@@ -140,10 +147,12 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

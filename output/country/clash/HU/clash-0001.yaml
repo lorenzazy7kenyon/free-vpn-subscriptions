@@ -20,18 +20,6 @@ proxies:
   tls: true
   servername: edv6f206j8ujw.hat.onl
   client-fingerprint: firefox
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 185.225.68.232
-  port: 443
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
 - type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: '🏳[www.v2nodes.com] vless- #30'
@@ -45,6 +33,18 @@ proxies:
     path: pyip=bpb.yousef.isegaro.comfp=random
     headers:
       Host: free.cndyw.ggff.net
+- type: trojan
+  password: humanity
+  name: EPODONIOS
+  server: 185.225.68.232
+  port: 443
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -52,14 +52,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇭🇺[www.v2nodes.com] vless-HU-1...
-  - EPODONIOS
   - '🏳[www.v2nodes.com] vless- #30'
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇭🇺[www.v2nodes.com] vless-HU-1...
-  - EPODONIOS
   - '🏳[www.v2nodes.com] vless- #30'
+  - EPODONIOS
 rules:
 - MATCH,SELECT

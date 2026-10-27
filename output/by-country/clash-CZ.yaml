@@ -10,9 +10,24 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知77
+  server: 195.85.23.225
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
 - type: vless
   uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
-  name: EPODONIOS
+  name: '🏳[www.v2nodes.com] vless- #11'
   server: 195.123.245.241
   port: 443
   udp: true
@@ -21,9 +36,6 @@ proxies:
   tls: true
   servername: gateway.icloud.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw
-    short-id: 23d0950d60bc0d5b
 - type: vless
   uuid: bfd81b63-a43d-4c27-b71d-2c948cfc4ab2
   name: EPODONIOS
@@ -38,32 +50,21 @@ proxies:
   reality-opts:
     public-key: D3LM6JIYP6kL--jSCj-BPj-qy-J7rzX0Jp9Z4ygNeV4
     short-id: 7791e189a518d69e
-- type: vless
-  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
-  name: '🏳[www.v2nodes.com] vless- #11'
-  server: 195.123.245.241
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
+  - 未知77
   - '🏳[www.v2nodes.com] vless- #11'
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
+  - 未知77
   - '🏳[www.v2nodes.com] vless- #11'
+  - EPODONIOS
 rules:
 - MATCH,SELECT

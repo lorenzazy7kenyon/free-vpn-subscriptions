@@ -1,21 +1,32 @@
 {
   "outbounds": [
     {
-      "password": "78585441-c8b3-40fb-9b94-15edd312fdcf",
-      "server": "202.155.14.134",
-      "server_port": 55555,
-      "tag": "🇮🇩 印尼 | IDN #1",
+      "server": "103.150.192.28",
+      "server_port": 443,
+      "tag": "EPODONIOS",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "www.bing.com"
+        "insecure": false,
+        "server_name": "nova-relay-d9g973.pages.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
-      "type": "hysteria2"
+      "transport": {
+        "headers": {
+          "Host": "nova-relay-d9g973.pages.dev"
+        },
+        "path": "/ws?ip=103.150.192.28:443",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "7d9dbe01-f192-436e-b6d5-533fc3c998e0"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇮🇩 印尼 | IDN #1"
+        "EPODONIOS"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -24,7 +35,7 @@
     {
       "outbounds": [
         "auto",
-        "🇮🇩 印尼 | IDN #1"
+        "EPODONIOS"
       ],
       "tag": "select",
       "type": "selector"
