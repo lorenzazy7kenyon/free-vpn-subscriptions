@@ -10,17 +10,13 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: cd842ef8-9577-47f3-83ca-627147ed291b
+- type: ss
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
   name: EPODONIOS
-  server: 38.54.59.209
-  port: 2087
+  server: 38.54.59.102
+  port: 443
   udp: true
-  network: ws
-  ws-opts:
-    path: /d1000b16fe76
-    headers:
-      Host: Telegram-Leviko_v2ray
 proxy-groups:
 - name: AUTO
   type: url-test

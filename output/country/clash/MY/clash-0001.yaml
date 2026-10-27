@@ -10,6 +10,13 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: trojan
+  password: 5931134d1cde66bf83a54acdfebe7ab2
+  name: EPODONIOS
+  server: 47.250.84.25
+  port: 443
+  udp: true
+  sni: moltbot.doctoroyy.net
 - type: vless
   uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
   name: '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
@@ -17,16 +24,9 @@ proxies:
   port: 61111
   udp: true
   network: tcp
-- type: trojan
-  password: 5931134d1cde66bf83a54acdfebe7ab2
-  name: 🇲🇾[www.v2nodes.com] trojan-MY-...
-  server: 47.250.84.25
-  port: 443
-  udp: true
-  sni: 47.250.84.25
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇸🇬[www.v2nodes.com] vless-SG-9... #1'
+  name: '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
   server: 216.173.67.59
   port: 443
   udp: true
@@ -43,15 +43,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - EPODONIOS
   - '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
-  - 🇲🇾[www.v2nodes.com] trojan-MY-...
-  - '🇸🇬[www.v2nodes.com] vless-SG-9... #1'
+  - '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
-  - 🇲🇾[www.v2nodes.com] trojan-MY-...
-  - '🇸🇬[www.v2nodes.com] vless-SG-9... #1'
+  - '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
 rules:
 - MATCH,SELECT

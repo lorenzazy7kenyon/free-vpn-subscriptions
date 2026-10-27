@@ -14,10 +14,56 @@
         "headers": {
           "Host": "www.calmlunch.com"
         },
-        "path": "//assignment",
+        "path": "/assignment",
         "type": "ws"
       },
       "type": "trojan"
+    },
+    {
+      "server": "152.53.1.40",
+      "server_port": 8443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "au4.pad-sservice.lat",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "au4.pad-service.com"
+        },
+        "path": "/A14U",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "2b0e5676-fb62-4bf0-9607-6e7818421e8e"
+    },
+    {
+      "server": "62.83.41.69",
+      "server_port": 8443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "au6.pad-sservice.lat",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "au6.pad-sservice.lat"
+        },
+        "path": "/AU6W",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "2b0e5676-fb62-4bf0-9607-6e7818421e8e"
     },
     {
       "flow": "xtls-rprx-vision",
@@ -41,6 +87,8 @@
       "interval": "5m",
       "outbounds": [
         "EPODONIOS",
+        "EPODONIOS",
+        "EPODONIOS",
         "EPODONIOS"
       ],
       "tag": "auto",
@@ -50,6 +98,8 @@
     {
       "outbounds": [
         "auto",
+        "EPODONIOS",
+        "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS"
       ],

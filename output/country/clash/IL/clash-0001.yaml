@@ -33,20 +33,6 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: ccc.010304.xyz
-- type: vless
-  uuid: f0b144bd-4c44-440d-b630-d79ec82cad3a
-  name: EPODONIOS
-  server: 77.91.69.169
-  port: 19226
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: PQjgf7GxBd2tDXf0zl9Z5rTZo7LdsWj0hGZLH-lJ-Uk
-    short-id: 7c
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -55,13 +41,11 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - 🇮🇱[www.v2nodes.com] vless-IL-1...
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
   - 🇮🇱[www.v2nodes.com] vless-IL-1...
-  - EPODONIOS
 rules:
 - MATCH,SELECT

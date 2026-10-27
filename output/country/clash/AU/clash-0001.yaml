@@ -13,14 +13,14 @@ proxies:
 - type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   name: EPODONIOS
-  server: 103.169.142.30
+  server: 192.65.217.30
   port: 8880
   udp: true
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: vms.lifetime38.workers.dev
+      Host: vms.lifetime37.workers.dev
 - type: vless
   uuid: 00000000-0000-0000-0000-000000000000
   name: EPODONIOS
@@ -37,31 +37,17 @@ proxies:
 - type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   name: EPODONIOS
-  server: 192.65.217.30
+  server: 103.169.142.30
   port: 8880
   udp: true
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: vms.lifetime37.workers.dev
+      Host: vms.lifetime38.workers.dev
 - type: vless
   uuid: 36e89875-9c53-482b-bc41-d3890e9da176
-  name: EPODONIOS
-  server: 51.161.204.244
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: gCAazs5uxNuMZIxfDdw8wPE0nwKY4QfBfBkQveKAkEk
-    short-id: 0ad08b47f498efd2
-- type: vless
-  uuid: 36e89875-9c53-482b-bc41-d3890e9da176
-  name: '🏳[www.v2nodes.com] vless- #4'
+  name: 🇦🇺[www.v2nodes.com] vless-AU-1...
   server: 51.161.204.244
   port: 443
   udp: true
@@ -70,6 +56,20 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: firefox
+- type: vless
+  uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
+  name: EPODONIOS
+  server: 51.161.204.242
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: a2qGjvUPq6Nz5FTbn_MSHp-055q2h8YXqIL5VIJ5zwE
+    short-id: d15c17cef9b2e456
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -79,8 +79,8 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - 🇦🇺[www.v2nodes.com] vless-AU-1...
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #4'
 - name: SELECT
   type: select
   proxies:
@@ -88,7 +88,7 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - 🇦🇺[www.v2nodes.com] vless-AU-1...
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #4'
 rules:
 - MATCH,SELECT

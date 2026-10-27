@@ -10,13 +10,31 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-256-gcm
-  password: owVdNnQcdPgthSyX
+- type: vless
+  uuid: c6b1b2d0-ed5e-48ce-99e6-112ff330030d
   name: EPODONIOS
-  server: 216.128.168.190
-  port: 8388
+  server: 177.7.51.29
+  port: 8443
   udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: laG5BxoSbdRozpauATNFBPPTwhuDuu0JFl_SCP2ZQlU
+    short-id: 14fbf992
+- type: vless
+  uuid: c6b1b2d0-ed5e-48ce-99e6-112ff330030d
+  name: 🇺🇸US_2|4.0MB/s
+  server: 177.7.51.29
+  port: 8443
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -24,10 +42,12 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - 🇺🇸US_2|4.0MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - 🇺🇸US_2|4.0MB/s
 rules:
 - MATCH,SELECT

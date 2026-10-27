@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
-  name: '🏳[www.v2nodes.com] vless- #14'
+  name: 🇨🇿[www.v2nodes.com] vless-CZ-1...
   server: 195.123.245.241
   port: 443
   udp: true
@@ -35,34 +35,19 @@ proxies:
   reality-opts:
     public-key: D3LM6JIYP6kL--jSCj-BPj-qy-J7rzX0Jp9Z4ygNeV4
     short-id: 7791e189a518d69e
-- type: vless
-  uuid: 689a62e4-37e7-41de-9e6a-f2a56368c9e2
-  name: EPODONIOS
-  server: 178.208.80.70
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.google.co.uk
-  reality-opts:
-    public-key: LeUrd_GQtz8W6BKaL4R5R16UYRhfzyQ3G9AKBEHOLGg
-    short-id: '02'
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #14'
-  - EPODONIOS
+  - 🇨🇿[www.v2nodes.com] vless-CZ-1...
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #14'
-  - EPODONIOS
+  - 🇨🇿[www.v2nodes.com] vless-CZ-1...
   - EPODONIOS
 rules:
 - MATCH,SELECT

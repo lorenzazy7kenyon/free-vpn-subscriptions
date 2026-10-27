@@ -10,6 +10,30 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 7072eeba-94fd-4fb3-92f2-a4506dd84cd8
+  name: 🇯🇵[www.v2nodes.com] vless-JP-1...
+  server: 31.76.91.98
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: fuji.etherhub.cc
+  client-fingerprint: firefox
+- type: vless
+  uuid: 309b0ce3-09a8-4883-bfe4-bd56e215be44
+  name: EPODONIOS
+  server: 31.76.91.138
+  port: 2087
+  udp: true
+  network: grpc
+  tls: true
+  servername: ads.x5.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4
+    short-id: c226283c4de5b1ad
 - type: ss
   cipher: aes-256-gcm
   password: 3eOFeNssde7PYYMv
@@ -17,6 +41,20 @@ proxies:
   server: 84.247.155.196
   port: 443
   udp: true
+- type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  name: EPODONIOS
+  server: 43.170.8.95
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: jp3.yohototo.top
+  client-fingerprint: chrome
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
 - type: vmess
   uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
   alterId: 0
@@ -32,14 +70,14 @@ proxies:
   cipher: aes-128-gcm
   password: shadowsocks
   name: EPODONIOS
-  server: 149.22.87.240
+  server: 149.22.87.204
   port: 443
   udp: true
 - type: ss
   cipher: aes-128-gcm
   password: shadowsocks
   name: EPODONIOS
-  server: 149.22.87.204
+  server: 149.22.87.240
   port: 443
   udp: true
 - type: ss
@@ -49,97 +87,34 @@ proxies:
   server: 149.22.87.241
   port: 443
   udp: true
-- type: vless
-  uuid: 309b0ce3-09a8-4883-bfe4-bd56e215be44
+- type: ss
+  cipher: aes-256-gcm
+  password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
   name: EPODONIOS
-  server: 31.76.91.138
-  port: 2087
+  server: 191.223.221.53
+  port: 8388
   udp: true
-  network: grpc
-  tls: true
-  servername: ads.x5.ru
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4
-    short-id: c226283c4de5b1ad
-- type: vless
-  uuid: 7072eeba-94fd-4fb3-92f2-a4506dd84cd8
-  name: EPODONIOS
-  server: 31.76.91.98
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: fuji.etherhub.cc
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: ejx56dFtS4LK_Th6HSLFFdm7v7zqRpv8KfjrWAw4Sjg
-    short-id: bd6f67b6b2152b45
-- type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: EPODONIOS
-  server: 103.75.118.228
-  port: 11452
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-- type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: EPODONIOS
-  server: 3.114.220.22
-  port: 10583
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-- type: vless
-  uuid: 7072eeba-94fd-4fb3-92f2-a4506dd84cd8
-  name: 🇯🇵[www.v2nodes.com] vless-JP-1...
-  server: 31.76.91.98
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: fuji.etherhub.cc
-  client-fingerprint: firefox
 - type: trojan
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
-  name: EPODONIOS
+  name: 🇯🇵[www.v2nodes.com] trojan-JP-...
   server: 45.32.52.173
   port: 8886
   udp: true
   sni: 45.32.52.173
-  skip-cert-verify: true
-- type: ss
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-  name: EPODONIOS
-  server: 84.247.155.196
-  port: 80
-  udp: true
 - type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
-  server: 103.75.118.228
-  port: 12683
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  name: EPODONIOS
+  server: 200.180.163.38
+  port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: ws
   tls: true
-  servername: www.apple.com
+  servername: snip.edgeoneai.cc.cd
   client-fingerprint: chrome
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=512
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - type: vmess
   uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
   alterId: 0
@@ -152,63 +127,78 @@ proxies:
   ws-opts:
     path: /cctv13.m3u8
     headers:
-      Host: 168.138.43.75
+      Host: jp01.a0a.xyz
+- type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
+  server: 103.75.118.228
+  port: 11452
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 - type: vmess
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
   alterId: 0
   cipher: auto
   network: ws
-  name: EPODONIOS
-  server: 168.138.43.75
+  name: 🇯🇵JP-172.111.146.64-0162
+  server: 172.111.146.64
   port: 80
   udp: true
   ws-opts:
     path: /
-    headers:
-      Host: 168.138.43.75
 - type: vless
-  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
-  server: 152.69.195.67
-  port: 47878
+  uuid: f12d0220-e1de-4232-bcef-7e5a12f05062
+  name: EPODONIOS
+  server: 103.27.133.17
+  port: 41438
   udp: true
+  flow: xtls-rprx-vision
   network: tcp
-- type: vmess
-  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知18
-  server: 140.83.57.20
-  port: 13118
-  udp: true
   tls: true
-  servername: sg.11160321.de5.net
-  ws-opts:
-    path: /
-    headers:
-      Host: sg.11160321.de5.net
+  servername: jp15.static-s3.org
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: w_X-vOLSkQ0Cv4sMRU7j9lq-WVX_rZqYkTcgDkIgUF8
+    short-id: 1fbda82b6856a6d3
 - type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
-  server: 141.11.139.215
-  port: 443
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  name: EPODONIOS
+  server: 3.114.220.22
+  port: 10583
   udp: true
-  network: ws
-  ws-opts:
-    path: /fp=chromesecurity=tls
-    headers:
-      Host: ccc.010304.xyz
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+- type: vless
+  uuid: f12d0220-e1de-4232-bcef-7e5a12f05062
+  name: 🇯🇵JP_1|1.9MB/s
+  server: 103.27.133.17
+  port: 41438
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: jp15.static-s3.org
+  client-fingerprint: chrome
 - type: ss
   cipher: aes-256-gcm
-  password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
+  password: 3eOFeNssde7PYYMv
   name: EPODONIOS
-  server: 191.223.221.53
-  port: 8388
+  server: 84.247.155.196
+  port: 80
   udp: true
 - type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: '🏳[www.v2nodes.com] vless- #41'
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #8'
   server: 3.114.220.22
   port: 19645
   udp: true
@@ -217,44 +207,23 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
+- type: vless
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  server: 137.220.221.179
+  port: 443
+  udp: true
+  network: tcp
 - type: ss
   cipher: aes-256-gcm
   password: BeaUf9c0AEWH40Pu
-  name: EPODONIOS
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1599...
   server: 154.36.158.197
   port: 8388
   udp: true
 - type: vless
-  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+  uuid: e01fcb68-3112-49da-b85d-dffb799cfc9b
   name: '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
-  server: 137.220.221.179
-  port: 443
-  udp: true
-  network: tcp
-- type: vless
-  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
-  name: EPODONIOS
-  server: 137.220.221.179
-  port: 443
-  udp: true
-  network: tcp
-- type: vless
-  uuid: e01fcb68-3112-49da-b85d-dffb799cfc9b
-  name: EPODONIOS
-  server: 156.246.88.125
-  port: 26518
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: github.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1fa6iCY7vhoQyKu91FeaK04FN-mr1qeHnrtdyLZ79mk
-    short-id: 6caead99
-- type: vless
-  uuid: e01fcb68-3112-49da-b85d-dffb799cfc9b
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
   server: 156.246.88.125
   port: 26518
   udp: true
@@ -263,65 +232,68 @@ proxies:
   tls: true
   servername: github.com
   client-fingerprint: firefox
+- type: vless
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+  name: EPODONIOS
+  server: 137.220.221.179
+  port: 443
+  udp: true
+  network: tcp
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - 🇯🇵[www.v2nodes.com] vless-JP-1...
   - EPODONIOS
   - EPODONIOS
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
   - EPODONIOS
   - EPODONIOS
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
-  - 未知18
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - 🇯🇵[www.v2nodes.com] trojan-JP-...
+  - EPODONIOS
+  - EPODONIOS
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
+  - 🇯🇵JP-172.111.146.64-0162
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #41'
   - EPODONIOS
+  - 🇯🇵JP_1|1.9MB/s
+  - EPODONIOS
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #8'
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  - 🇯🇵[www.v2nodes.com] ss-JP-1599...
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
   - EPODONIOS
-  - EPODONIOS
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - 🇯🇵[www.v2nodes.com] vless-JP-1...
   - EPODONIOS
   - EPODONIOS
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
   - EPODONIOS
   - EPODONIOS
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
-  - 未知18
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - 🇯🇵[www.v2nodes.com] trojan-JP-...
+  - EPODONIOS
+  - EPODONIOS
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
+  - 🇯🇵JP-172.111.146.64-0162
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #41'
   - EPODONIOS
+  - 🇯🇵JP_1|1.9MB/s
+  - EPODONIOS
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #8'
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  - 🇯🇵[www.v2nodes.com] ss-JP-1599...
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
   - EPODONIOS
-  - EPODONIOS
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
 rules:
 - MATCH,SELECT

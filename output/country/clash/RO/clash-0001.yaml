@@ -33,6 +33,27 @@ proxies:
   servername: gateway.icloud.com
   client-fingerprint: chrome
 - type: vless
+  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  name: EPODONIOS
+  server: 46.28.67.55
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
+    short-id: d06d78e974491b6e
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
+  name: EPODONIOS
+  server: 154.46.31.106
+  port: 443
+  udp: true
+- type: vless
   uuid: 1506f2e0-ae12-4718-b5ab-c5609161300e
   name: EPODONIOS
   server: 45.13.151.11
@@ -47,28 +68,8 @@ proxies:
     short-id: 1ed136481e0ede74
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
-  name: EPODONIOS
-  server: 154.46.31.106
-  port: 443
-  udp: true
-- type: vmess
-  uuid: 1e9edd93-f160-4a4a-b369-2e5194b1932a
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知97
-  server: 78.154.103.45
-  port: 11901
-  udp: true
-  ws-opts:
-    path: /Telegram=@AmyraxVPN
-    headers:
-      Host: 78.154.103.45
-- type: ss
-  cipher: chacha20-ietf-poly1305
   password: U83u9OGpvSatIUW7LsWffr
-  name: EPODONIOS
+  name: 🇷🇴[www.v2nodes.com] ss-RO-1595...
   server: 194.68.44.42
   port: 64546
   udp: true
@@ -82,8 +83,8 @@ proxy-groups:
   - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - EPODONIOS
   - EPODONIOS
-  - 未知97
   - EPODONIOS
+  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 - name: SELECT
   type: select
   proxies:
@@ -92,7 +93,7 @@ proxy-groups:
   - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - EPODONIOS
   - EPODONIOS
-  - 未知97
   - EPODONIOS
+  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 rules:
 - MATCH,SELECT

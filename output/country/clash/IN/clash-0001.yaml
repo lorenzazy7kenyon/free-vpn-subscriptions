@@ -11,24 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: '🏳[www.v2nodes.com] vless- #38'
-  server: 13.140.56.100
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 13.140.56.100
-- type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  name: EPODONIOS
-  server: 172.105.39.124
-  port: 7002
-  udp: true
-- type: vless
   uuid: 1506f2e0-ae12-4718-b5ab-c5609161300e
   name: EPODONIOS
   server: 5.253.28.84
@@ -40,19 +22,13 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
-- type: vless
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+- type: ss
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
   name: EPODONIOS
-  server: 194.61.31.126
-  port: 2053
+  server: 172.105.39.124
+  port: 7002
   udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
-    short-id: 9980e0609b0d3891
 - type: vless
   uuid: 99de7aac-d2a5-48fd-92cb-d1e6c3c719a4
   name: EPODONIOS
@@ -63,15 +39,31 @@ proxies:
   network: tcp
   tls: true
   servername: in-full.privateip.net
-- type: vless
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
-  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
-  server: 194.61.31.126
-  port: 2053
+- type: vmess
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知82
+  server: 20.235.220.189
+  port: 443
   udp: true
+  tls: true
+  servername: 6JDvArazgU3qQR6Q.v.3dns.vip
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: 6JDvArazgU3qQR6Q.v.3dns.vip
+- type: vless
+  uuid: af5eac96-e478-488a-bc8c-45269d7e8847
+  name: '🏳[www.v2nodes.com] vless- #12'
+  server: 5.253.28.224
+  port: 40443
+  udp: true
+  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.apple.com
+  servername: deepl.com
   client-fingerprint: firefox
 - type: vless
   uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
@@ -102,56 +94,78 @@ proxies:
     public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
     short-id: 88b6
 - type: vless
-  uuid: af5eac96-e478-488a-bc8c-45269d7e8847
-  name: '🏳[www.v2nodes.com] vless- #39'
-  server: 5.253.28.224
-  port: 40443
+  uuid: 5e679ccd-1586-4d5f-b87b-48251046cad8
+  name: 🇮🇳[www.v2nodes.com] vless-IN
+  server: 5.253.28.240
+  port: 2443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: grpc
   tls: true
   servername: deepl.com
   client-fingerprint: firefox
 - type: vless
-  uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8
-  name: 🇮🇳[www.v2nodes.com] vless-IN
-  server: 5.253.30.99
-  port: 40443
+  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
+  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
+  server: 13.140.56.100
+  port: 14430
   udp: true
-  flow: xtls-rprx-vision
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 13.140.56.100
+- type: vmess
+  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 152.67.8.205
+  port: 80
+  udp: true
+  ws-opts:
+    path: /
+- type: vless
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  server: 194.61.31.126
+  port: 2053
+  udp: true
   network: tcp
   tls: true
-  servername: deepl.com
-  client-fingerprint: chrome
+  servername: www.apple.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #38'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - 未知82
+  - '🏳[www.v2nodes.com] vless- #12'
   - EPODONIOS
+  - EPODONIOS
+  - 🇮🇳[www.v2nodes.com] vless-IN
   - 🇮🇳[www.v2nodes.com] vless-IN-1...
   - EPODONIOS
-  - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #39'
-  - 🇮🇳[www.v2nodes.com] vless-IN
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #38'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - 未知82
+  - '🏳[www.v2nodes.com] vless- #12'
   - EPODONIOS
+  - EPODONIOS
+  - 🇮🇳[www.v2nodes.com] vless-IN
   - 🇮🇳[www.v2nodes.com] vless-IN-1...
   - EPODONIOS
-  - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #39'
-  - 🇮🇳[www.v2nodes.com] vless-IN
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
 rules:
 - MATCH,SELECT

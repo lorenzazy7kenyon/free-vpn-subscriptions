@@ -10,6 +10,40 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: 803cd116-56f6-4680-9ef7-82e2ded5810b
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知22
+  server: 95.182.80.242
+  port: 443
+  udp: true
+- type: vless
+  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
+  name: EPODONIOS
+  server: 138.124.180.137
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
+    short-id: 33acba1b
+- type: vless
+  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
+  name: 🇱🇻[www.v2nodes.com] vless-LV-1...
+  server: 195.123.208.32
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 - type: trojan
   password: humanity
   name: EPODONIOS
@@ -20,30 +54,23 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- type: vless
-  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
-  name: '🏳[www.v2nodes.com] vless- #43'
-  server: 195.123.208.32
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 未知22
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #43'
+  - 🇱🇻[www.v2nodes.com] vless-LV-1...
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 未知22
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #43'
+  - 🇱🇻[www.v2nodes.com] vless-LV-1...
+  - EPODONIOS
 rules:
 - MATCH,SELECT

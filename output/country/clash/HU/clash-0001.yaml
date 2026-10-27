@@ -20,17 +20,6 @@ proxies:
   tls: true
   servername: edv6f206j8ujw.hat.onl
   client-fingerprint: firefox
-- type: vless
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: 🇭🇺[www.v2nodes.com] vless-HU-6...
-  server: 37.221.210.113
-  port: 8443
-  udp: true
-  network: ws
-  ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=chromesecurity=tls
-    headers:
-      Host: free.cndyw.ggff.net
 - type: trojan
   password: humanity
   name: EPODONIOS
@@ -43,6 +32,17 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: 🇭🇺[www.v2nodes.com] vless-HU-6...
+  server: 37.221.210.113
+  port: 8443
+  udp: true
+  network: ws
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=chromesecurity=tls
+    headers:
+      Host: free.cndyw.ggff.net
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -50,14 +50,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇭🇺[www.v2nodes.com] vless-HU-1...
-  - 🇭🇺[www.v2nodes.com] vless-HU-6...
   - EPODONIOS
+  - 🇭🇺[www.v2nodes.com] vless-HU-6...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇭🇺[www.v2nodes.com] vless-HU-1...
-  - 🇭🇺[www.v2nodes.com] vless-HU-6...
   - EPODONIOS
+  - 🇭🇺[www.v2nodes.com] vless-HU-6...
 rules:
 - MATCH,SELECT

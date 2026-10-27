@@ -35,19 +35,6 @@ proxies:
   tls: true
   servername: api-6ad3c751.adhil.uk
 - type: vless
-  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
-  name: EPODONIOS
-  server: 178.236.16.98
-  port: 35728
-  udp: true
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
-    short-id: 69a2
-- type: vless
   uuid: 392fcc7e-b995-11f1-a6b7-1b2272a86bd5
   name: EPODONIOS
   server: 89.218.15.90
@@ -70,35 +57,60 @@ proxies:
   port: 80
   udp: true
   ws-opts:
-    path: /vmess/
-    headers:
-      Host: viber.com
-- type: vless
-  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
-  name: 🇰🇿[www.v2nodes.com] vless-KZ-1...
-  server: 178.236.16.98
-  port: 35728
-  udp: true
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-- type: vmess
-  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇰🇿KZ-38.107.234.57-0177
-  server: 38.107.234.57
-  port: 80
-  udp: true
-  ws-opts:
     path: /
     headers:
       Host: viber.com
 - type: vless
   uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
-  name: '🏳[www.v2nodes.com] vless- #42'
+  name: EPODONIOS
+  server: 109.248.170.119
+  port: 13447
+  udp: true
+  network: tcp
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: _0wM2ep44eAcrgf5PflKaBivknCWT6kMvQBQUoScCkE
+    short-id: '83'
+- type: vmess
+  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 38.107.234.57
+  port: 80
+  udp: true
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: viber.com
+- type: vless
+  uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
+  name: 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  server: 46.8.43.125
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: kz-central.v8x2b.lol
+  client-fingerprint: firefox
+- type: vless
+  uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
+  name: EPODONIOS
+  server: 46.8.43.125
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: kz-central.v8x2b.lol
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ER-T5En54-sn6IXy7jU8vQVcBbOiWvznnezf3qZ273w
+- type: vless
+  uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
+  name: '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
   server: 109.248.170.119
   port: 13447
   udp: true
@@ -107,18 +119,15 @@ proxies:
   servername: yahoo.com
   client-fingerprint: chrome
 - type: vless
-  uuid: 4b9063e0-3288-44e9-9aac-80fbfce323a0
-  name: EPODONIOS
-  server: 83.222.23.81
-  port: 38065
+  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
+  name: '🇰🇿[www.v2nodes.com] vless-KZ-1... #2'
+  server: 178.236.16.98
+  port: 35728
   udp: true
-  network: raw
+  network: tcp
   tls: true
   servername: yahoo.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: dSSDPTK6AHfAdRAXD9i4rzqcNIY65RxlF25UyCKdiyo
-    short-id: fa
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -130,10 +139,11 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - 🇰🇿[www.v2nodes.com] vless-KZ-1...
-  - 🇰🇿KZ-38.107.234.57-0177
-  - '🏳[www.v2nodes.com] vless- #42'
   - EPODONIOS
+  - 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  - EPODONIOS
+  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
+  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #2'
 - name: SELECT
   type: select
   proxies:
@@ -143,9 +153,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - 🇰🇿[www.v2nodes.com] vless-KZ-1...
-  - 🇰🇿KZ-38.107.234.57-0177
-  - '🏳[www.v2nodes.com] vless- #42'
   - EPODONIOS
+  - 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  - EPODONIOS
+  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
+  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #2'
 rules:
 - MATCH,SELECT

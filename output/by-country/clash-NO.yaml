@@ -22,6 +22,13 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  name: EPODONIOS
+  server: 185.213.23.63
+  port: 990
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -29,10 +36,12 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

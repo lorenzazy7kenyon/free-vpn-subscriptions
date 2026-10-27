@@ -36,19 +36,29 @@ proxies:
     headers:
       Host: www.pleadcourt.org
 - type: vless
-  uuid: 3b1fa839-2cb9-4511-9711-08800450aea3
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
   name: EPODONIOS
-  server: 84.32.215.96
+  server: 144.31.243.120
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: edgetunnel-4uw.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: edgetunnel-4uw.pages.dev
+- type: trojan
+  password: humanity
+  name: EPODONIOS
+  server: 195.181.244.216
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: app26.betust.net
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 5pR15ATlWW3tVzfnMN3xoiN56LjIUbhnOMp37ZvTFUc
-    short-id: d44d6d46
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -58,10 +68,12 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

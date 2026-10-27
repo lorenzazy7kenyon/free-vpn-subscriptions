@@ -11,6 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 4f35274e-006f-43e7-87be-c8cba4882b0c
+  name: EPODONIOS
+  server: 132.243.65.82
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: player.vimeo.com
+  reality-opts:
+    public-key: UZKrOusu0M0i3gnqDanh2yXXkTibNEjj41Hsvah2XlI
+- type: vless
   uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
   name: EPODONIOS
   server: 138.124.4.224
@@ -36,31 +47,18 @@ proxies:
   servername: login.sakhweb.fyi
   client-fingerprint: chrome
 - type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  name: '🇪🇪 爱沙尼亚 | EST #1'
-  server: 179.254.126.223
-  port: 8443
+  uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
+  name: EPODONIOS
+  server: 201.7.25.100
+  port: 24446
   udp: true
-  network: ws
+  network: grpc
   tls: true
-  servername: ee2.pad-sservice.lat
-  ws-opts:
-    path: /EE2Wfp=firefox
-    headers:
-      Host: ee2.pad-service.com
-- type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  name: '🇪🇪 爱沙尼亚 | EST #1'
-  server: 13.143.239.69
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: ee4.pad-sservice.lat
-  ws-opts:
-    path: /EE4Wfp=firefox
-    headers:
-      Host: ee4.pad-sservice.lat
+  servername: willow.cdn.cachefleet.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: w9JCByLSU3NGciCv2iceOz4TRL4swv8jfIAYoaKSyEw
+    short-id: a0938b702257f780
 - type: vless
   uuid: 7b571245-ec1e-44b1-bb5a-f7c61157d2c4
   name: EPODONIOS
@@ -76,19 +74,6 @@ proxies:
     public-key: VfyS9hoKlYU2l3oZ-T6RN2JzjWgtrIC7-VjseHCeBGE
     short-id: 0f4dacf33211e04f
 - type: vless
-  uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
-  name: EPODONIOS
-  server: 201.7.25.100
-  port: 24446
-  udp: true
-  network: grpc
-  tls: true
-  servername: willow.cdn.cachefleet.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: w9JCByLSU3NGciCv2iceOz4TRL4swv8jfIAYoaKSyEw
-    short-id: a0938b702257f780
-- type: vless
   uuid: cba98ec5-9f00-4ada-a0ce-f490257af2ee
   name: EPODONIOS
   server: 13.143.182.175
@@ -101,20 +86,6 @@ proxies:
   reality-opts:
     public-key: 8PGoRfefKAWaX4N7rqWyIap71L6JOL15feshsAoOphM
     short-id: 89a72356470b2478
-- type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  name: 🇪🇪 爱沙尼亚 | EST
-  server: 13.143.239.69
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: ee4.pad-sservice.lat
-  client-fingerprint: firefox
-  ws-opts:
-    path: /EE4W
-    headers:
-      Host: ee4.pad-sservice.lat
 - type: hysteria2
   password: 70043bfa-d6fb-4980-b27e-773e9e8b2004
   name: '🇬🇧 英国 | GBR #1'
@@ -130,26 +101,22 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
+  - EPODONIOS
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
-  - '🇪🇪 爱沙尼亚 | EST #1'
-  - '🇪🇪 爱沙尼亚 | EST #1'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - 🇪🇪 爱沙尼亚 | EST
   - '🇬🇧 英国 | GBR #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
+  - EPODONIOS
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
-  - '🇪🇪 爱沙尼亚 | EST #1'
-  - '🇪🇪 爱沙尼亚 | EST #1'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - 🇪🇪 爱沙尼亚 | EST
   - '🇬🇧 英国 | GBR #1'
 rules:
 - MATCH,SELECT

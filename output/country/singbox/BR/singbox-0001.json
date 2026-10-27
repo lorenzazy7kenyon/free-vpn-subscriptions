@@ -1,17 +1,49 @@
 {
   "outbounds": [
     {
-      "method": "aes-256-gcm",
-      "password": "owVdNnQcdPgthSyX",
-      "server": "216.128.168.190",
-      "server_port": 8388,
+      "flow": "xtls-rprx-vision",
+      "server": "177.7.51.29",
+      "server_port": 8443,
       "tag": "EPODONIOS",
-      "type": "ss"
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "laG5BxoSbdRozpauATNFBPPTwhuDuu0JFl_SCP2ZQlU",
+          "short_id": "14fbf992"
+        },
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "c6b1b2d0-ed5e-48ce-99e6-112ff330030d"
+    },
+    {
+      "flow": "xtls-rprx-vision-udp443",
+      "server": "177.7.51.29",
+      "server_port": 8443,
+      "tag": "🇺🇸US_2|4.0MB/s",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "c6b1b2d0-ed5e-48ce-99e6-112ff330030d"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "EPODONIOS"
+        "EPODONIOS",
+        "🇺🇸US_2|4.0MB/s"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -20,7 +52,8 @@
     {
       "outbounds": [
         "auto",
-        "EPODONIOS"
+        "EPODONIOS",
+        "🇺🇸US_2|4.0MB/s"
       ],
       "tag": "select",
       "type": "selector"

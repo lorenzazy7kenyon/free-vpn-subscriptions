@@ -11,6 +11,29 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: f667a096-5231-4cfb-8759-92bb32473139
+  name: '🇦🇲[www.v2nodes.com] vless-AM-1... #1'
+  server: 77.91.68.70
+  port: 55983
+  udp: true
+  network: tcp
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: f667a096-5231-4cfb-8759-92bb32473139
+  name: EPODONIOS
+  server: 77.91.68.70
+  port: 55983
+  udp: true
+  network: tcp
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg
+    short-id: 0e
+- type: vless
   uuid: b8df3f50-ffef-4c7e-9ef3-d5b156a47c02
   name: 🇦🇲[www.v2nodes.com] vless-AM-1...
   server: 88.218.95.88
@@ -20,40 +43,21 @@ proxies:
   tls: true
   servername: www.google.com
   client-fingerprint: chrome
-- type: vless
-  uuid: f667a096-5231-4cfb-8759-92bb32473139
-  name: '🏳[www.v2nodes.com] vless- #3'
-  server: 77.91.68.70
-  port: 55983
-  udp: true
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: f7376394-cd54-11f1-bb6a-bff6d0326f6a
-  name: '🏳[www.v2nodes.com] vless- #2'
-  server: 194.36.37.59
-  port: 10004
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vpnjantit
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇦🇲[www.v2nodes.com] vless-AM-1... #1'
+  - EPODONIOS
   - 🇦🇲[www.v2nodes.com] vless-AM-1...
-  - '🏳[www.v2nodes.com] vless- #3'
-  - '🏳[www.v2nodes.com] vless- #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇦🇲[www.v2nodes.com] vless-AM-1... #1'
+  - EPODONIOS
   - 🇦🇲[www.v2nodes.com] vless-AM-1...
-  - '🏳[www.v2nodes.com] vless- #3'
-  - '🏳[www.v2nodes.com] vless- #2'
 rules:
 - MATCH,SELECT

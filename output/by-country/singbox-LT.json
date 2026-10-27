@@ -39,30 +39,52 @@
       "type": "trojan"
     },
     {
-      "flow": "xtls-rprx-vision",
-      "server": "84.32.215.96",
-      "server_port": 443,
+      "server": "144.31.243.120",
+      "server_port": 8443,
       "tag": "EPODONIOS",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "5pR15ATlWW3tVzfnMN3xoiN56LjIUbhnOMp37ZvTFUc",
-          "short_id": "d44d6d46"
-        },
-        "server_name": "app26.betust.net",
+        "server_name": "edgetunnel-4uw.pages.dev",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
+      "transport": {
+        "headers": {
+          "Host": "edgetunnel-4uw.pages.dev"
+        },
+        "path": "/",
+        "type": "ws"
+      },
       "type": "vless",
-      "uuid": "3b1fa839-2cb9-4511-9711-08800450aea3"
+      "uuid": "fdc48be3-a615-41ac-8bd1-ed844c931048"
+    },
+    {
+      "password": "humanity",
+      "server": "195.181.244.216",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.calmlunch.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/assignment",
+        "type": "ws"
+      },
+      "type": "trojan"
     },
     {
       "interval": "5m",
       "outbounds": [
+        "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS"
@@ -74,6 +96,7 @@
     {
       "outbounds": [
         "auto",
+        "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS"

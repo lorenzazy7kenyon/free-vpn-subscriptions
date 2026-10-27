@@ -11,45 +11,43 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 2445edef-76b7-4713-87b9-ed6aa0b1a2c9
-  name: '🇩🇪 德国 | DEU #8'
-  server: 185.133.35.56
-  port: 2083
-  udp: true
-  network: ws
-  tls: true
-  servername: titp.iranroyalzhin.ir
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: titp.iranroyalzhin.ir
-- type: vless
-  uuid: 2445edef-76b7-4713-87b9-ed6aa0b1a2c9
+  uuid: c6b1b2d0-ed5e-48ce-99e6-112ff330030d
   name: EPODONIOS
-  server: 185.133.35.56
-  port: 2083
+  server: 177.7.51.29
+  port: 8443
   udp: true
-  network: ws
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: titp.iranroyalzhin.ir
+  servername: www.apple.com
   client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: titp.iranroyalzhin.ir
+  reality-opts:
+    public-key: laG5BxoSbdRozpauATNFBPPTwhuDuu0JFl_SCP2ZQlU
+    short-id: 14fbf992
+- type: vless
+  uuid: c6b1b2d0-ed5e-48ce-99e6-112ff330030d
+  name: 🇺🇸US_2|4.0MB/s
+  server: 177.7.51.29
+  port: 8443
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇩🇪 德国 | DEU #8'
   - EPODONIOS
+  - 🇺🇸US_2|4.0MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇩🇪 德国 | DEU #8'
   - EPODONIOS
+  - 🇺🇸US_2|4.0MB/s
 rules:
 - MATCH,SELECT
