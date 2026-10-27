@@ -20,32 +20,19 @@ proxies:
   tls: true
   servername: download.nvidia.com
   client-fingerprint: chrome
-- type: vmess
-  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
-  alterId: 0
-  cipher: auto
-  network: ws
+- type: vless
+  uuid: fc21089b-9d5d-4285-8a36-dab4b83d1699
   name: EPODONIOS
-  server: 39.108.113.127
-  port: 10086
+  server: 176.124.223.176
+  port: 8443
   udp: true
-  ws-opts:
-    path: /
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知110
-  server: 162.4.136.79
-  port: 443
-  udp: true
+  network: xhttp
   tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
+  servername: cdn-nl.cahmes.space
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: R3xeImGP5Bsx42LkRruIs3vIKHnPVR9aodbouAiemzM
+    short-id: d73a212e98084d3b
 - type: vmess
   uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
   alterId: 0
@@ -65,7 +52,6 @@ proxy-groups:
   proxies:
   - 🇨🇳 CN_37
   - EPODONIOS
-  - 未知110
   - EPODONIOS
 - name: SELECT
   type: select
@@ -73,7 +59,6 @@ proxy-groups:
   - AUTO
   - 🇨🇳 CN_37
   - EPODONIOS
-  - 未知110
   - EPODONIOS
 rules:
 - MATCH,SELECT

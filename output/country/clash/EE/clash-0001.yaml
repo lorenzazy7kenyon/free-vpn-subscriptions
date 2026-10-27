@@ -12,17 +12,6 @@ dns:
 proxies:
 - type: vless
   uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
-  server: 138.124.4.224
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: login.sakhweb.fyi
-  client-fingerprint: chrome
-- type: vless
-  uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
   name: EPODONIOS
   server: 138.124.4.224
   port: 443
@@ -35,6 +24,46 @@ proxies:
   reality-opts:
     public-key: 13nLTYkdBEFR-A4CfK2beOx-5LKEsXh1QHPq8Kt52BQ
     short-id: 7271129440ade8fa
+- type: vless
+  uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  server: 138.124.4.224
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: login.sakhweb.fyi
+  client-fingerprint: chrome
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知47
+  server: 5.101.122.59
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+- type: vless
+  uuid: 7b571245-ec1e-44b1-bb5a-f7c61157d2c4
+  name: EPODONIOS
+  server: 201.7.25.208
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ee.api-yandex.net
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: VfyS9hoKlYU2l3oZ-T6RN2JzjWgtrIC7-VjseHCeBGE
+    short-id: 0f4dacf33211e04f
 - type: vless
   uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
   name: EPODONIOS
@@ -61,49 +90,27 @@ proxies:
   reality-opts:
     public-key: 8PGoRfefKAWaX4N7rqWyIap71L6JOL15feshsAoOphM
     short-id: 89a72356470b2478
-- type: vless
-  uuid: 7b571245-ec1e-44b1-bb5a-f7c61157d2c4
-  name: EPODONIOS
-  server: 201.7.25.208
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ee.api-yandex.net
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: VfyS9hoKlYU2l3oZ-T6RN2JzjWgtrIC7-VjseHCeBGE
-    short-id: 0f4dacf33211e04f
-- type: hysteria2
-  password: 70043bfa-d6fb-4980-b27e-773e9e8b2004
-  name: '🇬🇧 英国 | GBR #1'
-  server: 141.0.187.15
-  port: 443
-  udp: true
-  sni: crt.onecloudstream.com
-  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - EPODONIOS
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  - 未知47
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - '🇬🇧 英国 | GBR #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  - 未知47
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - '🇬🇧 英国 | GBR #1'
 rules:
 - MATCH,SELECT

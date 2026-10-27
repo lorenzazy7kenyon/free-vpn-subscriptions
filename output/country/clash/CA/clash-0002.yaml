@@ -17,6 +17,121 @@ proxies:
   server: 51.79.64.198
   port: 8119
   udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: cdBIDV42DCwnfIN
+  name: EPODONIOS
+  server: 51.79.85.185
+  port: 8118
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+  name: EPODONIOS
+  server: 51.222.136.236
+  port: 8882
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+  name: EPODONIOS
+  server: 51.79.49.116
+  port: 8882
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+  name: EPODONIOS
+  server: 51.222.141.125
+  port: 445
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+  name: EPODONIOS
+  server: 51.222.200.165
+  port: 5000
+  udp: true
+- type: vless
+  uuid: 0aec6598-7fb5-44e6-bff7-a4d550117830
+  name: EPODONIOS
+  server: 104.234.135.88
+  port: 443
+  udp: true
+  network: xhttp
+- type: vless
+  uuid: 12af3df8-2ffe-48fe-9b60-376f015ea4f8
+  name: EPODONIOS
+  server: 51.161.72.153
+  port: 37765
+  udp: true
+  network: grpc
+  tls: true
+  servername: www.semiconductor.samsung.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: g-4UVtgbojoxQaglMCttyLme4xjtTqomqxdZaVsruQ4
+    short-id: defda00d613c
+- type: vless
+  uuid: 20b98028-53c9-4f76-9bc9-b6b16b8a9152
+  name: EPODONIOS
+  server: 54.39.96.233
+  port: 8080
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: icloud.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: sQ_YHzotqhVJoUDAZl5kTzUqVN6ksh-MTikz_ixsZWc
+    short-id: 2b30
+- type: vless
+  uuid: e17150a9-f949-467b-94ea-4d50e4c84186
+  name: EPODONIOS
+  server: 198.100.154.175
+  port: 8080
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: icloud.com
+  reality-opts:
+    public-key: 2PYoIhSKvVE-DgFzPYGo4cD2b7_8Ul2Vm8QKGWH1sAo
+    short-id: 4b
+- type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+  name: EPODONIOS
+  server: 51.222.155.32
+  port: 5003
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+  name: EPODONIOS
+  server: 51.222.12.127
+  port: 445
+  udp: true
+- type: vless
+  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
+  name: '🏳[www.v2nodes.com] vless- #7'
+  server: 66.70.179.198
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 66.163.113.176
+  port: 22324
+  udp: true
 - type: vless
   uuid: 1506f2e0-ae12-4718-b5ab-c5609161300e
   name: EPODONIOS
@@ -30,20 +145,6 @@ proxies:
   reality-opts:
     public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
     short-id: 1ed136481e0ede74
-- type: vless
-  uuid: 24d49ddd-67c1-4821-b5b9-f12107366978
-  name: EPODONIOS
-  server: 104.19.250.20
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: bahari.kiamobilepart.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /api
-    headers:
-      Host: bahari.kiamobilepart.com
 - type: vmess
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -54,22 +155,6 @@ proxies:
   port: 18000
   udp: true
 - type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  name: EPODONIOS
-  server: 137.184.174.93
-  port: 8080
-  udp: true
-- type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: EPODONIOS
-  server: 134.195.196.211
-  port: 18000
-  udp: true
-- type: ss
   cipher: aes-256-gcm
   password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
   name: EPODONIOS
@@ -77,12 +162,36 @@ proxies:
   port: 9443
   udp: true
 - type: ss
-  cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
   name: EPODONIOS
-  server: 51.222.141.125
-  port: 445
+  server: 137.184.174.93
+  port: 8080
   udp: true
+- type: vless
+  uuid: 26168a04-a91c-48fc-b8d0-3ba5a4e719c4
+  name: EPODONIOS
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: 2yijonkovdic86iq5ebnd1moqqf.yyuz0mhr4awg8vw-wwycuu4.workers.dev
+  ws-opts:
+    path: /vl/17NBgz64AfwQ4Dd6qdNR?ed=2560
+    headers:
+      Host: 2yijonkovdic86iq5ebnd1moqqf.yyuz0mhr4awg8vw-wwycuu4.workers.dev
+- type: vless
+  uuid: ca52e2b6-fb9f-4dac-b6dc-49da9923f251
+  name: 🇨🇦[www.v2nodes.com] vless-CA-1...
+  server: 209.200.246.148
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 - type: vless
   uuid: 2370f4d8-6694-4e51-8c72-b2782ae96a59
   name: EPODONIOS
@@ -94,6 +203,20 @@ proxies:
     path: /?ed=2560
     headers:
       Host: withered-wave-ee0b-ppal03.faxip46069.workers.dev
+- type: vless
+  uuid: 429efff7-16bd-499e-85a5-a6f4b89c2773
+  name: EPODONIOS
+  server: 172.67.139.85
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: cxrolvpn.vipserver2.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /K2w7vCx3fNcdCrSc?ed=2560
+    headers:
+      Host: cxrolvpn.vipserver2.workers.dev
 - type: ss
   cipher: aes-128-gcm
   password: shadowsocks
@@ -101,6 +224,29 @@ proxies:
   server: 149.22.95.183
   port: 443
   udp: true
+- type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知114
+  server: 158.51.123.42
+  port: 22324
+  udp: true
+- type: vless
+  uuid: f333ac5d-1e0b-4947-a123-7bb605803ad8
+  name: EPODONIOS
+  server: 209.200.246.203
+  port: 2066
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: tiktok.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: kLCwYNBhCg68BQah9El1lNg6GQ7-7Y7xfTtIs6MiTEg
+    short-id: d18f4e
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -117,6 +263,21 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #7'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - 🇨🇦[www.v2nodes.com] vless-CA-1...
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - 未知114
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
@@ -130,6 +291,21 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #7'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - 🇨🇦[www.v2nodes.com] vless-CA-1...
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - 未知114
   - EPODONIOS
 rules:
 - MATCH,SELECT

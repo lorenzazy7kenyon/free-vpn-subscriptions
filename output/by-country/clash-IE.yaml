@@ -17,13 +17,39 @@ proxies:
   server: 74.234.59.81
   port: 443
   udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: zziXHDOFXc4qRjoj
-  name: EPODONIOS
-  server: 20.107.184.151
+- type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  name: 🇮🇪 爱尔兰 | IRL
+  server: 50.7.5.165
   port: 443
   udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ir-new1.failspace.top
+  client-fingerprint: chrome
+- type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  name: 🇮🇪 爱尔兰 | IRL
+  server: 50.7.5.166
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ekb.eg
+  client-fingerprint: firefox
+- type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  name: '🇮🇪 爱尔兰 | IRL #1'
+  server: 50.7.5.165
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ir-new1.failspace.top
+  client-fingerprint: chrome
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: YF329KNGVTUZ1qrH
@@ -38,14 +64,18 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
+  - 🇮🇪 爱尔兰 | IRL
+  - 🇮🇪 爱尔兰 | IRL
+  - '🇮🇪 爱尔兰 | IRL #1'
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
+  - 🇮🇪 爱尔兰 | IRL
+  - 🇮🇪 爱尔兰 | IRL
+  - '🇮🇪 爱尔兰 | IRL #1'
   - EPODONIOS
 rules:
 - MATCH,SELECT

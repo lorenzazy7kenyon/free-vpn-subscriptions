@@ -12,6 +12,17 @@ dns:
 proxies:
 - type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: '🇸🇬[www.v2nodes.com] vless-SG-9... #1'
+  server: 185.225.195.30
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime18.workers.dev
+- type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   name: EPODONIOS
   server: 185.225.195.30
   port: 8880
@@ -34,17 +45,6 @@ proxies:
     path: /
     headers:
       Host: aza002.vaslbash.site
-- type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
-  server: 185.225.195.30
-  port: 8880
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime18.workers.dev
 - type: vless
   uuid: 98d0fa1b-d778-477e-b897-4e2569c53178
   name: EPODONIOS
@@ -85,16 +85,25 @@ proxies:
   reality-opts:
     public-key: FOQzn10eHqu4F5xOxiXW2bTDG8lH4TdOXP6A5rDqKFk
 - type: vless
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  server: 84.235.244.108
-  port: 22573
+  uuid: 6a432d22-a5b2-41a9-b103-602f874b07bd
+  name: EPODONIOS
+  server: 188.72.103.4
+  port: 443
   udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
+  network: xhttp
+  tls: true
+  servername: cdn.lumenite.online
+  client-fingerprint: chrome
+- type: vless
+  uuid: 42a64b9a-ab79-4094-8656-30366a7c2ea3
+  name: EPODONIOS
+  server: 188.72.103.4
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: qgaspedaldiamondlegion8.qcloud.surf
+  client-fingerprint: chrome
 - type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
@@ -106,6 +115,24 @@ proxies:
     path: pyip=bpb.yousef.isegaro.comfp=chromesecurity=tls
     headers:
       Host: free.cndyw.ggff.net
+- type: vless
+  uuid: 42a64b9a-ab79-4094-8656-30366a7c2ea3
+  name: EPODONIOS
+  server: 188.72.103.4
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: 188.72.103.4
+- type: vless
+  uuid: 6a432d22-a5b2-41a9-b103-602f874b07bd
+  name: EPODONIOS
+  server: 188.72.103.4
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: 188.72.103.4
 - type: vless
   uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
   name: 🇦🇪[www.v2nodes.com] vless-AE-1...
@@ -123,27 +150,33 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇸🇬[www.v2nodes.com] vless-SG-9... #1'
   - EPODONIOS
   - EPODONIOS
-  - '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - EPODONIOS
+  - EPODONIOS
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  - EPODONIOS
+  - EPODONIOS
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇸🇬[www.v2nodes.com] vless-SG-9... #1'
   - EPODONIOS
   - EPODONIOS
-  - '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - EPODONIOS
+  - EPODONIOS
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  - EPODONIOS
+  - EPODONIOS
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
 rules:
 - MATCH,SELECT
