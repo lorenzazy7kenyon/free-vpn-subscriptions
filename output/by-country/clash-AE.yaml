@@ -35,6 +35,17 @@ proxies:
     headers:
       Host: aza002.vaslbash.site
 - type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
+  server: 185.225.195.30
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime18.workers.dev
+- type: vless
   uuid: 98d0fa1b-d778-477e-b897-4e2569c53178
   name: EPODONIOS
   server: 128.254.186.11
@@ -97,7 +108,7 @@ proxies:
       Host: free.cndyw.ggff.net
 - type: vless
   uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
-  name: EPODONIOS
+  name: 🇦🇪[www.v2nodes.com] vless-AE-1...
   server: 95.174.68.188
   port: 14430
   udp: true
@@ -114,23 +125,25 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
+  - '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
-  - EPODONIOS
+  - 🇦🇪[www.v2nodes.com] vless-AE-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
   - EPODONIOS
+  - '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
-  - EPODONIOS
+  - 🇦🇪[www.v2nodes.com] vless-AE-1...
 rules:
 - MATCH,SELECT

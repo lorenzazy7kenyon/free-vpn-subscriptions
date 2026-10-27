@@ -35,20 +35,6 @@ proxies:
     path: /assignment
     headers:
       Host: www.pleadcourt.org
-- type: vless
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
-  name: EPODONIOS
-  server: 144.31.243.120
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: edgetunnel-4uw.pages.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: edgetunnel-4uw.pages.dev
 - type: trojan
   password: humanity
   name: EPODONIOS
@@ -68,12 +54,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

@@ -19,23 +19,9 @@ proxies:
   sni: www.calmlunch.com
   network: ws
   ws-opts:
-    path: /assignment
+    path: //assignment
     headers:
       Host: www.calmlunch.com
-- type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  name: EPODONIOS
-  server: 152.53.1.40
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: au4.pad-sservice.lat
-  client-fingerprint: chrome
-  ws-opts:
-    path: /A14U
-    headers:
-      Host: au4.pad-service.com
 - type: vless
   uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
   name: EPODONIOS
@@ -72,12 +58,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

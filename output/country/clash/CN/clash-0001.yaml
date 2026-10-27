@@ -10,17 +10,27 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 362a0364-2b0f-cd11-9c20-ab9dfbeb8b11
+  name: 🇨🇳 CN_37
+  server: 122.8.45.7
+  port: 8443
+  udp: true
+  network: grpc
+  tls: true
+  servername: download.nvidia.com
+  client-fingerprint: chrome
 - type: vmess
   uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
   alterId: 0
   cipher: auto
   network: ws
   name: EPODONIOS
-  server: 120.48.133.162
+  server: 39.108.113.127
   port: 10086
   udp: true
   ws-opts:
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    path: /
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
@@ -36,19 +46,34 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
+- type: vmess
+  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 120.48.133.162
+  port: 10086
+  udp: true
+  ws-opts:
+    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇨🇳 CN_37
   - EPODONIOS
   - 未知110
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇨🇳 CN_37
   - EPODONIOS
   - 未知110
+  - EPODONIOS
 rules:
 - MATCH,SELECT

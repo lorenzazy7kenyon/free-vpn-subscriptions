@@ -18,34 +18,88 @@ proxies:
   port: 8119
   udp: true
 - type: vless
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
-  name: '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
-  server: 66.70.179.198
-  port: 2053
+  uuid: 1506f2e0-ae12-4718-b5ab-c5609161300e
+  name: EPODONIOS
+  server: 184.107.178.99
+  port: 443
   udp: true
   network: tcp
   tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: 12af3df8-2ffe-48fe-9b60-376f015ea4f8
-  name: EPODONIOS
-  server: 51.161.72.153
-  port: 37765
-  udp: true
-  network: grpc
-  tls: true
-  servername: www.semiconductor.samsung.com
+  servername: na2.cdn77.icu
   client-fingerprint: chrome
   reality-opts:
-    public-key: g-4UVtgbojoxQaglMCttyLme4xjtTqomqxdZaVsruQ4
-    short-id: defda00d613c
+    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
+    short-id: 1ed136481e0ede74
+- type: vless
+  uuid: 24d49ddd-67c1-4821-b5b9-f12107366978
+  name: EPODONIOS
+  server: 104.19.250.20
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: bahari.kiamobilepart.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /api
+    headers:
+      Host: bahari.kiamobilepart.com
+- type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 23.162.200.198
+  port: 18000
+  udp: true
 - type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
   name: EPODONIOS
   server: 137.184.174.93
   port: 8080
+  udp: true
+- type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 134.195.196.211
+  port: 18000
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
+  name: EPODONIOS
+  server: 185.156.47.97
+  port: 9443
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+  name: EPODONIOS
+  server: 51.222.141.125
+  port: 445
+  udp: true
+- type: vless
+  uuid: 2370f4d8-6694-4e51-8c72-b2782ae96a59
+  name: EPODONIOS
+  server: 172.64.78.198
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: withered-wave-ee0b-ppal03.faxip46069.workers.dev
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: EPODONIOS
+  server: 149.22.95.183
+  port: 443
   udp: true
 proxy-groups:
 - name: AUTO
@@ -54,7 +108,13 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
@@ -62,7 +122,13 @@ proxy-groups:
   proxies:
   - AUTO
   - EPODONIOS
-  - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 rules:

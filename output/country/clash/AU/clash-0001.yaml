@@ -47,6 +47,20 @@ proxies:
       Host: vms.lifetime38.workers.dev
 - type: vless
   uuid: 36e89875-9c53-482b-bc41-d3890e9da176
+  name: EPODONIOS
+  server: 51.161.204.244
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: gCAazs5uxNuMZIxfDdw8wPE0nwKY4QfBfBkQveKAkEk
+    short-id: 0ad08b47f498efd2
+- type: vless
+  uuid: 36e89875-9c53-482b-bc41-d3890e9da176
   name: 🇦🇺[www.v2nodes.com] vless-AU-1...
   server: 51.161.204.244
   port: 443
@@ -79,12 +93,14 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
   - 🇦🇺[www.v2nodes.com] vless-AU-1...
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

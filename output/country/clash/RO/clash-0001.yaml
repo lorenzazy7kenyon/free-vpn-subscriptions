@@ -12,28 +12,6 @@ dns:
 proxies:
 - type: vless
   uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
-  server: 46.28.67.55
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
-  name: 🇷🇴[www.v2nodes.com] vless-RO-1...
-  server: 82.117.255.174
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
   name: EPODONIOS
   server: 46.28.67.55
   port: 443
@@ -46,6 +24,17 @@ proxies:
   reality-opts:
     public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
     short-id: d06d78e974491b6e
+- type: vless
+  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
+  server: 46.28.67.55
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: QFWzCw2uX9B9i6qAYeFBIE
@@ -73,27 +62,38 @@ proxies:
   server: 194.68.44.42
   port: 64546
   udp: true
+- type: vless
+  uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
+  name: 🇷🇴[www.v2nodes.com] vless-RO-1...
+  server: 82.117.255.174
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
-  - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - EPODONIOS
+  - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
   - EPODONIOS
   - EPODONIOS
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - 🇷🇴[www.v2nodes.com] vless-RO-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
-  - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - EPODONIOS
+  - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
   - EPODONIOS
   - EPODONIOS
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - 🇷🇴[www.v2nodes.com] vless-RO-1...
 rules:
 - MATCH,SELECT

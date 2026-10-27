@@ -21,32 +21,6 @@ proxies:
   tls: true
   servername: node-slo02.rkitman.ru
   client-fingerprint: firefox
-- type: vless
-  uuid: d0c8aa8d-a535-432a-b521-21f0e561f643
-  name: EPODONIOS
-  server: 92.42.201.102
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: node-slo01.rkitman.ru
-  reality-opts:
-    public-key: 8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU
-    short-id: 88d9dc52ef39c8bd
-- type: vless
-  uuid: d0c8aa8d-a535-432a-b521-21f0e561f643
-  name: EPODONIOS
-  server: 92.42.201.107
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: node-slo02.rkitman.ru
-  reality-opts:
-    public-key: 8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU
-    short-id: 88d9dc52ef39c8bd
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -54,14 +28,10 @@ proxy-groups:
   interval: 300
   proxies:
   - RU_speednode_0034
-  - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - RU_speednode_0034
-  - EPODONIOS
-  - EPODONIOS
 rules:
 - MATCH,SELECT
