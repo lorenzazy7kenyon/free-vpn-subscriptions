@@ -10,41 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 85.31.102.163
-  port: 443
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-- type: vless
-  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
-  name: EPODONIOS
-  server: 138.124.180.137
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
-    short-id: 33acba1b
-- type: vless
-  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
-  name: 🇱🇻[www.v2nodes.com] vless-LV-1...
-  server: 195.123.208.32
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
 - type: vless
   uuid: 02fcc1a4-ee90-4970-8bbb-4ffaa8109d24
   name: 🇱🇻 拉脱维亚 | LVA
@@ -73,25 +38,60 @@ proxies:
   reality-opts:
     public-key: ICrsmE5hqN7IsDIyHPG2WkDUUFK_VEj9yobLv8zuDwk
     short-id: 757b9e1ef18e60f0
+- type: vless
+  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
+  name: 🇱🇻[www.v2nodes.com] vless-LV-1...
+  server: 195.123.208.32
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- type: trojan
+  password: humanity
+  name: EPODONIOS
+  server: 85.31.102.163
+  port: 443
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+- type: vless
+  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
+  name: EPODONIOS
+  server: 138.124.180.137
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
+    short-id: 33acba1b
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
+  - 🇱🇻 拉脱维亚 | LVA
   - EPODONIOS
   - 🇱🇻[www.v2nodes.com] vless-LV-1...
-  - 🇱🇻 拉脱维亚 | LVA
+  - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
+  - 🇱🇻 拉脱维亚 | LVA
   - EPODONIOS
   - 🇱🇻[www.v2nodes.com] vless-LV-1...
-  - 🇱🇻 拉脱维亚 | LVA
+  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

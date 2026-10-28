@@ -38,25 +38,6 @@ proxies:
     headers:
       Host: support.zoom.us.cyylr.eu.cc
 - type: vless
-  uuid: 36e89875-9c53-482b-bc41-d3890e9da176
-  name: 🇦🇺[www.v2nodes.com] vless-AU-1...
-  server: 51.161.204.244
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇦🇺 澳大利亚 | AUS
-  server: 45.63.30.142
-  port: 443
-  udp: true
-  sni: connectwithemployerstohireyouridealteam.com
-  skip-cert-verify: true
-- type: vless
   uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
   name: EPODONIOS
   server: 51.161.204.242
@@ -72,15 +53,29 @@ proxies:
     short-id: d15c17cef9b2e456
 - type: vless
   uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
-  name: '🏳[www.v2nodes.com] vless- #2'
+  name: '🇦🇺[www.v2nodes.com] vless-AU-1... #1'
   server: 51.161.204.242
+  port: 443
+  udp: true
+  network: tcp
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇦🇺AU-45.63.30.142-0563
+  server: 45.63.30.142
+  port: 443
+  udp: true
+  sni: connectwithemployerstohireyouridealteam.com
+- type: vless
+  uuid: 36e89875-9c53-482b-bc41-d3890e9da176
+  name: 🇦🇺[www.v2nodes.com] vless-AU-1...
+  server: 51.161.204.244
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -89,19 +84,19 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
-  - 🇦🇺[www.v2nodes.com] vless-AU-1...
-  - 🇦🇺 澳大利亚 | AUS
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #2'
+  - '🇦🇺[www.v2nodes.com] vless-AU-1... #1'
+  - 🇦🇺AU-45.63.30.142-0563
+  - 🇦🇺[www.v2nodes.com] vless-AU-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
   - EPODONIOS
-  - 🇦🇺[www.v2nodes.com] vless-AU-1...
-  - 🇦🇺 澳大利亚 | AUS
   - EPODONIOS
-  - '🏳[www.v2nodes.com] vless- #2'
+  - '🇦🇺[www.v2nodes.com] vless-AU-1... #1'
+  - 🇦🇺AU-45.63.30.142-0563
+  - 🇦🇺[www.v2nodes.com] vless-AU-1...
 rules:
 - MATCH,SELECT

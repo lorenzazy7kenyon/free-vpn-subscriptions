@@ -45,17 +45,6 @@ proxies:
   sni: exploreeducationsectoropportunitiestodayandadvancecareers.com
   skip-cert-verify: true
 - type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: 🇮🇱[www.v2nodes.com] vless-IL-1...
-  server: 185.253.75.119
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: /fp=chromesecurity=tls
-    headers:
-      Host: ccc.010304.xyz
-- type: vless
   uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
   name: EPODONIOS
   server: 79.182.39.232
@@ -68,6 +57,19 @@ proxies:
   reality-opts:
     public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
     short-id: a73f0410d728c823
+- type: vless
+  uuid: 5a519754-a673-4462-83f6-5eb25d2af141
+  name: 🇺🇸 美国 | USA
+  server: 79.182.39.57
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: f36f5ft.us4.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 5KZVzOFqMgdL47--JzLlg5HmPlAYp-cmQsXxkTXngS0
+    short-id: 8d50d3a4df71468c
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -77,8 +79,8 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - '🇮🇱 以色列 | ISR #1'
-  - 🇮🇱[www.v2nodes.com] vless-IL-1...
   - EPODONIOS
+  - 🇺🇸 美国 | USA
 - name: SELECT
   type: select
   proxies:
@@ -86,7 +88,7 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - '🇮🇱 以色列 | ISR #1'
-  - 🇮🇱[www.v2nodes.com] vless-IL-1...
   - EPODONIOS
+  - 🇺🇸 美国 | USA
 rules:
 - MATCH,SELECT

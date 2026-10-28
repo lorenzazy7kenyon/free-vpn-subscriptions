@@ -23,49 +23,6 @@ proxies:
     headers:
       Host: www.calmlunch.com
 - type: vless
-  uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
-  name: EPODONIOS
-  server: 188.137.158.199
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: softice.net
-- type: vless
-  uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
-  name: EPODONIOS
-  server: 188.137.158.169
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: softice.net
-  client-fingerprint: chrome
-- type: vless
-  uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
-  name: '🇦🇹 奥地利 | AUT #2'
-  server: 188.137.158.189
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: softice.net
-  client-fingerprint: firefox
-- type: vless
-  uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
-  name: '🇦🇹 奥地利 | AUT #1'
-  server: 188.137.158.159
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: softice.net
-  client-fingerprint: firefox
-- type: vless
   uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
   name: EPODONIOS
   server: 62.83.41.69
@@ -80,6 +37,49 @@ proxies:
     headers:
       Host: au6.pad-sservice.lat
 - type: vless
+  uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
+  name: EPODONIOS
+  server: 188.137.158.169
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: softice.net
+  client-fingerprint: chrome
+- type: vless
+  uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
+  name: EPODONIOS
+  server: 188.137.158.199
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: softice.net
+- type: vless
+  uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
+  name: '🇦🇹 奥地利 | AUT #1'
+  server: 188.137.158.159
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: softice.net
+  client-fingerprint: firefox
+- type: vless
+  uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
+  name: '🇦🇹 奥地利 | AUT #2'
+  server: 188.137.158.189
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: softice.net
+  client-fingerprint: firefox
+- type: vless
   uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
   name: EPODONIOS
   server: 66.90.106.228
@@ -92,28 +92,6 @@ proxies:
   reality-opts:
     public-key: hyOYRfDSIYyqALQt3N2H0RjK8gbV1JvPTkNACC4PJF8
     short-id: 8718c58d3d51db59
-- type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: 🇦🇹 奥地利 | AUT
-  server: 50.7.36.29
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ekb.eg
-  client-fingerprint: firefox
-- type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: 🇦🇹 奥地利 | AUT
-  server: 50.7.36.28
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: at-new-ded.failspace.top
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -123,12 +101,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🇦🇹 奥地利 | AUT #2'
+  - EPODONIOS
   - '🇦🇹 奥地利 | AUT #1'
+  - '🇦🇹 奥地利 | AUT #2'
   - EPODONIOS
-  - EPODONIOS
-  - 🇦🇹 奥地利 | AUT
-  - 🇦🇹 奥地利 | AUT
 - name: SELECT
   type: select
   proxies:
@@ -136,11 +112,9 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - '🇦🇹 奥地利 | AUT #2'
+  - EPODONIOS
   - '🇦🇹 奥地利 | AUT #1'
+  - '🇦🇹 奥地利 | AUT #2'
   - EPODONIOS
-  - EPODONIOS
-  - 🇦🇹 奥地利 | AUT
-  - 🇦🇹 奥地利 | AUT
 rules:
 - MATCH,SELECT

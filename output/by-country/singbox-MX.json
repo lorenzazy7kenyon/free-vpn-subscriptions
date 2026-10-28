@@ -1,9 +1,26 @@
 {
   "outbounds": [
     {
+      "flow": "xtls-rprx-vision-udp443",
+      "server": "147.78.1.73",
+      "server_port": 443,
+      "tag": "🇲🇽MX_1|2.8MB/s",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "mx1.accessboy.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "caf3d607-95c9-4ea0-98b5-864027056ba0"
+    },
+    {
       "server": "131.196.253.141",
       "server_port": 443,
-      "tag": "🇲🇽[www.v2nodes.com] vless-MX-1... #3",
+      "tag": "🇲🇽[www.v2nodes.com] vless-MX-1... #2",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -18,6 +35,22 @@
       },
       "type": "vless",
       "uuid": "0575005f-0ba9-4d6d-85e0-4a6a8cbafc1b"
+    },
+    {
+      "server": "156.252.229.11",
+      "server_port": 8443,
+      "tag": "🇪🇸[www.v2nodes.com] vless-ES-1...",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "play.googleapis.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "3e21e3d3-6d26-4155-b851-764dd8e8c6b5"
     },
     {
       "server": "156.252.229.11",
@@ -43,7 +76,9 @@
     {
       "interval": "5m",
       "outbounds": [
-        "🇲🇽[www.v2nodes.com] vless-MX-1... #3",
+        "🇲🇽MX_1|2.8MB/s",
+        "🇲🇽[www.v2nodes.com] vless-MX-1... #2",
+        "🇪🇸[www.v2nodes.com] vless-ES-1...",
         "EPODONIOS"
       ],
       "tag": "auto",
@@ -53,7 +88,9 @@
     {
       "outbounds": [
         "auto",
-        "🇲🇽[www.v2nodes.com] vless-MX-1... #3",
+        "🇲🇽MX_1|2.8MB/s",
+        "🇲🇽[www.v2nodes.com] vless-MX-1... #2",
+        "🇪🇸[www.v2nodes.com] vless-ES-1...",
         "EPODONIOS"
       ],
       "tag": "select",

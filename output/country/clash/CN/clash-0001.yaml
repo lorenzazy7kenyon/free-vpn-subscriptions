@@ -12,16 +12,6 @@ dns:
 proxies:
 - type: vless
   uuid: 362a0364-2b0f-cd11-9c20-ab9dfbeb8b11
-  name: 🇨🇳 CN_37
-  server: 122.8.45.7
-  port: 8443
-  udp: true
-  network: grpc
-  tls: true
-  servername: download.nvidia.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 362a0364-2b0f-cd11-9c20-ab9dfbeb8b11
   name: EPODONIOS
   server: 122.8.45.6
   port: 8443
@@ -43,21 +33,32 @@ proxies:
   udp: true
   ws-opts:
     path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+- type: vmess
+  uuid: a01e5d56-464f-45b9-b600-164db4700162
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇨🇳_CN_中国
+  server: 120.48.133.162
+  port: 10086
+  udp: true
+  ws-opts:
+    path: /
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇳 CN_37
   - EPODONIOS
   - EPODONIOS
+  - 🇨🇳_CN_中国
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇨🇳 CN_37
   - EPODONIOS
   - EPODONIOS
+  - 🇨🇳_CN_中国
 rules:
 - MATCH,SELECT

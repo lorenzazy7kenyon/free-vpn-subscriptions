@@ -10,6 +10,20 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  name: EPODONIOS
+  server: 190.93.246.21
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?TELEGRAM--------ICV2RAY?ed=2560
+    headers:
+      Host: lucasjow.us.ci
 - type: trojan
   password: bpb-trojan
   name: EPODONIOS
@@ -34,20 +48,6 @@ proxies:
     path: /assignment
     headers:
       Host: www.pleadcourt.org
-- type: vless
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  name: EPODONIOS
-  server: 190.93.246.21
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: chrome
-  ws-opts:
-    path: /?TELEGRAM--------ICV2RAY?ed=2560
-    headers:
-      Host: lucasjow.us.ci
 proxy-groups:
 - name: AUTO
   type: url-test

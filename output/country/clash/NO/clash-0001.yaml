@@ -10,13 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-  name: EPODONIOS
-  server: 185.213.23.63
-  port: 990
-  udp: true
 - type: vless
   uuid: 1506f2e0-ae12-4718-b5ab-c5609161300e
   name: EPODONIOS
@@ -29,9 +22,27 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  name: EPODONIOS
+  server: 185.213.23.63
+  port: 990
+  udp: true
 - type: vless
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: '🇳🇴 挪威 | NOR #10'
+  name: '🇳🇴 挪威 | NOR #9'
+  server: 31.76.5.144
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: norw-1.failspace.top
+  client-fingerprint: firefox
+- type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  name: 🇳🇴 挪威 | NOR
   server: 31.76.5.51
   port: 443
   udp: true
@@ -40,17 +51,6 @@ proxies:
   tls: true
   servername: norw-mori-5.failspace.top
   client-fingerprint: chrome
-- type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: '🇳🇴 挪威 | NOR #1'
-  server: 31.76.5.137
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: norw-mori-3.failspace.top
-  client-fingerprint: firefox
 - type: vless
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
   name: '🇳🇴 挪威 | NOR #8'
@@ -64,14 +64,14 @@ proxies:
   client-fingerprint: firefox
 - type: vless
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: 🇳🇴 挪威 | NOR
-  server: 31.76.5.137
+  name: '🇳🇴 挪威 | NOR #6'
+  server: 31.76.5.124
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: norw-mori-3.failspace.top
+  servername: norway-2.failspace.top
   client-fingerprint: firefox
 - type: vless
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
@@ -87,46 +87,46 @@ proxies:
 - type: vless
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
   name: 🇳🇴 挪威 | NOR
-  server: 31.76.5.144
+  server: 31.76.5.2
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: norw-1.failspace.top
+  servername: viper-25.moriarty-web.com
   client-fingerprint: firefox
+- type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  name: '🇳🇴 挪威 | NOR #1'
+  server: 31.76.5.137
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: norw-mori-3.failspace.top
+  client-fingerprint: firefox
+- type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  name: '🇳🇴 挪威 | NOR #10'
+  server: 31.76.5.51
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: norw-mori-5.failspace.top
+  client-fingerprint: chrome
 - type: vless
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
   name: 🇳🇴 挪威 | NOR
-  server: 31.76.5.124
+  server: 31.76.5.137
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: norway-2.failspace.top
-  client-fingerprint: firefox
-- type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: '🇳🇴 挪威 | NOR #6'
-  server: 31.76.5.124
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: norway-2.failspace.top
-  client-fingerprint: firefox
-- type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: '🇳🇴 挪威 | NOR #9'
-  server: 31.76.5.144
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: norw-1.failspace.top
+  servername: norw-mori-3.failspace.top
   client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
@@ -136,29 +136,29 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
-  - '🇳🇴 挪威 | NOR #10'
-  - '🇳🇴 挪威 | NOR #1'
-  - '🇳🇴 挪威 | NOR #8'
+  - '🇳🇴 挪威 | NOR #9'
   - 🇳🇴 挪威 | NOR
+  - '🇳🇴 挪威 | NOR #8'
+  - '🇳🇴 挪威 | NOR #6'
   - '🇳🇴 挪威 | NOR #3'
   - 🇳🇴 挪威 | NOR
+  - '🇳🇴 挪威 | NOR #1'
+  - '🇳🇴 挪威 | NOR #10'
   - 🇳🇴 挪威 | NOR
-  - '🇳🇴 挪威 | NOR #6'
-  - '🇳🇴 挪威 | NOR #9'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
   - EPODONIOS
-  - '🇳🇴 挪威 | NOR #10'
-  - '🇳🇴 挪威 | NOR #1'
-  - '🇳🇴 挪威 | NOR #8'
+  - '🇳🇴 挪威 | NOR #9'
   - 🇳🇴 挪威 | NOR
+  - '🇳🇴 挪威 | NOR #8'
+  - '🇳🇴 挪威 | NOR #6'
   - '🇳🇴 挪威 | NOR #3'
   - 🇳🇴 挪威 | NOR
+  - '🇳🇴 挪威 | NOR #1'
+  - '🇳🇴 挪威 | NOR #10'
   - 🇳🇴 挪威 | NOR
-  - '🇳🇴 挪威 | NOR #6'
-  - '🇳🇴 挪威 | NOR #9'
 rules:
 - MATCH,SELECT

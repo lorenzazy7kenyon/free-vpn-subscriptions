@@ -10,66 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-256-gcm
-  password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
-  name: EPODONIOS
-  server: 185.156.47.97
-  port: 9443
-  udp: true
-- type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知122 7.6MB/s
-  server: 134.195.196.211
-  port: 18000
-  udp: true
-- type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  name: EPODONIOS
-  server: 137.184.174.93
-  port: 8080
-  udp: true
-- type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: EPODONIOS
-  server: 66.163.113.176
-  port: 22324
-  udp: true
-- type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:HWFFJN19JkvbTKo/79AfnbRBK9uHUUaFNZJyLjEoJGs=
-  name: EPODONIOS
-  server: 51.222.107.43
-  port: 2083
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
-  name: EPODONIOS
-  server: 51.222.141.125
-  port: 445
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
-  name: EPODONIOS
-  server: 51.222.12.127
-  port: 445
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  name: EPODONIOS
-  server: 51.222.200.165
-  port: 5000
-  udp: true
 - type: vless
   uuid: 7d9dbe01-f192-436e-b6d5-533fc3c998e0
   name: EPODONIOS
@@ -84,6 +24,13 @@ proxies:
     path: /ws?ip=149.56.14.62:443
     headers:
       Host: nova-relay-d9g973.pages.dev
+- type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:HWFFJN19JkvbTKo/79AfnbRBK9uHUUaFNZJyLjEoJGs=
+  name: EPODONIOS
+  server: 51.222.107.43
+  port: 2083
+  udp: true
 - type: ss
   cipher: aes-256-gcm
   password: cdBIDV42DCwnfIN
@@ -109,15 +56,22 @@ proxies:
   cipher: aes-256-gcm
   password: kDWvXYZoTBcGkC4
   name: EPODONIOS
-  server: 51.222.136.236
+  server: 51.79.49.116
   port: 8882
   udp: true
 - type: ss
   cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
+  password: zDNVedRFPQexG9v
   name: EPODONIOS
-  server: 51.79.49.116
-  port: 8882
+  server: 51.222.12.127
+  port: 445
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+  name: EPODONIOS
+  server: 51.222.200.165
+  port: 5000
   udp: true
 - type: ss
   cipher: aes-256-gcm
@@ -127,19 +81,8 @@ proxies:
   port: 5601
   udp: true
 - type: vless
-  uuid: ca52e2b6-fb9f-4dac-b6dc-49da9923f251
-  name: 🇨🇦[www.v2nodes.com] vless-CA-1...
-  server: 209.200.246.148
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- type: vless
   uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
-  name: '🏳[www.v2nodes.com] vless- #7'
+  name: '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
   server: 66.70.179.198
   port: 2053
   udp: true
@@ -147,6 +90,26 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: firefox
+- type: vless
+  uuid: 0aec6598-7fb5-44e6-bff7-a4d550117830
+  name: EPODONIOS
+  server: 104.234.135.88
+  port: 443
+  udp: true
+  network: xhttp
+- type: vless
+  uuid: 1506f2e0-ae12-4718-b5ab-c5609161300e
+  name: EPODONIOS
+  server: 184.107.178.99
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: na2.cdn77.icu
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
+    short-id: 1ed136481e0ede74
 - type: vless
   uuid: 20b98028-53c9-4f76-9bc9-b6b16b8a9152
   name: EPODONIOS
@@ -175,51 +138,37 @@ proxies:
     public-key: 2PYoIhSKvVE-DgFzPYGo4cD2b7_8Ul2Vm8QKGWH1sAo
     short-id: 4b
 - type: vless
-  uuid: 1506f2e0-ae12-4718-b5ab-c5609161300e
-  name: EPODONIOS
-  server: 184.107.178.99
+  uuid: ca52e2b6-fb9f-4dac-b6dc-49da9923f251
+  name: '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
+  server: 209.200.246.148
   port: 443
   udp: true
+  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: na2.cdn77.icu
+  servername: www.cloudflare.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
-    short-id: 1ed136481e0ede74
-- type: vless
-  uuid: 0aec6598-7fb5-44e6-bff7-a4d550117830
+- type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
   name: EPODONIOS
-  server: 104.234.135.88
-  port: 443
+  server: 137.184.174.93
+  port: 8080
   udp: true
-  network: xhttp
-- type: vless
-  uuid: 12af3df8-2ffe-48fe-9b60-376f015ea4f8
+- type: ss
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
   name: EPODONIOS
-  server: 51.161.72.153
-  port: 37765
+  server: 51.222.136.236
+  port: 8882
   udp: true
-  network: grpc
-  tls: true
-  servername: www.semiconductor.samsung.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: g-4UVtgbojoxQaglMCttyLme4xjtTqomqxdZaVsruQ4
-    short-id: defda00d613c
-- type: vless
-  uuid: 44eae030-290b-4083-8102-6f8bab05701b
+- type: ss
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
   name: EPODONIOS
-  server: 104.21.236.63
-  port: 443
+  server: 51.222.141.125
+  port: 445
   udp: true
-  network: ws
-  tls: true
-  servername: cfvvv-ev1.pages.dev
-  ws-opts:
-    path: /
-    headers:
-      Host: cfvvv-ev1.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -227,7 +176,6 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - 未知122 7.6MB/s
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -236,16 +184,12 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - 🇨🇦[www.v2nodes.com] vless-CA-1...
-  - '🏳[www.v2nodes.com] vless- #7'
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -254,7 +198,6 @@ proxy-groups:
   proxies:
   - AUTO
   - EPODONIOS
-  - 未知122 7.6MB/s
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
@@ -263,16 +206,12 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - 🇨🇦[www.v2nodes.com] vless-CA-1...
-  - '🏳[www.v2nodes.com] vless- #7'
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

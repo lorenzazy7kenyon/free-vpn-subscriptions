@@ -1,0 +1,74 @@
+{
+  "outbounds": [
+    {
+      "server": "92.42.201.102",
+      "server_port": 443,
+      "tag": "🇸🇮[www.v2nodes.com] vless-SI-1...",
+      "type": "vless",
+      "uuid": "d0c8aa8d-a535-432a-b521-21f0e561f643"
+    },
+    {
+      "flow": "xtls-rprx-vision-udp443",
+      "server": "92.42.201.107",
+      "server_port": 443,
+      "tag": "RU_speednode_0034",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "node-slo02.rkitman.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "d0c8aa8d-a535-432a-b521-21f0e561f643"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "92.42.201.102",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU",
+          "short_id": "88d9dc52ef39c8bd"
+        },
+        "server_name": "node-slo01.rkitman.ru"
+      },
+      "type": "vless",
+      "uuid": "d0c8aa8d-a535-432a-b521-21f0e561f643"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "🇸🇮[www.v2nodes.com] vless-SI-1...",
+        "RU_speednode_0034",
+        "EPODONIOS"
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "🇸🇮[www.v2nodes.com] vless-SI-1...",
+        "RU_speednode_0034",
+        "EPODONIOS"
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

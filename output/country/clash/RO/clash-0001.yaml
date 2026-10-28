@@ -11,6 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
+  name: '🏳[www.v2nodes.com] vless- #24'
+  server: 82.117.255.174
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- type: vless
   uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
   name: '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
   server: 46.28.67.55
@@ -21,13 +32,6 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
-  name: EPODONIOS
-  server: 154.46.31.106
-  port: 443
-  udp: true
 - type: vless
   uuid: 1506f2e0-ae12-4718-b5ab-c5609161300e
   name: EPODONIOS
@@ -43,41 +47,37 @@ proxies:
     short-id: 1ed136481e0ede74
 - type: ss
   cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
+  name: EPODONIOS
+  server: 154.46.31.106
+  port: 443
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
   password: U83u9OGpvSatIUW7LsWffr
   name: EPODONIOS
   server: 194.68.44.42
   port: 64546
   udp: true
-- type: vless
-  uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
-  name: 🇷🇴[www.v2nodes.com] vless-RO-1...
-  server: 82.117.255.174
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🏳[www.v2nodes.com] vless- #24'
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - 🇷🇴[www.v2nodes.com] vless-RO-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🏳[www.v2nodes.com] vless- #24'
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
-  - 🇷🇴[www.v2nodes.com] vless-RO-1...
 rules:
 - MATCH,SELECT

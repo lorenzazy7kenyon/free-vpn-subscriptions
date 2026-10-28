@@ -1,49 +1,26 @@
 {
   "outbounds": [
     {
-      "flow": "xtls-rprx-vision",
-      "server": "177.7.51.29",
-      "server_port": 8443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "laG5BxoSbdRozpauATNFBPPTwhuDuu0JFl_SCP2ZQlU",
-          "short_id": "14fbf992"
-        },
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "c6b1b2d0-ed5e-48ce-99e6-112ff330030d"
-    },
-    {
       "flow": "xtls-rprx-vision-udp443",
-      "server": "177.7.51.29",
-      "server_port": 8443,
-      "tag": "🇺🇸US_2|4.0MB/s",
+      "server": "109.104.155.121",
+      "server_port": 443,
+      "tag": "🇧🇷BR_2|2.1MB/s",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "www.apple.com",
+        "server_name": "br1.accessboy.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "type": "vless",
-      "uuid": "c6b1b2d0-ed5e-48ce-99e6-112ff330030d"
+      "uuid": "caf3d607-95c9-4ea0-98b5-864027056ba0"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "EPODONIOS",
-        "🇺🇸US_2|4.0MB/s"
+        "🇧🇷BR_2|2.1MB/s"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -52,8 +29,7 @@
     {
       "outbounds": [
         "auto",
-        "EPODONIOS",
-        "🇺🇸US_2|4.0MB/s"
+        "🇧🇷BR_2|2.1MB/s"
       ],
       "tag": "select",
       "type": "selector"

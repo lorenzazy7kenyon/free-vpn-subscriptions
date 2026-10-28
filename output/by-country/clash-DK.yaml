@@ -11,16 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 633c1bb0-60d5-41fb-a9c4-11f408b264ec
-  name: EPODONIOS
-  server: 140.248.69.254
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: speedtest.net
-  client-fingerprint: chrome
-- type: vless
   uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
   name: 🇩🇰[www.v2nodes.com] vless-DK-1...
   server: 193.233.253.180
@@ -30,19 +20,29 @@ proxies:
   tls: true
   servername: github.com
   client-fingerprint: chrome
+- type: vless
+  uuid: 633c1bb0-60d5-41fb-a9c4-11f408b264ec
+  name: EPODONIOS
+  server: 140.248.69.254
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: speedtest.net
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
   - 🇩🇰[www.v2nodes.com] vless-DK-1...
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - 🇩🇰[www.v2nodes.com] vless-DK-1...
+  - EPODONIOS
 rules:
 - MATCH,SELECT

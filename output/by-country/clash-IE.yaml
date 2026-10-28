@@ -10,6 +10,22 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: znEtjgHLXH4FBLic
+  name: EPODONIOS
+  server: 74.234.59.81
+  port: 443
+  udp: true
+- type: vmess
+  uuid: 2387bfbc-10a6-4bd7-dc55-7cba954ce6e8
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: EPODONIOS
+  server: 54.229.151.97
+  port: 59236
+  udp: true
 - type: vless
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
   name: '🇮🇪 爱尔兰 | IRL #1'
@@ -21,44 +37,6 @@ proxies:
   tls: true
   servername: ir-new1.failspace.top
   client-fingerprint: chrome
-- type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: 🇮🇪 爱尔兰 | IRL
-  server: 50.7.5.165
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ir-new1.failspace.top
-  client-fingerprint: chrome
-- type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: 🇮🇪 爱尔兰 | IRL
-  server: 50.7.5.166
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ekb.eg
-  client-fingerprint: firefox
-- type: vmess
-  uuid: 2387bfbc-10a6-4bd7-dc55-7cba954ce6e8
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: EPODONIOS
-  server: 54.229.151.97
-  port: 59236
-  udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: znEtjgHLXH4FBLic
-  name: EPODONIOS
-  server: 74.234.59.81
-  port: 443
-  udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: YF329KNGVTUZ1qrH
@@ -79,22 +57,18 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - EPODONIOS
+  - EPODONIOS
   - '🇮🇪 爱尔兰 | IRL #1'
-  - 🇮🇪 爱尔兰 | IRL
-  - 🇮🇪 爱尔兰 | IRL
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
+  - EPODONIOS
   - '🇮🇪 爱尔兰 | IRL #1'
-  - 🇮🇪 爱尔兰 | IRL
-  - 🇮🇪 爱尔兰 | IRL
-  - EPODONIOS
-  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
 rules:
