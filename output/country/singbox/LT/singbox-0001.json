@@ -27,7 +27,11 @@
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "www.pleadcourt.org"
+        "server_name": "www.pleadcourt.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        }
       },
       "transport": {
         "headers": {
@@ -37,6 +41,28 @@
         "type": "ws"
       },
       "type": "trojan"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "130.78.190.163",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "HLKQ0JvyaZ16JNdl0pbEPkiVRYJDiZNzGz9prDMiw2s",
+          "short_id": "a1b2c3d4b5"
+        },
+        "server_name": "ee.viralforge.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "047466dd-05aa-4331-abf7-322c5aaecf97"
     },
     {
       "password": "humanity",
@@ -63,6 +89,7 @@
       "outbounds": [
         "EPODONIOS",
         "EPODONIOS",
+        "EPODONIOS",
         "EPODONIOS"
       ],
       "tag": "auto",
@@ -72,6 +99,7 @@
     {
       "outbounds": [
         "auto",
+        "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS"

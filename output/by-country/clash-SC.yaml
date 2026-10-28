@@ -11,16 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 406d8436-0eb9-4eb2-84fb-960e076ffba6
-  name: EPODONIOS
-  server: 45.130.125.160
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: de.lezzatzone.ir
-  client-fingerprint: chrome
-- type: vless
   uuid: 47422044-85e3-426b-b6c4-3588cb24a3e5
   name: EPODONIOS
   server: 45.130.125.160
@@ -54,6 +44,19 @@ proxies:
   servername: germany4.alibaba1405.org
   client-fingerprint: chrome
 - type: vless
+  uuid: b37be529-83c9-4851-a3cf-73d7d05bf308
+  name: EPODONIOS
+  server: 45.130.125.76
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: drrfddgbv.turbooserver.net.tr
+  ws-opts:
+    path: /
+    headers:
+      Host: drrfddgbv.turbooserver.net.tr
+- type: vless
   uuid: d08d180d-cb07-4d82-b1bd-1e42fa523cd7
   name: EPODONIOS
   server: 45.130.125.0
@@ -66,6 +69,25 @@ proxies:
     path: /sg-orcl
     headers:
       Host: ads.ruangguru.com.cyylr.eu.cc
+- type: vless
+  uuid: d98c757d-2be3-49ff-8b9f-76ffdc924a61
+  name: EPODONIOS
+  server: 45.130.125.66
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: chrome.yas-nowin.ir
+  client-fingerprint: chrome
+  ws-opts:
+    path: /cloud-vps
+- type: vless
+  uuid: dca945d2-6d9b-434f-8754-3626a6a75e21
+  name: EPODONIOS
+  server: 45.130.125.160
+  port: 2095
+  udp: true
+  network: httpupgrade
 - type: vless
   uuid: dd24f07d-5ed1-4e51-8073-5733e904fa88
   name: EPODONIOS
@@ -87,38 +109,29 @@ proxies:
     path: /sync
     headers:
       Host: nahan-core.netizo09.workers.dev
-- type: vless
-  uuid: b37be529-83c9-4851-a3cf-73d7d05bf308
-  name: EPODONIOS
-  server: 45.130.125.76
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: drrfddgbv.turbooserver.net.tr
-  ws-opts:
-    path: /
-    headers:
-      Host: drrfddgbv.turbooserver.net.tr
-- type: vless
-  uuid: d98c757d-2be3-49ff-8b9f-76ffdc924a61
-  name: EPODONIOS
-  server: 45.130.125.66
+- type: trojan
+  password: humanity
+  name: 🇳🇱 荷兰 | NLD 3
+  server: 45.130.125.69
   port: 443
   udp: true
+  sni: www.calmlunch.com
+  skip-cert-verify: true
   network: ws
-  tls: true
-  servername: chrome.yas-nowin.ir
-  client-fingerprint: chrome
   ws-opts:
-    path: /cloud-vps
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
 - type: vless
-  uuid: dca945d2-6d9b-434f-8754-3626a6a75e21
+  uuid: 406d8436-0eb9-4eb2-84fb-960e076ffba6
   name: EPODONIOS
   server: 45.130.125.160
-  port: 2095
+  port: 443
   udp: true
-  network: httpupgrade
+  network: xhttp
+  tls: true
+  servername: de.lezzatzone.ir
+  client-fingerprint: chrome
 - type: vless
   uuid: b69b43d1-091d-4d7c-90b2-7a8bbad9d6a9
   name: EPODONIOS
@@ -144,6 +157,19 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
+- type: trojan
+  password: humanity
+  name: 🇳🇱 荷兰 | NLD
+  server: 45.130.125.126
+  port: 443
+  udp: true
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -159,9 +185,11 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - 🇳🇱 荷兰 | NLD 3
   - EPODONIOS
   - EPODONIOS
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
+  - 🇳🇱 荷兰 | NLD
 - name: SELECT
   type: select
   proxies:
@@ -175,8 +203,10 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - 🇳🇱 荷兰 | NLD 3
   - EPODONIOS
   - EPODONIOS
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
+  - 🇳🇱 荷兰 | NLD
 rules:
 - MATCH,SELECT

@@ -10,31 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知40
-  server: 140.83.57.20
-  port: 13118
-  udp: true
-  tls: true
-  servername: sg.11160321.de5.net
-  ws-opts:
-    path: /
-    headers:
-      Host: sg.11160321.de5.net
-- type: vless
-  uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
-  server: 2.29.101.158
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: 36a466g.fi1.h1clayd.click
-  client-fingerprint: firefox
 - type: vless
   uuid: 35eb914a-f7c2-4ffa-8503-1bf30df0f1a5
   name: EPODONIOS
@@ -56,17 +31,6 @@ proxies:
   port: 443
   udp: true
   network: tcp
-- type: vless
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: '🏳[www.v2nodes.com] vless- #14'
-  server: 13.140.56.100
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 13.140.56.100
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: 93F6FFBh3CZiBUsG
@@ -81,29 +45,36 @@ proxies:
   server: 102.37.156.224
   port: 443
   udp: true
+- type: vless
+  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
+  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
+  server: 13.140.56.100
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 13.140.56.100
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知40
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
   - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
-  - '🏳[www.v2nodes.com] vless- #14'
   - EPODONIOS
   - EPODONIOS
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知40
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
   - EPODONIOS
   - TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048&security=tls&encryption=none&insecu
-  - '🏳[www.v2nodes.com] vless- #14'
   - EPODONIOS
   - EPODONIOS
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
 rules:
 - MATCH,SELECT

@@ -23,7 +23,7 @@ proxies:
       Host: aIs.SpEeDtEsT.nEt
 - type: vless
   uuid: ff85e702-b605-4109-884d-2c1f065d0954
-  name: EPODONIOS
+  name: 🇹🇭[www.v2nodes.com] vless-TH-1...
   server: 45.154.26.63
   port: 443
   udp: true
@@ -32,9 +32,6 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: MiQ5B4j6In71lWvCi0vO_DkVSDb7sii34bh5efBMswk
-    short-id: 3c032a7e
 - type: vless
   uuid: 3c52e091-6714-4915-949f-2149fe69951b
   name: EPODONIOS
@@ -46,17 +43,6 @@ proxies:
     path: /ws
     headers:
       Host: aIs.SpEeDtEsT.nEt
-- type: vless
-  uuid: ff85e702-b605-4109-884d-2c1f065d0954
-  name: 🇹🇭[www.v2nodes.com] vless-TH-1...
-  server: 45.154.26.63
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -64,16 +50,14 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - 🇹🇭[www.v2nodes.com] vless-TH-1...
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - 🇹🇭[www.v2nodes.com] vless-TH-1...
+  - EPODONIOS
 rules:
 - MATCH,SELECT

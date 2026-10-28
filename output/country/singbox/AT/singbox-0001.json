@@ -20,6 +20,23 @@
       "type": "trojan"
     },
     {
+      "flow": "xtls-rprx-vision",
+      "server": "188.137.158.189",
+      "server_port": 443,
+      "tag": "EPODONIOS",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "softice.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "ef328563-cda1-4530-9b0a-988cc5a74d78"
+    },
+    {
       "server": "62.83.41.69",
       "server_port": 8443,
       "tag": "EPODONIOS",
@@ -44,67 +61,24 @@
     },
     {
       "flow": "xtls-rprx-vision",
-      "server": "188.137.158.169",
+      "server": "94.228.162.222",
       "server_port": 443,
       "tag": "EPODONIOS",
       "tls": {
         "enabled": true,
-        "insecure": false,
-        "server_name": "softice.net",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "rvDa0xNkcJYEIJ-1Ncrq54BUjjwm99C_8Vv_-He6j1U"
+        },
+        "server_name": "vena.solomon-planet.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "type": "vless",
-      "uuid": "ef328563-cda1-4530-9b0a-988cc5a74d78"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "188.137.158.199",
-      "server_port": 443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "softice.net"
-      },
-      "type": "vless",
-      "uuid": "ef328563-cda1-4530-9b0a-988cc5a74d78"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "188.137.158.159",
-      "server_port": 443,
-      "tag": "🇦🇹 奥地利 | AUT #1",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "softice.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "type": "vless",
-      "uuid": "ef328563-cda1-4530-9b0a-988cc5a74d78"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "188.137.158.189",
-      "server_port": 443,
-      "tag": "🇦🇹 奥地利 | AUT #2",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "softice.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "type": "vless",
-      "uuid": "ef328563-cda1-4530-9b0a-988cc5a74d78"
+      "uuid": "46c16b68-2553-4e5e-8176-f63d6bf6ec0c"
     },
     {
       "flow": "xtls-rprx-vision",
@@ -125,15 +99,31 @@
       "uuid": "8007dda2-aed2-4514-8299-6e3edbdb015b"
     },
     {
+      "flow": "xtls-rprx-vision",
+      "server": "50.7.36.29",
+      "server_port": 443,
+      "tag": "🇦🇹 奥地利 | AUT #3",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "ekb.eg",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277"
+    },
+    {
       "interval": "5m",
       "outbounds": [
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
-        "🇦🇹 奥地利 | AUT #1",
-        "🇦🇹 奥地利 | AUT #2",
-        "EPODONIOS"
+        "EPODONIOS",
+        "🇦🇹 奥地利 | AUT #3"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -146,9 +136,8 @@
         "EPODONIOS",
         "EPODONIOS",
         "EPODONIOS",
-        "🇦🇹 奥地利 | AUT #1",
-        "🇦🇹 奥地利 | AUT #2",
-        "EPODONIOS"
+        "EPODONIOS",
+        "🇦🇹 奥地利 | AUT #3"
       ],
       "tag": "select",
       "type": "selector"

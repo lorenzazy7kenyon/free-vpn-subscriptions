@@ -23,16 +23,14 @@ proxies:
   reality-opts:
     public-key: lDi6FDdd5qUFMjjR1JDidfUU2qE_U1L90VjNTzPyQhs
 - type: vmess
-  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
-  alterId: 0
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
   cipher: auto
-  network: ws
-  name: EPODONIOS
-  server: 120.48.133.162
-  port: 10086
+  network: tcp
+  name: 🇨🇳_CN_中国
+  server: 112.132.215.108
+  port: 50002
   udp: true
-  ws-opts:
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
 - type: vmess
   uuid: a01e5d56-464f-45b9-b600-164db4700162
   alterId: 0
@@ -44,6 +42,25 @@ proxies:
   udp: true
   ws-opts:
     path: /
+- type: vmess
+  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: EPODONIOS
+  server: 120.48.133.162
+  port: 10086
+  udp: true
+  ws-opts:
+    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+- type: trojan
+  password: 298c5651d3015d7cee9e8411eaa0bd72
+  name: '🇭🇰 香港 | HKG #7'
+  server: 124.151.45.214
+  port: 12010
+  udp: true
+  sni: apis.99912345.xyz
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -51,14 +68,18 @@ proxy-groups:
   interval: 300
   proxies:
   - EPODONIOS
-  - EPODONIOS
   - 🇨🇳_CN_中国
+  - 🇨🇳_CN_中国
+  - EPODONIOS
+  - '🇭🇰 香港 | HKG #7'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
-  - EPODONIOS
   - 🇨🇳_CN_中国
+  - 🇨🇳_CN_中国
+  - EPODONIOS
+  - '🇭🇰 香港 | HKG #7'
 rules:
 - MATCH,SELECT

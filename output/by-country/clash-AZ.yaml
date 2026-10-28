@@ -36,23 +36,6 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: SHDdd617KLHHb0qlQFOHepeHFl_Ch2i-K7o891uyo2M
-- type: vless
-  uuid: ba8cff29-a34b-4381-a580-d349c1191e35
-  name: EPODONIOS
-  server: 180.149.44.237
-  port: 2096
-  udp: true
-  network: tcp
-- type: vless
-  uuid: f439e4fe-139b-4882-ad8b-a16176d09c88
-  name: '🇦🇿 AZ_28 #1'
-  server: 94.20.141.53
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: eu63.cdn77.icu
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -61,15 +44,11 @@ proxy-groups:
   proxies:
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - '🇦🇿 AZ_28 #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - EPODONIOS
   - EPODONIOS
-  - EPODONIOS
-  - '🇦🇿 AZ_28 #1'
 rules:
 - MATCH,SELECT

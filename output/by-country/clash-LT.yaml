@@ -35,6 +35,20 @@ proxies:
     path: /assignment
     headers:
       Host: www.pleadcourt.org
+- type: vless
+  uuid: 047466dd-05aa-4331-abf7-322c5aaecf97
+  name: EPODONIOS
+  server: 130.78.190.163
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ee.viralforge.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: HLKQ0JvyaZ16JNdl0pbEPkiVRYJDiZNzGz9prDMiw2s
+    short-id: a1b2c3d4b5
 - type: trojan
   password: humanity
   name: EPODONIOS
@@ -54,10 +68,12 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - EPODONIOS
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS

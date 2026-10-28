@@ -11,6 +11,20 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
+  name: EPODONIOS
+  server: 138.124.4.224
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: login.sakhweb.fyi
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 13nLTYkdBEFR-A4CfK2beOx-5LKEsXh1QHPq8Kt52BQ
+    short-id: 7271129440ade8fa
+- type: vless
   uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
   name: EPODONIOS
   server: 201.7.25.100
@@ -38,20 +52,6 @@ proxies:
     public-key: VfyS9hoKlYU2l3oZ-T6RN2JzjWgtrIC7-VjseHCeBGE
     short-id: 0f4dacf33211e04f
 - type: vless
-  uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
-  name: EPODONIOS
-  server: 138.124.4.224
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: login.sakhweb.fyi
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 13nLTYkdBEFR-A4CfK2beOx-5LKEsXh1QHPq8Kt52BQ
-    short-id: 7271129440ade8fa
-- type: vless
   uuid: cba98ec5-9f00-4ada-a0ce-f490257af2ee
   name: EPODONIOS
   server: 13.143.182.175
@@ -64,6 +64,26 @@ proxies:
   reality-opts:
     public-key: 8PGoRfefKAWaX4N7rqWyIap71L6JOL15feshsAoOphM
     short-id: 89a72356470b2478
+- type: vless
+  uuid: abca037b-bee5-41cc-a888-0668e4c66176
+  name: '🇪🇪 爱沙尼亚 | EST #2'
+  server: 31.76.70.90
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: 597dad6b.con.fernarchive.online
+  client-fingerprint: chrome
+- type: vless
+  uuid: abca037b-bee5-41cc-a888-0668e4c66176
+  name: EPODONIOS
+  server: 31.76.70.90
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: 597dad6b.con.fernarchive.online
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -74,6 +94,8 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - '🇪🇪 爱沙尼亚 | EST #2'
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
@@ -81,6 +103,8 @@ proxy-groups:
   - EPODONIOS
   - EPODONIOS
   - EPODONIOS
+  - EPODONIOS
+  - '🇪🇪 爱沙尼亚 | EST #2'
   - EPODONIOS
 rules:
 - MATCH,SELECT

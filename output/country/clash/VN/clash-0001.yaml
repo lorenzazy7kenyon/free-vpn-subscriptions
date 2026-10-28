@@ -17,13 +17,6 @@ proxies:
   port: 2086
   udp: true
   network: tcp
-- type: vless
-  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
-  name: EPODONIOS
-  server: 150.95.109.109
-  port: 2086
-  udp: true
-  network: tcp
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -31,12 +24,10 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
-  - EPODONIOS
 rules:
 - MATCH,SELECT

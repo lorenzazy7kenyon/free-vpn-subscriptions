@@ -31,6 +31,20 @@ proxies:
 - type: vless
   uuid: d0c8aa8d-a535-432a-b521-21f0e561f643
   name: EPODONIOS
+  server: 92.42.201.160
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: node-slo05.rkitman.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU
+    short-id: 88d9dc52ef39c8bd
+- type: vless
+  uuid: d0c8aa8d-a535-432a-b521-21f0e561f643
+  name: EPODONIOS
   server: 92.42.201.102
   port: 443
   udp: true
@@ -38,6 +52,21 @@ proxies:
   network: tcp
   tls: true
   servername: node-slo01.rkitman.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU
+    short-id: 88d9dc52ef39c8bd
+- type: vless
+  uuid: d0c8aa8d-a535-432a-b521-21f0e561f643
+  name: EPODONIOS
+  server: 92.42.201.107
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: node-slo02.rkitman.ru
+  client-fingerprint: chrome
   reality-opts:
     public-key: 8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU
     short-id: 88d9dc52ef39c8bd
@@ -50,12 +79,16 @@ proxy-groups:
   - 🇸🇮[www.v2nodes.com] vless-SI-1...
   - RU_speednode_0034
   - EPODONIOS
+  - EPODONIOS
+  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇸🇮[www.v2nodes.com] vless-SI-1...
   - RU_speednode_0034
+  - EPODONIOS
+  - EPODONIOS
   - EPODONIOS
 rules:
 - MATCH,SELECT

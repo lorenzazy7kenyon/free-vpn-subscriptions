@@ -1,21 +1,32 @@
 {
   "outbounds": [
     {
-      "flow": "xtls-rprx-vision-udp443",
-      "server": "147.78.1.73",
+      "method": "aes-256-gcm",
+      "password": "BWyPPTusFKhGgzKh",
+      "server": "64.177.90.30",
+      "server_port": 8388,
+      "tag": "EPODONIOS",
+      "type": "ss"
+    },
+    {
+      "password": "humanity",
+      "server": "131.196.254.151",
       "server_port": 443,
-      "tag": "🇲🇽MX_1|2.8MB/s",
+      "tag": "EPODONIOS",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "mx1.accessboy.com",
+        "server_name": "www.pleadcourt.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "unsafe"
         }
       },
-      "type": "vless",
-      "uuid": "caf3d607-95c9-4ea0-98b5-864027056ba0"
+      "transport": {
+        "path": "/assignment",
+        "type": "ws"
+      },
+      "type": "trojan"
     },
     {
       "server": "131.196.253.141",
@@ -39,22 +50,6 @@
     {
       "server": "156.252.229.11",
       "server_port": 8443,
-      "tag": "🇪🇸[www.v2nodes.com] vless-ES-1...",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "play.googleapis.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "3e21e3d3-6d26-4155-b851-764dd8e8c6b5"
-    },
-    {
-      "server": "156.252.229.11",
-      "server_port": 8443,
       "tag": "EPODONIOS",
       "tls": {
         "enabled": true,
@@ -74,12 +69,29 @@
       "uuid": "3e21e3d3-6d26-4155-b851-764dd8e8c6b5"
     },
     {
+      "server": "156.252.229.11",
+      "server_port": 8443,
+      "tag": "🇪🇸[www.v2nodes.com] vless-ES-1...",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "play.googleapis.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "3e21e3d3-6d26-4155-b851-764dd8e8c6b5"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "🇲🇽MX_1|2.8MB/s",
+        "EPODONIOS",
+        "EPODONIOS",
         "🇲🇽[www.v2nodes.com] vless-MX-1... #2",
-        "🇪🇸[www.v2nodes.com] vless-ES-1...",
-        "EPODONIOS"
+        "EPODONIOS",
+        "🇪🇸[www.v2nodes.com] vless-ES-1..."
       ],
       "tag": "auto",
       "type": "urltest",
@@ -88,10 +100,11 @@
     {
       "outbounds": [
         "auto",
-        "🇲🇽MX_1|2.8MB/s",
+        "EPODONIOS",
+        "EPODONIOS",
         "🇲🇽[www.v2nodes.com] vless-MX-1... #2",
-        "🇪🇸[www.v2nodes.com] vless-ES-1...",
-        "EPODONIOS"
+        "EPODONIOS",
+        "🇪🇸[www.v2nodes.com] vless-ES-1..."
       ],
       "tag": "select",
       "type": "selector"
