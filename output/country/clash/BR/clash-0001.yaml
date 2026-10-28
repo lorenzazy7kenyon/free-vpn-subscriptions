@@ -11,27 +11,27 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: caf3d607-95c9-4ea0-98b5-864027056ba0
-  name: 🇧🇷BR_2|2.1MB/s
-  server: 109.104.155.121
-  port: 443
+  uuid: c6b1b2d0-ed5e-48ce-99e6-112ff330030d
+  name: 🇧🇷[www.v2nodes.com] vless-BR-1...
+  server: 177.7.51.29
+  port: 8443
   udp: true
-  flow: xtls-rprx-vision-udp443
+  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: br1.accessboy.com
-  client-fingerprint: firefox
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇷BR_2|2.1MB/s
+  - 🇧🇷[www.v2nodes.com] vless-BR-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇧🇷BR_2|2.1MB/s
+  - 🇧🇷[www.v2nodes.com] vless-BR-1...
 rules:
 - MATCH,SELECT

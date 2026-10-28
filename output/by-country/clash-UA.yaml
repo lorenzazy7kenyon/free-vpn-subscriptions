@@ -11,32 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 6538f5c3-5b01-4956-a8e6-47688c01c42e
-  name: EPODONIOS
-  server: 104.143.223.66
-  port: 2085
-  udp: true
-  network: grpc
-- type: vless
-  uuid: dde8219d-a988-4944-b220-0444f8dde681
-  name: EPODONIOS
-  server: 104.143.223.120
-  port: 2085
-  udp: true
-  network: grpc
-- type: vless
-  uuid: 2bb8b13c-b3f0-2552-da05-d0929bfb36db
-  name: EPODONIOS
-  server: 104.245.240.4
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: download.nvidia.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: skXBkyphBIt0TWVM0R5U3U-8UG0cuW00ONkaQpJ-OxU
-- type: vless
   uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
   name: '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
   server: 213.111.148.137
@@ -66,18 +40,12 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #2'
 rules:

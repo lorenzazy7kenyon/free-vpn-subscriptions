@@ -10,22 +10,9 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 00000000-0000-0000-0000-000000000000
-  name: EPODONIOS
-  server: 1.1.1.1
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: 1.1.1.1
-  ws-opts:
-    path: /
-    headers:
-      Host: 1.1.1.1
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: EPODONIOS
+  name: 🇦🇺AU-45.63.30.142-0563
   server: 45.63.30.142
   port: 443
   udp: true
@@ -58,16 +45,14 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
+  - 🇦🇺AU-45.63.30.142-0563
   - '🇦🇺[www.v2nodes.com] vless-AU-1... #1'
   - 🇦🇺[www.v2nodes.com] vless-AU-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
+  - 🇦🇺AU-45.63.30.142-0563
   - '🇦🇺[www.v2nodes.com] vless-AU-1... #1'
   - 🇦🇺[www.v2nodes.com] vless-AU-1...
 rules:

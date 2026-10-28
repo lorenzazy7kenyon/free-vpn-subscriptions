@@ -10,35 +10,9 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: adf1fac3-cf57-ff40-574c-cf514457eb3f
-  name: EPODONIOS
-  server: 83.143.106.4
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: res.cdn.office.net
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 4g8R0-Acc1LjppgvUopldH0Wg3JA2tPXvYB96aJnigo
-- type: vless
-  uuid: f0b144bd-4c44-440d-b630-d79ec82cad3a
-  name: EPODONIOS
-  server: 77.91.69.169
-  port: 19226
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: PQjgf7GxBd2tDXf0zl9Z5rTZo7LdsWj0hGZLH-lJ-Uk
-    short-id: 7c
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: EPODONIOS
+  name: 🇮🇱[www.v2nodes.com] trojan-IL-...
   server: 64.176.163.182
   port: 443
   udp: true
@@ -55,77 +29,19 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: ccc.010304.xyz
-- type: vless
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  name: 🇪🇪EE_1|3.0MB/s
-  server: 79.182.39.232
-  port: 25895
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.samsung.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  name: EPODONIOS
-  server: 79.182.39.232
-  port: 25895
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.samsung.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
-    short-id: a73f0410d728c823
-- type: vless
-  uuid: 5a519754-a673-4462-83f6-5eb25d2af141
-  name: '🇺🇸 美国 | USA #10'
-  server: 79.182.39.57
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: f36f5ft.us4.h1clayd.click
-  client-fingerprint: firefox
-- type: vless
-  uuid: 5a519754-a673-4462-83f6-5eb25d2af141
-  name: 🇺🇸 美国 | USA
-  server: 79.182.39.57
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: f36f5ft.us4.h1clayd.click
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 5KZVzOFqMgdL47--JzLlg5HmPlAYp-cmQsXxkTXngS0
-    short-id: 8d50d3a4df71468c
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - 🇮🇱[www.v2nodes.com] trojan-IL-...
   - 🇮🇱[www.v2nodes.com] vless-IL-1...
-  - 🇪🇪EE_1|3.0MB/s
-  - EPODONIOS
-  - '🇺🇸 美国 | USA #10'
-  - 🇺🇸 美国 | USA
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - 🇮🇱[www.v2nodes.com] trojan-IL-...
   - 🇮🇱[www.v2nodes.com] vless-IL-1...
-  - 🇪🇪EE_1|3.0MB/s
-  - EPODONIOS
-  - '🇺🇸 美国 | USA #10'
-  - 🇺🇸 美国 | USA
 rules:
 - MATCH,SELECT

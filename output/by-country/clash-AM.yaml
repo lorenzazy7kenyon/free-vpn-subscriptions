@@ -11,22 +11,8 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-  name: EPODONIOS
-  server: 2.56.206.160
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ar.iotreeow.ir
-  client-fingerprint: chrome
-  ws-opts:
-    path: /Qv2raychannel
-    headers:
-      Host: ar.iotreeow.ir
-- type: vless
   uuid: f667a096-5231-4cfb-8759-92bb32473139
-  name: EPODONIOS
+  name: '🏳[www.v2nodes.com] vless- #1'
   server: 77.91.68.70
   port: 55983
   udp: true
@@ -34,22 +20,28 @@ proxies:
   tls: true
   servername: yahoo.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg
-    short-id: 0e
+- type: vless
+  uuid: f7376394-cd54-11f1-bb6a-bff6d0326f6a
+  name: 🏳[www.v2nodes.com] vless-
+  server: 194.36.37.59
+  port: 10004
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vpnjantit
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #1'
+  - 🏳[www.v2nodes.com] vless-
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #1'
+  - 🏳[www.v2nodes.com] vless-
 rules:
 - MATCH,SELECT

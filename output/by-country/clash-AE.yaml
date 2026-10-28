@@ -11,78 +11,26 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: EPODONIOS
-  server: 185.225.195.30
-  port: 8880
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime18.workers.dev
-- type: vless
-  uuid: dca945d2-6d9b-434f-8754-3626a6a75e21
-  name: EPODONIOS
-  server: 94.140.0.74
-  port: 2087
-  udp: true
-  network: ws
-  tls: true
-  servername: aza002.vaslbash.site
-  ws-opts:
-    path: /
-    headers:
-      Host: aza002.vaslbash.site
-- type: vless
-  uuid: 98d0fa1b-d778-477e-b897-4e2569c53178
-  name: EPODONIOS
-  server: 128.254.186.11
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: mother-earth.fyi
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-- type: vless
-  uuid: f8842728-bf43-47e2-83bf-283e21f33664
-  name: EPODONIOS
-  server: 94.249.188.202
-  port: 43000
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: 94.249.188.202
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: TdLpPmh5-Tbcj3bUPp7uw9znQ_Asao8z9jG7Eccrhwk
-    short-id: 7887c27d
-- type: vless
-  uuid: 2bb8b13c-b3f0-2552-da05-d0929bfb36db
-  name: EPODONIOS
-  server: 45.88.13.5
-  port: 8443
-  udp: true
-  network: grpc
-  tls: true
-  servername: download.nvidia.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: FOQzn10eHqu4F5xOxiXW2bTDG8lH4TdOXP6A5rDqKFk
-- type: vless
-  uuid: 9737cc16-7266-45ce-94d9-6e05a45e0b9c
-  name: 🇷🇺 俄罗斯 | RUS
+  uuid: 3225c52d-bc6c-4b53-ba42-4747a37f4f12
+  name: '🇩🇪 德国 | DEU #5'
   server: 188.72.103.4
   port: 443
   udp: true
-  network: xhttp
+  network: tcp
   tls: true
-  servername: ru.nnight.cfd
-  client-fingerprint: firefox
+  servername: cdn-1.frdmhere.com
+  client-fingerprint: qq
+- type: vless
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  server: 84.235.244.108
+  port: 22573
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
 - type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
@@ -95,36 +43,8 @@ proxies:
     headers:
       Host: free.cndyw.ggff.net
 - type: vless
-  uuid: 6a432d22-a5b2-41a9-b103-602f874b07bd
-  name: EPODONIOS
-  server: 188.72.103.4
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: 188.72.103.4
-- type: vless
-  uuid: 9737cc16-7266-45ce-94d9-6e05a45e0b9c
-  name: '🇷🇺 俄罗斯 | RUS #6'
-  server: 188.72.103.4
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: ru.nnight.cfd
-  client-fingerprint: firefox
-- type: vless
-  uuid: 42a64b9a-ab79-4094-8656-30366a7c2ea3
-  name: EPODONIOS
-  server: 188.72.103.4
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: 188.72.103.4
-- type: vless
   uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
-  name: EPODONIOS
+  name: 🇦🇪[www.v2nodes.com] vless-AE-1...
   server: 95.174.68.188
   port: 14430
   udp: true
@@ -133,37 +53,35 @@ proxies:
     path: /vless
     headers:
       Host: 95.174.68.188
+- type: vless
+  uuid: 3225c52d-bc6c-4b53-ba42-4747a37f4f12
+  name: 🇩🇪 德国 | DEU
+  server: 188.72.103.4
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: cdn-1.frdmhere.com
+  client-fingerprint: qq
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - 🇷🇺 俄罗斯 | RUS
+  - '🇩🇪 德国 | DEU #5'
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
-  - EPODONIOS
-  - '🇷🇺 俄罗斯 | RUS #6'
-  - EPODONIOS
-  - EPODONIOS
+  - 🇦🇪[www.v2nodes.com] vless-AE-1...
+  - 🇩🇪 德国 | DEU
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - 🇷🇺 俄罗斯 | RUS
+  - '🇩🇪 德国 | DEU #5'
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
-  - EPODONIOS
-  - '🇷🇺 俄罗斯 | RUS #6'
-  - EPODONIOS
-  - EPODONIOS
+  - 🇦🇪[www.v2nodes.com] vless-AE-1...
+  - 🇩🇪 德国 | DEU
 rules:
 - MATCH,SELECT

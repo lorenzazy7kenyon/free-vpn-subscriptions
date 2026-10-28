@@ -11,17 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
-  server: 46.28.67.55
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- type: vless
   uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
   name: 🇷🇴[www.v2nodes.com] vless-RO-1...
   server: 82.117.255.174
@@ -33,71 +22,20 @@ proxies:
   servername: gateway.icloud.com
   client-fingerprint: chrome
 - type: vless
-  uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
-  name: EPODONIOS
-  server: 82.117.255.174
+  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
+  server: 46.28.67.55
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: gateway.icloud.com
+  servername: www.cloudflare.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: 0QDBHaCRO2dPeeSVy3B3R_U12ZOvbvWl1JTFW_ZcpD0
-    short-id: 31e91d43e553bf32
-- type: vless
-  uuid: c3eb1b3a-4d14-45b8-861b-b16b6cc6f23a
-  name: EPODONIOS
-  server: 89.125.166.18
-  port: 8000
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: sni-4btyo4.mydevelopertool.xyz
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Qk10ezYAo-la69-xxKEZD3kioNH-oNT-4QQKGU8Ygjg
-    short-id: d46b864b23dc3814
-- type: vless
-  uuid: c3eb1b3a-4d14-45b8-861b-b16b6cc6f23a
-  name: EPODONIOS
-  server: 89.125.166.87
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: sni-ncdega35uy.mydevelopertool.xyz
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: XnyehftF9E2q-RCq8rMl6WHkpVuH_waVXl3D1DyIE3s
-    short-id: c4c4a66c12939a0d
-- type: vless
-  uuid: 1506f2e0-ae12-4718-b5ab-c5609161300e
-  name: EPODONIOS
-  server: 45.13.151.11
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: eu14.cdn77.icu
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
-    short-id: 1ed136481e0ede74
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
-  name: EPODONIOS
-  server: 154.46.31.106
-  port: 443
-  udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: U83u9OGpvSatIUW7LsWffr
-  name: EPODONIOS
+  name: 🇷🇴[www.v2nodes.com] ss-RO-1595...
   server: 194.68.44.42
   port: 64546
   udp: true
@@ -107,25 +45,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
   - 🇷🇴[www.v2nodes.com] vless-RO-1...
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
+  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
   - 🇷🇴[www.v2nodes.com] vless-RO-1...
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
+  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 rules:
 - MATCH,SELECT

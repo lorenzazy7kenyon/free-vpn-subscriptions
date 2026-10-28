@@ -10,25 +10,9 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: 2387bfbc-10a6-4bd7-dc55-7cba954ce6e8
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: EPODONIOS
-  server: 54.229.151.97
-  port: 59236
-  udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: znEtjgHLXH4FBLic
-  name: EPODONIOS
-  server: 74.234.59.81
-  port: 443
-  udp: true
 - type: vless
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: EPODONIOS
+  name: 🇮🇪 爱尔兰 | IRL
   server: 50.7.5.165
   port: 443
   udp: true
@@ -37,30 +21,108 @@ proxies:
   tls: true
   servername: ir-new1.failspace.top
   client-fingerprint: chrome
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: zziXHDOFXc4qRjoj
-  name: EPODONIOS
-  server: 20.107.184.151
+- type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  name: '🇮🇪 爱尔兰 | IRL #3'
+  server: 50.7.5.166
   port: 443
   udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ekb.eg
+  client-fingerprint: firefox
+- type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  name: 🇮🇪 爱尔兰 | IRL
+  server: 50.7.5.166
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ekb.eg
+  client-fingerprint: firefox
+- type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  name: 🇮🇪 爱尔兰 | IRL
+  server: 50.7.5.163
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ir-viper.failspace.top
+  client-fingerprint: firefox
+- type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  name: '🇮🇪 爱尔兰 | IRL #1'
+  server: 50.7.5.165
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ir-new1.failspace.top
+  client-fingerprint: chrome
+- type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  name: '🇮🇪 爱尔兰 | IRL #4'
+  server: 50.7.5.164
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ir.failspace.top
+  client-fingerprint: firefox
+- type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  name: '🇮🇪 爱尔兰 | IRL #5'
+  server: 50.7.5.163
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ir-viper.failspace.top
+  client-fingerprint: firefox
+- type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  name: 🇮🇪 爱尔兰 | IRL
+  server: 50.7.5.164
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ir.failspace.top
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - 🇮🇪 爱尔兰 | IRL
+  - '🇮🇪 爱尔兰 | IRL #3'
+  - 🇮🇪 爱尔兰 | IRL
+  - 🇮🇪 爱尔兰 | IRL
+  - '🇮🇪 爱尔兰 | IRL #1'
+  - '🇮🇪 爱尔兰 | IRL #4'
+  - '🇮🇪 爱尔兰 | IRL #5'
+  - 🇮🇪 爱尔兰 | IRL
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - 🇮🇪 爱尔兰 | IRL
+  - '🇮🇪 爱尔兰 | IRL #3'
+  - 🇮🇪 爱尔兰 | IRL
+  - 🇮🇪 爱尔兰 | IRL
+  - '🇮🇪 爱尔兰 | IRL #1'
+  - '🇮🇪 爱尔兰 | IRL #4'
+  - '🇮🇪 爱尔兰 | IRL #5'
+  - 🇮🇪 爱尔兰 | IRL
 rules:
 - MATCH,SELECT

@@ -10,16 +10,29 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇰🇷KR-132.145.80.230-1048
+  server: 132.145.80.230
+  port: 80
+  udp: true
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: kr02.a0a.xyz
 - type: ss
   cipher: aes-256-gcm
-  password: lGqs95QkFHo2NV
-  name: EPODONIOS
+  password: TEzjfAYq2IjtuoS
+  name: 🇰🇷KR-141.164.45.187-5300
   server: 141.164.45.187
-  port: 5498
+  port: 6679
   udp: true
 - type: vless
   uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
-  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
+  name: '🏳[www.v2nodes.com] vless- #21'
   server: 47.80.19.173
   port: 2053
   udp: true
@@ -29,30 +42,9 @@ proxies:
   servername: gateway.icloud.com
   client-fingerprint: chrome
 - type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 7001
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: TEzjfAYq2IjtuoS
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
-  server: 141.164.45.187
-  port: 6697
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 2376
-  udp: true
-- type: ss
   cipher: aes-256-cfb
   password: qwerREWQ@@
-  name: EPODONIOS
+  name: 🇰🇷KR-211.178.105.134-0207
   server: 211.178.105.134
   port: 6123
   udp: true
@@ -60,27 +52,22 @@ proxies:
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
   name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
   server: 3.39.4.109
-  port: 13672
+  port: 18967
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-gcm
-  password: TEzjfAYq2IjtuoS
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 6679
+- type: vless
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
+  server: 152.69.226.63
+  port: 25555
   udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  name: EPODONIOS
-  server: 141.164.45.187
-  port: 9090
-  udp: true
+  network: ws
+  ws-opts:
+    path: /
 - type: vless
   uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
   name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
@@ -91,56 +78,29 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  name: '🇰🇷 韩国 | KOR #2'
-  server: 152.69.226.63
-  port: 25555
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-- type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: '🇰🇷 韩国 | KOR #2'
-  server: 43.201.146.134
-  port: 443
-  udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - EPODONIOS
-  - 🇰🇷[www.v2nodes.com] ss-KR-1185...
-  - EPODONIOS
-  - EPODONIOS
+  - 🇰🇷KR-132.145.80.230-1048
+  - 🇰🇷KR-141.164.45.187-5300
+  - '🏳[www.v2nodes.com] vless- #21'
+  - 🇰🇷KR-211.178.105.134-0207
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - EPODONIOS
-  - EPODONIOS
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  - '🇰🇷 韩国 | KOR #2'
-  - '🇰🇷 韩国 | KOR #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - EPODONIOS
-  - 🇰🇷[www.v2nodes.com] ss-KR-1185...
-  - EPODONIOS
-  - EPODONIOS
+  - 🇰🇷KR-132.145.80.230-1048
+  - 🇰🇷KR-141.164.45.187-5300
+  - '🏳[www.v2nodes.com] vless- #21'
+  - 🇰🇷KR-211.178.105.134-0207
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - EPODONIOS
-  - EPODONIOS
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  - '🇰🇷 韩国 | KOR #2'
-  - '🇰🇷 韩国 | KOR #2'
 rules:
 - MATCH,SELECT

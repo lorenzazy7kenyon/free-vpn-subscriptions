@@ -10,18 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 185.225.68.232
-  port: 443
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
 - type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: 🇭🇺[www.v2nodes.com] vless-HU-6...
@@ -49,14 +37,12 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
   - 🇭🇺[www.v2nodes.com] vless-HU-6...
   - 🇭🇺[www.v2nodes.com] vless-HU-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
   - 🇭🇺[www.v2nodes.com] vless-HU-6...
   - 🇭🇺[www.v2nodes.com] vless-HU-1...
 rules:

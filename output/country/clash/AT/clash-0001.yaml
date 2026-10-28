@@ -12,99 +12,36 @@ dns:
 proxies:
 - type: trojan
   password: humanity
-  name: EPODONIOS
+  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #10'
   server: 212.183.88.136
   port: 443
   udp: true
   sni: www.calmlunch.com
   network: ws
   ws-opts:
-    path: //assignment
+    path: /assignment
     headers:
       Host: www.calmlunch.com
-- type: vless
-  uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
-  name: EPODONIOS
-  server: 188.137.158.189
-  port: 443
+- type: hysteria2
+  password: Hc9_NX924RE_Mn948rgrwiub_m93V84nll
+  name: '@v2ray_configs_pools 🌍 ⚡️'
+  server: 5.254.51.108
+  port: 9443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: softice.net
-  client-fingerprint: chrome
-- type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  name: EPODONIOS
-  server: 62.83.41.69
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: au6.pad-sservice.lat
-  client-fingerprint: chrome
-  ws-opts:
-    path: /AU6W
-    headers:
-      Host: au6.pad-sservice.lat
-- type: vless
-  uuid: 46c16b68-2553-4e5e-8176-f63d6bf6ec0c
-  name: EPODONIOS
-  server: 94.228.162.222
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: vena.solomon-planet.ru
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: rvDa0xNkcJYEIJ-1Ncrq54BUjjwm99C_8Vv_-He6j1U
-- type: vless
-  uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
-  name: EPODONIOS
-  server: 66.90.106.228
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: au1.wolffast.net
-  reality-opts:
-    public-key: hyOYRfDSIYyqALQt3N2H0RjK8gbV1JvPTkNACC4PJF8
-    short-id: 8718c58d3d51db59
-- type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: '🇦🇹 奥地利 | AUT #3'
-  server: 50.7.36.29
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ekb.eg
-  client-fingerprint: firefox
+  sni: keyhop-voxility-at.dynuddns.com
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - '🇦🇹 奥地利 | AUT #3'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #10'
+  - '@v2ray_configs_pools 🌍 ⚡️'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - '🇦🇹 奥地利 | AUT #3'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #10'
+  - '@v2ray_configs_pools 🌍 ⚡️'
 rules:
 - MATCH,SELECT

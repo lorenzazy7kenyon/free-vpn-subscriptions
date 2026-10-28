@@ -16,7 +16,14 @@ proxies:
   server: 47.250.84.25
   port: 443
   udp: true
-  sni: moltbot.doctoroyy.net
+  sni: 47.250.84.25
+- type: vless
+  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+  name: '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
+  server: 111.90.143.184
+  port: 61111
+  udp: true
+  network: tcp
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: 🇲🇾[www.v2nodes.com] vless-MY-5...
@@ -37,12 +44,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
+  - '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
+  - '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
 rules:
 - MATCH,SELECT

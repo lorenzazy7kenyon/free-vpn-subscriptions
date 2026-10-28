@@ -12,25 +12,11 @@ dns:
 proxies:
 - type: vless
   uuid: c6b1b2d0-ed5e-48ce-99e6-112ff330030d
-  name: EPODONIOS
+  name: 🇧🇷[www.v2nodes.com] vless-BR-1...
   server: 177.7.51.29
   port: 8443
   udp: true
   flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: laG5BxoSbdRozpauATNFBPPTwhuDuu0JFl_SCP2ZQlU
-    short-id: 14fbf992
-- type: vless
-  uuid: c6b1b2d0-ed5e-48ce-99e6-112ff330030d
-  name: 🇺🇸US_2|4.0MB/s
-  server: 177.7.51.29
-  port: 8443
-  udp: true
-  flow: xtls-rprx-vision-udp443
   network: tcp
   tls: true
   servername: www.apple.com
@@ -41,13 +27,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - 🇺🇸US_2|4.0MB/s
+  - 🇧🇷[www.v2nodes.com] vless-BR-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - 🇺🇸US_2|4.0MB/s
+  - 🇧🇷[www.v2nodes.com] vless-BR-1...
 rules:
 - MATCH,SELECT
