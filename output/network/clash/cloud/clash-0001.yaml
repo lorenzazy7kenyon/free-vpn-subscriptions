@@ -10,6 +10,21 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知87
+  server: 140.83.57.20
+  port: 13118
+  udp: true
+  tls: true
+  servername: sg.11160321.de5.net
+  ws-opts:
+    path: /
+    headers:
+      Host: sg.11160321.de5.net
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   name: '🏳[www.v2nodes.com] vless- #15'
@@ -34,12 +49,14 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 未知87
   - '🏳[www.v2nodes.com] vless- #15'
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 未知87
   - '🏳[www.v2nodes.com] vless- #15'
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
 rules:

@@ -11,25 +11,20 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
   alterId: 0
   cipher: auto
   network: ws
-  name: 🇰🇷KR-132.145.80.230-1048
-  server: 132.145.80.230
-  port: 80
+  name: 🇰🇷KR-146.56.166.153-0092
+  server: 146.56.166.153
+  port: 443
   udp: true
+  tls: true
+  servername: lg30.cfcdn3.xyz
   ws-opts:
-    path: /cctv13.m3u8
+    path: /ray
     headers:
-      Host: kr02.a0a.xyz
-- type: ss
-  cipher: aes-256-gcm
-  password: TEzjfAYq2IjtuoS
-  name: 🇰🇷KR-141.164.45.187-5300
-  server: 141.164.45.187
-  port: 6679
-  udp: true
+      Host: lg30.cfcdn3.xyz
 - type: vless
   uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
   name: '🏳[www.v2nodes.com] vless- #21'
@@ -44,7 +39,7 @@ proxies:
 - type: ss
   cipher: aes-256-cfb
   password: qwerREWQ@@
-  name: 🇰🇷KR-211.178.105.134-0207
+  name: 🇰🇷KR-211.178.105.134-0246
   server: 211.178.105.134
   port: 6123
   udp: true
@@ -60,15 +55,6 @@ proxies:
   servername: www.apple.com
   client-fingerprint: chrome
 - type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
-  server: 152.69.226.63
-  port: 25555
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-- type: vless
   uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
   name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   server: 151.245.106.49
@@ -78,29 +64,36 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: firefox
+- type: vless
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
+  server: 152.69.226.63
+  port: 25555
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷KR-132.145.80.230-1048
-  - 🇰🇷KR-141.164.45.187-5300
+  - 🇰🇷KR-146.56.166.153-0092
   - '🏳[www.v2nodes.com] vless- #21'
-  - 🇰🇷KR-211.178.105.134-0207
+  - 🇰🇷KR-211.178.105.134-0246
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇰🇷KR-132.145.80.230-1048
-  - 🇰🇷KR-141.164.45.187-5300
+  - 🇰🇷KR-146.56.166.153-0092
   - '🏳[www.v2nodes.com] vless- #21'
-  - 🇰🇷KR-211.178.105.134-0207
+  - 🇰🇷KR-211.178.105.134-0246
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
 rules:
 - MATCH,SELECT

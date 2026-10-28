@@ -33,17 +33,6 @@ proxies:
   servername: www.apple.com
   client-fingerprint: firefox
 - type: vless
-  uuid: 897d47f8-4dd5-42a1-bcd0-bef19caff55a
-  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #5'
-  server: 193.238.154.78
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- type: vless
   uuid: 12c53e32-e589-47d6-b857-e4132294f767
   name: '🇪🇸[www.v2nodes.com] vless-ES-1... #4'
   server: 46.28.71.247
@@ -54,6 +43,17 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- type: vless
+  uuid: 897d47f8-4dd5-42a1-bcd0-bef19caff55a
+  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #5'
+  server: 193.238.154.78
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -62,15 +62,15 @@ proxy-groups:
   proxies:
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #4'
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #6'
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #5'
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #4'
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #5'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #4'
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #6'
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #5'
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #4'
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #5'
 rules:
 - MATCH,SELECT

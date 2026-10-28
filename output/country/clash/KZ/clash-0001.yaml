@@ -21,6 +21,28 @@ proxies:
   servername: yahoo.com
   client-fingerprint: chrome
 - type: vless
+  uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
+  name: 🇰🇿 哈萨克斯坦 | KAZ
+  server: 46.8.43.125
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: kz-central.v8x2b.lol
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: ER-T5En54-sn6IXy7jU8vQVcBbOiWvznnezf3qZ273w
+- type: vless
+  uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
+  name: '🇰🇿 哈萨克斯坦 | KAZ #2'
+  server: 46.8.43.125
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: kz-central.v8x2b.lol
+  client-fingerprint: firefox
+- type: vless
   uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
   name: '🇰🇿[www.v2nodes.com] vless-KZ-1... #2'
   server: 178.236.16.98
@@ -37,12 +59,16 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
+  - 🇰🇿 哈萨克斯坦 | KAZ
+  - '🇰🇿 哈萨克斯坦 | KAZ #2'
   - '🇰🇿[www.v2nodes.com] vless-KZ-1... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
+  - 🇰🇿 哈萨克斯坦 | KAZ
+  - '🇰🇿 哈萨克斯坦 | KAZ #2'
   - '🇰🇿[www.v2nodes.com] vless-KZ-1... #2'
 rules:
 - MATCH,SELECT

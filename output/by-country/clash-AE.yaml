@@ -43,6 +43,16 @@ proxies:
     headers:
       Host: free.cndyw.ggff.net
 - type: vless
+  uuid: 3225c52d-bc6c-4b53-ba42-4747a37f4f12
+  name: 🇩🇪 德国 | DEU
+  server: 188.72.103.4
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: cdn-1.frdmhere.com
+  client-fingerprint: qq
+- type: vless
   uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
   name: 🇦🇪[www.v2nodes.com] vless-AE-1...
   server: 95.174.68.188
@@ -53,16 +63,6 @@ proxies:
     path: /vless
     headers:
       Host: 95.174.68.188
-- type: vless
-  uuid: 3225c52d-bc6c-4b53-ba42-4747a37f4f12
-  name: 🇩🇪 德国 | DEU
-  server: 188.72.103.4
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: cdn-1.frdmhere.com
-  client-fingerprint: qq
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -72,8 +72,8 @@ proxy-groups:
   - '🇩🇪 德国 | DEU #5'
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
-  - 🇦🇪[www.v2nodes.com] vless-AE-1...
   - 🇩🇪 德国 | DEU
+  - 🇦🇪[www.v2nodes.com] vless-AE-1...
 - name: SELECT
   type: select
   proxies:
@@ -81,7 +81,7 @@ proxy-groups:
   - '🇩🇪 德国 | DEU #5'
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
-  - 🇦🇪[www.v2nodes.com] vless-AE-1...
   - 🇩🇪 德国 | DEU
+  - 🇦🇪[www.v2nodes.com] vless-AE-1...
 rules:
 - MATCH,SELECT

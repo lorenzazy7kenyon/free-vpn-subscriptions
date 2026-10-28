@@ -12,6 +12,17 @@ dns:
 proxies:
 - type: vless
   uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
+  name: '🇦🇹[www.v2nodes.com] vless-AT-3... #2'
+  server: 213.111.148.137
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=androidsecurity=tls
+    headers:
+      Host: proxy-1cu.pages.dev
+- type: vless
+  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
   name: '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
   server: 213.111.148.137
   port: 443
@@ -23,30 +34,19 @@ proxies:
     path: /fp=android
     headers:
       Host: proxy-1cu.pages.dev
-- type: vless
-  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-  name: '🇦🇹[www.v2nodes.com] vless-AT-3... #2'
-  server: 213.111.148.137
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: /fp=androidsecurity=tls
-    headers:
-      Host: proxy-1cu.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #2'
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #2'
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #7'
 rules:
 - MATCH,SELECT

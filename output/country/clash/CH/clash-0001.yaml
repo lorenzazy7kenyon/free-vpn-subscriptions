@@ -11,16 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
-  server: 208.69.78.217
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-- type: vless
   uuid: 3950b45e-740d-4dca-ac95-505ec8534592
   name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
   server: 45.90.59.15
@@ -30,6 +20,16 @@ proxies:
   network: tcp
   tls: true
   servername: www.cloudflare.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
+  server: 208.69.78.217
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
   client-fingerprint: firefox
 - type: ss
   cipher: chacha20-ietf-poly1305
@@ -44,15 +44,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
   - 🇨🇭[www.v2nodes.com] ss-CH-1573...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
   - 🇨🇭[www.v2nodes.com] ss-CH-1573...
 rules:
 - MATCH,SELECT

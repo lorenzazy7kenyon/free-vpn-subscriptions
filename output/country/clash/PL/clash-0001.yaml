@@ -52,6 +52,19 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- type: vmess
+  uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇫🇷FR-54.37.131.126-0231
+  server: 54.37.131.126
+  port: 80
+  udp: true
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
 - type: vless
   uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
   name: '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
@@ -61,19 +74,6 @@ proxies:
   network: tcp
   tls: true
   servername: 2.26.6.1
-- type: vmess
-  uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇫🇷FR-54.37.131.126-0187
-  server: 54.37.131.126
-  port: 80
-  udp: true
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -84,8 +84,8 @@ proxy-groups:
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #7'
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #6'
   - '🏳[www.v2nodes.com] vless- #28'
+  - 🇫🇷FR-54.37.131.126-0231
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  - 🇫🇷FR-54.37.131.126-0187
 - name: SELECT
   type: select
   proxies:
@@ -94,7 +94,7 @@ proxy-groups:
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #7'
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #6'
   - '🏳[www.v2nodes.com] vless- #28'
+  - 🇫🇷FR-54.37.131.126-0231
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  - 🇫🇷FR-54.37.131.126-0187
 rules:
 - MATCH,SELECT
