@@ -10,17 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 4a270d3e-27b4-497d-8c8c-28f1f54958d9
-  name: '🇲🇾 马来西亚 | MYS #1'
-  server: 149.33.30.40
-  port: 9443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.amazon.com
-  client-fingerprint: chrome
 - type: trojan
   password: 5931134d1cde66bf83a54acdfebe7ab2
   name: 🇲🇾[www.v2nodes.com] trojan-MY-...
@@ -47,14 +36,12 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇲🇾 马来西亚 | MYS #1'
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇲🇾 马来西亚 | MYS #1'
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
 rules:

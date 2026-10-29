@@ -1,0 +1,41 @@
+mode: rule
+log-level: info
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- type: vmess
+  uuid: acc94bf4-94c1-4a08-8b79-9be2b76499b6
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇨🇳CN-8.212.183.58-0081
+  server: 8.212.183.58
+  port: 443
+  udp: true
+  tls: true
+  servername: cc.1808.cf
+  ws-opts:
+    path: /2yevws
+    headers:
+      Host: cc.1808.cf
+proxy-groups:
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇨🇳CN-8.212.183.58-0081
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - 🇨🇳CN-8.212.183.58-0081
+rules:
+- MATCH,SELECT

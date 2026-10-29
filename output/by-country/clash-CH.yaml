@@ -11,23 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  server: 208.69.78.217
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
-  name: 🇨🇭[www.v2nodes.com] ss-CH-1573...
-  server: 132.243.175.144
-  port: 8388
-  udp: true
-- type: vless
   uuid: 3950b45e-740d-4dca-ac95-505ec8534592
   name: 🇨🇭[www.v2nodes.com] vless-CH-1...
   server: 45.90.59.15
@@ -38,21 +21,38 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
+  name: 🇨🇭[www.v2nodes.com] ss-CH-1573...
+  server: 132.243.175.144
+  port: 8388
+  udp: true
+- type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  server: 208.69.78.217
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  - 🇨🇭[www.v2nodes.com] ss-CH-1573...
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
+  - 🇨🇭[www.v2nodes.com] ss-CH-1573...
+  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  - 🇨🇭[www.v2nodes.com] ss-CH-1573...
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
+  - 🇨🇭[www.v2nodes.com] ss-CH-1573...
+  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
 rules:
 - MATCH,SELECT

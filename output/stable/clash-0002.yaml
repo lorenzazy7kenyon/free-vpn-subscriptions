@@ -11,35 +11,57 @@ dns:
   - 8.8.8.8
 proxies:
 - type: hysteria2
-  password: 4b1be712-774c-4b65-8491-a3339e124a70
-  name: '🇫🇷 法国 | FRA #3'
-  server: fr2-cl3.happy-glonaris.top
-  port: 443
+  password: 41edb44c8e
+  name: 🇷🇺 俄罗斯 | RUS
+  server: srv-17e124.21freedom.net
+  port: 11592
   udp: true
-  sni: fr2-cl3.happy-glonaris.top
+  sni: ''
   skip-cert-verify: true
 - type: hysteria2
-  password: f04i31zq8sy80v9b
-  name: ♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️63...
-  server: r5ycmuko.zibayeman.com
-  port: 54280
+  password: 5bcodmhjtyfyyrqh
+  name: '@Begoo_VPN ²⁹⁰'
+  server: 91.142.73.159
+  port: 36758
   udp: true
-  sni: r5ycmuko.zibayeman.com
+  sni: cdn77.dmtr.ru
+  skip-cert-verify: true
   obfs: salamander
-  obfs-password: hfwq51con9efdxx6
+  obfs-password: dzcb7hv6i2kx2zze
+- type: hysteria2
+  password: s6gt5e4mof43sfg8
+  name: Telegram 🆔@cnetvpn 🇳🇱
+  server: giftcard.gateway-stream.com
+  port: 52050
+  udp: true
+  sni: giftcard.gateway-stream.com
+  obfs: salamander
+  obfs-password: fuw2k1ddrouwxr3u
+- type: hysteria2
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  name: 🇺🇸139909 | ⚡️Telegram = t.me/S...
+  server: 54.213.89.22
+  port: 443
+  udp: true
+  sni: vk.com
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇫🇷 法国 | FRA #3'
-  - ♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️63...
+  - 🇷🇺 俄罗斯 | RUS
+  - '@Begoo_VPN ²⁹⁰'
+  - Telegram 🆔@cnetvpn 🇳🇱
+  - 🇺🇸139909 | ⚡️Telegram = t.me/S...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇫🇷 法国 | FRA #3'
-  - ♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️63...
+  - 🇷🇺 俄罗斯 | RUS
+  - '@Begoo_VPN ²⁹⁰'
+  - Telegram 🆔@cnetvpn 🇳🇱
+  - 🇺🇸139909 | ⚡️Telegram = t.me/S...
 rules:
 - MATCH,SELECT

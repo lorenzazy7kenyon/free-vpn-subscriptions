@@ -11,26 +11,37 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: eaa34d9f-662d-4378-8210-3508b5eee727
-  name: 🇩🇪DE_9|1.2MB/s
-  server: 217.216.218.138
-  port: 443
+  uuid: f667a096-5231-4cfb-8759-92bb32473139
+  name: 🇦🇲[www.v2nodes.com] vless-AM-1...
+  server: 77.91.68.70
+  port: 55983
   udp: true
   network: tcp
   tls: true
-  servername: savesafe.top
+  servername: yahoo.com
   client-fingerprint: chrome
+- type: vless
+  uuid: f7376394-cd54-11f1-bb6a-bff6d0326f6a
+  name: 🏳[www.v2nodes.com] vless-
+  server: 194.36.37.59
+  port: 10004
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vpnjantit
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪DE_9|1.2MB/s
+  - 🇦🇲[www.v2nodes.com] vless-AM-1...
+  - 🏳[www.v2nodes.com] vless-
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇩🇪DE_9|1.2MB/s
+  - 🇦🇲[www.v2nodes.com] vless-AM-1...
+  - 🏳[www.v2nodes.com] vless-
 rules:
 - MATCH,SELECT

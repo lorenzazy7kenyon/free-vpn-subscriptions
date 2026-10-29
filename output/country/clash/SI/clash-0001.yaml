@@ -12,13 +12,6 @@ dns:
 proxies:
 - type: vless
   uuid: d0c8aa8d-a535-432a-b521-21f0e561f643
-  name: 🇸🇮[www.v2nodes.com] vless-SI-1...
-  server: 92.42.201.102
-  port: 443
-  udp: true
-  network: tcp
-- type: vless
-  uuid: d0c8aa8d-a535-432a-b521-21f0e561f643
   name: RU_speednode_0034
   server: 92.42.201.107
   port: 443
@@ -28,19 +21,26 @@ proxies:
   tls: true
   servername: node-slo02.rkitman.ru
   client-fingerprint: firefox
+- type: vless
+  uuid: d0c8aa8d-a535-432a-b521-21f0e561f643
+  name: 🇸🇮[www.v2nodes.com] vless-SI-1...
+  server: 92.42.201.102
+  port: 443
+  udp: true
+  network: tcp
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇮[www.v2nodes.com] vless-SI-1...
   - RU_speednode_0034
+  - 🇸🇮[www.v2nodes.com] vless-SI-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇸🇮[www.v2nodes.com] vless-SI-1...
   - RU_speednode_0034
+  - 🇸🇮[www.v2nodes.com] vless-SI-1...
 rules:
 - MATCH,SELECT

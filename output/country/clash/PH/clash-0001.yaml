@@ -10,24 +10,32 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-  name: 🇵🇭[www.v2nodes.com] ss-PH-1540...
-  server: 149.104.109.252
-  port: 8882
+- type: vmess
+  uuid: acc94bf4-94c1-4a08-8b79-9be2b76499b6
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇨🇳CN-8.212.183.58-0081
+  server: 8.212.183.58
+  port: 443
   udp: true
+  tls: true
+  servername: cc.1808.cf
+  ws-opts:
+    path: /2yevws
+    headers:
+      Host: cc.1808.cf
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇭[www.v2nodes.com] ss-PH-1540...
+  - 🇨🇳CN-8.212.183.58-0081
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇵🇭[www.v2nodes.com] ss-PH-1540...
+  - 🇨🇳CN-8.212.183.58-0081
 rules:
 - MATCH,SELECT

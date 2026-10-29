@@ -11,6 +11,16 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 76ef5ab3-7075-4e23-b445-f3b1bd05d431
+  name: 🇷🇺 俄罗斯 | RUS 3
+  server: 94.103.2.55
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: rus.play-cat.uk
+  client-fingerprint: edge
+- type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: 🇲🇩[www.v2nodes.com] vless-MD-4...
   server: 185.153.198.86
@@ -27,11 +37,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇷🇺 俄罗斯 | RUS 3
   - 🇲🇩[www.v2nodes.com] vless-MD-4...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇷🇺 俄罗斯 | RUS 3
   - 🇲🇩[www.v2nodes.com] vless-MD-4...
 rules:
 - MATCH,SELECT
