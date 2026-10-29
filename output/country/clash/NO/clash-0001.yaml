@@ -17,39 +17,6 @@ proxies:
   server: 185.213.23.63
   port: 990
   udp: true
-- type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: '🇳🇴 挪威 | NOR #1'
-  server: 31.76.5.144
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: norw-1.failspace.top
-  client-fingerprint: firefox
-- type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: '🇳🇴 挪威 | NOR #5'
-  server: 31.76.5.42
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: norw-2.failspace.top
-  client-fingerprint: firefox
-- type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: '🇳🇴 挪威 | NOR #6'
-  server: 31.76.5.124
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: norway-2.failspace.top
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -57,16 +24,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇳🇴[www.v2nodes.com] ss-NO-1220...
-  - '🇳🇴 挪威 | NOR #1'
-  - '🇳🇴 挪威 | NOR #5'
-  - '🇳🇴 挪威 | NOR #6'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇳🇴[www.v2nodes.com] ss-NO-1220...
-  - '🇳🇴 挪威 | NOR #1'
-  - '🇳🇴 挪威 | NOR #5'
-  - '🇳🇴 挪威 | NOR #6'
 rules:
 - MATCH,SELECT

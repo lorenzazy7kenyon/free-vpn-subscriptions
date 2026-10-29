@@ -21,27 +21,13 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: vless
-  uuid: c6b1b2d0-ed5e-48ce-99e6-112ff330030d
-  name: 🇧🇷 巴西 | BRA
-  server: 177.7.51.29
-  port: 8443
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇧🇷[www.v2nodes.com] trojan-BR-...
+  server: 216.238.104.154
+  port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: laG5BxoSbdRozpauATNFBPPTwhuDuu0JFl_SCP2ZQlU
-    short-id: 14fbf992
-- type: ss
-  cipher: aes-256-gcm
-  password: owVdNnQcdPgthSyX
-  name: '🏳[www.v2nodes.com] ss- #1'
-  server: 216.128.168.190
-  port: 8388
-  udp: true
+  sni: 216.238.104.154
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -49,14 +35,12 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇧🇷 巴西 | BRA #1'
-  - 🇧🇷 巴西 | BRA
-  - '🏳[www.v2nodes.com] ss- #1'
+  - 🇧🇷[www.v2nodes.com] trojan-BR-...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇧🇷 巴西 | BRA #1'
-  - 🇧🇷 巴西 | BRA
-  - '🏳[www.v2nodes.com] ss- #1'
+  - 🇧🇷[www.v2nodes.com] trojan-BR-...
 rules:
 - MATCH,SELECT

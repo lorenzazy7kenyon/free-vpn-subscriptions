@@ -11,105 +11,27 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: a094cdfb-8894-4a0e-8299-5ece1078a857
-  name: EPODONIOS
-  server: 217.69.167.203
-  port: 43000
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: 217.69.167.203
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: A8sWghnS7fSui7vIrx18mCX4rx1nr-yBpYKmwmkcXjo
-    short-id: 870721a2
-- type: vless
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  name: EPODONIOS
-  server: 89.35.14.33
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: md4.univesalsrv.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: TZVMqglhHzteJ6t34mtku75LKzXNq0CB6glKYMAH6zg
-    short-id: 8e07337954f9823f
-- type: vless
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  name: EPODONIOS
-  server: 89.35.14.34
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: md5.univesalsrv.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 99MRki6b93wC-hhDHe9yq3IXE3KtPGw4RkFAnpI-8gg
-    short-id: aa9884f2982b7d3c
-- type: vless
-  uuid: 817b61c8-9bf0-4365-8a52-e43dfad274a6
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: 🇲🇩[www.v2nodes.com] vless-MD-4...
-  server: 194.180.191.249
+  server: 185.153.198.86
   port: 443
   udp: true
   network: ws
-  tls: true
-  servername: shin-ra.ccwu.cc
   ws-opts:
-    path: /fp=unsafe
+    path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
     headers:
-      Host: shin-ra.ccwu.cc
-- type: vless
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  name: EPODONIOS
-  server: 89.35.14.31
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: md2.univesalsrv.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: JXFsWHYjhAcR-7yz9tuCTMdcfuiyC9a-C9ewA55Z63o
-    short-id: d36a38659ce106cb
-- type: vless
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  name: EPODONIOS
-  server: 89.35.14.30
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: md1.univesalsrv.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: xWejOQUn2koOUorUPSrHMLM-lyHlZ441KzxKc9bLmkY
-    short-id: 221ba6174224ca5b
+      Host: free.cndyw.ggff.net
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - 🇲🇩[www.v2nodes.com] vless-MD-4...
-  - EPODONIOS
-  - EPODONIOS
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
   - 🇲🇩[www.v2nodes.com] vless-MD-4...
-  - EPODONIOS
-  - EPODONIOS
 rules:
 - MATCH,SELECT

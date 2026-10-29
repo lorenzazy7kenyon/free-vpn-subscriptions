@@ -11,46 +11,16 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
-  name: '🏳[www.v2nodes.com] vless- #21'
-  server: 54.37.136.194
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
-  name: '🏳[www.v2nodes.com] vless- #41'
-  server: 150.251.113.34
+  uuid: 329e13e4-ee7c-4802-ac72-5fcab79c2402
+  name: 🇵🇱[www.v2nodes.com] vless-PL-1...
+  server: 45.148.119.127
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.cloudflare.com
+  servername: cloudflare.com
   client-fingerprint: chrome
-- type: vless
-  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
-  server: 82.118.22.161
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: safari
-- type: vless
-  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  server: 2.26.6.1
-  port: 2087
-  udp: true
-  network: tcp
-  tls: true
-  servername: 2.26.6.1
 - type: vmess
   uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
   alterId: 0
@@ -64,35 +34,55 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-- type: hysteria2
-  password: 10be1dad-9952-4c5e-aa30-db435f69b727
-  name: '🇵🇱 波兰 | POL #1'
-  server: 13.143.189.71
-  port: 4444
+- type: vless
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
+  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
+  server: 82.118.22.161
+  port: 443
   udp: true
-  sni: pl3.nexfile.net
-  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+  name: '🏳[www.v2nodes.com] vless- #24'
+  server: 54.37.136.194
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
+  name: '🏳[www.v2nodes.com] vless- #23'
+  server: 2.26.6.1
+  port: 2087
+  udp: true
+  network: tcp
+  tls: true
+  servername: 2.26.6.1
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #21'
-  - '🏳[www.v2nodes.com] vless- #41'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
+  - 🇵🇱[www.v2nodes.com] vless-PL-1...
   - 🇫🇷FR-54.37.131.126-0240
-  - '🇵🇱 波兰 | POL #1'
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
+  - '🏳[www.v2nodes.com] vless- #24'
+  - '🏳[www.v2nodes.com] vless- #23'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #21'
-  - '🏳[www.v2nodes.com] vless- #41'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
+  - 🇵🇱[www.v2nodes.com] vless-PL-1...
   - 🇫🇷FR-54.37.131.126-0240
-  - '🇵🇱 波兰 | POL #1'
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
+  - '🏳[www.v2nodes.com] vless- #24'
+  - '🏳[www.v2nodes.com] vless- #23'
 rules:
 - MATCH,SELECT

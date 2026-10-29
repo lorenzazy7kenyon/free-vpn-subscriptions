@@ -10,6 +10,17 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: '🇸🇬[www.v2nodes.com] vless-SG #3'
+  server: 185.162.229.50
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime61.workers.dev
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -27,52 +38,20 @@ proxies:
 - type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-  name: 🇬🇧[www.v2nodes.com] ss-GB-1451...
+  name: 🇬🇧GB-158.173.24.73-0195
   server: 158.173.24.73
   port: 443
   udp: true
 - type: vless
-  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #7'
-  server: 51.38.71.147
-  port: 8443
-  udp: true
-  network: tcp
-  tls: true
-  servername: node-uk.connectsuite.org
-  client-fingerprint: firefox
-- type: vless
   uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
+  name: '🏳[www.v2nodes.com] vless- #9'
   server: 51.89.194.151
   port: 2053
   udp: true
   network: tcp
   tls: true
   servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #9'
-  server: 50.7.226.171
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: viper-21.moriarty-web.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: '🇬🇧 英国 | GBR #2'
-  server: 50.7.226.172
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: viper-21.moriarty-web.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - type: ss
   cipher: aes-128-gcm
   password: shadowsocks
@@ -80,77 +59,6 @@ proxies:
   server: 141.98.101.181
   port: 443
   udp: true
-- type: vless
-  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
-  name: '🇺🇦[www.v2nodes.com] vless-UA-1... #6'
-  server: 83.147.18.75
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.bing.com
-  client-fingerprint: qq
-- type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: '🇬🇧 英国 | GBR #4'
-  server: 50.7.227.251
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: uk-dedic-new-1.failspace.top
-  client-fingerprint: firefox
-- type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: '🇬🇧 英国 | GBR #3'
-  server: 50.7.226.173
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: viper-21.moriarty-web.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: abca037b-bee5-41cc-a888-0668e4c66176
-  name: 🇬🇧 英国 | GBR
-  server: 144.31.213.229
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: 6d160a52.con.fernarchive.online
-  client-fingerprint: chrome
-- type: vless
-  uuid: abca037b-bee5-41cc-a888-0668e4c66176
-  name: '🇬🇧 英国 | GBR #1'
-  server: 144.31.213.229
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: 6d160a52.con.fernarchive.online
-  client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇦🇹[www.v2nodes.com] ss-AT-1595...
-  server: 82.110.60.9
-  port: 19999
-  udp: true
-- type: vless
-  uuid: 64c05afc-ce81-4ba0-b697-afa04da1427e
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
-  server: 195.72.166.251
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.lloydsbankinggroup.com
-  client-fingerprint: chrome
 - type: vmess
   uuid: bda82bcd-f6e2-46ae-9552-673f0b87ac30
   alterId: 0
@@ -164,47 +72,101 @@ proxies:
     path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
     headers:
       Host: https.http.www.net.com.ramseyv2.ir.
+- type: vless
+  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
+  name: '🏳[www.v2nodes.com] vless- #10'
+  server: 51.38.71.147
+  port: 8443
+  udp: true
+  network: tcp
+  tls: true
+  servername: node-uk.connectsuite.org
+  client-fingerprint: firefox
+- type: vless
+  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
+  name: '🇺🇦[www.v2nodes.com] vless-UA-1... #6'
+  server: 83.147.18.75
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.bing.com
+  client-fingerprint: qq
+- type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
+  server: 50.7.226.171
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: viper-21.moriarty-web.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 64c05afc-ce81-4ba0-b697-afa04da1427e
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
+  server: 195.72.166.251
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.lloydsbankinggroup.com
+  client-fingerprint: chrome
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇦🇹[www.v2nodes.com] ss-AT-1595...
+  server: 82.110.60.9
+  port: 19999
+  udp: true
+- type: vless
+  uuid: abca037b-bee5-41cc-a888-0668e4c66176
+  name: 🇬🇧 英国 | GBR
+  server: 144.31.213.229
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: 6d160a52.con.fernarchive.online
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇸🇬[www.v2nodes.com] vless-SG #3'
   - 🇬🇧[www.v2nodes.com] ss-GB-1602...
   - 🇬🇧GB-146.70.61.37-0194
-  - 🇬🇧[www.v2nodes.com] ss-GB-1451...
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #7'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #9'
-  - '🇬🇧 英国 | GBR #2'
+  - 🇬🇧GB-158.173.24.73-0195
+  - '🏳[www.v2nodes.com] vless- #9'
   - 🇬🇧GB-141.98.101.181-0260
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #6'
-  - '🇬🇧 英国 | GBR #4'
-  - '🇬🇧 英国 | GBR #3'
-  - 🇬🇧 英国 | GBR
-  - '🇬🇧 英国 | GBR #1'
-  - 🇦🇹[www.v2nodes.com] ss-AT-1595...
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
   - 🇫🇷FR-57.128.164.21-0932
+  - '🏳[www.v2nodes.com] vless- #10'
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #6'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
+  - 🇦🇹[www.v2nodes.com] ss-AT-1595...
+  - 🇬🇧 英国 | GBR
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇸🇬[www.v2nodes.com] vless-SG #3'
   - 🇬🇧[www.v2nodes.com] ss-GB-1602...
   - 🇬🇧GB-146.70.61.37-0194
-  - 🇬🇧[www.v2nodes.com] ss-GB-1451...
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #7'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #9'
-  - '🇬🇧 英国 | GBR #2'
+  - 🇬🇧GB-158.173.24.73-0195
+  - '🏳[www.v2nodes.com] vless- #9'
   - 🇬🇧GB-141.98.101.181-0260
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #6'
-  - '🇬🇧 英国 | GBR #4'
-  - '🇬🇧 英国 | GBR #3'
-  - 🇬🇧 英国 | GBR
-  - '🇬🇧 英国 | GBR #1'
-  - 🇦🇹[www.v2nodes.com] ss-AT-1595...
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
   - 🇫🇷FR-57.128.164.21-0932
+  - '🏳[www.v2nodes.com] vless- #10'
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #6'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
+  - 🇦🇹[www.v2nodes.com] ss-AT-1595...
+  - 🇬🇧 英国 | GBR
 rules:
 - MATCH,SELECT

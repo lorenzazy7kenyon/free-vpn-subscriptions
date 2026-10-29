@@ -26,30 +26,8 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
 - type: vless
-  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
-  server: 31.77.199.147
-  port: 4443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: images.unsplash.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: d6752c6b-80ae-4a91-b446-bb330f7f8177
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
-  server: 94.156.79.93
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.foxsports.com
-  client-fingerprint: chrome
-- type: vless
   uuid: 67eb6b17-7797-4ded-bf52-423c4c5f6cbd
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #8'
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
   server: 87.239.249.137
   port: 443
   udp: true
@@ -70,15 +48,56 @@ proxies:
     headers:
       Host: 45.144.234.157
 - type: vless
+  uuid: d6752c6b-80ae-4a91-b446-bb330f7f8177
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
+  server: 94.156.79.93
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.foxsports.com
+  client-fingerprint: chrome
+- type: trojan
+  password: humanity
+  name: '🇳🇱[www.v2nodes.com] trojan-NL-... #4'
+  server: 46.62.204.134
+  port: 443
+  udp: true
+  sni: www.pleadcourt.org
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
+- type: vless
   uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #7'
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
   server: 95.216.27.15
   port: 2053
   udp: true
   network: tcp
+- type: vless
+  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
+  server: 31.77.199.147
+  port: 4443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: www.google.com
+  servername: images.unsplash.com
   client-fingerprint: chrome
+- type: vless
+  uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
+  name: 🇫🇮[www.v2nodes.com] vless-FI-1...
+  server: 196.196.204.180
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: 36a466g.fi1.h1clayd.click
+  client-fingerprint: firefox
 - type: hysteria2
   password: 6aab8efdf13945829ae3699c342be406
   name: Telegram:@v2rayng3
@@ -104,11 +123,13 @@ proxy-groups:
   interval: 300
   proxies:
   - 未知36
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #8'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #7'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #4'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
+  - 🇫🇮[www.v2nodes.com] vless-FI-1...
   - Telegram:@v2rayng3
   - 🇫🇮@Azaranv2ray
 - name: SELECT
@@ -116,11 +137,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 未知36
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #8'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #7'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #4'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
+  - 🇫🇮[www.v2nodes.com] vless-FI-1...
   - Telegram:@v2rayng3
   - 🇫🇮@Azaranv2ray
 rules:
