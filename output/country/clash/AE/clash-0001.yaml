@@ -12,25 +12,14 @@ dns:
 proxies:
 - type: vless
   uuid: 3225c52d-bc6c-4b53-ba42-4747a37f4f12
-  name: '🇩🇪 德国 | DEU #5'
+  name: 🇩🇪 德国 | DEU
   server: 188.72.103.4
   port: 443
   udp: true
-  network: tcp
+  network: xhttp
   tls: true
   servername: cdn-1.frdmhere.com
   client-fingerprint: qq
-- type: vless
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  server: 84.235.244.108
-  port: 22573
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
 - type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
@@ -43,15 +32,16 @@ proxies:
     headers:
       Host: free.cndyw.ggff.net
 - type: vless
-  uuid: 3225c52d-bc6c-4b53-ba42-4747a37f4f12
-  name: 🇩🇪 德国 | DEU
-  server: 188.72.103.4
-  port: 443
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  server: 84.235.244.108
+  port: 22573
   udp: true
-  network: xhttp
-  tls: true
-  servername: cdn-1.frdmhere.com
-  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
 - type: vless
   uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
   name: 🇦🇪[www.v2nodes.com] vless-AE-1...
@@ -63,25 +53,35 @@ proxies:
     path: /vless
     headers:
       Host: 95.174.68.188
+- type: vless
+  uuid: 3225c52d-bc6c-4b53-ba42-4747a37f4f12
+  name: '🇩🇪 德国 | DEU #5'
+  server: 188.72.103.4
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: cdn-1.frdmhere.com
+  client-fingerprint: qq
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇩🇪 德国 | DEU #5'
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
   - 🇩🇪 德国 | DEU
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
+  - '🇩🇪 德国 | DEU #5'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇩🇪 德国 | DEU #5'
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
   - 🇩🇪 德国 | DEU
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
+  - '🇩🇪 德国 | DEU #5'
 rules:
 - MATCH,SELECT

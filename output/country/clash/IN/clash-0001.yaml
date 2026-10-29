@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: '🏳[www.v2nodes.com] vless- #15'
+  name: '🏳[www.v2nodes.com] vless- #26'
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -31,6 +31,13 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: firefox
+- type: vless
+  uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8
+  name: '🏳[www.v2nodes.com] vless- #51'
+  server: 5.253.30.99
+  port: 40443
+  udp: true
+  network: tcp
 - type: vless
   uuid: af5eac96-e478-488a-bc8c-45269d7e8847
   name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
@@ -63,25 +70,36 @@ proxies:
   udp: true
   ws-opts:
     path: /
+- type: trojan
+  password: Tg3RnK7Xp8B1
+  name: '🏳[www.v2nodes.com] trojan- #1'
+  server: 64.176.96.237
+  port: 443
+  udp: true
+  sni: ash.d50f6225-23b4-3a7b-9f15-a0fb2fc16803.kailib.com
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #15'
+  - '🏳[www.v2nodes.com] vless- #26'
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
+  - '🏳[www.v2nodes.com] vless- #51'
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇮🇳[www.v2nodes.com] vless-IN
   - 🇮🇳IN-152.67.8.205-0252
+  - '🏳[www.v2nodes.com] trojan- #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #15'
+  - '🏳[www.v2nodes.com] vless- #26'
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
+  - '🏳[www.v2nodes.com] vless- #51'
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇮🇳[www.v2nodes.com] vless-IN
   - 🇮🇳IN-152.67.8.205-0252
+  - '🏳[www.v2nodes.com] trojan- #1'
 rules:
 - MATCH,SELECT

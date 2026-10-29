@@ -11,6 +11,24 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: '🇸🇬[www.v2nodes.com] vless-SG #2'
+  server: 104.254.140.30
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime54.workers.dev
+- type: trojan
+  password: humanity
+  name: '🏳[www.v2nodes.com] trojan- #2'
+  server: 8.6.112.206
+  port: 443
+  udp: true
+  sni: 8.6.112.206
+- type: vless
   uuid: 46cb8a26-0712-4e85-89bf-2538a2788652
   name: '🇺🇸 美国 | USA #9'
   server: 146.75.59.186
@@ -37,47 +55,34 @@ proxies:
     path: /
     headers:
       Host: copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.
-- type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: '🇸🇬[www.v2nodes.com] vless-SG #2'
-  server: 104.254.140.30
-  port: 8880
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime54.workers.dev
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-156.146.38.167-0126
-  server: 156.146.38.167
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇺🇸US-216.152.155.54-0184
+  server: 216.152.155.54
   port: 443
   udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-156.146.38.170-0125
-  server: 156.146.38.170
+  sni: learn.nextjobopportunityandclaimyouridealrole.com
+- type: vmess
+  uuid: 6ba68c69-e108-502d-7b1c-e806fbc3cccd
+  alterId: 0
+  cipher: auto
+  network: xhttp
+  name: US19
+  server: 151.101.56.90
   port: 443
   udp: true
-- type: vless
-  uuid: 5ec50dc8-fba8-42ad-b427-e51193bc5c2a
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
-  server: 146.75.57.238
-  port: 443
-  udp: true
-  network: ws
   tls: true
-  servername: cdn.akamai.steamstatic.com
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: looaloooibamoooijji.global.ssl.fastly.net.
+  servername: default.ssl.fastly.net
+- type: trojan
+  password: humanity
+  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #7'
+  server: 165.215.250.14
+  port: 443
+  udp: true
+  sni: 165.215.250.14
 - type: vless
   uuid: 46cb8a26-0712-4e85-89bf-2538a2788652
-  name: '🇺🇸 美国 | USA #8'
+  name: '🇺🇸 美国 | USA #6'
   server: 199.232.78.160
   port: 443
   udp: true
@@ -90,35 +95,7 @@ proxies:
       Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
 - type: vless
   uuid: 46cb8a26-0712-4e85-89bf-2538a2788652
-  name: 🇺🇸 美国 | USA
-  server: 199.232.78.160
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: firefox.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-156.146.38.169-0124
-  server: 156.146.38.169
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-156.146.38.168-0123
-  server: 156.146.38.168
-  port: 443
-  udp: true
-- type: vless
-  uuid: 46cb8a26-0712-4e85-89bf-2538a2788652
-  name: '🇺🇸 美国 | USA #5'
+  name: '🇺🇸 美国 | USA #9'
   server: 167.82.64.64
   port: 443
   udp: true
@@ -143,6 +120,76 @@ proxies:
     path: /
     headers:
       Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-156.146.38.169-0124
+  server: 156.146.38.169
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-156.146.38.170-0125
+  server: 156.146.38.170
+  port: 443
+  udp: true
+- type: vmess
+  uuid: 6ba68c69-e108-502d-7b1c-e806fbc3cccd
+  alterId: 0
+  cipher: auto
+  network: xhttp
+  name: US2
+  server: 199.232.78.170
+  port: 443
+  udp: true
+  tls: true
+  servername: ssl.fastly.com
+- type: vless
+  uuid: 5ec50dc8-fba8-42ad-b427-e51193bc5c2a
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
+  server: 146.75.57.238
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: cdn.akamai.steamstatic.com
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: looaloooibamoooijji.global.ssl.fastly.net.
+- type: vless
+  uuid: caf3d607-95c9-4ea0-98b5-864027056ba0
+  name: '🇺🇸[www.v2nodes.com] vless-US-1... #1'
+  server: 88.216.57.148
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: us2.accessboy.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: 46cb8a26-0712-4e85-89bf-2538a2788652
+  name: 🇺🇸 美国 | USA
+  server: 199.232.78.160
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: firefox.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇺🇸US-216.152.155.176-0190
+  server: 216.152.155.176
+  port: 443
+  udp: true
+  sni: blog.nextjobopportunityandclaimyouridealrole.com
 - type: vmess
   uuid: 33aa57df-1c93-4318-9fce-e850437ee781
   alterId: 0
@@ -158,20 +205,78 @@ proxies:
     path: /dongtaiwang.com
     headers:
       Host: lg1.cfcdn3.xyz
-- type: trojan
-  password: humanity
-  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #7'
-  server: 165.215.250.14
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-156.146.38.167-0126
+  server: 156.146.38.167
   port: 443
   udp: true
-  sni: 165.215.250.14
 - type: trojan
-  password: humanity
-  name: 🇳🇱[www.v2nodes.com] trojan-NL-...
-  server: 8.6.112.206
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇺🇸[www.v2nodes.com] trojan-US-... #9'
+  server: 66.163.114.114
   port: 443
   udp: true
-  sni: 8.6.112.206
+  sni: learn.findconnectwithemployersandbuildprofessionalnetwork.com
+  skip-cert-verify: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-185.230.230.18-0129
+  server: 185.230.230.18
+  port: 19999
+  udp: true
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇺🇸[www.v2nodes.com] trojan-US-... #11'
+  server: 216.152.155.23
+  port: 443
+  udp: true
+  sni: courses.nextjobopportunityandclaimyouridealrole.com
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-156.146.38.168-0123
+  server: 156.146.38.168
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-193.151.163.18-0138
+  server: 193.151.163.18
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-37.19.198.160-0135
+  server: 37.19.198.160
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+  name: 🇺🇸US-15.204.247.206-0234
+  server: 15.204.247.206
+  port: 4444
+  udp: true
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇺🇸[www.v2nodes.com] trojan-US-... #7'
+  server: 66.163.114.166
+  port: 443
+  udp: true
+  sni: blog.findconnectwithemployersandbuildprofessionalnetwork.com
+  skip-cert-verify: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-37.19.198.243-0133
+  server: 37.19.198.243
+  port: 443
+  udp: true
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   name: '🇺🇸[www.v2nodes.com] trojan-US-... #8'
@@ -182,47 +287,31 @@ proxies:
   skip-cert-verify: true
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇺🇸[www.v2nodes.com] trojan-US-... #9'
-  server: 66.163.114.114
+  name: 🇺🇸US-66.163.122.81-0191
+  server: 66.163.122.81
   port: 443
   udp: true
-  sni: learn.findconnectwithemployersandbuildprofessionalnetwork.com
-  skip-cert-verify: true
+  sni: courses.searchnationwidecareerchangehelperandguidancetoday.com
 - type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-  name: 🇺🇸US-173.244.56.9-0154
-  server: 173.244.56.9
+  name: 🇺🇸US-37.19.198.244-0131
+  server: 37.19.198.244
   port: 443
   udp: true
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇺🇸[www.v2nodes.com] trojan-US-... #7'
-  server: 66.163.114.166
+  name: '🇺🇸[www.v2nodes.com] trojan-US-... #4'
+  server: 216.152.156.81
   port: 443
   udp: true
-  sni: blog.findconnectwithemployersandbuildprofessionalnetwork.com
+  sni: www.healthcarejobshubenhancemedicalprofessionalskillstoday.com
   skip-cert-verify: true
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇺🇸[www.v2nodes.com] trojan-US-... #10'
-  server: 216.152.156.212
-  port: 443
-  udp: true
-  sni: courses.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  skip-cert-verify: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-173.244.56.6-0174
-  server: 173.244.56.6
-  port: 443
-  udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-95.215.201.18-0181
-  server: 95.215.201.18
+  name: 🇺🇸US-45.86.51.18-0120
+  server: 45.86.51.18
   port: 19999
   udp: true
 - type: trojan
@@ -235,43 +324,34 @@ proxies:
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   name: '🇺🇸[www.v2nodes.com] trojan-US-... #4'
-  server: 216.152.156.81
+  server: 216.152.156.42
   port: 443
   udp: true
-  sni: www.healthcarejobshubenhancemedicalprofessionalskillstoday.com
+  sni: blog.healthcarejobshubenhancemedicalprofessionalskillstoday.com
   skip-cert-verify: true
-- type: vless
-  uuid: caf3d607-95c9-4ea0-98b5-864027056ba0
-  name: '🇺🇸[www.v2nodes.com] vless-US-1... #1'
-  server: 88.216.57.148
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: us2.accessboy.com
-  client-fingerprint: firefox
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-45.86.51.18-0120
-  server: 45.86.51.18
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-193.151.160.18-0122
-  server: 193.151.160.18
-  port: 19999
-  udp: true
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇺🇸US-216.152.155.54-0184
-  server: 216.152.155.54
+  name: '🇺🇸[www.v2nodes.com] trojan-US-... #5'
+  server: 66.163.122.7
   port: 443
   udp: true
-  sni: learn.nextjobopportunityandclaimyouridealrole.com
+  sni: www.searchnationwidecareerchangehelperandguidancetoday.com
+  skip-cert-verify: true
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇺🇸[www.v2nodes.com] trojan-US-... #10'
+  server: 216.152.156.212
+  port: 443
+  udp: true
+  sni: courses.healthcarejobshubenhancemedicalprofessionalskillstoday.com
+  skip-cert-verify: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-95.215.201.18-0181
+  server: 95.215.201.18
+  port: 19999
+  udp: true
 - type: vmess
   uuid: 203b2ab2-4994-4193-8193-6631a575edb0
   alterId: 0
@@ -283,17 +363,6 @@ proxies:
   udp: true
   ws-opts:
     path: /GSoTl9ZoYG5V2R0k4tUTGI8k
-- type: vless
-  uuid: 4a270d3e-27b4-497d-8c8c-28f1f54958d9
-  name: '🇺🇸 美国 | USA #7'
-  server: 156.229.160.98
-  port: 9443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.amazon.com
-  client-fingerprint: chrome
 - type: vless
   uuid: 4a270d3e-27b4-497d-8c8c-28f1f54958d9
   name: 🇺🇸 美国 | USA
@@ -308,11 +377,22 @@ proxies:
   reality-opts:
     public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
     short-id: b390142456517acc
+- type: vless
+  uuid: 4a270d3e-27b4-497d-8c8c-28f1f54958d9
+  name: '🇺🇸 美国 | USA #8'
+  server: 156.229.160.98
+  port: 9443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.amazon.com
+  client-fingerprint: chrome
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-185.230.230.18-0129
-  server: 185.230.230.18
+  name: 🇺🇸US-193.151.160.18-0122
+  server: 193.151.160.18
   port: 19999
   udp: true
 - type: ss
@@ -322,64 +402,6 @@ proxies:
   server: 193.151.160.9
   port: 19999
   udp: true
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇺🇸US-216.152.155.176-0190
-  server: 216.152.155.176
-  port: 443
-  udp: true
-  sni: blog.nextjobopportunityandclaimyouridealrole.com
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇺🇸[www.v2nodes.com] trojan-US-... #5'
-  server: 66.163.122.7
-  port: 443
-  udp: true
-  sni: www.searchnationwidecareerchangehelperandguidancetoday.com
-- type: ss
-  cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
-  name: 🇺🇸US-15.204.247.206-0234
-  server: 15.204.247.206
-  port: 4444
-  udp: true
-- type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: aes-128-gcm
-  network: tcp
-  name: 未知48 3.4MB/s
-  server: 67.220.95.3
-  port: 18000
-  udp: true
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇺🇸US-66.163.122.81-0191
-  server: 66.163.122.81
-  port: 443
-  udp: true
-  sni: courses.searchnationwidecareerchangehelperandguidancetoday.com
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-37.19.198.243-0133
-  server: 37.19.198.243
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-37.19.198.160-0135
-  server: 37.19.198.160
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-37.19.198.244-0131
-  server: 37.19.198.244
-  port: 443
-  udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: hCCWOcIsK5wrFz4OX70rWf
@@ -387,37 +409,51 @@ proxies:
   server: 216.105.168.18
   port: 443
   udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-193.151.163.18-0138
-  server: 193.151.163.18
-  port: 19999
-  udp: true
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇺🇸[www.v2nodes.com] trojan-US-... #11'
-  server: 216.152.155.23
-  port: 443
-  udp: true
-  sni: courses.nextjobopportunityandclaimyouridealrole.com
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇺🇸[www.v2nodes.com] trojan-US-... #3'
-  server: 216.152.156.42
-  port: 443
-  udp: true
-  sni: blog.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  skip-cert-verify: true
 - type: vmess
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
   network: tcp
-  name: US16
+  name: US8
   server: 216.152.152.187
   port: 22324
   udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-173.244.56.6-0174
+  server: 173.244.56.6
+  port: 443
+  udp: true
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: US9
+  server: 147.45.125.231
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-173.244.56.9-0154
+  server: 173.244.56.9
+  port: 443
+  udp: true
+- type: hysteria2
+  password: 329e13e4-ee7c-4802-ac72-5fcab79c2402
+  name: 🇺🇸202161 | ⚡️Telegram = t.me/S...
+  server: 217.60.72.225
+  port: 443
+  udp: true
+  sni: forshynewh.duckdns.org
 - type: hysteria2
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
   name: 🇺🇸139909 | ⚡️Telegram = t.me/S...
@@ -426,109 +462,125 @@ proxies:
   udp: true
   sni: vk.com
   skip-cert-verify: true
+- type: hysteria2
+  password: 46647da9-d4b4-407f-bea6-ad0b1abc561f
+  name: '🇺🇸 美国 | USA #2'
+  server: 192.236.226.182
+  port: 2053
+  udp: true
+  sni: 192.236.226.182
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇸🇬[www.v2nodes.com] vless-SG #2'
+  - '🏳[www.v2nodes.com] trojan- #2'
   - '🇺🇸 美国 | USA #9'
   - 🇺🇸 美国 | USA
-  - '🇸🇬[www.v2nodes.com] vless-SG #2'
-  - 🇺🇸US-156.146.38.167-0126
-  - 🇺🇸US-156.146.38.170-0125
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
-  - '🇺🇸 美国 | USA #8'
+  - 🇺🇸US-216.152.155.54-0184
+  - US19
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #7'
+  - '🇺🇸 美国 | USA #6'
+  - '🇺🇸 美国 | USA #9'
   - 🇺🇸 美国 | USA
   - 🇺🇸US-156.146.38.169-0124
-  - 🇺🇸US-156.146.38.168-0123
-  - '🇺🇸 美国 | USA #5'
+  - 🇺🇸US-156.146.38.170-0125
+  - US2
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #1'
   - 🇺🇸 美国 | USA
+  - 🇺🇸US-216.152.155.176-0190
   - 🏁RELAY-141.101.115.120-0090
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #7'
-  - 🇳🇱[www.v2nodes.com] trojan-NL-...
-  - '🇺🇸[www.v2nodes.com] trojan-US-... #8'
+  - 🇺🇸US-156.146.38.167-0126
   - '🇺🇸[www.v2nodes.com] trojan-US-... #9'
-  - 🇺🇸US-173.244.56.9-0154
+  - 🇺🇸US-185.230.230.18-0129
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #11'
+  - 🇺🇸US-156.146.38.168-0123
+  - 🇺🇸US-193.151.163.18-0138
+  - 🇺🇸US-37.19.198.160-0135
+  - 🇺🇸US-15.204.247.206-0234
   - '🇺🇸[www.v2nodes.com] trojan-US-... #7'
-  - '🇺🇸[www.v2nodes.com] trojan-US-... #10'
-  - 🇺🇸US-173.244.56.6-0174
-  - 🇺🇸US-95.215.201.18-0181
+  - 🇺🇸US-37.19.198.243-0133
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #8'
+  - 🇺🇸US-66.163.122.81-0191
+  - 🇺🇸US-37.19.198.244-0131
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #4'
+  - 🇺🇸US-45.86.51.18-0120
   - 🇺🇸US-216.152.156.65-0130
   - '🇺🇸[www.v2nodes.com] trojan-US-... #4'
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #1'
-  - 🇺🇸US-45.86.51.18-0120
-  - 🇺🇸US-193.151.160.18-0122
-  - 🇺🇸US-216.152.155.54-0184
-  - 🇨🇳CN-47.254.89.211-7645
-  - '🇺🇸 美国 | USA #7'
-  - 🇺🇸 美国 | USA
-  - 🇺🇸US-185.230.230.18-0129
-  - 🇺🇸US-193.151.160.9-0121
-  - 🇺🇸US-216.152.155.176-0190
   - '🇺🇸[www.v2nodes.com] trojan-US-... #5'
-  - 🇺🇸US-15.204.247.206-0234
-  - 未知48 3.4MB/s
-  - 🇺🇸US-66.163.122.81-0191
-  - 🇺🇸US-37.19.198.243-0133
-  - 🇺🇸US-37.19.198.160-0135
-  - 🇺🇸US-37.19.198.244-0131
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #10'
+  - 🇺🇸US-95.215.201.18-0181
+  - 🇨🇳CN-47.254.89.211-7645
+  - 🇺🇸 美国 | USA
+  - '🇺🇸 美国 | USA #8'
+  - 🇺🇸US-193.151.160.18-0122
+  - 🇺🇸US-193.151.160.9-0121
   - 🇺🇸US-216.105.168.18-0303
-  - 🇺🇸US-193.151.163.18-0138
-  - '🇺🇸[www.v2nodes.com] trojan-US-... #11'
-  - '🇺🇸[www.v2nodes.com] trojan-US-... #3'
-  - US16
+  - US8
+  - 🇺🇸US-173.244.56.6-0174
+  - US9
+  - 🇺🇸US-173.244.56.9-0154
+  - 🇺🇸202161 | ⚡️Telegram = t.me/S...
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
+  - '🇺🇸 美国 | USA #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇸🇬[www.v2nodes.com] vless-SG #2'
+  - '🏳[www.v2nodes.com] trojan- #2'
   - '🇺🇸 美国 | USA #9'
   - 🇺🇸 美国 | USA
-  - '🇸🇬[www.v2nodes.com] vless-SG #2'
-  - 🇺🇸US-156.146.38.167-0126
-  - 🇺🇸US-156.146.38.170-0125
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
-  - '🇺🇸 美国 | USA #8'
+  - 🇺🇸US-216.152.155.54-0184
+  - US19
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #7'
+  - '🇺🇸 美国 | USA #6'
+  - '🇺🇸 美国 | USA #9'
   - 🇺🇸 美国 | USA
   - 🇺🇸US-156.146.38.169-0124
-  - 🇺🇸US-156.146.38.168-0123
-  - '🇺🇸 美国 | USA #5'
+  - 🇺🇸US-156.146.38.170-0125
+  - US2
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #1'
   - 🇺🇸 美国 | USA
+  - 🇺🇸US-216.152.155.176-0190
   - 🏁RELAY-141.101.115.120-0090
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #7'
-  - 🇳🇱[www.v2nodes.com] trojan-NL-...
-  - '🇺🇸[www.v2nodes.com] trojan-US-... #8'
+  - 🇺🇸US-156.146.38.167-0126
   - '🇺🇸[www.v2nodes.com] trojan-US-... #9'
-  - 🇺🇸US-173.244.56.9-0154
+  - 🇺🇸US-185.230.230.18-0129
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #11'
+  - 🇺🇸US-156.146.38.168-0123
+  - 🇺🇸US-193.151.163.18-0138
+  - 🇺🇸US-37.19.198.160-0135
+  - 🇺🇸US-15.204.247.206-0234
   - '🇺🇸[www.v2nodes.com] trojan-US-... #7'
-  - '🇺🇸[www.v2nodes.com] trojan-US-... #10'
-  - 🇺🇸US-173.244.56.6-0174
-  - 🇺🇸US-95.215.201.18-0181
+  - 🇺🇸US-37.19.198.243-0133
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #8'
+  - 🇺🇸US-66.163.122.81-0191
+  - 🇺🇸US-37.19.198.244-0131
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #4'
+  - 🇺🇸US-45.86.51.18-0120
   - 🇺🇸US-216.152.156.65-0130
   - '🇺🇸[www.v2nodes.com] trojan-US-... #4'
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #1'
-  - 🇺🇸US-45.86.51.18-0120
-  - 🇺🇸US-193.151.160.18-0122
-  - 🇺🇸US-216.152.155.54-0184
-  - 🇨🇳CN-47.254.89.211-7645
-  - '🇺🇸 美国 | USA #7'
-  - 🇺🇸 美国 | USA
-  - 🇺🇸US-185.230.230.18-0129
-  - 🇺🇸US-193.151.160.9-0121
-  - 🇺🇸US-216.152.155.176-0190
   - '🇺🇸[www.v2nodes.com] trojan-US-... #5'
-  - 🇺🇸US-15.204.247.206-0234
-  - 未知48 3.4MB/s
-  - 🇺🇸US-66.163.122.81-0191
-  - 🇺🇸US-37.19.198.243-0133
-  - 🇺🇸US-37.19.198.160-0135
-  - 🇺🇸US-37.19.198.244-0131
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #10'
+  - 🇺🇸US-95.215.201.18-0181
+  - 🇨🇳CN-47.254.89.211-7645
+  - 🇺🇸 美国 | USA
+  - '🇺🇸 美国 | USA #8'
+  - 🇺🇸US-193.151.160.18-0122
+  - 🇺🇸US-193.151.160.9-0121
   - 🇺🇸US-216.105.168.18-0303
-  - 🇺🇸US-193.151.163.18-0138
-  - '🇺🇸[www.v2nodes.com] trojan-US-... #11'
-  - '🇺🇸[www.v2nodes.com] trojan-US-... #3'
-  - US16
+  - US8
+  - 🇺🇸US-173.244.56.6-0174
+  - US9
+  - 🇺🇸US-173.244.56.9-0154
+  - 🇺🇸202161 | ⚡️Telegram = t.me/S...
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
+  - '🇺🇸 美国 | USA #2'
 rules:
 - MATCH,SELECT

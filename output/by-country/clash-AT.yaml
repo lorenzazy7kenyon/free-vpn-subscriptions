@@ -22,6 +22,17 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
+- type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  name: '🇦🇹 奥地利 | AUT #1'
+  server: 50.7.36.28
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: at-new-ded.failspace.top
+  client-fingerprint: chrome
 - type: hysteria2
   password: Hc9_NX924RE_Mn948rgrwiub_m93V84nll
   name: '@v2ray_configs_pools 🌍 ⚡️'
@@ -36,12 +47,14 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #10'
+  - '🇦🇹 奥地利 | AUT #1'
   - '@v2ray_configs_pools 🌍 ⚡️'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #10'
+  - '🇦🇹 奥地利 | AUT #1'
   - '@v2ray_configs_pools 🌍 ⚡️'
 rules:
 - MATCH,SELECT

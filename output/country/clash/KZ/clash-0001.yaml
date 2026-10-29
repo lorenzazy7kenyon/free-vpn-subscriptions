@@ -11,16 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
-  name: '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
-  server: 109.248.170.119
-  port: 13447
-  udp: true
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-- type: vless
   uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
   name: 🇰🇿 哈萨克斯坦 | KAZ
   server: 46.8.43.125
@@ -33,8 +23,18 @@ proxies:
   reality-opts:
     public-key: ER-T5En54-sn6IXy7jU8vQVcBbOiWvznnezf3qZ273w
 - type: vless
+  uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
+  name: '🏳[www.v2nodes.com] vless- #32'
+  server: 109.248.170.119
+  port: 13447
+  udp: true
+  network: tcp
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: chrome
+- type: vless
   uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
-  name: '🇰🇿 哈萨克斯坦 | KAZ #2'
+  name: '🇰🇿 哈萨克斯坦 | KAZ #1'
   server: 46.8.43.125
   port: 443
   udp: true
@@ -44,7 +44,7 @@ proxies:
   client-fingerprint: firefox
 - type: vless
   uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
-  name: '🇰🇿[www.v2nodes.com] vless-KZ-1... #2'
+  name: '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
   server: 178.236.16.98
   port: 35728
   udp: true
@@ -58,17 +58,17 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
   - 🇰🇿 哈萨克斯坦 | KAZ
-  - '🇰🇿 哈萨克斯坦 | KAZ #2'
-  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #2'
+  - '🏳[www.v2nodes.com] vless- #32'
+  - '🇰🇿 哈萨克斯坦 | KAZ #1'
+  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
   - 🇰🇿 哈萨克斯坦 | KAZ
-  - '🇰🇿 哈萨克斯坦 | KAZ #2'
-  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #2'
+  - '🏳[www.v2nodes.com] vless- #32'
+  - '🇰🇿 哈萨克斯坦 | KAZ #1'
+  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
 rules:
 - MATCH,SELECT

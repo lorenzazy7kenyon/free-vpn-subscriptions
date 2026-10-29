@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
-  name: EPODONIOS
+  name: '🏳[www.v2nodes.com] vless- #10'
   server: 88.216.69.253
   port: 443
   udp: true
@@ -20,62 +20,20 @@ proxies:
   tls: true
   servername: ccc.010304.xyz
   ws-opts:
-    path: /fp=chrome
+    path: /fp=chromefp=unsafe
     headers:
       Host: ccc.010304.xyz
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 88.216.69.253
-  port: 443
-  udp: true
-  sni: www.pleadcourt.org
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
-- type: vless
-  uuid: 047466dd-05aa-4331-abf7-322c5aaecf97
-  name: EPODONIOS
-  server: 130.78.190.163
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ee.viralforge.ru
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: HLKQ0JvyaZ16JNdl0pbEPkiVRYJDiZNzGz9prDMiw2s
-    short-id: a1b2c3d4b5
-- type: trojan
-  password: humanity
-  name: EPODONIOS
-  server: 195.181.244.216
-  port: 443
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #10'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - '🏳[www.v2nodes.com] vless- #10'
 rules:
 - MATCH,SELECT

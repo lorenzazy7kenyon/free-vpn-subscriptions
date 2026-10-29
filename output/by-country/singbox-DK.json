@@ -1,41 +1,30 @@
 {
   "outbounds": [
     {
-      "server": "193.233.253.180",
-      "server_port": 8444,
-      "tag": "🇩🇰[www.v2nodes.com] vless-DK-1...",
+      "alter_id": 0,
+      "security": "auto",
+      "server": "193.181.212.81",
+      "server_port": 443,
+      "tag": "未知135",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "github.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "renderer-stream-2-62.mirra.now"
       },
       "transport": {
-        "service_name": "GunService",
-        "type": "grpc"
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket",
+        "type": "ws"
       },
-      "type": "vless",
-      "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309"
-    },
-    {
-      "server": "144.31.242.142",
-      "server_port": 443,
-      "tag": "EPODONIOS",
-      "tls": {
-        "enabled": true,
-        "insecure": false
-      },
-      "type": "vless",
-      "uuid": "abca037b-bee5-41cc-a888-0668e4c66176"
+      "type": "vmess",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇩🇰[www.v2nodes.com] vless-DK-1...",
-        "EPODONIOS"
+        "未知135"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -44,8 +33,7 @@
     {
       "outbounds": [
         "auto",
-        "🇩🇰[www.v2nodes.com] vless-DK-1...",
-        "EPODONIOS"
+        "未知135"
       ],
       "tag": "select",
       "type": "selector"
