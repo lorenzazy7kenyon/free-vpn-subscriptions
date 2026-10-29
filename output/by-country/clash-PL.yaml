@@ -11,26 +11,15 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 7f6adf9d-42f1-4fec-ab22-fb7f66bf3adc
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
-  server: 2.27.244.55
-  port: 443
+  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+  name: '🏳[www.v2nodes.com] vless- #21'
+  server: 54.37.136.194
+  port: 2053
   udp: true
-  network: grpc
-  tls: true
-  servername: qbak5xqeb.hat.onl
-  client-fingerprint: firefox
-- type: vless
-  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #5'
-  server: 82.118.22.161
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
   servername: www.cloudflare.com
-  client-fingerprint: safari
+  client-fingerprint: firefox
 - type: vless
   uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
   name: '🏳[www.v2nodes.com] vless- #41'
@@ -43,28 +32,16 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - type: vless
-  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #6'
-  server: 54.37.136.194
-  port: 2053
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
+  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
+  server: 82.118.22.161
+  port: 443
   udp: true
+  flow: xtls-rprx-vision
   network: tcp
   tls: true
   servername: www.cloudflare.com
-  client-fingerprint: firefox
-- type: vmess
-  uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇫🇷FR-54.37.131.126-0231
-  server: 54.37.131.126
-  port: 80
-  udp: true
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+  client-fingerprint: safari
 - type: vless
   uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
   name: '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
@@ -74,27 +51,48 @@ proxies:
   network: tcp
   tls: true
   servername: 2.26.6.1
+- type: vmess
+  uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇫🇷FR-54.37.131.126-0240
+  server: 54.37.131.126
+  port: 80
+  udp: true
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+- type: hysteria2
+  password: 10be1dad-9952-4c5e-aa30-db435f69b727
+  name: '🇵🇱 波兰 | POL #1'
+  server: 13.143.189.71
+  port: 4444
+  udp: true
+  sni: pl3.nexfile.net
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #5'
+  - '🏳[www.v2nodes.com] vless- #21'
   - '🏳[www.v2nodes.com] vless- #41'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #6'
-  - 🇫🇷FR-54.37.131.126-0231
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
+  - 🇫🇷FR-54.37.131.126-0240
+  - '🇵🇱 波兰 | POL #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #5'
+  - '🏳[www.v2nodes.com] vless- #21'
   - '🏳[www.v2nodes.com] vless- #41'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #6'
-  - 🇫🇷FR-54.37.131.126-0231
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
+  - 🇫🇷FR-54.37.131.126-0240
+  - '🇵🇱 波兰 | POL #1'
 rules:
 - MATCH,SELECT

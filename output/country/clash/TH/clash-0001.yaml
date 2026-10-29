@@ -11,17 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  name: '🏳[www.v2nodes.com] vless- #52'
-  server: 103.86.49.57
-  port: 80
-  udp: true
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: aIs.SpEeDtEsT.nEt
-- type: vless
   uuid: ff85e702-b605-4109-884d-2c1f065d0954
   name: 🇹🇭[www.v2nodes.com] vless-TH-1...
   server: 45.154.26.63
@@ -32,19 +21,30 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- type: vless
+  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  name: '🏳[www.v2nodes.com] vless- #52'
+  server: 103.86.49.57
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: aIs.SpEeDtEsT.nEt
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #52'
   - 🇹🇭[www.v2nodes.com] vless-TH-1...
+  - '🏳[www.v2nodes.com] vless- #52'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #52'
   - 🇹🇭[www.v2nodes.com] vless-TH-1...
+  - '🏳[www.v2nodes.com] vless- #52'
 rules:
 - MATCH,SELECT

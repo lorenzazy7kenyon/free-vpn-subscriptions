@@ -11,6 +11,20 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: f27b6f65-6e59-4f89-b929-afa397ca587f
+  name: 🇩🇪 德国 | DEU
+  server: 155.212.240.10
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: n.bitpulse.me
+  client-fingerprint: firefox
+  ws-opts:
+    path: /019bcbad-3813-7cce-8786-3ac0e418f128?ed=2560
+    headers:
+      Host: n.bitpulse.me
+- type: vless
   uuid: d18c6897-2849-456a-8c46-d7ecece47c20
   name: '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
   server: 141.101.90.108
@@ -21,13 +35,113 @@ proxies:
     path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HUlxQSwUEVRwJUx8BQRoaSVhfRhoOChkDDUs=fp=chromesecurity=tls
     headers:
       Host: wzs.echo.net.eu.org
+- type: vless
+  uuid: f27b6f65-6e59-4f89-b929-afa397ca587f
+  name: '🇩🇪 德国 | DEU #5'
+  server: 155.212.240.10
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: n.bitpulse.me
+  ws-opts:
+    path: /019bcbad-3813-7cce-8786-3ac0e418f128?ed=2560fp=firefox
+    headers:
+      Host: n.bitpulse.me
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知111
+  server: 82.139.242.5
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+- type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知41
+  server: 216.106.187.60
+  port: 22324
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇩🇪[www.v2nodes.com] ss-DE-1602...
+  server: 185.176.204.18
+  port: 19999
+  udp: true
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知32
+  server: 194.87.71.141
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+- type: vless
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
+  server: 179.254.115.126
+  port: 8443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: de7.pad-sservice.lat
+  client-fingerprint: firefox
+- type: vmess
+  uuid: 572126f8-5301-83c2-0a26-c30ced3db7c4
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇨🇳CN-8.209.105.92-0111
+  server: 8.209.105.92
+  port: 443
+  udp: true
+  tls: true
+  servername: goodfamily19.site
+  ws-opts:
+    path: /wmzmvws
+    headers:
+      Host: goodfamily19.site
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知102
+  server: 84.75.76.16
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
 - type: vmess
   uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
   alterId: 0
   cipher: auto
   network: ws
-  name: 🇨🇳CN-8.209.114.185-0100
-  server: 8.209.114.185
+  name: 🇨🇳CN-8.209.89.166-0127
+  server: 8.209.89.166
   port: 443
   udp: true
   tls: true
@@ -36,24 +150,21 @@ proxies:
     path: /ray
     headers:
       Host: lg30.cfcdn3.xyz
-- type: vless
-  uuid: 558b26f6-061b-4079-9b84-ca13b3e90ae3
-  name: '🏳[www.v2nodes.com] vless- #13'
-  server: 144.31.215.196
+- type: vmess
+  uuid: 572126f8-5301-83c2-0a26-c30ced3db7c4
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇨🇳CN-47.254.175.195-0113
+  server: 47.254.175.195
   port: 443
   udp: true
-  network: tcp
-- type: vless
-  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #7'
-  server: 82.118.19.153
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
   tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  servername: goodfamily19.site
+  ws-opts:
+    path: /wmzmvws
+    headers:
+      Host: goodfamily19.site
 - type: ss
   cipher: aes-256-cfb
   password: amazonskr05
@@ -66,8 +177,46 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
-  name: 🇨🇳CN-47.254.176.217-0110
-  server: 47.254.176.217
+  name: 🇨🇳CN-8.209.113.255-0129
+  server: 8.209.113.255
+  port: 443
+  udp: true
+  tls: true
+  servername: lg30.cfcdn3.xyz
+  ws-opts:
+    path: /ray
+    headers:
+      Host: lg30.cfcdn3.xyz
+- type: vless
+  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
+  server: 82.118.19.153
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: trojan
+  password: humanity
+  name: '🇳🇱[www.v2nodes.com] trojan-NL-... #1'
+  server: 161.35.192.122
+  port: 443
+  udp: true
+  sni: www.pleadcourt.org
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
+- type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇨🇳CN-8.209.112.171-0122
+  server: 8.209.112.171
   port: 443
   udp: true
   tls: true
@@ -77,46 +226,90 @@ proxies:
     headers:
       Host: lg30.cfcdn3.xyz
 - type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知16
-  server: 89.127.218.61
+  name: 🇨🇳CN-8.209.118.4-0120
+  server: 8.209.118.4
   port: 443
   udp: true
   tls: true
-  servername: renderer-stream-2-62.mirra.now
+  servername: lg30.cfcdn3.xyz
   ws-opts:
-    path: /api/v1/gpu-stream/socket
+    path: /ray
     headers:
-      Host: renderer-stream-2-62.mirra.now
+      Host: lg30.cfcdn3.xyz
 - type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  uuid: 572126f8-5301-83c2-0a26-c30ced3db7c4
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知96
-  server: 82.139.242.5
+  name: 🇨🇳CN-8.209.119.61-0114
+  server: 8.209.119.61
   port: 443
   udp: true
   tls: true
-  servername: renderer-stream-2-62.mirra.now
+  servername: goodfamily19.site
   ws-opts:
-    path: /api/v1/gpu-stream/socket
+    path: /wmzmvws
     headers:
-      Host: renderer-stream-2-62.mirra.now
+      Host: goodfamily19.site
+- type: vmess
+  uuid: 572126f8-5301-83c2-0a26-c30ced3db7c4
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇨🇳CN-8.209.89.166-0100
+  server: 8.209.89.166
+  port: 443
+  udp: true
+  tls: true
+  servername: goodfamily19.site
+  ws-opts:
+    path: /wmzmvws
+    headers:
+      Host: goodfamily19.site
 - type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  name: 🇩🇪[www.v2nodes.com] vless-DE-1...
-  server: 179.254.115.126
-  port: 8443
+  uuid: 75b517db-1f97-4bda-a479-863d988c31a0
+  name: '🏳[www.v2nodes.com] vless- #7'
+  server: 64.188.83.188
+  port: 2083
+  udp: true
+  network: ws
+  tls: true
+  servername: speedtestmark.com
+  ws-opts:
+    path: /vless-wsfp=random
+- type: vless
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #11'
+  server: 157.90.175.178
+  port: 2112
+  udp: true
+  network: tcp
+- type: vless
+  uuid: 558b26f6-061b-4079-9b84-ca13b3e90ae3
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
+  server: 144.31.215.162
+  port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: de7.pad-sservice.lat
-  client-fingerprint: firefox
+  servername: c1.qwyak.ru
+  client-fingerprint: chrome
+- type: vless
+  uuid: b945f9aa-1b45-4912-aa7e-248509472bad
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #10'
+  server: 46.28.69.123
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 - type: trojan
   password: humanity
   name: '🇫🇷[www.v2nodes.com] trojan-FR-... #6'
@@ -130,144 +323,27 @@ proxies:
     headers:
       Host: www.calmlunch.com
 - type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  uuid: 5f72f180-b21b-4b7a-8484-240759012604
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知20
-  server: 193.108.117.54
+  name: 未知37
+  server: 194.164.192.16
   port: 443
   udp: true
   tls: true
-  servername: aidrivercat.org
+  servername: apjhdggyx.com
   ws-opts:
-    path: /linkvws
+    path: /5f72f180-b21b-4b7a-8484-240759096785
     headers:
-      Host: aidrivercat.org
-- type: vmess
-  uuid: 0764a598-82c4-4b41-ba10-551a625beed5
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇨🇳CN-47.254.174.110-0118
-  server: 47.254.174.110
-  port: 443
-  udp: true
-  tls: true
-  servername: uk2.v2rayserv.com
-  ws-opts:
-    path: /sshocean
-    headers:
-      Host: uk2.v2rayserv.com
-- type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇨🇳CN-47.254.174.110-0102
-  server: 47.254.174.110
-  port: 443
-  udp: true
-  tls: true
-  servername: lg30.cfcdn3.xyz
-  ws-opts:
-    path: /ray
-    headers:
-      Host: lg30.cfcdn3.xyz
-- type: vless
-  uuid: b945f9aa-1b45-4912-aa7e-248509472bad
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #8'
-  server: 46.28.69.123
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
-  name: '🏳[www.v2nodes.com] vless- #14'
-  server: 157.90.175.178
-  port: 2112
-  udp: true
-  network: tcp
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #6'
-  server: 185.176.204.18
-  port: 19999
-  udp: true
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知15
-  server: 64.188.106.254
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-- type: vmess
-  uuid: 78fb1a62-b276-4a13-ab57-f2b87d0f37a5
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知160
-  server: 178.105.210.96
-  port: 80
-  udp: true
-- type: trojan
-  password: humanity
-  name: 🇳🇱[www.v2nodes.com] trojan-NL-...
-  server: 161.35.192.122
-  port: 443
-  udp: true
-  sni: www.pleadcourt.org
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
+      Host: apjhdggyx.com
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: NcAXc0UZI6yQJE1p8QmOv8
-  name: 🇩🇪DE-57.129.113.16-0256
-  server: 57.129.113.16
-  port: 8388
+  password: uvKNudV-N8AUCrykPiyznA
+  name: 🇬🇧[www.v2nodes.com] ss-GB-1605...
+  server: 37.153.158.167
+  port: 56137
   udp: true
-- type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇨🇳CN-47.254.175.195-0111
-  server: 47.254.175.195
-  port: 443
-  udp: true
-  tls: true
-  servername: lg30.cfcdn3.xyz
-  ws-opts:
-    path: /ray
-    headers:
-      Host: lg30.cfcdn3.xyz
-- type: vless
-  uuid: 75b517db-1f97-4bda-a479-863d988c31a0
-  name: '🏳[www.v2nodes.com] vless- #12'
-  server: 64.188.83.188
-  port: 2083
-  udp: true
-  network: ws
-  tls: true
-  servername: speedtestmark.com
-  ws-opts:
-    path: /vless-wsfp=random
 - type: trojan
   password: humanity
   name: 🇫🇷[www.v2nodes.com] trojan-FR-...
@@ -280,24 +356,21 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: uvKNudV-N8AUCrykPiyznA
-  name: 🇬🇧[www.v2nodes.com] ss-GB-1605...
-  server: 37.153.158.167
-  port: 56137
-  udp: true
-- type: vless
-  uuid: 558b26f6-061b-4079-9b84-ca13b3e90ae3
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
-  server: 144.31.215.162
+- type: trojan
+  password: Tg3RnK7Xp8B1
+  name: '🇩🇪 德国 | DEU #8'
+  server: 45.32.157.84
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: c1.qwyak.ru
-  client-fingerprint: chrome
+  sni: ash.d50f6225-23b4-3a7b-9f15-a0fb2fc16803.kailib.com
+  skip-cert-verify: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: NcAXc0UZI6yQJE1p8QmOv8
+  name: 🇩🇪DE-57.129.113.16-0249
+  server: 57.129.113.16
+  port: 8388
+  udp: true
 - type: hysteria2
   password: KevinZakarian
   name: 🩵+@Azarakhsh_Proxy+🩷
@@ -321,62 +394,72 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇩🇪 德国 | DEU
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
-  - 🇨🇳CN-8.209.114.185-0100
-  - '🏳[www.v2nodes.com] vless- #13'
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #7'
+  - '🇩🇪 德国 | DEU #5'
+  - 未知111
+  - 未知41
+  - 🇩🇪[www.v2nodes.com] ss-DE-1602...
+  - 未知32
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
+  - 🇨🇳CN-8.209.105.92-0111
+  - 未知102
+  - 🇨🇳CN-8.209.89.166-0127
+  - 🇨🇳CN-47.254.175.195-0113
   - 'tg频道:@ripaojiedian #1'
-  - 🇨🇳CN-47.254.176.217-0110
-  - 未知16
-  - 未知96
-  - 🇩🇪[www.v2nodes.com] vless-DE-1...
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #6'
-  - 未知20
-  - 🇨🇳CN-47.254.174.110-0118
-  - 🇨🇳CN-47.254.174.110-0102
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #8'
-  - '🏳[www.v2nodes.com] vless- #14'
-  - '🏳[www.v2nodes.com] ss- #6'
-  - 未知15
-  - 未知160
-  - 🇳🇱[www.v2nodes.com] trojan-NL-...
-  - 🇩🇪DE-57.129.113.16-0256
-  - 🇨🇳CN-47.254.175.195-0111
-  - '🏳[www.v2nodes.com] vless- #12'
-  - 🇫🇷[www.v2nodes.com] trojan-FR-...
-  - 🇬🇧[www.v2nodes.com] ss-GB-1605...
+  - 🇨🇳CN-8.209.113.255-0129
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #1'
+  - 🇨🇳CN-8.209.112.171-0122
+  - 🇨🇳CN-8.209.118.4-0120
+  - 🇨🇳CN-8.209.119.61-0114
+  - 🇨🇳CN-8.209.89.166-0100
+  - '🏳[www.v2nodes.com] vless- #7'
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #11'
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #10'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #6'
+  - 未知37
+  - 🇬🇧[www.v2nodes.com] ss-GB-1605...
+  - 🇫🇷[www.v2nodes.com] trojan-FR-...
+  - '🇩🇪 德国 | DEU #8'
+  - 🇩🇪DE-57.129.113.16-0249
   - 🩵+@Azarakhsh_Proxy+🩷
   - 🇩🇪202167 | ⚡️Telegram = t.me/S...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇩🇪 德国 | DEU
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
-  - 🇨🇳CN-8.209.114.185-0100
-  - '🏳[www.v2nodes.com] vless- #13'
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #7'
+  - '🇩🇪 德国 | DEU #5'
+  - 未知111
+  - 未知41
+  - 🇩🇪[www.v2nodes.com] ss-DE-1602...
+  - 未知32
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
+  - 🇨🇳CN-8.209.105.92-0111
+  - 未知102
+  - 🇨🇳CN-8.209.89.166-0127
+  - 🇨🇳CN-47.254.175.195-0113
   - 'tg频道:@ripaojiedian #1'
-  - 🇨🇳CN-47.254.176.217-0110
-  - 未知16
-  - 未知96
-  - 🇩🇪[www.v2nodes.com] vless-DE-1...
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #6'
-  - 未知20
-  - 🇨🇳CN-47.254.174.110-0118
-  - 🇨🇳CN-47.254.174.110-0102
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #8'
-  - '🏳[www.v2nodes.com] vless- #14'
-  - '🏳[www.v2nodes.com] ss- #6'
-  - 未知15
-  - 未知160
-  - 🇳🇱[www.v2nodes.com] trojan-NL-...
-  - 🇩🇪DE-57.129.113.16-0256
-  - 🇨🇳CN-47.254.175.195-0111
-  - '🏳[www.v2nodes.com] vless- #12'
-  - 🇫🇷[www.v2nodes.com] trojan-FR-...
-  - 🇬🇧[www.v2nodes.com] ss-GB-1605...
+  - 🇨🇳CN-8.209.113.255-0129
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #1'
+  - 🇨🇳CN-8.209.112.171-0122
+  - 🇨🇳CN-8.209.118.4-0120
+  - 🇨🇳CN-8.209.119.61-0114
+  - 🇨🇳CN-8.209.89.166-0100
+  - '🏳[www.v2nodes.com] vless- #7'
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #11'
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #10'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #6'
+  - 未知37
+  - 🇬🇧[www.v2nodes.com] ss-GB-1605...
+  - 🇫🇷[www.v2nodes.com] trojan-FR-...
+  - '🇩🇪 德国 | DEU #8'
+  - 🇩🇪DE-57.129.113.16-0249
   - 🩵+@Azarakhsh_Proxy+🩷
   - 🇩🇪202167 | ⚡️Telegram = t.me/S...
 rules:

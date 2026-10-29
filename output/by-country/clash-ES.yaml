@@ -22,9 +22,37 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
+- type: ss
+  cipher: aes-256-cfb
+  password: dU3DSNS8wYPXzEKw
+  name: 🇪🇸ES-5.188.181.201-5495
+  server: 5.188.181.201
+  port: 9029
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: KnJGad3FqTvjqbaX
+  name: 🇪🇸ES-5.188.181.201-5496
+  server: 5.188.181.201
+  port: 9014
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: M3t2ZEQcMGRWBjRa
+  name: 🇪🇸ES-5.188.181.201-5497
+  server: 5.188.181.201
+  port: 9011
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: UkXRsXvR6buDMG2Y
+  name: 🇪🇸ES-5.188.181.201-5494
+  server: 5.188.181.201
+  port: 9001
+  udp: true
 - type: vless
   uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
-  name: '🏳[www.v2nodes.com] vless- #16'
+  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #14'
   server: 212.227.235.66
   port: 2053
   udp: true
@@ -33,8 +61,19 @@ proxies:
   servername: www.apple.com
   client-fingerprint: firefox
 - type: vless
+  uuid: 12c53e32-e589-47d6-b857-e4132294f767
+  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #12'
+  server: 46.28.71.247
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: vless
   uuid: 897d47f8-4dd5-42a1-bcd0-bef19caff55a
-  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #6'
+  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #13'
   server: 193.238.154.78
   port: 443
   udp: true
@@ -43,17 +82,6 @@ proxies:
   tls: true
   servername: gateway.icloud.com
   client-fingerprint: chrome
-- type: vless
-  uuid: 12c53e32-e589-47d6-b857-e4132294f767
-  name: '🏳[www.v2nodes.com] vless- #15'
-  server: 46.28.71.247
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -61,16 +89,24 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #4'
-  - '🏳[www.v2nodes.com] vless- #16'
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #6'
-  - '🏳[www.v2nodes.com] vless- #15'
+  - 🇪🇸ES-5.188.181.201-5495
+  - 🇪🇸ES-5.188.181.201-5496
+  - 🇪🇸ES-5.188.181.201-5497
+  - 🇪🇸ES-5.188.181.201-5494
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #14'
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #12'
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #13'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #4'
-  - '🏳[www.v2nodes.com] vless- #16'
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #6'
-  - '🏳[www.v2nodes.com] vless- #15'
+  - 🇪🇸ES-5.188.181.201-5495
+  - 🇪🇸ES-5.188.181.201-5496
+  - 🇪🇸ES-5.188.181.201-5497
+  - 🇪🇸ES-5.188.181.201-5494
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #14'
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #12'
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #13'
 rules:
 - MATCH,SELECT

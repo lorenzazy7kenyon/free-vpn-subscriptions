@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 88c4ce99-31f1-4329-912d-2a3564b3d58b
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #1'
   server: 45.9.118.177
   port: 8443
   udp: true
@@ -23,7 +23,7 @@ proxies:
   client-fingerprint: firefox
 - type: vless
   uuid: d24e0961-dd20-4528-8796-2a974e79348e
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #3'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
   server: 193.160.141.2
   port: 8443
   udp: true
@@ -32,56 +32,14 @@ proxies:
   tls: true
   servername: apple.com
   client-fingerprint: chrome
-- type: vless
-  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #3'
-  server: 77.232.135.141
-  port: 8445
+- type: trojan
+  password: Pass-Client-1
+  name: 🇷🇺 俄罗斯 | RUS 2
+  server: 171.22.119.74
+  port: 8446
   udp: true
-  network: grpc
-  tls: true
-  servername: ru1.radiolumens.uk
-  client-fingerprint: chrome
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知117
-  server: 194.226.142.120
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-- type: vless
-  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  server: 5.129.222.115
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ad7.vkusnews.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
-  name: 🇷🇺 俄罗斯 | RUS
-  server: 147.45.175.81
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: xsru2.freeddns.org
-  client-fingerprint: chrome
-  ws-opts:
-    path: /wsru
-    headers:
-      Host: xsru2.freeddns.org
+  sni: 171.22.119.74
+  skip-cert-verify: true
 - type: vless
   uuid: 37ca5f34-2531-4fda-a781-20f3845fea88
   name: 🇫🇷[www.v2nodes.com] vless-FR-1...
@@ -93,15 +51,20 @@ proxies:
   tls: true
   servername: lifeskaterstudent.caskstudio.org
   client-fingerprint: chrome
+- type: ss
+  cipher: aes-256-gcm
+  password: Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE
+  name: '🇷🇺 俄罗斯 | RUS #1'
+  server: 195.58.49.167
+  port: 18443
+  udp: true
 - type: vless
-  uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #1'
-  server: 201.24.121.243
+  uuid: 37ca5f34-2531-4fda-a781-20f3845fea88
+  name: '🏳[www.v2nodes.com] vless- #8'
+  server: 94.228.167.12
   port: 443
   udp: true
   network: tcp
-  tls: true
-  servername: 201.24.121.243
 - type: vless
   uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
   name: '🇷🇺[www.v2nodes.com] vless-RU-1... #4'
@@ -116,8 +79,17 @@ proxies:
     headers:
       Host: xsru2.freeddns.org
 - type: vless
+  uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
+  name: 🇷🇺[www.v2nodes.com] vless-RU-1...
+  server: 201.24.121.243
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: 201.24.121.243
+- type: vless
   uuid: f9613819-d2fe-4b3a-a2e6-40c184c6854c
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #5'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #4'
   server: 194.87.143.165
   port: 8443
   udp: true
@@ -125,8 +97,19 @@ proxies:
   ws-opts:
     path: /security=tls
 - type: vless
+  uuid: 1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200
+  name: '🇳🇱 荷兰 | NLD #2'
+  server: 72.56.38.83
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: absolute-disaster.org
+  client-fingerprint: chrome
+- type: vless
   uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
-  name: '🏳[www.v2nodes.com] vless- #45'
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
   server: 193.163.203.170
   port: 443
   udp: true
@@ -135,34 +118,33 @@ proxies:
   tls: true
   servername: yandex.ru
   client-fingerprint: chrome
-- type: vmess
-  uuid: c58c1205-b308-416f-8503-c04557abf93d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知102 8.5MB/s
-  server: 158.160.180.165
-  port: 24212
-  udp: true
-  tls: true
-  servername: 158.160.180.165
-- type: ss
-  cipher: aes-256-gcm
-  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
-  name: 🇷🇺RU-91.206.92.238-0249
-  server: 91.206.92.238
-  port: 18443
-  udp: true
 - type: vless
-  uuid: 37ca5f34-2531-4fda-a781-20f3845fea88
-  name: '🏳[www.v2nodes.com] vless- #18'
-  server: 94.228.167.12
+  uuid: 1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200
+  name: 🇳🇱 荷兰 | NLD
+  server: 72.56.38.83
   port: 443
   udp: true
+  flow: xtls-rprx-vision
   network: tcp
+  tls: true
+  servername: absolute-disaster.org
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ZzIetLcQtENjIXQ9XZqFo8p3J81p8Emj0wi51Uy07n8
+- type: vless
+  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #8'
+  server: 5.129.222.115
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ad7.vkusnews.com
+  client-fingerprint: chrome
 - type: vless
   uuid: 4799abf0-d0d9-4a46-9c31-b1f76ae00e1e
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #3'
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #4'
   server: 144.48.11.97
   port: 43000
   udp: true
@@ -171,9 +153,31 @@ proxies:
   tls: true
   servername: 144.48.11.97
   client-fingerprint: chrome
+- type: ss
+  cipher: aes-256-gcm
+  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
+  name: 🇷🇺RU-91.206.92.238-0257
+  server: 91.206.92.238
+  port: 18443
+  udp: true
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知48
+  server: 80.240.252.241
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
 - type: vless
   uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #6'
+  name: '🏳[www.v2nodes.com] vless- #23'
   server: 45.12.75.242
   port: 26424
   udp: true
@@ -197,43 +201,45 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
-  - '🇷🇺[www.v2nodes.com] vless-RU-1... #3'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #3'
-  - 未知117
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  - 🇷🇺 俄罗斯 | RUS
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
   - '🇷🇺[www.v2nodes.com] vless-RU-1... #1'
+  - '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
+  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇫🇷[www.v2nodes.com] vless-FR-1...
+  - '🇷🇺 俄罗斯 | RUS #1'
+  - '🏳[www.v2nodes.com] vless- #8'
   - '🇷🇺[www.v2nodes.com] vless-RU-1... #4'
-  - '🇷🇺[www.v2nodes.com] vless-RU-1... #5'
-  - '🏳[www.v2nodes.com] vless- #45'
-  - 未知102 8.5MB/s
-  - 🇷🇺RU-91.206.92.238-0249
-  - '🏳[www.v2nodes.com] vless- #18'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #3'
-  - '🇷🇺[www.v2nodes.com] vless-RU-1... #6'
+  - 🇷🇺[www.v2nodes.com] vless-RU-1...
+  - '🇷🇺[www.v2nodes.com] vless-RU-1... #4'
+  - '🇳🇱 荷兰 | NLD #2'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  - 🇳🇱 荷兰 | NLD
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #8'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #4'
+  - 🇷🇺RU-91.206.92.238-0257
+  - 未知48
+  - '🏳[www.v2nodes.com] vless- #23'
   - '@Begoo_VPN ²⁹⁰'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
-  - '🇷🇺[www.v2nodes.com] vless-RU-1... #3'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #3'
-  - 未知117
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  - 🇷🇺 俄罗斯 | RUS
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
   - '🇷🇺[www.v2nodes.com] vless-RU-1... #1'
+  - '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
+  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇫🇷[www.v2nodes.com] vless-FR-1...
+  - '🇷🇺 俄罗斯 | RUS #1'
+  - '🏳[www.v2nodes.com] vless- #8'
   - '🇷🇺[www.v2nodes.com] vless-RU-1... #4'
-  - '🇷🇺[www.v2nodes.com] vless-RU-1... #5'
-  - '🏳[www.v2nodes.com] vless- #45'
-  - 未知102 8.5MB/s
-  - 🇷🇺RU-91.206.92.238-0249
-  - '🏳[www.v2nodes.com] vless- #18'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #3'
-  - '🇷🇺[www.v2nodes.com] vless-RU-1... #6'
+  - 🇷🇺[www.v2nodes.com] vless-RU-1...
+  - '🇷🇺[www.v2nodes.com] vless-RU-1... #4'
+  - '🇳🇱 荷兰 | NLD #2'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  - 🇳🇱 荷兰 | NLD
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #8'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #4'
+  - 🇷🇺RU-91.206.92.238-0257
+  - 未知48
+  - '🏳[www.v2nodes.com] vless- #23'
   - '@Begoo_VPN ²⁹⁰'
 rules:
 - MATCH,SELECT
