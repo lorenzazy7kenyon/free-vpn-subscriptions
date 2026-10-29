@@ -22,17 +22,6 @@ proxies:
   servername: apple.com
   client-fingerprint: chrome
 - type: vless
-  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
-  server: 78.135.73.168
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: tr2.tv-quoralyx.top
-  client-fingerprint: chrome
-- type: vless
   uuid: 25e16692-d097-4e69-9e2d-8415609c1968
   name: '🏳[www.v2nodes.com] vless- #35'
   server: 78.135.73.47
@@ -44,6 +33,27 @@ proxies:
   servername: www.datadoghq.com
   client-fingerprint: chrome
 - type: vless
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  name: '🏳[www.v2nodes.com] vless- #36'
+  server: 151.241.226.201
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
+  server: 78.135.73.168
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: tr2.tv-quoralyx.top
+  client-fingerprint: chrome
+- type: vless
   uuid: a346c521-7a7f-452b-9356-a4893feb5982
   name: '🏳[www.v2nodes.com] vless- #34'
   server: 62.133.63.45
@@ -53,6 +63,17 @@ proxies:
   tls: true
   servername: github.com
   client-fingerprint: safari
+- type: vless
+  uuid: 893845c5-8e4a-48d5-8a85-622f5b7ea950
+  name: '🇹🇷 土耳其 | TUR #1'
+  server: 206.1.101.85
+  port: 42654
+  udp: true
+  network: ws
+  tls: true
+  servername: 206.1.101.85
+  ws-opts:
+    path: /fp=chrome
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
@@ -77,27 +98,6 @@ proxies:
     path: /fp=chromefp=chrome
     headers:
       Host: ccc.010304.xyz
-- type: vless
-  uuid: 893845c5-8e4a-48d5-8a85-622f5b7ea950
-  name: '🇹🇷 土耳其 | TUR #1'
-  server: 206.1.101.85
-  port: 42654
-  udp: true
-  network: ws
-  tls: true
-  servername: 206.1.101.85
-  ws-opts:
-    path: /fp=chrome
-- type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  name: '🏳[www.v2nodes.com] vless- #36'
-  server: 151.241.226.201
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -105,24 +105,24 @@ proxy-groups:
   interval: 300
   proxies:
   - '🏳[www.v2nodes.com] vless- #33'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
   - '🏳[www.v2nodes.com] vless- #35'
+  - '🏳[www.v2nodes.com] vless- #36'
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
   - '🏳[www.v2nodes.com] vless- #34'
+  - '🇹🇷 土耳其 | TUR #1'
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #4'
-  - '🇹🇷 土耳其 | TUR #1'
-  - '🏳[www.v2nodes.com] vless- #36'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🏳[www.v2nodes.com] vless- #33'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
   - '🏳[www.v2nodes.com] vless- #35'
+  - '🏳[www.v2nodes.com] vless- #36'
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
   - '🏳[www.v2nodes.com] vless- #34'
+  - '🇹🇷 土耳其 | TUR #1'
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #4'
-  - '🇹🇷 土耳其 | TUR #1'
-  - '🏳[www.v2nodes.com] vless- #36'
 rules:
 - MATCH,SELECT

@@ -11,19 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: 🇻🇳[www.v2nodes.com] vless-VN-1...
-  server: 77.110.97.245
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  ws-opts:
-    path: /fp=chromefp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- type: vless
   uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
   name: 🇸🇪[www.v2nodes.com] vless-SE-1...
   server: 5.178.109.174
@@ -46,6 +33,39 @@ proxies:
     headers:
       Host: ccc.010304.xyz
 - type: vless
+  uuid: 76ef5ab3-7075-4e23-b445-f3b1bd05d431
+  name: 🇸🇪 瑞典 | SWE 3
+  server: 193.233.252.100
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: swe.qik-fin.uk
+  client-fingerprint: chrome
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: 🇻🇳[www.v2nodes.com] vless-VN-1...
+  server: 77.110.97.245
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /fp=chromefp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: 5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28
+  name: '🇸🇪 瑞典 | SWE #1'
+  server: 132.243.231.14
+  port: 33744
+  udp: true
+  network: tcp
+  tls: true
+  servername: se-5060f39afb.shamanapp.online
+  client-fingerprint: chrome
+- type: vless
   uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
   name: '🇸🇪 瑞典 | SWE #2'
   server: 13.143.180.104
@@ -66,49 +86,29 @@ proxies:
   tls: true
   servername: se-5060f39afb.shamanapp.online
   client-fingerprint: chrome
-- type: vless
-  uuid: 5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28
-  name: '🇸🇪 瑞典 | SWE #1'
-  server: 132.243.231.14
-  port: 33744
-  udp: true
-  network: tcp
-  tls: true
-  servername: se-5060f39afb.shamanapp.online
-  client-fingerprint: chrome
-- type: vless
-  uuid: 76ef5ab3-7075-4e23-b445-f3b1bd05d431
-  name: 🇸🇪 瑞典 | SWE 3
-  server: 193.233.252.100
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: swe.qik-fin.uk
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇻🇳[www.v2nodes.com] vless-VN-1...
   - 🇸🇪[www.v2nodes.com] vless-SE-1...
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #11'
+  - 🇸🇪 瑞典 | SWE 3
+  - 🇻🇳[www.v2nodes.com] vless-VN-1...
+  - '🇸🇪 瑞典 | SWE #1'
   - '🇸🇪 瑞典 | SWE #2'
   - 🇸🇪 瑞典 | SWE
-  - '🇸🇪 瑞典 | SWE #1'
-  - 🇸🇪 瑞典 | SWE 3
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇻🇳[www.v2nodes.com] vless-VN-1...
   - 🇸🇪[www.v2nodes.com] vless-SE-1...
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #11'
+  - 🇸🇪 瑞典 | SWE 3
+  - 🇻🇳[www.v2nodes.com] vless-VN-1...
+  - '🇸🇪 瑞典 | SWE #1'
   - '🇸🇪 瑞典 | SWE #2'
   - 🇸🇪 瑞典 | SWE
-  - '🇸🇪 瑞典 | SWE #1'
-  - 🇸🇪 瑞典 | SWE 3
 rules:
 - MATCH,SELECT

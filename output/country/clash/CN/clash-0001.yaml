@@ -11,26 +11,20 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   alterId: 0
   cipher: auto
-  network: ws
-  name: 🇨🇳CN-113.31.124.147-0084
-  server: 113.31.124.147
-  port: 443
+  network: tcp
+  name: 未知170
+  server: 112.132.215.108
+  port: 50002
   udp: true
-  tls: true
-  servername: lg30.cfcdn3.xyz
-  ws-opts:
-    path: /ray
-    headers:
-      Host: lg30.cfcdn3.xyz
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知132
+  name: 未知159
   server: 162.4.136.79
   port: 443
   udp: true
@@ -40,36 +34,19 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
-- type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇨🇳CN-106.75.104.152-0083
-  server: 106.75.104.152
-  port: 443
-  udp: true
-  tls: true
-  servername: lg30.cfcdn3.xyz
-  ws-opts:
-    path: /ray
-    headers:
-      Host: lg30.cfcdn3.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇳CN-113.31.124.147-0084
-  - 未知132
-  - 🇨🇳CN-106.75.104.152-0083
+  - 未知170
+  - 未知159
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇨🇳CN-113.31.124.147-0084
-  - 未知132
-  - 🇨🇳CN-106.75.104.152-0083
+  - 未知170
+  - 未知159
 rules:
 - MATCH,SELECT

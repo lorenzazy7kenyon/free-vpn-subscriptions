@@ -10,28 +10,16 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: humanity
-  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #10'
-  server: 212.183.88.136
-  port: 443
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
 - type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: '🇦🇹 奥地利 | AUT #1'
-  server: 50.7.36.28
+  uuid: 46c16b68-2553-4e5e-8176-f63d6bf6ec0c
+  name: 🇦🇹[www.v2nodes.com] vless-AT-1...
+  server: 94.228.162.222
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: at-new-ded.failspace.top
+  servername: vena.solomon-planet.ru
   client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
@@ -39,13 +27,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #10'
-  - '🇦🇹 奥地利 | AUT #1'
+  - 🇦🇹[www.v2nodes.com] vless-AT-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #10'
-  - '🇦🇹 奥地利 | AUT #1'
+  - 🇦🇹[www.v2nodes.com] vless-AT-1...
 rules:
 - MATCH,SELECT

@@ -28,13 +28,16 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇮🇹 意大利 | ITA #1'
-  server: 202.50.253.36
-  port: 19999
+- type: vless
+  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
+  name: '🇮🇹[www.v2nodes.com] vless-IT-1... #2'
+  server: 57.131.38.163
+  port: 2053
   udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -52,8 +55,8 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇺🇸 美国 | USA #8'
-  server: 202.50.253.72
+  name: '🏳[www.v2nodes.com] ss- #7'
+  server: 202.50.253.27
   port: 19999
   udp: true
 - type: vless
@@ -67,13 +70,6 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #7'
-  server: 202.50.253.27
-  port: 19999
-  udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -91,15 +87,8 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇮🇹 意大利 | ITA #2'
-  server: 202.50.253.45
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇮🇹 意大利 | ITA #4'
-  server: 202.50.253.90
+  name: '🇺🇸 美国 | USA #8'
+  server: 202.50.253.72
   port: 19999
   udp: true
 - type: ss
@@ -112,20 +101,31 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇮🇹 意大利 | ITA #2'
+  server: 202.50.253.45
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇮🇹 意大利 | ITA #1'
+  server: 202.50.253.36
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   name: '🇮🇹 意大利 | ITA #3'
   server: 202.50.253.81
   port: 19999
   udp: true
-- type: vless
-  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
-  name: '🇮🇹[www.v2nodes.com] vless-IT-1... #2'
-  server: 57.131.38.163
-  port: 2053
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇮🇹 意大利 | ITA #4'
+  server: 202.50.253.90
+  port: 19999
   udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -134,37 +134,37 @@ proxy-groups:
   proxies:
   - '🏳[www.v2nodes.com] ss- #8'
   - '🇮🇹[www.v2nodes.com] vless-IT-1... #1'
-  - '🇮🇹 意大利 | ITA #1'
+  - '🇮🇹[www.v2nodes.com] vless-IT-1... #2'
   - 🇮🇹[www.v2nodes.com] ss-IT-1597...
   - 🇮🇹[www.v2nodes.com] ss-IT-1602...
-  - '🇺🇸 美国 | USA #8'
-  - 🇮🇹[www.v2nodes.com] vless-IT-1...
   - '🏳[www.v2nodes.com] ss- #7'
+  - 🇮🇹[www.v2nodes.com] vless-IT-1...
   - '🏳[www.v2nodes.com] ss- #4'
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #1'
-  - '🇮🇹 意大利 | ITA #2'
-  - '🇮🇹 意大利 | ITA #4'
+  - '🇺🇸 美国 | USA #8'
   - '🇮🇹 意大利 | ITA #5'
+  - '🇮🇹 意大利 | ITA #2'
+  - '🇮🇹 意大利 | ITA #1'
   - '🇮🇹 意大利 | ITA #3'
-  - '🇮🇹[www.v2nodes.com] vless-IT-1... #2'
+  - '🇮🇹 意大利 | ITA #4'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🏳[www.v2nodes.com] ss- #8'
   - '🇮🇹[www.v2nodes.com] vless-IT-1... #1'
-  - '🇮🇹 意大利 | ITA #1'
+  - '🇮🇹[www.v2nodes.com] vless-IT-1... #2'
   - 🇮🇹[www.v2nodes.com] ss-IT-1597...
   - 🇮🇹[www.v2nodes.com] ss-IT-1602...
-  - '🇺🇸 美国 | USA #8'
-  - 🇮🇹[www.v2nodes.com] vless-IT-1...
   - '🏳[www.v2nodes.com] ss- #7'
+  - 🇮🇹[www.v2nodes.com] vless-IT-1...
   - '🏳[www.v2nodes.com] ss- #4'
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #1'
-  - '🇮🇹 意大利 | ITA #2'
-  - '🇮🇹 意大利 | ITA #4'
+  - '🇺🇸 美国 | USA #8'
   - '🇮🇹 意大利 | ITA #5'
+  - '🇮🇹 意大利 | ITA #2'
+  - '🇮🇹 意大利 | ITA #1'
   - '🇮🇹 意大利 | ITA #3'
-  - '🇮🇹[www.v2nodes.com] vless-IT-1... #2'
+  - '🇮🇹 意大利 | ITA #4'
 rules:
 - MATCH,SELECT
