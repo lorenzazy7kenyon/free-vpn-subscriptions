@@ -17,17 +17,6 @@ proxies:
   port: 443
   udp: true
   sni: connectwithemployerstohireyouridealteam.com
-- type: vless
-  uuid: 36e89875-9c53-482b-bc41-d3890e9da176
-  name: '🏳[www.v2nodes.com] vless- #1'
-  server: 51.161.204.244
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -35,12 +24,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇦🇺[www.v2nodes.com] trojan-AU-...
-  - '🏳[www.v2nodes.com] vless- #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇦🇺[www.v2nodes.com] trojan-AU-...
-  - '🏳[www.v2nodes.com] vless- #1'
 rules:
 - MATCH,SELECT

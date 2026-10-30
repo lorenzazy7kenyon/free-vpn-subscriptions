@@ -10,13 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: G9ZuLN5DE9qqouTZwYUcvYsDJx8gyL1nCu3N7yRZFjPmYKhzSi8GkpVuexmTHAz2uvcErKkex1K2ceR2GH3L444HRNnN1YpP
-  name: 🇺🇦[www.v2nodes.com] ss-UA-1603...
-  server: 104.253.216.227
-  port: 49917
-  udp: true
 - type: vless
   uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
   name: '🏳[www.v2nodes.com] vless- #23'
@@ -34,13 +27,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇦[www.v2nodes.com] ss-UA-1603...
   - '🏳[www.v2nodes.com] vless- #23'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇺🇦[www.v2nodes.com] ss-UA-1603...
   - '🏳[www.v2nodes.com] vless- #23'
 rules:
 - MATCH,SELECT

@@ -10,6 +10,17 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
+  name: 🇨🇭[www.v2nodes.com] vless-CH-1...
+  server: 45.90.59.15
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
@@ -29,15 +40,14 @@ proxies:
   servername: twitch.tv
   client-fingerprint: firefox
 - type: vless
-  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
-  name: 🇨🇭[www.v2nodes.com] vless-CH-1...
-  server: 45.90.59.15
-  port: 443
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  server: 208.69.78.217
+  port: 2053
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.cloudflare.com
+  servername: www.apple.com
   client-fingerprint: chrome
 - type: vless
   uuid: 054362fb-e485-4a3f-9568-4c5b0f60e074
@@ -49,35 +59,25 @@ proxies:
   tls: true
   servername: swz.proxyplankton.ru
   client-fingerprint: firefox
-- type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  server: 208.69.78.217
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇨🇭[www.v2nodes.com] vless-CH-1...
   - 🇨🇭[www.v2nodes.com] ss-CH-1573...
   - '🏳[www.v2nodes.com] vless- #5'
-  - 🇨🇭[www.v2nodes.com] vless-CH-1...
-  - 🇷🇺[www.v2nodes.com] vless-RU-1...
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - 🇷🇺[www.v2nodes.com] vless-RU-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇨🇭[www.v2nodes.com] vless-CH-1...
   - 🇨🇭[www.v2nodes.com] ss-CH-1573...
   - '🏳[www.v2nodes.com] vless- #5'
-  - 🇨🇭[www.v2nodes.com] vless-CH-1...
-  - 🇷🇺[www.v2nodes.com] vless-RU-1...
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - 🇷🇺[www.v2nodes.com] vless-RU-1...
 rules:
 - MATCH,SELECT

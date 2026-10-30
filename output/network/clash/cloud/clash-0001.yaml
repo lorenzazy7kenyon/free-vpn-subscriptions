@@ -10,15 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知30
-  server: 82.152.197.167
-  port: 20003
-  udp: true
 - type: vless
   uuid: c6362720-0931-4b91-b187-d8ecf3149734
   name: '🏳[www.v2nodes.com] vless- #11'
@@ -26,6 +17,15 @@ proxies:
   port: 10002
   udp: true
   network: tcp
+- type: vmess
+  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知104
+  server: 82.152.197.167
+  port: 20004
+  udp: true
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
@@ -50,16 +50,16 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知30
   - '🏳[www.v2nodes.com] vless- #11'
+  - 未知104
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知30
   - '🏳[www.v2nodes.com] vless- #11'
+  - 未知104
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
 rules:

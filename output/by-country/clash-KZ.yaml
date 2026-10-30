@@ -21,16 +21,6 @@ proxies:
   servername: yahoo.com
   client-fingerprint: chrome
 - type: vless
-  uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
-  name: 🇰🇿[www.v2nodes.com] vless-KZ-1...
-  server: 46.8.43.125
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: kz-central.v8x2b.lol
-  client-fingerprint: chrome
-- type: vless
   uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
   name: '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
   server: 109.248.170.119
@@ -40,6 +30,37 @@ proxies:
   tls: true
   servername: yahoo.com
   client-fingerprint: chrome
+- type: vless
+  uuid: 7b22dce8-7ebd-425b-8ca4-7b6190321985
+  name: 🇰🇿 哈萨克斯坦 | KAZ
+  server: 109.248.198.219
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: a.kz-1.bnc-gt.co.uk
+  client-fingerprint: qq
+- type: vless
+  uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
+  name: 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  server: 46.8.43.125
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: kz-central.v8x2b.lol
+  client-fingerprint: chrome
+- type: vmess
+  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知157
+  server: 38.107.234.57
+  port: 80
+  udp: true
+  ws-opts:
+    path: /vmess/
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -47,14 +68,18 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇰🇿[www.v2nodes.com] vless-KZ-1... #2'
-  - 🇰🇿[www.v2nodes.com] vless-KZ-1...
   - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
+  - 🇰🇿 哈萨克斯坦 | KAZ
+  - 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  - 未知157
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇰🇿[www.v2nodes.com] vless-KZ-1... #2'
-  - 🇰🇿[www.v2nodes.com] vless-KZ-1...
   - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
+  - 🇰🇿 哈萨克斯坦 | KAZ
+  - 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  - 未知157
 rules:
 - MATCH,SELECT

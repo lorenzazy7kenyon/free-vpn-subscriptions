@@ -17,6 +17,19 @@ proxies:
   port: 443
   udp: true
   sni: exploreeducationsectoropportunitiestodayandadvancecareers.com
+- type: vless
+  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+  name: 🇺🇸 美国 | USA
+  server: 79.182.39.57
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: a0688bt.us4.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 5-9YzvyXcZ4J5Z4OaVTUbxUU2InvnwT17m0XY-Jse1E
+    short-id: 257420d9d430152a
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -24,10 +37,12 @@ proxy-groups:
   interval: 300
   proxies:
   - '🏳[www.v2nodes.com] trojan- #3'
+  - 🇺🇸 美国 | USA
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🏳[www.v2nodes.com] trojan- #3'
+  - 🇺🇸 美国 | USA
 rules:
 - MATCH,SELECT

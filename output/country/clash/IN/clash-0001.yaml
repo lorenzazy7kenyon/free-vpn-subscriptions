@@ -11,6 +11,16 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
+  server: 194.61.31.126
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   server: 13.140.56.100
@@ -21,29 +31,6 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
-- type: vless
-  uuid: 5e679ccd-1586-4d5f-b87b-48251046cad8
-  name: 🇮🇳 印度 | IND
-  server: 5.253.28.240
-  port: 2443
-  udp: true
-  network: grpc
-  tls: true
-  servername: deepl.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: h85e28MxBgNyT9d9cNeOLVtWfHq6cT_1_oxZOTajtTg
-    short-id: 92c32de179e5d908
-- type: vless
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
-  server: 194.61.31.126
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
 - type: vless
   uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
   name: '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
@@ -62,38 +49,23 @@ proxies:
   port: 443
   udp: true
   network: tcp
-- type: vmess
-  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇮🇳IN-152.67.8.205-0283
-  server: 152.67.8.205
-  port: 80
-  udp: true
-  ws-opts:
-    path: /
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
-  - 🇮🇳 印度 | IND
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
   - '🏳[www.v2nodes.com] vless- #13'
-  - 🇮🇳IN-152.67.8.205-0283
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
-  - 🇮🇳 印度 | IND
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
   - '🏳[www.v2nodes.com] vless- #13'
-  - 🇮🇳IN-152.67.8.205-0283
 rules:
 - MATCH,SELECT

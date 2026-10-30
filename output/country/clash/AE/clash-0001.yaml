@@ -11,30 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  server: 84.235.244.108
-  port: 22573
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- type: vless
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
-  server: 147.78.0.186
-  port: 2053
-  udp: true
-  network: ws
-  tls: true
-  servername: free.cndyw.ggff.net
-  ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=chrome
-    headers:
-      Host: free.cndyw.ggff.net
-- type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   server: 147.78.0.186
@@ -43,19 +19,6 @@ proxies:
   network: ws
   ws-opts:
     path: pyip=bpb.yousef.isegaro.comfp=chromesecurity=tls
-    headers:
-      Host: free.cndyw.ggff.net
-- type: vless
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: 🇦🇪[www.v2nodes.com] vless-AE-4...
-  server: 147.78.0.186
-  port: 2053
-  udp: true
-  network: ws
-  tls: true
-  servername: free.cndyw.ggff.net
-  ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=random
     headers:
       Host: free.cndyw.ggff.net
 - type: vless
@@ -69,6 +32,19 @@ proxies:
     path: /vless
     headers:
       Host: 95.174.68.188
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: 🇦🇪[www.v2nodes.com] vless-AE-4...
+  server: 147.78.0.186
+  port: 2053
+  udp: true
+  network: ws
+  tls: true
+  servername: free.cndyw.ggff.net
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=random
+    headers:
+      Host: free.cndyw.ggff.net
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -76,18 +52,14 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇦🇪[www.v2nodes.com] vless-AE-4...
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
+  - 🇦🇪[www.v2nodes.com] vless-AE-4...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇦🇪[www.v2nodes.com] vless-AE-4...
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
+  - 🇦🇪[www.v2nodes.com] vless-AE-4...
 rules:
 - MATCH,SELECT
