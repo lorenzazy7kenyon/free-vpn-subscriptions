@@ -23,6 +23,13 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
+- type: trojan
+  password: 5931134d1cde66bf83a54acdfebe7ab2
+  name: 🇲🇾[www.v2nodes.com] trojan-MY-...
+  server: 47.250.84.25
+  port: 443
+  udp: true
+  sni: 47.250.84.25
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: '🇭🇺[www.v2nodes.com] vless-HU-1... #1'
@@ -34,14 +41,6 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: ccc.010304.xyz
-- type: trojan
-  password: 5931134d1cde66bf83a54acdfebe7ab2
-  name: 🇲🇾[www.v2nodes.com] trojan-MY-...
-  server: 47.250.84.25
-  port: 443
-  udp: true
-  sni: moltbot.doctoroyy.net
-  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -49,14 +48,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
-  - '🇭🇺[www.v2nodes.com] vless-HU-1... #1'
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
+  - '🇭🇺[www.v2nodes.com] vless-HU-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇲🇾[www.v2nodes.com] vless-MY-5...
-  - '🇭🇺[www.v2nodes.com] vless-HU-1... #1'
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
+  - '🇭🇺[www.v2nodes.com] vless-HU-1... #1'
 rules:
 - MATCH,SELECT

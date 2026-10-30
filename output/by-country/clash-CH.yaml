@@ -11,16 +11,15 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
-  name: 🇨🇭[www.v2nodes.com] vless-CH-1...
-  server: 45.90.59.15
+  uuid: 054362fb-e485-4a3f-9568-4c5b0f60e074
+  name: 🇷🇺[www.v2nodes.com] vless-RU-1...
+  server: 149.33.15.213
   port: 443
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  servername: swz.proxyplankton.ru
+  client-fingerprint: firefox
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
@@ -29,8 +28,19 @@ proxies:
   port: 8388
   udp: true
 - type: vless
+  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
+  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  server: 45.90.59.15
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: vless
   uuid: f5e70ce3-cfb4-4df1-b25c-d19bfae627c0
-  name: '🏳[www.v2nodes.com] vless- #5'
+  name: 🇨🇭[www.v2nodes.com] vless-CH-1...
   server: 45.90.57.119
   port: 8443
   udp: true
@@ -41,7 +51,7 @@ proxies:
   client-fingerprint: firefox
 - type: vless
   uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
   server: 208.69.78.217
   port: 2053
   udp: true
@@ -49,35 +59,25 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: vless
-  uuid: 054362fb-e485-4a3f-9568-4c5b0f60e074
-  name: 🇷🇺[www.v2nodes.com] vless-RU-1...
-  server: 149.33.15.213
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: swz.proxyplankton.ru
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇭[www.v2nodes.com] vless-CH-1...
-  - 🇨🇭[www.v2nodes.com] ss-CH-1573...
-  - '🏳[www.v2nodes.com] vless- #5'
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
   - 🇷🇺[www.v2nodes.com] vless-RU-1...
+  - 🇨🇭[www.v2nodes.com] ss-CH-1573...
+  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - 🇨🇭[www.v2nodes.com] vless-CH-1...
+  - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇨🇭[www.v2nodes.com] vless-CH-1...
-  - 🇨🇭[www.v2nodes.com] ss-CH-1573...
-  - '🏳[www.v2nodes.com] vless- #5'
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
   - 🇷🇺[www.v2nodes.com] vless-RU-1...
+  - 🇨🇭[www.v2nodes.com] ss-CH-1573...
+  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - 🇨🇭[www.v2nodes.com] vless-CH-1...
+  - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
 rules:
 - MATCH,SELECT

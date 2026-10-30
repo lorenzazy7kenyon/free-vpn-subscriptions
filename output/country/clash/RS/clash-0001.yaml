@@ -11,89 +11,29 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 97532b08-357e-4140-a6f0-8e07f2ed3327
-  name: EPODONIOS
-  server: 38.180.100.80
+  uuid: b782eda8-7846-437c-ab93-07c3476c2887
+  name: '🇯🇵 日本 | JPN #5'
+  server: 178.208.86.182
   port: 443
   udp: true
   network: ws
   tls: true
-  servername: yf.962456.xyz
-  client-fingerprint: chrome
+  servername: jp-osa.862400.xyz
   ws-opts:
-    path: /proxyip=kr.william.us.ci
+    path: /announcement?ed=2048fp=random
     headers:
-      Host: yf.962456.xyz
-- type: vless
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  name: EPODONIOS
-  server: 150.40.126.18
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: rs1.univesalsrv.com
-  reality-opts:
-    public-key: upIzyaSbVz2ZK6KfGtXmPl_-sCwn8XLDyFDH5CsL9iY
-    short-id: ed0cd5cc2e26e6e7
-- type: vless
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  name: EPODONIOS
-  server: 150.40.126.19
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: rs2.univesalsrv.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: tL16MVY08r-7YDXb1_gxuBBWInpSFp97ZLJ_ax3R2iE
-    short-id: 1469af2040b7c323
-- type: vless
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  name: EPODONIOS
-  server: 150.40.126.22
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: rs4.univesalsrv.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: sXsJ4ET-50TYqlhKZf03nPQr2JIy1F0D4m6lOsI0cAs
-    short-id: 861ac7d66953e55f
-- type: vless
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  name: EPODONIOS
-  server: 150.40.126.24
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: rs5.univesalsrv.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: X8mPYnsoTd8QCnvFZKSy7VvpSn_nrt_NWJkCUJhFCyE
-    short-id: 4872856d5489c37d
+      Host: jp-osa.862400.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - '🇯🇵 日本 | JPN #5'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
-  - EPODONIOS
+  - '🇯🇵 日本 | JPN #5'
 rules:
 - MATCH,SELECT

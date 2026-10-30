@@ -1,6 +1,14 @@
 {
   "outbounds": [
     {
+      "method": "chacha20-ietf-poly1305",
+      "password": "cZGr8nLHdf+FE5ZAw0Y/Rzsml4AyikGL481Pg7eBpsI=",
+      "server": "130.49.189.158",
+      "server_port": 43558,
+      "tag": "🇦🇱[www.v2nodes.com] ss-AL-1490...",
+      "type": "ss"
+    },
+    {
       "server": "89.125.139.115",
       "server_port": 443,
       "tag": "🇦🇱[www.v2nodes.com] vless-AL-1...",
@@ -15,18 +23,30 @@
       "uuid": "04c808e2-0b59-47b0-a54b-32fc7ef1c902"
     },
     {
-      "method": "chacha20-ietf-poly1305",
-      "password": "cZGr8nLHdf+FE5ZAw0Y/Rzsml4AyikGL481Pg7eBpsI=",
-      "server": "130.49.189.158",
-      "server_port": 43558,
-      "tag": "🇦🇱[www.v2nodes.com] ss-AL-1490...",
-      "type": "ss"
+      "server": "91.239.6.47",
+      "server_port": 443,
+      "tag": "🇯🇵 日本 | JPN #9",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "jp-osa.862400.xyz"
+      },
+      "transport": {
+        "headers": {
+          "Host": "jp-osa.862400.xyz"
+        },
+        "path": "/announcement?ed=2048fp=random",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "b782eda8-7846-437c-ab93-07c3476c2887"
     },
     {
       "interval": "5m",
       "outbounds": [
+        "🇦🇱[www.v2nodes.com] ss-AL-1490...",
         "🇦🇱[www.v2nodes.com] vless-AL-1...",
-        "🇦🇱[www.v2nodes.com] ss-AL-1490..."
+        "🇯🇵 日本 | JPN #9"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -35,8 +55,9 @@
     {
       "outbounds": [
         "auto",
+        "🇦🇱[www.v2nodes.com] ss-AL-1490...",
         "🇦🇱[www.v2nodes.com] vless-AL-1...",
-        "🇦🇱[www.v2nodes.com] ss-AL-1490..."
+        "🇯🇵 日本 | JPN #9"
       ],
       "tag": "select",
       "type": "selector"

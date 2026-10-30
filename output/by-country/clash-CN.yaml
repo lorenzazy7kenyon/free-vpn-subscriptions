@@ -30,17 +30,6 @@ proxies:
   udp: true
   ws-opts:
     path: /
-- type: vmess
-  uuid: 2b910c43-51e3-4b15-9be8-b658106ba35e
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知150
-  server: 120.48.133.162
-  port: 10086
-  udp: true
-  ws-opts:
-    path: /
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -49,13 +38,11 @@ proxy-groups:
   proxies:
   - 🇨🇳_CN_中国
   - 🇨🇳_CN_中国
-  - 未知150
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇨🇳_CN_中国
   - 🇨🇳_CN_中国
-  - 未知150
 rules:
 - MATCH,SELECT

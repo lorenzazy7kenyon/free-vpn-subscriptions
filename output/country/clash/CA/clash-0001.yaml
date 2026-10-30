@@ -11,12 +11,78 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  name: '🏳[www.v2nodes.com] vless- #19'
-  server: 104.16.10.9
+  uuid: 22424ee2-6fe3-42ca-9749-6d4c5a8acc82
+  name: 🇯🇵[www.v2nodes.com] vless-JP
+  server: 188.114.98.0
   port: 443
   udp: true
-  network: tcp
+  network: ws
+  tls: true
+  servername: tn1r.eu.cc
+  ws-opts:
+    path: /id-pusatfp=chrome
+    headers:
+      Host: tn1r.eu.cc
+- type: trojan
+  password: humanity
+  name: '🇳🇱[www.v2nodes.com] trojan-NL-... #9'
+  server: 172.66.40.99
+  port: 443
+  udp: true
+  sni: www.trusteeforward.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.trusteeforward.com
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇸🇬 新加坡 | SGP #3'
+  server: 104.18.41.86
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- type: trojan
+  password: humanity
+  name: 🇺🇸 美国 | USA 2
+  server: 162.159.91.211
+  port: 443
+  udp: true
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: 🇸🇬[www.v2nodes.com] vless-SG
+  server: 172.64.152.241
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=chromefp=chromesecurity=tls
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  name: '🇸🇬[www.v2nodes.com] vless-SG-9... #1'
+  server: 172.64.150.28
+  port: 2082
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
 - type: vless
   uuid: bdf38176-48e9-40f1-9d1c-d501c333b464
   name: '🇩🇪 德国 | DEU #11'
@@ -40,101 +106,131 @@ proxies:
     path: /assignment
     headers:
       Host: www.pleadcourt.org
+- type: vless
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  name: 🇺🇸 美国 | USA
+  server: 104.26.13.54
+  port: 8080
+  udp: true
+  network: ws
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
 - type: vmess
-  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知4
-  server: 104.21.83.108
-  port: 443
+  name: 🏁RELAY-104.21.57.84-0192
+  server: 104.21.57.84
+  port: 8443
   udp: true
   tls: true
-  servername: hms02.fxiaomi.sbs
+  servername: v2ray1.dozapp.xyz
   ws-opts:
-    path: /link
+    path: /
     headers:
-      Host: hms02.fxiaomi.sbs
+      Host: v2ray1.dozapp.xyz
 - type: vmess
-  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知6
-  server: 104.21.228.40
+  name: 🏁RELAY-104.17.147.222-0195
+  server: 104.17.147.222
   port: 80
   udp: true
   ws-opts:
     path: /
     headers:
-      Host: a.prapt4.ir
+      Host: vmess.lbw666.dpdns.org
 - type: vmess
-  uuid: ac251237-576f-40c8-a543-554960c958b1
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知107
-  server: 162.159.130.234
-  port: 2083
+  name: 🏁RELAY-172.67.187.145-0196
+  server: 172.67.187.145
+  port: 80
   udp: true
-  tls: true
-  servername: cdn.sfacg.uk
   ws-opts:
-    path: /or3
+    path: /
     headers:
-      Host: or3.sfacg.uk
+      Host: vmess.lbw666.dpdns.org
 - type: vmess
-  uuid: 39cec18f-a439-427c-9a4e-aeb6fcdf6f53
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知151
-  server: 104.21.94.64
-  port: 443
+  name: 未知6 547.0KB/s
+  server: 172.64.80.1
+  port: 8443
   udp: true
   tls: true
-  servername: linja05.hwcar.sbs
+  servername: v2ray1.dozapp.xyz
   ws-opts:
-    path: /linkws
+    path: /lMnsZUN4/
     headers:
-      Host: linja05.hwcar.sbs
+      Host: v2ray1.dozapp.xyz
+- type: vmess
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知12 323.7KB/s
+  server: 104.17.77.77
+  port: 8443
+  udp: true
+  tls: true
+  servername: v2ray1.dozapp.xyz
+  ws-opts:
+    path: /lMnsZUN4/
+    headers:
+      Host: v2ray1.dozapp.xyz
+- type: trojan
+  password: humanity
+  name: 未知87
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: //assignment
+    headers:
+      Host: www.calmlunch.com
+- type: vmess
+  uuid: 80c6a4e4-3b99-4ae8-9681-c24d551e444d
+  alterId: 0
+  cipher: auto
+  network: httpupgrade
+  name: 未知122
+  server: 172.66.44.97
+  port: 2052
+  udp: true
+- type: vmess
+  uuid: c5965d47-45d6-45af-b619-3b2a6bf896a2
+  alterId: 0
+  cipher: auto
+  network: httpupgrade
+  name: 未知127
+  server: 188.114.96.19
+  port: 80
+  udp: true
 - type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #6'
-  server: 104.21.221.158
+  uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+  name: '🏳[www.v2nodes.com] vless- #17'
+  server: 104.21.70.21
   port: 443
   udp: true
   network: ws
   tls: true
-  servername: ccc.010304.xyz
+  servername: nautica-cff.kloningstrife002.workers.dev
   ws-opts:
-    path: /fp=chromefp=unsafe
+    path: /138.2.74.219-28616fp=unsafe
     headers:
-      Host: ccc.010304.xyz
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: 🇸🇬[www.v2nodes.com] vless-SG
-  server: 172.64.152.241
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: /fp=chromefp=chromesecurity=tls
-    headers:
-      Host: ccc.010304.xyz
-- type: vless
-  uuid: 22424ee2-6fe3-42ca-9749-6d4c5a8acc82
-  name: 🇯🇵[www.v2nodes.com] vless-JP
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: tn1r.eu.cc
-  ws-opts:
-    path: /id-pusatfp=chrome
-    headers:
-      Host: tn1r.eu.cc
+      Host: nautica-cff.kloningstrife002.workers.dev
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: 🇵🇱[www.v2nodes.com] vless-PL-4...
@@ -146,6 +242,146 @@ proxies:
   servername: ccc.010304.xyz
   ws-opts:
     path: /fp=unsafefp=unsafe
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: 3e06b1db-2efb-446e-ba2d-68850dfd2f9d
+  name: 🇸🇬[www.v2nodes.com] vless-SG-9...
+  server: 172.67.75.172
+  port: 8080
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: bdfba-cool-tree-b580.v8fz4kbv.workers.dev
+- type: vless
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  name: '🇸🇬[www.v2nodes.com] vless-SG-9... #1'
+  server: 104.18.35.86
+  port: 2082
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+- type: trojan
+  password: humanity
+  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #6'
+  server: 104.19.229.21
+  port: 443
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- type: vless
+  uuid: b782eda8-7846-437c-ab93-07c3476c2887
+  name: '🇯🇵 日本 | JPN #1'
+  server: 104.18.33.121
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: jp-osa.862400.xyz
+  ws-opts:
+    path: /announcement?ed=2048fp=random
+    headers:
+      Host: jp-osa.862400.xyz
+- type: trojan
+  password: '123456'
+  name: 🇸🇬 新加坡 | SGP
+  server: 104.18.35.86
+  port: 2096
+  udp: true
+  sni: 321dfbc6.uir-9i6.pages.dev
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 321dfbc6.uir-9i6.pages.dev
+- type: trojan
+  password: humanity
+  name: 🇳🇱 荷兰 | NLD
+  server: 172.67.203.46
+  port: 443
+  udp: true
+  sni: www.cordweave.com
+  skip-cert-verify: true
+- type: vmess
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🏁RELAY-104.21.7.133-0194
+  server: 104.21.7.133
+  port: 80
+  udp: true
+  ws-opts:
+    path: /
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- type: vmess
+  uuid: 62aa5f80-0328-4004-a375-7f5a59df4022
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知99
+  server: 162.159.129.17
+  port: 80
+  udp: true
+  ws-opts:
+    path: /T,E,L,E,G,R,A,M,X,V,2,R,A,Y
+    headers:
+      Host: rubika.ir.google.com.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.apaspeedtest.netrat.com.eu.com.shw102.ir.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.xn--g28h.dns-dynamic.net.
+- type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  name: '🏳[www.v2nodes.com] vless- #15'
+  server: 104.16.111.102
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: jp3.yohototo.top
+  ws-opts:
+    path: /tyxywsfp=unsafe
+    headers:
+      Host: jp3.yohototo.top
+- type: vmess
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知21
+  server: 104.24.200.94
+  port: 443
+  udp: true
+  tls: true
+  servername: server10.9966338.xyz
+  ws-opts:
+    path: /rthiugoyretdsuigg?ed=2560
+    headers:
+      Host: server10.9966338.xyz
+- type: vless
+  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  name: '🏳[www.v2nodes.com] vless- #25'
+  server: 104.16.10.9
+  port: 443
+  udp: true
+  network: tcp
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🏳[www.v2nodes.com] vless- #4'
+  server: 172.64.152.241
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=chromesecurity=tls
     headers:
       Host: ccc.010304.xyz
 - type: trojan
@@ -161,57 +397,25 @@ proxies:
     path: /
     headers:
       Host: longwanghen.pages.dev
-- type: vless
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  name: 🇺🇸US_8|2.2MB/s
-  server: 104.16.162.89
-  port: 8080
-  udp: true
-  network: ws
-  ws-opts:
-    path: /sg-melbi
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-- type: trojan
-  password: humanity
-  name: 🇳🇱 荷兰 | NLD
-  server: 172.67.203.46
-  port: 443
-  udp: true
-  sni: www.cordweave.com
-  skip-cert-verify: true
-- type: vless
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  name: 🇺🇸 美国 | USA
-  server: 104.26.13.54
-  port: 8080
-  udp: true
-  network: ws
-  ws-opts:
-    path: /sg-melbi
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
 - type: vmess
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  uuid: 2ac4e269-1576-4f41-8c0d-6242e3c5fd8c
   alterId: 0
-  cipher: auto
+  cipher: none
   network: ws
-  name: 🏁RELAY-172.64.229.21-1723
-  server: 172.64.229.21
-  port: 443
+  name: 未知29
+  server: 108.162.192.63
+  port: 80
   udp: true
-  tls: true
-  servername: vmess.lbw666.dpdns.org
   ws-opts:
-    path: /ws?ed=2048
+    path: /vmess
     headers:
-      Host: vmess.lbw666.dpdns.org
+      Host: 1270.0.1.dl3.烏克爾拯救聖誕老人電影.yркельпасаетcанту.фильм.urkel.烏克爾救援.wonkacapitano.buzz.
 - type: vmess
   uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
   alterId: 0
   cipher: auto
   network: ws
-  name: 🏁RELAY-104.21.57.84-1084
+  name: 未知117 570.3KB/s
   server: 104.21.57.84
   port: 8443
   udp: true
@@ -221,179 +425,72 @@ proxies:
     path: /lMnsZUN4/
     headers:
       Host: v2ray1.dozapp.xyz
-- type: vmess
-  uuid: c53b8706-7a23-486c-89c5-4dac1209ef11
-  alterId: 0
-  cipher: none
-  network: ws
-  name: 未知2
-  server: 188.114.97.2
-  port: 80
-  udp: true
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: Be2.vmess.site.
-- type: vmess
-  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知5
-  server: 104.24.200.94
-  port: 443
-  udp: true
-  tls: true
-  servername: server10.9966338.xyz
-  ws-opts:
-    path: /rthiugoyretdsuigg?ed=2560
-    headers:
-      Host: server10.9966338.xyz
-- type: vmess
-  uuid: 2ac4e269-1576-4f41-8c0d-6242e3c5fd8c
-  alterId: 0
-  cipher: none
-  network: ws
-  name: 未知22
-  server: 108.162.192.188
-  port: 80
-  udp: true
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: 1270.0.1.dl3.烏克爾拯救聖誕老人電影.yркельпасаетcанту.фильм.urkel.烏克爾救援.wonkacapitano.buzz.
-- type: trojan
-  password: humanity
-  name: 未知89
-  server: 172.66.40.99
-  port: 443
-  udp: true
-  sni: www.trusteeforward.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.trusteeforward.com
-- type: vmess
-  uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知112
-  server: 104.16.61.8
-  port: 2086
-  udp: true
-  ws-opts:
-    path: /ivideos.sbs/linkws
-    headers:
-      Host: vmess.taxar71054.workers.dev
-- type: vmess
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知118
-  server: 162.159.135.234
-  port: 2083
-  udp: true
-  tls: true
-  servername: cdn.sfacg.uk
-  ws-opts:
-    path: /or3
-    headers:
-      Host: or3.sfacg.uk
-- type: vmess
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知119
-  server: 172.64.146.191
-  port: 2083
-  udp: true
-  tls: true
-  servername: or.521166.xyz
-  ws-opts:
-    path: /or3
-    headers:
-      Host: or.521166.xyz
-- type: vmess
-  uuid: 20e92881-5fb4-4b05-bc77-57929476dc69
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知129
-  server: 198.41.208.172
-  port: 443
-  udp: true
-  tls: true
-  servername: sg-gcore-2.sharecentre.online
-  ws-opts:
-    path: /shirker
-    headers:
-      Host: sg-gcore-2.sharecentre.online
-- type: vmess
-  uuid: 1c3fb1c0-1204-49db-b842-f72d50f014c1
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知136
-  server: 172.66.130.130
-  port: 443
-  udp: true
-  tls: true
-  servername: my.lovehk.xyz
-  ws-opts:
-    path: /KualaLumpur1
-    headers:
-      Host: my.lovehk.xyz
-- type: vmess
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知161
-  server: 172.67.187.145
-  port: 80
-  udp: true
-  ws-opts:
-    path: /ws
-    headers:
-      Host: vmess.lbw666.dpdns.org
 - type: vless
-  uuid: 3e06b1db-2efb-446e-ba2d-68850dfd2f9d
-  name: 🇸🇬[www.v2nodes.com] vless-SG-9...
-  server: 172.67.75.172
-  port: 8080
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
+  server: 173.245.49.30
+  port: 8880
   udp: true
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: bdfba-cool-tree-b580.v8fz4kbv.workers.dev
-- type: vless
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  name: '🇸🇬[www.v2nodes.com] vless-SG-9... #1'
-  server: 172.64.150.28
-  port: 2082
-  udp: true
+      Host: vms.lifetime36.workers.dev
+- type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
   network: ws
-  ws-opts:
-    path: /fp
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-- type: trojan
-  password: humanity
-  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #8'
-  server: 104.19.229.21
+  name: 未知118
+  server: 104.16.32.14
   port: 443
   udp: true
-  sni: www.calmlunch.com
-  network: ws
   ws-opts:
-    path: /assignment
+    path: linkvws
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #8'
+  server: 104.21.221.158
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /fp=chromefp=unsafe
     headers:
-      Host: www.calmlunch.com
+      Host: ccc.010304.xyz
+- type: vmess
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🏁RELAY-172.66.203.67-0193
+  server: 172.66.203.67
+  port: 443
+  udp: true
+  tls: true
+  servername: vmess.lbw666.dpdns.org
+  ws-opts:
+    path: /
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知67
+  server: 158.51.123.42
+  port: 22324
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇨🇦CA-149.22.95.183-0100
+  server: 149.22.95.183
+  port: 443
+  udp: true
 - type: vless
   uuid: ca52e2b6-fb9f-4dac-b6dc-49da9923f251
   name: '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
@@ -417,17 +514,17 @@ proxies:
   client-fingerprint: firefox
 - type: ss
   cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
-  name: 🇨🇦[www.v2nodes.com] ss-CA-1538...
-  server: 51.222.12.127
-  port: 445
+  password: Y6R9pAtvxxzmGC
+  name: 🇨🇦[www.v2nodes.com] ss-CA-1558...
+  server: 51.222.200.165
+  port: 5000
   udp: true
 - type: ss
   cipher: aes-256-gcm
-  password: cdBIDV42DCwnfIN
-  name: 🇨🇦[www.v2nodes.com] ss-CA-1559...
-  server: 51.79.85.185
-  port: 8118
+  password: kDWvXYZoTBcGkC4
+  name: 🏳[www.v2nodes.com] ss-
+  server: 51.222.136.236
+  port: 8882
   udp: true
 - type: ss
   cipher: aes-256-gcm
@@ -438,13 +535,6 @@ proxies:
   udp: true
 - type: ss
   cipher: aes-256-gcm
-  password: cdBIDV42DCwnfIN
-  name: 🇨🇦[www.v2nodes.com] ss-CA-1545...
-  server: 51.79.64.198
-  port: 8119
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
   password: kDWvXYZoTBcGkC4
   name: '🇨🇦[www.v2nodes.com] ss-CA-1545... #1'
   server: 51.79.49.116
@@ -452,17 +542,24 @@ proxies:
   udp: true
 - type: ss
   cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  name: 🇨🇦[www.v2nodes.com] ss-CA-1558...
-  server: 51.222.200.165
-  port: 5000
+  password: zDNVedRFPQexG9v
+  name: 🇨🇦[www.v2nodes.com] ss-CA-1538...
+  server: 51.222.12.127
+  port: 445
   udp: true
 - type: ss
   cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-  name: 🇨🇦[www.v2nodes.com] ss-CA-1557...
-  server: 51.222.136.236
-  port: 8882
+  password: zDNVedRFPQexG9v
+  name: 🇨🇦[www.v2nodes.com] ss-CA-1559...
+  server: 51.222.141.125
+  port: 445
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: cdBIDV42DCwnfIN
+  name: '🇨🇦[www.v2nodes.com] ss-CA-1559... #1'
+  server: 51.79.85.185
+  port: 8118
   udp: true
 - type: ss
   cipher: aes-256-gcm
@@ -473,24 +570,17 @@ proxies:
   udp: true
 - type: ss
   cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
-  name: 🏳[www.v2nodes.com] ss-
-  server: 51.222.141.125
-  port: 445
+  password: cdBIDV42DCwnfIN
+  name: 🇨🇦[www.v2nodes.com] ss-CA-1545...
+  server: 51.79.64.198
+  port: 8119
   udp: true
 - type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-  name: 🇨🇦CA-137.184.174.93-0196
+  name: 🇨🇦CA-137.184.174.93-0113
   server: 137.184.174.93
   port: 8080
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇨🇦CA-149.22.95.183-0186
-  server: 149.22.95.183
-  port: 443
   udp: true
 proxy-groups:
 - name: AUTO
@@ -498,95 +588,113 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #19'
+  - 🇯🇵[www.v2nodes.com] vless-JP
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #9'
+  - '🇸🇬 新加坡 | SGP #3'
+  - 🇺🇸 美国 | USA 2
+  - 🇸🇬[www.v2nodes.com] vless-SG
+  - '🇸🇬[www.v2nodes.com] vless-SG-9... #1'
   - '🇩🇪 德国 | DEU #11'
   - 🇺🇸 美国 | USA 4
-  - 未知4
-  - 未知6
-  - 未知107
-  - 未知151
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #6'
-  - 🇸🇬[www.v2nodes.com] vless-SG
-  - 🇯🇵[www.v2nodes.com] vless-JP
-  - 🇵🇱[www.v2nodes.com] vless-PL-4...
-  - 🇺🇸 美国 | USA 8
-  - 🇺🇸US_8|2.2MB/s
-  - 🇳🇱 荷兰 | NLD
   - 🇺🇸 美国 | USA
-  - 🏁RELAY-172.64.229.21-1723
-  - 🏁RELAY-104.21.57.84-1084
-  - 未知2
-  - 未知5
-  - 未知22
-  - 未知89
-  - 未知112
-  - 未知118
-  - 未知119
-  - 未知129
-  - 未知136
-  - 未知161
+  - 🏁RELAY-104.21.57.84-0192
+  - 🏁RELAY-104.17.147.222-0195
+  - 🏁RELAY-172.67.187.145-0196
+  - 未知6 547.0KB/s
+  - 未知12 323.7KB/s
+  - 未知87
+  - 未知122
+  - 未知127
+  - '🏳[www.v2nodes.com] vless- #17'
+  - 🇵🇱[www.v2nodes.com] vless-PL-4...
   - 🇸🇬[www.v2nodes.com] vless-SG-9...
   - '🇸🇬[www.v2nodes.com] vless-SG-9... #1'
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #8'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #6'
+  - '🇯🇵 日本 | JPN #1'
+  - 🇸🇬 新加坡 | SGP
+  - 🇳🇱 荷兰 | NLD
+  - 🏁RELAY-104.21.7.133-0194
+  - 未知99
+  - '🏳[www.v2nodes.com] vless- #15'
+  - 未知21
+  - '🏳[www.v2nodes.com] vless- #25'
+  - '🏳[www.v2nodes.com] vless- #4'
+  - 🇺🇸 美国 | USA 8
+  - 未知29
+  - 未知117 570.3KB/s
+  - '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
+  - 未知118
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #8'
+  - 🏁RELAY-172.66.203.67-0193
+  - 未知67
+  - 🇨🇦CA-149.22.95.183-0100
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  - 🇨🇦[www.v2nodes.com] ss-CA-1558...
+  - 🏳[www.v2nodes.com] ss-
+  - 🇨🇦[www.v2nodes.com] ss-CA-1546...
+  - '🇨🇦[www.v2nodes.com] ss-CA-1545... #1'
   - 🇨🇦[www.v2nodes.com] ss-CA-1538...
   - 🇨🇦[www.v2nodes.com] ss-CA-1559...
-  - 🇨🇦[www.v2nodes.com] ss-CA-1546...
-  - 🇨🇦[www.v2nodes.com] ss-CA-1545...
-  - '🇨🇦[www.v2nodes.com] ss-CA-1545... #1'
-  - 🇨🇦[www.v2nodes.com] ss-CA-1558...
-  - 🇨🇦[www.v2nodes.com] ss-CA-1557...
+  - '🇨🇦[www.v2nodes.com] ss-CA-1559... #1'
   - '🇨🇦[www.v2nodes.com] ss-CA-1546... #1'
-  - 🏳[www.v2nodes.com] ss-
-  - 🇨🇦CA-137.184.174.93-0196
-  - 🇨🇦CA-149.22.95.183-0186
+  - 🇨🇦[www.v2nodes.com] ss-CA-1545...
+  - 🇨🇦CA-137.184.174.93-0113
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #19'
+  - 🇯🇵[www.v2nodes.com] vless-JP
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #9'
+  - '🇸🇬 新加坡 | SGP #3'
+  - 🇺🇸 美国 | USA 2
+  - 🇸🇬[www.v2nodes.com] vless-SG
+  - '🇸🇬[www.v2nodes.com] vless-SG-9... #1'
   - '🇩🇪 德国 | DEU #11'
   - 🇺🇸 美国 | USA 4
-  - 未知4
-  - 未知6
-  - 未知107
-  - 未知151
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #6'
-  - 🇸🇬[www.v2nodes.com] vless-SG
-  - 🇯🇵[www.v2nodes.com] vless-JP
-  - 🇵🇱[www.v2nodes.com] vless-PL-4...
-  - 🇺🇸 美国 | USA 8
-  - 🇺🇸US_8|2.2MB/s
-  - 🇳🇱 荷兰 | NLD
   - 🇺🇸 美国 | USA
-  - 🏁RELAY-172.64.229.21-1723
-  - 🏁RELAY-104.21.57.84-1084
-  - 未知2
-  - 未知5
-  - 未知22
-  - 未知89
-  - 未知112
-  - 未知118
-  - 未知119
-  - 未知129
-  - 未知136
-  - 未知161
+  - 🏁RELAY-104.21.57.84-0192
+  - 🏁RELAY-104.17.147.222-0195
+  - 🏁RELAY-172.67.187.145-0196
+  - 未知6 547.0KB/s
+  - 未知12 323.7KB/s
+  - 未知87
+  - 未知122
+  - 未知127
+  - '🏳[www.v2nodes.com] vless- #17'
+  - 🇵🇱[www.v2nodes.com] vless-PL-4...
   - 🇸🇬[www.v2nodes.com] vless-SG-9...
   - '🇸🇬[www.v2nodes.com] vless-SG-9... #1'
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #8'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #6'
+  - '🇯🇵 日本 | JPN #1'
+  - 🇸🇬 新加坡 | SGP
+  - 🇳🇱 荷兰 | NLD
+  - 🏁RELAY-104.21.7.133-0194
+  - 未知99
+  - '🏳[www.v2nodes.com] vless- #15'
+  - 未知21
+  - '🏳[www.v2nodes.com] vless- #25'
+  - '🏳[www.v2nodes.com] vless- #4'
+  - 🇺🇸 美国 | USA 8
+  - 未知29
+  - 未知117 570.3KB/s
+  - '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
+  - 未知118
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #8'
+  - 🏁RELAY-172.66.203.67-0193
+  - 未知67
+  - 🇨🇦CA-149.22.95.183-0100
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  - 🇨🇦[www.v2nodes.com] ss-CA-1558...
+  - 🏳[www.v2nodes.com] ss-
+  - 🇨🇦[www.v2nodes.com] ss-CA-1546...
+  - '🇨🇦[www.v2nodes.com] ss-CA-1545... #1'
   - 🇨🇦[www.v2nodes.com] ss-CA-1538...
   - 🇨🇦[www.v2nodes.com] ss-CA-1559...
-  - 🇨🇦[www.v2nodes.com] ss-CA-1546...
-  - 🇨🇦[www.v2nodes.com] ss-CA-1545...
-  - '🇨🇦[www.v2nodes.com] ss-CA-1545... #1'
-  - 🇨🇦[www.v2nodes.com] ss-CA-1558...
-  - 🇨🇦[www.v2nodes.com] ss-CA-1557...
+  - '🇨🇦[www.v2nodes.com] ss-CA-1559... #1'
   - '🇨🇦[www.v2nodes.com] ss-CA-1546... #1'
-  - 🏳[www.v2nodes.com] ss-
-  - 🇨🇦CA-137.184.174.93-0196
-  - 🇨🇦CA-149.22.95.183-0186
+  - 🇨🇦[www.v2nodes.com] ss-CA-1545...
+  - 🇨🇦CA-137.184.174.93-0113
 rules:
 - MATCH,SELECT
