@@ -11,30 +11,8 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: dbda40e2-25b5-416c-8d35-56d07e8dcdbc
-  name: 🇬🇧GB_1|2.0MB/s
-  server: 92.113.107.120
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: indigostar.click
-  ws-opts:
-    path: /wsfp=chrome
-- type: vless
-  uuid: dbda40e2-25b5-416c-8d35-56d07e8dcdbc
-  name: '🇬🇧 英国 | GBR #2'
-  server: 92.113.107.120
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: indigostar.click
-  ws-opts:
-    path: /wsfp=firefox
-- type: vless
   uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-  name: '🏳[www.v2nodes.com] vless- #38'
+  name: '🏳[www.v2nodes.com] vless- #19'
   server: 213.111.148.137
   port: 443
   udp: true
@@ -49,15 +27,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧GB_1|2.0MB/s
-  - '🇬🇧 英国 | GBR #2'
-  - '🏳[www.v2nodes.com] vless- #38'
+  - '🏳[www.v2nodes.com] vless- #19'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇬🇧GB_1|2.0MB/s
-  - '🇬🇧 英国 | GBR #2'
-  - '🏳[www.v2nodes.com] vless- #38'
+  - '🏳[www.v2nodes.com] vless- #19'
 rules:
 - MATCH,SELECT

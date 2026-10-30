@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  name: '🏳[www.v2nodes.com] vless- #24'
+  name: '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
   server: 46.28.67.55
   port: 443
   udp: true
@@ -21,16 +21,9 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
-  name: 🇷🇴[www.v2nodes.com] ss-RO-1298...
-  server: 154.46.31.106
-  port: 443
-  udp: true
 - type: vless
   uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
-  name: '🏳[www.v2nodes.com] vless- #22'
+  name: '🏳[www.v2nodes.com] vless- #11'
   server: 82.117.255.174
   port: 443
   udp: true
@@ -41,8 +34,15 @@ proxies:
   client-fingerprint: chrome
 - type: ss
   cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
+  name: 🇷🇴[www.v2nodes.com] ss-RO-1298...
+  server: 154.46.31.106
+  port: 443
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
   password: U83u9OGpvSatIUW7LsWffr
-  name: '🏳[www.v2nodes.com] ss- #14'
+  name: 🇷🇴[www.v2nodes.com] ss-RO-1595...
   server: 194.68.44.42
   port: 64546
   udp: true
@@ -52,17 +52,17 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #24'
+  - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
+  - '🏳[www.v2nodes.com] vless- #11'
   - 🇷🇴[www.v2nodes.com] ss-RO-1298...
-  - '🏳[www.v2nodes.com] vless- #22'
-  - '🏳[www.v2nodes.com] ss- #14'
+  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #24'
+  - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
+  - '🏳[www.v2nodes.com] vless- #11'
   - 🇷🇴[www.v2nodes.com] ss-RO-1298...
-  - '🏳[www.v2nodes.com] vless- #22'
-  - '🏳[www.v2nodes.com] ss- #14'
+  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 rules:
 - MATCH,SELECT

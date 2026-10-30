@@ -11,19 +11,42 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 7aec627e-a258-4ded-9fd9-fbd7c024f950
+  uuid: 29d23018-3265-494c-b9fe-e320b619b1e2
   name: '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
-  server: 151.242.85.236
-  port: 443
+  server: 38.22.88.248
+  port: 27509
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: addons.mozilla.org
+  servername: www.suffolk.edu
+  client-fingerprint: chrome
+- type: vmess
+  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: '🇭🇰 香港 | HKG #1'
+  server: 47.244.120.197
+  port: 23026
+  udp: true
+  ws-opts:
+    path: /arki
+    headers:
+      Host: 47.244.120.197
+- type: vless
+  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
+  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #5'
+  server: 195.58.144.56
+  port: 11907
+  udp: true
+  network: tcp
+  tls: true
+  servername: 195.58.144.56
   client-fingerprint: chrome
 - type: trojan
   password: humanity
-  name: '🇳🇱[www.v2nodes.com] trojan-NL-... #2'
+  name: '🇳🇱[www.v2nodes.com] trojan-NL-... #3'
   server: 219.76.13.177
   port: 443
   udp: true
@@ -34,26 +57,20 @@ proxies:
     headers:
       Host: www.pleadcourt.org
 - type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
   alterId: 0
   cipher: auto
-  network: ws
-  name: '🇭🇰 香港 | HKG #1'
-  server: 47.243.153.153
-  port: 443
+  network: http
+  name: '🇭🇰 香港 | HKG #3'
+  server: 47.242.81.94
+  port: 52080
   udp: true
-  tls: true
-  servername: i2psm3knof5qjjix.v.3dns.vip
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: i2psm3knof5qjjix.v.3dns.vip
 - type: vmess
   uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
   alterId: 0
   cipher: auto
   network: ws
-  name: '🇭🇰 香港 | HKG #2'
+  name: '🇭🇰 香港 | HKG #4'
   server: 8.217.254.88
   port: 443
   udp: true
@@ -63,46 +80,25 @@ proxies:
     path: /ws-vmess
     headers:
       Host: 2b9hwy8ocx7q74nm.v.3dns.vip
-- type: vmess
-  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: '🇭🇰 香港 | HKG #5'
-  server: 47.244.120.197
-  port: 36703
-  udp: true
-  ws-opts:
-    path: /arki
-- type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇭🇰 香港 | HKG
-  server: 47.243.65.243
-  port: 443
-  udp: true
-  tls: true
-  servername: lcv8v9l7oyamxxfz.v.3dns.vip
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: lcv8v9l7oyamxxfz.v.3dns.vip
 - type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  name: 🇻🇳 越南 | VNM
-  server: 154.21.203.106
-  port: 51279
+  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
+  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #7'
+  server: 47.238.210.5
+  port: 13779
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.tesla.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
-    short-id: bb82c8
+  servername: tesla.com
+  client-fingerprint: chrome
+- type: vmess
+  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
+  alterId: 0
+  cipher: auto
+  network: http
+  name: 🇭🇰 香港 | HKG
+  server: 47.242.81.94
+  port: 52080
+  udp: true
 - type: vmess
   uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
   alterId: 0
@@ -119,6 +115,30 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
+  name: HK
+  server: 47.243.65.243
+  port: 443
+  udp: true
+  tls: true
+  servername: lcv8v9l7oyamxxfz.v.3dns.vip
+  ws-opts:
+    path: /ws-vmess
+- type: vless
+  uuid: 7aec627e-a258-4ded-9fd9-fbd7c024f950
+  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
+  server: 151.242.85.236
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  network: ws
   name: HK3
   server: 8.210.24.181
   port: 443
@@ -129,49 +149,13 @@ proxies:
     path: /ws-vmess
     headers:
       Host: 6jdvarazgu3qqr6q.v.3dns.vip
-- type: vless
-  uuid: 29d23018-3265-494c-b9fe-e320b619b1e2
-  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #3'
-  server: 38.22.88.248
-  port: 27509
+- type: ss
+  cipher: chacha20-ietf
+  password: asd123456
+  name: 🇭🇰HK-103.141.221.124-5607
+  server: 103.141.221.124
+  port: 8388
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.suffolk.edu
-  client-fingerprint: chrome
-- type: vless
-  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
-  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #7'
-  server: 47.238.210.5
-  port: 13779
-  udp: true
-  network: tcp
-  tls: true
-  servername: tesla.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  name: '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
-  server: 154.21.203.106
-  port: 51279
-  udp: true
-  network: tcp
-- type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇨🇳CN-8.217.13.103-0662
-  server: 8.217.13.103
-  port: 443
-  udp: true
-  tls: true
-  servername: qtkdr8jxe3wefxjm.v.3dns.vip
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: qtkdr8jxe3wefxjm.v.3dns.vip
 - type: ss
   cipher: chacha20-ietf
   password: asd123456
@@ -179,32 +163,6 @@ proxies:
   server: 103.149.182.79
   port: 8388
   udp: true
-- type: vless
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #6'
-  server: 103.148.73.173
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: ty986gfazs.cainiaohub.xyz
-  ws-opts:
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530fp=chrome
-    headers:
-      Host: ty986gfazs.cainiaohub.xyz
-- type: vless
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  name: '🇭🇰 香港 | HKG #4'
-  server: 103.180.20.108
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: ty986gfazs.cainiaohub.xyz
-  ws-opts:
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530fp=chrome
-    headers:
-      Host: ty986gfazs.cainiaohub.xyz
 - type: vmess
   uuid: acc94bf4-94c1-4a08-8b79-9be2b76499b6
   alterId: 0
@@ -221,60 +179,12 @@ proxies:
     headers:
       Host: cc.1808.cf
 - type: vless
-  uuid: 3e3396ce-d6ec-42ee-b854-1dca9fcb2749
-  name: 🇺🇸[www.v2nodes.com] vless-US-1...
-  server: 38.76.180.144
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: www.microsoft.com
-  ws-opts:
-    path: /d4f1a9b2-wsfp=chrome
-    headers:
-      Host: www.microsoft.com
-- type: vless
-  uuid: d98b67d4-024a-4bba-91e2-e6ebece6df11
-  name: 🇭🇰 香港 | HKG
-  server: 38.76.180.144
-  port: 1443
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless-ws
-    headers:
-      Host: 38.76.180.144
-- type: vless
-  uuid: 3e3396ce-d6ec-42ee-b854-1dca9fcb2749
-  name: 🇺🇸 美国 | USA
-  server: 38.76.180.144
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: www.microsoft.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /d4f1a9b2-ws
-    headers:
-      Host: www.microsoft.com
-- type: trojan
-  password: XuMweB2PWs
-  name: '🏳[www.v2nodes.com] trojan- #2'
-  server: 2.27.109.179
-  port: 45464
-  udp: true
-  sni: 2.27.109.179.sslip.io
-- type: vless
-  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
-  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #6'
-  server: 195.58.144.56
-  port: 11907
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  name: '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
+  server: 154.21.203.106
+  port: 51279
   udp: true
   network: tcp
-  tls: true
-  servername: 195.58.144.56
-  client-fingerprint: chrome
 - type: vless
   uuid: d98b67d4-024a-4bba-91e2-e6ebece6df11
   name: 🇭🇰[www.v2nodes.com] vless-HK-1...
@@ -287,41 +197,43 @@ proxies:
     headers:
       Host: 38.76.180.144
 - type: vless
-  uuid: 4a3d18d7-dfbe-4077-986a-6b145e417568
-  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
-  server: 45.39.198.205
-  port: 8443
+  uuid: 3e3396ce-d6ec-42ee-b854-1dca9fcb2749
+  name: 🇺🇸[www.v2nodes.com] vless-US-1...
+  server: 38.76.180.144
+  port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: ws
   tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
+  servername: www.microsoft.com
+  ws-opts:
+    path: /d4f1a9b2-wsfp=chrome
+    headers:
+      Host: www.microsoft.com
+- type: trojan
+  password: XuMweB2PWs
+  name: '🇭🇰[www.v2nodes.com] trojan-HK-... #1'
+  server: 2.27.109.179
+  port: 45464
+  udp: true
+  sni: 2.27.109.179.sslip.io
 - type: vmess
   uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
   alterId: 0
   cipher: auto
   network: ws
-  name: 🇭🇰 香港 | HKG
-  server: 47.76.57.83
+  name: 🇨🇳CN-8.217.13.103-0662
+  server: 8.217.13.103
   port: 443
   udp: true
   tls: true
-  servername: vah4urdzl3jdx5r2.v.3dns.vip
+  servername: qtkdr8jxe3wefxjm.v.3dns.vip
   ws-opts:
     path: /ws-vmess
     headers:
-      Host: vah4urdzl3jdx5r2.v.3dns.vip
-- type: ss
-  cipher: chacha20-ietf
-  password: asd123456
-  name: 🇭🇰HK-103.141.221.124-5607
-  server: 103.141.221.124
-  port: 8388
-  udp: true
+      Host: qtkdr8jxe3wefxjm.v.3dns.vip
 - type: vless
   uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
-  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #4'
+  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #3'
   server: 156.226.168.221
   port: 35193
   udp: true
@@ -337,62 +249,50 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
-  - '🇳🇱[www.v2nodes.com] trojan-NL-... #2'
   - '🇭🇰 香港 | HKG #1'
-  - '🇭🇰 香港 | HKG #2'
-  - '🇭🇰 香港 | HKG #5'
-  - 🇭🇰 香港 | HKG
-  - 🇻🇳 越南 | VNM
-  - 🇨🇳CN-47.244.120.197-5615
-  - HK3
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #3'
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #7'
-  - '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
-  - 🇨🇳CN-8.217.13.103-0662
-  - 🇭🇰HK-103.149.182.79-5609
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #6'
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #5'
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #3'
+  - '🇭🇰 香港 | HKG #3'
   - '🇭🇰 香港 | HKG #4'
-  - 🇭🇰HK-159.100.206.88-0084
-  - 🇺🇸[www.v2nodes.com] vless-US-1...
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #7'
   - 🇭🇰 香港 | HKG
-  - 🇺🇸 美国 | USA
-  - '🏳[www.v2nodes.com] trojan- #2'
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #6'
-  - 🇭🇰[www.v2nodes.com] vless-HK-1...
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
-  - 🇭🇰 香港 | HKG
+  - 🇨🇳CN-47.244.120.197-5615
+  - HK
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
+  - HK3
   - 🇭🇰HK-103.141.221.124-5607
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #4'
+  - 🇭🇰HK-103.149.182.79-5609
+  - 🇭🇰HK-159.100.206.88-0084
+  - '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
+  - 🇭🇰[www.v2nodes.com] vless-HK-1...
+  - 🇺🇸[www.v2nodes.com] vless-US-1...
+  - '🇭🇰[www.v2nodes.com] trojan-HK-... #1'
+  - 🇨🇳CN-8.217.13.103-0662
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #3'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
-  - '🇳🇱[www.v2nodes.com] trojan-NL-... #2'
   - '🇭🇰 香港 | HKG #1'
-  - '🇭🇰 香港 | HKG #2'
-  - '🇭🇰 香港 | HKG #5'
-  - 🇭🇰 香港 | HKG
-  - 🇻🇳 越南 | VNM
-  - 🇨🇳CN-47.244.120.197-5615
-  - HK3
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #3'
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #7'
-  - '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
-  - 🇨🇳CN-8.217.13.103-0662
-  - 🇭🇰HK-103.149.182.79-5609
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #6'
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #5'
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #3'
+  - '🇭🇰 香港 | HKG #3'
   - '🇭🇰 香港 | HKG #4'
-  - 🇭🇰HK-159.100.206.88-0084
-  - 🇺🇸[www.v2nodes.com] vless-US-1...
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #7'
   - 🇭🇰 香港 | HKG
-  - 🇺🇸 美国 | USA
-  - '🏳[www.v2nodes.com] trojan- #2'
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #6'
-  - 🇭🇰[www.v2nodes.com] vless-HK-1...
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
-  - 🇭🇰 香港 | HKG
+  - 🇨🇳CN-47.244.120.197-5615
+  - HK
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
+  - HK3
   - 🇭🇰HK-103.141.221.124-5607
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #4'
+  - 🇭🇰HK-103.149.182.79-5609
+  - 🇭🇰HK-159.100.206.88-0084
+  - '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
+  - 🇭🇰[www.v2nodes.com] vless-HK-1...
+  - 🇺🇸[www.v2nodes.com] vless-US-1...
+  - '🇭🇰[www.v2nodes.com] trojan-HK-... #1'
+  - 🇨🇳CN-8.217.13.103-0662
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #3'
 rules:
 - MATCH,SELECT

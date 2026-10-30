@@ -1,6 +1,28 @@
 {
   "outbounds": [
     {
+      "flow": "xtls-rprx-vision",
+      "server": "31.172.65.4",
+      "server_port": 8443,
+      "tag": "🇸🇪 瑞典 | SWE",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "wRvUAKwcHc4pBNVouIcVjQkVD9aCRR-AmtcFyBV36lU",
+          "short_id": "0e7741edc378622f"
+        },
+        "server_name": "www.bing.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "type": "vless",
+      "uuid": "9c6e83fc-b755-4ad4-9b0a-14b610153d8f"
+    },
+    {
       "server": "5.178.109.174",
       "server_port": 14430,
       "tag": "🇸🇪[www.v2nodes.com] vless-SE-1...",
@@ -15,18 +37,21 @@
       "uuid": "80de563a-cac8-40ea-8cb0-4cb082dd92f9"
     },
     {
-      "server": "77.110.97.245",
-      "server_port": 443,
-      "tag": "🇫🇮[www.v2nodes.com] vless-FI-1... #11",
-      "transport": {
-        "headers": {
-          "Host": "ccc.010304.xyz"
-        },
-        "path": "/fp=chromefp=chromesecurity=tls",
-        "type": "ws"
+      "flow": "xtls-rprx-vision",
+      "server": "31.172.65.4",
+      "server_port": 8443,
+      "tag": "🇸🇪 瑞典 | SWE #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.bing.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
       },
       "type": "vless",
-      "uuid": "d342d11e-d224-4463-b982-532309285094"
+      "uuid": "9c6e83fc-b755-4ad4-9b0a-14b610153d8f"
     },
     {
       "server": "193.233.252.100",
@@ -68,26 +93,10 @@
       "uuid": "d342d11e-d224-4463-b982-532309285094"
     },
     {
-      "server": "132.243.231.14",
-      "server_port": 33744,
-      "tag": "🇸🇪 瑞典 | SWE #1",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "se-5060f39afb.shamanapp.online",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28"
-    },
-    {
-      "flow": "xtls-rprx-vision",
+      "flow": "xtls-rprx-vision-udp443",
       "server": "13.143.180.104",
       "server_port": 443,
-      "tag": "🇸🇪 瑞典 | SWE #2",
+      "tag": "🇫🇮FI_1|2.2MB/s",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -99,6 +108,22 @@
       },
       "type": "vless",
       "uuid": "a0fa7e19-70ec-41e0-b0cc-bcc984d4201a"
+    },
+    {
+      "server": "132.243.231.14",
+      "server_port": 33744,
+      "tag": "🇸🇪 瑞典 | SWE #2",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "se-5060f39afb.shamanapp.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28"
     },
     {
       "server": "132.243.231.14",
@@ -117,15 +142,44 @@
       "uuid": "5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28"
     },
     {
+      "server": "77.110.97.245",
+      "server_port": 443,
+      "tag": "🇫🇮[www.v2nodes.com] vless-FI-1... #11",
+      "transport": {
+        "headers": {
+          "Host": "ccc.010304.xyz"
+        },
+        "path": "/fp=chromefp=chromesecurity=tls",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "d342d11e-d224-4463-b982-532309285094"
+    },
+    {
+      "password": "a0052f4f-4c63-0002-a16f-ab2d5d718cd3",
+      "server": "192.142.23.46",
+      "server_port": 443,
+      "tag": "🇸🇪 瑞典 | SWE #3",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "diffoscope.com"
+      },
+      "type": "hysteria2"
+    },
+    {
       "interval": "5m",
       "outbounds": [
+        "🇸🇪 瑞典 | SWE",
         "🇸🇪[www.v2nodes.com] vless-SE-1...",
-        "🇫🇮[www.v2nodes.com] vless-FI-1... #11",
+        "🇸🇪 瑞典 | SWE #1",
         "🇸🇪 瑞典 | SWE 3",
         "🇻🇳[www.v2nodes.com] vless-VN-1...",
-        "🇸🇪 瑞典 | SWE #1",
+        "🇫🇮FI_1|2.2MB/s",
         "🇸🇪 瑞典 | SWE #2",
-        "🇸🇪 瑞典 | SWE"
+        "🇸🇪 瑞典 | SWE",
+        "🇫🇮[www.v2nodes.com] vless-FI-1... #11",
+        "🇸🇪 瑞典 | SWE #3"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -134,13 +188,16 @@
     {
       "outbounds": [
         "auto",
+        "🇸🇪 瑞典 | SWE",
         "🇸🇪[www.v2nodes.com] vless-SE-1...",
-        "🇫🇮[www.v2nodes.com] vless-FI-1... #11",
+        "🇸🇪 瑞典 | SWE #1",
         "🇸🇪 瑞典 | SWE 3",
         "🇻🇳[www.v2nodes.com] vless-VN-1...",
-        "🇸🇪 瑞典 | SWE #1",
+        "🇫🇮FI_1|2.2MB/s",
         "🇸🇪 瑞典 | SWE #2",
-        "🇸🇪 瑞典 | SWE"
+        "🇸🇪 瑞典 | SWE",
+        "🇫🇮[www.v2nodes.com] vless-FI-1... #11",
+        "🇸🇪 瑞典 | SWE #3"
       ],
       "tag": "select",
       "type": "selector"

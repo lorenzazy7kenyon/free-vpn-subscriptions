@@ -10,9 +10,16 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇦🇺[www.v2nodes.com] trojan-AU-...
+  server: 45.63.30.142
+  port: 443
+  udp: true
+  sni: connectwithemployerstohireyouridealteam.com
 - type: vless
   uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
-  name: '🏳[www.v2nodes.com] vless- #1'
+  name: '🇦🇺[www.v2nodes.com] vless-AU-1... #1'
   server: 51.161.204.242
   port: 443
   udp: true
@@ -21,13 +28,6 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇦🇺[www.v2nodes.com] trojan-AU-...
-  server: 45.63.30.142
-  port: 443
-  udp: true
-  sni: connectwithemployerstohireyouridealteam.com
 - type: vless
   uuid: 36e89875-9c53-482b-bc41-d3890e9da176
   name: 🇦🇺[www.v2nodes.com] vless-AU-1...
@@ -45,15 +45,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #1'
   - 🇦🇺[www.v2nodes.com] trojan-AU-...
+  - '🇦🇺[www.v2nodes.com] vless-AU-1... #1'
   - 🇦🇺[www.v2nodes.com] vless-AU-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #1'
   - 🇦🇺[www.v2nodes.com] trojan-AU-...
+  - '🇦🇺[www.v2nodes.com] vless-AU-1... #1'
   - 🇦🇺[www.v2nodes.com] vless-AU-1...
 rules:
 - MATCH,SELECT
