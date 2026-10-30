@@ -12,35 +12,22 @@ dns:
 proxies:
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇮🇱[www.v2nodes.com] trojan-IL-...
+  name: '🏳[www.v2nodes.com] trojan- #3'
   server: 64.176.163.182
   port: 443
   udp: true
   sni: exploreeducationsectoropportunitiestodayandadvancecareers.com
-  skip-cert-verify: true
-- type: vless
-  uuid: 36fb6650-8a50-42b5-9f66-06538806f32c
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #1'
-  server: 79.182.39.75
-  port: 25362
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.chip.de
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇱[www.v2nodes.com] trojan-IL-...
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #1'
+  - '🏳[www.v2nodes.com] trojan- #3'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇮🇱[www.v2nodes.com] trojan-IL-...
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #1'
+  - '🏳[www.v2nodes.com] trojan- #3'
 rules:
 - MATCH,SELECT

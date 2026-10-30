@@ -11,8 +11,19 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
+  name: '🇦🇹[www.v2nodes.com] vless-AT-1... #1'
+  server: 146.19.143.218
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: tau1.freerunet.online
+  client-fingerprint: qq
+- type: vless
   uuid: abca037b-bee5-41cc-a888-0668e4c66176
-  name: '🇪🇪 爱沙尼亚 | EST #1'
+  name: '🇪🇪 爱沙尼亚 | EST #2'
   server: 31.76.70.90
   port: 443
   udp: true
@@ -26,11 +37,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇪🇪 爱沙尼亚 | EST #1'
+  - '🇦🇹[www.v2nodes.com] vless-AT-1... #1'
+  - '🇪🇪 爱沙尼亚 | EST #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇪🇪 爱沙尼亚 | EST #1'
+  - '🇦🇹[www.v2nodes.com] vless-AT-1... #1'
+  - '🇪🇪 爱沙尼亚 | EST #2'
 rules:
 - MATCH,SELECT

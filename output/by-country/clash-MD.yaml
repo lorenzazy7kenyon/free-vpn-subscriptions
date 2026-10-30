@@ -27,6 +27,19 @@ proxies:
   port: 443
   udp: true
   network: ws
+  tls: true
+  servername: free.cndyw.ggff.net
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=chrome
+    headers:
+      Host: free.cndyw.ggff.net
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: 🇲🇩[www.v2nodes.com] vless-MD-4...
+  server: 185.153.198.86
+  port: 443
+  udp: true
+  network: ws
   ws-opts:
     path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
     headers:
@@ -39,11 +52,13 @@ proxy-groups:
   proxies:
   - 🇷🇺 俄罗斯 | RUS 3
   - 🇲🇩[www.v2nodes.com] vless-MD-4...
+  - 🇲🇩[www.v2nodes.com] vless-MD-4...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 | RUS 3
+  - 🇲🇩[www.v2nodes.com] vless-MD-4...
   - 🇲🇩[www.v2nodes.com] vless-MD-4...
 rules:
 - MATCH,SELECT

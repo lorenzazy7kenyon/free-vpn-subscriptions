@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: trojan
   password: humanity
-  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
+  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #4'
   server: 185.114.72.31
   port: 2053
   udp: true
@@ -22,39 +22,58 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- type: trojan
-  password: humanity
-  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  server: 212.227.144.37
-  port: 8443
-  udp: true
-  sni: www.calmlunch.com
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
   network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇪🇸[www.v2nodes.com] trojan-ES-... #5'
-  server: 66.163.118.166
+  name: 未知107
+  server: 34.175.202.195
   port: 443
   udp: true
-  sni: learn.discovergreatjobsandadvanceyourcareer.com
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇪🇸[www.v2nodes.com] trojan-ES-...
+  name: '🇪🇸[www.v2nodes.com] trojan-ES-... #2'
   server: 66.163.118.62
   port: 443
   udp: true
   sni: 66.163.118.62
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
+  name: 🇪🇸[www.v2nodes.com] trojan-ES-...
+  server: 66.163.118.251
+  port: 443
+  udp: true
+  sni: resources.discovergreatjobsandadvanceyourcareer.com
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🏳[www.v2nodes.com] trojan-
+  server: 66.163.118.166
+  port: 443
+  udp: true
+  sni: learn.discovergreatjobsandadvanceyourcareer.com
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🏳[www.v2nodes.com] trojan- #2'
   server: 66.163.118.244
   port: 443
   udp: true
-  sni: api.discovergreatjobsandadvanceyourcareer.com
+  sni: 66.163.118.244
+- type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知73
+  server: 85.90.217.42
+  port: 22324
+  udp: true
 - type: vless
   uuid: 12c53e32-e589-47d6-b857-e4132294f767
   name: '🇪🇸[www.v2nodes.com] vless-ES-1... #17'
@@ -83,22 +102,26 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - '🇪🇸[www.v2nodes.com] trojan-ES-... #5'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #4'
+  - 未知107
+  - '🇪🇸[www.v2nodes.com] trojan-ES-... #2'
   - 🇪🇸[www.v2nodes.com] trojan-ES-...
-  - '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
+  - 🏳[www.v2nodes.com] trojan-
+  - '🏳[www.v2nodes.com] trojan- #2'
+  - 未知73
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #17'
   - '🏳[www.v2nodes.com] vless- #7'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - '🇪🇸[www.v2nodes.com] trojan-ES-... #5'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #4'
+  - 未知107
+  - '🇪🇸[www.v2nodes.com] trojan-ES-... #2'
   - 🇪🇸[www.v2nodes.com] trojan-ES-...
-  - '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
+  - 🏳[www.v2nodes.com] trojan-
+  - '🏳[www.v2nodes.com] trojan- #2'
+  - 未知73
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #17'
   - '🏳[www.v2nodes.com] vless- #7'
 rules:

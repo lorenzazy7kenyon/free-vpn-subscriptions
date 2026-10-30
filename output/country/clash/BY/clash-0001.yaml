@@ -33,17 +33,6 @@ proxies:
     headers:
       Host: 178.172.227.124
 - type: vless
-  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
-  name: '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
-  server: 95.128.71.79
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 95.128.71.79
-- type: vless
   uuid: 8d42d29a-ed53-4684-a9ff-6b33826149de
   name: '🇵🇱[www.v2nodes.com] vless-PL-1... #6'
   server: 95.130.84.36
@@ -56,6 +45,17 @@ proxies:
     path: /aioproxybot/94.23.144.99-2053fp=unsafe
     headers:
       Host: aio.eth0.dpdns.org
+- type: vless
+  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
+  name: '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  server: 95.128.71.79
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 95.128.71.79
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -64,15 +64,15 @@ proxy-groups:
   proxies:
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #6'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #6'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
 rules:
 - MATCH,SELECT

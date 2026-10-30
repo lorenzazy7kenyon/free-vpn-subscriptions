@@ -10,6 +10,31 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知34
+  server: 185.146.173.59
+  port: 443
+  udp: true
+  tls: true
+  servername: hms02.fxiaomi.sbs
+  ws-opts:
+    path: /link
+    headers:
+      Host: hms02.fxiaomi.sbs
+- type: vless
+  uuid: 76ef5ab3-7075-4e23-b445-f3b1bd05d431
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
+  server: 193.233.252.100
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: swe.qik-fin.uk
+  client-fingerprint: chrome
 - type: vless
   uuid: 9c6e83fc-b755-4ad4-9b0a-14b610153d8f
   name: 🇸🇪 瑞典 | SWE
@@ -26,7 +51,7 @@ proxies:
     short-id: 0e7741edc378622f
 - type: vless
   uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
-  name: 🇸🇪[www.v2nodes.com] vless-SE-1...
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
   server: 5.178.109.174
   port: 14430
   udp: true
@@ -36,53 +61,8 @@ proxies:
     headers:
       Host: 5.178.109.174
 - type: vless
-  uuid: 9c6e83fc-b755-4ad4-9b0a-14b610153d8f
-  name: '🇸🇪 瑞典 | SWE #1'
-  server: 31.172.65.4
-  port: 8443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.bing.com
-  client-fingerprint: qq
-- type: vless
-  uuid: 76ef5ab3-7075-4e23-b445-f3b1bd05d431
-  name: 🇸🇪 瑞典 | SWE 3
-  server: 193.233.252.100
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: swe.qik-fin.uk
-  client-fingerprint: chrome
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: 🇻🇳[www.v2nodes.com] vless-VN-1...
-  server: 77.110.97.245
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  ws-opts:
-    path: /fp=chromefp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- type: vless
-  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
-  name: 🇫🇮FI_1|2.2MB/s
-  server: 13.143.180.104
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision-udp443
-  network: tcp
-  tls: true
-  servername: s12.bsh-net.ru
-  client-fingerprint: firefox
-- type: vless
   uuid: 5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28
-  name: '🇸🇪 瑞典 | SWE #2'
+  name: '🇸🇪 瑞典 | SWE #1'
   server: 132.243.231.14
   port: 33744
   udp: true
@@ -101,19 +81,19 @@ proxies:
   servername: se-5060f39afb.shamanapp.online
   client-fingerprint: chrome
 - type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #11'
-  server: 77.110.97.245
+  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
+  name: '🇸🇪 瑞典 | SWE #2'
+  server: 13.143.180.104
   port: 443
   udp: true
-  network: ws
-  ws-opts:
-    path: /fp=chromefp=chromesecurity=tls
-    headers:
-      Host: ccc.010304.xyz
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: s12.bsh-net.ru
+  client-fingerprint: firefox
 - type: hysteria2
   password: a0052f4f-4c63-0002-a16f-ab2d5d718cd3
-  name: '🇸🇪 瑞典 | SWE #3'
+  name: 🇸🇪 瑞典 | SWE
   server: 192.142.23.46
   port: 443
   udp: true
@@ -125,29 +105,25 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 未知34
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   - 🇸🇪 瑞典 | SWE
-  - 🇸🇪[www.v2nodes.com] vless-SE-1...
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
   - '🇸🇪 瑞典 | SWE #1'
-  - 🇸🇪 瑞典 | SWE 3
-  - 🇻🇳[www.v2nodes.com] vless-VN-1...
-  - 🇫🇮FI_1|2.2MB/s
+  - 🇸🇪 瑞典 | SWE
   - '🇸🇪 瑞典 | SWE #2'
   - 🇸🇪 瑞典 | SWE
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #11'
-  - '🇸🇪 瑞典 | SWE #3'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 未知34
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   - 🇸🇪 瑞典 | SWE
-  - 🇸🇪[www.v2nodes.com] vless-SE-1...
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
   - '🇸🇪 瑞典 | SWE #1'
-  - 🇸🇪 瑞典 | SWE 3
-  - 🇻🇳[www.v2nodes.com] vless-VN-1...
-  - 🇫🇮FI_1|2.2MB/s
+  - 🇸🇪 瑞典 | SWE
   - '🇸🇪 瑞典 | SWE #2'
   - 🇸🇪 瑞典 | SWE
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #11'
-  - '🇸🇪 瑞典 | SWE #3'
 rules:
 - MATCH,SELECT

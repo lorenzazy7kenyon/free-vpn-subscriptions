@@ -11,6 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
+  name: '🏳[www.v2nodes.com] vless- #15'
+  server: 82.117.255.174
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- type: vless
   uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
   name: '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
   server: 46.28.67.55
@@ -20,17 +31,6 @@ proxies:
   network: tcp
   tls: true
   servername: www.cloudflare.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
-  name: '🏳[www.v2nodes.com] vless- #11'
-  server: 82.117.255.174
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
   client-fingerprint: chrome
 - type: ss
   cipher: chacha20-ietf-poly1305
@@ -52,16 +52,16 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🏳[www.v2nodes.com] vless- #15'
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
-  - '🏳[www.v2nodes.com] vless- #11'
   - 🇷🇴[www.v2nodes.com] ss-RO-1298...
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🏳[www.v2nodes.com] vless- #15'
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
-  - '🏳[www.v2nodes.com] vless- #11'
   - 🇷🇴[www.v2nodes.com] ss-RO-1298...
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 rules:

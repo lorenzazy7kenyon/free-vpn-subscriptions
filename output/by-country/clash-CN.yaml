@@ -30,21 +30,6 @@ proxies:
   udp: true
   ws-opts:
     path: /
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知159
-  server: 162.4.136.79
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -53,13 +38,11 @@ proxy-groups:
   proxies:
   - 🇨🇳_CN_中国
   - 🇨🇳_CN_中国
-  - 未知159
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇨🇳_CN_中国
   - 🇨🇳_CN_中国
-  - 未知159
 rules:
 - MATCH,SELECT
