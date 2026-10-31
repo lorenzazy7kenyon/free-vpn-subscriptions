@@ -11,30 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 1c8f7130-8c1a-4949-831d-1d45b39c795b
-  name: '🇨🇭 瑞士 | CHE #1'
-  server: 5.181.158.193
-  port: 8461
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: svoboda.bystriynet.online
-  client-fingerprint: chrome
-- type: vless
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: 🇲🇩[www.v2nodes.com] vless-MD-4...
-  server: 185.153.198.86
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: free.cndyw.ggff.net
-  ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=chrome
-    headers:
-      Host: free.cndyw.ggff.net
-- type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: 🇲🇩[www.v2nodes.com] vless-MD-4...
   server: 185.153.198.86
@@ -56,21 +32,10 @@ proxies:
   tls: true
   servername: svoboda14.bystriynet.online
   client-fingerprint: firefox
-- type: vless
-  uuid: 1c8f7130-8c1a-4949-831d-1d45b39c795b
-  name: '🇩🇪 德国 | DEU #3'
-  server: 5.181.158.195
-  port: 8463
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: svoboda2.bystriynet.online
-  client-fingerprint: firefox
 - type: trojan
   password: humanity
-  name: 🇳🇱 荷兰 | NLD 5
-  server: 5.181.158.96
+  name: 🇳🇱 荷兰 | NLD 6
+  server: 130.78.185.4
   port: 443
   udp: true
   sni: www.cordweave.com
@@ -82,40 +47,7 @@ proxies:
       Host: www.cordweave.com
 - type: vless
   uuid: 1c8f7130-8c1a-4949-831d-1d45b39c795b
-  name: '🇩🇪 德国 | DEU #7'
-  server: 5.181.158.195
-  port: 8466
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: svoboda20.bystriynet.online
-  client-fingerprint: firefox
-- type: vless
-  uuid: 1c8f7130-8c1a-4949-831d-1d45b39c795b
-  name: '🇬🇧 英国 | GBR #1'
-  server: 5.181.158.100
-  port: 8481
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: svoboda16.bystriynet.online
-  client-fingerprint: firefox
-- type: vless
-  uuid: 1c8f7130-8c1a-4949-831d-1d45b39c795b
-  name: 🇲🇩MD_1|1.2MB/s
-  server: 5.181.158.193
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision-udp443
-  network: tcp
-  tls: true
-  servername: svoboda18.bystriynet.online
-  client-fingerprint: firefox
-- type: vless
-  uuid: 1c8f7130-8c1a-4949-831d-1d45b39c795b
-  name: 🇩🇪 德国 | DEU
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #1'
   server: 5.181.158.195
   port: 8463
   udp: true
@@ -124,54 +56,39 @@ proxies:
   tls: true
   servername: svoboda2.bystriynet.online
   client-fingerprint: firefox
-  reality-opts:
-    public-key: k2jSuvKPXyN0fCJiGpl1NMzzN7kzo64vsbbLD4gdKQ4
-    short-id: f017b721750fd683
 - type: vless
   uuid: 1c8f7130-8c1a-4949-831d-1d45b39c795b
-  name: 🇩🇪 德国 | DEU
-  server: 5.181.158.195
-  port: 8466
+  name: 🇫🇷 法国 | FRA
+  server: 5.181.158.100
+  port: 8470
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: svoboda20.bystriynet.online
+  servername: svoboda14.bystriynet.online
   client-fingerprint: firefox
   reality-opts:
-    public-key: k2jSuvKPXyN0fCJiGpl1NMzzN7kzo64vsbbLD4gdKQ4
-    short-id: f017b721750fd683
+    public-key: VaMT-IAVkmjdrf4OS0Mnqg0YhQc35O9wZo2TW2LrmjU
+    short-id: 21e829b360d15daf
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇨🇭 瑞士 | CHE #1'
-  - 🇲🇩[www.v2nodes.com] vless-MD-4...
   - 🇲🇩[www.v2nodes.com] vless-MD-4...
   - '🇫🇷 法国 | FRA #1'
-  - '🇩🇪 德国 | DEU #3'
-  - 🇳🇱 荷兰 | NLD 5
-  - '🇩🇪 德国 | DEU #7'
-  - '🇬🇧 英国 | GBR #1'
-  - 🇲🇩MD_1|1.2MB/s
-  - 🇩🇪 德国 | DEU
-  - 🇩🇪 德国 | DEU
+  - 🇳🇱 荷兰 | NLD 6
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #1'
+  - 🇫🇷 法国 | FRA
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇨🇭 瑞士 | CHE #1'
-  - 🇲🇩[www.v2nodes.com] vless-MD-4...
   - 🇲🇩[www.v2nodes.com] vless-MD-4...
   - '🇫🇷 法国 | FRA #1'
-  - '🇩🇪 德国 | DEU #3'
-  - 🇳🇱 荷兰 | NLD 5
-  - '🇩🇪 德国 | DEU #7'
-  - '🇬🇧 英国 | GBR #1'
-  - 🇲🇩MD_1|1.2MB/s
-  - 🇩🇪 德国 | DEU
-  - 🇩🇪 德国 | DEU
+  - 🇳🇱 荷兰 | NLD 6
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #1'
+  - 🇫🇷 法国 | FRA
 rules:
 - MATCH,SELECT

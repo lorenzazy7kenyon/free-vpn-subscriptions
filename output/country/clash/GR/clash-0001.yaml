@@ -21,17 +21,19 @@ proxies:
     path: pyip=bpb.yousef.isegaro.comfp=chromesecurity=tls
     headers:
       Host: free.cndyw.ggff.net
-- type: vless
-  uuid: 8f704ed6-9a1a-4d04-94dd-1bff501716de
-  name: 🇬🇷[www.v2nodes.com] vless-GR-1...
-  server: 85.90.197.220
+- type: trojan
+  password: humanity
+  name: 🇳🇱 荷兰 | NLD 22
+  server: 91.250.248.151
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  sni: www.cordweave.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.cordweave.com
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -39,12 +41,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇬🇷[www.v2nodes.com] vless-GR-3...
-  - 🇬🇷[www.v2nodes.com] vless-GR-1...
+  - 🇳🇱 荷兰 | NLD 22
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇬🇷[www.v2nodes.com] vless-GR-3...
-  - 🇬🇷[www.v2nodes.com] vless-GR-1...
+  - 🇳🇱 荷兰 | NLD 22
 rules:
 - MATCH,SELECT

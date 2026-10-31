@@ -10,23 +10,31 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知48
+  server: 140.83.57.20
+  port: 13118
+  udp: true
+  tls: true
+  servername: sg.11160321.de5.net
+  ws-opts:
+    path: /
+    headers:
+      Host: sg.11160321.de5.net
 - type: vless
   uuid: c6362720-0931-4b91-b187-d8ecf3149734
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #4'
-  server: 168.222.43.53
+  name: '🏳[www.v2nodes.com] vless- #5'
+  server: 178.83.45.226
   port: 10002
   udp: true
   network: tcp
 - type: vless
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  name: '🇨🇦[www.v2nodes.com] vless-CA-1... #4'
-  server: 178.83.45.226
-  port: 8080
-  udp: true
-  network: tcp
-- type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -38,27 +46,38 @@ proxies:
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: aduB9HGxQHjA2SBMRjkHX6
-  name: 🇿🇦[www.v2nodes.com] ss-ZA-1336...
+  name: '🏳[www.v2nodes.com] ss- #5'
   server: 102.37.156.224
   port: 443
   udp: true
+- type: hysteria2
+  password: 24266838d888d903594cc6e33910aeeb
+  name: '@tootffarangi🍓'
+  server: 2.28.226.197
+  port: 443
+  udp: true
+  sni: vpn.172908710.dpdns.org
+  obfs: salamander
+  obfs-password: 27b960aa5b199a215c3a84fd4818e5d2
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #4'
-  - '🇨🇦[www.v2nodes.com] vless-CA-1... #4'
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
-  - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
+  - 未知48
+  - '🏳[www.v2nodes.com] vless- #5'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - '🏳[www.v2nodes.com] ss- #5'
+  - '@tootffarangi🍓'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #4'
-  - '🇨🇦[www.v2nodes.com] vless-CA-1... #4'
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
-  - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
+  - 未知48
+  - '🏳[www.v2nodes.com] vless- #5'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - '🏳[www.v2nodes.com] ss- #5'
+  - '@tootffarangi🍓'
 rules:
 - MATCH,SELECT

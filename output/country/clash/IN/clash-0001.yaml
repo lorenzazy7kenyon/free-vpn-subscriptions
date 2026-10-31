@@ -11,18 +11,8 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #5'
-  server: 194.61.31.126
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-- type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -31,24 +21,6 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
-- type: vless
-  uuid: af5eac96-e478-488a-bc8c-45269d7e8847
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
-  server: 5.253.28.224
-  port: 40443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: deepl.com
-  client-fingerprint: qq
-- type: vless
-  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
-  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
-  server: 122.176.216.52
-  port: 443
-  udp: true
-  network: tcp
 - type: vless
   uuid: 405b964e-a2d2-454f-aaaa-711cc218897c
   name: 🇮🇳[www.v2nodes.com] vless-IN
@@ -60,6 +32,23 @@ proxies:
   tls: true
   servername: deepl.com
   client-fingerprint: chrome
+- type: vless
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
+  server: 194.61.31.126
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
+  server: 122.176.216.52
+  port: 443
+  udp: true
+  network: tcp
 - type: vmess
   uuid: 9db4c708-aef8-4359-821b-38e47990be0d
   alterId: 0
@@ -77,21 +66,19 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #5'
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
-  - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇮🇳[www.v2nodes.com] vless-IN
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
   - 🇮🇳IN-152.67.8.205-0205
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #5'
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
-  - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇮🇳[www.v2nodes.com] vless-IN
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
   - 🇮🇳IN-152.67.8.205-0205
 rules:
 - MATCH,SELECT

@@ -10,6 +10,19 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: trojan
+  password: humanity
+  name: 🇳🇱 荷兰 | NLD 10
+  server: 88.218.92.205
+  port: 443
+  udp: true
+  sni: www.cordweave.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.cordweave.com
 - type: vless
   uuid: f667a096-5231-4cfb-8759-92bb32473139
   name: 🇦🇲[www.v2nodes.com] vless-AM-1...
@@ -26,11 +39,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇳🇱 荷兰 | NLD 10
   - 🇦🇲[www.v2nodes.com] vless-AM-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇳🇱 荷兰 | NLD 10
   - 🇦🇲[www.v2nodes.com] vless-AM-1...
 rules:
 - MATCH,SELECT

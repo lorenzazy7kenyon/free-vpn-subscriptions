@@ -34,6 +34,13 @@ proxies:
   client-fingerprint: chrome
 - type: ss
   cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
+  name: 🇷🇴[www.v2nodes.com] ss-RO-1298...
+  server: 154.46.31.106
+  port: 443
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
   password: U83u9OGpvSatIUW7LsWffr
   name: 🇷🇴[www.v2nodes.com] ss-RO-1595...
   server: 194.68.44.42
@@ -47,6 +54,7 @@ proxy-groups:
   proxies:
   - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
+  - 🇷🇴[www.v2nodes.com] ss-RO-1298...
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 - name: SELECT
   type: select
@@ -54,6 +62,7 @@ proxy-groups:
   - AUTO
   - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #2'
+  - 🇷🇴[www.v2nodes.com] ss-RO-1298...
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 rules:
 - MATCH,SELECT
