@@ -1,14 +1,6 @@
 {
   "outbounds": [
     {
-      "method": "chacha20-ietf-poly1305",
-      "password": "e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3",
-      "server": "132.243.175.144",
-      "server_port": 8388,
-      "tag": "🇨🇭[www.v2nodes.com] ss-CH-1573...",
-      "type": "ss"
-    },
-    {
       "server": "195.141.65.98",
       "server_port": 443,
       "tag": "🇩🇪 德国 | DEU",
@@ -26,6 +18,25 @@
           "Host": "148-253-210-191.sslip.io"
         },
         "path": "/test-ws",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "53f03acd-fec1-6685-fc8f-03baf9550cb8"
+    },
+    {
+      "server": "195.141.65.98",
+      "server_port": 443,
+      "tag": "🇩🇪 德国 | DEU #2",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "148-253-210-191.sslip.io"
+      },
+      "transport": {
+        "headers": {
+          "Host": "148-253-210-191.sslip.io"
+        },
+        "path": "/test-wsfp=chrome",
         "type": "ws"
       },
       "type": "vless",
@@ -75,7 +86,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "type": "vless",
@@ -84,7 +95,7 @@
     {
       "server": "149.33.15.213",
       "server_port": 443,
-      "tag": "🇷🇺[www.v2nodes.com] vless-RU-1...",
+      "tag": "🇷🇺[www.v2nodes.com] vless-RU-1... #1",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -100,12 +111,12 @@
     {
       "interval": "5m",
       "outbounds": [
-        "🇨🇭[www.v2nodes.com] ss-CH-1573...",
         "🇩🇪 德国 | DEU",
+        "🇩🇪 德国 | DEU #2",
         "🇨🇭[www.v2nodes.com] vless-CH-1...",
         "🇨🇭[www.v2nodes.com] vless-CH-1... #3",
         "🇨🇭[www.v2nodes.com] vless-CH-1... #2",
-        "🇷🇺[www.v2nodes.com] vless-RU-1..."
+        "🇷🇺[www.v2nodes.com] vless-RU-1... #1"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -114,12 +125,12 @@
     {
       "outbounds": [
         "auto",
-        "🇨🇭[www.v2nodes.com] ss-CH-1573...",
         "🇩🇪 德国 | DEU",
+        "🇩🇪 德国 | DEU #2",
         "🇨🇭[www.v2nodes.com] vless-CH-1...",
         "🇨🇭[www.v2nodes.com] vless-CH-1... #3",
         "🇨🇭[www.v2nodes.com] vless-CH-1... #2",
-        "🇷🇺[www.v2nodes.com] vless-RU-1..."
+        "🇷🇺[www.v2nodes.com] vless-RU-1... #1"
       ],
       "tag": "select",
       "type": "selector"

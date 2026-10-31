@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
-  name: '🇮🇱 以色列 | ISR #1'
+  name: '🇵🇱 波兰 | POL #1'
   server: 79.182.39.37
   port: 27591
   udp: true
@@ -22,7 +22,7 @@ proxies:
   client-fingerprint: firefox
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🏳[www.v2nodes.com] trojan- #2'
+  name: '🏳[www.v2nodes.com] trojan- #1'
   server: 64.176.163.182
   port: 443
   udp: true
@@ -41,21 +41,33 @@ proxies:
     path: /announcement?ed=2048fp=random
     headers:
       Host: eu-central.862400.xyz
+- type: vless
+  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+  name: '🇺🇸 美国 | USA #10'
+  server: 79.182.39.57
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: a0688bt.us4.h1clayd.click
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇮🇱 以色列 | ISR #1'
-  - '🏳[www.v2nodes.com] trojan- #2'
+  - '🇵🇱 波兰 | POL #1'
+  - '🏳[www.v2nodes.com] trojan- #1'
   - '🇩🇪 德国 | DEU #2'
+  - '🇺🇸 美国 | USA #10'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇮🇱 以色列 | ISR #1'
-  - '🏳[www.v2nodes.com] trojan- #2'
+  - '🇵🇱 波兰 | POL #1'
+  - '🏳[www.v2nodes.com] trojan- #1'
   - '🇩🇪 德国 | DEU #2'
+  - '🇺🇸 美国 | USA #10'
 rules:
 - MATCH,SELECT

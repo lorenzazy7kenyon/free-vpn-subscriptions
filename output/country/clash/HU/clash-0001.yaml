@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: trojan
   password: humanity
-  name: '🏳[www.v2nodes.com] trojan- #1'
+  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #1'
   server: 185.225.68.232
   port: 443
   udp: true
@@ -33,19 +33,34 @@ proxies:
     path: pyip=bpb.yousef.isegaro.comfp=chromesecurity=tls
     headers:
       Host: free.cndyw.ggff.net
+- type: trojan
+  password: humanity
+  name: 🇳🇱 荷兰 | NLD 10
+  server: 38.180.225.247
+  port: 2053
+  udp: true
+  sni: www.cordweave.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.cordweave.com
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] trojan- #1'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #1'
   - 🇭🇺[www.v2nodes.com] vless-HU-6...
+  - 🇳🇱 荷兰 | NLD 10
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] trojan- #1'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #1'
   - 🇭🇺[www.v2nodes.com] vless-HU-6...
+  - 🇳🇱 荷兰 | NLD 10
 rules:
 - MATCH,SELECT

@@ -21,6 +21,19 @@ proxies:
   tls: true
   servername: gateway.icloud.com
   client-fingerprint: chrome
+- type: trojan
+  password: humanity
+  name: 🇳🇱 荷兰 | NLD 23
+  server: 141.133.174.88
+  port: 443
+  udp: true
+  sni: www.cordweave.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.cordweave.com
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -28,10 +41,12 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #4'
+  - 🇳🇱 荷兰 | NLD 23
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #4'
+  - 🇳🇱 荷兰 | NLD 23
 rules:
 - MATCH,SELECT

@@ -11,14 +11,25 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
-  name: '🇰🇿[www.v2nodes.com] vless-KZ-1... #2'
-  server: 178.236.16.98
-  port: 35728
+  uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
+  name: '🇰🇿 哈萨克斯坦 | KAZ #1'
+  server: 95.56.251.12
+  port: 47443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: kz1.waspnest.space
+  client-fingerprint: chrome
+- type: vless
+  uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
+  name: 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  server: 46.8.43.125
+  port: 443
   udp: true
   network: tcp
   tls: true
-  servername: yahoo.com
+  servername: kz-central.v8x2b.lol
   client-fingerprint: chrome
 - type: vless
   uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
@@ -29,29 +40,6 @@ proxies:
   network: tcp
   tls: true
   servername: yahoo.com
-  client-fingerprint: chrome
-- type: vmess
-  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇰🇿KZ-38.107.234.57-1658
-  server: 38.107.234.57
-  port: 80
-  udp: true
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: viber.com
-- type: vless
-  uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
-  name: 🇰🇿[www.v2nodes.com] vless-KZ-1...
-  server: 46.8.43.125
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: kz-central.v8x2b.lol
   client-fingerprint: chrome
 - type: vless
   uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
@@ -67,25 +55,35 @@ proxies:
   reality-opts:
     public-key: z1GSwCEACvO9RLcMVpcURiT8er4oeIdeSJhraw_0cGU
     short-id: ae97223a8f799877
+- type: vless
+  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
+  name: '🏳[www.v2nodes.com] vless- #5'
+  server: 178.236.16.98
+  port: 35728
+  udp: true
+  network: tcp
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #2'
-  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
-  - 🇰🇿KZ-38.107.234.57-1658
+  - '🇰🇿 哈萨克斯坦 | KAZ #1'
   - 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
   - 🇰🇿 哈萨克斯坦 | KAZ
+  - '🏳[www.v2nodes.com] vless- #5'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #2'
-  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
-  - 🇰🇿KZ-38.107.234.57-1658
+  - '🇰🇿 哈萨克斯坦 | KAZ #1'
   - 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
   - 🇰🇿 哈萨克斯坦 | KAZ
+  - '🏳[www.v2nodes.com] vless- #5'
 rules:
 - MATCH,SELECT

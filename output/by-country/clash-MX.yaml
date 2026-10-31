@@ -25,8 +25,31 @@ proxies:
       Host: kclx.eu.org
 - type: vless
   uuid: 3e21e3d3-6d26-4155-b851-764dd8e8c6b5
-  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #16'
+  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #17'
   server: 156.252.229.11
+  port: 8443
+  udp: true
+  network: tcp
+  tls: true
+  servername: play.googleapis.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
+    short-id: 974f7f8f
+- type: vless
+  uuid: 3e21e3d3-6d26-4155-b851-764dd8e8c6b5
+  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #6'
+  server: 156.252.229.30
+  port: 8443
+  udp: true
+  network: tcp
+  tls: true
+  servername: play.googleapis.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 3e21e3d3-6d26-4155-b851-764dd8e8c6b5
+  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
+  server: 156.252.229.136
   port: 8443
   udp: true
   network: tcp
@@ -43,6 +66,16 @@ proxies:
   tls: true
   servername: play.googleapis.com
   client-fingerprint: chrome
+- type: vless
+  uuid: 3e21e3d3-6d26-4155-b851-764dd8e8c6b5
+  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #16'
+  server: 156.252.229.11
+  port: 8443
+  udp: true
+  network: tcp
+  tls: true
+  servername: play.googleapis.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -50,14 +83,20 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇲🇽[www.v2nodes.com] vless-MX-1... #2'
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #16'
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #17'
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #6'
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
   - '🇪🇸 西班牙 | ESP #1'
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #16'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇲🇽[www.v2nodes.com] vless-MX-1... #2'
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #16'
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #17'
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #6'
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
   - '🇪🇸 西班牙 | ESP #1'
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #16'
 rules:
 - MATCH,SELECT

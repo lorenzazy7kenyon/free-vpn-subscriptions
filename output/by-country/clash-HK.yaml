@@ -10,24 +10,23 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: humanity
-  name: '🇳🇱[www.v2nodes.com] trojan-NL-... #4'
-  server: 219.76.13.177
-  port: 443
+- type: vless
+  uuid: d98b67d4-024a-4bba-91e2-e6ebece6df11
+  name: 🇭🇰[www.v2nodes.com] vless-HK-1...
+  server: 38.76.180.144
+  port: 1443
   udp: true
-  sni: www.pleadcourt.org
   network: ws
   ws-opts:
-    path: /assignment
+    path: /vless-wsfp=chrome
     headers:
-      Host: www.pleadcourt.org
+      Host: 38.76.180.144
 - type: vmess
   uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
   alterId: 0
   cipher: auto
   network: ws
-  name: 🇭🇰 香港 | HKG
+  name: '🇭🇰 香港 | HKG #5'
   server: 47.244.120.197
   port: 23026
   udp: true
@@ -35,39 +34,6 @@ proxies:
     path: /arki
     headers:
       Host: 47.244.120.197
-- type: trojan
-  password: 6d8d2ced-54da-4e79-bfae-2ed55345b954
-  name: 🇭🇰HK-23.100.91.146-0049
-  server: 23.100.91.146
-  port: 443
-  udp: true
-  sni: rprknb2lcp.eastasia.cloudapp.azure.com
-- type: vmess
-  uuid: 9dc0c6aa-39a1-46be-9938-85999e3c3498
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇭🇰HK-219.76.13.181-0037
-  server: 219.76.13.181
-  port: 443
-  udp: true
-  tls: true
-  servername: sg1.31vpn.com
-  ws-opts:
-    path: /fastssh/1731390093/6357cedd7a199/
-    headers:
-      Host: sg1.31vpn.com
-- type: vmess
-  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇨🇳CN-47.244.120.197-0197
-  server: 47.244.120.197
-  port: 36703
-  udp: true
-  ws-opts:
-    path: /
 - type: vmess
   uuid: e47b9f77-60e4-4738-8d53-772b6002e146
   alterId: 0
@@ -82,55 +48,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
-  name: '🇭🇰 香港 | HKG #3'
-  server: 47.76.57.83
-  port: 443
-  udp: true
-  tls: true
-  servername: vah4urdzl3jdx5r2.v.3dns.vip
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: vah4urdzl3jdx5r2.v.3dns.vip
-- type: vmess
-  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
-  alterId: 0
-  cipher: auto
-  network: http
-  name: 🇭🇰 香港 | HKG
-  server: 47.242.81.94
-  port: 52080
-  udp: true
-- type: vless
-  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
-  name: 🇭🇰 香港 | HKG
-  server: 47.238.210.5
-  port: 13779
-  udp: true
-  network: tcp
-  tls: true
-  servername: tesla.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
-    short-id: af1bdd293097b664
-- type: vmess
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇭🇰 香港 | HKG
-  server: 47.244.120.197
-  port: 44867
-  udp: true
-  ws-opts:
-    path: /arki
-- type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇭🇰 香港 | HKG
+  name: '🇭🇰 香港 | HKG #7'
   server: 8.217.13.103
   port: 443
   udp: true
@@ -140,72 +58,12 @@ proxies:
     path: /ws-vmess
     headers:
       Host: qtkdr8jxe3wefxjm.v.3dns.vip
-- type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇨🇳CN-47.243.194.125-0961
-  server: 47.243.194.125
-  port: 443
-  udp: true
-  tls: true
-  servername: nycqg19zkwacpm1b.v.3dns.vip
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: nycqg19zkwacpm1b.v.3dns.vip
-- type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇨🇳CN-8.217.254.88-0129
-  server: 8.217.254.88
-  port: 443
-  udp: true
-  tls: true
-  servername: 2b9hwy8ocx7q74nm.v.3dns.vip
-  ws-opts:
-    path: /
-    headers:
-      Host: 2b9hwy8ocx7q74nm.v.3dns.vip
-- type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇨🇳CN-8.217.13.103-0203
-  server: 8.217.13.103
-  port: 443
-  udp: true
-  tls: true
-  servername: qtkdr8jxe3wefxjm.v.3dns.vip
-  ws-opts:
-    path: /
-    headers:
-      Host: qtkdr8jxe3wefxjm.v.3dns.vip
-- type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: HK5
-  server: 8.210.24.181
-  port: 443
-  udp: true
-  tls: true
-  servername: 6jdvarazgu3qqr6q.v.3dns.vip
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: 6jdvarazgu3qqr6q.v.3dns.vip
 - type: vmess
   uuid: f23bb427c1f94373876c2f43e9f790f3
   alterId: 0
   cipher: auto
   network: ws
-  name: HK12 13.7KB/s
+  name: HK 24.2KB/s
   server: 8.217.254.88
   port: 443
   udp: true
@@ -215,6 +73,45 @@ proxies:
     path: /ws-vmess
     headers:
       Host: 2b9hwY8oCx7Q74NM.v.3dns.vip
+- type: vmess
+  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
+  alterId: 0
+  cipher: auto
+  network: http
+  name: 🇭🇰 香港 | HKG
+  server: 47.242.81.94
+  port: 52080
+  udp: true
+- type: vmess
+  uuid: 9dc0c6aa-39a1-46be-9938-85999e3c3498
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇭🇰HK-219.76.13.181-0055
+  server: 219.76.13.181
+  port: 443
+  udp: true
+  tls: true
+  servername: sg1.31vpn.com
+  ws-opts:
+    path: /fastssh/1731390093/6357cedd7a199/
+    headers:
+      Host: sg1.31vpn.com
+- type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: HK4
+  server: 8.210.24.181
+  port: 443
+  udp: true
+  tls: true
+  servername: 6jdvarazgu3qqr6q.v.3dns.vip
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: 6jdvarazgu3qqr6q.v.3dns.vip
 - type: vless
   uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
   name: '🇭🇰[www.v2nodes.com] vless-HK-1... #3'
@@ -225,34 +122,33 @@ proxies:
   tls: true
   servername: 195.58.144.56
   client-fingerprint: chrome
-- type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  name: '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
-  server: 154.21.203.106
-  port: 51279
+- type: trojan
+  password: humanity
+  name: '🏳[www.v2nodes.com] trojan- #2'
+  server: 219.76.13.177
+  port: 443
   udp: true
-  network: tcp
-- type: vless
-  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
-  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #4'
-  server: 47.238.210.5
-  port: 13779
-  udp: true
-  network: tcp
-  tls: true
-  servername: tesla.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: d98b67d4-024a-4bba-91e2-e6ebece6df11
-  name: 🇭🇰[www.v2nodes.com] vless-HK-1...
-  server: 38.76.180.144
-  port: 1443
-  udp: true
+  sni: www.pleadcourt.org
   network: ws
   ws-opts:
-    path: /vless-wsfp=chrome
+    path: /assignment
     headers:
-      Host: 38.76.180.144
+      Host: www.pleadcourt.org
+- type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇭🇰HK-159.100.206.88-0058
+  server: 159.100.206.88
+  port: 443
+  udp: true
+  tls: true
+  servername: lg30.cfcdn3.xyz
+  ws-opts:
+    path: /ray
+    headers:
+      Host: lg30.cfcdn3.xyz
 - type: vless
   uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   name: '🇭🇰[www.v2nodes.com] vless-HK-1... #5'
@@ -271,65 +167,129 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
-  name: 🇭🇰HK-156.245.232.239-5651
+  name: 🇭🇰HK-156.245.232.239-0212
   server: 156.245.232.239
   port: 35043
   udp: true
   ws-opts:
     path: /
+- type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  name: '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
+  server: 154.21.203.106
+  port: 51279
+  udp: true
+  network: tcp
+- type: vmess
+  uuid: f1ac5c82-00a4-400b-bb20-530c91b7c5bb
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: HK6 34.2KB/s
+  server: 154.37.223.56
+  port: 52080
+  udp: true
+- type: trojan
+  password: humanity
+  name: 🇳🇱 荷兰 | NLD 16
+  server: 207.57.132.189
+  port: 8443
+  udp: true
+  sni: www.cordweave.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.cordweave.com
+- type: vless
+  uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
+  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
+  server: 156.226.168.221
+  port: 35193
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: '🇭🇰 香港 | HKG #2'
+  server: 47.76.57.83
+  port: 443
+  udp: true
+  tls: true
+  servername: vah4urdzl3jdx5r2.v.3dns.vip
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: vah4urdzl3jdx5r2.v.3dns.vip
+- type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇨🇳CN-47.243.194.125-0163
+  server: 47.243.194.125
+  port: 443
+  udp: true
+  tls: true
+  servername: nycqg19zkwacpm1b.v.3dns.vip
+  ws-opts:
+    path: /
+    headers:
+      Host: nycqg19zkwacpm1b.v.3dns.vip
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇳🇱[www.v2nodes.com] trojan-NL-... #4'
-  - 🇭🇰 香港 | HKG
-  - 🇭🇰HK-23.100.91.146-0049
-  - 🇭🇰HK-219.76.13.181-0037
-  - 🇨🇳CN-47.244.120.197-0197
-  - '🇭🇰 香港 | HKG #2'
-  - '🇭🇰 香港 | HKG #3'
-  - 🇭🇰 香港 | HKG
-  - 🇭🇰 香港 | HKG
-  - 🇭🇰 香港 | HKG
-  - 🇭🇰 香港 | HKG
-  - 🇨🇳CN-47.243.194.125-0961
-  - 🇨🇳CN-8.217.254.88-0129
-  - 🇨🇳CN-8.217.13.103-0203
-  - HK5
-  - HK12 13.7KB/s
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #3'
-  - '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #4'
   - 🇭🇰[www.v2nodes.com] vless-HK-1...
+  - '🇭🇰 香港 | HKG #5'
+  - '🇭🇰 香港 | HKG #2'
+  - '🇭🇰 香港 | HKG #7'
+  - HK 24.2KB/s
+  - 🇭🇰 香港 | HKG
+  - 🇭🇰HK-219.76.13.181-0055
+  - HK4
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #3'
+  - '🏳[www.v2nodes.com] trojan- #2'
+  - 🇭🇰HK-159.100.206.88-0058
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #5'
-  - 🇭🇰HK-156.245.232.239-5651
+  - 🇭🇰HK-156.245.232.239-0212
+  - '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
+  - HK6 34.2KB/s
+  - 🇳🇱 荷兰 | NLD 16
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
+  - '🇭🇰 香港 | HKG #2'
+  - 🇨🇳CN-47.243.194.125-0163
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇳🇱[www.v2nodes.com] trojan-NL-... #4'
-  - 🇭🇰 香港 | HKG
-  - 🇭🇰HK-23.100.91.146-0049
-  - 🇭🇰HK-219.76.13.181-0037
-  - 🇨🇳CN-47.244.120.197-0197
-  - '🇭🇰 香港 | HKG #2'
-  - '🇭🇰 香港 | HKG #3'
-  - 🇭🇰 香港 | HKG
-  - 🇭🇰 香港 | HKG
-  - 🇭🇰 香港 | HKG
-  - 🇭🇰 香港 | HKG
-  - 🇨🇳CN-47.243.194.125-0961
-  - 🇨🇳CN-8.217.254.88-0129
-  - 🇨🇳CN-8.217.13.103-0203
-  - HK5
-  - HK12 13.7KB/s
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #3'
-  - '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #4'
   - 🇭🇰[www.v2nodes.com] vless-HK-1...
+  - '🇭🇰 香港 | HKG #5'
+  - '🇭🇰 香港 | HKG #2'
+  - '🇭🇰 香港 | HKG #7'
+  - HK 24.2KB/s
+  - 🇭🇰 香港 | HKG
+  - 🇭🇰HK-219.76.13.181-0055
+  - HK4
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #3'
+  - '🏳[www.v2nodes.com] trojan- #2'
+  - 🇭🇰HK-159.100.206.88-0058
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #5'
-  - 🇭🇰HK-156.245.232.239-5651
+  - 🇭🇰HK-156.245.232.239-0212
+  - '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
+  - HK6 34.2KB/s
+  - 🇳🇱 荷兰 | NLD 16
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
+  - '🇭🇰 香港 | HKG #2'
+  - 🇨🇳CN-47.243.194.125-0163
 rules:
 - MATCH,SELECT

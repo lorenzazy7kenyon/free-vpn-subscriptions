@@ -10,32 +10,30 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: 5f1d6d32-76b3-4562-8982-df2b7c122708
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知14
-  server: 190.93.244.201
-  port: 443
+- type: vless
+  uuid: b2853d19-fada-44dc-8d44-967d1af122e0
+  name: '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
+  server: 190.93.245.187
+  port: 8443
   udp: true
+  network: ws
   tls: true
-  servername: argo-tunnel.111874.xyz
+  servername: WQa3MIOjjR8fYOzhiui--sU3-uCG1Gdx.pAgEs.dEv
   ws-opts:
-    path: /5f1d6d32-76b3-4562-8982-df2b7c122708-vm
+    path: /eyJqdW5rIjoiZTA0TGg3eENkIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19fp=chrome
     headers:
-      Host: argo-tunnel.111874.xyz
+      Host: wqa3miojjr8fyozhiui--su3-ucg1gdx.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知14
+  - '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知14
+  - '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
 rules:
 - MATCH,SELECT

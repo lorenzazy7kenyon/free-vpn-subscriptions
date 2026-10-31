@@ -1,6 +1,27 @@
 {
   "outbounds": [
     {
+      "alter_id": 0,
+      "security": "auto",
+      "server": "185.146.173.59",
+      "server_port": 443,
+      "tag": "未知99",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "hms02.fxiaomi.sbs"
+      },
+      "transport": {
+        "headers": {
+          "Host": "hms02.fxiaomi.sbs"
+        },
+        "path": "/link",
+        "type": "ws"
+      },
+      "type": "vmess",
+      "uuid": "6c168fcc-2231-4f3b-8c1e-f6391692df4a"
+    },
+    {
       "flow": "xtls-rprx-vision",
       "server": "150.241.79.124",
       "server_port": 443,
@@ -18,23 +39,6 @@
       "uuid": "1fe01c8a-ab37-4e95-bbfc-95d4a608931e"
     },
     {
-      "flow": "xtls-rprx-vision-udp443",
-      "server": "171.25.158.163",
-      "server_port": 443,
-      "tag": "🇸🇪SE_4|2.2MB/s",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "s9se1.newagetechnologies.live",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "type": "vless",
-      "uuid": "706bce83-91db-4260-b175-cba29145cd56"
-    },
-    {
       "server": "5.178.109.174",
       "server_port": 14430,
       "tag": "🇸🇪[www.v2nodes.com] vless-SE-1... #1",
@@ -50,20 +54,20 @@
     },
     {
       "flow": "xtls-rprx-vision-udp443",
-      "server": "13.143.180.104",
+      "server": "171.25.158.163",
       "server_port": 443,
-      "tag": "🇫🇮FI_3|1.9MB/s",
+      "tag": "🇸🇪SE_4|2.2MB/s",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "s12.bsh-net.ru",
+        "server_name": "s9se1.newagetechnologies.live",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
       },
       "type": "vless",
-      "uuid": "a0fa7e19-70ec-41e0-b0cc-bcc984d4201a"
+      "uuid": "706bce83-91db-4260-b175-cba29145cd56"
     },
     {
       "server": "92.246.137.204",
@@ -85,13 +89,51 @@
       "uuid": "b782eda8-7846-437c-ab93-07c3476c2887"
     },
     {
+      "password": "humanity",
+      "server": "83.147.254.59",
+      "server_port": 2053,
+      "tag": "🇳🇱 荷兰 | NLD 11",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "www.cordweave.com"
+      },
+      "transport": {
+        "headers": {
+          "Host": "www.cordweave.com"
+        },
+        "path": "/assignment",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "13.143.180.104",
+      "server_port": 443,
+      "tag": "🇸🇪[www.v2nodes.com] vless-SE-1...",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "s12.bsh-net.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "a0fa7e19-70ec-41e0-b0cc-bcc984d4201a"
+    },
+    {
       "interval": "5m",
       "outbounds": [
+        "未知99",
         "🇸🇪 瑞典 | SWE #1",
-        "🇸🇪SE_4|2.2MB/s",
         "🇸🇪[www.v2nodes.com] vless-SE-1... #1",
-        "🇫🇮FI_3|1.9MB/s",
-        "🇮🇹 意大利 | ITA #2"
+        "🇸🇪SE_4|2.2MB/s",
+        "🇮🇹 意大利 | ITA #2",
+        "🇳🇱 荷兰 | NLD 11",
+        "🇸🇪[www.v2nodes.com] vless-SE-1..."
       ],
       "tag": "auto",
       "type": "urltest",
@@ -100,11 +142,13 @@
     {
       "outbounds": [
         "auto",
+        "未知99",
         "🇸🇪 瑞典 | SWE #1",
-        "🇸🇪SE_4|2.2MB/s",
         "🇸🇪[www.v2nodes.com] vless-SE-1... #1",
-        "🇫🇮FI_3|1.9MB/s",
-        "🇮🇹 意大利 | ITA #2"
+        "🇸🇪SE_4|2.2MB/s",
+        "🇮🇹 意大利 | ITA #2",
+        "🇳🇱 荷兰 | NLD 11",
+        "🇸🇪[www.v2nodes.com] vless-SE-1..."
       ],
       "tag": "select",
       "type": "selector"

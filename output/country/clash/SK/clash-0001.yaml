@@ -12,11 +12,11 @@ dns:
 proxies:
 - type: vless
   uuid: 689a62e4-37e7-41de-9e6a-f2a56368c9e2
-  name: 🇸🇰SK_1|3.6MB/s
+  name: 🇸🇰SK_1|2.8MB/s
   server: 130.49.162.137
   port: 443
   udp: true
-  flow: xtls-rprx-vision-udp443
+  flow: xtls-rprx-vision-udp443-udp443
   network: tcp
   tls: true
   servername: sk3.speedtestinternet.link
@@ -27,11 +27,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇰SK_1|3.6MB/s
+  - 🇸🇰SK_1|2.8MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇸🇰SK_1|3.6MB/s
+  - 🇸🇰SK_1|2.8MB/s
 rules:
 - MATCH,SELECT

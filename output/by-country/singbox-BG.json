@@ -1,31 +1,28 @@
 {
   "outbounds": [
     {
-      "flow": "xtls-rprx-vision",
-      "server": "93.152.206.112",
+      "password": "humanity",
+      "server": "185.82.218.224",
       "server_port": 443,
-      "tag": "🇧🇬 保加利亚 | BGR",
+      "tag": "🇳🇱 荷兰 | NLD 24",
       "tls": {
         "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "-zjl4KNE4PFeuthfmw_2JeCbiXAA2kaoYVHODPq-sXQ",
-          "short_id": "a2fc"
-        },
-        "server_name": "remote.propaint.cl",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "insecure": true,
+        "server_name": "www.cordweave.com"
       },
-      "type": "vless",
-      "uuid": "6db6b948-655f-4f68-a9e7-865050e05b31"
+      "transport": {
+        "headers": {
+          "Host": "www.cordweave.com"
+        },
+        "path": "/assignment",
+        "type": "ws"
+      },
+      "type": "trojan"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇧🇬 保加利亚 | BGR"
+        "🇳🇱 荷兰 | NLD 24"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -34,7 +31,7 @@
     {
       "outbounds": [
         "auto",
-        "🇧🇬 保加利亚 | BGR"
+        "🇳🇱 荷兰 | NLD 24"
       ],
       "tag": "select",
       "type": "selector"

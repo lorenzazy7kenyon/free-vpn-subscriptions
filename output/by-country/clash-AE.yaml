@@ -10,6 +10,75 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: trojan
+  password: humanity
+  name: 🇳🇱 荷兰 | NLD 20
+  server: 46.174.142.238
+  port: 443
+  udp: true
+  sni: www.cordweave.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.cordweave.com
+- type: vless
+  uuid: 9737cc16-7266-45ce-94d9-6e05a45e0b9c
+  name: '🇷🇺 俄罗斯 | RUS #1'
+  server: 188.72.103.4
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: ru.nnight.cfd
+  client-fingerprint: firefox
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  server: 147.78.0.186
+  port: 2053
+  udp: true
+  network: ws
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
+    headers:
+      Host: free.cndyw.ggff.net
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: 🇦🇪[www.v2nodes.com] vless-AE-4...
+  server: 147.78.0.186
+  port: 2053
+  udp: true
+  network: ws
+  tls: true
+  servername: free.cndyw.ggff.net
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=random
+    headers:
+      Host: free.cndyw.ggff.net
+- type: vless
+  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
+  name: 🇦🇪[www.v2nodes.com] vless-AE-1...
+  server: 95.174.68.188
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 95.174.68.188
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  server: 147.78.0.186
+  port: 2053
+  udp: true
+  network: ws
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=chromesecurity=tls
+    headers:
+      Host: free.cndyw.ggff.net
 - type: vless
   uuid: 9737cc16-7266-45ce-94d9-6e05a45e0b9c
   name: 🇷🇺 俄罗斯 | RUS
@@ -31,60 +100,31 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
-- type: vless
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: 🇦🇪[www.v2nodes.com] vless-AE-4...
-  server: 147.78.0.186
-  port: 2053
-  udp: true
-  network: ws
-  tls: true
-  servername: free.cndyw.ggff.net
-  ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=random
-    headers:
-      Host: free.cndyw.ggff.net
-- type: vless
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
-  server: 147.78.0.186
-  port: 2053
-  udp: true
-  network: ws
-  ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=chromesecurity=tls
-    headers:
-      Host: free.cndyw.ggff.net
-- type: vless
-  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
-  name: 🇦🇪[www.v2nodes.com] vless-AE-1...
-  server: 95.174.68.188
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 95.174.68.188
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇳🇱 荷兰 | NLD 20
+  - '🇷🇺 俄罗斯 | RUS #1'
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  - 🇦🇪[www.v2nodes.com] vless-AE-4...
+  - 🇦🇪[www.v2nodes.com] vless-AE-1...
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
   - 🇷🇺 俄罗斯 | RUS
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇦🇪[www.v2nodes.com] vless-AE-4...
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
-  - 🇦🇪[www.v2nodes.com] vless-AE-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇳🇱 荷兰 | NLD 20
+  - '🇷🇺 俄罗斯 | RUS #1'
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  - 🇦🇪[www.v2nodes.com] vless-AE-4...
+  - 🇦🇪[www.v2nodes.com] vless-AE-1...
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
   - 🇷🇺 俄罗斯 | RUS
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇦🇪[www.v2nodes.com] vless-AE-4...
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
-  - 🇦🇪[www.v2nodes.com] vless-AE-1...
 rules:
 - MATCH,SELECT

@@ -10,6 +10,21 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知99
+  server: 185.146.173.59
+  port: 443
+  udp: true
+  tls: true
+  servername: hms02.fxiaomi.sbs
+  ws-opts:
+    path: /link
+    headers:
+      Host: hms02.fxiaomi.sbs
 - type: vless
   uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
   name: '🇸🇪 瑞典 | SWE #1'
@@ -20,17 +35,6 @@ proxies:
   network: tcp
   tls: true
   servername: de1.waspnest.space
-  client-fingerprint: firefox
-- type: vless
-  uuid: 706bce83-91db-4260-b175-cba29145cd56
-  name: 🇸🇪SE_4|2.2MB/s
-  server: 171.25.158.163
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision-udp443
-  network: tcp
-  tls: true
-  servername: s9se1.newagetechnologies.live
   client-fingerprint: firefox
 - type: vless
   uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
@@ -44,15 +48,15 @@ proxies:
     headers:
       Host: 5.178.109.174
 - type: vless
-  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
-  name: 🇫🇮FI_3|1.9MB/s
-  server: 13.143.180.104
+  uuid: 706bce83-91db-4260-b175-cba29145cd56
+  name: 🇸🇪SE_4|2.2MB/s
+  server: 171.25.158.163
   port: 443
   udp: true
   flow: xtls-rprx-vision-udp443
   network: tcp
   tls: true
-  servername: s12.bsh-net.ru
+  servername: s9se1.newagetechnologies.live
   client-fingerprint: firefox
 - type: vless
   uuid: b782eda8-7846-437c-ab93-07c3476c2887
@@ -67,25 +71,53 @@ proxies:
     path: /announcement?ed=2048fp=random
     headers:
       Host: it-mil.862400.xyz
+- type: trojan
+  password: humanity
+  name: 🇳🇱 荷兰 | NLD 11
+  server: 83.147.254.59
+  port: 2053
+  udp: true
+  sni: www.cordweave.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.cordweave.com
+- type: vless
+  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
+  name: 🇸🇪[www.v2nodes.com] vless-SE-1...
+  server: 13.143.180.104
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: s12.bsh-net.ru
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 未知99
   - '🇸🇪 瑞典 | SWE #1'
-  - 🇸🇪SE_4|2.2MB/s
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
-  - 🇫🇮FI_3|1.9MB/s
+  - 🇸🇪SE_4|2.2MB/s
   - '🇮🇹 意大利 | ITA #2'
+  - 🇳🇱 荷兰 | NLD 11
+  - 🇸🇪[www.v2nodes.com] vless-SE-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 未知99
   - '🇸🇪 瑞典 | SWE #1'
-  - 🇸🇪SE_4|2.2MB/s
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
-  - 🇫🇮FI_3|1.9MB/s
+  - 🇸🇪SE_4|2.2MB/s
   - '🇮🇹 意大利 | ITA #2'
+  - 🇳🇱 荷兰 | NLD 11
+  - 🇸🇪[www.v2nodes.com] vless-SE-1...
 rules:
 - MATCH,SELECT
