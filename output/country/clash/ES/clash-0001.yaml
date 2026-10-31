@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: trojan
   password: humanity
-  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #3'
+  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #4'
   server: 185.114.72.31
   port: 2053
   udp: true
@@ -31,36 +31,18 @@ proxies:
   sni: 66.163.118.62
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
-  server: 66.163.118.166
-  port: 443
-  udp: true
-  sni: learn.discovergreatjobsandadvanceyourcareer.com
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇪🇸[www.v2nodes.com] trojan-ES-...
-  server: 66.163.118.251
-  port: 443
-  udp: true
-  sni: resources.discovergreatjobsandadvanceyourcareer.com
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   name: '🇪🇸[www.v2nodes.com] trojan-ES-... #1'
   server: 66.163.118.244
   port: 443
   udp: true
   sni: 66.163.118.244
-- type: vless
-  uuid: 897d47f8-4dd5-42a1-bcd0-bef19caff55a
-  name: '🏳[www.v2nodes.com] vless- #6'
-  server: 193.238.154.78
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
+  server: 66.163.118.166
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
+  sni: learn.discovergreatjobsandadvanceyourcareer.com
 - type: vless
   uuid: 12c53e32-e589-47d6-b857-e4132294f767
   name: '🇪🇸[www.v2nodes.com] vless-ES-1... #17'
@@ -71,30 +53,26 @@ proxies:
   network: tcp
   tls: true
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #3'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #4'
   - '🇪🇸[www.v2nodes.com] trojan-ES-... #4'
-  - '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
-  - 🇪🇸[www.v2nodes.com] trojan-ES-...
   - '🇪🇸[www.v2nodes.com] trojan-ES-... #1'
-  - '🏳[www.v2nodes.com] vless- #6'
+  - '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #17'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #3'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #4'
   - '🇪🇸[www.v2nodes.com] trojan-ES-... #4'
-  - '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
-  - 🇪🇸[www.v2nodes.com] trojan-ES-...
   - '🇪🇸[www.v2nodes.com] trojan-ES-... #1'
-  - '🏳[www.v2nodes.com] vless- #6'
+  - '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #17'
 rules:
 - MATCH,SELECT

@@ -23,6 +23,20 @@ proxies:
     path: /graphql
     headers:
       Host: koochehpas.com
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 1CnkHSmfGN42U74vwEjLEzULi5SbzvtK
+  name: 🇺🇦 乌克兰 | UKR
+  server: 37.152.175.123
+  port: 1013
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 1CnkHSmfGN42U74vwEjLEzULi5SbzvtK
+  name: 🇩🇪 德国 | DEU
+  server: 37.152.175.116
+  port: 1044
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -30,10 +44,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 未知75
+  - 🇺🇦 乌克兰 | UKR
+  - 🇩🇪 德国 | DEU
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 未知75
+  - 🇺🇦 乌克兰 | UKR
+  - 🇩🇪 德国 | DEU
 rules:
 - MATCH,SELECT

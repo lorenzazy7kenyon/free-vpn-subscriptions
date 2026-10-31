@@ -18,17 +18,6 @@ proxies:
   port: 43558
   udp: true
 - type: vless
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: 🇦🇱[www.v2nodes.com] vless-AL-1...
-  server: 89.125.139.115
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=chromesecurity=tls
-    headers:
-      Host: free.cndyw.ggff.net
-- type: vless
   uuid: b782eda8-7846-437c-ab93-07c3476c2887
   name: '🇯🇵 日本 | JPN #9'
   server: 91.239.6.47
@@ -41,6 +30,17 @@ proxies:
     path: /announcement?ed=2048fp=random
     headers:
       Host: jp-osa.862400.xyz
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: 🇦🇱[www.v2nodes.com] vless-AL-1...
+  server: 89.125.139.115
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=chromesecurity=tls
+    headers:
+      Host: free.cndyw.ggff.net
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -48,14 +48,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇦🇱[www.v2nodes.com] ss-AL-1490...
-  - 🇦🇱[www.v2nodes.com] vless-AL-1...
   - '🇯🇵 日本 | JPN #9'
+  - 🇦🇱[www.v2nodes.com] vless-AL-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇦🇱[www.v2nodes.com] ss-AL-1490...
-  - 🇦🇱[www.v2nodes.com] vless-AL-1...
   - '🇯🇵 日本 | JPN #9'
+  - 🇦🇱[www.v2nodes.com] vless-AL-1...
 rules:
 - MATCH,SELECT

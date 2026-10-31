@@ -11,23 +11,27 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: a7c66f66-76b7-42ea-8d2b-890a37239368
-  name: EPODONIOS
-  server: 80.243.228.84
-  port: 2085
+  uuid: 689a62e4-37e7-41de-9e6a-f2a56368c9e2
+  name: 🇸🇰SK_1|3.6MB/s
+  server: 130.49.162.137
+  port: 443
   udp: true
-  network: grpc
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: sk3.speedtestinternet.link
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
+  - 🇸🇰SK_1|3.6MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
+  - 🇸🇰SK_1|3.6MB/s
 rules:
 - MATCH,SELECT

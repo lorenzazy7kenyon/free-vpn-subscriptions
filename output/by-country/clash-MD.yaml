@@ -23,6 +23,34 @@ proxies:
     path: pyip=bpb.yousef.isegaro.comfp=chrome
     headers:
       Host: free.cndyw.ggff.net
+- type: vless
+  uuid: 1c8f7130-8c1a-4949-831d-1d45b39c795b
+  name: 🇩🇪 德国 | DEU
+  server: 5.181.158.195
+  port: 8463
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: svoboda2.bystriynet.online
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: k2jSuvKPXyN0fCJiGpl1NMzzN7kzo64vsbbLD4gdKQ4
+    short-id: f017b721750fd683
+- type: vless
+  uuid: 1c8f7130-8c1a-4949-831d-1d45b39c795b
+  name: 🇩🇪 德国 | DEU
+  server: 5.181.158.195
+  port: 8466
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: svoboda20.bystriynet.online
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: k2jSuvKPXyN0fCJiGpl1NMzzN7kzo64vsbbLD4gdKQ4
+    short-id: f017b721750fd683
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -30,10 +58,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇲🇩[www.v2nodes.com] vless-MD-4...
+  - 🇩🇪 德国 | DEU
+  - 🇩🇪 德国 | DEU
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇲🇩[www.v2nodes.com] vless-MD-4...
+  - 🇩🇪 德国 | DEU
+  - 🇩🇪 德国 | DEU
 rules:
 - MATCH,SELECT

@@ -22,14 +22,38 @@ proxies:
   servername: de1.waspnest.space
   client-fingerprint: firefox
 - type: vless
+  uuid: 706bce83-91db-4260-b175-cba29145cd56
+  name: 🇸🇪SE_4|2.2MB/s
+  server: 171.25.158.163
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: s9se1.newagetechnologies.live
+  client-fingerprint: firefox
+- type: vless
   uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
-  name: 🇸🇪[www.v2nodes.com] vless-SE-1...
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   server: 5.178.109.174
   port: 14430
   udp: true
   network: ws
   ws-opts:
     path: /vless
+    headers:
+      Host: 5.178.109.174
+- type: vless
+  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
+  name: 🇫🇮FI_3|1.9MB/s
+  server: 13.143.180.104
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: s12.bsh-net.ru
+  client-fingerprint: firefox
 - type: vless
   uuid: b782eda8-7846-437c-ab93-07c3476c2887
   name: '🇮🇹 意大利 | ITA #2'
@@ -43,16 +67,6 @@ proxies:
     path: /announcement?ed=2048fp=random
     headers:
       Host: it-mil.862400.xyz
-- type: vless
-  uuid: 5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28
-  name: '🇸🇪 瑞典 | SWE #1'
-  server: 132.243.231.14
-  port: 33744
-  udp: true
-  network: tcp
-  tls: true
-  servername: se-5060f39afb.shamanapp.online
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -60,16 +74,18 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇸🇪 瑞典 | SWE #1'
-  - 🇸🇪[www.v2nodes.com] vless-SE-1...
+  - 🇸🇪SE_4|2.2MB/s
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
+  - 🇫🇮FI_3|1.9MB/s
   - '🇮🇹 意大利 | ITA #2'
-  - '🇸🇪 瑞典 | SWE #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇸🇪 瑞典 | SWE #1'
-  - 🇸🇪[www.v2nodes.com] vless-SE-1...
+  - 🇸🇪SE_4|2.2MB/s
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
+  - 🇫🇮FI_3|1.9MB/s
   - '🇮🇹 意大利 | ITA #2'
-  - '🇸🇪 瑞典 | SWE #1'
 rules:
 - MATCH,SELECT

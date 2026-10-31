@@ -10,6 +10,18 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: trojan
+  password: humanity
+  name: '🏳[www.v2nodes.com] trojan- #1'
+  server: 185.225.68.232
+  port: 443
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
 - type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: 🇭🇺[www.v2nodes.com] vless-HU-6...
@@ -21,31 +33,19 @@ proxies:
     path: pyip=bpb.yousef.isegaro.comfp=chromesecurity=tls
     headers:
       Host: free.cndyw.ggff.net
-- type: trojan
-  password: humanity
-  name: '🏳[www.v2nodes.com] trojan- #2'
-  server: 185.225.68.232
-  port: 443
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🏳[www.v2nodes.com] trojan- #1'
   - 🇭🇺[www.v2nodes.com] vless-HU-6...
-  - '🏳[www.v2nodes.com] trojan- #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🏳[www.v2nodes.com] trojan- #1'
   - 🇭🇺[www.v2nodes.com] vless-HU-6...
-  - '🏳[www.v2nodes.com] trojan- #2'
 rules:
 - MATCH,SELECT

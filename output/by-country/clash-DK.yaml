@@ -10,32 +10,27 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知90
-  server: 193.180.211.155
-  port: 443
+- type: vless
+  uuid: a346c521-7a7f-452b-9356-a4893feb5982
+  name: 🇩🇰[www.v2nodes.com] vless-DK-1...
+  server: 193.233.253.180
+  port: 8444
   udp: true
+  network: grpc
   tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
+  servername: github.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知90
+  - 🇩🇰[www.v2nodes.com] vless-DK-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知90
+  - 🇩🇰[www.v2nodes.com] vless-DK-1...
 rules:
 - MATCH,SELECT

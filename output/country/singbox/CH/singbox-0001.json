@@ -1,22 +1,6 @@
 {
   "outbounds": [
     {
-      "server": "149.33.15.213",
-      "server_port": 443,
-      "tag": "🇷🇺[www.v2nodes.com] vless-RU-1...",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "swz.proxyplankton.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "type": "vless",
-      "uuid": "054362fb-e485-4a3f-9568-4c5b0f60e074"
-    },
-    {
       "method": "chacha20-ietf-poly1305",
       "password": "e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3",
       "server": "132.243.175.144",
@@ -25,21 +9,27 @@
       "type": "ss"
     },
     {
-      "flow": "xtls-rprx-vision",
-      "server": "45.90.59.15",
+      "server": "195.141.65.98",
       "server_port": 443,
-      "tag": "🇨🇭[www.v2nodes.com] vless-CH-1... #1",
+      "tag": "🇩🇪 德国 | DEU",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "www.cloudflare.com",
+        "server_name": "148-253-210-191.sslip.io",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
+      "transport": {
+        "headers": {
+          "Host": "148-253-210-191.sslip.io"
+        },
+        "path": "/test-ws",
+        "type": "ws"
+      },
       "type": "vless",
-      "uuid": "3950b45e-740d-4dca-ac95-505ec8534592"
+      "uuid": "53f03acd-fec1-6685-fc8f-03baf9550cb8"
     },
     {
       "flow": "xtls-rprx-vision",
@@ -61,27 +51,61 @@
     {
       "server": "208.69.78.217",
       "server_port": 2053,
-      "tag": "🇨🇭[www.v2nodes.com] vless-CH-1... #2",
+      "tag": "🇨🇭[www.v2nodes.com] vless-CH-1... #3",
       "tls": {
         "enabled": true,
         "insecure": false,
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "type": "vless",
       "uuid": "c0dd6d59-1573-43af-8b70-1470b2632a6d"
     },
     {
+      "flow": "xtls-rprx-vision",
+      "server": "45.90.59.15",
+      "server_port": 443,
+      "tag": "🇨🇭[www.v2nodes.com] vless-CH-1... #2",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "3950b45e-740d-4dca-ac95-505ec8534592"
+    },
+    {
+      "server": "149.33.15.213",
+      "server_port": 443,
+      "tag": "🇷🇺[www.v2nodes.com] vless-RU-1...",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "swz.proxyplankton.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "054362fb-e485-4a3f-9568-4c5b0f60e074"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "🇷🇺[www.v2nodes.com] vless-RU-1...",
         "🇨🇭[www.v2nodes.com] ss-CH-1573...",
-        "🇨🇭[www.v2nodes.com] vless-CH-1... #1",
+        "🇩🇪 德国 | DEU",
         "🇨🇭[www.v2nodes.com] vless-CH-1...",
-        "🇨🇭[www.v2nodes.com] vless-CH-1... #2"
+        "🇨🇭[www.v2nodes.com] vless-CH-1... #3",
+        "🇨🇭[www.v2nodes.com] vless-CH-1... #2",
+        "🇷🇺[www.v2nodes.com] vless-RU-1..."
       ],
       "tag": "auto",
       "type": "urltest",
@@ -90,11 +114,12 @@
     {
       "outbounds": [
         "auto",
-        "🇷🇺[www.v2nodes.com] vless-RU-1...",
         "🇨🇭[www.v2nodes.com] ss-CH-1573...",
-        "🇨🇭[www.v2nodes.com] vless-CH-1... #1",
+        "🇩🇪 德国 | DEU",
         "🇨🇭[www.v2nodes.com] vless-CH-1...",
-        "🇨🇭[www.v2nodes.com] vless-CH-1... #2"
+        "🇨🇭[www.v2nodes.com] vless-CH-1... #3",
+        "🇨🇭[www.v2nodes.com] vless-CH-1... #2",
+        "🇷🇺[www.v2nodes.com] vless-RU-1..."
       ],
       "tag": "select",
       "type": "selector"

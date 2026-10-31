@@ -1,20 +1,26 @@
 {
   "outbounds": [
     {
-      "server": "80.243.228.84",
-      "server_port": 2085,
-      "tag": "EPODONIOS",
-      "transport": {
-        "service_name": "vless",
-        "type": "grpc"
+      "flow": "xtls-rprx-vision-udp443",
+      "server": "130.49.162.137",
+      "server_port": 443,
+      "tag": "🇸🇰SK_1|3.6MB/s",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "sk3.speedtestinternet.link",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       },
       "type": "vless",
-      "uuid": "a7c66f66-76b7-42ea-8d2b-890a37239368"
+      "uuid": "689a62e4-37e7-41de-9e6a-f2a56368c9e2"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "EPODONIOS"
+        "🇸🇰SK_1|3.6MB/s"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -23,7 +29,7 @@
     {
       "outbounds": [
         "auto",
-        "EPODONIOS"
+        "🇸🇰SK_1|3.6MB/s"
       ],
       "tag": "select",
       "type": "selector"

@@ -10,13 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-256-gcm
-  password: xBStBEVqvGwHPocc
-  name: 🇨🇱[www.v2nodes.com] ss-CL-1564...
-  server: 64.176.2.21
-  port: 8388
-  udp: true
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   name: 🇨🇱[www.v2nodes.com] trojan-CL-...
@@ -30,13 +23,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇱[www.v2nodes.com] ss-CL-1564...
   - 🇨🇱[www.v2nodes.com] trojan-CL-...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇨🇱[www.v2nodes.com] ss-CL-1564...
   - 🇨🇱[www.v2nodes.com] trojan-CL-...
 rules:
 - MATCH,SELECT

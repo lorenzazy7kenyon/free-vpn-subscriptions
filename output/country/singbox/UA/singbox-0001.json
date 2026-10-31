@@ -1,17 +1,26 @@
 {
   "outbounds": [
     {
-      "method": "chacha20-ietf-poly1305",
-      "password": "G9ZuLN5DE9qqouTZwYUcvYsDJx8gyL1nCu3N7yRZFjPmYKhzSi8GkpVuexmTHAz2uvcErKkex1K2ceR2GH3L444HRNnN1YpP",
+      "flow": "xtls-rprx-vision",
       "server": "104.253.216.227",
-      "server_port": 49917,
-      "tag": "🇺🇦[www.v2nodes.com] ss-UA-1603...",
-      "type": "ss"
+      "server_port": 443,
+      "tag": "🇺🇦[www.v2nodes.com] vless-UA-1... #3",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.mozilla.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "2f6e2b17-4d5e-4a12-8979-f53fdd347580"
     },
     {
       "server": "213.111.148.137",
       "server_port": 443,
-      "tag": "🏳[www.v2nodes.com] vless- #30",
+      "tag": "🏳[www.v2nodes.com] vless- #19",
       "transport": {
         "headers": {
           "Host": "proxy-1cu.pages.dev"
@@ -25,8 +34,8 @@
     {
       "interval": "5m",
       "outbounds": [
-        "🇺🇦[www.v2nodes.com] ss-UA-1603...",
-        "🏳[www.v2nodes.com] vless- #30"
+        "🇺🇦[www.v2nodes.com] vless-UA-1... #3",
+        "🏳[www.v2nodes.com] vless- #19"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -35,8 +44,8 @@
     {
       "outbounds": [
         "auto",
-        "🇺🇦[www.v2nodes.com] ss-UA-1603...",
-        "🏳[www.v2nodes.com] vless- #30"
+        "🇺🇦[www.v2nodes.com] vless-UA-1... #3",
+        "🏳[www.v2nodes.com] vless- #19"
       ],
       "tag": "select",
       "type": "selector"

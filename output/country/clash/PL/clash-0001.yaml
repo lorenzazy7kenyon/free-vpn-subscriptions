@@ -11,18 +11,33 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: eb8af077-a580-4f67-8042-9572a39e699d
+  uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
   name: 🇵🇱 波兰 | POL
-  server: 31.76.251.23
+  server: 31.59.143.147
   port: 443
   udp: true
+  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.ya.ru
+  servername: pl2.waspnest.space
   client-fingerprint: firefox
   reality-opts:
-    public-key: dlhoLMdfvgjSVzSuT0PPhomRdNcy8_qtnky0kKflqGI
-    short-id: a1b2c3d4
+    public-key: Liu35gmIQJtbul5AeCrceJTjsmln4RaqxX6joKlaBjk
+    short-id: ae97223a8f799889
+- type: vless
+  uuid: 706bce83-91db-4260-b175-cba29145cd56
+  name: 🇵🇱 波兰 | POL
+  server: 177.1.192.117
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: up7.uni-plan.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Lt3gSdGmfQMx50yH-OOJaNBSg80vzIveaNVwUUWJwzQ
+    short-id: 3952a220c86628a8
 - type: vless
   uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
   name: '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
@@ -35,19 +50,35 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 6heexyz
+  name: 🇵🇱[www.v2nodes.com] ss-PL-1273...
+  server: 54.36.174.140
+  port: 443
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 6heexyz
+  name: '🇵🇱[www.v2nodes.com] ss-PL-1273... #1'
+  server: 54.36.174.134
+  port: 443
+  udp: true
+- type: ss
   cipher: aes-256-gcm
   password: itzvpn@321
-  name: 🇵🇱[www.v2nodes.com] ss-PL-1548...
+  name: 🇫🇷FR-51.83.192.80-2722
   server: 51.83.192.80
   port: 8388
   udp: true
 - type: vless
-  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #5'
-  server: 54.37.136.194
-  port: 2053
+  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
+  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
+  server: 2.26.6.1
+  port: 2087
   udp: true
   network: tcp
+  tls: true
+  servername: 2.26.6.1
 - type: vmess
   uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
   alterId: 0
@@ -62,21 +93,15 @@ proxies:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
 - type: vless
-  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  server: 2.26.6.1
-  port: 2087
+  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #5'
+  server: 54.37.136.194
+  port: 2053
   udp: true
   network: tcp
   tls: true
-  servername: 2.26.6.1
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 6heexyz
-  name: '🏳[www.v2nodes.com] ss- #7'
-  server: 54.36.174.134
-  port: 443
-  udp: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -84,22 +109,26 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇵🇱 波兰 | POL
+  - 🇵🇱 波兰 | POL
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
-  - 🇵🇱[www.v2nodes.com] ss-PL-1548...
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #5'
-  - 🇫🇷FR-54.37.131.126-0166
+  - 🇵🇱[www.v2nodes.com] ss-PL-1273...
+  - '🇵🇱[www.v2nodes.com] ss-PL-1273... #1'
+  - 🇫🇷FR-51.83.192.80-2722
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  - '🏳[www.v2nodes.com] ss- #7'
+  - 🇫🇷FR-54.37.131.126-0166
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #5'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇵🇱 波兰 | POL
+  - 🇵🇱 波兰 | POL
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
-  - 🇵🇱[www.v2nodes.com] ss-PL-1548...
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #5'
-  - 🇫🇷FR-54.37.131.126-0166
+  - 🇵🇱[www.v2nodes.com] ss-PL-1273...
+  - '🇵🇱[www.v2nodes.com] ss-PL-1273... #1'
+  - 🇫🇷FR-51.83.192.80-2722
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  - '🏳[www.v2nodes.com] ss- #7'
+  - 🇫🇷FR-54.37.131.126-0166
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #5'
 rules:
 - MATCH,SELECT

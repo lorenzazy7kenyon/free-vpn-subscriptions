@@ -11,16 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: abca037b-bee5-41cc-a888-0668e4c66176
-  name: '🇪🇪 爱沙尼亚 | EST #2'
-  server: 31.76.70.90
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: 597dad6b.con.fernarchive.online
-  client-fingerprint: chrome
-- type: vless
   uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
   name: '🇦🇹[www.v2nodes.com] vless-AT-1... #1'
   server: 146.19.143.218
@@ -30,20 +20,44 @@ proxies:
   network: tcp
   tls: true
   servername: tau1.freerunet.online
+  client-fingerprint: chrome
+- type: vless
+  uuid: 7a0348d6-55d3-4c23-b22f-6277fcb2264c
+  name: 🇪🇪 爱沙尼亚 | EST
+  server: 185.225.205.53
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: addons.mozilla.org
   client-fingerprint: qq
+  reality-opts:
+    public-key: 2XyUS3_ONl5REQ7NiwikdJphAe7oJ61-21zuqnN67y8
+    short-id: 2e82d7ac
+- type: hysteria2
+  password: 2a0fc918-9c61-451b-a9ad-e8f796e70f52
+  name: 🇪🇪 爱沙尼亚 | EST
+  server: 13.143.239.127
+  port: 443
+  udp: true
+  sni: nl1.obxodvpn.us
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇪🇪 爱沙尼亚 | EST #2'
   - '🇦🇹[www.v2nodes.com] vless-AT-1... #1'
+  - 🇪🇪 爱沙尼亚 | EST
+  - 🇪🇪 爱沙尼亚 | EST
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇪🇪 爱沙尼亚 | EST #2'
   - '🇦🇹[www.v2nodes.com] vless-AT-1... #1'
+  - 🇪🇪 爱沙尼亚 | EST
+  - 🇪🇪 爱沙尼亚 | EST
 rules:
 - MATCH,SELECT

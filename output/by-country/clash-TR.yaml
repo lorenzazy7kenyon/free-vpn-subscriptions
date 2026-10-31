@@ -11,17 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 6845a59f-970b-4e1e-8e26-06a34ee663d6
-  name: '🏳[www.v2nodes.com] vless- #21'
-  server: 185.98.63.6
-  port: 8443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: apple.com
-  client-fingerprint: chrome
-- type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
   server: 155.103.71.142
@@ -33,8 +22,18 @@ proxies:
     headers:
       Host: ccc.010304.xyz
 - type: vless
+  uuid: a346c521-7a7f-452b-9356-a4893feb5982
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
+  server: 62.133.63.45
+  port: 8444
+  udp: true
+  network: grpc
+  tls: true
+  servername: github.com
+  client-fingerprint: safari
+- type: vless
   uuid: 25e16692-d097-4e69-9e2d-8415609c1968
-  name: '🏳[www.v2nodes.com] vless- #27'
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #4'
   server: 78.135.73.47
   port: 443
   udp: true
@@ -44,8 +43,15 @@ proxies:
   servername: www.datadoghq.com
   client-fingerprint: firefox
 - type: vless
+  uuid: 893845c5-8e4a-48d5-8a85-622f5b7ea950
+  name: '🏳[www.v2nodes.com] vless- #16'
+  server: 206.1.101.85
+  port: 42654
+  udp: true
+  network: tcp
+- type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🏳[www.v2nodes.com] vless- #3'
+  name: '🏳[www.v2nodes.com] vless- #2'
   server: 155.103.71.142
   port: 443
   udp: true
@@ -57,15 +63,15 @@ proxies:
     headers:
       Host: ccc.010304.xyz
 - type: vless
-  uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  server: 62.133.63.45
-  port: 8444
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  name: '🏳[www.v2nodes.com] vless- #17'
+  server: 151.241.226.201
+  port: 2053
   udp: true
-  network: grpc
+  network: tcp
   tls: true
-  servername: github.com
-  client-fingerprint: chrome
+  servername: www.apple.com
+  client-fingerprint: firefox
 - type: vmess
   uuid: 32c017e7-2fa6-4a43-98ef-b21bb63d92e6
   alterId: 0
@@ -75,48 +81,29 @@ proxies:
   server: 206.1.96.187
   port: 443
   udp: true
-- type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  name: '🏳[www.v2nodes.com] vless- #28'
-  server: 151.241.226.201
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: 893845c5-8e4a-48d5-8a85-622f5b7ea950
-  name: '🏳[www.v2nodes.com] vless- #26'
-  server: 206.1.101.85
-  port: 42654
-  udp: true
-  network: tcp
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #21'
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
-  - '🏳[www.v2nodes.com] vless- #27'
-  - '🏳[www.v2nodes.com] vless- #3'
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #4'
+  - '🏳[www.v2nodes.com] vless- #16'
+  - '🏳[www.v2nodes.com] vless- #2'
+  - '🏳[www.v2nodes.com] vless- #17'
   - 未知64
-  - '🏳[www.v2nodes.com] vless- #28'
-  - '🏳[www.v2nodes.com] vless- #26'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #21'
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
-  - '🏳[www.v2nodes.com] vless- #27'
-  - '🏳[www.v2nodes.com] vless- #3'
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #4'
+  - '🏳[www.v2nodes.com] vless- #16'
+  - '🏳[www.v2nodes.com] vless- #2'
+  - '🏳[www.v2nodes.com] vless- #17'
   - 未知64
-  - '🏳[www.v2nodes.com] vless- #28'
-  - '🏳[www.v2nodes.com] vless- #26'
 rules:
 - MATCH,SELECT
