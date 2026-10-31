@@ -1,10 +1,29 @@
 {
   "outbounds": [
     {
+      "password": "humanity",
+      "server": "153.56.171.216",
+      "server_port": 443,
+      "tag": "🇳🇱 荷兰 | NLD 15",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "www.cordweave.com"
+      },
+      "transport": {
+        "headers": {
+          "Host": "www.cordweave.com"
+        },
+        "path": "/assignment",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
       "flow": "xtls-rprx-vision",
       "server": "146.19.143.218",
       "server_port": 443,
-      "tag": "🇦🇹[www.v2nodes.com] vless-AT-1... #1",
+      "tag": "🇦🇹[www.v2nodes.com] vless-AT-1...",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -18,27 +37,10 @@
       "uuid": "ca14493b-b984-4ffb-bc0e-9cb5da969e15"
     },
     {
-      "flow": "xtls-rprx-vision",
-      "server": "31.77.68.36",
-      "server_port": 443,
-      "tag": "🇪🇪[www.v2nodes.com] vless-EE-1...",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "addons.mozilla.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "7a0348d6-55d3-4c23-b22f-6277fcb2264c"
-    },
-    {
       "interval": "5m",
       "outbounds": [
-        "🇦🇹[www.v2nodes.com] vless-AT-1... #1",
-        "🇪🇪[www.v2nodes.com] vless-EE-1..."
+        "🇳🇱 荷兰 | NLD 15",
+        "🇦🇹[www.v2nodes.com] vless-AT-1..."
       ],
       "tag": "auto",
       "type": "urltest",
@@ -47,8 +49,8 @@
     {
       "outbounds": [
         "auto",
-        "🇦🇹[www.v2nodes.com] vless-AT-1... #1",
-        "🇪🇪[www.v2nodes.com] vless-EE-1..."
+        "🇳🇱 荷兰 | NLD 15",
+        "🇦🇹[www.v2nodes.com] vless-AT-1..."
       ],
       "tag": "select",
       "type": "selector"

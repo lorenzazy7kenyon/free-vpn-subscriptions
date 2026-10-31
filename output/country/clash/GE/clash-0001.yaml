@@ -10,24 +10,30 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: dde8219d-a988-4944-b220-0444f8dde681
-  name: EPODONIOS
-  server: 93.190.9.232
-  port: 3090
+- type: trojan
+  password: humanity
+  name: 🇳🇱 荷兰 | NLD 27
+  server: 194.135.119.82
+  port: 2053
   udp: true
-  network: grpc
+  sni: www.cordweave.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.cordweave.com
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
+  - 🇳🇱 荷兰 | NLD 27
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
+  - 🇳🇱 荷兰 | NLD 27
 rules:
 - MATCH,SELECT

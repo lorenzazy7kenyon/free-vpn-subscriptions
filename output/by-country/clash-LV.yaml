@@ -11,32 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 28e7f9e1-006c-4c38-822d-2d2903477444
-  name: 🇱🇻LV_1|1.5MB/s
-  server: 109.248.148.140
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision-udp443
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知66
-  server: 85.159.228.232
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-- type: vless
   uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
   name: '🇱🇻[www.v2nodes.com] vless-LV-1... #1'
   server: 195.123.208.32
@@ -58,23 +32,36 @@ proxies:
   tls: true
   servername: dl.google.com
   client-fingerprint: chrome
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知66
+  server: 85.159.228.232
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇻LV_1|1.5MB/s
-  - 未知66
   - '🇱🇻[www.v2nodes.com] vless-LV-1... #1'
   - 🇱🇻[www.v2nodes.com] vless-LV-1...
+  - 未知66
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇱🇻LV_1|1.5MB/s
-  - 未知66
   - '🇱🇻[www.v2nodes.com] vless-LV-1... #1'
   - 🇱🇻[www.v2nodes.com] vless-LV-1...
+  - 未知66
 rules:
 - MATCH,SELECT

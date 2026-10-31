@@ -1,37 +1,6 @@
 {
   "outbounds": [
     {
-      "server": "13.140.56.100",
-      "server_port": 14430,
-      "tag": "🇮🇳[www.v2nodes.com] vless-IN-1... #1",
-      "transport": {
-        "headers": {
-          "Host": "13.140.56.100"
-        },
-        "path": "/vless",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "5.253.28.240",
-      "server_port": 40443,
-      "tag": "🇮🇳[www.v2nodes.com] vless-IN",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "deepl.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "405b964e-a2d2-454f-aaaa-711cc218897c"
-    },
-    {
       "server": "194.61.31.126",
       "server_port": 2053,
       "tag": "🇮🇳[www.v2nodes.com] vless-IN-1... #4",
@@ -48,11 +17,24 @@
       "uuid": "1d4e18bd-1f26-4915-b35a-7ace4826e76a"
     },
     {
-      "server": "122.176.216.52",
-      "server_port": 443,
-      "tag": "🇮🇳[www.v2nodes.com] vless-IN-1...",
+      "server": "5.253.28.240",
+      "server_port": 2443,
+      "tag": "🇮🇳[www.v2nodes.com] vless-IN",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "deepl.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "service_name": "rex-eb0bf76b710ce763",
+        "type": "grpc"
+      },
       "type": "vless",
-      "uuid": "16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
+      "uuid": "5e679ccd-1586-4d5f-b87b-48251046cad8"
     },
     {
       "alter_id": 0,
@@ -68,13 +50,34 @@
       "uuid": "9db4c708-aef8-4359-821b-38e47990be0d"
     },
     {
+      "server": "13.140.56.100",
+      "server_port": 14430,
+      "tag": "🇮🇳[www.v2nodes.com] vless-IN-1... #1",
+      "transport": {
+        "headers": {
+          "Host": "13.140.56.100"
+        },
+        "path": "/vless",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
+    },
+    {
+      "server": "122.176.216.52",
+      "server_port": 443,
+      "tag": "🇮🇳[www.v2nodes.com] vless-IN-1...",
+      "type": "vless",
+      "uuid": "16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "🇮🇳[www.v2nodes.com] vless-IN-1... #1",
-        "🇮🇳[www.v2nodes.com] vless-IN",
         "🇮🇳[www.v2nodes.com] vless-IN-1... #4",
-        "🇮🇳[www.v2nodes.com] vless-IN-1...",
-        "🇮🇳IN-152.67.8.205-0205"
+        "🇮🇳[www.v2nodes.com] vless-IN",
+        "🇮🇳IN-152.67.8.205-0205",
+        "🇮🇳[www.v2nodes.com] vless-IN-1... #1",
+        "🇮🇳[www.v2nodes.com] vless-IN-1..."
       ],
       "tag": "auto",
       "type": "urltest",
@@ -83,11 +86,11 @@
     {
       "outbounds": [
         "auto",
-        "🇮🇳[www.v2nodes.com] vless-IN-1... #1",
-        "🇮🇳[www.v2nodes.com] vless-IN",
         "🇮🇳[www.v2nodes.com] vless-IN-1... #4",
-        "🇮🇳[www.v2nodes.com] vless-IN-1...",
-        "🇮🇳IN-152.67.8.205-0205"
+        "🇮🇳[www.v2nodes.com] vless-IN",
+        "🇮🇳IN-152.67.8.205-0205",
+        "🇮🇳[www.v2nodes.com] vless-IN-1... #1",
+        "🇮🇳[www.v2nodes.com] vless-IN-1..."
       ],
       "tag": "select",
       "type": "selector"

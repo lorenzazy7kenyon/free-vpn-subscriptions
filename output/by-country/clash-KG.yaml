@@ -1,0 +1,39 @@
+mode: rule
+log-level: info
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- type: trojan
+  password: humanity
+  name: 🇳🇱 荷兰 | NLD 9
+  server: 212.2.227.187
+  port: 443
+  udp: true
+  sni: www.cordweave.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.cordweave.com
+proxy-groups:
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇳🇱 荷兰 | NLD 9
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - 🇳🇱 荷兰 | NLD 9
+rules:
+- MATCH,SELECT

@@ -18,33 +18,15 @@ proxies:
   udp: true
   sni: www.cordweave.com
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.cordweave.com
 - type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
+  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   server: 147.78.0.186
   port: 2053
   udp: true
   network: ws
   ws-opts:
     path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
-    headers:
-      Host: free.cndyw.ggff.net
-- type: vless
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: 🇦🇪[www.v2nodes.com] vless-AE-4...
-  server: 147.78.0.186
-  port: 2053
-  udp: true
-  network: ws
-  tls: true
-  servername: free.cndyw.ggff.net
-  ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=random
     headers:
       Host: free.cndyw.ggff.net
 - type: vless
@@ -58,6 +40,19 @@ proxies:
     path: /vless
     headers:
       Host: 95.174.68.188
+- type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  name: 🇦🇪[www.v2nodes.com] vless-AE-4...
+  server: 147.78.0.186
+  port: 2053
+  udp: true
+  network: ws
+  tls: true
+  servername: free.cndyw.ggff.net
+  ws-opts:
+    path: pyip=bpb.yousef.isegaro.comfp=random
+    headers:
+      Host: free.cndyw.ggff.net
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -65,16 +60,16 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇭🇰 香港 | HKG
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
-  - 🇦🇪[www.v2nodes.com] vless-AE-4...
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
+  - 🇦🇪[www.v2nodes.com] vless-AE-4...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇭🇰 香港 | HKG
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #2'
-  - 🇦🇪[www.v2nodes.com] vless-AE-4...
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
+  - 🇦🇪[www.v2nodes.com] vless-AE-4...
 rules:
 - MATCH,SELECT

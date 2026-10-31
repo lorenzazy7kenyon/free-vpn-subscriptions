@@ -18,26 +18,37 @@
       "password": "humanity",
       "server": "91.250.248.151",
       "server_port": 443,
-      "tag": "🇳🇱 荷兰 | NLD 22",
+      "tag": "🇳🇱 荷兰 | NLD",
       "tls": {
         "enabled": true,
         "insecure": true,
         "server_name": "www.cordweave.com"
       },
-      "transport": {
-        "headers": {
-          "Host": "www.cordweave.com"
-        },
-        "path": "/assignment",
-        "type": "ws"
-      },
       "type": "trojan"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "85.90.197.220",
+      "server_port": 443,
+      "tag": "🇬🇷[www.v2nodes.com] vless-GR-1...",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "8f704ed6-9a1a-4d04-94dd-1bff501716de"
     },
     {
       "interval": "5m",
       "outbounds": [
         "🇬🇷[www.v2nodes.com] vless-GR-3...",
-        "🇳🇱 荷兰 | NLD 22"
+        "🇳🇱 荷兰 | NLD",
+        "🇬🇷[www.v2nodes.com] vless-GR-1..."
       ],
       "tag": "auto",
       "type": "urltest",
@@ -47,7 +58,8 @@
       "outbounds": [
         "auto",
         "🇬🇷[www.v2nodes.com] vless-GR-3...",
-        "🇳🇱 荷兰 | NLD 22"
+        "🇳🇱 荷兰 | NLD",
+        "🇬🇷[www.v2nodes.com] vless-GR-1..."
       ],
       "tag": "select",
       "type": "selector"

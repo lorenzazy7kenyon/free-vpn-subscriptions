@@ -1,0 +1,44 @@
+{
+  "outbounds": [
+    {
+      "server": "107.189.7.176",
+      "server_port": 32752,
+      "tag": "🇱🇺[www.v2nodes.com] vless-LU-1...",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "4970c1cd-13e1-498a-920a-61d07be2fa65"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "🇱🇺[www.v2nodes.com] vless-LU-1..."
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "🇱🇺[www.v2nodes.com] vless-LU-1..."
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

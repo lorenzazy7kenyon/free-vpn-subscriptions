@@ -1,0 +1,47 @@
+{
+  "outbounds": [
+    {
+      "password": "humanity",
+      "server": "212.2.227.187",
+      "server_port": 443,
+      "tag": "🇳🇱 荷兰 | NLD 9",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "www.cordweave.com"
+      },
+      "transport": {
+        "headers": {
+          "Host": "www.cordweave.com"
+        },
+        "path": "/assignment",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "🇳🇱 荷兰 | NLD 9"
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "🇳🇱 荷兰 | NLD 9"
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

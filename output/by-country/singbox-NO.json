@@ -1,17 +1,37 @@
 {
   "outbounds": [
     {
+      "password": "humanity",
+      "server": "202.50.55.76",
+      "server_port": 443,
+      "tag": "🇳🇱 荷兰 | NLD 26",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "www.cordweave.com"
+      },
+      "transport": {
+        "headers": {
+          "Host": "www.cordweave.com"
+        },
+        "path": "/assignment",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
       "method": "chacha20-ietf-poly1305",
       "password": "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=",
       "server": "185.213.23.63",
       "server_port": 990,
-      "tag": "🇳🇴[www.v2nodes.com] ss-NO-1220...",
+      "tag": "🇳🇴NO-185.213.23.63-0174",
       "type": "ss"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇳🇴[www.v2nodes.com] ss-NO-1220..."
+        "🇳🇱 荷兰 | NLD 26",
+        "🇳🇴NO-185.213.23.63-0174"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -20,7 +40,8 @@
     {
       "outbounds": [
         "auto",
-        "🇳🇴[www.v2nodes.com] ss-NO-1220..."
+        "🇳🇱 荷兰 | NLD 26",
+        "🇳🇴NO-185.213.23.63-0174"
       ],
       "tag": "select",
       "type": "selector"

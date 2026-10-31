@@ -1,20 +1,28 @@
 {
   "outbounds": [
     {
-      "server": "93.190.9.232",
-      "server_port": 3090,
-      "tag": "EPODONIOS",
-      "transport": {
-        "service_name": "vless",
-        "type": "grpc"
+      "password": "humanity",
+      "server": "194.135.119.82",
+      "server_port": 2053,
+      "tag": "🇳🇱 荷兰 | NLD 27",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "www.cordweave.com"
       },
-      "type": "vless",
-      "uuid": "dde8219d-a988-4944-b220-0444f8dde681"
+      "transport": {
+        "headers": {
+          "Host": "www.cordweave.com"
+        },
+        "path": "/assignment",
+        "type": "ws"
+      },
+      "type": "trojan"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "EPODONIOS"
+        "🇳🇱 荷兰 | NLD 27"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -23,7 +31,7 @@
     {
       "outbounds": [
         "auto",
-        "EPODONIOS"
+        "🇳🇱 荷兰 | NLD 27"
       ],
       "tag": "select",
       "type": "selector"

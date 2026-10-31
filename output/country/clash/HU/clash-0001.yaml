@@ -23,17 +23,12 @@ proxies:
       Host: free.cndyw.ggff.net
 - type: trojan
   password: humanity
-  name: 🇳🇱 荷兰 | NLD 8
+  name: 🇳🇱 荷兰 | NLD
   server: 38.180.225.247
   port: 2053
   udp: true
   sni: www.cordweave.com
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.cordweave.com
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -41,12 +36,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇭🇺[www.v2nodes.com] vless-HU-6...
-  - 🇳🇱 荷兰 | NLD 8
+  - 🇳🇱 荷兰 | NLD
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇭🇺[www.v2nodes.com] vless-HU-6...
-  - 🇳🇱 荷兰 | NLD 8
+  - 🇳🇱 荷兰 | NLD
 rules:
 - MATCH,SELECT

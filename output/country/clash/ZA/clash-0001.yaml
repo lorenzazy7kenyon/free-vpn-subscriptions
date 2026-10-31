@@ -12,13 +12,6 @@ dns:
 proxies:
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
-  name: '🏳[www.v2nodes.com] ss- #5'
-  server: 102.37.156.224
-  port: 443
-  udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
   password: tfAcRikawhNoZAhu
   name: 🇿🇦[www.v2nodes.com] ss-ZA-1534...
   server: 139.84.247.164
@@ -27,9 +20,16 @@ proxies:
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: Xsy8Ox4yOV3xLlpxtjzs3X
-  name: 🇿🇦[www.v2nodes.com] ss-ZA-1333...
+  name: '🏳[www.v2nodes.com] ss- #4'
   server: 102.133.165.160
   port: 16233
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  name: 🇿🇦[www.v2nodes.com] ss-ZA-1336...
+  server: 102.37.156.224
+  port: 443
   udp: true
 proxy-groups:
 - name: AUTO
@@ -37,15 +37,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] ss- #5'
   - 🇿🇦[www.v2nodes.com] ss-ZA-1534...
-  - 🇿🇦[www.v2nodes.com] ss-ZA-1333...
+  - '🏳[www.v2nodes.com] ss- #4'
+  - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] ss- #5'
   - 🇿🇦[www.v2nodes.com] ss-ZA-1534...
-  - 🇿🇦[www.v2nodes.com] ss-ZA-1333...
+  - '🏳[www.v2nodes.com] ss- #4'
+  - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
 rules:
 - MATCH,SELECT

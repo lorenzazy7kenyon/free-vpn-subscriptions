@@ -1,0 +1,36 @@
+mode: rule
+log-level: info
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- type: vless
+  uuid: 4970c1cd-13e1-498a-920a-61d07be2fa65
+  name: 🇱🇺[www.v2nodes.com] vless-LU-1...
+  server: 107.189.7.176
+  port: 32752
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+proxy-groups:
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇱🇺[www.v2nodes.com] vless-LU-1...
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - 🇱🇺[www.v2nodes.com] vless-LU-1...
+rules:
+- MATCH,SELECT
