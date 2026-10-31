@@ -12,15 +12,13 @@ dns:
 proxies:
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🏳[www.v2nodes.com] vless- #10'
+  name: '🇸🇬[www.v2nodes.com] vless-SG #1'
   server: 88.216.69.253
   port: 443
   udp: true
   network: ws
-  tls: true
-  servername: ccc.010304.xyz
   ws-opts:
-    path: /fp=chromefp=unsafe
+    path: /fp=chromefp=unsafesecurity=tls
     headers:
       Host: ccc.010304.xyz
 proxy-groups:
@@ -29,11 +27,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #10'
+  - '🇸🇬[www.v2nodes.com] vless-SG #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #10'
+  - '🇸🇬[www.v2nodes.com] vless-SG #1'
 rules:
 - MATCH,SELECT

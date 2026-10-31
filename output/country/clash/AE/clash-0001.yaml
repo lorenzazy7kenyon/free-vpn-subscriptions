@@ -10,14 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: humanity
-  name: 🇭🇰 香港 | HKG
-  server: 95.182.95.144
-  port: 443
-  udp: true
-  sni: www.cordweave.com
-  skip-cert-verify: true
 - type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
@@ -29,17 +21,6 @@ proxies:
     path: pyip=bpb.yousef.isegaro.comfp=randomsecurity=tls
     headers:
       Host: free.cndyw.ggff.net
-- type: vless
-  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
-  name: 🇦🇪[www.v2nodes.com] vless-AE-1...
-  server: 95.174.68.188
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 95.174.68.188
 - type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: 🇦🇪[www.v2nodes.com] vless-AE-4...
@@ -53,23 +34,42 @@ proxies:
     path: pyip=bpb.yousef.isegaro.comfp=random
     headers:
       Host: free.cndyw.ggff.net
+- type: vless
+  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
+  name: 🇦🇪[www.v2nodes.com] vless-AE-1...
+  server: 95.174.68.188
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 95.174.68.188
+- type: trojan
+  password: humanity
+  name: 🇭🇰 香港 | HKG
+  server: 95.182.95.144
+  port: 443
+  udp: true
+  sni: www.cordweave.com
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇰 香港 | HKG
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇦🇪[www.v2nodes.com] vless-AE-1...
   - 🇦🇪[www.v2nodes.com] vless-AE-4...
+  - 🇦🇪[www.v2nodes.com] vless-AE-1...
+  - 🇭🇰 香港 | HKG
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇭🇰 香港 | HKG
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇦🇪[www.v2nodes.com] vless-AE-1...
   - 🇦🇪[www.v2nodes.com] vless-AE-4...
+  - 🇦🇪[www.v2nodes.com] vless-AE-1...
+  - 🇭🇰 香港 | HKG
 rules:
 - MATCH,SELECT

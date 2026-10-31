@@ -21,6 +21,17 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- type: trojan
+  password: humanity
+  name: 🇳🇱NL_7|1.2MB/s
+  server: 103.224.84.7
+  port: 443
+  udp: true
+  sni: www.cordweave.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -28,10 +39,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇹🇭[www.v2nodes.com] vless-TH-1...
+  - 🇳🇱NL_7|1.2MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇹🇭[www.v2nodes.com] vless-TH-1...
+  - 🇳🇱NL_7|1.2MB/s
 rules:
 - MATCH,SELECT

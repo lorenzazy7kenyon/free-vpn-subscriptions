@@ -36,6 +36,17 @@ proxies:
       Host: www.cordweave.com
 - type: vless
   uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
+  name: '🇩🇪 德国 | DEU #3'
+  server: 13.143.180.104
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: s12.bsh-net.ru
+  client-fingerprint: chrome
+- type: vless
+  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
   name: 🇸🇪 瑞典 | SWE
   server: 13.143.180.104
   port: 443
@@ -56,6 +67,7 @@ proxy-groups:
   proxies:
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   - 🇸🇪 瑞典 | SWE
+  - '🇩🇪 德国 | DEU #3'
   - 🇸🇪 瑞典 | SWE
 - name: SELECT
   type: select
@@ -63,6 +75,7 @@ proxy-groups:
   - AUTO
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   - 🇸🇪 瑞典 | SWE
+  - '🇩🇪 德国 | DEU #3'
   - 🇸🇪 瑞典 | SWE
 rules:
 - MATCH,SELECT

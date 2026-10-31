@@ -11,17 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
-  name: '🇱🇻[www.v2nodes.com] vless-LV-1... #1'
-  server: 195.123.208.32
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- type: vless
   uuid: 4d259556-57f7-4e5a-9a4a-48868787fb38
   name: 🇱🇻[www.v2nodes.com] vless-LV-1...
   server: 31.58.171.53
@@ -37,8 +26,8 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知66
-  server: 85.159.228.232
+  name: 未知55
+  server: 178.248.75.57
   port: 443
   udp: true
   tls: true
@@ -47,21 +36,32 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
+- type: vless
+  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
+  name: '🇱🇻[www.v2nodes.com] vless-LV-1... #1'
+  server: 195.123.208.32
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇱🇻[www.v2nodes.com] vless-LV-1... #1'
   - 🇱🇻[www.v2nodes.com] vless-LV-1...
-  - 未知66
+  - 未知55
+  - '🇱🇻[www.v2nodes.com] vless-LV-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇱🇻[www.v2nodes.com] vless-LV-1... #1'
   - 🇱🇻[www.v2nodes.com] vless-LV-1...
-  - 未知66
+  - 未知55
+  - '🇱🇻[www.v2nodes.com] vless-LV-1... #1'
 rules:
 - MATCH,SELECT

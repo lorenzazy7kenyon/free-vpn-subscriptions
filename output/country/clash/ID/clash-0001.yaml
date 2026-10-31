@@ -11,30 +11,26 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 7d9dbe01-f192-436e-b6d5-533fc3c998e0
-  name: EPODONIOS
-  server: 103.150.192.28
-  port: 443
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  name: 🇮🇩[www.v2nodes.com] vless-ID-1...
+  server: 130.94.95.198
+  port: 57353
   udp: true
-  network: ws
+  network: tcp
   tls: true
-  servername: nova-relay-d9g973.pages.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /ws?ip=103.150.192.28:443
-    headers:
-      Host: nova-relay-d9g973.pages.dev
+  servername: in001.zestapp778.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
+  - 🇮🇩[www.v2nodes.com] vless-ID-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
+  - 🇮🇩[www.v2nodes.com] vless-ID-1...
 rules:
 - MATCH,SELECT

@@ -11,19 +11,19 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇧🇬[www.v2nodes.com] vless-BG-3... #2'
-  server: 155.103.71.142
+  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
+  server: 78.135.73.47
   port: 443
   udp: true
-  network: ws
-  ws-opts:
-    path: /fp=chromefp=chromesecurity=tls
-    headers:
-      Host: ccc.010304.xyz
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.datadoghq.com
+  client-fingerprint: firefox
 - type: vless
   uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #5'
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #4'
   server: 151.241.226.201
   port: 2053
   udp: true
@@ -44,6 +44,16 @@ proxies:
     path: /assignment
     headers:
       Host: www.cordweave.com
+- type: vless
+  uuid: a346c521-7a7f-452b-9356-a4893feb5982
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
+  server: 62.133.63.45
+  port: 8444
+  udp: true
+  network: grpc
+  tls: true
+  servername: github.com
+  client-fingerprint: safari
 - type: trojan
   password: humanity
   name: 🇳🇱 荷兰 | NLD
@@ -52,40 +62,6 @@ proxies:
   udp: true
   sni: www.cordweave.com
   skip-cert-verify: true
-- type: vless
-  uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  server: 62.133.63.45
-  port: 8444
-  udp: true
-  network: grpc
-  tls: true
-  servername: github.com
-  client-fingerprint: safari
-- type: vless
-  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #4'
-  server: 78.135.73.47
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.datadoghq.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇧🇬[www.v2nodes.com] vless-BG-3... #3'
-  server: 155.103.71.142
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  ws-opts:
-    path: /fp=chromefp=chrome
-    headers:
-      Host: ccc.010304.xyz
 - type: vless
   uuid: 2446e2e2-1ce3-4502-9050-1dd32bacc68c
   name: '🇹🇷 土耳其 | TUR #1'
@@ -110,33 +86,57 @@ proxies:
     path: /assignment
     headers:
       Host: www.cordweave.com
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇧🇬[www.v2nodes.com] vless-BG-3... #3'
+  server: 155.103.71.142
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /fp=chromefp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇧🇬[www.v2nodes.com] vless-BG-3... #4'
+  server: 155.103.71.142
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=chromefp=chromesecurity=tls
+    headers:
+      Host: ccc.010304.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇧🇬[www.v2nodes.com] vless-BG-3... #2'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #5'
-  - 🇳🇱 荷兰 | NLD 17
-  - 🇳🇱 荷兰 | NLD
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #4'
-  - '🇧🇬[www.v2nodes.com] vless-BG-3... #3'
+  - 🇳🇱 荷兰 | NLD 17
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
+  - 🇳🇱 荷兰 | NLD
   - '🇹🇷 土耳其 | TUR #1'
   - 🇳🇱 荷兰 | NLD 25
+  - '🇧🇬[www.v2nodes.com] vless-BG-3... #3'
+  - '🇧🇬[www.v2nodes.com] vless-BG-3... #4'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇧🇬[www.v2nodes.com] vless-BG-3... #2'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #5'
-  - 🇳🇱 荷兰 | NLD 17
-  - 🇳🇱 荷兰 | NLD
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #4'
-  - '🇧🇬[www.v2nodes.com] vless-BG-3... #3'
+  - 🇳🇱 荷兰 | NLD 17
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
+  - 🇳🇱 荷兰 | NLD
   - '🇹🇷 土耳其 | TUR #1'
   - 🇳🇱 荷兰 | NLD 25
+  - '🇧🇬[www.v2nodes.com] vless-BG-3... #3'
+  - '🇧🇬[www.v2nodes.com] vless-BG-3... #4'
 rules:
 - MATCH,SELECT

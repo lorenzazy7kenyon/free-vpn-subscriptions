@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: trojan
   password: humanity
-  name: 🇳🇱 荷兰 | NLD 35
+  name: 🇳🇱NL_8|1.7MB/s
   server: 185.82.218.224
   port: 443
   udp: true
@@ -21,19 +21,17 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-    headers:
-      Host: www.cordweave.com
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇱 荷兰 | NLD 35
+  - 🇳🇱NL_8|1.7MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇳🇱 荷兰 | NLD 35
+  - 🇳🇱NL_8|1.7MB/s
 rules:
 - MATCH,SELECT

@@ -11,17 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 6033ee9d-7c2a-4f37-a055-0c0d2d8487f0
-  name: '🇦🇺 澳大利亚 | AUS #1'
-  server: 207.148.80.199
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ash.d50f6225-23b4-3a7b-9f15-a0fb2fc16803.googleapis.com
-  client-fingerprint: chrome
-- type: vless
   uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
   name: 🇦🇺[www.v2nodes.com] vless-AU-1...
   server: 51.161.204.242
@@ -35,21 +24,32 @@ proxies:
   port: 443
   udp: true
   sni: connectwithemployerstohireyouridealteam.com
+- type: vless
+  uuid: 6033ee9d-7c2a-4f37-a055-0c0d2d8487f0
+  name: '🇦🇺 澳大利亚 | AUS #1'
+  server: 207.148.80.199
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ash.d50f6225-23b4-3a7b-9f15-a0fb2fc16803.googleapis.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇦🇺 澳大利亚 | AUS #1'
   - 🇦🇺[www.v2nodes.com] vless-AU-1...
   - 🇦🇺[www.v2nodes.com] trojan-AU-...
+  - '🇦🇺 澳大利亚 | AUS #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇦🇺 澳大利亚 | AUS #1'
   - 🇦🇺[www.v2nodes.com] vless-AU-1...
   - 🇦🇺[www.v2nodes.com] trojan-AU-...
+  - '🇦🇺 澳大利亚 | AUS #1'
 rules:
 - MATCH,SELECT

@@ -10,21 +10,36 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  name: '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  server: 168.222.43.53
+  port: 8080
+  udp: true
+  network: tcp
+- type: vless
+  uuid: c6362720-0931-4b91-b187-d8ecf3149734
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
+  server: 178.83.45.226
+  port: 10002
+  udp: true
+  network: tcp
 - type: vmess
-  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
+  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
   alterId: 0
   cipher: auto
-  network: ws
-  name: 未知48
-  server: 140.83.57.20
-  port: 13118
+  network: tcp
+  name: 未知61
+  server: 82.152.197.167
+  port: 20004
   udp: true
-  tls: true
-  servername: sg.11160321.de5.net
-  ws-opts:
-    path: /
-    headers:
-      Host: sg.11160321.de5.net
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  name: 🇿🇦[www.v2nodes.com] ss-ZA-1336...
+  server: 102.37.156.224
+  port: 443
+  udp: true
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
@@ -36,28 +51,25 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
-  name: 🇿🇦[www.v2nodes.com] ss-ZA-1336...
-  server: 102.37.156.224
-  port: 443
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知48
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
+  - 未知61
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知48
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
+  - 未知61
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
 rules:
 - MATCH,SELECT
