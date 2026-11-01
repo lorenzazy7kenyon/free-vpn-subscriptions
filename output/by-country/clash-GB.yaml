@@ -11,16 +11,27 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #10'
-  server: 159.65.51.189
-  port: 443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: '🇺🇸 美国 | USA #7'
+  server: 102.177.189.30
+  port: 8880
   udp: true
   network: ws
   ws-opts:
-    path: /fpsecurity=tls
+    path: /
     headers:
-      Host: ccc.010304.xyz
+      Host: vms.lifetime29.workers.dev
+- type: vless
+  uuid: 9f61cdf4-810d-4052-bbc7-2da0c8e20104
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
+  server: 83.147.18.3
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: '🇬🇧[www.v2nodes.com] vless-GB-1... #9'
@@ -34,17 +45,6 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
-- type: trojan
-  password: humanity
-  name: 🇳🇱NL_12|2.1MB/s
-  server: 143.110.175.165
-  port: 443
-  udp: true
-  sni: www.cordweave.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
 - type: ss
   cipher: aes-128-gcm
   password: shadowsocks
@@ -52,6 +52,40 @@ proxies:
   server: 158.173.24.73
   port: 443
   udp: true
+- type: vless
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
+  server: 23.81.36.148
+  port: 1222
+  udp: true
+  network: tcp
+  tls: true
+  servername: play.google.com
+  client-fingerprint: chrome
+- type: vmess
+  uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇬🇧GB-57.129.132.223-1233
+  server: 57.129.132.223
+  port: 80
+  udp: true
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: google.com
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #10'
+  server: 159.65.51.189
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fpsecurity=tls
+    headers:
+      Host: ccc.010304.xyz
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -60,23 +94,12 @@ proxies:
   port: 19999
   udp: true
 - type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  name: 🇬🇧[www.v2nodes.com] ss-GB-1247...
-  server: 94.156.250.148
-  port: 7001
-  udp: true
-- type: vless
-  uuid: 64c05afc-ce81-4ba0-b697-afa04da1427e
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
-  server: 195.72.166.251
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇬🇧GB-141.98.101.181-0174
+  server: 141.98.101.181
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.lloydsbankinggroup.com
-  client-fingerprint: chrome
 - type: vless
   uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
   name: '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
@@ -86,56 +109,10 @@ proxies:
   network: tcp
   tls: true
   servername: www.apple.com
-  client-fingerprint: firefox
-- type: vmess
-  uuid: 10029c03-5d2f-4185-aab2-cbf91eef7361
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知42
-  server: 57.128.164.21
-  port: 80
-  udp: true
-  ws-opts:
-    path: /d3d3LmlyYW5ob3N0LmNvbQ==
-    headers:
-      Host: https.http.www.net.com.ramseyv2.ir.
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知124
-  server: 185.92.74.108
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇬🇧GB-141.98.101.181-0135
-  server: 141.98.101.181
-  port: 443
-  udp: true
-- type: vless
-  uuid: 9f61cdf4-810d-4052-bbc7-2da0c8e20104
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
-  server: 83.147.18.3
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
   client-fingerprint: chrome
 - type: vless
   uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
-  name: '🇺🇦[www.v2nodes.com] vless-UA-1... #5'
+  name: '🇺🇦[www.v2nodes.com] vless-UA-1... #6'
   server: 83.147.18.75
   port: 443
   udp: true
@@ -146,19 +123,26 @@ proxies:
   client-fingerprint: qq
 - type: ss
   cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  name: 🇬🇧[www.v2nodes.com] ss-GB-1247...
+  server: 94.156.250.148
+  port: 7001
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   name: 🇦🇹[www.v2nodes.com] ss-AT-1595...
   server: 82.110.60.9
   port: 19999
   udp: true
 - type: vmess
-  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
+  uuid: 859cb52d-0a26-4b2f-a9b1-0eb83115c9d1
   alterId: 0
   cipher: auto
   network: tcp
-  name: 未知61
-  server: 82.152.197.167
-  port: 20004
+  name: 未知48
+  server: 51.132.38.134
+  port: 47832
   udp: true
 proxy-groups:
 - name: AUTO
@@ -166,39 +150,37 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #10'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #9'
-  - 🇳🇱NL_12|2.1MB/s
-  - 🇬🇧[www.v2nodes.com] ss-GB-1451...
-  - 🇬🇧[www.v2nodes.com] ss-GB-1602...
-  - 🇬🇧[www.v2nodes.com] ss-GB-1247...
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
-  - 未知42
-  - 未知124
-  - 🇬🇧GB-141.98.101.181-0135
+  - '🇺🇸 美国 | USA #7'
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #5'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #9'
+  - 🇬🇧[www.v2nodes.com] ss-GB-1451...
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
+  - 🇬🇧GB-57.129.132.223-1233
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #10'
+  - 🇬🇧[www.v2nodes.com] ss-GB-1602...
+  - 🇬🇧GB-141.98.101.181-0174
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #6'
+  - 🇬🇧[www.v2nodes.com] ss-GB-1247...
   - 🇦🇹[www.v2nodes.com] ss-AT-1595...
-  - 未知61
+  - 未知48
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #10'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #9'
-  - 🇳🇱NL_12|2.1MB/s
-  - 🇬🇧[www.v2nodes.com] ss-GB-1451...
-  - 🇬🇧[www.v2nodes.com] ss-GB-1602...
-  - 🇬🇧[www.v2nodes.com] ss-GB-1247...
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
-  - 未知42
-  - 未知124
-  - 🇬🇧GB-141.98.101.181-0135
+  - '🇺🇸 美国 | USA #7'
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #5'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #9'
+  - 🇬🇧[www.v2nodes.com] ss-GB-1451...
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
+  - 🇬🇧GB-57.129.132.223-1233
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #10'
+  - 🇬🇧[www.v2nodes.com] ss-GB-1602...
+  - 🇬🇧GB-141.98.101.181-0174
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #6'
+  - 🇬🇧[www.v2nodes.com] ss-GB-1247...
   - 🇦🇹[www.v2nodes.com] ss-AT-1595...
-  - 未知61
+  - 未知48
 rules:
 - MATCH,SELECT

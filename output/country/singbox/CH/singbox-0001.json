@@ -3,7 +3,7 @@
     {
       "server": "195.141.65.98",
       "server_port": 443,
-      "tag": "🇩🇪[www.v2nodes.com] vless-DE-1... #3",
+      "tag": "🇩🇪[www.v2nodes.com] vless-DE-1... #9",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -20,15 +20,21 @@
       "uuid": "53f03acd-fec1-6685-fc8f-03baf9550cb8"
     },
     {
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "208.69.78.19",
+      "flow": "xtls-rprx-vision-udp443",
+      "server": "179.43.170.84",
       "server_port": 443,
-      "tag": "🇨🇭[www.v2nodes.com] trojan-CH-...",
+      "tag": "🇨🇭CH_3|3.0MB/s",
       "tls": {
         "enabled": true,
-        "insecure": false
+        "insecure": false,
+        "server_name": "si2.greenzone12.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
-      "type": "trojan"
+      "type": "vless",
+      "uuid": "8007dda2-aed2-4514-8299-6e3edbdb015b"
     },
     {
       "flow": "xtls-rprx-vision",
@@ -74,20 +80,32 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "type": "vless",
       "uuid": "c0dd6d59-1573-43af-8b70-1470b2632a6d"
     },
     {
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "208.69.78.19",
+      "server_port": 443,
+      "tag": "🇨🇭[www.v2nodes.com] trojan-CH-... #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false
+      },
+      "type": "trojan"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "🇩🇪[www.v2nodes.com] vless-DE-1... #3",
-        "🇨🇭[www.v2nodes.com] trojan-CH-...",
+        "🇩🇪[www.v2nodes.com] vless-DE-1... #9",
+        "🇨🇭CH_3|3.0MB/s",
         "🇨🇭[www.v2nodes.com] vless-CH-1... #1",
         "🇨🇭[www.v2nodes.com] vless-CH-1... #2",
-        "🇨🇭[www.v2nodes.com] vless-CH-1... #3"
+        "🇨🇭[www.v2nodes.com] vless-CH-1... #3",
+        "🇨🇭[www.v2nodes.com] trojan-CH-... #1"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -96,11 +114,12 @@
     {
       "outbounds": [
         "auto",
-        "🇩🇪[www.v2nodes.com] vless-DE-1... #3",
-        "🇨🇭[www.v2nodes.com] trojan-CH-...",
+        "🇩🇪[www.v2nodes.com] vless-DE-1... #9",
+        "🇨🇭CH_3|3.0MB/s",
         "🇨🇭[www.v2nodes.com] vless-CH-1... #1",
         "🇨🇭[www.v2nodes.com] vless-CH-1... #2",
-        "🇨🇭[www.v2nodes.com] vless-CH-1... #3"
+        "🇨🇭[www.v2nodes.com] vless-CH-1... #3",
+        "🇨🇭[www.v2nodes.com] trojan-CH-... #1"
       ],
       "tag": "select",
       "type": "selector"

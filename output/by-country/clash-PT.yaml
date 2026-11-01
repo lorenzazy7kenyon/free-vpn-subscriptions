@@ -11,30 +11,27 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇪🇸 西班牙 | ESP
-  server: 195.133.92.228
+  uuid: b24ad12f-f6ce-4f0b-a264-d58a76104026
+  name: '🇵🇹 葡萄牙 | PRT #1'
+  server: 50.7.43.117
   port: 443
   udp: true
-  network: ws
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
-    headers:
-      Host: snip.edgeoneai.cc.cd
+  servername: pt3.magazinnarubeva.ru
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇸 西班牙 | ESP
+  - '🇵🇹 葡萄牙 | PRT #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇪🇸 西班牙 | ESP
+  - '🇵🇹 葡萄牙 | PRT #1'
 rules:
 - MATCH,SELECT

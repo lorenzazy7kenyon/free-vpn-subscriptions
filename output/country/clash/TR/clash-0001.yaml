@@ -11,8 +11,28 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #4'
+  server: 151.241.226.201
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: a346c521-7a7f-452b-9356-a4893feb5982
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
+  server: 62.133.63.45
+  port: 8444
+  udp: true
+  network: grpc
+  tls: true
+  servername: github.com
+  client-fingerprint: chrome
+- type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇧🇬[www.v2nodes.com] vless-BG-3... #3'
+  name: '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
   server: 155.103.71.142
   port: 443
   udp: true
@@ -23,16 +43,6 @@ proxies:
     path: /fp=chromefp=chrome
     headers:
       Host: ccc.010304.xyz
-- type: vless
-  uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
-  server: 62.133.63.45
-  port: 8444
-  udp: true
-  network: grpc
-  tls: true
-  servername: github.com
-  client-fingerprint: safari
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: '🇧🇬[www.v2nodes.com] vless-BG-3... #4'
@@ -54,66 +64,26 @@ proxies:
   network: tcp
   tls: true
   servername: www.datadoghq.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #4'
-  server: 151.241.226.201
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-- type: trojan
-  password: humanity
-  name: 🇳🇱 荷兰 | NLD 17
-  server: 82.26.198.25
-  port: 443
-  udp: true
-  sni: www.cordweave.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.cordweave.com
-- type: trojan
-  password: humanity
-  name: 🇳🇱 荷兰 | NLD 25
-  server: 89.36.137.173
-  port: 443
-  udp: true
-  sni: www.cordweave.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.cordweave.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇧🇬[www.v2nodes.com] vless-BG-3... #3'
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #4'
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
+  - '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #4'
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #4'
-  - 🇳🇱 荷兰 | NLD 17
-  - 🇳🇱 荷兰 | NLD 25
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇧🇬[www.v2nodes.com] vless-BG-3... #3'
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #4'
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
+  - '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #4'
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #4'
-  - 🇳🇱 荷兰 | NLD 17
-  - 🇳🇱 荷兰 | NLD 25
 rules:
 - MATCH,SELECT

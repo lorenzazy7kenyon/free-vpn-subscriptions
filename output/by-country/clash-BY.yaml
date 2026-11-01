@@ -10,30 +10,39 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: humanity
-  name: 🇳🇱NL_16|1010KB/s
-  server: 91.149.167.147
-  port: 8443
+- type: vless
+  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
+  name: '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
+  server: 178.172.227.124
+  port: 14430
   udp: true
-  sni: www.cordweave.com
-  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /assignment
-- type: trojan
-  password: humanity
-  name: 🇳🇱 荷兰 | NLD 38
-  server: 93.85.236.9
-  port: 443
-  udp: true
-  sni: www.cordweave.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
+    path: /vless
     headers:
-      Host: www.cordweave.com
+      Host: 178.172.227.124
+- type: vless
+  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
+  name: '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  server: 95.128.71.79
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 95.128.71.79
+- type: vless
+  uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
+  name: 🇧🇾[www.v2nodes.com] vless-BY-1...
+  server: 178.172.227.228
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 178.172.227.228
 - type: hysteria2
   password: a35c508f-4d5d-4531-842e-6e9d43c762c0
   name: 🇧🇾 BY_01
@@ -55,16 +64,18 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇱NL_16|1010KB/s
-  - 🇳🇱 荷兰 | NLD 38
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  - 🇧🇾[www.v2nodes.com] vless-BY-1...
   - 🇧🇾 BY_01
   - برای اتصال دائمی جوین شو🪭 Tele...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇳🇱NL_16|1010KB/s
-  - 🇳🇱 荷兰 | NLD 38
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  - 🇧🇾[www.v2nodes.com] vless-BY-1...
   - 🇧🇾 BY_01
   - برای اتصال دائمی جوین شو🪭 Tele...
 rules:
