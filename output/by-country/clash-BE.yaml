@@ -12,19 +12,6 @@ dns:
 proxies:
 - type: trojan
   password: humanity
-  name: 🇧🇪 比利时 | BEL
-  server: 141.98.233.6
-  port: 443
-  udp: true
-  sni: www.cordweave.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.cordweave.com
-- type: trojan
-  password: humanity
   name: 🇳🇱 荷兰 | NLD 20
   server: 35.241.172.224
   port: 443
@@ -51,21 +38,34 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
+- type: trojan
+  password: humanity
+  name: 🇧🇪 比利时 | BEL
+  server: 141.98.233.6
+  port: 443
+  udp: true
+  sni: www.cordweave.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.cordweave.com
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇪 比利时 | BEL
   - 🇳🇱 荷兰 | NLD 20
   - 未知98
+  - 🇧🇪 比利时 | BEL
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇧🇪 比利时 | BEL
   - 🇳🇱 荷兰 | NLD 20
   - 未知98
+  - 🇧🇪 比利时 | BEL
 rules:
 - MATCH,SELECT

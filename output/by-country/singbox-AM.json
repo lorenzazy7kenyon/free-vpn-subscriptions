@@ -1,6 +1,23 @@
 {
   "outbounds": [
     {
+      "flow": "xtls-rprx-vision",
+      "server": "2.56.207.68",
+      "server_port": 443,
+      "tag": "🇦🇲 AM_20",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.slovarik.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "0192c3d3-18d5-4b95-8eb3-598e18de6918"
+    },
+    {
       "server": "77.91.68.70",
       "server_port": 55983,
       "tag": "🇦🇲[www.v2nodes.com] vless-AM-1...",
@@ -17,22 +34,10 @@
       "uuid": "f667a096-5231-4cfb-8759-92bb32473139"
     },
     {
-      "password": "humanity",
-      "server": "88.218.92.205",
-      "server_port": 443,
-      "tag": "🇳🇱 荷兰 | NLD",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.cordweave.com"
-      },
-      "type": "trojan"
-    },
-    {
       "interval": "5m",
       "outbounds": [
-        "🇦🇲[www.v2nodes.com] vless-AM-1...",
-        "🇳🇱 荷兰 | NLD"
+        "🇦🇲 AM_20",
+        "🇦🇲[www.v2nodes.com] vless-AM-1..."
       ],
       "tag": "auto",
       "type": "urltest",
@@ -41,8 +46,8 @@
     {
       "outbounds": [
         "auto",
-        "🇦🇲[www.v2nodes.com] vless-AM-1...",
-        "🇳🇱 荷兰 | NLD"
+        "🇦🇲 AM_20",
+        "🇦🇲[www.v2nodes.com] vless-AM-1..."
       ],
       "tag": "select",
       "type": "selector"

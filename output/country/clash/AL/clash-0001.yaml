@@ -23,6 +23,13 @@ proxies:
       Host: free.cndyw.ggff.net
 - type: ss
   cipher: chacha20-ietf-poly1305
+  password: lsu1v/3iNERwDDVwxCu5033KCUqQOoElYQul63kmqJ8=
+  name: 🇦🇱[www.v2nodes.com] ss-AL-1490...
+  server: 130.49.189.158
+  port: 43558
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
   password: cZGr8nLHdf+FE5ZAw0Y/Rzsml4AyikGL481Pg7eBpsI=
   name: 🇦🇱[www.v2nodes.com] ss-AL-1490...
   server: 130.49.189.158
@@ -36,11 +43,13 @@ proxy-groups:
   proxies:
   - 🇦🇱[www.v2nodes.com] vless-AL-1...
   - 🇦🇱[www.v2nodes.com] ss-AL-1490...
+  - 🇦🇱[www.v2nodes.com] ss-AL-1490...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇦🇱[www.v2nodes.com] vless-AL-1...
+  - 🇦🇱[www.v2nodes.com] ss-AL-1490...
   - 🇦🇱[www.v2nodes.com] ss-AL-1490...
 rules:
 - MATCH,SELECT

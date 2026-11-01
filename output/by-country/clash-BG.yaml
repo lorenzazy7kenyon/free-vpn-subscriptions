@@ -21,6 +21,17 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
+- type: trojan
+  password: humanity
+  name: 🇳🇱NL_10|2.4MB/s
+  server: 82.118.18.179
+  port: 443
+  udp: true
+  sni: www.cordweave.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -28,10 +39,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇳🇱NL_8|1.7MB/s
+  - 🇳🇱NL_10|2.4MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇳🇱NL_8|1.7MB/s
+  - 🇳🇱NL_10|2.4MB/s
 rules:
 - MATCH,SELECT

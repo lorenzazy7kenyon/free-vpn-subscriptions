@@ -10,21 +10,31 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知130
-  server: 111.88.74.167
+- type: trojan
+  password: humanity
+  name: 🇳🇱[www.v2nodes.com] trojan-NL-...
+  server: 45.128.76.242
   port: 443
   udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
+  sni: www.trusteeforward.com
+  network: ws
   ws-opts:
-    path: /api/v1/gpu-stream/socket
+    path: /assignment
     headers:
-      Host: renderer-stream-2-62.mirra.now
+      Host: www.trusteeforward.com
+- type: vless
+  uuid: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  name: 🇩🇪[www.v2nodes.com] vless-DE-1...
+  server: 140.225.208.140
+  port: 2083
+  udp: true
+  network: ws
+  tls: true
+  servername: speedtestmark.com
+  ws-opts:
+    path: /vless-wsfp=chrome
+    headers:
+      Host: speedtestmark.com
 - type: vless
   uuid: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
   name: '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
@@ -36,33 +46,6 @@ proxies:
   servername: speedtestmark.com
   ws-opts:
     path: /vless-wsfp=safari
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇩🇪[www.v2nodes.com] trojan-DE-... #3'
-  server: 193.108.119.15
-  port: 443
-  udp: true
-  sni: 193.108.119.15
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇩🇪DE-185.176.204.18-0102
-  server: 185.176.204.18
-  port: 19999
-  udp: true
-- type: trojan
-  password: humanity
-  name: 🇳🇱 荷兰 | NLD 30
-  server: 91.196.32.217
-  port: 443
-  udp: true
-  sni: www.cordweave.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.cordweave.com
 - type: vless
   uuid: 36fb6650-8a50-42b5-9f66-06538806f32c
   name: '🇩🇪[www.v2nodes.com] vless-DE-1... #10'
@@ -70,20 +53,23 @@ proxies:
   port: 25362
   udp: true
   network: tcp
-- type: vless
-  uuid: ac36b6f8-d03d-46cb-808f-e655183fb76d
-  name: 🇩🇪 德国 | DEU
-  server: 185.44.64.166
-  port: 59397
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
   tls: true
-  servername: la.blogs.nvidia.com
+  servername: www.chip.de
   client-fingerprint: chrome
-  reality-opts:
-    public-key: 7w6m1Z7wZk1KX7bBlCi50t_8T-HdC8aMizOcIyqcaS4
-    short-id: '1430'
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇩🇪[www.v2nodes.com] trojan-DE-... #3'
+  server: 193.108.119.29
+  port: 443
+  udp: true
+  sni: blog.iloverussia2026.com
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇩🇪[www.v2nodes.com] trojan-DE-... #5'
+  server: 193.108.119.96
+  port: 443
+  udp: true
+  sni: learn.iloverussia2026.com
 - type: vmess
   uuid: 7add6c87-86cb-412a-b3ab-d7e0fb276f09
   alterId: 0
@@ -99,33 +85,6 @@ proxies:
     path: /ws-vmess
     headers:
       Host: bzqHefRtvpQyiUQb.v.3dns.vip
-- type: vless
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  name: '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
-  server: 168.222.43.53
-  port: 8080
-  udp: true
-  network: tcp
-- type: vless
-  uuid: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
-  name: 🇩🇪[www.v2nodes.com] vless-DE-1...
-  server: 140.225.208.140
-  port: 2083
-  udp: true
-  network: ws
-  tls: true
-  servername: speedtestmark.com
-  ws-opts:
-    path: /vless-wsfp=chrome
-    headers:
-      Host: speedtestmark.com
-- type: vless
-  uuid: c6362720-0931-4b91-b187-d8ecf3149734
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
-  server: 178.83.45.226
-  port: 10002
-  udp: true
-  network: tcp
 - type: ss
   cipher: aes-256-cfb
   password: amazonskr05
@@ -134,26 +93,18 @@ proxies:
   port: 443
   udp: true
 - type: trojan
-  password: humanity
-  name: 🇳🇱 荷兰 | NLD 4
-  server: 213.165.55.4
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇩🇪[www.v2nodes.com] trojan-DE-... #6'
+  server: 193.108.119.78
   port: 443
   udp: true
-  sni: www.cordweave.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.cordweave.com
-- type: vmess
-  uuid: 3d94220c-a974-49ca-a1a3-d7e3c7359ccd
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知120
-  server: 3.72.52.119
-  port: 1003
+  sni: www.iloverussia2026.com
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇩🇪DE-185.176.204.18-0102
+  server: 185.176.204.18
+  port: 19999
   udp: true
 - type: trojan
   password: humanity
@@ -179,6 +130,42 @@ proxies:
     path: /assignment
     headers:
       Host: www.pleadcourt.org
+- type: vless
+  uuid: d0d3d49c-56e8-40e1-9e83-793d03f83d93
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
+  server: 91.107.180.176
+  port: 465
+  udp: true
+  network: ws
+  ws-opts:
+    path: /security=tls
+    headers:
+      Host: hw7.divarkhaghazi.com.
+- type: vmess
+  uuid: 78fb1a62-b276-4a13-ab57-f2b87d0f37a5
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知148
+  server: 178.105.210.96
+  port: 80
+  udp: true
+- type: vmess
+  uuid: 3d94220c-a974-49ca-a1a3-d7e3c7359ccd
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知120
+  server: 3.72.52.119
+  port: 1003
+  udp: true
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇩🇪[www.v2nodes.com] trojan-DE-... #3'
+  server: 193.108.119.15
+  port: 443
+  udp: true
+  sni: 193.108.119.15
 - type: trojan
   password: humanity
   name: 🇳🇱 荷兰 | NLD 19
@@ -192,6 +179,17 @@ proxies:
     path: /assignment
     headers:
       Host: www.cordweave.com
+- type: trojan
+  password: humanity
+  name: 🇳🇱NL_23|1.9MB/s
+  server: 87.120.126.131
+  port: 443
+  udp: true
+  sni: www.cordweave.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
 - type: vless
   uuid: d4001352-dc64-48b8-b786-5860b284ad3d
   name: '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
@@ -202,6 +200,48 @@ proxies:
   tls: true
   servername: vk.com
   client-fingerprint: firefox
+- type: vless
+  uuid: c6362720-0931-4b91-b187-d8ecf3149734
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
+  server: 178.83.45.226
+  port: 10002
+  udp: true
+  network: tcp
+- type: vless
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  name: '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  server: 168.222.43.53
+  port: 8080
+  udp: true
+  network: tcp
+- type: trojan
+  password: humanity
+  name: 🇳🇱 荷兰 | NLD 30
+  server: 91.196.32.217
+  port: 443
+  udp: true
+  sni: www.cordweave.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.cordweave.com
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知130
+  server: 111.88.74.167
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
 - type: trojan
   password: humanity
   name: 🇳🇱 荷兰 | NLD 28
@@ -215,23 +255,17 @@ proxies:
     path: /assignment
     headers:
       Host: www.cordweave.com
-- type: vmess
-  uuid: 78fb1a62-b276-4a13-ab57-f2b87d0f37a5
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知148
-  server: 178.105.210.96
-  port: 80
-  udp: true
 - type: trojan
   password: humanity
-  name: 🇳🇱 荷兰 | NLD
-  server: 202.61.198.53
+  name: 🇳🇱NL_24|3.5MB/s
+  server: 144.31.120.77
   port: 443
   udp: true
   sni: www.cordweave.com
   skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
 - type: trojan
   password: humanity
   name: 🇫🇷[www.v2nodes.com] trojan-FR-...
@@ -244,6 +278,33 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
+- type: vless
+  uuid: 727a9178-d7f0-4142-8205-b0d19959ded0
+  name: 🇩🇪[www.v2nodes.com] vless-DE-1...
+  server: 130.49.177.193
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: de-2.ffpn.pro
+  client-fingerprint: firefox
+- type: hysteria2
+  password: c9aca131-c6a4-4518-9d7d-be52a60b4a3f
+  name: 🇩🇪 德国 | DEU
+  server: 9.247.54.68
+  port: 443
+  udp: true
+  sni: nl1.obxodvpn.us
+  skip-cert-verify: true
+- type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  name: 🇩🇪204269 | ⚡️Telegram = t.me/S...
+  server: 3.76.221.4
+  port: 443
+  udp: true
+  sni: 3.76.221.4
+  skip-cert-verify: true
 - type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   name: 🇩🇪204155 | ⚡️Telegram = t.me/S...
@@ -262,73 +323,77 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: KevinZakarian
-- type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  name: 🇩🇪204269 | ⚡️Telegram = t.me/S...
-  server: 3.76.221.4
-  port: 443
-  udp: true
-  sni: 3.76.221.4
-  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知130
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
-  - '🇩🇪[www.v2nodes.com] trojan-DE-... #3'
-  - 🇩🇪DE-185.176.204.18-0102
-  - 🇳🇱 荷兰 | NLD 30
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #10'
-  - 🇩🇪 德国 | DEU
-  - 未知36
-  - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  - 🇳🇱[www.v2nodes.com] trojan-NL-...
   - 🇩🇪[www.v2nodes.com] vless-DE-1...
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #10'
+  - '🇩🇪[www.v2nodes.com] trojan-DE-... #3'
+  - '🇩🇪[www.v2nodes.com] trojan-DE-... #5'
+  - 未知36
   - 'tg频道:@ripaojiedian #1'
-  - 🇳🇱 荷兰 | NLD 4
-  - 未知120
+  - '🇩🇪[www.v2nodes.com] trojan-DE-... #6'
+  - 🇩🇪DE-185.176.204.18-0102
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #1'
   - '🇳🇱[www.v2nodes.com] trojan-NL-... #1'
-  - 🇳🇱 荷兰 | NLD 19
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  - 🇳🇱 荷兰 | NLD 28
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
   - 未知148
-  - 🇳🇱 荷兰 | NLD
+  - 未知120
+  - '🇩🇪[www.v2nodes.com] trojan-DE-... #3'
+  - 🇳🇱 荷兰 | NLD 19
+  - 🇳🇱NL_23|1.9MB/s
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
+  - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  - 🇳🇱 荷兰 | NLD 30
+  - 未知130
+  - 🇳🇱 荷兰 | NLD 28
+  - 🇳🇱NL_24|3.5MB/s
   - 🇫🇷[www.v2nodes.com] trojan-FR-...
+  - 🇩🇪[www.v2nodes.com] vless-DE-1...
+  - 🇩🇪 德国 | DEU
+  - 🇩🇪204269 | ⚡️Telegram = t.me/S...
   - 🇩🇪204155 | ⚡️Telegram = t.me/S...
   - 🩵+@Azarakhsh_Proxy+🩷
-  - 🇩🇪204269 | ⚡️Telegram = t.me/S...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知130
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
-  - '🇩🇪[www.v2nodes.com] trojan-DE-... #3'
-  - 🇩🇪DE-185.176.204.18-0102
-  - 🇳🇱 荷兰 | NLD 30
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #10'
-  - 🇩🇪 德国 | DEU
-  - 未知36
-  - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  - 🇳🇱[www.v2nodes.com] trojan-NL-...
   - 🇩🇪[www.v2nodes.com] vless-DE-1...
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #10'
+  - '🇩🇪[www.v2nodes.com] trojan-DE-... #3'
+  - '🇩🇪[www.v2nodes.com] trojan-DE-... #5'
+  - 未知36
   - 'tg频道:@ripaojiedian #1'
-  - 🇳🇱 荷兰 | NLD 4
-  - 未知120
+  - '🇩🇪[www.v2nodes.com] trojan-DE-... #6'
+  - 🇩🇪DE-185.176.204.18-0102
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #1'
   - '🇳🇱[www.v2nodes.com] trojan-NL-... #1'
-  - 🇳🇱 荷兰 | NLD 19
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  - 🇳🇱 荷兰 | NLD 28
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
   - 未知148
-  - 🇳🇱 荷兰 | NLD
+  - 未知120
+  - '🇩🇪[www.v2nodes.com] trojan-DE-... #3'
+  - 🇳🇱 荷兰 | NLD 19
+  - 🇳🇱NL_23|1.9MB/s
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
+  - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  - 🇳🇱 荷兰 | NLD 30
+  - 未知130
+  - 🇳🇱 荷兰 | NLD 28
+  - 🇳🇱NL_24|3.5MB/s
   - 🇫🇷[www.v2nodes.com] trojan-FR-...
+  - 🇩🇪[www.v2nodes.com] vless-DE-1...
+  - 🇩🇪 德国 | DEU
+  - 🇩🇪204269 | ⚡️Telegram = t.me/S...
   - 🇩🇪204155 | ⚡️Telegram = t.me/S...
   - 🩵+@Azarakhsh_Proxy+🩷
-  - 🇩🇪204269 | ⚡️Telegram = t.me/S...
 rules:
 - MATCH,SELECT

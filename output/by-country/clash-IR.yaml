@@ -10,30 +10,24 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: fd26012b-e43b-4d6f-814f-c2c058e0d2eb
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知56
-  server: 185.143.232.178
-  port: 8080
+- type: vless
+  uuid: c69a6591-b34b-4dad-a234-ce5b4c3725b2
+  name: 🇧🇪 比利时 | BEL
+  server: 94.184.23.97
+  port: 2050
   udp: true
-  ws-opts:
-    path: /s2BSpP6uUOPQ499phpYH87TsXl
-    headers:
-      Host: cdn.tr.one.nemava.com
+  network: tcp
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知56
+  - 🇧🇪 比利时 | BEL
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知56
+  - 🇧🇪 比利时 | BEL
 rules:
 - MATCH,SELECT

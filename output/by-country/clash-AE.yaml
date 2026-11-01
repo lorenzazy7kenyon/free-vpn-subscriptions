@@ -45,14 +45,6 @@ proxies:
     path: /vless
     headers:
       Host: 95.174.68.188
-- type: trojan
-  password: humanity
-  name: 🇭🇰 香港 | HKG
-  server: 95.182.95.144
-  port: 443
-  udp: true
-  sni: www.cordweave.com
-  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -62,7 +54,6 @@ proxy-groups:
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - 🇦🇪[www.v2nodes.com] vless-AE-4...
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
-  - 🇭🇰 香港 | HKG
 - name: SELECT
   type: select
   proxies:
@@ -70,6 +61,5 @@ proxy-groups:
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - 🇦🇪[www.v2nodes.com] vless-AE-4...
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
-  - 🇭🇰 香港 | HKG
 rules:
 - MATCH,SELECT

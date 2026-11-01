@@ -17,6 +17,14 @@ proxies:
   server: 149.104.109.252
   port: 8882
   udp: true
+- type: trojan
+  password: 5t6i121em5lkmsmk
+  name: 🇵🇭 菲律宾 | PHL
+  server: 130.94.52.157
+  port: 46298
+  udp: true
+  sni: ph001.zestapp778.com
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -24,10 +32,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇵🇭[www.v2nodes.com] ss-PH-1540...
+  - 🇵🇭 菲律宾 | PHL
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇵🇭[www.v2nodes.com] ss-PH-1540...
+  - 🇵🇭 菲律宾 | PHL
 rules:
 - MATCH,SELECT

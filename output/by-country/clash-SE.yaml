@@ -21,6 +21,28 @@ proxies:
     path: /vless
     headers:
       Host: 5.178.109.174
+- type: vless
+  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
+  name: '🇩🇪 德国 | DEU #3'
+  server: 13.143.180.104
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: s12.bsh-net.ru
+  client-fingerprint: chrome
+- type: trojan
+  password: humanity
+  name: 🇳🇱NL_14|1.4MB/s
+  server: 83.147.254.59
+  port: 2053
+  udp: true
+  sni: www.cordweave.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
 - type: trojan
   password: humanity
   name: 🇸🇪 瑞典 | SWE
@@ -34,31 +56,6 @@ proxies:
     path: /assignment
     headers:
       Host: www.cordweave.com
-- type: vless
-  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
-  name: '🇩🇪 德国 | DEU #3'
-  server: 13.143.180.104
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: s12.bsh-net.ru
-  client-fingerprint: chrome
-- type: vless
-  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
-  name: 🇸🇪 瑞典 | SWE
-  server: 13.143.180.104
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: s12.bsh-net.ru
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: QvT-t_h_AF2EAT4Ggh_a6pcCK3StY8G9WCXn6-dJbxk
-    short-id: 51079f144d661484
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -66,16 +63,16 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
-  - 🇸🇪 瑞典 | SWE
   - '🇩🇪 德国 | DEU #3'
+  - 🇳🇱NL_14|1.4MB/s
   - 🇸🇪 瑞典 | SWE
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
-  - 🇸🇪 瑞典 | SWE
   - '🇩🇪 德国 | DEU #3'
+  - 🇳🇱NL_14|1.4MB/s
   - 🇸🇪 瑞典 | SWE
 rules:
 - MATCH,SELECT

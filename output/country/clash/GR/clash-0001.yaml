@@ -21,14 +21,6 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- type: trojan
-  password: humanity
-  name: 🇳🇱 荷兰 | NLD
-  server: 91.250.248.151
-  port: 443
-  udp: true
-  sni: www.cordweave.com
-  skip-cert-verify: true
 - type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: 🇬🇷[www.v2nodes.com] vless-GR-3...
@@ -47,14 +39,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇬🇷[www.v2nodes.com] vless-GR-1...
-  - 🇳🇱 荷兰 | NLD
   - 🇬🇷[www.v2nodes.com] vless-GR-3...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇬🇷[www.v2nodes.com] vless-GR-1...
-  - 🇳🇱 荷兰 | NLD
   - 🇬🇷[www.v2nodes.com] vless-GR-3...
 rules:
 - MATCH,SELECT

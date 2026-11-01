@@ -23,6 +23,17 @@ proxies:
     path: /assignment
     headers:
       Host: www.cordweave.com
+- type: vless
+  uuid: 7a0348d6-55d3-4c23-b22f-6277fcb2264c
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
+  server: 31.77.68.36
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
@@ -38,28 +49,6 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
-- type: vless
-  uuid: 7a0348d6-55d3-4c23-b22f-6277fcb2264c
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
-  server: 31.77.68.36
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- type: vless
-  uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
-  name: 🇦🇹[www.v2nodes.com] vless-AT-1...
-  server: 146.19.143.218
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: tau1.freerunet.online
-  client-fingerprint: qq
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -67,16 +56,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇳🇱 荷兰 | NLD 15
-  - 未知114
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
+  - 未知114
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇳🇱 荷兰 | NLD 15
-  - 未知114
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
+  - 未知114
 rules:
 - MATCH,SELECT
