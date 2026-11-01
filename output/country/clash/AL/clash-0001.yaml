@@ -10,38 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: lsu1v/3iNERwDDVwxCu5033KCUqQOoElYQul63kmqJ8=
-  name: 🇦🇱[www.v2nodes.com] ss-AL-1490...
-  server: 130.49.189.158
-  port: 43558
-  udp: true
-- type: vless
-  uuid: f28ce4eb-62cd-45f5-b3b3-be1c1a95e335
-  name: '🇦🇱 AL_22 #1'
-  server: 157.22.240.20
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: yandex.ru
-  client-fingerprint: firefox
-- type: vless
-  uuid: f28ce4eb-62cd-45f5-b3b3-be1c1a95e335
-  name: 🇦🇱 AL_22
-  server: 157.22.240.20
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: yandex.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: T1BWBw3lq9G1LiQ7eQSPfdNQic7bUMEbdFNJBewAwB8
-    short-id: 6ad3c0f1e9b2478a
 - type: vless
   uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   name: 🇦🇱[www.v2nodes.com] vless-AL-1...
@@ -53,23 +21,26 @@ proxies:
     path: pyip=bpb.yousef.isegaro.comfp=chromesecurity=tls
     headers:
       Host: free.cndyw.ggff.net
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lsu1v/3iNERwDDVwxCu5033KCUqQOoElYQul63kmqJ8=
+  name: 🇦🇱[www.v2nodes.com] ss-AL-1490...
+  server: 130.49.189.158
+  port: 43558
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇱[www.v2nodes.com] ss-AL-1490...
-  - '🇦🇱 AL_22 #1'
-  - 🇦🇱 AL_22
   - 🇦🇱[www.v2nodes.com] vless-AL-1...
+  - 🇦🇱[www.v2nodes.com] ss-AL-1490...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇦🇱[www.v2nodes.com] ss-AL-1490...
-  - '🇦🇱 AL_22 #1'
-  - 🇦🇱 AL_22
   - 🇦🇱[www.v2nodes.com] vless-AL-1...
+  - 🇦🇱[www.v2nodes.com] ss-AL-1490...
 rules:
 - MATCH,SELECT
