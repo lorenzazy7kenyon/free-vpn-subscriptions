@@ -21,18 +21,23 @@ proxies:
   servername: www.apple.com
   client-fingerprint: chrome
 - type: vless
-  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
-  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
-  server: 122.176.216.52
-  port: 443
+  uuid: 405b964e-a2d2-454f-aaaa-711cc218897c
+  name: 🇮🇳[www.v2nodes.com] vless-IN
+  server: 5.253.28.240
+  port: 40443
   udp: true
+  network: tcp
+- type: vmess
+  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  alterId: 0
+  cipher: auto
   network: ws
-  tls: true
-  servername: app-6ada5023.deploy.meerasolution.com
+  name: 未知56
+  server: 152.67.8.205
+  port: 80
+  udp: true
   ws-opts:
-    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88fp=firefox
-    headers:
-      Host: app-6ada5023.deploy.meerasolution.com
+    path: /
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
@@ -44,17 +49,13 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
-- type: vmess
-  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知41 206.8KB/s
-  server: 152.67.8.205
-  port: 80
+- type: vless
+  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
+  server: 5.253.42.164
+  port: 40443
   udp: true
-  ws-opts:
-    path: /
+  network: tcp
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -62,16 +63,18 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
-  - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - 🇮🇳[www.v2nodes.com] vless-IN
+  - 未知56
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
-  - 未知41 206.8KB/s
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
-  - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - 🇮🇳[www.v2nodes.com] vless-IN
+  - 未知56
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
-  - 未知41 206.8KB/s
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
 rules:
 - MATCH,SELECT

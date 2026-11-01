@@ -1,29 +1,51 @@
 {
   "outbounds": [
     {
-      "flow": "xtls-rprx-vision-udp443",
-      "server": "151.123.187.198",
-      "server_port": 443,
-      "tag": "🇵🇱PL_2|1.6MB/s",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "al2.magazinnarubeva.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "b24ad12f-f6ce-4f0b-a264-d58a76104026"
-    },
-    {
       "method": "chacha20-ietf-poly1305",
       "password": "lsu1v/3iNERwDDVwxCu5033KCUqQOoElYQul63kmqJ8=",
       "server": "130.49.189.158",
       "server_port": 43558,
       "tag": "🇦🇱[www.v2nodes.com] ss-AL-1490...",
       "type": "ss"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "157.22.240.20",
+      "server_port": 443,
+      "tag": "🇦🇱 AL_22 #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "yandex.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "f28ce4eb-62cd-45f5-b3b3-be1c1a95e335"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "157.22.240.20",
+      "server_port": 443,
+      "tag": "🇦🇱 AL_22",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "T1BWBw3lq9G1LiQ7eQSPfdNQic7bUMEbdFNJBewAwB8",
+          "short_id": "6ad3c0f1e9b2478a"
+        },
+        "server_name": "yandex.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "f28ce4eb-62cd-45f5-b3b3-be1c1a95e335"
     },
     {
       "server": "89.125.139.115",
@@ -42,8 +64,9 @@
     {
       "interval": "5m",
       "outbounds": [
-        "🇵🇱PL_2|1.6MB/s",
         "🇦🇱[www.v2nodes.com] ss-AL-1490...",
+        "🇦🇱 AL_22 #1",
+        "🇦🇱 AL_22",
         "🇦🇱[www.v2nodes.com] vless-AL-1..."
       ],
       "tag": "auto",
@@ -53,8 +76,9 @@
     {
       "outbounds": [
         "auto",
-        "🇵🇱PL_2|1.6MB/s",
         "🇦🇱[www.v2nodes.com] ss-AL-1490...",
+        "🇦🇱 AL_22 #1",
+        "🇦🇱 AL_22",
         "🇦🇱[www.v2nodes.com] vless-AL-1..."
       ],
       "tag": "select",

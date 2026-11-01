@@ -10,30 +10,55 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: humanity
-  name: 🇳🇱 荷兰 | NLD 27
-  server: 194.135.119.82
+- type: vless
+  uuid: e5ec2701-f2d6-42ee-b125-1e17fce8daff
+  name: 🇬🇪 GE_43
+  server: 93.190.8.153
+  port: 3090
+  udp: true
+  network: grpc
+- type: vless
+  uuid: 9c55c7eb-d53e-40fa-a0c9-e25d2a345073
+  name: 🇯🇵 日本 | JPN
+  server: 94.43.238.112
   port: 2053
   udp: true
-  sni: www.cordweave.com
-  skip-cert-verify: true
   network: ws
+  tls: true
+  servername: jp-osa.862400.xyz
+  client-fingerprint: random
   ws-opts:
-    path: /assignment
+    path: /announcement?ed=2048
     headers:
-      Host: www.cordweave.com
+      Host: jp-osa.862400.xyz
+- type: vless
+  uuid: 9c55c7eb-d53e-40fa-a0c9-e25d2a345073
+  name: '🇯🇵 日本 | JPN #3'
+  server: 94.43.238.112
+  port: 2053
+  udp: true
+  network: ws
+  tls: true
+  servername: jp-osa.862400.xyz
+  ws-opts:
+    path: /announcement?ed=2048fp=random
+    headers:
+      Host: jp-osa.862400.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇱 荷兰 | NLD 27
+  - 🇬🇪 GE_43
+  - 🇯🇵 日本 | JPN
+  - '🇯🇵 日本 | JPN #3'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇳🇱 荷兰 | NLD 27
+  - 🇬🇪 GE_43
+  - 🇯🇵 日本 | JPN
+  - '🇯🇵 日本 | JPN #3'
 rules:
 - MATCH,SELECT

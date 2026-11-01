@@ -11,6 +11,27 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
+  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #11'
+  server: 87.232.116.20
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: fafeqdhlett2p5la6d.cdn.cachefleet.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: 7a0348d6-55d3-4c23-b22f-6277fcb2264c
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #5'
+  server: 31.77.68.36
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- type: vless
   uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
   name: '🇦🇹[www.v2nodes.com] vless-AT-1... #1'
   server: 146.19.143.218
@@ -21,30 +42,21 @@ proxies:
   tls: true
   servername: tau1.freerunet.online
   client-fingerprint: firefox
-- type: vless
-  uuid: 7a0348d6-55d3-4c23-b22f-6277fcb2264c
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
-  server: 31.77.68.36
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #11'
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #5'
   - '🇦🇹[www.v2nodes.com] vless-AT-1... #1'
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #11'
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #5'
   - '🇦🇹[www.v2nodes.com] vless-AT-1... #1'
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
 rules:
 - MATCH,SELECT

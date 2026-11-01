@@ -11,17 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 0192c3d3-18d5-4b95-8eb3-598e18de6918
-  name: 🇦🇲 AM_20
-  server: 2.56.207.68
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.slovarik.xyz
-  client-fingerprint: firefox
-- type: vless
   uuid: f667a096-5231-4cfb-8759-92bb32473139
   name: 🇦🇲[www.v2nodes.com] vless-AM-1...
   server: 77.91.68.70
@@ -37,13 +26,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇲 AM_20
   - 🇦🇲[www.v2nodes.com] vless-AM-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇦🇲 AM_20
   - 🇦🇲[www.v2nodes.com] vless-AM-1...
 rules:
 - MATCH,SELECT

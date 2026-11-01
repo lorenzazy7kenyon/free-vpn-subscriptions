@@ -12,6 +12,16 @@ dns:
 proxies:
 - type: trojan
   password: humanity
+  name: 未知140
+  server: 185.18.250.252
+  port: 443
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+- type: trojan
+  password: humanity
   name: '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
   server: 185.114.72.31
   port: 2053
@@ -22,20 +32,28 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇪🇸[www.v2nodes.com] trojan-ES-... #5'
-  server: 66.163.118.244
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知133
+  server: 34.175.202.195
   port: 443
   udp: true
-  sni: api.discovergreatjobsandadvanceyourcareer.com
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇪🇸[www.v2nodes.com] trojan-ES-...
-  server: 66.163.118.62
+  name: '🇪🇸[www.v2nodes.com] trojan-ES-... #2'
+  server: 66.163.118.251
   port: 443
   udp: true
-  sni: courses.discovergreatjobsandadvanceyourcareer.com
+  sni: 66.163.118.251
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   name: 🇪🇸ES-66.163.118.131-3045
@@ -46,17 +64,26 @@ proxies:
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   name: '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
-  server: 66.163.118.251
-  port: 443
-  udp: true
-  sni: resources.discovergreatjobsandadvanceyourcareer.com
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇪🇸[www.v2nodes.com] trojan-ES-... #4'
   server: 66.163.118.166
   port: 443
   udp: true
   sni: learn.discovergreatjobsandadvanceyourcareer.com
+- type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知4
+  server: 85.90.217.42
+  port: 22324
+  udp: true
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇪🇸[www.v2nodes.com] trojan-ES-... #4'
+  server: 66.163.118.244
+  port: 443
+  udp: true
+  sni: api.discovergreatjobsandadvanceyourcareer.com
 - type: trojan
   password: humanity
   name: '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
@@ -75,22 +102,26 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 未知140
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
-  - '🇪🇸[www.v2nodes.com] trojan-ES-... #5'
-  - 🇪🇸[www.v2nodes.com] trojan-ES-...
+  - 未知133
+  - '🇪🇸[www.v2nodes.com] trojan-ES-... #2'
   - 🇪🇸ES-66.163.118.131-3045
   - '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
+  - 未知4
   - '🇪🇸[www.v2nodes.com] trojan-ES-... #4'
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 未知140
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
-  - '🇪🇸[www.v2nodes.com] trojan-ES-... #5'
-  - 🇪🇸[www.v2nodes.com] trojan-ES-...
+  - 未知133
+  - '🇪🇸[www.v2nodes.com] trojan-ES-... #2'
   - 🇪🇸ES-66.163.118.131-3045
   - '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
+  - 未知4
   - '🇪🇸[www.v2nodes.com] trojan-ES-... #4'
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
 rules:

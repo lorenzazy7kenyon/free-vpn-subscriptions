@@ -1,42 +1,52 @@
 {
   "outbounds": [
     {
-      "password": "humanity",
-      "server": "185.82.218.224",
+      "server": "83.147.241.197",
       "server_port": 443,
-      "tag": "🇳🇱NL_8|1.7MB/s",
+      "tag": "🇸🇪 瑞典 | SWE #1",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "www.cordweave.com"
+        "insecure": false,
+        "server_name": "se-sto.862400.xyz"
       },
       "transport": {
-        "path": "/assignment",
+        "headers": {
+          "Host": "se-sto.862400.xyz"
+        },
+        "path": "/announcement?ed=2048fp=random",
         "type": "ws"
       },
-      "type": "trojan"
+      "type": "vless",
+      "uuid": "9c55c7eb-d53e-40fa-a0c9-e25d2a345073"
     },
     {
-      "password": "humanity",
-      "server": "82.118.18.179",
+      "server": "83.147.241.197",
       "server_port": 443,
-      "tag": "🇳🇱NL_10|2.4MB/s",
+      "tag": "🇸🇪 瑞典 | SWE",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "www.cordweave.com"
+        "insecure": false,
+        "server_name": "se-sto.862400.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
       },
       "transport": {
-        "path": "/assignment",
+        "headers": {
+          "Host": "se-sto.862400.xyz"
+        },
+        "path": "/announcement?ed=2048",
         "type": "ws"
       },
-      "type": "trojan"
+      "type": "vless",
+      "uuid": "9c55c7eb-d53e-40fa-a0c9-e25d2a345073"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇳🇱NL_8|1.7MB/s",
-        "🇳🇱NL_10|2.4MB/s"
+        "🇸🇪 瑞典 | SWE #1",
+        "🇸🇪 瑞典 | SWE"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -45,8 +55,8 @@
     {
       "outbounds": [
         "auto",
-        "🇳🇱NL_8|1.7MB/s",
-        "🇳🇱NL_10|2.4MB/s"
+        "🇸🇪 瑞典 | SWE #1",
+        "🇸🇪 瑞典 | SWE"
       ],
       "tag": "select",
       "type": "selector"
