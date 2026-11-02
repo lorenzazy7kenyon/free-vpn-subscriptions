@@ -11,29 +11,8 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: e5ec2701-f2d6-42ee-b125-1e17fce8daff
-  name: 🇬🇪 GE_43
-  server: 93.190.8.153
-  port: 3090
-  udp: true
-  network: grpc
-- type: vless
   uuid: 9c55c7eb-d53e-40fa-a0c9-e25d2a345073
-  name: 🇯🇵 日本 | JPN
-  server: 94.43.238.112
-  port: 2053
-  udp: true
-  network: ws
-  tls: true
-  servername: jp-osa.862400.xyz
-  client-fingerprint: random
-  ws-opts:
-    path: /announcement?ed=2048
-    headers:
-      Host: jp-osa.862400.xyz
-- type: vless
-  uuid: 9c55c7eb-d53e-40fa-a0c9-e25d2a345073
-  name: '🇬🇪 GE_46 #1'
+  name: 🇬🇪 GE_46
   server: 94.43.238.112
   port: 2053
   udp: true
@@ -50,15 +29,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇪 GE_43
-  - 🇯🇵 日本 | JPN
-  - '🇬🇪 GE_46 #1'
+  - 🇬🇪 GE_46
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇬🇪 GE_43
-  - 🇯🇵 日本 | JPN
-  - '🇬🇪 GE_46 #1'
+  - 🇬🇪 GE_46
 rules:
 - MATCH,SELECT
