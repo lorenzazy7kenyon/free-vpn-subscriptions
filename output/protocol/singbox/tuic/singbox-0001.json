@@ -1,0 +1,41 @@
+{
+  "outbounds": [
+    {
+      "password": "56d8a8fd-68b8-47f8-8c7f-98cc675902db",
+      "server": "us01.uzifan.monster",
+      "server_port": 8443,
+      "tag": "🇺🇸 美国 | USA 10",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "azure.microsoft.com"
+      },
+      "type": "tuic",
+      "uuid": "56d8a8fd-68b8-47f8-8c7f-98cc675902db"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "🇺🇸 美国 | USA 10"
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "🇺🇸 美国 | USA 10"
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

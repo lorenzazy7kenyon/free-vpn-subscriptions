@@ -17,13 +17,6 @@ proxies:
   server: 149.104.109.252
   port: 8882
   udp: true
-- type: trojan
-  password: 5t6i121em5lkmsmk
-  name: 🇵🇭PH-130.94.52.157-0763
-  server: 130.94.52.157
-  port: 46298
-  udp: true
-  sni: ph001.zestapp778.com
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -31,12 +24,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇵🇭[www.v2nodes.com] ss-PH-1540...
-  - 🇵🇭PH-130.94.52.157-0763
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇵🇭[www.v2nodes.com] ss-PH-1540...
-  - 🇵🇭PH-130.94.52.157-0763
 rules:
 - MATCH,SELECT

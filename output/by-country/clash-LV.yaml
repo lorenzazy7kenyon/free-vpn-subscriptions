@@ -26,7 +26,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知117
+  name: 未知59
   server: 178.248.75.57
   port: 443
   udp: true
@@ -36,6 +36,17 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
+- type: vless
+  uuid: 2614a96d-e39f-4cca-a9c7-467a178c2c0a
+  name: 🇱🇻LV_3|2.4MB/s
+  server: 72.56.52.248
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: lv.dexlen.cc
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -43,12 +54,14 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇱🇻[www.v2nodes.com] vless-LV-1... #1'
-  - 未知117
+  - 未知59
+  - 🇱🇻LV_3|2.4MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇱🇻[www.v2nodes.com] vless-LV-1... #1'
-  - 未知117
+  - 未知59
+  - 🇱🇻LV_3|2.4MB/s
 rules:
 - MATCH,SELECT

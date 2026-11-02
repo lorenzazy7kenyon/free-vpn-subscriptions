@@ -22,17 +22,6 @@ proxies:
   servername: de1.waspnest.space
   client-fingerprint: firefox
 - type: vless
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
-  server: 5.178.109.174
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 5.178.109.174
-- type: vless
   uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
   name: '🇸🇪[www.v2nodes.com] vless-SE-1... #4'
   server: 13.143.180.104
@@ -44,18 +33,16 @@ proxies:
   servername: s12.bsh-net.ru
   client-fingerprint: firefox
 - type: vless
-  uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
-  name: 🇸🇪 瑞典 | SWE
-  server: 13.143.180.142
-  port: 443
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
+  server: 5.178.109.174
+  port: 14430
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: sw.lenvex.cc
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 5.178.109.174
 - type: vless
   uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
   name: '🇸🇪 瑞典 | SWE #2'
@@ -68,6 +55,28 @@ proxies:
   servername: sw.lenvex.cc
   client-fingerprint: firefox
 - type: vless
+  uuid: 518079db-d88d-4035-bbf4-ddd1f9cf1e5f
+  name: '🇸🇪 瑞典 | SWE #1'
+  server: 89.125.37.1
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: se.frgcdn.xyz
+  client-fingerprint: chrome
+- type: vless
+  uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
+  name: '🇸🇪 瑞典 | SWE #1'
+  server: 13.143.180.141
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: sw.lenvex.cc
+  client-fingerprint: firefox
+- type: vless
   uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
   name: 🇸🇪 瑞典 | SWE
   server: 13.143.180.141
@@ -82,8 +91,8 @@ proxies:
     public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
 - type: vless
   uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
-  name: '🇸🇪 瑞典 | SWE #1'
-  server: 13.143.180.141
+  name: 🇸🇪 瑞典 | SWE
+  server: 13.143.180.142
   port: 443
   udp: true
   flow: xtls-rprx-vision
@@ -91,6 +100,8 @@ proxies:
   tls: true
   servername: sw.lenvex.cc
   client-fingerprint: firefox
+  reality-opts:
+    public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -98,22 +109,24 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #4'
-  - 🇸🇪 瑞典 | SWE
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
   - '🇸🇪 瑞典 | SWE #2'
-  - 🇸🇪 瑞典 | SWE
   - '🇸🇪 瑞典 | SWE #1'
+  - '🇸🇪 瑞典 | SWE #1'
+  - 🇸🇪 瑞典 | SWE
+  - 🇸🇪 瑞典 | SWE
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #4'
-  - 🇸🇪 瑞典 | SWE
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
   - '🇸🇪 瑞典 | SWE #2'
-  - 🇸🇪 瑞典 | SWE
   - '🇸🇪 瑞典 | SWE #1'
+  - '🇸🇪 瑞典 | SWE #1'
+  - 🇸🇪 瑞典 | SWE
+  - 🇸🇪 瑞典 | SWE
 rules:
 - MATCH,SELECT
