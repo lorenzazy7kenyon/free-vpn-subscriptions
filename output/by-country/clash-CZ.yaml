@@ -10,21 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知118
-  server: 195.85.23.225
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
 - type: vless
   uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
   name: 🇨🇿[www.v2nodes.com] vless-CZ-1...
@@ -53,14 +38,12 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知118
   - 🇨🇿[www.v2nodes.com] vless-CZ-1...
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #4'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知118
   - 🇨🇿[www.v2nodes.com] vless-CZ-1...
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #4'
 rules:

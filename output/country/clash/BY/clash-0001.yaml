@@ -14,9 +14,13 @@ proxies:
   uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
   name: '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   server: 178.172.227.124
-  port: 10443
+  port: 14430
   udp: true
-  network: tcp
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 178.172.227.124
 - type: vless
   uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
   name: 🇧🇾[www.v2nodes.com] vless-BY-1...
@@ -29,17 +33,6 @@ proxies:
     headers:
       Host: 178.172.227.228
 - type: vless
-  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
-  name: '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
-  server: 178.172.227.124
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 178.172.227.124
-- type: vless
   uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
   name: '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
   server: 95.128.71.79
@@ -50,6 +43,14 @@ proxies:
     path: /vless
     headers:
       Host: 95.128.71.79
+- type: hysteria2
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  name: '@FXxNET⚡️'
+  server: 13.143.188.143
+  port: 4444
+  udp: true
+  sni: bl1.nexfile.net
+  skip-cert-verify: true
 - type: hysteria2
   password: a35c508f-4d5d-4531-842e-6e9d43c762c0
   name: برای اتصال دائمی جوین شو🪭 Tele...
@@ -65,8 +66,8 @@ proxy-groups:
   proxies:
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  - '@FXxNET⚡️'
   - برای اتصال دائمی جوین شو🪭 Tele...
 - name: SELECT
   type: select
@@ -74,8 +75,8 @@ proxy-groups:
   - AUTO
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  - '@FXxNET⚡️'
   - برای اتصال دائمی جوین شو🪭 Tele...
 rules:
 - MATCH,SELECT

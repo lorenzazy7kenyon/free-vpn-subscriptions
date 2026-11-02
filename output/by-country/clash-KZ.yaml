@@ -10,6 +10,27 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知60 1.2MB/s
+  server: 38.107.234.57
+  port: 80
+  udp: true
+  ws-opts:
+    path: /vmess/
+- type: vless
+  uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
+  name: '🏳[www.v2nodes.com] vless- #19'
+  server: 109.248.170.119
+  port: 13447
+  udp: true
+  network: tcp
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: chrome
 - type: vless
   uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
   name: 🇰🇿[www.v2nodes.com] vless-KZ-1...
@@ -21,42 +42,21 @@ proxies:
   tls: true
   servername: kz1.waspnest.space
   client-fingerprint: firefox
-- type: vless
-  uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
-  name: '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
-  server: 109.248.170.119
-  port: 13447
-  udp: true
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-- type: vmess
-  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知148
-  server: 38.107.234.57
-  port: 80
-  udp: true
-  ws-opts:
-    path: /vmess/
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 未知60 1.2MB/s
+  - '🏳[www.v2nodes.com] vless- #19'
   - 🇰🇿[www.v2nodes.com] vless-KZ-1...
-  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
-  - 未知148
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 未知60 1.2MB/s
+  - '🏳[www.v2nodes.com] vless- #19'
   - 🇰🇿[www.v2nodes.com] vless-KZ-1...
-  - '🇰🇿[www.v2nodes.com] vless-KZ-1... #1'
-  - 未知148
 rules:
 - MATCH,SELECT
