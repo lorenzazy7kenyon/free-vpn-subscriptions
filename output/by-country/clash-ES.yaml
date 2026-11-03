@@ -36,25 +36,18 @@ proxies:
       Host: www.calmlunch.com
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇪🇸ES-66.163.118.244-0252
+  name: 🇪🇸ES-66.163.118.166-0218
+  server: 66.163.118.166
+  port: 443
+  udp: true
+  sni: learn.discovergreatjobsandadvanceyourcareer.com
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇪🇸ES-66.163.118.244-0213
   server: 66.163.118.244
   port: 443
   udp: true
   sni: api.discovergreatjobsandadvanceyourcareer.com
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇪🇸[www.v2nodes.com] trojan-ES-... #1'
-  server: 66.163.118.251
-  port: 443
-  udp: true
-  sni: resources.discovergreatjobsandadvanceyourcareer.com
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇪🇸ES-66.163.118.131-0140
-  server: 66.163.118.131
-  port: 443
-  udp: true
-  sni: www.discovergreatjobsandadvanceyourcareer.com
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   name: 🇪🇸[www.v2nodes.com] trojan-ES-...
@@ -62,6 +55,20 @@ proxies:
   port: 443
   udp: true
   sni: courses.discovergreatjobsandadvanceyourcareer.com
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇪🇸ES-66.163.118.131-0217
+  server: 66.163.118.131
+  port: 443
+  udp: true
+  sni: www.discovergreatjobsandadvanceyourcareer.com
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇪🇸ES-66.163.118.251-0215
+  server: 66.163.118.251
+  port: 443
+  udp: true
+  sni: resources.discovergreatjobsandadvanceyourcareer.com
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -70,19 +77,21 @@ proxy-groups:
   proxies:
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - 🇪🇸ES-66.163.118.244-0252
-  - '🇪🇸[www.v2nodes.com] trojan-ES-... #1'
-  - 🇪🇸ES-66.163.118.131-0140
+  - 🇪🇸ES-66.163.118.166-0218
+  - 🇪🇸ES-66.163.118.244-0213
   - 🇪🇸[www.v2nodes.com] trojan-ES-...
+  - 🇪🇸ES-66.163.118.131-0217
+  - 🇪🇸ES-66.163.118.251-0215
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - 🇪🇸ES-66.163.118.244-0252
-  - '🇪🇸[www.v2nodes.com] trojan-ES-... #1'
-  - 🇪🇸ES-66.163.118.131-0140
+  - 🇪🇸ES-66.163.118.166-0218
+  - 🇪🇸ES-66.163.118.244-0213
   - 🇪🇸[www.v2nodes.com] trojan-ES-...
+  - 🇪🇸ES-66.163.118.131-0217
+  - 🇪🇸ES-66.163.118.251-0215
 rules:
 - MATCH,SELECT

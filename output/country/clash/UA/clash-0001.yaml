@@ -10,43 +10,40 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: humanity
-  name: 🇳🇱 荷兰 | NLD 14
-  server: 173.242.51.189
+- type: vless
+  uuid: de38389f-5651-4f2f-8276-5aabf3b861c9
+  name: '🇺🇦[www.v2nodes.com] vless-UA-1... #2'
+  server: 104.253.216.227
   port: 443
   udp: true
-  sni: www.cordweave.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.cordweave.com
-- type: trojan
-  password: humanity
-  name: 🇳🇱NL_17|3.7MB/s
-  server: 213.111.148.137
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.hollywoodreporter.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: d8b58872-cc25-4bb2-badb-b86399c075fa
+  name: '🇺🇦[www.v2nodes.com] vless-UA-1... #1'
+  server: 31.222.235.81
   port: 443
   udp: true
-  sni: www.cordweave.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇱 荷兰 | NLD 14
-  - 🇳🇱NL_17|3.7MB/s
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #2'
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇳🇱 荷兰 | NLD 14
-  - 🇳🇱NL_17|3.7MB/s
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #2'
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #1'
 rules:
 - MATCH,SELECT

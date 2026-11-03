@@ -11,6 +11,16 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: a346c521-7a7f-452b-9356-a4893feb5982
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
+  server: 62.133.63.45
+  port: 8444
+  udp: true
+  network: grpc
+  tls: true
+  servername: github.com
+  client-fingerprint: safari
+- type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: '🇧🇬[www.v2nodes.com] vless-BG-3... #3'
   server: 155.103.71.142
@@ -24,26 +34,6 @@ proxies:
     headers:
       Host: ccc.010304.xyz
 - type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  server: 151.241.226.201
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
-  server: 62.133.63.45
-  port: 8444
-  udp: true
-  network: grpc
-  tls: true
-  servername: github.com
-  client-fingerprint: safari
-- type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
   server: 155.103.71.142
@@ -56,7 +46,7 @@ proxies:
       Host: ccc.010304.xyz
 - type: vless
   uuid: 25e16692-d097-4e69-9e2d-8415609c1968
-  name: '🏳[www.v2nodes.com] vless- #29'
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
   server: 78.135.73.47
   port: 443
   udp: true
@@ -66,39 +56,34 @@ proxies:
   servername: www.datadoghq.com
   client-fingerprint: firefox
 - type: vless
-  uuid: dde64e50-7aad-4e66-ada9-40956bfeb668
-  name: '🇩🇪 德国 | DEU #2'
-  server: 65.9.95.19
-  port: 443
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #4'
+  server: 151.241.226.201
+  port: 2053
   udp: true
-  network: ws
+  network: tcp
   tls: true
-  servername: d30f3bh55zqaoh.cloudfront.net
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: d30f3bh55zqaoh.cloudfront.net
+  servername: www.apple.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇧🇬[www.v2nodes.com] vless-BG-3... #3'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
+  - '🇧🇬[www.v2nodes.com] vless-BG-3... #3'
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
-  - '🏳[www.v2nodes.com] vless- #29'
-  - '🇩🇪 德国 | DEU #2'
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #4'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇧🇬[www.v2nodes.com] vless-BG-3... #3'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
+  - '🇧🇬[www.v2nodes.com] vless-BG-3... #3'
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
-  - '🏳[www.v2nodes.com] vless- #29'
-  - '🇩🇪 德国 | DEU #2'
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #4'
 rules:
 - MATCH,SELECT
