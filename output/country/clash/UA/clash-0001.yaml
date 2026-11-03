@@ -11,17 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: de38389f-5651-4f2f-8276-5aabf3b861c9
-  name: '🇺🇦[www.v2nodes.com] vless-UA-1... #2'
-  server: 104.253.216.227
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.hollywoodreporter.com
-  client-fingerprint: firefox
-- type: vless
   uuid: d8b58872-cc25-4bb2-badb-b86399c075fa
   name: '🇺🇦[www.v2nodes.com] vless-UA-1... #1'
   server: 31.222.235.81
@@ -37,13 +26,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #2'
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #2'
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #1'
 rules:
 - MATCH,SELECT
