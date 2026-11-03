@@ -73,17 +73,6 @@ proxies:
   servername: se.frgcdn.xyz
   client-fingerprint: chrome
 - type: vless
-  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
-  server: 13.143.180.104
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: s12.bsh-net.ru
-  client-fingerprint: firefox
-- type: vless
   uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
   name: 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
   server: 13.143.180.142
@@ -97,16 +86,23 @@ proxies:
   reality-opts:
     public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
 - type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #7'
-  server: 193.188.21.253
-  port: 14430
+  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
+  server: 13.143.180.104
+  port: 443
   udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 193.188.21.253
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: s12.bsh-net.ru
+  client-fingerprint: firefox
+- type: ss
+  cipher: aes-256-gcm
+  password: AxIYWtskJWIIaefW
+  name: 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  server: 70.34.212.124
+  port: 8388
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -118,9 +114,9 @@ proxy-groups:
   - 🇸🇪_SE_瑞典->🇯🇵_JP_日本_IPV4
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #6'
   - '🇸🇪 瑞典 | SWE #1'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
   - 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #7'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
+  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
 - name: SELECT
   type: select
   proxies:
@@ -130,8 +126,8 @@ proxy-groups:
   - 🇸🇪_SE_瑞典->🇯🇵_JP_日本_IPV4
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #6'
   - '🇸🇪 瑞典 | SWE #1'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
   - 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #7'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
+  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
 rules:
 - MATCH,SELECT

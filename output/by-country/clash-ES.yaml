@@ -34,40 +34,30 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇪🇸ES-66.163.118.62-0216
+  server: 66.163.118.62
+  port: 443
+  udp: true
+  sni: courses.discovergreatjobsandadvanceyourcareer.com
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇪🇸ES-66.163.118.251-0254
+  server: 66.163.118.251
+  port: 443
+  udp: true
+  sni: resources.discovergreatjobsandadvanceyourcareer.com
 - type: vless
   uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
-  name: 🇪🇸[www.v2nodes.com] vless-ES-1...
+  name: '🏳[www.v2nodes.com] vless- #10'
   server: 45.198.55.200
-  port: 25152
+  port: 25150
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
   servername: www.samsung.com
   client-fingerprint: firefox
-- type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知20
-  server: 85.90.217.42
-  port: 22324
-  udp: true
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇪🇸ES-66.163.118.131-0246
-  server: 66.163.118.131
-  port: 443
-  udp: true
-  sni: www.discovergreatjobsandadvanceyourcareer.com
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇪🇸ES-66.163.118.166-0243
-  server: 66.163.118.166
-  port: 443
-  udp: true
-  sni: learn.discovergreatjobsandadvanceyourcareer.com
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   name: 🇪🇸ES-66.163.118.244-0252
@@ -77,11 +67,20 @@ proxies:
   sni: api.discovergreatjobsandadvanceyourcareer.com
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇪🇸ES-66.163.118.251-0254
-  server: 66.163.118.251
+  name: 🇪🇸ES-66.163.118.166-0243
+  server: 66.163.118.166
   port: 443
   udp: true
-  sni: resources.discovergreatjobsandadvanceyourcareer.com
+  sni: learn.discovergreatjobsandadvanceyourcareer.com
+- type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知20
+  server: 85.90.217.42
+  port: 22324
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -90,23 +89,23 @@ proxy-groups:
   proxies:
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - 🇪🇸[www.v2nodes.com] vless-ES-1...
-  - 未知20
-  - 🇪🇸ES-66.163.118.131-0246
-  - 🇪🇸ES-66.163.118.166-0243
-  - 🇪🇸ES-66.163.118.244-0252
+  - 🇪🇸ES-66.163.118.62-0216
   - 🇪🇸ES-66.163.118.251-0254
+  - '🏳[www.v2nodes.com] vless- #10'
+  - 🇪🇸ES-66.163.118.244-0252
+  - 🇪🇸ES-66.163.118.166-0243
+  - 未知20
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
   - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - 🇪🇸[www.v2nodes.com] vless-ES-1...
-  - 未知20
-  - 🇪🇸ES-66.163.118.131-0246
-  - 🇪🇸ES-66.163.118.166-0243
-  - 🇪🇸ES-66.163.118.244-0252
+  - 🇪🇸ES-66.163.118.62-0216
   - 🇪🇸ES-66.163.118.251-0254
+  - '🏳[www.v2nodes.com] vless- #10'
+  - 🇪🇸ES-66.163.118.244-0252
+  - 🇪🇸ES-66.163.118.166-0243
+  - 未知20
 rules:
 - MATCH,SELECT

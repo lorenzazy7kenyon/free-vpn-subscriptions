@@ -24,8 +24,19 @@ proxies:
     headers:
       Host: mhoX6Xz96zGe3qv5HISuFj9B.paGeS.DEV
 - type: vless
+  uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
+  name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
+  server: 212.102.38.25
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: udemy.com
+  client-fingerprint: ios
+- type: vless
   uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
-  name: '🏳[www.v2nodes.com] vless- #11'
+  name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
   server: 195.123.245.241
   port: 443
   udp: true
@@ -35,16 +46,15 @@ proxies:
   servername: gateway.icloud.com
   client-fingerprint: chrome
 - type: vless
-  uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
-  name: '🏳[www.v2nodes.com] vless- #12'
-  server: 212.102.38.25
+  uuid: f8bdf363-ff05-4fe6-a013-a5605266657e
+  name: '🇨🇿 捷克 | CZE #1'
+  server: 31.76.7.233
   port: 443
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: udemy.com
-  client-fingerprint: ios
+  servername: e2865c20.con.rasterparcel.tech
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -52,14 +62,16 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇨🇿 捷克 | CZE #1'
-  - '🏳[www.v2nodes.com] vless- #11'
-  - '🏳[www.v2nodes.com] vless- #12'
+  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
+  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
+  - '🇨🇿 捷克 | CZE #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇨🇿 捷克 | CZE #1'
-  - '🏳[www.v2nodes.com] vless- #11'
-  - '🏳[www.v2nodes.com] vless- #12'
+  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
+  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
+  - '🇨🇿 捷克 | CZE #1'
 rules:
 - MATCH,SELECT
