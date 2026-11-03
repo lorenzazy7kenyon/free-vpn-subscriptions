@@ -11,6 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 2ba7f500-017b-4891-87a0-e4e62a4ad52d
+  name: '🏳[www.v2nodes.com] vless- #58'
+  server: 104.253.216.227
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.microsoft.com
+  client-fingerprint: firefox
+- type: vless
   uuid: d8b58872-cc25-4bb2-badb-b86399c075fa
   name: '🇺🇦[www.v2nodes.com] vless-UA-1... #1'
   server: 31.222.235.81
@@ -26,11 +37,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🏳[www.v2nodes.com] vless- #58'
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🏳[www.v2nodes.com] vless- #58'
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #1'
 rules:
 - MATCH,SELECT

@@ -10,25 +10,32 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: humanity
-  name: 🇨🇷 哥斯达黎加 | CRI
-  server: 190.93.245.148
+- type: vmess
+  uuid: 5f1d6d32-76b3-4562-8982-df2b7c122708
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知99
+  server: 190.93.244.201
   port: 443
   udp: true
-  sni: www.pleadcourt.org
-  skip-cert-verify: true
+  tls: true
+  servername: argo-tunnel.111874.xyz
+  ws-opts:
+    path: /5f1d6d32-76b3-4562-8982-df2b7c122708-vm
+    headers:
+      Host: argo-tunnel.111874.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇷 哥斯达黎加 | CRI
+  - 未知99
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇨🇷 哥斯达黎加 | CRI
+  - 未知99
 rules:
 - MATCH,SELECT

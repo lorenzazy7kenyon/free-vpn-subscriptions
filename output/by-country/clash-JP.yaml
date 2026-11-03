@@ -10,6 +10,24 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
+  server: 142.91.108.25
+  port: 443
+  udp: true
+  network: tcp
+- type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  server: 103.75.118.228
+  port: 12683
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 - type: ss
   cipher: aes-128-gcm
   password: shadowsocks
@@ -17,6 +35,32 @@ proxies:
   server: 149.22.87.204
   port: 443
   udp: true
+- type: trojan
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  name: 🇯🇵 日本 | JPN
+  server: 172.238.29.97
+  port: 443
+  udp: true
+  sni: api.85s.me
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: api.85s.me
+- type: trojan
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  name: 🇯🇵 日本 | JPN 3
+  server: 172.237.1.32
+  port: 443
+  udp: true
+  sni: api.85s.me
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: api.85s.me
 - type: ss
   cipher: aes-128-gcm
   password: shadowsocks
@@ -24,6 +68,19 @@ proxies:
   server: 149.22.87.240
   port: 443
   udp: true
+- type: trojan
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  name: 🇯🇵 日本 | JPN
+  server: 13.158.71.221
+  port: 443
+  udp: true
+  sni: api.85s.me
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: api.85s.me
 - type: trojan
   password: 8deb189a-3aed-4865-843b-b72dae954c46
   name: 🇯🇵 日本 | JPN 4
@@ -37,35 +94,10 @@ proxies:
     path: /
     headers:
       Host: api.85s.me
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇯🇵JP-149.22.87.241-0238
-  server: 149.22.87.241
-  port: 443
-  udp: true
-- type: vless
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
-  server: 142.91.108.25
-  port: 443
-  udp: true
-  network: tcp
-- type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
-  server: 103.75.118.228
-  port: 12683
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
 - type: trojan
   password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇯🇵 日本 | JPN
-  server: 13.158.71.221
+  name: 🇯🇵 日本 | JPN 7
+  server: 13.158.86.30
   port: 443
   udp: true
   sni: api.85s.me
@@ -88,19 +120,6 @@ proxies:
     path: /
     headers:
       Host: api.85s.me
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇯🇵 日本 | JPN 3
-  server: 13.158.86.30
-  port: 443
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: api.85s.me
 - type: vless
   uuid: 7072eeba-94fd-4fb3-92f2-a4506dd84cd8
   name: 🇯🇵[www.v2nodes.com] vless-JP-1...
@@ -112,6 +131,104 @@ proxies:
   tls: true
   servername: fuji.etherhub.cc
   client-fingerprint: firefox
+- type: trojan
+  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
+  name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
+  server: 45.32.52.173
+  port: 8886
+  udp: true
+  sni: 45.32.52.173
+- type: trojan
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  name: 🇯🇵 日本 | JPN 6
+  server: 54.249.160.228
+  port: 443
+  udp: true
+  sni: api.85s.me
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: api.85s.me
+- type: trojan
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  name: 🇯🇵 日本 | JPN 5
+  server: 172.238.22.178
+  port: 443
+  udp: true
+  sni: api.85s.me
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: api.85s.me
+- type: ss
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1544...
+  server: 84.247.155.196
+  port: 80
+  udp: true
+- type: trojan
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  name: 🇯🇵 日本 | JPN 2
+  server: 172.233.91.12
+  port: 443
+  udp: true
+  sni: api.85s.me
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: api.85s.me
+- type: ss
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1544...
+  server: 84.247.155.196
+  port: 443
+  udp: true
+- type: vless
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+  name: '🏳[www.v2nodes.com] vless- #30'
+  server: 137.220.221.179
+  port: 443
+  udp: true
+  network: tcp
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇯🇵JP-149.22.87.241-0238
+  server: 149.22.87.241
+  port: 443
+  udp: true
+- type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  name: '🏳[www.v2nodes.com] vless- #31'
+  server: 3.114.220.22
+  port: 10583
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: trojan
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  name: 🇯🇵 日本 | JPN 4
+  server: 154.19.187.190
+  port: 443
+  udp: true
+  sni: api.85s.me
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: api.85s.me
 - type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
   name: '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
@@ -123,40 +240,12 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: trojan
-  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
-  name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
-  server: 45.32.52.173
-  port: 8886
-  udp: true
-  sni: 45.32.52.173
-- type: ss
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1544...
-  server: 84.247.155.196
-  port: 443
-  udp: true
 - type: ss
   cipher: aes-256-gcm
   password: BeaUf9c0AEWH40Pu
   name: 🇯🇵[www.v2nodes.com] ss-JP-1599...
   server: 154.36.158.197
   port: 8388
-  udp: true
-- type: vless
-  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
-  server: 137.220.221.179
-  port: 443
-  udp: true
-  network: tcp
-- type: ss
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-  name: 🇯🇵JP-84.247.155.196-0274
-  server: 84.247.155.196
-  port: 80
   udp: true
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
@@ -171,7 +260,7 @@ proxies:
       Host: ccc.010304.xyz
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
   server: 141.11.139.215
   port: 443
   udp: true
@@ -188,45 +277,59 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇯🇵[www.v2nodes.com] ss-JP-5141...
-  - 🇯🇵[www.v2nodes.com] ss-JP-1291...
-  - 🇯🇵 日本 | JPN 4
-  - 🇯🇵JP-149.22.87.241-0238
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  - 🇯🇵[www.v2nodes.com] ss-JP-5141...
   - 🇯🇵 日本 | JPN
-  - 🇯🇵 日本 | JPN 2
   - 🇯🇵 日本 | JPN 3
+  - 🇯🇵[www.v2nodes.com] ss-JP-1291...
+  - 🇯🇵 日本 | JPN
+  - 🇯🇵 日本 | JPN 4
+  - 🇯🇵 日本 | JPN 7
+  - 🇯🇵 日本 | JPN 2
   - 🇯🇵[www.v2nodes.com] vless-JP-1...
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
   - '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
+  - 🇯🇵 日本 | JPN 6
+  - 🇯🇵 日本 | JPN 5
   - 🇯🇵[www.v2nodes.com] ss-JP-1544...
+  - 🇯🇵 日本 | JPN 2
+  - 🇯🇵[www.v2nodes.com] ss-JP-1544...
+  - '🏳[www.v2nodes.com] vless- #30'
+  - 🇯🇵JP-149.22.87.241-0238
+  - '🏳[www.v2nodes.com] vless- #31'
+  - 🇯🇵 日本 | JPN 4
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
   - 🇯🇵[www.v2nodes.com] ss-JP-1599...
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
-  - 🇯🇵JP-84.247.155.196-0274
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇯🇵[www.v2nodes.com] ss-JP-5141...
-  - 🇯🇵[www.v2nodes.com] ss-JP-1291...
-  - 🇯🇵 日本 | JPN 4
-  - 🇯🇵JP-149.22.87.241-0238
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  - 🇯🇵[www.v2nodes.com] ss-JP-5141...
   - 🇯🇵 日本 | JPN
-  - 🇯🇵 日本 | JPN 2
   - 🇯🇵 日本 | JPN 3
+  - 🇯🇵[www.v2nodes.com] ss-JP-1291...
+  - 🇯🇵 日本 | JPN
+  - 🇯🇵 日本 | JPN 4
+  - 🇯🇵 日本 | JPN 7
+  - 🇯🇵 日本 | JPN 2
   - 🇯🇵[www.v2nodes.com] vless-JP-1...
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
   - '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
+  - 🇯🇵 日本 | JPN 6
+  - 🇯🇵 日本 | JPN 5
   - 🇯🇵[www.v2nodes.com] ss-JP-1544...
+  - 🇯🇵 日本 | JPN 2
+  - 🇯🇵[www.v2nodes.com] ss-JP-1544...
+  - '🏳[www.v2nodes.com] vless- #30'
+  - 🇯🇵JP-149.22.87.241-0238
+  - '🏳[www.v2nodes.com] vless- #31'
+  - 🇯🇵 日本 | JPN 4
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
   - 🇯🇵[www.v2nodes.com] ss-JP-1599...
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
-  - 🇯🇵JP-84.247.155.196-0274
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
 rules:
 - MATCH,SELECT

@@ -11,11 +11,24 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知164
+  server: 185.143.234.120
+  port: 80
+  udp: true
+  ws-opts:
+    path: /graphql
+    headers:
+      Host: koochehpas.com
+- type: vmess
   uuid: 70f342a4-e892-49ca-aa1a-7f658427f1dc
   alterId: 0
   cipher: auto
   network: tcp
-  name: 未知78
+  name: 未知29
   server: 37.202.225.110
   port: 5380
   udp: true
@@ -25,11 +38,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知78
+  - 未知164
+  - 未知29
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知78
+  - 未知164
+  - 未知29
 rules:
 - MATCH,SELECT

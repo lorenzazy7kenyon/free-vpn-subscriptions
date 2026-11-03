@@ -1,21 +1,30 @@
 {
   "outbounds": [
     {
-      "password": "humanity",
-      "server": "190.93.245.148",
+      "alter_id": 0,
+      "security": "auto",
+      "server": "190.93.244.201",
       "server_port": 443,
-      "tag": "🇨🇷 哥斯达黎加 | CRI",
+      "tag": "未知99",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "www.pleadcourt.org"
+        "insecure": false,
+        "server_name": "argo-tunnel.111874.xyz"
       },
-      "type": "trojan"
+      "transport": {
+        "headers": {
+          "Host": "argo-tunnel.111874.xyz"
+        },
+        "path": "/5f1d6d32-76b3-4562-8982-df2b7c122708-vm",
+        "type": "ws"
+      },
+      "type": "vmess",
+      "uuid": "5f1d6d32-76b3-4562-8982-df2b7c122708"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇨🇷 哥斯达黎加 | CRI"
+        "未知99"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -24,7 +33,7 @@
     {
       "outbounds": [
         "auto",
-        "🇨🇷 哥斯达黎加 | CRI"
+        "未知99"
       ],
       "tag": "select",
       "type": "selector"
