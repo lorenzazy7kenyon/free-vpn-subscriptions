@@ -10,33 +10,13 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-256-gcm
-  password: TEzjfAYq2IjtuoS
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
-  server: 141.164.45.187
-  port: 6697
-  udp: true
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇰🇷 韩国 | KOR
-  server: 119.28.150.58
-  port: 443
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: api.85s.me
 - type: vmess
   uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
   alterId: 0
   cipher: auto
   network: ws
-  name: 🇰🇷KR-146.56.166.153-0131
-  server: 146.56.166.153
+  name: 🇰🇷KR-138.2.122.225-0121
+  server: 138.2.122.225
   port: 443
   udp: true
   tls: true
@@ -45,6 +25,40 @@ proxies:
     path: /ray
     headers:
       Host: lg30.cfcdn3.xyz
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: 🇰🇷KR-211.178.105.134-0295
+  server: 211.178.105.134
+  port: 6123
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+  name: 🇰🇷KR-141.164.45.187-2529
+  server: 141.164.45.187
+  port: 9090
+  udp: true
+- type: vless
+  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
+  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  server: 47.80.19.173
+  port: 2053
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
+  server: 152.69.226.63
+  port: 25555
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
 - type: vless
   uuid: 26524cce-d514-4014-a426-365fb266a14d
   name: '🇰🇷 韩国 | KOR #2'
@@ -62,32 +76,28 @@ proxies:
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
   name: '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
   server: 3.39.4.109
-  port: 18967
+  port: 13672
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: vless
-  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  server: 47.80.19.173
-  port: 2053
+- type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇰🇷KR-146.56.166.153-0131
+  server: 146.56.166.153
+  port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
   tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇰🇷 韩国 | KOR
-  server: 123.111.169.70
-  port: 8443
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
+  servername: lg30.cfcdn3.xyz
+  ws-opts:
+    path: /ray
+    headers:
+      Host: lg30.cfcdn3.xyz
 - type: vless
   uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
   name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
@@ -98,48 +108,14 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
-  server: 152.69.226.63
-  port: 25555
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: 🇰🇷KR-211.178.105.134-0295
-  server: 211.178.105.134
-  port: 6123
-  udp: true
-- type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇰🇷KR-138.2.122.225-0121
-  server: 138.2.122.225
+- type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: 🇰🇷 韩国 | KOR
+  server: 43.201.86.77
   port: 443
   udp: true
-  tls: true
-  servername: lg30.cfcdn3.xyz
-  ws-opts:
-    path: /ray
-    headers:
-      Host: lg30.cfcdn3.xyz
-- type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
-  server: 3.39.4.109
-  port: 13672
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
+  sni: www.bing.com
+  skip-cert-verify: true
 - type: hysteria2
   password: 1671a252e2a97dc2bda4e515475931da
   name: ⏳74@oneclickvpnkeys
@@ -152,22 +128,6 @@ proxies:
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   name: '🇰🇷 韩国 | KOR #1'
   server: 13.125.68.77
-  port: 443
-  udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: 🇰🇷 韩国 | KOR
-  server: 13.124.239.162
-  port: 443
-  udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: '🇰🇷 韩国 | KOR #2'
-  server: 3.35.166.197
   port: 443
   udp: true
   sni: www.bing.com
@@ -186,43 +146,35 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷[www.v2nodes.com] ss-KR-1185...
-  - 🇰🇷 韩国 | KOR
-  - 🇰🇷KR-146.56.166.153-0131
+  - 🇰🇷KR-138.2.122.225-0121
+  - 🇰🇷KR-211.178.105.134-0295
+  - 🇰🇷KR-141.164.45.187-2529
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷 韩国 | KOR #2'
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  - 🇰🇷 韩国 | KOR
+  - 🇰🇷KR-146.56.166.153-0131
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - 🇰🇷KR-211.178.105.134-0295
-  - 🇰🇷KR-138.2.122.225-0121
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
+  - 🇰🇷 韩国 | KOR
   - ⏳74@oneclickvpnkeys
   - '🇰🇷 韩国 | KOR #1'
-  - 🇰🇷 韩国 | KOR
-  - '🇰🇷 韩国 | KOR #2'
   - ⏳73@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇰🇷[www.v2nodes.com] ss-KR-1185...
-  - 🇰🇷 韩国 | KOR
-  - 🇰🇷KR-146.56.166.153-0131
+  - 🇰🇷KR-138.2.122.225-0121
+  - 🇰🇷KR-211.178.105.134-0295
+  - 🇰🇷KR-141.164.45.187-2529
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷 韩国 | KOR #2'
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  - 🇰🇷 韩国 | KOR
+  - 🇰🇷KR-146.56.166.153-0131
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - 🇰🇷KR-211.178.105.134-0295
-  - 🇰🇷KR-138.2.122.225-0121
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
+  - 🇰🇷 韩国 | KOR
   - ⏳74@oneclickvpnkeys
   - '🇰🇷 韩国 | KOR #1'
-  - 🇰🇷 韩国 | KOR
-  - '🇰🇷 韩国 | KOR #2'
   - ⏳73@oneclickvpnkeys
 rules:
 - MATCH,SELECT

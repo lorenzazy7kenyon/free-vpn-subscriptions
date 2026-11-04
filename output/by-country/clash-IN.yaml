@@ -28,6 +28,17 @@ proxies:
   port: 443
   udp: true
   network: tcp
+- type: vless
+  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
+  server: 5.253.42.164
+  port: 40443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: deepl.com
+  client-fingerprint: firefox
 - type: hysteria2
   password: d105c6ae-621b-47c1-b85b-075fd6a39aca
   name: 🇮🇳_IN_印度_IPV4
@@ -44,6 +55,7 @@ proxy-groups:
   proxies:
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
   - 🇮🇳_IN_印度_IPV4
 - name: SELECT
   type: select
@@ -51,6 +63,7 @@ proxy-groups:
   - AUTO
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
   - 🇮🇳_IN_印度_IPV4
 rules:
 - MATCH,SELECT
