@@ -10,35 +10,60 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: b7dae211-7472-48bf-996c-57d6538d1ef4
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知76
-  server: 151.101.193.57
-  port: 80
-  udp: true
-  ws-opts:
-    path: ws/?ed=2048
-    headers:
-      Host: Dbdjhiw72ebsu272hs519j.com
-- type: trojan
-  password: humanity
-  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #12'
-  server: 104.19.229.21
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #12'
+  server: 104.21.221.158
   port: 443
   udp: true
-  sni: www.calmlunch.com
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /fp=chromefp=unsafe
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  name: '🏳[www.v2nodes.com] vless- #3'
+  server: 188.114.97.6
+  port: 8080
+  udp: true
   network: ws
   ws-opts:
-    path: /assignment
+    path: /sg-melbi
     headers:
-      Host: www.calmlunch.com
+      Host: hhlfy.twiladaphne.ndjp.net
+- type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  server: 104.17.210.74
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: jp3.yohototo.top
+  ws-opts:
+    path: /tyxywsfp=chrome
+    headers:
+      Host: jp3.yohototo.top
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🏳[www.v2nodes.com] vless- #9'
+  server: 172.67.231.28
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /fp=chromefp=unsafe
+    headers:
+      Host: ccc.010304.xyz
 - type: trojan
   password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇳🇱 荷兰 | NLD
-  server: 104.21.0.5
+  name: 🇺🇸 美国 | USA 9
+  server: 104.24.0.4
   port: 443
   udp: true
   sni: api.85s.me
@@ -50,157 +75,56 @@ proxies:
       Host: api.85s.me
 - type: trojan
   password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇺🇸 美国 | USA 10
-  server: 104.18.0.3
-  port: 443
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: api.85s.me
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: 🇸🇬[www.v2nodes.com] vless-SG
-  server: 172.64.155.209
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇸🇬[www.v2nodes.com] vless-SG #1'
-  server: 172.64.153.66
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #10'
-  server: 104.18.40.100
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  ws-opts:
-    path: /fp=chromefp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- type: trojan
-  password: '123456'
-  name: 🇸🇬 新加坡 | SGP 8
-  server: 104.18.35.86
-  port: 2096
-  udp: true
-  sni: 321dfbc6.uir-9i6.pages.dev
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 321dfbc6.uir-9i6.pages.dev
-- type: trojan
-  password: trojan
-  name: 🇺🇸 美国 | USA 4
-  server: 104.18.12.229
-  port: 8443
-  udp: true
-  sni: longwanghen.pages.dev
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: longwanghen.pages.dev
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇭🇰 香港 | HKG
-  server: 172.64.229.7
-  port: 443
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇳🇱 荷兰 | NLD
-  server: 104.21.0.1
-  port: 443
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇳🇱 荷兰 | NLD
-  server: 104.26.0.6
-  port: 443
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
-- type: trojan
-  password: trojan
-  name: 🇸🇬 新加坡 | SGP
-  server: 104.18.35.86
-  port: 8443
-  udp: true
-  sni: longwanghen.pages.dev
-  skip-cert-verify: true
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇺🇸 美国 | USA
+  name: 🇺🇸_US_美国_IPV4 (8)
   server: 104.17.0.3
   port: 443
   udp: true
   sni: api.85s.me
   skip-cert-verify: true
-- type: vmess
-  uuid: 5ba0defa-bd3c-43b1-8800-1d61887a07c4
-  alterId: 0
-  cipher: auto
-  network: httpupgrade
-  name: 未知103
-  server: 104.18.32.47
-  port: 8080
-  udp: true
-- type: vmess
-  uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
-  alterId: 0
-  cipher: auto
   network: ws
-  name: 未知142
-  server: 104.16.61.8
-  port: 2086
-  udp: true
   ws-opts:
-    path: /ivideos.sbs/linkws
+    path: /
     headers:
-      Host: vmess.taxar71054.workers.dev
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🏳[www.v2nodes.com] vless- #4'
-  server: 104.21.94.161
+      Host: api.85s.me
+- type: trojan
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  name: 🇺🇸_US_美国_IPV4 (9)
+  server: 104.19.0.5
   port: 443
   udp: true
+  sni: api.85s.me
+  skip-cert-verify: true
   network: ws
-  tls: true
-  servername: ccc.010304.xyz
   ws-opts:
-    path: /fp=chrome
+    path: /
     headers:
-      Host: ccc.010304.xyz
+      Host: api.85s.me
+- type: trojan
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  name: 🇳🇱_NL_荷兰_IPV4
+  server: 104.26.0.6
+  port: 443
+  udp: true
+  sni: api.85s.me
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: api.85s.me
+- type: trojan
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  name: 🇳🇱_NL_荷兰_IPV4 (3)
+  server: 104.25.0.2
+  port: 443
+  udp: true
+  sni: api.85s.me
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: api.85s.me
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: 🇸🇬[www.v2nodes.com] vless-SG
@@ -215,19 +139,6 @@ proxies:
     headers:
       Host: ccc.010304.xyz
 - type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
-  server: 104.16.10.234
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: jp3.yohototo.top
-  ws-opts:
-    path: /tyxywsfp=chrome
-    headers:
-      Host: jp3.yohototo.top
-- type: vless
   uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
   name: 🇲🇾[www.v2nodes.com] vless-MY-1...
   server: 104.17.11.191
@@ -240,6 +151,43 @@ proxies:
     path: /vlesswsfp=chrome
     headers:
       Host: vpn.cintaku.qzz.io
+- type: vless
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  name: 🇸🇬[www.v2nodes.com] vless-SG-9...
+  server: 172.67.71.187
+  port: 8080
+  udp: true
+  network: ws
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+- type: trojan
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  name: 🇫🇷 法国 | FRA
+  server: 104.26.0.3
+  port: 443
+  udp: true
+  sni: api.85s.me
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: api.85s.me
+- type: trojan
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  name: 🇫🇷 法国 | FRA 2
+  server: 104.27.0.8
+  port: 443
+  udp: true
+  sni: api.85s.me
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: api.85s.me
 - type: trojan
   password: 8deb189a-3aed-4865-843b-b72dae954c46
   name: 🇭🇰 香港 | HKG
@@ -268,181 +216,8 @@ proxies:
       Host: api.85s.me
 - type: trojan
   password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇳🇱 荷兰 | NLD 7
-  server: 104.24.0.4
-  port: 443
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: api.85s.me
-- type: vless
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  name: '🇸🇬 新加坡 | SGP #5'
-  server: 104.18.35.86
-  port: 8080
-  udp: true
-  network: ws
-  ws-opts:
-    path: /sg-melbi
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇺🇸 美国 | USA 6
-  server: 104.18.0.1
-  port: 443
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: api.85s.me
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇺🇸 美国 | USA 14
-  server: 104.17.0.8
-  port: 443
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: api.85s.me
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇸🇬 新加坡 | SGP
-  server: 104.18.43.20
-  port: 2087
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: api.85s.me
-- type: vless
-  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
-  name: '🇸🇬 新加坡 | SGP #2'
-  server: 104.18.35.86
-  port: 2083
-  udp: true
-  network: ws
-  tls: true
-  servername: vlsovip.1d.mom
-  ws-opts:
-    path: /fp=unsafefp=chrome
-    headers:
-      Host: vlsovip.1d.mom
-- type: vless
-  uuid: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
-  name: '🇺🇸 美国 | USA #9'
-  server: 172.64.146.116
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: support.zoom.us.blackshadow.dpdns.org
-  ws-opts:
-    path: /44.209.52.7-443fp=chrome
-    headers:
-      Host: support.zoom.us.blackshadow.dpdns.org
-- type: vless
-  uuid: 50414e45-4c5f-5a45-5553-6f51879c0594
-  name: '🇺🇸 美国 | USA #16'
-  server: 104.21.74.214
-  port: 2096
-  udp: true
-  network: ws
-  tls: true
-  servername: levikoconfig.levikogjgfdd.ir
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: levikoconfig.levikogjgfdd.ir
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇺🇸 美国 | USA
-  server: 104.19.0.5
-  port: 443
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
-- type: vmess
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知30
-  server: 172.67.161.144
-  port: 8443
-  udp: true
-  tls: true
-  servername: v2ray1.dozapp.xyz
-  ws-opts:
-    path: /lMnsZUN4/
-    headers:
-      Host: v2ray1.dozapp.xyz
-- type: vmess
-  uuid: 4b9cee18-8a9c-45f2-be2b-8e585783c4b5
-  alterId: 0
-  cipher: auto
-  network: httpupgrade
-  name: 未知44
-  server: 172.66.44.97
-  port: 8080
-  udp: true
-- type: vmess
-  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知86
-  server: 104.24.200.94
-  port: 443
-  udp: true
-  tls: true
-  servername: server10.9966338.xyz
-  ws-opts:
-    path: /rthiugoyretdsuigg?ed=2560
-    headers:
-      Host: server10.9966338.xyz
-- type: vless
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  name: 🇸🇬[www.v2nodes.com] vless-SG-9...
-  server: 172.67.71.187
-  port: 8080
-  udp: true
-  network: ws
-  ws-opts:
-    path: /sg-melbi
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: 🇸🇬[www.v2nodes.com] vless-SG-9...
-  server: 104.16.122.227
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560fp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
   name: 🇳🇱 荷兰 | NLD
-  server: 104.25.0.6
+  server: 104.21.0.5
   port: 443
   udp: true
   sni: api.85s.me
@@ -452,51 +227,10 @@ proxies:
     path: /
     headers:
       Host: api.85s.me
-- type: vmess
-  uuid: 20e92881-5fb4-4b05-bc77-57929476dc69
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知58
-  server: 198.41.208.172
-  port: 443
-  udp: true
-  tls: true
-  servername: sg-gcore-2.sharecentre.online
-  ws-opts:
-    path: /shirker
-    headers:
-      Host: sg-gcore-2.sharecentre.online
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #8'
-  server: 172.66.154.57
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  ws-opts:
-    path: /fp=chromefp=chrome
-    headers:
-      Host: ccc.010304.xyz
 - type: trojan
   password: 8deb189a-3aed-4865-843b-b72dae954c46
   name: 🇳🇱 荷兰 | NLD 3
   server: 104.24.0.1
-  port: 443
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: api.85s.me
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇳🇱 荷兰 | NLD 2
-  server: 104.27.0.2
   port: 443
   udp: true
   sni: api.85s.me
@@ -532,92 +266,21 @@ proxies:
     path: /
     headers:
       Host: api.85s.me
+- type: vless
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  name: '🇸🇬 新加坡 | SGP #5'
+  server: 104.18.35.86
+  port: 8080
+  udp: true
+  network: ws
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
 - type: trojan
   password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇳🇱 荷兰 | NLD
-  server: 104.25.0.2
-  port: 443
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
-- type: vmess
-  uuid: 5ea4a644-07e9-4ad0-860d-50bd9b6e7f94
-  alterId: 0
-  cipher: none
-  network: ws
-  name: 未知157
-  server: 104.25.228.174
-  port: 80
-  udp: true
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: dl2.升級.3скалация.mальчикицапля.男孩與蒼鷺.wonkacapitano.buzz.
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
-  server: 104.21.221.158
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: /fp=unsafefp=unsafesecurity=tls
-    headers:
-      Host: ccc.010304.xyz
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇳🇱 荷兰 | NLD 2
-  server: 104.27.0.3
-  port: 443
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: api.85s.me
-- type: vmess
-  uuid: 80be2deb-3b27-4775-9bd1-7f2a2b9c261b
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知153
-  server: 172.67.153.127
-  port: 443
-  udp: true
-  tls: true
-  servername: www.windowsmsidownloads.com
-  ws-opts:
-    path: /truth
-    headers:
-      Host: www.windowsmsidownloads.com
-- type: vless
-  uuid: 50414e45-4c5f-5a45-5553-52108a2d5224
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  server: 104.27.88.172
-  port: 80
-  udp: true
-  network: ws
-  ws-opts:
-    path: /api/ws
-    headers:
-      Host: web-app-nr6wpa.app-tp57xz.workers.dev
-- type: vless
-  uuid: b15f187e-9b34-437c-8243-8651a8ada76c
-  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
-  server: 188.114.96.25
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: /stream/DEVCOP/8651a8ada76c/loc-0security=tls
-    headers:
-      Host: tepar-k4j9.jounet.workers.dev
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇫🇷 法国 | FRA 2
-  server: 104.27.0.8
+  name: 🇺🇸 美国 | USA 6
+  server: 104.18.0.1
   port: 443
   udp: true
   sni: api.85s.me
@@ -629,8 +292,8 @@ proxies:
       Host: api.85s.me
 - type: trojan
   password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇳🇱 荷兰 | NLD 3
-  server: 104.25.0.8
+  name: 🇺🇸 美国 | USA 10
+  server: 104.18.0.3
   port: 443
   udp: true
   sni: api.85s.me
@@ -640,47 +303,19 @@ proxies:
     path: /
     headers:
       Host: api.85s.me
-- type: vmess
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🏁RELAY-104.17.136.198-1960
-  server: 104.17.136.198
+- type: trojan
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  name: 🇺🇸 美国 | USA 14
+  server: 104.17.0.8
   port: 443
   udp: true
-  tls: true
-  servername: vmess.lbw666.dpdns.org
-  ws-opts:
-    path: /ws
-    headers:
-      Host: vmess.lbw666.dpdns.org
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🏳[www.v2nodes.com] vless- #44'
-  server: 104.24.46.107
-  port: 443
-  udp: true
+  sni: api.85s.me
+  skip-cert-verify: true
   network: ws
-  tls: true
-  servername: ccc.010304.xyz
   ws-opts:
-    path: /fpfp=unsafe
+    path: /
     headers:
-      Host: ccc.010304.xyz
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🇸🇬[www.v2nodes.com] vless-SG #1'
-  server: 104.18.45.38
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ccc.010304.xyz
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560fp=unsafe
-    headers:
-      Host: ccc.010304.xyz
+      Host: api.85s.me
 - type: vmess
   uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
   alterId: 0
@@ -696,53 +331,21 @@ proxies:
     path: /lMnsZUN4/
     headers:
       Host: v2ray1.dozapp.xyz
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇫🇷 法国 | FRA
-  server: 104.26.0.3
+- type: vmess
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🏁RELAY-104.17.136.198-1960
+  server: 104.17.136.198
   port: 443
   udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: api.85s.me
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇺🇸 美国 | USA 2
-  server: 104.21.0.7
-  port: 443
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: api.85s.me
-- type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  network: ws
   tls: true
-  servername: jp3.yohototo.top
+  servername: vmess.lbw666.dpdns.org
   ws-opts:
-    path: /tyxywsfp=unsafe
+    path: /ws
     headers:
-      Host: jp3.yohototo.top
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇬🇧 英国 | GBR
-  server: 104.21.0.4
-  port: 443
-  udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
+      Host: vmess.lbw666.dpdns.org
 - type: vmess
   uuid: e70a5b70-f63c-4450-af8b-94990cdf80c0
   alterId: 0
@@ -758,30 +361,165 @@ proxies:
     path: /
     headers:
       Host: www.gptcloudai.com
-- type: trojan
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  name: 🇬🇧 英国 | GBR
-  server: 104.21.0.2
+- type: vmess
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知30
+  server: 172.67.161.144
+  port: 8443
+  udp: true
+  tls: true
+  servername: v2ray1.dozapp.xyz
+  ws-opts:
+    path: /lMnsZUN4/
+    headers:
+      Host: v2ray1.dozapp.xyz
+- type: vmess
+  uuid: 20e92881-5fb4-4b05-bc77-57929476dc69
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知58
+  server: 198.41.208.172
   port: 443
   udp: true
-  sni: api.85s.me
-  skip-cert-verify: true
+  tls: true
+  servername: sg-gcore-2.sharecentre.online
+  ws-opts:
+    path: /shirker
+    headers:
+      Host: sg-gcore-2.sharecentre.online
+- type: vmess
+  uuid: b7dae211-7472-48bf-996c-57d6538d1ef4
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知76
+  server: 151.101.193.57
+  port: 80
+  udp: true
+  ws-opts:
+    path: ws/?ed=2048
+    headers:
+      Host: Dbdjhiw72ebsu272hs519j.com
+- type: vmess
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知86
+  server: 104.24.200.94
+  port: 443
+  udp: true
+  tls: true
+  servername: server10.9966338.xyz
+  ws-opts:
+    path: /rthiugoyretdsuigg?ed=2560
+    headers:
+      Host: server10.9966338.xyz
+- type: vmess
+  uuid: 5ba0defa-bd3c-43b1-8800-1d61887a07c4
+  alterId: 0
+  cipher: auto
+  network: httpupgrade
+  name: 未知103
+  server: 104.18.32.47
+  port: 8080
+  udp: true
+- type: vmess
+  uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知142
+  server: 104.16.61.8
+  port: 2086
+  udp: true
+  ws-opts:
+    path: /ivideos.sbs/linkws
+    headers:
+      Host: vmess.taxar71054.workers.dev
+- type: vmess
+  uuid: 80be2deb-3b27-4775-9bd1-7f2a2b9c261b
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知153
+  server: 172.67.153.127
+  port: 443
+  udp: true
+  tls: true
+  servername: www.windowsmsidownloads.com
+  ws-opts:
+    path: /truth
+    headers:
+      Host: www.windowsmsidownloads.com
+- type: vmess
+  uuid: 5ea4a644-07e9-4ad0-860d-50bd9b6e7f94
+  alterId: 0
+  cipher: none
+  network: ws
+  name: 未知157
+  server: 104.25.228.174
+  port: 80
+  udp: true
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: dl2.升級.3скалация.mальчикицапля.男孩與蒼鷺.wonkacapitano.buzz.
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🏳[www.v2nodes.com] vless- #24'
-  server: 172.67.231.28
+  name: '🏳[www.v2nodes.com] vless- #2'
+  server: 104.21.94.161
   port: 443
   udp: true
   network: ws
   tls: true
   servername: ccc.010304.xyz
   ws-opts:
-    path: /fp=chromefp=unsafe
+    path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🏳[www.v2nodes.com] vless- #25'
+  name: 🇸🇬[www.v2nodes.com] vless-SG
+  server: 172.67.138.17
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: 50414e45-4c5f-5a45-5553-52108a2d5224
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #8'
+  server: 104.27.88.172
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /api/ws
+    headers:
+      Host: web-app-nr6wpa.app-tp57xz.workers.dev
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
+  server: 104.21.221.158
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=unsafefp=unsafesecurity=tls
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🏳[www.v2nodes.com] vless- #10'
   server: 172.67.155.148
   port: 443
   udp: true
@@ -793,16 +531,29 @@ proxies:
     headers:
       Host: ccc.010304.xyz
 - type: vless
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  name: '🏳[www.v2nodes.com] vless- #5'
-  server: 188.114.97.6
-  port: 8080
+  uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
+  name: 🇲🇾[www.v2nodes.com] vless-MY-1...
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: vpn.cintaku.qzz.io
+  ws-opts:
+    path: /vlesswsfp=unsafe
+    headers:
+      Host: vpn.cintaku.qzz.io
+- type: vless
+  uuid: b15f187e-9b34-437c-8243-8651a8ada76c
+  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #6'
+  server: 188.114.96.25
+  port: 443
   udp: true
   network: ws
   ws-opts:
-    path: /sg-melbi
+    path: /stream/DEVCOP/8651a8ada76c/loc-0security=tls
     headers:
-      Host: hhlfy.twiladaphne.ndjp.net
+      Host: tepar-k4j9.jounet.workers.dev
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: 🇵🇱[www.v2nodes.com] vless-PL-4...
@@ -818,6 +569,109 @@ proxies:
       Host: ccc.010304.xyz
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #11'
+  server: 104.18.60.55
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560fp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🏳[www.v2nodes.com] vless- #23'
+  server: 104.24.46.107
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /fpfp=unsafe
+    headers:
+      Host: ccc.010304.xyz
+- type: trojan
+  password: humanity
+  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #12'
+  server: 104.19.229.21
+  port: 443
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- type: trojan
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  name: 🇳🇱_NL_荷兰_IPV4 (2)
+  server: 104.21.0.7
+  port: 443
+  udp: true
+  sni: api.85s.me
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: api.85s.me
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇸🇬[www.v2nodes.com] vless-SG #1'
+  server: 104.18.45.38
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560fp=unsafe
+    headers:
+      Host: ccc.010304.xyz
+- type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  server: 104.16.10.234
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: jp3.yohototo.top
+  ws-opts:
+    path: /tyxywsfp=chrome
+    headers:
+      Host: jp3.yohototo.top
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #8'
+  server: 172.66.154.57
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ccc.010304.xyz
+  ws-opts:
+    path: /fp=chromefp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- type: trojan
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  name: 🇳🇱 荷兰 | NLD 2
+  server: 104.27.0.2
+  port: 443
+  udp: true
+  sni: api.85s.me
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: api.85s.me
+- type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
   name: '🇺🇸 美国 | USA #9'
   server: 172.67.151.38
   port: 443
@@ -830,97 +684,63 @@ proxies:
     headers:
       Host: ccc.010304.xyz
 - type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  uuid: 4b9cee18-8a9c-45f2-be2b-8e585783c4b5
   alterId: 0
   cipher: auto
-  network: tcp
-  name: 未知79
-  server: 158.51.123.42
-  port: 22324
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇨🇦CA-149.22.95.183-0199
-  server: 149.22.95.183
-  port: 443
+  network: httpupgrade
+  name: 未知44
+  server: 172.66.44.97
+  port: 8080
   udp: true
 - type: vless
-  uuid: c166ca49-4af0-416d-8411-2100f7bde9fe
-  name: '🏳[www.v2nodes.com] vless- #52'
-  server: 66.154.101.36
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.tesla.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  name: '🏳[www.v2nodes.com] vless- #1'
-  server: 104.21.221.158
-  port: 443
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  name: 🇸🇬[www.v2nodes.com] vless-SG-9...
+  server: 104.18.35.86
+  port: 2082
   udp: true
   network: ws
-  tls: true
-  servername: ccc.010304.xyz
   ws-opts:
-    path: /fp=chromefp=unsafe
+    path: /fp
     headers:
-      Host: ccc.010304.xyz
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇨🇦[www.v2nodes.com] trojan-CA-... #2'
-  server: 216.152.147.79
-  port: 443
+      Host: hhlfy.twiladaphne.ndjp.net
+- type: ss
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+  name: '🏳[www.v2nodes.com] ss- #1'
+  server: 51.79.49.116
+  port: 8882
   udp: true
-  sni: 216.152.147.79
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇨🇦[www.v2nodes.com] trojan-CA-... #3'
-  server: 216.152.147.152
-  port: 443
-  udp: true
-  sni: 216.152.147.152
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇨🇦[www.v2nodes.com] trojan-CA-... #4'
-  server: 216.152.147.85
-  port: 443
-  udp: true
-  sni: 216.152.147.85
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇨🇦[www.v2nodes.com] trojan-CA-... #5'
-  server: 216.152.147.93
-  port: 443
-  udp: true
-  sni: 216.152.147.93
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇨🇦[www.v2nodes.com] trojan-CA-... #5'
-  server: 216.152.147.89
-  port: 443
-  udp: true
-  sni: 216.152.147.89
 - type: vless
-  uuid: 13bf9403-22d1-4221-939b-f6606c423139
-  name: 🇨🇦[www.v2nodes.com] vless-CA-1...
-  server: 66.163.113.238
-  port: 443
+  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
+  name: '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  server: 66.70.179.198
+  port: 2053
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: steamcommunity.com
-  client-fingerprint: chrome
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇨🇦CA-216.152.147.48-0191
-  server: 216.152.147.48
-  port: 443
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- type: ss
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+  name: 🇨🇦[www.v2nodes.com] ss-CA-1557...
+  server: 51.222.136.236
+  port: 8882
   udp: true
-  sni: courses.connectingpeoplewithgreatjobs.com
+- type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+  name: '🇨🇦[www.v2nodes.com] ss-CA-1546... #1'
+  server: 51.222.155.32
+  port: 5003
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+  name: 🇨🇦[www.v2nodes.com] ss-CA-1538...
+  server: 51.222.12.127
+  port: 445
+  udp: true
 - type: vless
   uuid: ca52e2b6-fb9f-4dac-b6dc-49da9923f251
   name: '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
@@ -941,38 +761,62 @@ proxies:
   udp: true
 - type: ss
   cipher: aes-256-gcm
-  password: g5MeD6Ft3CWlJId
-  name: '🇨🇦[www.v2nodes.com] ss-CA-1546... #1'
-  server: 51.222.155.32
-  port: 5003
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
-  name: '🏳[www.v2nodes.com] ss- #4'
-  server: 51.222.12.127
-  port: 445
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
-  name: 🏳[www.v2nodes.com] ss-
-  server: 51.222.141.125
-  port: 445
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
   password: cdBIDV42DCwnfIN
-  name: '🏳[www.v2nodes.com] ss- #1'
+  name: 🏳[www.v2nodes.com] ss-
   server: 51.79.85.185
   port: 8118
   udp: true
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇨🇦[www.v2nodes.com] trojan-CA-...
+  server: 216.152.147.48
+  port: 443
+  udp: true
+  sni: courses.connectingpeoplewithgreatjobs.com
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇨🇦[www.v2nodes.com] trojan-CA-... #2'
+  server: 216.152.147.79
+  port: 443
+  udp: true
+  sni: 216.152.147.79
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇨🇦[www.v2nodes.com] trojan-CA-... #1'
+  server: 216.152.147.89
+  port: 443
+  udp: true
+  sni: 216.152.147.89
+- type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  name: 🇨🇦CA-137.184.174.93-0205
+  server: 137.184.174.93
+  port: 8080
+  udp: true
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇨🇦[www.v2nodes.com] trojan-CA-... #5'
+  server: 216.152.147.152
+  port: 443
+  udp: true
+  sni: learn.connectingpeoplewithgreatjobs.com
+- type: vless
+  uuid: c166ca49-4af0-416d-8411-2100f7bde9fe
+  name: '🇺🇸[www.v2nodes.com] vless-US-1... #1'
+  server: 66.154.101.36
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.tesla.com
+  client-fingerprint: chrome
 - type: ss
   cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-  name: '🏳[www.v2nodes.com] ss- #2'
-  server: 51.222.136.236
-  port: 8882
+  password: cdBIDV42DCwnfIN
+  name: 🇨🇦[www.v2nodes.com] ss-CA-1545...
+  server: 51.79.64.198
+  port: 8119
   udp: true
 - type: ss
   cipher: aes-256-gcm
@@ -983,224 +827,182 @@ proxies:
   udp: true
 - type: ss
   cipher: aes-256-gcm
-  password: cdBIDV42DCwnfIN
-  name: 🇨🇦[www.v2nodes.com] ss-CA-1545...
-  server: 51.79.64.198
-  port: 8119
+  password: zDNVedRFPQexG9v
+  name: 🇨🇦[www.v2nodes.com] ss-CA-1559...
+  server: 51.222.141.125
+  port: 445
   udp: true
 - type: ss
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-  name: '🏳[www.v2nodes.com] ss- #3'
-  server: 51.79.49.116
-  port: 8882
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇨🇦CA-149.22.95.183-0199
+  server: 149.22.95.183
+  port: 443
   udp: true
-- type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  name: 🇨🇦CA-137.184.174.93-0205
-  server: 137.184.174.93
-  port: 8080
-  udp: true
-- type: vless
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
-  name: '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
-  server: 66.70.179.198
-  port: 2053
-  udp: true
+- type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
   network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
+  name: 未知79
+  server: 158.51.123.42
+  port: 22324
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知76
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #12'
-  - 🇳🇱 荷兰 | NLD
-  - 🇺🇸 美国 | USA 10
-  - 🇸🇬[www.v2nodes.com] vless-SG
-  - '🇸🇬[www.v2nodes.com] vless-SG #1'
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #10'
-  - 🇸🇬 新加坡 | SGP 8
-  - 🇺🇸 美国 | USA 4
-  - 🇭🇰 香港 | HKG
-  - 🇳🇱 荷兰 | NLD
-  - 🇳🇱 荷兰 | NLD
-  - 🇸🇬 新加坡 | SGP
-  - 🇺🇸 美国 | USA
-  - 未知103
-  - 未知142
-  - '🏳[www.v2nodes.com] vless- #4'
-  - 🇸🇬[www.v2nodes.com] vless-SG
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #12'
+  - '🏳[www.v2nodes.com] vless- #3'
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  - '🏳[www.v2nodes.com] vless- #9'
+  - 🇺🇸 美国 | USA 9
+  - 🇺🇸_US_美国_IPV4 (8)
+  - 🇺🇸_US_美国_IPV4 (9)
+  - 🇳🇱_NL_荷兰_IPV4
+  - 🇳🇱_NL_荷兰_IPV4 (3)
+  - 🇸🇬[www.v2nodes.com] vless-SG
   - 🇲🇾[www.v2nodes.com] vless-MY-1...
+  - 🇸🇬[www.v2nodes.com] vless-SG-9...
+  - 🇫🇷 法国 | FRA
+  - 🇫🇷 法国 | FRA 2
   - 🇭🇰 香港 | HKG
   - 🇭🇰 香港 | HKG 3
-  - 🇳🇱 荷兰 | NLD 7
-  - '🇸🇬 新加坡 | SGP #5'
-  - 🇺🇸 美国 | USA 6
-  - 🇺🇸 美国 | USA 14
-  - 🇸🇬 新加坡 | SGP
-  - '🇸🇬 新加坡 | SGP #2'
-  - '🇺🇸 美国 | USA #9'
-  - '🇺🇸 美国 | USA #16'
-  - 🇺🇸 美国 | USA
-  - 未知30
-  - 未知44
-  - 未知86
-  - 🇸🇬[www.v2nodes.com] vless-SG-9...
-  - 🇸🇬[www.v2nodes.com] vless-SG-9...
   - 🇳🇱 荷兰 | NLD
-  - 未知58
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #8'
   - 🇳🇱 荷兰 | NLD 3
-  - 🇳🇱 荷兰 | NLD 2
   - 🇸🇪 瑞典 | SWE
   - 🇸🇪 瑞典 | SWE 2
-  - 🇳🇱 荷兰 | NLD
-  - 未知157
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
-  - 🇳🇱 荷兰 | NLD 2
-  - 未知153
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
-  - 🇫🇷 法国 | FRA 2
-  - 🇳🇱 荷兰 | NLD 3
-  - 🏁RELAY-104.17.136.198-1960
-  - '🏳[www.v2nodes.com] vless- #44'
-  - '🇸🇬[www.v2nodes.com] vless-SG #1'
+  - '🇸🇬 新加坡 | SGP #5'
+  - 🇺🇸 美国 | USA 6
+  - 🇺🇸 美国 | USA 10
+  - 🇺🇸 美国 | USA 14
   - 🏁RELAY-172.64.80.1-1961
-  - 🇫🇷 法国 | FRA
-  - 🇺🇸 美国 | USA 2
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
-  - 🇬🇧 英国 | GBR
+  - 🏁RELAY-104.17.136.198-1960
   - 🏁RELAY-172.67.156.121-0156
-  - 🇬🇧 英国 | GBR
-  - '🏳[www.v2nodes.com] vless- #24'
-  - '🏳[www.v2nodes.com] vless- #25'
-  - '🏳[www.v2nodes.com] vless- #5'
+  - 未知30
+  - 未知58
+  - 未知76
+  - 未知86
+  - 未知103
+  - 未知142
+  - 未知153
+  - 未知157
+  - '🏳[www.v2nodes.com] vless- #2'
+  - 🇸🇬[www.v2nodes.com] vless-SG
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #8'
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
+  - '🏳[www.v2nodes.com] vless- #10'
+  - 🇲🇾[www.v2nodes.com] vless-MY-1...
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #6'
   - 🇵🇱[www.v2nodes.com] vless-PL-4...
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #11'
+  - '🏳[www.v2nodes.com] vless- #23'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #12'
+  - 🇳🇱_NL_荷兰_IPV4 (2)
+  - '🇸🇬[www.v2nodes.com] vless-SG #1'
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #8'
+  - 🇳🇱 荷兰 | NLD 2
   - '🇺🇸 美国 | USA #9'
-  - 未知79
-  - 🇨🇦CA-149.22.95.183-0199
-  - '🏳[www.v2nodes.com] vless- #52'
-  - '🏳[www.v2nodes.com] vless- #1'
-  - '🇨🇦[www.v2nodes.com] trojan-CA-... #2'
-  - '🇨🇦[www.v2nodes.com] trojan-CA-... #3'
-  - '🇨🇦[www.v2nodes.com] trojan-CA-... #4'
-  - '🇨🇦[www.v2nodes.com] trojan-CA-... #5'
-  - '🇨🇦[www.v2nodes.com] trojan-CA-... #5'
-  - 🇨🇦[www.v2nodes.com] vless-CA-1...
-  - 🇨🇦CA-216.152.147.48-0191
+  - 未知44
+  - 🇸🇬[www.v2nodes.com] vless-SG-9...
+  - '🏳[www.v2nodes.com] ss- #1'
+  - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  - 🇨🇦[www.v2nodes.com] ss-CA-1557...
+  - '🇨🇦[www.v2nodes.com] ss-CA-1546... #1'
+  - 🇨🇦[www.v2nodes.com] ss-CA-1538...
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
   - 🇨🇦[www.v2nodes.com] ss-CA-1558...
-  - '🇨🇦[www.v2nodes.com] ss-CA-1546... #1'
-  - '🏳[www.v2nodes.com] ss- #4'
   - 🏳[www.v2nodes.com] ss-
-  - '🏳[www.v2nodes.com] ss- #1'
-  - '🏳[www.v2nodes.com] ss- #2'
-  - 🇨🇦[www.v2nodes.com] ss-CA-1546...
-  - 🇨🇦[www.v2nodes.com] ss-CA-1545...
-  - '🏳[www.v2nodes.com] ss- #3'
+  - 🇨🇦[www.v2nodes.com] trojan-CA-...
+  - '🇨🇦[www.v2nodes.com] trojan-CA-... #2'
+  - '🇨🇦[www.v2nodes.com] trojan-CA-... #1'
   - 🇨🇦CA-137.184.174.93-0205
-  - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  - '🇨🇦[www.v2nodes.com] trojan-CA-... #5'
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #1'
+  - 🇨🇦[www.v2nodes.com] ss-CA-1545...
+  - 🇨🇦[www.v2nodes.com] ss-CA-1546...
+  - 🇨🇦[www.v2nodes.com] ss-CA-1559...
+  - 🇨🇦CA-149.22.95.183-0199
+  - 未知79
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知76
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #12'
-  - 🇳🇱 荷兰 | NLD
-  - 🇺🇸 美国 | USA 10
-  - 🇸🇬[www.v2nodes.com] vless-SG
-  - '🇸🇬[www.v2nodes.com] vless-SG #1'
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #10'
-  - 🇸🇬 新加坡 | SGP 8
-  - 🇺🇸 美国 | USA 4
-  - 🇭🇰 香港 | HKG
-  - 🇳🇱 荷兰 | NLD
-  - 🇳🇱 荷兰 | NLD
-  - 🇸🇬 新加坡 | SGP
-  - 🇺🇸 美国 | USA
-  - 未知103
-  - 未知142
-  - '🏳[www.v2nodes.com] vless- #4'
-  - 🇸🇬[www.v2nodes.com] vless-SG
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #12'
+  - '🏳[www.v2nodes.com] vless- #3'
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  - '🏳[www.v2nodes.com] vless- #9'
+  - 🇺🇸 美国 | USA 9
+  - 🇺🇸_US_美国_IPV4 (8)
+  - 🇺🇸_US_美国_IPV4 (9)
+  - 🇳🇱_NL_荷兰_IPV4
+  - 🇳🇱_NL_荷兰_IPV4 (3)
+  - 🇸🇬[www.v2nodes.com] vless-SG
   - 🇲🇾[www.v2nodes.com] vless-MY-1...
+  - 🇸🇬[www.v2nodes.com] vless-SG-9...
+  - 🇫🇷 法国 | FRA
+  - 🇫🇷 法国 | FRA 2
   - 🇭🇰 香港 | HKG
   - 🇭🇰 香港 | HKG 3
-  - 🇳🇱 荷兰 | NLD 7
-  - '🇸🇬 新加坡 | SGP #5'
-  - 🇺🇸 美国 | USA 6
-  - 🇺🇸 美国 | USA 14
-  - 🇸🇬 新加坡 | SGP
-  - '🇸🇬 新加坡 | SGP #2'
-  - '🇺🇸 美国 | USA #9'
-  - '🇺🇸 美国 | USA #16'
-  - 🇺🇸 美国 | USA
-  - 未知30
-  - 未知44
-  - 未知86
-  - 🇸🇬[www.v2nodes.com] vless-SG-9...
-  - 🇸🇬[www.v2nodes.com] vless-SG-9...
   - 🇳🇱 荷兰 | NLD
-  - 未知58
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #8'
   - 🇳🇱 荷兰 | NLD 3
-  - 🇳🇱 荷兰 | NLD 2
   - 🇸🇪 瑞典 | SWE
   - 🇸🇪 瑞典 | SWE 2
-  - 🇳🇱 荷兰 | NLD
-  - 未知157
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
-  - 🇳🇱 荷兰 | NLD 2
-  - 未知153
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
-  - 🇫🇷 法国 | FRA 2
-  - 🇳🇱 荷兰 | NLD 3
-  - 🏁RELAY-104.17.136.198-1960
-  - '🏳[www.v2nodes.com] vless- #44'
-  - '🇸🇬[www.v2nodes.com] vless-SG #1'
+  - '🇸🇬 新加坡 | SGP #5'
+  - 🇺🇸 美国 | USA 6
+  - 🇺🇸 美国 | USA 10
+  - 🇺🇸 美国 | USA 14
   - 🏁RELAY-172.64.80.1-1961
-  - 🇫🇷 法国 | FRA
-  - 🇺🇸 美国 | USA 2
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
-  - 🇬🇧 英国 | GBR
+  - 🏁RELAY-104.17.136.198-1960
   - 🏁RELAY-172.67.156.121-0156
-  - 🇬🇧 英国 | GBR
-  - '🏳[www.v2nodes.com] vless- #24'
-  - '🏳[www.v2nodes.com] vless- #25'
-  - '🏳[www.v2nodes.com] vless- #5'
+  - 未知30
+  - 未知58
+  - 未知76
+  - 未知86
+  - 未知103
+  - 未知142
+  - 未知153
+  - 未知157
+  - '🏳[www.v2nodes.com] vless- #2'
+  - 🇸🇬[www.v2nodes.com] vless-SG
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #8'
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
+  - '🏳[www.v2nodes.com] vless- #10'
+  - 🇲🇾[www.v2nodes.com] vless-MY-1...
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #6'
   - 🇵🇱[www.v2nodes.com] vless-PL-4...
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #11'
+  - '🏳[www.v2nodes.com] vless- #23'
+  - '🇫🇷[www.v2nodes.com] trojan-FR-... #12'
+  - 🇳🇱_NL_荷兰_IPV4 (2)
+  - '🇸🇬[www.v2nodes.com] vless-SG #1'
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #8'
+  - 🇳🇱 荷兰 | NLD 2
   - '🇺🇸 美国 | USA #9'
-  - 未知79
-  - 🇨🇦CA-149.22.95.183-0199
-  - '🏳[www.v2nodes.com] vless- #52'
-  - '🏳[www.v2nodes.com] vless- #1'
-  - '🇨🇦[www.v2nodes.com] trojan-CA-... #2'
-  - '🇨🇦[www.v2nodes.com] trojan-CA-... #3'
-  - '🇨🇦[www.v2nodes.com] trojan-CA-... #4'
-  - '🇨🇦[www.v2nodes.com] trojan-CA-... #5'
-  - '🇨🇦[www.v2nodes.com] trojan-CA-... #5'
-  - 🇨🇦[www.v2nodes.com] vless-CA-1...
-  - 🇨🇦CA-216.152.147.48-0191
+  - 未知44
+  - 🇸🇬[www.v2nodes.com] vless-SG-9...
+  - '🏳[www.v2nodes.com] ss- #1'
+  - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  - 🇨🇦[www.v2nodes.com] ss-CA-1557...
+  - '🇨🇦[www.v2nodes.com] ss-CA-1546... #1'
+  - 🇨🇦[www.v2nodes.com] ss-CA-1538...
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
   - 🇨🇦[www.v2nodes.com] ss-CA-1558...
-  - '🇨🇦[www.v2nodes.com] ss-CA-1546... #1'
-  - '🏳[www.v2nodes.com] ss- #4'
   - 🏳[www.v2nodes.com] ss-
-  - '🏳[www.v2nodes.com] ss- #1'
-  - '🏳[www.v2nodes.com] ss- #2'
-  - 🇨🇦[www.v2nodes.com] ss-CA-1546...
-  - 🇨🇦[www.v2nodes.com] ss-CA-1545...
-  - '🏳[www.v2nodes.com] ss- #3'
+  - 🇨🇦[www.v2nodes.com] trojan-CA-...
+  - '🇨🇦[www.v2nodes.com] trojan-CA-... #2'
+  - '🇨🇦[www.v2nodes.com] trojan-CA-... #1'
   - 🇨🇦CA-137.184.174.93-0205
-  - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  - '🇨🇦[www.v2nodes.com] trojan-CA-... #5'
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #1'
+  - 🇨🇦[www.v2nodes.com] ss-CA-1545...
+  - 🇨🇦[www.v2nodes.com] ss-CA-1546...
+  - 🇨🇦[www.v2nodes.com] ss-CA-1559...
+  - 🇨🇦CA-149.22.95.183-0199
+  - 未知79
 rules:
 - MATCH,SELECT

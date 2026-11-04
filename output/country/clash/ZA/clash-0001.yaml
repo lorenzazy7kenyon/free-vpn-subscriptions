@@ -37,6 +37,13 @@ proxies:
   server: 102.133.165.160
   port: 16233
   udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: tfAcRikawhNoZAhu
+  name: 🇿🇦ZA-139.84.247.164-0210
+  server: 139.84.247.164
+  port: 8388
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -46,6 +53,7 @@ proxy-groups:
   - 🇿🇦[www.v2nodes.com] vless-ZA-1...
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
   - 🇿🇦[www.v2nodes.com] ss-ZA-1333...
+  - 🇿🇦ZA-139.84.247.164-0210
 - name: SELECT
   type: select
   proxies:
@@ -53,5 +61,6 @@ proxy-groups:
   - 🇿🇦[www.v2nodes.com] vless-ZA-1...
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
   - 🇿🇦[www.v2nodes.com] ss-ZA-1333...
+  - 🇿🇦ZA-139.84.247.164-0210
 rules:
 - MATCH,SELECT
