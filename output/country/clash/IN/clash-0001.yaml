@@ -22,51 +22,12 @@ proxies:
     headers:
       Host: 13.140.56.100
 - type: vless
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
-  server: 194.61.31.126
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: 405b964e-a2d2-454f-aaaa-711cc218897c
-  name: 🇮🇳[www.v2nodes.com] vless-IN
-  server: 5.253.28.240
-  port: 40443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: deepl.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: af5eac96-e478-488a-bc8c-45269d7e8847
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
-  server: 5.253.28.224
-  port: 40443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: deepl.com
-  client-fingerprint: firefox
-- type: vless
   uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
   name: 🇮🇳[www.v2nodes.com] vless-IN-1...
   server: 122.176.216.52
   port: 443
   udp: true
   network: tcp
-- type: ss
-  cipher: aes-256-gcm
-  password: GEdoeeqLZtkJRgSa
-  name: 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  server: 139.84.166.47
-  port: 8388
-  udp: true
 - type: hysteria2
   password: d105c6ae-621b-47c1-b85b-075fd6a39aca
   name: 🇮🇳_IN_印度_IPV4
@@ -82,22 +43,14 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
-  - 🇮🇳[www.v2nodes.com] vless-IN
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
   - 🇮🇳[www.v2nodes.com] vless-IN-1...
-  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
   - 🇮🇳_IN_印度_IPV4
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
-  - 🇮🇳[www.v2nodes.com] vless-IN
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
   - 🇮🇳[www.v2nodes.com] vless-IN-1...
-  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
   - 🇮🇳_IN_印度_IPV4
 rules:
 - MATCH,SELECT

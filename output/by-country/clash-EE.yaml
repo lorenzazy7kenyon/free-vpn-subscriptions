@@ -23,7 +23,7 @@ proxies:
   client-fingerprint: chrome
 - type: vless
   uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
-  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #9'
+  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #8'
   server: 87.232.116.20
   port: 443
   udp: true
@@ -31,22 +31,6 @@ proxies:
   tls: true
   servername: fafeqdhlett2p5la6d.cdn.cachefleet.com
   client-fingerprint: firefox
-- type: vless
-  uuid: 4cb5f361-ac35-4a80-b6da-f34bc90ee775
-  name: 🇪🇪 爱沙尼亚 | EST
-  server: 144.31.129.202
-  port: 446
-  udp: true
-  network: grpc
-  tls: true
-  servername: 144.31.129.202
-- type: vless
-  uuid: 3d526c7f-059c-4e2b-b09a-8569b268935b
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
-  server: 185.225.205.53
-  port: 443
-  udp: true
-  network: tcp
 - type: vless
   uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
   name: 🇦🇹[www.v2nodes.com] vless-AT-1...
@@ -58,6 +42,29 @@ proxies:
   tls: true
   servername: tau1.freerunet.online
   client-fingerprint: firefox
+- type: vless
+  uuid: 4cb5f361-ac35-4a80-b6da-f34bc90ee775
+  name: 🇪🇪 爱沙尼亚 | EST
+  server: 144.31.129.202
+  port: 446
+  udp: true
+  network: grpc
+  tls: true
+  servername: 144.31.129.202
+- type: vless
+  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
+  name: 🇪🇪[www.v2nodes.com] vless-EE-1...
+  server: 45.86.60.174
+  port: 16443
+  udp: true
+  network: tcp
+- type: vless
+  uuid: 3d526c7f-059c-4e2b-b09a-8569b268935b
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  server: 185.225.205.53
+  port: 443
+  udp: true
+  network: tcp
 - type: hysteria2
   password: 70043bfa-d6fb-4980-b27e-773e9e8b2004
   name: ⏳1@oneclickvpnkeys
@@ -72,20 +79,22 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #6'
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #9'
-  - 🇪🇪 爱沙尼亚 | EST
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #8'
   - 🇦🇹[www.v2nodes.com] vless-AT-1...
+  - 🇪🇪 爱沙尼亚 | EST
+  - 🇪🇪[www.v2nodes.com] vless-EE-1...
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
   - ⏳1@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #6'
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #9'
-  - 🇪🇪 爱沙尼亚 | EST
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #8'
   - 🇦🇹[www.v2nodes.com] vless-AT-1...
+  - 🇪🇪 爱沙尼亚 | EST
+  - 🇪🇪[www.v2nodes.com] vless-EE-1...
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
   - ⏳1@oneclickvpnkeys
 rules:
 - MATCH,SELECT
