@@ -10,71 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
-  server: 45.144.234.157
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.144.234.157
-- type: vless
-  uuid: c04522c4-3d53-4eab-b5b5-25385d5f11b1
-  name: 🇩🇪 德国 | DEU
-  server: 78.17.39.129
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: 78.17.39.129
-  client-fingerprint: chrome
-- type: vless
-  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
-  name: 🇫🇮[www.v2nodes.com] vless-FI-1...
-  server: 31.77.199.147
-  port: 4443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: images.unsplash.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: d6752c6b-80ae-4a91-b446-bb330f7f8177
-  name: '🏳[www.v2nodes.com] vless- #11'
-  server: 94.156.79.93
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.foxsports.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 1a5e7720-abf3-4b9b-bc9b-9a900a04b434
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
-  server: 94.156.79.93
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.microsoft.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: 67eb6b17-7797-4ded-bf52-423c4c5f6cbd
-  name: '🏳[www.v2nodes.com] vless- #12'
-  server: 87.239.249.137
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.foxsports.com
-  client-fingerprint: chrome
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
@@ -92,7 +27,17 @@ proxies:
       Host: renderer-stream-2-62.mirra.now
 - type: vless
   uuid: c04522c4-3d53-4eab-b5b5-25385d5f11b1
-  name: '🇩🇪 德国 | DEU #4'
+  name: 🇩🇪 德国 | DEU
+  server: 78.17.39.129
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: 78.17.39.129
+  client-fingerprint: chrome
+- type: vless
+  uuid: c04522c4-3d53-4eab-b5b5-25385d5f11b1
+  name: '🇩🇪 德国 | DEU #2'
   server: 78.17.39.129
   port: 443
   udp: true
@@ -100,6 +45,17 @@ proxies:
   tls: true
   servername: 78.17.39.129
   client-fingerprint: chrome
+- type: vless
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  name: 🇫🇮[www.v2nodes.com] vless-FI-1...
+  server: 45.144.234.157
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
 - type: hysteria2
   password: 6aab8efdf13945829ae3699c342be406
   name: Telegram:@v2rayng3
@@ -115,27 +71,19 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
-  - 🇩🇪 德国 | DEU
-  - 🇫🇮[www.v2nodes.com] vless-FI-1...
-  - '🏳[www.v2nodes.com] vless- #11'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
-  - '🏳[www.v2nodes.com] vless- #12'
   - 未知152
-  - '🇩🇪 德国 | DEU #4'
+  - 🇩🇪 德国 | DEU
+  - '🇩🇪 德国 | DEU #2'
+  - 🇫🇮[www.v2nodes.com] vless-FI-1...
   - Telegram:@v2rayng3
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
-  - 🇩🇪 德国 | DEU
-  - 🇫🇮[www.v2nodes.com] vless-FI-1...
-  - '🏳[www.v2nodes.com] vless- #11'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
-  - '🏳[www.v2nodes.com] vless- #12'
   - 未知152
-  - '🇩🇪 德国 | DEU #4'
+  - 🇩🇪 德国 | DEU
+  - '🇩🇪 德国 | DEU #2'
+  - 🇫🇮[www.v2nodes.com] vless-FI-1...
   - Telegram:@v2rayng3
 rules:
 - MATCH,SELECT

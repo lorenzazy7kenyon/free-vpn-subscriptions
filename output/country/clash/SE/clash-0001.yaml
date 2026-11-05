@@ -21,13 +21,6 @@ proxies:
   tls: true
   servername: de1.waspnest.space
   client-fingerprint: firefox
-- type: ss
-  cipher: aes-256-gcm
-  password: AxIYWtskJWIIaefW
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  server: 70.34.212.124
-  port: 8388
-  udp: true
 - type: vless
   uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
   name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
@@ -46,14 +39,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇸🇪[www.v2nodes.com] vless-SE-1...
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇸🇪[www.v2nodes.com] vless-SE-1...
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
 rules:
 - MATCH,SELECT
