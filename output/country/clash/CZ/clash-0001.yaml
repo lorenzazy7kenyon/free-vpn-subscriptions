@@ -11,8 +11,19 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
+  uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
   name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
+  server: 212.102.38.25
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: udemy.com
+  client-fingerprint: ios
+- type: vless
+  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
+  name: '🏳[www.v2nodes.com] vless- #7'
   server: 195.123.245.241
   port: 443
   udp: true
@@ -21,16 +32,6 @@ proxies:
   tls: true
   servername: gateway.icloud.com
   client-fingerprint: chrome
-- type: vless
-  uuid: f8bdf363-ff05-4fe6-a013-a5605266657e
-  name: 🇨🇿 捷克 | CZE
-  server: 31.76.7.233
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: e2865c20.con.rasterparcel.tech
-  client-fingerprint: firefox
 - type: vless
   uuid: f8bdf363-ff05-4fe6-a013-a5605266657e
   name: '🇨🇿 捷克 | CZE #1'
@@ -42,16 +43,15 @@ proxies:
   servername: e2865c20.con.rasterparcel.tech
   client-fingerprint: firefox
 - type: vless
-  uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
-  name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
-  server: 212.102.38.25
+  uuid: f8bdf363-ff05-4fe6-a013-a5605266657e
+  name: 🇨🇿 捷克 | CZE
+  server: 31.76.7.233
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: xhttp
   tls: true
-  servername: udemy.com
-  client-fingerprint: ios
+  servername: e2865c20.con.rasterparcel.tech
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -59,16 +59,16 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
-  - 🇨🇿 捷克 | CZE
+  - '🏳[www.v2nodes.com] vless- #7'
   - '🇨🇿 捷克 | CZE #1'
-  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
+  - 🇨🇿 捷克 | CZE
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
-  - 🇨🇿 捷克 | CZE
+  - '🏳[www.v2nodes.com] vless- #7'
   - '🇨🇿 捷克 | CZE #1'
-  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
+  - 🇨🇿 捷克 | CZE
 rules:
 - MATCH,SELECT

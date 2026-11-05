@@ -10,33 +10,18 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知100
-  server: 140.83.57.20
-  port: 13118
-  udp: true
-  tls: true
-  servername: sg.11160321.de5.net
-  ws-opts:
-    path: /
-    headers:
-      Host: sg.11160321.de5.net
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇳🇱[www.v2nodes.com] ss-NL-1614...
-  server: 151.241.19.36
-  port: 19999
-  udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   name: '🇳🇱[www.v2nodes.com] ss-NL-1614... #1'
   server: 151.241.19.29
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇳🇱[www.v2nodes.com] ss-NL-1614...
+  server: 151.241.19.36
   port: 19999
   udp: true
 - type: vless
@@ -63,18 +48,16 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知100
-  - 🇳🇱[www.v2nodes.com] ss-NL-1614...
   - '🇳🇱[www.v2nodes.com] ss-NL-1614... #1'
+  - 🇳🇱[www.v2nodes.com] ss-NL-1614...
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知100
-  - 🇳🇱[www.v2nodes.com] ss-NL-1614...
   - '🇳🇱[www.v2nodes.com] ss-NL-1614... #1'
+  - 🇳🇱[www.v2nodes.com] ss-NL-1614...
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
 rules:

@@ -10,13 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
-  name: '🏳[www.v2nodes.com] ss- #10'
-  server: 154.46.31.106
-  port: 443
-  udp: true
 - type: vless
   uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
   name: 🇷🇴[www.v2nodes.com] vless-RO-1...
@@ -46,23 +39,30 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
+  name: '🏳[www.v2nodes.com] ss- #6'
+  server: 154.46.31.106
+  port: 443
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] ss- #10'
   - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
+  - '🏳[www.v2nodes.com] ss- #6'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] ss- #10'
   - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
   - '🇷🇴[www.v2nodes.com] vless-RO-1... #1'
+  - '🏳[www.v2nodes.com] ss- #6'
 rules:
 - MATCH,SELECT
