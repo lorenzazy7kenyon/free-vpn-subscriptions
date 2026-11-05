@@ -10,13 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: SyOxpKxC8u5jgNa3DCZ34y3D9CRenFcaABpYATEeqI2RSaXD76zS8YF0Owl3lZ
-  name: 🇭🇰HK-219.76.13.181-0068
-  server: 219.76.13.181
-  port: 443
-  udp: true
-  sni: arbettp.freetrade.link
 - type: vless
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   name: 🇭🇰[www.v2nodes.com] vless-HK-1...
@@ -27,12 +20,41 @@ proxies:
   tls: true
   servername: hk010.zestapp778.com
   client-fingerprint: chrome
+- type: trojan
+  password: SyOxpKxC8u5jgNa3DCZ34y3D9CRenFcaABpYATEeqI2RSaXD76zS8YF0Owl3lZ
+  name: 🇭🇰HK-219.76.13.181-0080
+  server: 219.76.13.181
+  port: 443
+  udp: true
+  sni: arbettp.freetrade.link
+- type: vmess
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: '🇭🇰 香港 | HKG #1'
+  server: 47.244.120.197
+  port: 36703
+  udp: true
+  ws-opts:
+    path: /arki
+- type: vmess
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: '🇭🇰 香港 | HKG #2'
+  server: 47.244.120.197
+  port: 44867
+  udp: true
+  ws-opts:
+    path: /arki
 - type: vmess
   uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
   alterId: 0
   cipher: auto
   network: ws
-  name: '🇭🇰 香港 | HKG #2'
+  name: '🇭🇰 香港 | HKG #3'
   server: 47.244.120.197
   port: 23026
   udp: true
@@ -45,104 +67,57 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
-  name: 🇭🇰HK-47.244.120.197-0572
-  server: 47.244.120.197
-  port: 44867
-  udp: true
-  ws-opts:
-    path: /arki
-- type: vmess
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇭🇰HK-47.244.120.197-5856
+  name: 🇭🇰HK-47.244.120.197-5843
   server: 47.244.120.197
   port: 44867
   udp: true
   ws-opts:
     path: /arki?ed=2048
-- type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  name: '🏳[www.v2nodes.com] vless- #42'
-  server: 154.21.203.106
-  port: 51279
+- type: vmess
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇭🇰HK-47.244.120.197-5842
+  server: 47.244.120.197
+  port: 36703
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.tesla.com
-  client-fingerprint: random
-- type: vless
-  uuid: 2da0412a-627e-4491-90f7-ad79f349eec1
-  name: 🇭🇰HK06|@ripaojiedian
-  server: 50.7.250.82
+  ws-opts:
+    path: /arki?ed=2048
+- type: vmess
+  uuid: 78b3f149-f037-465d-b2fb-11adb6f73ff8
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: HK8
+  server: 47.243.167.44
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
   tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 2da0412a-627e-4491-90f7-ad79f349eec1
-  name: 🇭🇰HK01|@ripaojiedian
-  server: 66.90.115.132
+  servername: rhHiErkwRf6fHs2H.v.3dns.vip
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: rhHiErkwRf6fHs2H.v.3dns.vip
+- type: vmess
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: HK4
+  server: 47.243.194.125
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
   tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 2da0412a-627e-4491-90f7-ad79f349eec1
-  name: 🇭🇰HK03|@ripaojiedian
-  server: 66.90.115.130
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 2da0412a-627e-4491-90f7-ad79f349eec1
-  name: 🇭🇰HK04|@ripaojiedian
-  server: 66.90.115.124
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
+  servername: nycqg19zkwacpm1b.v.3dns.vip
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: nycqg19zkwacpm1b.v.3dns.vip
 - type: vless
   uuid: 2da0412a-627e-4491-90f7-ad79f349eec1
   name: 🇭🇰HK05|@ripaojiedian
   server: 66.90.115.123
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 2da0412a-627e-4491-90f7-ad79f349eec1
-  name: 🇭🇰HK07|@ripaojiedian
-  server: 66.90.115.131
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 2da0412a-627e-4491-90f7-ad79f349eec1
-  name: 🇭🇰HK08|@ripaojiedian
-  server: 66.90.115.122
   port: 443
   udp: true
   flow: xtls-rprx-vision
@@ -163,8 +138,74 @@ proxies:
   client-fingerprint: chrome
 - type: vless
   uuid: 2da0412a-627e-4491-90f7-ad79f349eec1
+  name: 🇭🇰HK04|@ripaojiedian
+  server: 66.90.115.124
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 2da0412a-627e-4491-90f7-ad79f349eec1
+  name: 🇭🇰HK03|@ripaojiedian
+  server: 66.90.115.130
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 2da0412a-627e-4491-90f7-ad79f349eec1
   name: 🇭🇰HK09|@ripaojiedian
   server: 66.90.115.134
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 2da0412a-627e-4491-90f7-ad79f349eec1
+  name: 🇭🇰HK07|@ripaojiedian
+  server: 66.90.115.131
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 2da0412a-627e-4491-90f7-ad79f349eec1
+  name: 🇭🇰HK01|@ripaojiedian
+  server: 66.90.115.132
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 2da0412a-627e-4491-90f7-ad79f349eec1
+  name: 🇭🇰HK06|@ripaojiedian
+  server: 50.7.250.82
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 2da0412a-627e-4491-90f7-ad79f349eec1
+  name: 🇭🇰HK08|@ripaojiedian
+  server: 66.90.115.122
   port: 443
   udp: true
   flow: xtls-rprx-vision
@@ -183,26 +224,32 @@ proxies:
     path: /vless-ws
     headers:
       Host: 38.76.180.144
+- type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  name: 🇻🇳[www.v2nodes.com] vless-VN-1...
+  server: 154.21.203.106
+  port: 51279
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.tesla.com
+  client-fingerprint: random
 - type: vmess
-  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
   alterId: 0
   cipher: auto
   network: ws
-  name: HK5 14.3KB/s
-  server: 156.245.232.239
-  port: 35043
+  name: 🇭🇰HK-159.100.206.88-0094
+  server: 159.100.206.88
+  port: 443
   udp: true
+  tls: true
+  servername: lg30.cfcdn3.xyz
   ws-opts:
-    path: /
+    path: /ray
     headers:
-      Host: www.pubgmobile.com
-- type: ss
-  cipher: chacha20-ietf
-  password: asd123456
-  name: 🇭🇰HK-103.149.182.79-5774
-  server: 103.149.182.79
-  port: 8388
-  udp: true
+      Host: lg30.cfcdn3.xyz
 - type: vless
   uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
   name: '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
@@ -214,17 +261,6 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: vmess
-  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: '🇭🇰 香港 | HKG #1'
-  server: 47.244.120.197
-  port: 36703
-  udp: true
-  ws-opts:
-    path: /arki
 - type: hysteria2
   password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
   name: 'Channel id: @ConfigV2RayNG 🇭🇰'
@@ -240,51 +276,55 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇰HK-219.76.13.181-0068
   - 🇭🇰[www.v2nodes.com] vless-HK-1...
-  - '🇭🇰 香港 | HKG #2'
-  - 🇭🇰HK-47.244.120.197-0572
-  - 🇭🇰HK-47.244.120.197-5856
-  - '🏳[www.v2nodes.com] vless- #42'
-  - 🇭🇰HK06|@ripaojiedian
-  - 🇭🇰HK01|@ripaojiedian
-  - 🇭🇰HK03|@ripaojiedian
-  - 🇭🇰HK04|@ripaojiedian
-  - 🇭🇰HK05|@ripaojiedian
-  - 🇭🇰HK07|@ripaojiedian
-  - 🇭🇰HK08|@ripaojiedian
-  - 🇭🇰HK02|@ripaojiedian
-  - 🇭🇰HK09|@ripaojiedian
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
-  - HK5 14.3KB/s
-  - 🇭🇰HK-103.149.182.79-5774
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
+  - 🇭🇰HK-219.76.13.181-0080
   - '🇭🇰 香港 | HKG #1'
+  - '🇭🇰 香港 | HKG #2'
+  - '🇭🇰 香港 | HKG #3'
+  - 🇭🇰HK-47.244.120.197-5843
+  - 🇭🇰HK-47.244.120.197-5842
+  - HK8
+  - HK4
+  - 🇭🇰HK05|@ripaojiedian
+  - 🇭🇰HK02|@ripaojiedian
+  - 🇭🇰HK04|@ripaojiedian
+  - 🇭🇰HK03|@ripaojiedian
+  - 🇭🇰HK09|@ripaojiedian
+  - 🇭🇰HK07|@ripaojiedian
+  - 🇭🇰HK01|@ripaojiedian
+  - 🇭🇰HK06|@ripaojiedian
+  - 🇭🇰HK08|@ripaojiedian
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
+  - 🇻🇳[www.v2nodes.com] vless-VN-1...
+  - 🇭🇰HK-159.100.206.88-0094
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
   - 'Channel id: @ConfigV2RayNG 🇭🇰'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇭🇰HK-219.76.13.181-0068
   - 🇭🇰[www.v2nodes.com] vless-HK-1...
-  - '🇭🇰 香港 | HKG #2'
-  - 🇭🇰HK-47.244.120.197-0572
-  - 🇭🇰HK-47.244.120.197-5856
-  - '🏳[www.v2nodes.com] vless- #42'
-  - 🇭🇰HK06|@ripaojiedian
-  - 🇭🇰HK01|@ripaojiedian
-  - 🇭🇰HK03|@ripaojiedian
-  - 🇭🇰HK04|@ripaojiedian
-  - 🇭🇰HK05|@ripaojiedian
-  - 🇭🇰HK07|@ripaojiedian
-  - 🇭🇰HK08|@ripaojiedian
-  - 🇭🇰HK02|@ripaojiedian
-  - 🇭🇰HK09|@ripaojiedian
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
-  - HK5 14.3KB/s
-  - 🇭🇰HK-103.149.182.79-5774
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
+  - 🇭🇰HK-219.76.13.181-0080
   - '🇭🇰 香港 | HKG #1'
+  - '🇭🇰 香港 | HKG #2'
+  - '🇭🇰 香港 | HKG #3'
+  - 🇭🇰HK-47.244.120.197-5843
+  - 🇭🇰HK-47.244.120.197-5842
+  - HK8
+  - HK4
+  - 🇭🇰HK05|@ripaojiedian
+  - 🇭🇰HK02|@ripaojiedian
+  - 🇭🇰HK04|@ripaojiedian
+  - 🇭🇰HK03|@ripaojiedian
+  - 🇭🇰HK09|@ripaojiedian
+  - 🇭🇰HK07|@ripaojiedian
+  - 🇭🇰HK01|@ripaojiedian
+  - 🇭🇰HK06|@ripaojiedian
+  - 🇭🇰HK08|@ripaojiedian
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
+  - 🇻🇳[www.v2nodes.com] vless-VN-1...
+  - 🇭🇰HK-159.100.206.88-0094
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
   - 'Channel id: @ConfigV2RayNG 🇭🇰'
 rules:
 - MATCH,SELECT

@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
-  name: 🇸🇪[www.v2nodes.com] vless-SE-1...
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   server: 150.241.79.124
   port: 443
   udp: true
@@ -22,8 +22,18 @@ proxies:
   servername: de1.waspnest.space
   client-fingerprint: firefox
 - type: vless
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
+  name: 🇸🇪 瑞典 | SWE
+  server: 138.124.86.230
+  port: 48115
+  udp: true
+  network: grpc
+  tls: true
+  servername: 138-124-86-230.sslip.io
+  client-fingerprint: firefox
+- type: vless
   uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
   server: 5.178.109.174
   port: 14430
   udp: true
@@ -32,19 +42,30 @@ proxies:
     path: /vless
     headers:
       Host: 5.178.109.174
+- type: hysteria2
+  password: 769f34f0-1500-488f-b414-03bc90666502
+  name: 🥌11@oneclickvpnkeys
+  server: 185.153.55.28
+  port: 443
+  udp: true
+  sni: se.mimowhat.online
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇪[www.v2nodes.com] vless-SE-1...
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
+  - 🇸🇪 瑞典 | SWE
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  - 🥌11@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇸🇪[www.v2nodes.com] vless-SE-1...
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
+  - 🇸🇪 瑞典 | SWE
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  - 🥌11@oneclickvpnkeys
 rules:
 - MATCH,SELECT

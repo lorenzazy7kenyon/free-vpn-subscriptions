@@ -1,9 +1,30 @@
 {
   "outbounds": [
     {
+      "alter_id": 0,
+      "security": "auto",
+      "server": "193.180.211.155",
+      "server_port": 443,
+      "tag": "未知14",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "renderer-stream-2-62.mirra.now"
+      },
+      "transport": {
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket",
+        "type": "ws"
+      },
+      "type": "vmess",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154"
+    },
+    {
       "server": "193.233.253.180",
       "server_port": 8444,
-      "tag": "🏳[www.v2nodes.com] vless- #9",
+      "tag": "🏳[www.v2nodes.com] vless- #11",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -23,7 +44,8 @@
     {
       "interval": "5m",
       "outbounds": [
-        "🏳[www.v2nodes.com] vless- #9"
+        "未知14",
+        "🏳[www.v2nodes.com] vless- #11"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -32,7 +54,8 @@
     {
       "outbounds": [
         "auto",
-        "🏳[www.v2nodes.com] vless- #9"
+        "未知14",
+        "🏳[www.v2nodes.com] vless- #11"
       ],
       "tag": "select",
       "type": "selector"

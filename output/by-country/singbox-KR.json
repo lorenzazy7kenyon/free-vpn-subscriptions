@@ -1,41 +1,34 @@
 {
   "outbounds": [
     {
-      "method": "aes-256-gcm",
-      "password": "KixLvKzwjekG00rm",
-      "server": "141.164.45.187",
-      "server_port": 8000,
-      "tag": "🇰🇷[www.v2nodes.com] ss-KR-1185...",
-      "type": "ss"
-    },
-    {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "132.145.80.230",
-      "server_port": 80,
-      "tag": "🇰🇷KR-132.145.80.230-1123",
-      "transport": {
-        "headers": {
-          "Host": "kr02.a0a.xyz"
-        },
-        "path": "/cctv13.m3u8",
-        "type": "ws"
-      },
-      "type": "vmess",
-      "uuid": "5155860e-d07d-46c3-9128-3afbd84626c7"
-    },
-    {
       "method": "aes-256-cfb",
       "password": "qwerREWQ@@",
       "server": "211.178.105.134",
       "server_port": 6123,
-      "tag": "🇰🇷KR-211.178.105.134-0226",
+      "tag": "🇰🇷KR-211.178.105.134-0197",
       "type": "ss"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "3.39.4.109",
+      "server_port": 13672,
+      "tag": "🇰🇷[www.v2nodes.com] vless-KR-1... #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9"
     },
     {
       "server": "151.245.106.49",
       "server_port": 2053,
-      "tag": "🏳[www.v2nodes.com] vless- #23",
+      "tag": "🇰🇷[www.v2nodes.com] vless-KR-1...",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -47,6 +40,33 @@
       },
       "type": "vless",
       "uuid": "a2de9567-9646-45a9-a410-7303a43bdb6c"
+    },
+    {
+      "server": "152.69.226.63",
+      "server_port": 25555,
+      "tag": "🇰🇷[www.v2nodes.com] vless-KR-1...",
+      "transport": {
+        "path": "/",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "27c5483f-17f4-48ae-9a04-def53d88440d"
+    },
+    {
+      "method": "aes-256-gcm",
+      "password": "KixLvKzwjekG00rm",
+      "server": "141.164.45.187",
+      "server_port": 8000,
+      "tag": "🇰🇷[www.v2nodes.com] ss-KR-1185...",
+      "type": "ss"
+    },
+    {
+      "method": "aes-256-gcm",
+      "password": "Y6R9pAtvxxzmGC",
+      "server": "141.164.45.187",
+      "server_port": 8888,
+      "tag": "🇰🇷[www.v2nodes.com] ss-KR-1185...",
+      "type": "ss"
     },
     {
       "flow": "xtls-rprx-vision",
@@ -66,15 +86,16 @@
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9"
     },
     {
-      "server": "152.69.226.63",
-      "server_port": 25555,
-      "tag": "🇰🇷[www.v2nodes.com] vless-KR-1...",
-      "transport": {
-        "path": "/",
-        "type": "ws"
+      "password": "7e68e32f-8015-4f37-9082-70e8b0b58043",
+      "server": "54.180.236.157",
+      "server_port": 443,
+      "tag": "🇰🇷 韩国 | KOR #2",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "www.bing.com"
       },
-      "type": "vless",
-      "uuid": "27c5483f-17f4-48ae-9a04-def53d88440d"
+      "type": "hysteria2"
     },
     {
       "password": "7e68e32f-8015-4f37-9082-70e8b0b58043",
@@ -91,12 +112,14 @@
     {
       "interval": "5m",
       "outbounds": [
-        "🇰🇷[www.v2nodes.com] ss-KR-1185...",
-        "🇰🇷KR-132.145.80.230-1123",
-        "🇰🇷KR-211.178.105.134-0226",
-        "🏳[www.v2nodes.com] vless- #23",
+        "🇰🇷KR-211.178.105.134-0197",
         "🇰🇷[www.v2nodes.com] vless-KR-1... #1",
         "🇰🇷[www.v2nodes.com] vless-KR-1...",
+        "🇰🇷[www.v2nodes.com] vless-KR-1...",
+        "🇰🇷[www.v2nodes.com] ss-KR-1185...",
+        "🇰🇷[www.v2nodes.com] ss-KR-1185...",
+        "🇰🇷[www.v2nodes.com] vless-KR-1... #1",
+        "🇰🇷 韩国 | KOR #2",
         "🇰🇷 韩国 | KOR #2"
       ],
       "tag": "auto",
@@ -106,12 +129,14 @@
     {
       "outbounds": [
         "auto",
-        "🇰🇷[www.v2nodes.com] ss-KR-1185...",
-        "🇰🇷KR-132.145.80.230-1123",
-        "🇰🇷KR-211.178.105.134-0226",
-        "🏳[www.v2nodes.com] vless- #23",
+        "🇰🇷KR-211.178.105.134-0197",
         "🇰🇷[www.v2nodes.com] vless-KR-1... #1",
         "🇰🇷[www.v2nodes.com] vless-KR-1...",
+        "🇰🇷[www.v2nodes.com] vless-KR-1...",
+        "🇰🇷[www.v2nodes.com] ss-KR-1185...",
+        "🇰🇷[www.v2nodes.com] ss-KR-1185...",
+        "🇰🇷[www.v2nodes.com] vless-KR-1... #1",
+        "🇰🇷 韩国 | KOR #2",
         "🇰🇷 韩国 | KOR #2"
       ],
       "tag": "select",
