@@ -11,13 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
-  name: '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
-  server: 178.172.227.124
-  port: 10443
-  udp: true
-  network: tcp
-- type: vless
   uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
   name: 🇧🇾[www.v2nodes.com] vless-BY-1...
   server: 178.172.227.228
@@ -39,13 +32,13 @@ proxies:
     path: /vless
     headers:
       Host: 95.128.71.79
-- type: hysteria2
-  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-  name: برای اتصال دائمی جوین شو🪭 Tele...
-  server: 13.143.188.142
-  port: 4444
+- type: vless
+  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
+  name: '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
+  server: 178.172.227.124
+  port: 10443
   udp: true
-  sni: bl1.nexfile.net
+  network: tcp
 - type: hysteria2
   password: a35c508f-4d5d-4531-842e-6e9d43c762c0
   name: 🍪66@oneclickvpnkeys
@@ -54,25 +47,32 @@ proxies:
   udp: true
   sni: bl1.nexfile.net
   skip-cert-verify: true
+- type: hysteria2
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  name: برای اتصال دائمی جوین شو🪭 Tele...
+  server: 13.143.188.142
+  port: 4444
+  udp: true
+  sni: bl1.nexfile.net
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
-  - برای اتصال دائمی جوین شو🪭 Tele...
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - 🍪66@oneclickvpnkeys
+  - برای اتصال دائمی جوین شو🪭 Tele...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
-  - برای اتصال دائمی جوین شو🪭 Tele...
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - 🍪66@oneclickvpnkeys
+  - برای اتصال دائمی جوین شو🪭 Tele...
 rules:
 - MATCH,SELECT

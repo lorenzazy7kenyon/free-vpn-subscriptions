@@ -11,27 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
-  name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
-  server: 212.102.38.25
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: udemy.com
-  client-fingerprint: ios
-- type: vless
-  uuid: f8bdf363-ff05-4fe6-a013-a5605266657e
-  name: '🇨🇿 捷克 | CZE #1'
-  server: 31.76.7.233
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: e2865c20.con.rasterparcel.tech
-  client-fingerprint: firefox
-- type: vless
   uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
   name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
   server: 195.123.245.241
@@ -52,23 +31,44 @@ proxies:
   tls: true
   servername: e2865c20.con.rasterparcel.tech
   client-fingerprint: firefox
+- type: vless
+  uuid: f8bdf363-ff05-4fe6-a013-a5605266657e
+  name: '🇨🇿 捷克 | CZE #1'
+  server: 31.76.7.233
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: e2865c20.con.rasterparcel.tech
+  client-fingerprint: firefox
+- type: vless
+  uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
+  name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
+  server: 212.102.38.25
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: udemy.com
+  client-fingerprint: ios
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
-  - '🇨🇿 捷克 | CZE #1'
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
   - 🇨🇿 捷克 | CZE
+  - '🇨🇿 捷克 | CZE #1'
+  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
-  - '🇨🇿 捷克 | CZE #1'
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
   - 🇨🇿 捷克 | CZE
+  - '🇨🇿 捷克 | CZE #1'
+  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
 rules:
 - MATCH,SELECT

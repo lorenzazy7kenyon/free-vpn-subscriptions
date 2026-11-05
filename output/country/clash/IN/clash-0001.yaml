@@ -11,6 +11,13 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
+  server: 122.176.216.52
+  port: 443
+  udp: true
+  network: tcp
+- type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   server: 13.140.56.100
@@ -21,24 +28,6 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
-- type: vless
-  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
-  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
-  server: 122.176.216.52
-  port: 443
-  udp: true
-  network: tcp
-- type: vless
-  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
-  server: 5.253.42.164
-  port: 40443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: deepl.com
-  client-fingerprint: firefox
 - type: hysteria2
   password: d105c6ae-621b-47c1-b85b-075fd6a39aca
   name: 🇮🇳_IN_印度_IPV4
@@ -53,17 +42,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇮🇳[www.v2nodes.com] vless-IN-1...
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇮🇳_IN_印度_IPV4
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇮🇳[www.v2nodes.com] vless-IN-1...
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇮🇳_IN_印度_IPV4
 rules:
 - MATCH,SELECT

@@ -10,28 +10,24 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 46c16b68-2553-4e5e-8176-f63d6bf6ec0c
-  name: 🇦🇹[www.v2nodes.com] vless-AT-1...
-  server: 94.228.162.222
-  port: 443
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
+  name: 🇦🇹[www.v2nodes.com] ss-AT-1614...
+  server: 152.53.1.57
+  port: 8388
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: vena.solomon-planet.ru
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
+  - 🇦🇹[www.v2nodes.com] ss-AT-1614...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
+  - 🇦🇹[www.v2nodes.com] ss-AT-1614...
 rules:
 - MATCH,SELECT

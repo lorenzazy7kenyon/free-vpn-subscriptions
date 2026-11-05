@@ -11,17 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
-  name: 🇪🇪[www.v2nodes.com] vless-EE-1...
-  server: 45.86.60.174
-  port: 16443
-  udp: true
-  network: tcp
-- type: vless
   uuid: 3d526c7f-059c-4e2b-b09a-8569b268935b
   name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
   server: 185.225.205.53
   port: 443
+  udp: true
+  network: tcp
+- type: vless
+  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
+  name: 🇪🇪[www.v2nodes.com] vless-EE-1...
+  server: 45.86.60.174
+  port: 16443
   udp: true
   network: tcp
 - type: hysteria2
@@ -37,15 +37,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇪[www.v2nodes.com] vless-EE-1...
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  - 🇪🇪[www.v2nodes.com] vless-EE-1...
   - ⏳1@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇪🇪[www.v2nodes.com] vless-EE-1...
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  - 🇪🇪[www.v2nodes.com] vless-EE-1...
   - ⏳1@oneclickvpnkeys
 rules:
 - MATCH,SELECT
