@@ -11,17 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
-  server: 45.144.234.157
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.144.234.157
-- type: vless
   uuid: c04522c4-3d53-4eab-b5b5-25385d5f11b1
   name: '🇩🇪 德国 | DEU #3'
   server: 78.17.39.129
@@ -32,15 +21,23 @@ proxies:
   servername: 78.17.39.129
   client-fingerprint: chrome
 - type: vless
-  uuid: c04522c4-3d53-4eab-b5b5-25385d5f11b1
-  name: 🇩🇪 德国 | DEU
-  server: 78.17.39.129
+  uuid: 8d954cbe-7ca9-402d-bfaf-aca6c92c04c3
+  name: 🇫🇮[www.v2nodes.com] vless-FI-1...
+  server: 217.144.188.185
   port: 443
   udp: true
-  network: xhttp
-  tls: true
-  servername: 78.17.39.129
-  client-fingerprint: chrome
+  network: tcp
+- type: vless
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
+  server: 45.144.234.157
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
 - type: vless
   uuid: 20dd9433-389e-4573-ba7b-689619cf13da
   name: '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
@@ -54,7 +51,7 @@ proxies:
   client-fingerprint: chrome
 - type: vless
   uuid: cebc5f19-18d9-48e6-9029-fb4b04caf393
-  name: 🇫🇮[www.v2nodes.com] vless-FI-1...
+  name: '🏳[www.v2nodes.com] vless- #6'
   server: 45.38.143.210
   port: 30584
   udp: true
@@ -77,21 +74,21 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
   - '🇩🇪 德国 | DEU #3'
-  - 🇩🇪 德国 | DEU
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
   - 🇫🇮[www.v2nodes.com] vless-FI-1...
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
+  - '🏳[www.v2nodes.com] vless- #6'
   - Telegram:@v2rayng3
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
   - '🇩🇪 德国 | DEU #3'
-  - 🇩🇪 德国 | DEU
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
   - 🇫🇮[www.v2nodes.com] vless-FI-1...
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
+  - '🏳[www.v2nodes.com] vless- #6'
   - Telegram:@v2rayng3
 rules:
 - MATCH,SELECT
