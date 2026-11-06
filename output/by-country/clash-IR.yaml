@@ -11,25 +11,44 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
-  uuid: 70f342a4-e892-49ca-aa1a-7f658427f1dc
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
   alterId: 0
   cipher: auto
-  network: tcp
-  name: 未知45
-  server: 37.202.225.110
-  port: 5380
+  network: ws
+  name: 未知139
+  server: 185.143.234.120
+  port: 80
   udp: true
+  ws-opts:
+    path: /graphql
+    headers:
+      Host: koochehpas.com
+- type: vmess
+  uuid: fd26012b-e43b-4d6f-814f-c2c058e0d2eb
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知14
+  server: 185.143.232.178
+  port: 8080
+  udp: true
+  ws-opts:
+    path: /s2BSpP6uUOPQ499phpYH87TsXl
+    headers:
+      Host: cdn.tr.one.nemava.com
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知45
+  - 未知139
+  - 未知14
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知45
+  - 未知139
+  - 未知14
 rules:
 - MATCH,SELECT

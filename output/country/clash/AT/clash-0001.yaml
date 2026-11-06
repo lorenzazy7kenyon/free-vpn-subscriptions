@@ -10,17 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
-  name: 🇦🇹AT_1|2.2MB/s
-  server: 178.22.31.72
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision-udp443
-  network: tcp
-  tls: true
-  servername: at1.japancase.site
-  client-fingerprint: firefox
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
@@ -34,13 +23,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇹AT_1|2.2MB/s
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇦🇹AT_1|2.2MB/s
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
 rules:
 - MATCH,SELECT

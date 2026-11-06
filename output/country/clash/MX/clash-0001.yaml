@@ -21,19 +21,6 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: vless
-  uuid: 0575005f-0ba9-4d6d-85e0-4a6a8cbafc1b
-  name: 🇲🇽[www.v2nodes.com] vless-MX-7...
-  server: 131.196.253.141
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: kclx.eu.org
-  ws-opts:
-    path: /154.16.10.34-8080fp=chrome
-    headers:
-      Host: kclx.eu.org
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -41,12 +28,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇲🇽[www.v2nodes.com] vless-MX-1...
-  - 🇲🇽[www.v2nodes.com] vless-MX-7...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇲🇽[www.v2nodes.com] vless-MX-1...
-  - 🇲🇽[www.v2nodes.com] vless-MX-7...
 rules:
 - MATCH,SELECT
