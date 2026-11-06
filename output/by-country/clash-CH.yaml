@@ -21,6 +21,39 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: firefox
+- type: vless
+  uuid: 89564b16-7ced-465d-a8f3-61389547e96e
+  name: 🇨🇭 瑞士 | CHE
+  server: 176.65.144.221
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: sw.cloudvienta.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: KcFNW-Yq9YucHEGiEe2ZEnIbxEuCmyO3S6yTglZR7ws
+    short-id: 7ea8737c31629437
+- type: vless
+  uuid: 89564b16-7ced-465d-a8f3-61389547e96e
+  name: '🇨🇭 瑞士 | CHE #1'
+  server: 176.65.144.221
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: sw.cloudvienta.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
+  server: 208.69.78.217
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   name: '🇨🇭[www.v2nodes.com] trojan-CH-... #4'
@@ -35,37 +68,6 @@ proxies:
   port: 443
   udp: true
   sni: courses.yourultimateprofessionalcareerhub.com
-- type: vless
-  uuid: f5e70ce3-cfb4-4df1-b25c-d19bfae627c0
-  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  server: 45.90.57.119
-  port: 8443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: twitch.tv
-  client-fingerprint: firefox
-- type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  name: '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
-  server: 208.69.78.217
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: 89564b16-7ced-465d-a8f3-61389547e96e
-  name: '🇨🇭 瑞士 | CHE #1'
-  server: 176.65.144.221
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: sw.cloudvienta.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -73,20 +75,20 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - 🇨🇭 瑞士 | CHE
+  - '🇨🇭 瑞士 | CHE #1'
+  - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
   - '🇨🇭[www.v2nodes.com] trojan-CH-... #4'
   - '🇨🇭[www.v2nodes.com] trojan-CH-... #3'
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
-  - '🇨🇭 瑞士 | CHE #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - 🇨🇭 瑞士 | CHE
+  - '🇨🇭 瑞士 | CHE #1'
+  - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
   - '🇨🇭[www.v2nodes.com] trojan-CH-... #4'
   - '🇨🇭[www.v2nodes.com] trojan-CH-... #3'
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
-  - '🇨🇭 瑞士 | CHE #1'
 rules:
 - MATCH,SELECT

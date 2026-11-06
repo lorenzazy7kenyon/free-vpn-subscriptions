@@ -1,18 +1,25 @@
 {
   "outbounds": [
     {
-      "server": "138.124.70.41",
-      "server_port": 14430,
-      "tag": "🇫🇷[www.v2nodes.com] vless-FR-1... #1",
+      "alter_id": 0,
+      "security": "auto",
+      "server": "90.127.143.135",
+      "server_port": 443,
+      "tag": "未知96",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "renderer-stream-2-62.mirra.now"
+      },
       "transport": {
         "headers": {
-          "Host": "138.124.70.41"
+          "Host": "renderer-stream-2-62.mirra.now"
         },
-        "path": "/vless",
+        "path": "/api/v1/gpu-stream/socket",
         "type": "ws"
       },
-      "type": "vless",
-      "uuid": "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc"
+      "type": "vmess",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154"
     },
     {
       "flow": "xtls-rprx-vision",
@@ -32,36 +39,6 @@
       "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     },
     {
-      "flow": "xtls-rprx-vision",
-      "server": "62.210.91.10",
-      "server_port": 23576,
-      "tag": "🇫🇷[www.v2nodes.com] vless-FR-1... #5",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "fuck.rkn",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    },
-    {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "147.135.213.72",
-      "server_port": 20236,
-      "tag": "未知30",
-      "transport": {
-        "path": "/vmess-3",
-        "type": "ws"
-      },
-      "type": "vmess",
-      "uuid": "2225ad93-b018-464c-8ec3-b33022668c80"
-    },
-    {
       "server": "51.77.217.70",
       "server_port": 2053,
       "tag": "🏳[www.v2nodes.com] vless- #7",
@@ -79,40 +56,6 @@
     },
     {
       "flow": "xtls-rprx-vision",
-      "server": "198.16.113.220",
-      "server_port": 8443,
-      "tag": "🇮🇷IR01|@ripaojiedian",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "eb6fbbdd-669b-4055-9379-4eeba938578a"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "198.16.113.221",
-      "server_port": 8443,
-      "tag": "🏳[www.v2nodes.com] vless- #14",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "98a24806-141a-43d3-b094-bd66c4eb93b8"
-    },
-    {
-      "flow": "xtls-rprx-vision",
       "server": "198.16.113.222",
       "server_port": 8443,
       "tag": "🇮🇷[www.v2nodes.com] vless-IR-1...",
@@ -127,43 +70,6 @@
       },
       "type": "vless",
       "uuid": "98a24806-141a-43d3-b094-bd66c4eb93b8"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "198.16.113.220",
-      "server_port": 8443,
-      "tag": "🇮🇷[www.v2nodes.com] vless-IR-1... #1",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "98a24806-141a-43d3-b094-bd66c4eb93b8"
-    },
-    {
-      "server": "152.228.139.33",
-      "server_port": 35108,
-      "tag": "🏳[www.v2nodes.com] vless- #17",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.nvidia.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "service_name": "grpc-common3",
-        "type": "grpc"
-      },
-      "type": "vless",
-      "uuid": "81dc0b61-f9fe-4ad6-8b4e-b8c067b73712"
     },
     {
       "server": "152.228.139.33",
@@ -186,10 +92,10 @@
       "uuid": "75cc7568-abb0-46a8-88be-8137d3c647d4"
     },
     {
-      "flow": "xtls-rprx-vision-udp443",
-      "server": "198.16.113.219",
+      "flow": "xtls-rprx-vision",
+      "server": "198.16.113.220",
       "server_port": 8443,
-      "tag": "🇦🇿AZ_2|1.9MB/s",
+      "tag": "🇮🇷[www.v2nodes.com] vless-IR-1... #1",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -200,7 +106,41 @@
         }
       },
       "type": "vless",
-      "uuid": "e3e0e1c3-599e-4ae1-8ad4-d9e90effacc4"
+      "uuid": "98a24806-141a-43d3-b094-bd66c4eb93b8"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "198.16.113.221",
+      "server_port": 8443,
+      "tag": "🏳[www.v2nodes.com] vless- #14",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "98a24806-141a-43d3-b094-bd66c4eb93b8"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "145.223.68.58",
+      "server_port": 443,
+      "tag": "🏳[www.v2nodes.com] vless- #6",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "edb50d20-2d3e-4c1e-8a75-a17168a89aa5"
     },
     {
       "server": "161.97.160.224",
@@ -208,6 +148,37 @@
       "tag": "🇫🇷[www.v2nodes.com] vless-FR-1... #4",
       "type": "vless",
       "uuid": "b81b4d1b-7f20-48f1-82dc-d24bef898cab"
+    },
+    {
+      "server": "138.124.70.41",
+      "server_port": 14430,
+      "tag": "🇫🇷[www.v2nodes.com] vless-FR-1... #1",
+      "transport": {
+        "headers": {
+          "Host": "138.124.70.41"
+        },
+        "path": "/vless",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "62.210.91.10",
+      "server_port": 23576,
+      "tag": "🇫🇷[www.v2nodes.com] vless-FR-1... #5",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "fuck.rkn",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     },
     {
       "password": "40546f3a-0590-4a5a-a104-6eb2e6ba5f0c",
@@ -224,19 +195,17 @@
     {
       "interval": "5m",
       "outbounds": [
-        "🇫🇷[www.v2nodes.com] vless-FR-1... #1",
+        "未知96",
         "🇫🇷[www.v2nodes.com] vless-FR-1... #7",
-        "🇫🇷[www.v2nodes.com] vless-FR-1... #5",
-        "未知30",
         "🏳[www.v2nodes.com] vless- #7",
-        "🇮🇷IR01|@ripaojiedian",
-        "🏳[www.v2nodes.com] vless- #14",
         "🇮🇷[www.v2nodes.com] vless-IR-1...",
-        "🇮🇷[www.v2nodes.com] vless-IR-1... #1",
-        "🏳[www.v2nodes.com] vless- #17",
         "🇫🇷[www.v2nodes.com] vless-FR-1... #3",
-        "🇦🇿AZ_2|1.9MB/s",
+        "🇮🇷[www.v2nodes.com] vless-IR-1... #1",
+        "🏳[www.v2nodes.com] vless- #14",
+        "🏳[www.v2nodes.com] vless- #6",
         "🇫🇷[www.v2nodes.com] vless-FR-1... #4",
+        "🇫🇷[www.v2nodes.com] vless-FR-1... #1",
+        "🇫🇷[www.v2nodes.com] vless-FR-1... #5",
         "🇫🇷4@exclavevpn"
       ],
       "tag": "auto",
@@ -246,19 +215,17 @@
     {
       "outbounds": [
         "auto",
-        "🇫🇷[www.v2nodes.com] vless-FR-1... #1",
+        "未知96",
         "🇫🇷[www.v2nodes.com] vless-FR-1... #7",
-        "🇫🇷[www.v2nodes.com] vless-FR-1... #5",
-        "未知30",
         "🏳[www.v2nodes.com] vless- #7",
-        "🇮🇷IR01|@ripaojiedian",
-        "🏳[www.v2nodes.com] vless- #14",
         "🇮🇷[www.v2nodes.com] vless-IR-1...",
-        "🇮🇷[www.v2nodes.com] vless-IR-1... #1",
-        "🏳[www.v2nodes.com] vless- #17",
         "🇫🇷[www.v2nodes.com] vless-FR-1... #3",
-        "🇦🇿AZ_2|1.9MB/s",
+        "🇮🇷[www.v2nodes.com] vless-IR-1... #1",
+        "🏳[www.v2nodes.com] vless- #14",
+        "🏳[www.v2nodes.com] vless- #6",
         "🇫🇷[www.v2nodes.com] vless-FR-1... #4",
+        "🇫🇷[www.v2nodes.com] vless-FR-1... #1",
+        "🇫🇷[www.v2nodes.com] vless-FR-1... #5",
         "🇫🇷4@exclavevpn"
       ],
       "tag": "select",

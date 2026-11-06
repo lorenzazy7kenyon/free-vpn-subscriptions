@@ -28,6 +28,15 @@ proxies:
   port: 443
   udp: true
   sni: resources.discovergreatjobsandadvanceyourcareer.com
+- type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知6
+  server: 85.90.217.42
+  port: 22324
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -36,11 +45,13 @@ proxy-groups:
   proxies:
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
   - 🇪🇸ES-66.163.118.251-0228
+  - 未知6
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
   - 🇪🇸ES-66.163.118.251-0228
+  - 未知6
 rules:
 - MATCH,SELECT

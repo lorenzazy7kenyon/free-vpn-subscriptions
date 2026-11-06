@@ -25,6 +25,24 @@ proxies:
     path: /ray
     headers:
       Host: lg30.cfcdn3.xyz
+- type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知91
+  server: 132.145.80.230
+  port: 80
+  udp: true
+  ws-opts:
+    path: /cctv13.m3u8
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: 🇰🇷KR-211.178.105.134-0226
+  server: 211.178.105.134
+  port: 6123
+  udp: true
 - type: vless
   uuid: 26524cce-d514-4014-a426-365fb266a14d
   name: KR1@ripaojiedian
@@ -39,13 +57,6 @@ proxies:
     path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stflow=
     headers:
       Host: speedtest.danfengno1.kdns.fr
-- type: ss
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
-  server: 141.164.45.187
-  port: 8888
-  udp: true
 - type: vless
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   name: 🇰🇷[www.v2nodes.com] vless-KR-1...
@@ -55,27 +66,6 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  name: KR2@ripaojiedian
-  server: 121.154.67.134
-  port: 28017
-  udp: true
-  network: ws
-  tls: true
-  servername: speedtest.danfengno1.kdns.fr
-  client-fingerprint: firefox
-  ws-opts:
-    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stflow=
-    headers:
-      Host: speedtest.danfengno1.kdns.fr
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: 🇰🇷KR-211.178.105.134-0226
-  server: 211.178.105.134
-  port: 6123
-  udp: true
 - type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
   name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
@@ -97,6 +87,20 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: firefox
+- type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  name: KR2@ripaojiedian
+  server: 121.154.67.134
+  port: 28017
+  udp: true
+  network: ws
+  tls: true
+  servername: speedtest.danfengno1.kdns.fr
+  client-fingerprint: firefox
+  ws-opts:
+    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stflow=
+    headers:
+      Host: speedtest.danfengno1.kdns.fr
 - type: ss
   cipher: aes-256-gcm
   password: RexnBgU7EV5ADxG
@@ -104,17 +108,6 @@ proxies:
   server: 141.164.45.187
   port: 7001
   udp: true
-- type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  server: 3.39.4.109
-  port: 13672
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
 - type: ss
   cipher: aes-256-gcm
   password: KixLvKzwjekG00rm
@@ -131,22 +124,6 @@ proxies:
   udp: true
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: 🇰🇷 韩国 | KOR
-  server: 13.125.233.159
-  port: 443
-  udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: '🇰🇷 韩国 | KOR #2'
-  server: 54.180.236.157
-  port: 443
-  udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   name: '🇰🇷 韩国 | KOR #1'
   server: 3.36.90.103
   port: 443
@@ -160,38 +137,32 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇰🇷KR-146.56.166.153-0123
-  - KR1@ripaojiedian
-  - 🇰🇷[www.v2nodes.com] ss-KR-1185...
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - KR2@ripaojiedian
+  - 未知91
   - 🇰🇷KR-211.178.105.134-0226
+  - KR1@ripaojiedian
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - KR2@ripaojiedian
   - 🇰🇷KR-141.164.45.187-5935
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   - 🇰🇷KR-141.164.45.187-0233
   - 🇰🇷[www.v2nodes.com] ss-KR-1185...
-  - 🇰🇷 韩国 | KOR
-  - '🇰🇷 韩国 | KOR #2'
   - '🇰🇷 韩国 | KOR #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇰🇷KR-146.56.166.153-0123
-  - KR1@ripaojiedian
-  - 🇰🇷[www.v2nodes.com] ss-KR-1185...
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - KR2@ripaojiedian
+  - 未知91
   - 🇰🇷KR-211.178.105.134-0226
+  - KR1@ripaojiedian
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - KR2@ripaojiedian
   - 🇰🇷KR-141.164.45.187-5935
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   - 🇰🇷KR-141.164.45.187-0233
   - 🇰🇷[www.v2nodes.com] ss-KR-1185...
-  - 🇰🇷 韩国 | KOR
-  - '🇰🇷 韩国 | KOR #2'
   - '🇰🇷 韩国 | KOR #1'
 rules:
 - MATCH,SELECT

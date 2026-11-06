@@ -10,13 +10,35 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
+  server: 31.77.199.147
+  port: 4443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: images.unsplash.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
+  server: 45.144.234.157
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知17
-  server: 91.217.76.237
+  name: 未知75
+  server: 132.243.22.80
   port: 443
   udp: true
   tls: true
@@ -32,63 +54,6 @@ proxies:
   port: 443
   udp: true
   network: tcp
-- type: vless
-  uuid: cebc5f19-18d9-48e6-9029-fb4b04caf393
-  name: 🇫🇮[www.v2nodes.com] vless-FI-1...
-  server: 45.38.143.210
-  port: 30584
-  udp: true
-  network: tcp
-  tls: true
-  servername: m.vk.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
-  server: 45.144.234.157
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.144.234.157
-- type: vless
-  uuid: c04522c4-3d53-4eab-b5b5-25385d5f11b1
-  name: '🇩🇪 德国 | DEU #3'
-  server: 78.17.39.129
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: 78.17.39.129
-  client-fingerprint: chrome
-- type: vless
-  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
-  server: 31.77.199.147
-  port: 4443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: images.unsplash.com
-  client-fingerprint: chrome
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知87
-  server: 185.232.204.222
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
 - type: hysteria2
   password: 6aab8efdf13945829ae3699c342be406
   name: Telegram:@v2rayng3
@@ -104,25 +69,19 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知17
-  - 🇫🇮[www.v2nodes.com] vless-FI-1...
-  - 🇫🇮[www.v2nodes.com] vless-FI-1...
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
-  - '🇩🇪 德国 | DEU #3'
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
-  - 未知87
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
+  - 未知75
+  - 🇫🇮[www.v2nodes.com] vless-FI-1...
   - Telegram:@v2rayng3
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知17
-  - 🇫🇮[www.v2nodes.com] vless-FI-1...
-  - 🇫🇮[www.v2nodes.com] vless-FI-1...
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
-  - '🇩🇪 德国 | DEU #3'
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
-  - 未知87
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
+  - 未知75
+  - 🇫🇮[www.v2nodes.com] vless-FI-1...
   - Telegram:@v2rayng3
 rules:
 - MATCH,SELECT
