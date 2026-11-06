@@ -11,27 +11,16 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
-  name: 🇹🇷[www.v2nodes.com] vless-TR-8...
-  server: 146.103.24.187
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: vlso5.1d.mom
-  ws-opts:
-    path: /fp=firefox
-    headers:
-      Host: vlso5.1d.mom
-- type: vmess
-  uuid: 32c017e7-2fa6-4a43-98ef-b21bb63d92e6
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知135
-  server: 206.1.96.187
+  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  server: 78.135.73.47
   port: 443
   udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.datadoghq.com
+  client-fingerprint: firefox
 - type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
@@ -57,6 +46,16 @@ proxies:
     headers:
       Host: vlso5.1d.mom
 - type: vless
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  name: '🏳[www.v2nodes.com] vless- #38'
+  server: 151.241.226.201
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+- type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   name: '🇧🇬[www.v2nodes.com] vless-BG-3... #2'
   server: 155.103.71.142
@@ -72,32 +71,12 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-  name: 未知139
+  name: 未知15
   server: 93.114.98.23
   port: 2083
   udp: true
   tls: true
   servername: ty7v85hv2391.dx1dx.com
-- type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  server: 151.241.226.201
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
-  server: 62.133.63.45
-  port: 8444
-  udp: true
-  network: grpc
-  tls: true
-  servername: github.com
-  client-fingerprint: safari
 - type: vless
   uuid: 0de1d303-d7de-0001-8679-c4cb67e2e2cc
   name: 🇹🇷[www.v2nodes.com] vless-TR-1...
@@ -109,33 +88,56 @@ proxies:
   tls: true
   servername: amd.com
   client-fingerprint: chrome
+- type: vless
+  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+  name: 🇹🇷[www.v2nodes.com] vless-TR-8...
+  server: 146.103.24.187
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: vlso5.1d.mom
+  ws-opts:
+    path: /fp=firefox
+    headers:
+      Host: vlso5.1d.mom
+- type: vless
+  uuid: a346c521-7a7f-452b-9356-a4893feb5982
+  name: '🏳[www.v2nodes.com] vless- #37'
+  server: 62.133.63.45
+  port: 8444
+  udp: true
+  network: grpc
+  tls: true
+  servername: github.com
+  client-fingerprint: safari
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷[www.v2nodes.com] vless-TR-8...
-  - 未知135
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
   - 🇹🇷[www.v2nodes.com] vless-TR-3...
+  - '🏳[www.v2nodes.com] vless- #38'
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #2'
-  - 未知139
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  - 未知15
   - 🇹🇷[www.v2nodes.com] vless-TR-1...
+  - 🇹🇷[www.v2nodes.com] vless-TR-8...
+  - '🏳[www.v2nodes.com] vless- #37'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇹🇷[www.v2nodes.com] vless-TR-8...
-  - 未知135
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
   - 🇹🇷[www.v2nodes.com] vless-TR-3...
+  - '🏳[www.v2nodes.com] vless- #38'
   - '🇧🇬[www.v2nodes.com] vless-BG-3... #2'
-  - 未知139
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  - 未知15
   - 🇹🇷[www.v2nodes.com] vless-TR-1...
+  - 🇹🇷[www.v2nodes.com] vless-TR-8...
+  - '🏳[www.v2nodes.com] vless- #37'
 rules:
 - MATCH,SELECT

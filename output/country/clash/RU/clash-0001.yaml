@@ -11,6 +11,23 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: e267bd26-3816-002e-990f-8d6ec83bd25b
+  name: '🇷🇺 俄罗斯 | RUS #1'
+  server: 136.234.9.92
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: git.medrocket.ru
+  client-fingerprint: ios
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: VVlAff77CnAU43Aoc5j15Y
+  name: 🇷🇺[www.v2nodes.com] ss-RU-1163...
+  server: 90.156.203.62
+  port: 5112
+  udp: true
+- type: vless
   uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
   name: '🇸🇪[www.v2nodes.com] vless-SE-1... #7'
   server: 193.163.203.170
@@ -21,16 +38,24 @@ proxies:
   tls: true
   servername: yandex.ru
   client-fingerprint: chrome
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: VVlAff77CnAU43Aoc5j15Y
-  name: 🇷🇺[www.v2nodes.com] ss-RU-1163...
-  server: 90.156.203.62
-  port: 5112
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知103
+  server: 195.19.20.80
+  port: 443
   udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
 - type: vless
   uuid: c720cb74-4c84-4fce-b8ae-637dbaa16199
-  name: '🏳[www.v2nodes.com] vless- #22'
+  name: '🏳[www.v2nodes.com] vless- #28'
   server: 91.185.83.44
   port: 443
   udp: true
@@ -41,6 +66,17 @@ proxies:
     path: /service/telemetry/0294da469190/fp=firefox
     headers:
       Host: nguyxejonb.rucdncomp.pro
+- type: vless
+  uuid: f9f70641-667b-46f2-a37e-e3858acbcd9b
+  name: '🇩🇪 德国 | DEU #6'
+  server: 104.171.134.135
+  port: 8443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 360.yandex.ru
+  client-fingerprint: firefox
 - type: vless
   uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
   name: '🇳🇱 荷兰 | NLD #2'
@@ -62,6 +98,16 @@ proxies:
   servername: 201.34.142.108
   client-fingerprint: firefox
 - type: vless
+  uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
+  name: 🇷🇺[www.v2nodes.com] vless-RU-1...
+  server: 201.24.121.243
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: kk-ru24a1.testkknegr.online
+  client-fingerprint: chrome
+- type: vless
   uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
   name: 🇷🇺 俄罗斯 | RUS
   server: 193.160.208.240
@@ -73,7 +119,7 @@ proxies:
   client-fingerprint: firefox
 - type: vless
   uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
-  name: '🇷🇺 俄罗斯 | RUS #1'
+  name: '🇩🇪 德国 | DEU #4'
   server: 193.160.208.240
   port: 443
   udp: true
@@ -81,39 +127,6 @@ proxies:
   tls: true
   servername: 193.160.208.240
   client-fingerprint: firefox
-- type: vless
-  uuid: 981c7ccc-2b17-473c-8358-7fd1d6eec1b4
-  name: 🇵🇱 波兰 | POL
-  server: 129.101.100.126
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: lte-v2-ws.gacvpn.site
-  client-fingerprint: firefox
-  ws-opts:
-    path: /static/js/runtime.9d03c7.js
-- type: vless
-  uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
-  name: 🇷🇺[www.v2nodes.com] vless-RU-1...
-  server: 201.24.121.243
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: kk-ru24a1.testkknegr.online
-  client-fingerprint: chrome
-- type: vless
-  uuid: 981c7ccc-2b17-473c-8358-7fd1d6eec1b4
-  name: '🇵🇱 波兰 | POL #1'
-  server: 129.101.100.126
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: lte-v2-ws.gacvpn.site
-  ws-opts:
-    path: /static/js/runtime.9d03c7.jsfp=firefox
 - type: hysteria2
   password: 5bcodmhjtyfyyrqh
   name: '@Begoo_VPN ²⁹⁰'
@@ -130,31 +143,33 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #7'
+  - '🇷🇺 俄罗斯 | RUS #1'
   - 🇷🇺[www.v2nodes.com] ss-RU-1163...
-  - '🏳[www.v2nodes.com] vless- #22'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #7'
+  - 未知103
+  - '🏳[www.v2nodes.com] vless- #28'
+  - '🇩🇪 德国 | DEU #6'
   - '🇳🇱 荷兰 | NLD #2'
   - 🇳🇱 荷兰 | NLD
-  - 🇷🇺 俄罗斯 | RUS
-  - '🇷🇺 俄罗斯 | RUS #1'
-  - 🇵🇱 波兰 | POL
   - 🇷🇺[www.v2nodes.com] vless-RU-1...
-  - '🇵🇱 波兰 | POL #1'
+  - 🇷🇺 俄罗斯 | RUS
+  - '🇩🇪 德国 | DEU #4'
   - '@Begoo_VPN ²⁹⁰'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #7'
+  - '🇷🇺 俄罗斯 | RUS #1'
   - 🇷🇺[www.v2nodes.com] ss-RU-1163...
-  - '🏳[www.v2nodes.com] vless- #22'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #7'
+  - 未知103
+  - '🏳[www.v2nodes.com] vless- #28'
+  - '🇩🇪 德国 | DEU #6'
   - '🇳🇱 荷兰 | NLD #2'
   - 🇳🇱 荷兰 | NLD
-  - 🇷🇺 俄罗斯 | RUS
-  - '🇷🇺 俄罗斯 | RUS #1'
-  - 🇵🇱 波兰 | POL
   - 🇷🇺[www.v2nodes.com] vless-RU-1...
-  - '🇵🇱 波兰 | POL #1'
+  - 🇷🇺 俄罗斯 | RUS
+  - '🇩🇪 德国 | DEU #4'
   - '@Begoo_VPN ²⁹⁰'
 rules:
 - MATCH,SELECT

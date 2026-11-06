@@ -37,18 +37,29 @@ proxies:
     short-id: 1cfa55abe4d2dc7a
 - type: vless
   uuid: 3d526c7f-059c-4e2b-b09a-8569b268935b
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
   server: 185.225.205.53
   port: 443
   udp: true
   network: tcp
 - type: vless
   uuid: 13e541f3-d09d-4633-89df-8513db0ced20
-  name: 🇪🇪[www.v2nodes.com] vless-EE-1...
+  name: '🏳[www.v2nodes.com] vless- #6'
   server: 45.86.60.174
   port: 16443
   udp: true
   network: tcp
+- type: vless
+  uuid: 5c32201a-6c0e-451b-8f0a-24b4bd40df59
+  name: 🇪🇪[www.v2nodes.com] vless-EE-1...
+  server: 31.77.236.114
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: files.porsche.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -57,7 +68,8 @@ proxy-groups:
   proxies:
   - '🇩🇪 德国 | DEU #2'
   - 🇩🇪 德国 | DEU
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  - '🏳[www.v2nodes.com] vless- #6'
   - 🇪🇪[www.v2nodes.com] vless-EE-1...
 - name: SELECT
   type: select
@@ -65,7 +77,8 @@ proxy-groups:
   - AUTO
   - '🇩🇪 德国 | DEU #2'
   - 🇩🇪 德国 | DEU
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  - '🏳[www.v2nodes.com] vless- #6'
   - 🇪🇪[www.v2nodes.com] vless-EE-1...
 rules:
 - MATCH,SELECT

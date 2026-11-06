@@ -11,30 +11,27 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 9c55c7eb-d53e-40fa-a0c9-e25d2a345073
-  name: 🇸🇪 瑞典 | SWE
-  server: 83.147.241.197
-  port: 443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
+  server: 89.117.112.40
+  port: 8880
   udp: true
   network: ws
-  tls: true
-  servername: se-sto.862400.xyz
-  client-fingerprint: random
   ws-opts:
-    path: /announcement?ed=2048
+    path: /
     headers:
-      Host: se-sto.862400.xyz
+      Host: vms.lifetime11.workers.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇪 瑞典 | SWE
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇸🇪 瑞典 | SWE
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
 rules:
 - MATCH,SELECT
