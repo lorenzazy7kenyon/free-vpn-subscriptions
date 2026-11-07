@@ -10,20 +10,9 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
-  name: 🇦🇱[www.v2nodes.com] vless-AL-1...
-  server: 89.125.139.115
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=chromesecurity=tls
-    headers:
-      Host: free.cndyw.ggff.net
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: lsu1v/3iNERwDDVwxCu5033KCUqQOoElYQul63kmqJ8=
+  password: yZiPrr484OdSYcivDUv+UIygwvyW+HQYytKsIgTw9tU=
   name: 🇦🇱[www.v2nodes.com] ss-AL-1490...
   server: 130.49.189.158
   port: 43558
@@ -34,13 +23,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇱[www.v2nodes.com] vless-AL-1...
   - 🇦🇱[www.v2nodes.com] ss-AL-1490...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇦🇱[www.v2nodes.com] vless-AL-1...
   - 🇦🇱[www.v2nodes.com] ss-AL-1490...
 rules:
 - MATCH,SELECT

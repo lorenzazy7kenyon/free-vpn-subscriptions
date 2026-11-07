@@ -11,38 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
-  server: 194.61.31.126
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-- type: vmess
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知147
-  server: 20.235.220.189
-  port: 443
-  udp: true
-  tls: true
-  servername: 6JDvArazgU3qQR6Q.v.3dns.vip
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: 6JDvArazgU3qQR6Q.v.3dns.vip
-- type: vless
-  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
-  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
-  server: 122.176.216.52
-  port: 443
-  udp: true
-  network: tcp
-- type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   server: 13.140.56.100
@@ -53,23 +21,66 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
+- type: vless
+  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
+  server: 122.176.216.52
+  port: 443
+  udp: true
+  network: tcp
+- type: vless
+  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
+  server: 122.176.216.52
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: app-6ada5023.deploy.meerasolution.com
+  ws-opts:
+    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88fp=chrome
+    headers:
+      Host: app-6ada5023.deploy.meerasolution.com
+- type: vless
+  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
+  name: '🏳[www.v2nodes.com] vless- #15'
+  server: 5.253.42.164
+  port: 40443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: deepl.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
+  server: 194.61.31.126
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
-  - 未知147
-  - 🇮🇳[www.v2nodes.com] vless-IN-1...
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - '🏳[www.v2nodes.com] vless- #15'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
-  - 未知147
-  - 🇮🇳[www.v2nodes.com] vless-IN-1...
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - '🏳[www.v2nodes.com] vless- #15'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
 rules:
 - MATCH,SELECT

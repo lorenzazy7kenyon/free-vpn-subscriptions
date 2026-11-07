@@ -10,6 +10,56 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
+  server: 167.17.64.175
+  port: 19999
+  udp: true
+- type: vless
+  uuid: 98a24806-141a-43d3-b094-bd66c4eb93b8
+  name: '🇮🇷[www.v2nodes.com] vless-IR-1... #3'
+  server: 198.16.113.221
+  port: 8443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: edb50d20-2d3e-4c1e-8a75-a17168a89aa5
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #2'
+  server: 145.223.68.58
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
+  server: 51.77.217.70
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: 5c32201a-6c0e-451b-8f0a-24b4bd40df59
+  name: 🇫🇷[www.v2nodes.com] vless-FR-1...
+  server: 103.82.101.94
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.porsche.com
+  client-fingerprint: firefox
 - type: vless
   uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
   name: '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
@@ -22,6 +72,50 @@ proxies:
     headers:
       Host: 138.124.70.41
 - type: vless
+  uuid: 98a24806-141a-43d3-b094-bd66c4eb93b8
+  name: '🇮🇷[www.v2nodes.com] vless-IR-1... #1'
+  server: 198.16.113.222
+  port: 8443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  name: '🏳[www.v2nodes.com] vless- #11'
+  server: 62.210.91.10
+  port: 23576
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #8'
+  server: 62.210.91.2
+  port: 23576
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- type: vless
+  uuid: 98a24806-141a-43d3-b094-bd66c4eb93b8
+  name: '🇮🇷[www.v2nodes.com] vless-IR-1... #2'
+  server: 198.16.113.220
+  port: 8443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
   uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1
   name: '🇫🇷[www.v2nodes.com] vless-FR-1... #8'
   server: 152.228.162.19
@@ -29,15 +123,14 @@ proxies:
   udp: true
   network: tcp
 - type: vless
-  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
-  server: 51.77.217.70
-  port: 2053
+  uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #7'
+  server: 152.228.162.19
+  port: 80
   udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /vless/
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -55,24 +148,6 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1616...
-  server: 23.162.152.22
-  port: 19999
-  udp: true
-- type: vless
-  uuid: 5c32201a-6c0e-451b-8f0a-24b4bd40df59
-  name: 🇫🇷[www.v2nodes.com] vless-FR-1...
-  server: 103.82.101.94
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.porsche.com
-  client-fingerprint: firefox
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
   server: 167.17.64.22
   port: 19999
@@ -84,66 +159,11 @@ proxies:
   server: 38.109.228.110
   port: 19999
   udp: true
-- type: vless
-  uuid: 98a24806-141a-43d3-b094-bd66c4eb93b8
-  name: '🇮🇷[www.v2nodes.com] vless-IR-1... #1'
-  server: 198.16.113.220
-  port: 8443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 98a24806-141a-43d3-b094-bd66c4eb93b8
-  name: '🇮🇷[www.v2nodes.com] vless-IR-1... #2'
-  server: 198.16.113.221
-  port: 8443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #7'
-  server: 62.210.91.10
-  port: 23576
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- type: vless
-  uuid: 98a24806-141a-43d3-b094-bd66c4eb93b8
-  name: '🏳[www.v2nodes.com] vless- #8'
-  server: 198.16.113.222
-  port: 8443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #9'
-  server: 62.210.91.2
-  port: 23576
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
-  server: 167.17.64.175
+  name: '🏳[www.v2nodes.com] ss- #2'
+  server: 23.162.152.22
   port: 19999
   udp: true
 - type: vless
@@ -155,17 +175,6 @@ proxies:
   network: grpc
   tls: true
   servername: www.sony.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: edb50d20-2d3e-4c1e-8a75-a17168a89aa5
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #2'
-  server: 145.223.68.58
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
   client-fingerprint: firefox
 - type: vless
   uuid: b81b4d1b-7f20-48f1-82dc-d24bef898cab
@@ -184,45 +193,47 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #8'
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
+  - '🇮🇷[www.v2nodes.com] vless-IR-1... #3'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #2'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
+  - 🇫🇷[www.v2nodes.com] vless-FR-1...
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
+  - '🇮🇷[www.v2nodes.com] vless-IR-1... #1'
+  - '🏳[www.v2nodes.com] vless- #11'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #8'
+  - '🇮🇷[www.v2nodes.com] vless-IR-1... #2'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #8'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #7'
   - '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
   - '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
-  - 🇫🇷[www.v2nodes.com] ss-FR-1616...
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
   - '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
   - 🇫🇷[www.v2nodes.com] ss-FR-1615...
-  - '🇮🇷[www.v2nodes.com] vless-IR-1... #1'
-  - '🇮🇷[www.v2nodes.com] vless-IR-1... #2'
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #7'
-  - '🏳[www.v2nodes.com] vless- #8'
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #9'
-  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
+  - '🏳[www.v2nodes.com] ss- #2'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #2'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #8'
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
+  - '🇮🇷[www.v2nodes.com] vless-IR-1... #3'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #2'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
+  - 🇫🇷[www.v2nodes.com] vless-FR-1...
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
+  - '🇮🇷[www.v2nodes.com] vless-IR-1... #1'
+  - '🏳[www.v2nodes.com] vless- #11'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #8'
+  - '🇮🇷[www.v2nodes.com] vless-IR-1... #2'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #8'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #7'
   - '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
   - '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
-  - 🇫🇷[www.v2nodes.com] ss-FR-1616...
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
   - '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
   - 🇫🇷[www.v2nodes.com] ss-FR-1615...
-  - '🇮🇷[www.v2nodes.com] vless-IR-1... #1'
-  - '🇮🇷[www.v2nodes.com] vless-IR-1... #2'
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #7'
-  - '🏳[www.v2nodes.com] vless- #8'
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #9'
-  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
+  - '🏳[www.v2nodes.com] ss- #2'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #2'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
 rules:
 - MATCH,SELECT
