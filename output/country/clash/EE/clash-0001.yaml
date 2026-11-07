@@ -11,21 +11,10 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 40a86b1b-239d-455e-b53f-4c270788ba6e
-  name: '🇩🇪 德国 | DEU #2'
-  server: 178.214.109.1
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: promo-digital.wb.ru
-  client-fingerprint: edge
-- type: vless
-  uuid: 3d526c7f-059c-4e2b-b09a-8569b268935b
+  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
   name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
-  server: 185.225.205.53
-  port: 443
+  server: 45.86.60.174
+  port: 16443
   udp: true
   network: tcp
 - type: vless
@@ -39,30 +28,19 @@ proxies:
   tls: true
   servername: files.porsche.com
   client-fingerprint: chrome
-- type: vless
-  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
-  server: 45.86.60.174
-  port: 16443
-  udp: true
-  network: tcp
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇩🇪 德国 | DEU #2'
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
   - 🇪🇪[www.v2nodes.com] vless-EE-1...
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇩🇪 德国 | DEU #2'
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
   - 🇪🇪[www.v2nodes.com] vless-EE-1...
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
 rules:
 - MATCH,SELECT

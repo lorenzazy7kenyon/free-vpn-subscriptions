@@ -15,7 +15,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知9
+  name: 未知140
   server: 162.4.136.79
   port: 443
   udp: true
@@ -25,30 +25,17 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
-- type: vmess
-  uuid: 2b910c43-51e3-4b15-9be8-b658106ba35e
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知124
-  server: 39.108.113.127
-  port: 10086
-  udp: true
-  ws-opts:
-    path: /
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知9
-  - 未知124
+  - 未知140
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知9
-  - 未知124
+  - 未知140
 rules:
 - MATCH,SELECT

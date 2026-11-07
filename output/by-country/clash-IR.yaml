@@ -21,19 +21,6 @@ proxies:
     path: /
     headers:
       Host: vms.lifetime59.workers.dev
-- type: vmess
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知87
-  server: 185.143.234.120
-  port: 80
-  udp: true
-  ws-opts:
-    path: /graphql
-    headers:
-      Host: koochehpas.com
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -41,12 +28,10 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
-  - 未知87
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
-  - 未知87
 rules:
 - MATCH,SELECT
