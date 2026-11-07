@@ -10,17 +10,21 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
-  name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
-  server: 212.102.38.25
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知13
+  server: 195.85.23.225
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
   tls: true
-  servername: udemy.com
-  client-fingerprint: ios
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
 - type: vless
   uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
   name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
@@ -32,19 +36,32 @@ proxies:
   tls: true
   servername: gateway.icloud.com
   client-fingerprint: chrome
+- type: vless
+  uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
+  name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
+  server: 212.102.38.25
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: udemy.com
+  client-fingerprint: ios
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
+  - 未知13
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
+  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
+  - 未知13
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
+  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
 rules:
 - MATCH,SELECT

@@ -21,6 +21,17 @@ proxies:
   tls: true
   servername: www.foxsports.com
   client-fingerprint: firefox
+- type: vless
+  uuid: 106d20f6-d70a-40e2-b69b-8e82baf8d117
+  name: '🇺🇦[www.v2nodes.com] vless-UA-1... #3'
+  server: 104.253.216.227
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.microsoft.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -28,10 +39,12 @@ proxy-groups:
   interval: 300
   proxies:
   - '🏳[www.v2nodes.com] vless- #40'
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #3'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🏳[www.v2nodes.com] vless- #40'
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #3'
 rules:
 - MATCH,SELECT

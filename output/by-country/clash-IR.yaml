@@ -10,26 +10,43 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
+  server: 45.131.4.30
+  port: 8880
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime59.workers.dev
 - type: vmess
-  uuid: 70f342a4-e892-49ca-aa1a-7f658427f1dc
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
   alterId: 0
   cipher: auto
-  network: tcp
-  name: 未知157
-  server: 37.202.225.110
-  port: 5380
+  network: ws
+  name: 未知87
+  server: 185.143.234.120
+  port: 80
   udp: true
+  ws-opts:
+    path: /graphql
+    headers:
+      Host: koochehpas.com
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知157
+  - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
+  - 未知87
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知157
+  - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
+  - 未知87
 rules:
 - MATCH,SELECT

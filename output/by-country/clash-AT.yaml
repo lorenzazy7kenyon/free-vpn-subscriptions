@@ -19,17 +19,6 @@ proxies:
   udp: true
 - type: vless
   uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
-  name: '🇦🇹 奥地利 | AUT #1'
-  server: 178.22.31.171
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: at1.japancase.site
-  client-fingerprint: edge
-- type: vless
-  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
   name: 🇦🇹 奥地利 | AUT
   server: 178.22.31.171
   port: 443
@@ -49,14 +38,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
-  - '🇦🇹 奥地利 | AUT #1'
   - 🇦🇹 奥地利 | AUT
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
-  - '🇦🇹 奥地利 | AUT #1'
   - 🇦🇹 奥地利 | AUT
 rules:
 - MATCH,SELECT
