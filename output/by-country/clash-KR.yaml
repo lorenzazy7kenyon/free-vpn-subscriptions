@@ -24,26 +24,28 @@ proxies:
     path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stflow=
     headers:
       Host: speedtest.danfengno1.kdns.fr
-- type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇰🇷KR-132.145.80.230-1067
-  server: 132.145.80.230
-  port: 80
+- type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
+  server: 3.39.4.109
+  port: 13672
   udp: true
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: kr02.a0a.xyz
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: 🇰🇷KR-211.178.105.134-5768
-  server: 211.178.105.134
-  port: 6123
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
+  server: 3.39.4.109
+  port: 18967
   udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 - type: vless
   uuid: 26524cce-d514-4014-a426-365fb266a14d
   name: KR2@ripaojiedian
@@ -58,23 +60,12 @@ proxies:
     path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stflow=
     headers:
       Host: speedtest.danfengno1.kdns.fr
-- type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  server: 3.39.4.109
-  port: 13672
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
 - type: ss
   cipher: aes-256-gcm
-  password: lGqs95QkFHo2NV
-  name: 🇰🇷KR-141.164.45.187-2850
+  password: Y6R9pAtvxxzmGC
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
   server: 141.164.45.187
-  port: 5498
+  port: 5001
   udp: true
 - type: vless
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
@@ -111,6 +102,14 @@ proxies:
   udp: true
   sni: www.bing.com
   skip-cert-verify: true
+- type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: '🇰🇷 韩国 | KOR #1'
+  server: 3.38.151.246
+  port: 443
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -118,28 +117,28 @@ proxy-groups:
   interval: 300
   proxies:
   - KR1@ripaojiedian
-  - 🇰🇷KR-132.145.80.230-1067
-  - 🇰🇷KR-211.178.105.134-5768
-  - KR2@ripaojiedian
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - 🇰🇷KR-141.164.45.187-2850
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
+  - KR2@ripaojiedian
+  - 🇰🇷[www.v2nodes.com] ss-KR-1185...
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   - 🇰🇷 韩国 | KOR
+  - '🇰🇷 韩国 | KOR #1'
   - '🇰🇷 韩国 | KOR #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - KR1@ripaojiedian
-  - 🇰🇷KR-132.145.80.230-1067
-  - 🇰🇷KR-211.178.105.134-5768
-  - KR2@ripaojiedian
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - 🇰🇷KR-141.164.45.187-2850
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
+  - KR2@ripaojiedian
+  - 🇰🇷[www.v2nodes.com] ss-KR-1185...
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   - 🇰🇷 韩国 | KOR
+  - '🇰🇷 韩国 | KOR #1'
   - '🇰🇷 韩国 | KOR #1'
 rules:
 - MATCH,SELECT

@@ -8,6 +8,23 @@
       "tls": {
         "enabled": true,
         "insecure": false,
+        "server_name": "www.mozilla.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "2f6e2b17-4d5e-4a12-8979-f53fdd347580"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "104.253.216.227",
+      "server_port": 443,
+      "tag": "🇺🇦[www.v2nodes.com] vless-UA-1... #2",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
         "server_name": "www.microsoft.com",
         "utls": {
           "enabled": true,
@@ -18,9 +35,25 @@
       "uuid": "106d20f6-d70a-40e2-b69b-8e82baf8d117"
     },
     {
+      "server": "213.111.148.137",
+      "server_port": 443,
+      "tag": "🇺🇦[www.v2nodes.com] vless-UA-4...",
+      "transport": {
+        "headers": {
+          "Host": "proxy-1cu.pages.dev"
+        },
+        "path": "/fp=androidsecurity=tls",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "40af9131-d540-448a-bc56-5bba147a1dc3"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "🇺🇦[www.v2nodes.com] vless-UA-1... #2"
+        "🇺🇦[www.v2nodes.com] vless-UA-1... #2",
+        "🇺🇦[www.v2nodes.com] vless-UA-1... #2",
+        "🇺🇦[www.v2nodes.com] vless-UA-4..."
       ],
       "tag": "auto",
       "type": "urltest",
@@ -29,7 +62,9 @@
     {
       "outbounds": [
         "auto",
-        "🇺🇦[www.v2nodes.com] vless-UA-1... #2"
+        "🇺🇦[www.v2nodes.com] vless-UA-1... #2",
+        "🇺🇦[www.v2nodes.com] vless-UA-1... #2",
+        "🇺🇦[www.v2nodes.com] vless-UA-4..."
       ],
       "tag": "select",
       "type": "selector"

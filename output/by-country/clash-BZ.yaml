@@ -10,28 +10,30 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #7'
-  server: 45.131.210.30
-  port: 8880
-  udp: true
+- type: vmess
+  uuid: 9ac947aa-de86-41c3-9a60-4c061c7c95f0
+  alterId: 0
+  cipher: none
   network: ws
+  name: 未知45
+  server: 45.131.209.253
+  port: 80
+  udp: true
   ws-opts:
-    path: /
+    path: /vmess
     headers:
-      Host: vms.lifetime05.workers.dev
+      Host: dl3.plot.cценарий.劇情голов0рез.fir3brand.煽動者追逐雷恩.погонезаpейн.wonkacapitano.buzz.
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #7'
+  - 未知45
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #7'
+  - 未知45
 rules:
 - MATCH,SELECT

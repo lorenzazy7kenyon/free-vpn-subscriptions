@@ -17,13 +17,6 @@ proxies:
   server: 194.68.44.42
   port: 64546
   udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: dCamglzrORaopqbpBlptzbt9QdiH4CSN
-  name: '🏳[www.v2nodes.com] ss- #1'
-  server: 82.152.132.211
-  port: 8044
-  udp: true
 - type: vless
   uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
   name: 🇷🇴[www.v2nodes.com] vless-RO-1...
@@ -35,6 +28,13 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: dCamglzrORaopqbpBlptzbt9QdiH4CSN
+  name: 🇷🇴[www.v2nodes.com] ss-RO-1617...
+  server: 82.152.132.211
+  port: 8044
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -42,14 +42,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
-  - '🏳[www.v2nodes.com] ss- #1'
   - 🇷🇴[www.v2nodes.com] vless-RO-1...
+  - 🇷🇴[www.v2nodes.com] ss-RO-1617...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
-  - '🏳[www.v2nodes.com] ss- #1'
   - 🇷🇴[www.v2nodes.com] vless-RO-1...
+  - 🇷🇴[www.v2nodes.com] ss-RO-1617...
 rules:
 - MATCH,SELECT
