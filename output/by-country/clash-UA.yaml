@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 2f6e2b17-4d5e-4a12-8979-f53fdd347580
-  name: '🇺🇦[www.v2nodes.com] vless-UA-1... #2'
+  name: '🇺🇦[www.v2nodes.com] vless-UA-1... #3'
   server: 104.253.216.227
   port: 443
   udp: true
@@ -20,17 +20,6 @@ proxies:
   network: tcp
   tls: true
   servername: www.mozilla.org
-  client-fingerprint: firefox
-- type: vless
-  uuid: 106d20f6-d70a-40e2-b69b-8e82baf8d117
-  name: '🇺🇦[www.v2nodes.com] vless-UA-1... #2'
-  server: 104.253.216.227
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.microsoft.com
   client-fingerprint: firefox
 - type: vless
   uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
@@ -49,15 +38,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #2'
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #2'
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #3'
   - 🇺🇦[www.v2nodes.com] vless-UA-4...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #2'
-  - '🇺🇦[www.v2nodes.com] vless-UA-1... #2'
+  - '🇺🇦[www.v2nodes.com] vless-UA-1... #3'
   - 🇺🇦[www.v2nodes.com] vless-UA-4...
 rules:
 - MATCH,SELECT
