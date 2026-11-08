@@ -10,6 +10,17 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
+  server: 94.183.234.245
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.bing.com
+  client-fingerprint: qq
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
@@ -25,30 +36,19 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
-- type: vless
-  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
-  server: 94.183.234.245
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.bing.com
-  client-fingerprint: qq
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知53
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
+  - 未知53
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知53
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
+  - 未知53
 rules:
 - MATCH,SELECT

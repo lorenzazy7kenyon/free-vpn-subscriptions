@@ -23,15 +23,32 @@ proxies:
   client-fingerprint: chrome
 - type: vless
   uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  name: '🇨🇭 瑞士 | CHE #2'
-  server: 46.19.138.214
+  name: 🇨🇭 瑞士 | CHE
+  server: 179.43.166.190
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
   servername: perevodchiki.su
-  client-fingerprint: firefox
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇨🇭[www.v2nodes.com] ss-CH-1616...
+  server: 23.166.88.127
+  port: 19999
+  udp: true
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇨🇭[www.v2nodes.com] trojan-CH-... #5'
+  server: 208.69.78.29
+  port: 443
+  udp: true
+  sni: 208.69.78.29
 - type: vless
   uuid: 3950b45e-740d-4dca-ac95-505ec8534592
   name: 🇨🇭[www.v2nodes.com] vless-CH-1...
@@ -52,47 +69,37 @@ proxies:
   udp: true
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇨🇭[www.v2nodes.com] trojan-CH-...
+  name: '🇨🇭[www.v2nodes.com] trojan-CH-... #2'
   server: 208.69.78.33
   port: 443
   udp: true
   sni: courses.yourultimateprofessionalcareerhub.com
   skip-cert-verify: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇨🇭[www.v2nodes.com] ss-CH-1615...
-  server: 186.190.215.251
-  port: 19999
+- type: vless
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  name: '🇨🇭 瑞士 | CHE #2'
+  server: 46.19.138.214
+  port: 443
   udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: perevodchiki.su
+  client-fingerprint: firefox
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇨🇭[www.v2nodes.com] trojan-CH-... #3'
+  name: '🇨🇭[www.v2nodes.com] trojan-CH-... #4'
   server: 208.69.78.19
   port: 443
   udp: true
   sni: 208.69.78.19
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇨🇭[www.v2nodes.com] trojan-CH-... #2'
+  name: '🇨🇭[www.v2nodes.com] trojan-CH-... #3'
   server: 208.69.78.208
   port: 443
   udp: true
   sni: 208.69.78.208
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇨🇭[www.v2nodes.com] trojan-CH-... #4'
-  server: 208.69.78.29
-  port: 443
-  udp: true
-  sni: 208.69.78.29
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #1'
-  server: 23.166.88.127
-  port: 19999
-  udp: true
 - type: vless
   uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
   name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
@@ -103,6 +110,13 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: firefox
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇨🇭[www.v2nodes.com] ss-CH-1615...
+  server: 186.190.215.251
+  port: 19999
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -110,30 +124,32 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇨🇭 瑞士 | CHE #1'
-  - '🇨🇭 瑞士 | CHE #2'
+  - 🇨🇭 瑞士 | CHE
+  - 🇨🇭[www.v2nodes.com] ss-CH-1616...
+  - '🇨🇭[www.v2nodes.com] trojan-CH-... #5'
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
   - '🇨🇭[www.v2nodes.com] ss-CH-1615... #1'
-  - 🇨🇭[www.v2nodes.com] trojan-CH-...
-  - 🇨🇭[www.v2nodes.com] ss-CH-1615...
-  - '🇨🇭[www.v2nodes.com] trojan-CH-... #3'
   - '🇨🇭[www.v2nodes.com] trojan-CH-... #2'
+  - '🇨🇭 瑞士 | CHE #2'
   - '🇨🇭[www.v2nodes.com] trojan-CH-... #4'
-  - '🏳[www.v2nodes.com] ss- #1'
+  - '🇨🇭[www.v2nodes.com] trojan-CH-... #3'
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - 🇨🇭[www.v2nodes.com] ss-CH-1615...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇨🇭 瑞士 | CHE #1'
-  - '🇨🇭 瑞士 | CHE #2'
+  - 🇨🇭 瑞士 | CHE
+  - 🇨🇭[www.v2nodes.com] ss-CH-1616...
+  - '🇨🇭[www.v2nodes.com] trojan-CH-... #5'
   - 🇨🇭[www.v2nodes.com] vless-CH-1...
   - '🇨🇭[www.v2nodes.com] ss-CH-1615... #1'
-  - 🇨🇭[www.v2nodes.com] trojan-CH-...
-  - 🇨🇭[www.v2nodes.com] ss-CH-1615...
-  - '🇨🇭[www.v2nodes.com] trojan-CH-... #3'
   - '🇨🇭[www.v2nodes.com] trojan-CH-... #2'
+  - '🇨🇭 瑞士 | CHE #2'
   - '🇨🇭[www.v2nodes.com] trojan-CH-... #4'
-  - '🏳[www.v2nodes.com] ss- #1'
+  - '🇨🇭[www.v2nodes.com] trojan-CH-... #3'
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
+  - 🇨🇭[www.v2nodes.com] ss-CH-1615...
 rules:
 - MATCH,SELECT

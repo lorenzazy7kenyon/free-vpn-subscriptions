@@ -1,0 +1,44 @@
+{
+  "outbounds": [
+    {
+      "server": "196.196.149.43",
+      "server_port": 443,
+      "tag": "🇪🇸ES_3|1.1MB/s",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "e83786x.es7.h1clayd.click",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "95c2ba1e-a330-4e6b-bd81-bf9c0f647b2f"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "🇪🇸ES_3|1.1MB/s"
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "🇪🇸ES_3|1.1MB/s"
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

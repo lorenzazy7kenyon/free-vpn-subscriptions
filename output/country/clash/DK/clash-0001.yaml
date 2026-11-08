@@ -12,6 +12,18 @@ dns:
 proxies:
 - type: vless
   uuid: a346c521-7a7f-452b-9356-a4893feb5982
+  name: 🇩🇰 丹麦 | DNK
+  server: 193.233.253.180
+  port: 8444
+  udp: true
+  network: grpc
+  tls: true
+  servername: github.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+- type: vless
+  uuid: a346c521-7a7f-452b-9356-a4893feb5982
   name: 🇩🇰[www.v2nodes.com] vless-DK-1...
   server: 193.233.253.180
   port: 8444
@@ -41,12 +53,14 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇩🇰 丹麦 | DNK
   - 🇩🇰[www.v2nodes.com] vless-DK-1...
   - 未知91
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇩🇰 丹麦 | DNK
   - 🇩🇰[www.v2nodes.com] vless-DK-1...
   - 未知91
 rules:

@@ -10,28 +10,24 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  name: 🇮🇪[www.v2nodes.com] vless-IE-1...
-  server: 50.7.5.165
-  port: 443
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: WkKqrNHRxQXA-bkL2ztAylXw8mE_BYYs
+  name: 🇮🇪 爱尔兰 | IRL
+  server: 83.141.92.138
+  port: 1080
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ir-new1.failspace.top
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇪[www.v2nodes.com] vless-IE-1...
+  - 🇮🇪 爱尔兰 | IRL
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇮🇪[www.v2nodes.com] vless-IE-1...
+  - 🇮🇪 爱尔兰 | IRL
 rules:
 - MATCH,SELECT

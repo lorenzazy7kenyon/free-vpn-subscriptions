@@ -11,6 +11,16 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 00a560f4-035e-48eb-b698-6f6be0b5e477
+  name: 🇩🇪 德国 | DEU
+  server: 188.72.103.4
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: decdn2.bota7.com
+  client-fingerprint: chrome
+- type: vless
   uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
   name: 🇦🇪[www.v2nodes.com] vless-AE-1...
   server: 95.174.68.188
@@ -23,7 +33,7 @@ proxies:
       Host: 95.174.68.188
 - type: vless
   uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  name: 🏳[www.v2nodes.com] vless-
+  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   server: 84.235.244.108
   port: 22573
   udp: true
@@ -38,13 +48,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇩🇪 德国 | DEU
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
-  - 🏳[www.v2nodes.com] vless-
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇩🇪 德国 | DEU
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
-  - 🏳[www.v2nodes.com] vless-
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
 rules:
 - MATCH,SELECT
