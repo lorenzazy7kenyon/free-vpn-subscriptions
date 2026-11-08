@@ -20,6 +20,21 @@ proxies:
   port: 50002
   udp: true
 - type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇨🇳CN-113.31.124.147-0140
+  server: 113.31.124.147
+  port: 443
+  udp: true
+  tls: true
+  servername: lg30.cfcdn3.xyz
+  ws-opts:
+    path: /ray
+    headers:
+      Host: lg30.cfcdn3.xyz
+- type: vmess
   uuid: 2a489513-46b5-488c-9899-9faaf2d83cd9
   alterId: 0
   cipher: auto
@@ -37,12 +52,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 未知25
+  - 🇨🇳CN-113.31.124.147-0140
   - 🇨🇳_CN_中国_IPV4
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 未知25
+  - 🇨🇳CN-113.31.124.147-0140
   - 🇨🇳_CN_中国_IPV4
 rules:
 - MATCH,SELECT
