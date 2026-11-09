@@ -10,6 +10,13 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
+  name: 🇦🇹[www.v2nodes.com] ss-AT-1614...
+  server: 152.53.1.57
+  port: 8388
+  udp: true
 - type: vless
   uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
   name: 🇦🇹[www.v2nodes.com] vless-AT-1...
@@ -21,26 +28,19 @@ proxies:
   tls: true
   servername: at1.japancase.site
   client-fingerprint: firefox
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
-  name: 🇦🇹[www.v2nodes.com] ss-AT-1614...
-  server: 152.53.1.57
-  port: 8388
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
+  - 🇦🇹[www.v2nodes.com] vless-AT-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
+  - 🇦🇹[www.v2nodes.com] vless-AT-1...
 rules:
 - MATCH,SELECT

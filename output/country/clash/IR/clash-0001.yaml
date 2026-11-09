@@ -11,27 +11,41 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
-  server: 45.131.4.30
-  port: 8880
+  uuid: f47057d5-120d-4b42-b6d6-30469aef6813
+  name: '🇮🇷 伊朗 | IRN #1'
+  server: 185.211.57.168
+  port: 48312
   udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime59.workers.dev
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: f47057d5-120d-4b42-b6d6-30469aef6813
+  name: 🇮🇷 伊朗 | IRN
+  server: 185.211.57.168
+  port: 48312
+  udp: true
+  network: http
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: d9eM_jy8ztZrOf3DMq1m55VQSo7bnKcG1dRnO9ktJ2Y
+    short-id: 902c315efc
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
+  - '🇮🇷 伊朗 | IRN #1'
+  - 🇮🇷 伊朗 | IRN
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
+  - '🇮🇷 伊朗 | IRN #1'
+  - 🇮🇷 伊朗 | IRN
 rules:
 - MATCH,SELECT

@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
-  name: '🏳[www.v2nodes.com] vless- #8'
+  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
   server: 94.183.234.245
   port: 443
   udp: true
@@ -21,17 +21,48 @@ proxies:
   tls: true
   servername: www.bing.com
   client-fingerprint: qq
+- type: vless
+  uuid: ed2e4dd1-d19f-48dd-b613-3f855b1d0765
+  name: 🇩🇪 德国 | DEU
+  server: 188.130.154.204
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: cdn2.zovip2.ir
+  client-fingerprint: chrome
+  ws-opts:
+    path: /api/v3/pulse
+    headers:
+      Host: cdn2.zovip2.ir
+- type: vless
+  uuid: ed2e4dd1-d19f-48dd-b613-3f855b1d0765
+  name: '🇩🇪 德国 | DEU #8'
+  server: 188.130.154.204
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: cdn2.zovip2.ir
+  ws-opts:
+    path: /api/v3/pulsefp=chrome
+    headers:
+      Host: cdn2.zovip2.ir
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #8'
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
+  - 🇩🇪 德国 | DEU
+  - '🇩🇪 德国 | DEU #8'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #8'
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
+  - 🇩🇪 德国 | DEU
+  - '🇩🇪 德国 | DEU #8'
 rules:
 - MATCH,SELECT

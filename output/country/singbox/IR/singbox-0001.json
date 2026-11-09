@@ -1,23 +1,47 @@
 {
   "outbounds": [
     {
-      "server": "45.131.4.30",
-      "server_port": 8880,
-      "tag": "🇨🇦[www.v2nodes.com] vless-CA-1... #1",
-      "transport": {
-        "headers": {
-          "Host": "vms.lifetime59.workers.dev"
-        },
-        "path": "/",
-        "type": "ws"
+      "server": "185.211.57.168",
+      "server_port": 48312,
+      "tag": "🇮🇷 伊朗 | IRN #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "type": "vless",
-      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d"
+      "uuid": "f47057d5-120d-4b42-b6d6-30469aef6813"
+    },
+    {
+      "server": "185.211.57.168",
+      "server_port": 48312,
+      "tag": "🇮🇷 伊朗 | IRN",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "d9eM_jy8ztZrOf3DMq1m55VQSo7bnKcG1dRnO9ktJ2Y",
+          "short_id": "902c315efc"
+        },
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "f47057d5-120d-4b42-b6d6-30469aef6813"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇨🇦[www.v2nodes.com] vless-CA-1... #1"
+        "🇮🇷 伊朗 | IRN #1",
+        "🇮🇷 伊朗 | IRN"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -26,7 +50,8 @@
     {
       "outbounds": [
         "auto",
-        "🇨🇦[www.v2nodes.com] vless-CA-1... #1"
+        "🇮🇷 伊朗 | IRN #1",
+        "🇮🇷 伊朗 | IRN"
       ],
       "tag": "select",
       "type": "selector"

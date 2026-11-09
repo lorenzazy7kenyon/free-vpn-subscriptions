@@ -10,24 +10,46 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: WkKqrNHRxQXA-bkL2ztAylXw8mE_BYYs
-  name: 🇮🇪[www.v2nodes.com] ss-IE-1618...
-  server: 83.141.92.138
-  port: 1080
+- type: vless
+  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
+  name: '🇺🇸 美国 | USA #2'
+  server: 23.94.67.209
+  port: 443
   udp: true
+  network: ws
+  tls: true
+  servername: cat.ilovezhenjiu.top
+  ws-opts:
+    path: /cgciwsfp=chrome
+    headers:
+      Host: cat.ilovezhenjiu.top
+- type: vless
+  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
+  name: 🇺🇸 美国 | USA
+  server: 23.94.67.209
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: cat.ilovezhenjiu.top
+  client-fingerprint: chrome
+  ws-opts:
+    path: /cgciws
+    headers:
+      Host: cat.ilovezhenjiu.top
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇪[www.v2nodes.com] ss-IE-1618...
+  - '🇺🇸 美国 | USA #2'
+  - 🇺🇸 美国 | USA
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇮🇪[www.v2nodes.com] ss-IE-1618...
+  - '🇺🇸 美国 | USA #2'
+  - 🇺🇸 美国 | USA
 rules:
 - MATCH,SELECT

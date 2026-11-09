@@ -11,27 +11,45 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: ff85e702-b605-4109-884d-2c1f065d0954
-  name: 🇹🇭[www.v2nodes.com] vless-TH-1...
-  server: 45.154.26.63
+  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
+  name: 🇹🇭 泰国 | THA
+  server: 103.107.53.42
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: ws
   tls: true
-  servername: www.cloudflare.com
+  servername: cat.ilovezhenjiu.top
   client-fingerprint: chrome
+  ws-opts:
+    path: /cgciws
+    headers:
+      Host: cat.ilovezhenjiu.top
+- type: vless
+  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
+  name: '🇹🇭 泰国 | THA #1'
+  server: 103.107.53.42
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: cat.ilovezhenjiu.top
+  ws-opts:
+    path: /cgciwsfp=chrome
+    headers:
+      Host: cat.ilovezhenjiu.top
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇭[www.v2nodes.com] vless-TH-1...
+  - 🇹🇭 泰国 | THA
+  - '🇹🇭 泰国 | THA #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇹🇭[www.v2nodes.com] vless-TH-1...
+  - 🇹🇭 泰国 | THA
+  - '🇹🇭 泰国 | THA #1'
 rules:
 - MATCH,SELECT

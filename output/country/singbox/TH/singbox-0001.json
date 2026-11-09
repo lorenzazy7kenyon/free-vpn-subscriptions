@@ -1,26 +1,52 @@
 {
   "outbounds": [
     {
-      "flow": "xtls-rprx-vision",
-      "server": "45.154.26.63",
+      "server": "103.107.53.42",
       "server_port": 443,
-      "tag": "🇹🇭[www.v2nodes.com] vless-TH-1...",
+      "tag": "🇹🇭 泰国 | THA",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "www.cloudflare.com",
+        "server_name": "cat.ilovezhenjiu.top",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
+      "transport": {
+        "headers": {
+          "Host": "cat.ilovezhenjiu.top"
+        },
+        "path": "/cgciws",
+        "type": "ws"
+      },
       "type": "vless",
-      "uuid": "ff85e702-b605-4109-884d-2c1f065d0954"
+      "uuid": "affb10d4-3835-4b1f-b5a3-3481489911b6"
+    },
+    {
+      "server": "103.107.53.42",
+      "server_port": 443,
+      "tag": "🇹🇭 泰国 | THA #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "cat.ilovezhenjiu.top"
+      },
+      "transport": {
+        "headers": {
+          "Host": "cat.ilovezhenjiu.top"
+        },
+        "path": "/cgciwsfp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "affb10d4-3835-4b1f-b5a3-3481489911b6"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇹🇭[www.v2nodes.com] vless-TH-1..."
+        "🇹🇭 泰国 | THA",
+        "🇹🇭 泰国 | THA #1"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -29,7 +55,8 @@
     {
       "outbounds": [
         "auto",
-        "🇹🇭[www.v2nodes.com] vless-TH-1..."
+        "🇹🇭 泰国 | THA",
+        "🇹🇭 泰国 | THA #1"
       ],
       "tag": "select",
       "type": "selector"

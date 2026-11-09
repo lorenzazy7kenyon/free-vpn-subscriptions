@@ -11,23 +11,14 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 5c32201a-6c0e-451b-8f0a-24b4bd40df59
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
-  server: 31.77.236.114
-  port: 443
+  uuid: 4cb5f361-ac35-4a80-b6da-f34bc90ee775
+  name: 🇪🇪 爱沙尼亚 | EST
+  server: 144.31.129.202
+  port: 446
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: grpc
   tls: true
-  servername: files.porsche.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
-  server: 45.86.60.174
-  port: 16443
-  udp: true
-  network: tcp
+  servername: 144.31.129.202
 - type: vless
   uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
   name: 🇪🇪[www.v2nodes.com] vless-EE-1...
@@ -39,21 +30,41 @@ proxies:
   tls: true
   servername: ee2.japancase.site
   client-fingerprint: chrome
+- type: vless
+  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #3'
+  server: 45.86.60.174
+  port: 16443
+  udp: true
+  network: tcp
+- type: vless
+  uuid: 5c32201a-6c0e-451b-8f0a-24b4bd40df59
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
+  server: 31.77.236.114
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: files.porsche.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
+  - 🇪🇪 爱沙尼亚 | EST
   - 🇪🇪[www.v2nodes.com] vless-EE-1...
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #3'
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
+  - 🇪🇪 爱沙尼亚 | EST
   - 🇪🇪[www.v2nodes.com] vless-EE-1...
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #3'
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
 rules:
 - MATCH,SELECT

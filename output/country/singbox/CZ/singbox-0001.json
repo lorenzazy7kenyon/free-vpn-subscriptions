@@ -1,10 +1,54 @@
 {
   "outbounds": [
     {
+      "alter_id": 0,
+      "security": "auto",
+      "server": "195.85.23.225",
+      "server_port": 443,
+      "tag": "未知11",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "renderer-stream-2-62.mirra.now"
+      },
+      "transport": {
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket",
+        "type": "ws"
+      },
+      "type": "vmess",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154"
+    },
+    {
+      "server": "141.133.172.163",
+      "server_port": 2053,
+      "tag": "🇨🇿 捷克 | CZE",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "cat.ilovezhenjiu.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "cat.ilovezhenjiu.top"
+        },
+        "path": "/cgciws",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "affb10d4-3835-4b1f-b5a3-3481489911b6"
+    },
+    {
       "flow": "xtls-rprx-vision",
       "server": "195.123.245.241",
       "server_port": 443,
-      "tag": "🇨🇿[www.v2nodes.com] vless-CZ-1... #1",
+      "tag": "🇨🇿[www.v2nodes.com] vless-CZ-1...",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -18,10 +62,29 @@
       "uuid": "7c053ca8-38cc-45e2-930c-eda1fd66f903"
     },
     {
+      "server": "141.133.172.163",
+      "server_port": 2053,
+      "tag": "🇨🇿 捷克 | CZE #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "cat.ilovezhenjiu.top"
+      },
+      "transport": {
+        "headers": {
+          "Host": "cat.ilovezhenjiu.top"
+        },
+        "path": "/cgciwsfp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "affb10d4-3835-4b1f-b5a3-3481489911b6"
+    },
+    {
       "flow": "xtls-rprx-vision",
       "server": "212.102.38.25",
       "server_port": 443,
-      "tag": "🇨🇿[www.v2nodes.com] vless-CZ-1... #2",
+      "tag": "🇨🇿[www.v2nodes.com] vless-CZ-1... #1",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -37,8 +100,11 @@
     {
       "interval": "5m",
       "outbounds": [
-        "🇨🇿[www.v2nodes.com] vless-CZ-1... #1",
-        "🇨🇿[www.v2nodes.com] vless-CZ-1... #2"
+        "未知11",
+        "🇨🇿 捷克 | CZE",
+        "🇨🇿[www.v2nodes.com] vless-CZ-1...",
+        "🇨🇿 捷克 | CZE #1",
+        "🇨🇿[www.v2nodes.com] vless-CZ-1... #1"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -47,8 +113,11 @@
     {
       "outbounds": [
         "auto",
-        "🇨🇿[www.v2nodes.com] vless-CZ-1... #1",
-        "🇨🇿[www.v2nodes.com] vless-CZ-1... #2"
+        "未知11",
+        "🇨🇿 捷克 | CZE",
+        "🇨🇿[www.v2nodes.com] vless-CZ-1...",
+        "🇨🇿 捷克 | CZE #1",
+        "🇨🇿[www.v2nodes.com] vless-CZ-1... #1"
       ],
       "tag": "select",
       "type": "selector"

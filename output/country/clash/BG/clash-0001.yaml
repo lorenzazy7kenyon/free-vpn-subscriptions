@@ -11,27 +11,45 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
-  server: 89.117.112.40
-  port: 8880
+  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
+  name: 🇺🇸 美国 | USA
+  server: 91.215.153.162
+  port: 443
   udp: true
   network: ws
+  tls: true
+  servername: cat.ilovezhenjiu.top
+  client-fingerprint: chrome
   ws-opts:
-    path: /
+    path: /cgciws
     headers:
-      Host: vms.lifetime11.workers.dev
+      Host: cat.ilovezhenjiu.top
+- type: vless
+  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
+  name: '🇺🇸 美国 | USA #10'
+  server: 91.215.153.162
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: cat.ilovezhenjiu.top
+  ws-opts:
+    path: /cgciwsfp=chrome
+    headers:
+      Host: cat.ilovezhenjiu.top
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
+  - 🇺🇸 美国 | USA
+  - '🇺🇸 美国 | USA #10'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
+  - 🇺🇸 美国 | USA
+  - '🇺🇸 美国 | USA #10'
 rules:
 - MATCH,SELECT

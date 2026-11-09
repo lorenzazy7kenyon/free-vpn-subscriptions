@@ -1,25 +1,52 @@
 {
   "outbounds": [
     {
-      "server": "77.91.68.70",
-      "server_port": 55983,
-      "tag": "🏳[www.v2nodes.com] vless-",
+      "server": "91.198.108.191",
+      "server_port": 443,
+      "tag": "🇦🇲 AM_27",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "yahoo.com",
+        "server_name": "cat.ilovezhenjiu.top",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
+      "transport": {
+        "headers": {
+          "Host": "cat.ilovezhenjiu.top"
+        },
+        "path": "/cgciws",
+        "type": "ws"
+      },
       "type": "vless",
-      "uuid": "f667a096-5231-4cfb-8759-92bb32473139"
+      "uuid": "affb10d4-3835-4b1f-b5a3-3481489911b6"
+    },
+    {
+      "server": "91.198.108.191",
+      "server_port": 443,
+      "tag": "🇦🇲 AM_27 #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "cat.ilovezhenjiu.top"
+      },
+      "transport": {
+        "headers": {
+          "Host": "cat.ilovezhenjiu.top"
+        },
+        "path": "/cgciwsfp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "affb10d4-3835-4b1f-b5a3-3481489911b6"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🏳[www.v2nodes.com] vless-"
+        "🇦🇲 AM_27",
+        "🇦🇲 AM_27 #1"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -28,7 +55,8 @@
     {
       "outbounds": [
         "auto",
-        "🏳[www.v2nodes.com] vless-"
+        "🇦🇲 AM_27",
+        "🇦🇲 AM_27 #1"
       ],
       "tag": "select",
       "type": "selector"
