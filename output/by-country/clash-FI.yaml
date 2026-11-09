@@ -11,8 +11,28 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: ead9f716-0131-4c16-a107-6b9b16090961
+  name: '🇩🇪 德国 | DEU #1'
+  server: 78.17.39.129
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: 78.17.39.129
+  client-fingerprint: safari
+- type: vless
+  uuid: ead9f716-0131-4c16-a107-6b9b16090961
+  name: 🇩🇪 德国 | DEU
+  server: 78.17.39.129
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: 78.17.39.129
+  client-fingerprint: safari
+- type: vless
   uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
   server: 45.144.234.157
   port: 14430
   udp: true
@@ -22,62 +42,14 @@ proxies:
     headers:
       Host: 45.144.234.157
 - type: vless
-  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
-  name: '🇺🇸 美国 | USA #19'
-  server: 2.26.147.65
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: cat.ilovezhenjiu.top
-  ws-opts:
-    path: /cgciwsfp=chrome
-    headers:
-      Host: cat.ilovezhenjiu.top
-- type: vless
-  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
-  name: 🇺🇸 美国 | USA
-  server: 2.26.147.65
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: cat.ilovezhenjiu.top
-  client-fingerprint: chrome
-  ws-opts:
-    path: /cgciws
-    headers:
-      Host: cat.ilovezhenjiu.top
-- type: vless
-  uuid: 8d954cbe-7ca9-402d-bfaf-aca6c92c04c3
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
-  server: 217.144.188.185
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.nordea.fi
-  client-fingerprint: chrome
-- type: vless
   uuid: b79d736d-0f10-4169-b626-362059d18204
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #7'
   server: 95.216.27.15
   port: 2053
   udp: true
   network: tcp
   tls: true
   servername: www.cloudflare.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: cebc5f19-18d9-48e6-9029-fb4b04caf393
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
-  server: 45.38.143.210
-  port: 30584
-  udp: true
-  network: tcp
-  tls: true
-  servername: m.vk.com
   client-fingerprint: chrome
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
@@ -94,6 +66,17 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
+- type: vless
+  uuid: 8d954cbe-7ca9-402d-bfaf-aca6c92c04c3
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
+  server: 217.144.188.185
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.nordea.fi
+  client-fingerprint: chrome
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
@@ -109,6 +92,16 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
+- type: vless
+  uuid: cebc5f19-18d9-48e6-9029-fb4b04caf393
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
+  server: 45.38.143.210
+  port: 30584
+  udp: true
+  network: tcp
+  tls: true
+  servername: m.vk.com
+  client-fingerprint: chrome
 - type: hysteria2
   password: 6aab8efdf13945829ae3699c342be406
   name: Telegram:@v2rayng3
@@ -124,27 +117,27 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
-  - '🇺🇸 美国 | USA #19'
-  - 🇺🇸 美国 | USA
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
+  - '🇩🇪 德国 | DEU #1'
+  - 🇩🇪 德国 | DEU
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #7'
   - 未知156
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
   - 未知118
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
   - Telegram:@v2rayng3
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
-  - '🇺🇸 美国 | USA #19'
-  - 🇺🇸 美国 | USA
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
+  - '🇩🇪 德国 | DEU #1'
+  - 🇩🇪 德国 | DEU
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #7'
   - 未知156
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
   - 未知118
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
   - Telegram:@v2rayng3
 rules:
 - MATCH,SELECT

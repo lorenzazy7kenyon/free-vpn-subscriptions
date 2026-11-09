@@ -26,20 +26,6 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
 - type: vless
-  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
-  name: 🇨🇿 捷克 | CZE
-  server: 141.133.172.163
-  port: 2053
-  udp: true
-  network: ws
-  tls: true
-  servername: cat.ilovezhenjiu.top
-  client-fingerprint: chrome
-  ws-opts:
-    path: /cgciws
-    headers:
-      Host: cat.ilovezhenjiu.top
-- type: vless
   uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
   name: 🇨🇿[www.v2nodes.com] vless-CZ-1...
   server: 195.123.245.241
@@ -50,19 +36,6 @@ proxies:
   tls: true
   servername: gateway.icloud.com
   client-fingerprint: chrome
-- type: vless
-  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
-  name: '🇨🇿 捷克 | CZE #1'
-  server: 141.133.172.163
-  port: 2053
-  udp: true
-  network: ws
-  tls: true
-  servername: cat.ilovezhenjiu.top
-  ws-opts:
-    path: /cgciwsfp=chrome
-    headers:
-      Host: cat.ilovezhenjiu.top
 - type: vless
   uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
   name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
@@ -81,18 +54,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 未知11
-  - 🇨🇿 捷克 | CZE
   - 🇨🇿[www.v2nodes.com] vless-CZ-1...
-  - '🇨🇿 捷克 | CZE #1'
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 未知11
-  - 🇨🇿 捷克 | CZE
   - 🇨🇿[www.v2nodes.com] vless-CZ-1...
-  - '🇨🇿 捷克 | CZE #1'
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
 rules:
 - MATCH,SELECT

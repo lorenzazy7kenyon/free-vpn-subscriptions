@@ -10,6 +10,13 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: dCamglzrORaopqbpBlptzbt9QdiH4CSN
+  name: 🇷🇴[www.v2nodes.com] ss-RO-1617...
+  server: 82.152.132.211
+  port: 8044
+  udp: true
 - type: vless
   uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
   name: 🇷🇴[www.v2nodes.com] vless-RO-1...
@@ -23,64 +30,26 @@ proxies:
   client-fingerprint: chrome
 - type: ss
   cipher: chacha20-ietf-poly1305
-  password: dCamglzrORaopqbpBlptzbt9QdiH4CSN
-  name: 🇷🇴[www.v2nodes.com] ss-RO-1617...
-  server: 82.152.132.211
-  port: 8044
-  udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
   password: U83u9OGpvSatIUW7LsWffr
   name: 🇷🇴[www.v2nodes.com] ss-RO-1595...
   server: 194.68.44.42
   port: 64546
   udp: true
-- type: vless
-  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
-  name: 🇷🇴 罗马尼亚 | ROU
-  server: 81.181.166.197
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: cat.ilovezhenjiu.top
-  client-fingerprint: chrome
-  ws-opts:
-    path: /cgciws
-    headers:
-      Host: cat.ilovezhenjiu.top
-- type: vless
-  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
-  name: '🇷🇴 罗马尼亚 | ROU #1'
-  server: 81.181.166.197
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: cat.ilovezhenjiu.top
-  ws-opts:
-    path: /cgciwsfp=chrome
-    headers:
-      Host: cat.ilovezhenjiu.top
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - 🇷🇴[www.v2nodes.com] ss-RO-1617...
+  - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
-  - 🇷🇴 罗马尼亚 | ROU
-  - '🇷🇴 罗马尼亚 | ROU #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - 🇷🇴[www.v2nodes.com] ss-RO-1617...
+  - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
-  - 🇷🇴 罗马尼亚 | ROU
-  - '🇷🇴 罗马尼亚 | ROU #1'
 rules:
 - MATCH,SELECT

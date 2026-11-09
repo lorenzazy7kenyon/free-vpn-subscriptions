@@ -11,30 +11,43 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 05d7a479-a099-40cf-aecf-41aa934767b0
-  name: EPODONIOS
-  server: 93.152.215.176
-  port: 8443
+  uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
+  name: '🇳🇱 荷兰 | NLD #4'
+  server: 93.152.215.254
+  port: 443
   udp: true
-  network: ws
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: nl5.hap-plus.ru
-  client-fingerprint: chrome
-  ws-opts:
-    path: /api/v1/events
-    headers:
-      Host: nl5.hap-plus.ru
+  servername: remote.propaint.cl
+  client-fingerprint: ios
+- type: vless
+  uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
+  name: 🇳🇱 荷兰 | NLD
+  server: 93.152.215.254
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: remote.propaint.cl
+  client-fingerprint: ios
+  reality-opts:
+    public-key: is-86tEDOjNbNAnVwc-YHHYSn1MF9SF68P6VjESfDHQ
+    short-id: a2fcac
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
+  - '🇳🇱 荷兰 | NLD #4'
+  - 🇳🇱 荷兰 | NLD
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
+  - '🇳🇱 荷兰 | NLD #4'
+  - 🇳🇱 荷兰 | NLD
 rules:
 - MATCH,SELECT

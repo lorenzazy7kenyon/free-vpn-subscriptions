@@ -1,32 +1,49 @@
 {
   "outbounds": [
     {
-      "server": "93.152.215.176",
-      "server_port": 8443,
-      "tag": "EPODONIOS",
+      "flow": "xtls-rprx-vision",
+      "server": "93.152.215.254",
+      "server_port": 443,
+      "tag": "🇳🇱 荷兰 | NLD #4",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "nl5.hap-plus.ru",
+        "server_name": "remote.propaint.cl",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
       },
-      "transport": {
-        "headers": {
-          "Host": "nl5.hap-plus.ru"
+      "type": "vless",
+      "uuid": "6db6b948-655f-4f68-a9e7-865050e05b31"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "93.152.215.254",
+      "server_port": 443,
+      "tag": "🇳🇱 荷兰 | NLD",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "is-86tEDOjNbNAnVwc-YHHYSn1MF9SF68P6VjESfDHQ",
+          "short_id": "a2fcac"
         },
-        "path": "/api/v1/events",
-        "type": "ws"
+        "server_name": "remote.propaint.cl",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
       },
       "type": "vless",
-      "uuid": "05d7a479-a099-40cf-aecf-41aa934767b0"
+      "uuid": "6db6b948-655f-4f68-a9e7-865050e05b31"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "EPODONIOS"
+        "🇳🇱 荷兰 | NLD #4",
+        "🇳🇱 荷兰 | NLD"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -35,7 +52,8 @@
     {
       "outbounds": [
         "auto",
-        "EPODONIOS"
+        "🇳🇱 荷兰 | NLD #4",
+        "🇳🇱 荷兰 | NLD"
       ],
       "tag": "select",
       "type": "selector"
