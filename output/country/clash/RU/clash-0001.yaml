@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: a628c583-24a8-4ce5-98ad-c6458abf1cc4
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
   server: 84.38.184.126
   port: 2089
   udp: true
@@ -20,33 +20,6 @@ proxies:
   tls: true
   servername: s3.storage.selcloud.ru
   client-fingerprint: chrome
-- type: vless
-  uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #1'
-  server: 201.24.121.243
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: kk-ru24a1.testkknegr.online
-  client-fingerprint: chrome
-- type: vless
-  uuid: b48e1596-e835-4547-bdae-31daadf9ea17
-  name: 🇨🇦 加拿大 | CAN
-  server: 5.53.124.191
-  port: 8008
-  udp: true
-  network: xhttp
-- type: vless
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
-  name: 🇷🇺 俄罗斯 | RUS
-  server: 200.169.179.233
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: vps3.nemnogogo.com
-  client-fingerprint: firefox
 - type: ss
   cipher: aes-128-gcm
   password: 8722de56b6c0b3f6a4d01cf91c07e6aa
@@ -55,8 +28,43 @@ proxies:
   port: 13108
   udp: true
 - type: vless
+  uuid: 4ad9f982-b56a-444a-9684-35ce51307a36
+  name: 🇨🇭 瑞士 | CHE
+  server: 157.22.185.68
+  port: 2058
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: lJBsn9ndieTIUBzXkJUhf6O0OE8pm29_z1fUtARwL0s
+    short-id: 937255313d6ce673
+- type: vless
+  uuid: c5f59ef3-9540-49fa-bd1e-c6c2f79df49a
+  name: 🇷🇺[www.v2nodes.com] vless-RU-1...
+  server: 92.243.66.79
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ru-mow.probe.geomyip.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
+  name: 🇷🇺[www.v2nodes.com] vless-RU-1...
+  server: 201.24.121.243
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: kk-ru24a1.testkknegr.online
+  client-fingerprint: chrome
+- type: vless
   uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
-  name: '🇩🇪 德国 | DEU #3'
+  name: '🇩🇪 德国 | DEU #5'
   server: 193.160.208.240
   port: 443
   udp: true
@@ -64,57 +72,23 @@ proxies:
   tls: true
   servername: 193.160.208.240
   client-fingerprint: firefox
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知126
-  server: 194.226.142.120
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-- type: vmess
-  uuid: 27653b37-603c-4c90-b1f5-25c4d23f8932
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知138
-  server: 37.220.161.249
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-129.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-129.mirra.now
 - type: vless
   uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
-  name: '🇳🇱 荷兰 | NLD #12'
-  server: 201.34.142.108
+  name: 🇩🇪 德国 | DEU
+  server: 193.160.208.240
   port: 443
   udp: true
-  network: tcp
+  network: xhttp
   tls: true
-  servername: 201.34.142.108
+  servername: 193.160.208.240
   client-fingerprint: firefox
-- type: vless
-  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #6'
-  server: 193.163.203.170
-  port: 443
+- type: ss
+  cipher: aes-256-gcm
+  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
+  name: 🇷🇺[www.v2nodes.com] ss-RU-1616...
+  server: 46.17.47.58
+  port: 18443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: yandex.ru
-  client-fingerprint: chrome
 - type: vless
   uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
   name: 🇳🇱 荷兰 | NLD
@@ -126,14 +100,14 @@ proxies:
   servername: 201.34.142.108
   client-fingerprint: firefox
 - type: vless
-  uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
-  name: 🇩🇪 德国 | DEU
-  server: 193.160.208.240
+  uuid: cfe4c965-5a5e-4840-bee6-5f9208236671
+  name: 🇳🇱 荷兰 | NLD
+  server: 178.176.128.203
   port: 443
   udp: true
   network: xhttp
   tls: true
-  servername: 193.160.208.240
+  servername: cdnapiv3.tronglob6.net
   client-fingerprint: firefox
 - type: vless
   uuid: 7955bf18-35c4-412d-aabd-c0b36c793063
@@ -148,30 +122,17 @@ proxies:
     path: /service/telemetry/045d381f1166/fp=firefox
     headers:
       Host: bhjolq0d0l.flowersgood.top
-- type: ss
-  cipher: aes-256-gcm
-  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
-  name: 🇷🇺[www.v2nodes.com] ss-RU-1616...
-  server: 46.17.47.58
-  port: 18443
+- type: vless
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #4'
+  server: 193.163.203.170
+  port: 443
   udp: true
-- type: hysteria2
-  password: kKd2watTl7WACOoIAjkzt4MW6ak6I3c1Un8c4-oNMtU
-  name: 🇷🇺211060 | ⚡️Telegram = t.me/L...
-  server: 84.252.100.138
-  port: 5443
-  udp: true
-  sni: nl.vip-get.ru
-- type: hysteria2
-  password: 5bcodmhjtyfyyrqh
-  name: '@Begoo_VPN ²⁹⁰'
-  server: 91.142.73.159
-  port: 36758
-  udp: true
-  sni: cdn77.dmtr.ru
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: dzcb7hv6i2kx2zze
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: yandex.ru
+  client-fingerprint: chrome
 - type: hysteria2
   password: 95c61940-2823-4665-a033-d4f2218329b6
   name: 🇫🇮6@exclavevpn
@@ -180,49 +141,50 @@ proxies:
   udp: true
   sni: ru3.kinotorg.net
   skip-cert-verify: true
+- type: hysteria2
+  password: kKd2watTl7WACOoIAjkzt4MW6ak6I3c1Un8c4-oNMtU
+  name: 🇷🇺211060 | ⚡️Telegram = t.me/L...
+  server: 84.252.100.138
+  port: 5443
+  udp: true
+  sni: nl.vip-get.ru
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
-  - '🇷🇺[www.v2nodes.com] vless-RU-1... #1'
-  - 🇨🇦 加拿大 | CAN
-  - 🇷🇺 俄罗斯 | RUS
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
   - 🇷🇺[www.v2nodes.com] ss-RU-1617...
-  - '🇩🇪 德国 | DEU #3'
-  - 未知126
-  - 未知138
-  - '🇳🇱 荷兰 | NLD #12'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #6'
-  - 🇳🇱 荷兰 | NLD
+  - 🇨🇭 瑞士 | CHE
+  - 🇷🇺[www.v2nodes.com] vless-RU-1...
+  - 🇷🇺[www.v2nodes.com] vless-RU-1...
+  - '🇩🇪 德国 | DEU #5'
   - 🇩🇪 德国 | DEU
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
   - 🇷🇺[www.v2nodes.com] ss-RU-1616...
-  - 🇷🇺211060 | ⚡️Telegram = t.me/L...
-  - '@Begoo_VPN ²⁹⁰'
+  - 🇳🇱 荷兰 | NLD
+  - 🇳🇱 荷兰 | NLD
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #4'
   - 🇫🇮6@exclavevpn
+  - 🇷🇺211060 | ⚡️Telegram = t.me/L...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
-  - '🇷🇺[www.v2nodes.com] vless-RU-1... #1'
-  - 🇨🇦 加拿大 | CAN
-  - 🇷🇺 俄罗斯 | RUS
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
   - 🇷🇺[www.v2nodes.com] ss-RU-1617...
-  - '🇩🇪 德国 | DEU #3'
-  - 未知126
-  - 未知138
-  - '🇳🇱 荷兰 | NLD #12'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #6'
-  - 🇳🇱 荷兰 | NLD
+  - 🇨🇭 瑞士 | CHE
+  - 🇷🇺[www.v2nodes.com] vless-RU-1...
+  - 🇷🇺[www.v2nodes.com] vless-RU-1...
+  - '🇩🇪 德国 | DEU #5'
   - 🇩🇪 德国 | DEU
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
   - 🇷🇺[www.v2nodes.com] ss-RU-1616...
-  - 🇷🇺211060 | ⚡️Telegram = t.me/L...
-  - '@Begoo_VPN ²⁹⁰'
+  - 🇳🇱 荷兰 | NLD
+  - 🇳🇱 荷兰 | NLD
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #4'
   - 🇫🇮6@exclavevpn
+  - 🇷🇺211060 | ⚡️Telegram = t.me/L...
 rules:
 - MATCH,SELECT

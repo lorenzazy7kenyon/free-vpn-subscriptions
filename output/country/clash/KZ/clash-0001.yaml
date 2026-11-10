@@ -10,16 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
-  name: 🇰🇿[www.v2nodes.com] vless-KZ-1...
-  server: 109.248.170.119
-  port: 13447
-  udp: true
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
 - type: vmess
   uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
   alterId: 0
@@ -33,19 +23,29 @@ proxies:
     path: /vmess/
     headers:
       Host: viber.com
+- type: vless
+  uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
+  name: 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  server: 109.248.170.119
+  port: 13447
+  udp: true
+  network: tcp
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇿[www.v2nodes.com] vless-KZ-1...
   - 🇰🇿KZ-38.107.234.57-1942
+  - 🇰🇿[www.v2nodes.com] vless-KZ-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇰🇿[www.v2nodes.com] vless-KZ-1...
   - 🇰🇿KZ-38.107.234.57-1942
+  - 🇰🇿[www.v2nodes.com] vless-KZ-1...
 rules:
 - MATCH,SELECT

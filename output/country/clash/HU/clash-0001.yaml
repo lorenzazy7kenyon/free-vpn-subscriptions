@@ -17,21 +17,21 @@ proxies:
   port: 2053
   udp: true
   network: ws
-  tls: true
-  servername: fs.qicai99.com
   ws-opts:
-    path: /fp=chrome
+    path: /fp=chromesecurity=tls
     headers:
       Host: fs.qicai99.com
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: 🇭🇺[www.v2nodes.com] vless-HU-1...
+  name: 🇭🇺[www.v2nodes.com] vless-HU-6...
   server: 38.180.225.247
   port: 2053
   udp: true
   network: ws
+  tls: true
+  servername: fs.qicai99.com
   ws-opts:
-    path: /fp=chromesecurity=tls
+    path: /fp=chrome
     headers:
       Host: fs.qicai99.com
 proxy-groups:
@@ -41,12 +41,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇭🇺[www.v2nodes.com] vless-HU-3...
-  - 🇭🇺[www.v2nodes.com] vless-HU-1...
+  - 🇭🇺[www.v2nodes.com] vless-HU-6...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇭🇺[www.v2nodes.com] vless-HU-3...
-  - 🇭🇺[www.v2nodes.com] vless-HU-1...
+  - 🇭🇺[www.v2nodes.com] vless-HU-6...
 rules:
 - MATCH,SELECT

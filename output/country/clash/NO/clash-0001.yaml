@@ -17,16 +17,6 @@ proxies:
   server: 185.213.23.63
   port: 990
   udp: true
-- type: vless
-  uuid: 7592ca5c-b352-4562-8856-a9c936a3331b
-  name: 🇩🇪 德国 | DEU 5
-  server: 31.76.5.79
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: r2q24xzokp4.hat.onl
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -34,12 +24,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇳🇴[www.v2nodes.com] ss-NO-1220...
-  - 🇩🇪 德国 | DEU 5
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇳🇴[www.v2nodes.com] ss-NO-1220...
-  - 🇩🇪 德国 | DEU 5
 rules:
 - MATCH,SELECT

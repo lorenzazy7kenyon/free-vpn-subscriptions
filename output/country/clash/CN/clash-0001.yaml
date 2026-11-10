@@ -11,42 +11,27 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知88
-  server: 112.132.215.108
-  port: 50002
-  udp: true
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  uuid: b0253c6c-0b96-4950-bde1-669f13bc1a01
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知121
-  server: 162.4.136.79
-  port: 443
+  name: 🇨🇳_CN_中国_IPV4
+  server: 39.108.113.127
+  port: 10086
   udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
   ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
+    path: /
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知88
-  - 未知121
+  - 🇨🇳_CN_中国_IPV4
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知88
-  - 未知121
+  - 🇨🇳_CN_中国_IPV4
 rules:
 - MATCH,SELECT
