@@ -10,13 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇮🇱[www.v2nodes.com] trojan-IL-...
-  server: 64.176.163.182
-  port: 443
-  udp: true
-  sni: exploreeducationsectoropportunitiestodayandadvancecareers.com
 - type: vless
   uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
   name: 🇮🇱[www.v2nodes.com] vless-IL-1...
@@ -30,6 +23,13 @@ proxies:
     path: /events/classfp=chromefp=chrome
     headers:
       Host: vp7.1145678.xyz
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇮🇱[www.v2nodes.com] trojan-IL-...
+  server: 64.176.163.182
+  port: 443
+  udp: true
+  sni: exploreeducationsectoropportunitiestodayandadvancecareers.com
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: '🇮🇱 以色列 | ISR #1'
@@ -49,15 +49,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇱[www.v2nodes.com] trojan-IL-...
   - 🇮🇱[www.v2nodes.com] vless-IL-1...
+  - 🇮🇱[www.v2nodes.com] trojan-IL-...
   - '🇮🇱 以色列 | ISR #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇮🇱[www.v2nodes.com] trojan-IL-...
   - 🇮🇱[www.v2nodes.com] vless-IL-1...
+  - 🇮🇱[www.v2nodes.com] trojan-IL-...
   - '🇮🇱 以色列 | ISR #1'
 rules:
 - MATCH,SELECT

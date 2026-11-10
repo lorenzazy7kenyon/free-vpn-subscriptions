@@ -1,6 +1,13 @@
 {
   "outbounds": [
     {
+      "server": "5.53.124.191",
+      "server_port": 8008,
+      "tag": "🇨🇦CA_3|3.9MB/s",
+      "type": "vless",
+      "uuid": "b48e1596-e835-4547-bdae-31daadf9ea17"
+    },
+    {
       "server": "84.38.184.126",
       "server_port": 2089,
       "tag": "🇫🇮[www.v2nodes.com] vless-FI-1... #2",
@@ -21,12 +28,60 @@
       "uuid": "a628c583-24a8-4ce5-98ad-c6458abf1cc4"
     },
     {
-      "method": "aes-128-gcm",
-      "password": "8722de56b6c0b3f6a4d01cf91c07e6aa",
-      "server": "38.60.223.125",
-      "server_port": 13108,
-      "tag": "🇷🇺[www.v2nodes.com] ss-RU-1617...",
-      "type": "ss"
+      "server": "84.38.184.87",
+      "server_port": 2089,
+      "tag": "🇫🇮[www.v2nodes.com] vless-FI-1... #3",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "s3.storage.selcloud.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "service_name": "cas-fi",
+        "type": "grpc"
+      },
+      "type": "vless",
+      "uuid": "a628c583-24a8-4ce5-98ad-c6458abf1cc4"
+    },
+    {
+      "server": "193.160.208.240",
+      "server_port": 443,
+      "tag": "🇩🇪 德国 | DEU #5",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "193.160.208.240",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "4777d90d-265b-4927-a0d1-63f36ed1421c"
+    },
+    {
+      "server": "201.24.121.243",
+      "server_port": 443,
+      "tag": "🏳[www.v2nodes.com] vless- #4",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "kk-ru24a1.testkknegr.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "service_name": "vlgrpc",
+        "type": "grpc"
+      },
+      "type": "vless",
+      "uuid": "32b5ca9b-3f81-4031-965d-e8b074216e8d"
     },
     {
       "flow": "xtls-rprx-vision",
@@ -49,83 +104,6 @@
       },
       "type": "vless",
       "uuid": "4ad9f982-b56a-444a-9684-35ce51307a36"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "92.243.66.79",
-      "server_port": 443,
-      "tag": "🇷🇺[www.v2nodes.com] vless-RU-1...",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "ru-mow.probe.geomyip.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "c5f59ef3-9540-49fa-bd1e-c6c2f79df49a"
-    },
-    {
-      "server": "201.24.121.243",
-      "server_port": 443,
-      "tag": "🇷🇺[www.v2nodes.com] vless-RU-1...",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "kk-ru24a1.testkknegr.online",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "service_name": "vlgrpc",
-        "type": "grpc"
-      },
-      "type": "vless",
-      "uuid": "32b5ca9b-3f81-4031-965d-e8b074216e8d"
-    },
-    {
-      "server": "193.160.208.240",
-      "server_port": 443,
-      "tag": "🇩🇪 德国 | DEU #5",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "193.160.208.240",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "type": "vless",
-      "uuid": "4777d90d-265b-4927-a0d1-63f36ed1421c"
-    },
-    {
-      "server": "193.160.208.240",
-      "server_port": 443,
-      "tag": "🇩🇪 德国 | DEU",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "193.160.208.240",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "type": "vless",
-      "uuid": "4777d90d-265b-4927-a0d1-63f36ed1421c"
-    },
-    {
-      "method": "aes-256-gcm",
-      "password": "cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa",
-      "server": "46.17.47.58",
-      "server_port": 18443,
-      "tag": "🇷🇺[www.v2nodes.com] ss-RU-1616...",
-      "type": "ss"
     },
     {
       "server": "201.34.142.108",
@@ -160,6 +138,31 @@
       "uuid": "cfe4c965-5a5e-4840-bee6-5f9208236671"
     },
     {
+      "method": "aes-128-gcm",
+      "password": "8722de56b6c0b3f6a4d01cf91c07e6aa",
+      "server": "38.60.223.125",
+      "server_port": 13108,
+      "tag": "🇷🇺[www.v2nodes.com] ss-RU-1617...",
+      "type": "ss"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "92.243.66.79",
+      "server_port": 443,
+      "tag": "🇷🇺[www.v2nodes.com] vless-RU-1...",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "ru-mow.probe.geomyip.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "c5f59ef3-9540-49fa-bd1e-c6c2f79df49a"
+    },
+    {
       "server": "185.86.147.175",
       "server_port": 443,
       "tag": "🇵🇱[www.v2nodes.com] vless-PL-1... #2",
@@ -179,6 +182,22 @@
       "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063"
     },
     {
+      "server": "193.160.208.240",
+      "server_port": 443,
+      "tag": "🇩🇪 德国 | DEU",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "193.160.208.240",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "4777d90d-265b-4927-a0d1-63f36ed1421c"
+    },
+    {
       "flow": "xtls-rprx-vision",
       "server": "193.163.203.170",
       "server_port": 443,
@@ -196,16 +215,29 @@
       "uuid": "11aabba0-5fd1-4f15-8068-74c1a466cefc"
     },
     {
-      "password": "95c61940-2823-4665-a033-d4f2218329b6",
-      "server": "46.8.210.209",
+      "method": "aes-256-gcm",
+      "password": "cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa",
+      "server": "46.17.47.58",
+      "server_port": 18443,
+      "tag": "🇷🇺[www.v2nodes.com] ss-RU-1616...",
+      "type": "ss"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "5.129.202.80",
       "server_port": 443,
-      "tag": "🇫🇮6@exclavevpn",
+      "tag": "🇪🇪[www.v2nodes.com] vless-EE-1... #5",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "ru3.kinotorg.net"
+        "insecure": false,
+        "server_name": "mirror-50.topp-con.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
-      "type": "hysteria2"
+      "type": "vless",
+      "uuid": "7ad63b26-bf70-4872-8fab-ebaf73a1e19d"
     },
     {
       "password": "kKd2watTl7WACOoIAjkzt4MW6ak6I3c1Un8c4-oNMtU",
@@ -220,22 +252,37 @@
       "type": "hysteria2"
     },
     {
+      "password": "95c61940-2823-4665-a033-d4f2218329b6",
+      "server": "46.8.210.209",
+      "server_port": 443,
+      "tag": "🇫🇮6@exclavevpn",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "ru3.kinotorg.net"
+      },
+      "type": "hysteria2"
+    },
+    {
       "interval": "5m",
       "outbounds": [
+        "🇨🇦CA_3|3.9MB/s",
         "🇫🇮[www.v2nodes.com] vless-FI-1... #2",
-        "🇷🇺[www.v2nodes.com] ss-RU-1617...",
-        "🇨🇭 瑞士 | CHE",
-        "🇷🇺[www.v2nodes.com] vless-RU-1...",
-        "🇷🇺[www.v2nodes.com] vless-RU-1...",
+        "🇫🇮[www.v2nodes.com] vless-FI-1... #3",
         "🇩🇪 德国 | DEU #5",
-        "🇩🇪 德国 | DEU",
-        "🇷🇺[www.v2nodes.com] ss-RU-1616...",
+        "🏳[www.v2nodes.com] vless- #4",
+        "🇨🇭 瑞士 | CHE",
         "🇳🇱 荷兰 | NLD",
         "🇳🇱 荷兰 | NLD",
+        "🇷🇺[www.v2nodes.com] ss-RU-1617...",
+        "🇷🇺[www.v2nodes.com] vless-RU-1...",
         "🇵🇱[www.v2nodes.com] vless-PL-1... #2",
+        "🇩🇪 德国 | DEU",
         "🇸🇪[www.v2nodes.com] vless-SE-1... #4",
-        "🇫🇮6@exclavevpn",
-        "🇷🇺211060 | ⚡️Telegram = t.me/L..."
+        "🇷🇺[www.v2nodes.com] ss-RU-1616...",
+        "🇪🇪[www.v2nodes.com] vless-EE-1... #5",
+        "🇷🇺211060 | ⚡️Telegram = t.me/L...",
+        "🇫🇮6@exclavevpn"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -244,20 +291,23 @@
     {
       "outbounds": [
         "auto",
+        "🇨🇦CA_3|3.9MB/s",
         "🇫🇮[www.v2nodes.com] vless-FI-1... #2",
-        "🇷🇺[www.v2nodes.com] ss-RU-1617...",
-        "🇨🇭 瑞士 | CHE",
-        "🇷🇺[www.v2nodes.com] vless-RU-1...",
-        "🇷🇺[www.v2nodes.com] vless-RU-1...",
+        "🇫🇮[www.v2nodes.com] vless-FI-1... #3",
         "🇩🇪 德国 | DEU #5",
-        "🇩🇪 德国 | DEU",
-        "🇷🇺[www.v2nodes.com] ss-RU-1616...",
+        "🏳[www.v2nodes.com] vless- #4",
+        "🇨🇭 瑞士 | CHE",
         "🇳🇱 荷兰 | NLD",
         "🇳🇱 荷兰 | NLD",
+        "🇷🇺[www.v2nodes.com] ss-RU-1617...",
+        "🇷🇺[www.v2nodes.com] vless-RU-1...",
         "🇵🇱[www.v2nodes.com] vless-PL-1... #2",
+        "🇩🇪 德国 | DEU",
         "🇸🇪[www.v2nodes.com] vless-SE-1... #4",
-        "🇫🇮6@exclavevpn",
-        "🇷🇺211060 | ⚡️Telegram = t.me/L..."
+        "🇷🇺[www.v2nodes.com] ss-RU-1616...",
+        "🇪🇪[www.v2nodes.com] vless-EE-1... #5",
+        "🇷🇺211060 | ⚡️Telegram = t.me/L...",
+        "🇫🇮6@exclavevpn"
       ],
       "tag": "select",
       "type": "selector"

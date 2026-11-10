@@ -11,6 +11,27 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: b7374077-9fdc-4d28-9fb1-5cbc262fb53d
+  name: 🇫🇮FI_1|4.3MB/s
+  server: 185.22.172.249
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: fortuna.golden-dragon.de5.net
+  client-fingerprint: chrome
+- type: vless
+  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
+  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
+  server: 94.183.234.245
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.bing.com
+  client-fingerprint: qq
+- type: vless
   uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
   name: '🇱🇻 拉脱维亚 | LVA #1'
   server: 31.56.197.205
@@ -23,20 +44,16 @@ proxies:
     path: /picture/lessonsfp=chrome
     headers:
       Host: v1n3.11676767.xyz
-- type: vless
-  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  server: 94.183.234.245
-  port: 443
+- type: hysteria2
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  name: '@meliproxyy #2'
+  server: 31.76.62.148
+  port: 4444
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.bing.com
-  client-fingerprint: qq
+  sni: lv2.nexfile.net
 - type: hysteria2
   password: 54d2f622-fd71-4f5f-8813-832b68f4ca3b
-  name: '[🇱🇻]t.me/ConfigsHub'
+  name: '@meliproxyy'
   server: 104.165.205.42
   port: 8443
   udp: true
@@ -47,15 +64,19 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇱🇻 拉脱维亚 | LVA #1'
+  - 🇫🇮FI_1|4.3MB/s
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  - '[🇱🇻]t.me/ConfigsHub'
+  - '🇱🇻 拉脱维亚 | LVA #1'
+  - '@meliproxyy #2'
+  - '@meliproxyy'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇱🇻 拉脱维亚 | LVA #1'
+  - 🇫🇮FI_1|4.3MB/s
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  - '[🇱🇻]t.me/ConfigsHub'
+  - '🇱🇻 拉脱维亚 | LVA #1'
+  - '@meliproxyy #2'
+  - '@meliproxyy'
 rules:
 - MATCH,SELECT

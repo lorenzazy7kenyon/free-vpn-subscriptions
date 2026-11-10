@@ -10,6 +10,17 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
+  server: 45.86.60.190
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ee2.japancase.site
+  client-fingerprint: chrome
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
@@ -27,7 +38,7 @@ proxies:
       Host: renderer-stream-2-62.mirra.now
 - type: vless
   uuid: 13e541f3-d09d-4633-89df-8513db0ced20
-  name: '🏳[www.v2nodes.com] vless- #2'
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #6'
   server: 45.86.60.174
   port: 16443
   udp: true
@@ -38,13 +49,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
   - 未知115
-  - '🏳[www.v2nodes.com] vless- #2'
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #6'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
   - 未知115
-  - '🏳[www.v2nodes.com] vless- #2'
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #6'
 rules:
 - MATCH,SELECT

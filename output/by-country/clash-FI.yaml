@@ -23,24 +23,14 @@ proxies:
       Host: 45.144.234.157
 - type: vless
   uuid: ba52cc43-700d-4040-9444-29214c98e6e0
-  name: 🇭🇰_HK_香港->🇩🇪_DE_德国_IPV4
+  name: '🇩🇪 德国 | DEU #7'
   server: 213.176.92.168
-  port: 14430
+  port: 10444
   udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 213.176.92.168
-- type: vless
-  uuid: b79d736d-0f10-4169-b626-362059d18204
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #8'
-  server: 95.216.27.15
-  port: 2053
-  udp: true
+  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.cloudflare.com
+  servername: video.yandex.ru
   client-fingerprint: chrome
 - type: vless
   uuid: cebc5f19-18d9-48e6-9029-fb4b04caf393
@@ -53,16 +43,35 @@ proxies:
   servername: m.vk.com
   client-fingerprint: chrome
 - type: vless
-  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
-  name: '🇩🇪 德国 | DEU #7'
-  server: 213.176.92.168
-  port: 10444
+  uuid: b79d736d-0f10-4169-b626-362059d18204
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #8'
+  server: 95.216.27.15
+  port: 2053
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: video.yandex.ru
+  servername: www.cloudflare.com
   client-fingerprint: chrome
+- type: vmess
+  uuid: 77fb7a80-4724-4e33-9558-4f20c1634c5a
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知73
+  server: 65.108.240.210
+  port: 39018
+  udp: true
+- type: vless
+  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
+  name: 🇭🇰_HK_香港->🇩🇪_DE_德国_IPV4
+  server: 213.176.92.168
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 213.176.92.168
 - type: hysteria2
   password: 6aab8efdf13945829ae3699c342be406
   name: Telegram:@v2rayng3
@@ -79,20 +88,22 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
-  - 🇭🇰_HK_香港->🇩🇪_DE_德国_IPV4
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #8'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
   - '🇩🇪 德国 | DEU #7'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #8'
+  - 未知73
+  - 🇭🇰_HK_香港->🇩🇪_DE_德国_IPV4
   - Telegram:@v2rayng3
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
-  - 🇭🇰_HK_香港->🇩🇪_DE_德国_IPV4
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #8'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
   - '🇩🇪 德国 | DEU #7'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #8'
+  - 未知73
+  - 🇭🇰_HK_香港->🇩🇪_DE_德国_IPV4
   - Telegram:@v2rayng3
 rules:
 - MATCH,SELECT

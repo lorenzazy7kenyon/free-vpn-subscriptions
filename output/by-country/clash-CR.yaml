@@ -11,31 +11,29 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
-  uuid: 5f1d6d32-76b3-4562-8982-df2b7c122708
+  uuid: 824c58b1-65ba-4680-a609-663a000dbb92
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知5
-  server: 190.93.244.201
+  name: 🏁RELAY-190.93.246.41-7835
+  server: 190.93.246.41
   port: 443
   udp: true
   tls: true
-  servername: argo-tunnel.111874.xyz
+  servername: 190.93.246.41
   ws-opts:
-    path: /5f1d6d32-76b3-4562-8982-df2b7c122708-vm
-    headers:
-      Host: argo-tunnel.111874.xyz
+    path: /wss13889
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知5
+  - 🏁RELAY-190.93.246.41-7835
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知5
+  - 🏁RELAY-190.93.246.41-7835
 rules:
 - MATCH,SELECT

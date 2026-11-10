@@ -10,6 +10,13 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
+  name: 🇦🇹[www.v2nodes.com] ss-AT-1614...
+  server: 152.53.1.57
+  port: 8388
+  udp: true
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: 🇦🇹[www.v2nodes.com] vless-AT-2...
@@ -24,24 +31,6 @@ proxies:
     headers:
       Host: fs.qicai99.com
 - type: vless
-  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
-  name: 🇦🇹[www.v2nodes.com] vless-AT-1...
-  server: 178.22.31.72
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: at1.japancase.site
-  client-fingerprint: firefox
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
-  name: 🇦🇹[www.v2nodes.com] ss-AT-1614...
-  server: 152.53.1.57
-  port: 8388
-  udp: true
-- type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: '🇦🇹[www.v2nodes.com] vless-AT-3... #2'
   server: 193.219.97.198
@@ -52,6 +41,17 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: fs.qicai99.com
+- type: vless
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
+  name: 🇦🇹[www.v2nodes.com] vless-AT-1...
+  server: 178.22.31.72
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: at1.japancase.site
+  client-fingerprint: firefox
 - type: vless
   uuid: 5b28a0c9-eda3-4c78-b07b-48cbd1670771
   name: '🇧🇪 比利时 | BEL #1'
@@ -71,19 +71,19 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇹[www.v2nodes.com] vless-AT-2...
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
+  - 🇦🇹[www.v2nodes.com] vless-AT-2...
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #2'
+  - 🇦🇹[www.v2nodes.com] vless-AT-1...
   - '🇧🇪 比利时 | BEL #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇦🇹[www.v2nodes.com] vless-AT-2...
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
+  - 🇦🇹[www.v2nodes.com] vless-AT-2...
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #2'
+  - 🇦🇹[www.v2nodes.com] vless-AT-1...
   - '🇧🇪 比利时 | BEL #1'
 rules:
 - MATCH,SELECT
