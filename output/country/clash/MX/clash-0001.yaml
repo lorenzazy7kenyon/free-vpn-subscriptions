@@ -21,6 +21,19 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
+- type: vless
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  name: '🇲🇽 墨西哥 | MEX #1'
+  server: 38.213.228.141
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: v1n3.11676767.xyz
+  ws-opts:
+    path: /go.php/productsfp=chrome
+    headers:
+      Host: v1n3.11676767.xyz
 - type: ss
   cipher: aes-256-gcm
   password: BWyPPTusFKhGgzKh
@@ -44,6 +57,7 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇲🇽[www.v2nodes.com] vless-MX-1...
+  - '🇲🇽 墨西哥 | MEX #1'
   - 🇲🇽[www.v2nodes.com] ss-MX-1564...
   - 🇲🇽MX_1|2.2MB/s
 - name: SELECT
@@ -51,6 +65,7 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇲🇽[www.v2nodes.com] vless-MX-1...
+  - '🇲🇽 墨西哥 | MEX #1'
   - 🇲🇽[www.v2nodes.com] ss-MX-1564...
   - 🇲🇽MX_1|2.2MB/s
 rules:

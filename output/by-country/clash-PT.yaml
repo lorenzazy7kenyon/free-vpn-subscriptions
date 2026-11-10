@@ -11,27 +11,29 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: b24ad12f-f6ce-4f0b-a264-d58a76104026
-  name: '🇵🇹 葡萄牙 | PRT #1'
-  server: 50.7.43.117
+  uuid: bf14dc50-e9f2-49fd-8642-620446edeafb
+  name: '🇨🇦 加拿大 | CAN #3'
+  server: 195.133.92.228
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: ws
   tls: true
-  servername: pt3.magazinnarubeva.ru
-  client-fingerprint: firefox
+  servername: v1-24z.pages.dev
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: v1-24z.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇵🇹 葡萄牙 | PRT #1'
+  - '🇨🇦 加拿大 | CAN #3'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇵🇹 葡萄牙 | PRT #1'
+  - '🇨🇦 加拿大 | CAN #3'
 rules:
 - MATCH,SELECT

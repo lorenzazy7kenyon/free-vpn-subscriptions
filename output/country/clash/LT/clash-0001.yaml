@@ -11,45 +11,26 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
-  name: '🇺🇸 美国 | USA #13'
-  server: 185.80.128.20
+  uuid: 3f25b15b-1777-4c08-9ade-60336ac92a82
+  name: 🇱🇹 立陶宛 | LTU
+  server: 84.32.209.103
   port: 443
   udp: true
-  network: ws
+  network: grpc
   tls: true
-  servername: cat.ilovezhenjiu.top
-  ws-opts:
-    path: /cgciwsfp=chrome
-    headers:
-      Host: cat.ilovezhenjiu.top
-- type: vless
-  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
-  name: 🇺🇸 美国 | USA
-  server: 185.80.128.20
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: cat.ilovezhenjiu.top
-  client-fingerprint: chrome
-  ws-opts:
-    path: /cgciws
-    headers:
-      Host: cat.ilovezhenjiu.top
+  servername: edge-lt.lindenpixel.com
+  client-fingerprint: edge
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇺🇸 美国 | USA #13'
-  - 🇺🇸 美国 | USA
+  - 🇱🇹 立陶宛 | LTU
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇺🇸 美国 | USA #13'
-  - 🇺🇸 美国 | USA
+  - 🇱🇹 立陶宛 | LTU
 rules:
 - MATCH,SELECT

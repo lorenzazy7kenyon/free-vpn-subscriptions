@@ -11,45 +11,29 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
-  name: 🇦🇲 AM_27
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  name: '🇦🇲 AM_26 #1'
   server: 91.198.108.191
   port: 443
   udp: true
   network: ws
   tls: true
-  servername: cat.ilovezhenjiu.top
-  client-fingerprint: chrome
+  servername: v1n3.11676767.xyz
   ws-opts:
-    path: /cgciws
+    path: /go.php/productsfp=chrome
     headers:
-      Host: cat.ilovezhenjiu.top
-- type: vless
-  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
-  name: '🇦🇲 AM_27 #1'
-  server: 91.198.108.191
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: cat.ilovezhenjiu.top
-  ws-opts:
-    path: /cgciwsfp=chrome
-    headers:
-      Host: cat.ilovezhenjiu.top
+      Host: v1n3.11676767.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇲 AM_27
-  - '🇦🇲 AM_27 #1'
+  - '🇦🇲 AM_26 #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇦🇲 AM_27
-  - '🇦🇲 AM_27 #1'
+  - '🇦🇲 AM_26 #1'
 rules:
 - MATCH,SELECT

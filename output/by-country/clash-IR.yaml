@@ -10,6 +10,26 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知94
+  server: 185.143.234.120
+  port: 80
+  udp: true
+  ws-opts:
+    path: /graphql
+    headers:
+      Host: koochehpas.com
+- type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: LD9xA0I5NrE/aPKvmXN0kQ==:hMvIGS4bymYJXcx2XXUy9Q==
+  name: '🇮🇹 意大利 | ITA #1'
+  server: 81.12.33.25
+  port: 8443
+  udp: true
 - type: vless
   uuid: ca39b355-b488-9297-918f-9d011d075ba2
   name: 🇹🇷 土耳其 | TUR
@@ -23,26 +43,21 @@ proxies:
   reality-opts:
     public-key: yeEgcP0ehhicUQZdFGJBhLuU3wsEMSRyg8l2voakZBs
     short-id: 2f567c6d
-- type: ss
-  cipher: 2022-blake3-aes-128-gcm
-  password: LD9xA0I5NrE/aPKvmXN0kQ==:hMvIGS4bymYJXcx2XXUy9Q==
-  name: '🇮🇹 意大利 | ITA #1'
-  server: 81.12.33.25
-  port: 8443
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 | TUR
+  - 未知94
   - '🇮🇹 意大利 | ITA #1'
+  - 🇹🇷 土耳其 | TUR
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 | TUR
+  - 未知94
   - '🇮🇹 意大利 | ITA #1'
+  - 🇹🇷 土耳其 | TUR
 rules:
 - MATCH,SELECT
