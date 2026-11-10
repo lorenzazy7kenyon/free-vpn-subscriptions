@@ -18,6 +18,13 @@ proxies:
   udp: true
   sni: connectwithemployerstohireyouridealteam.com
   skip-cert-verify: true
+- type: trojan
+  password: Trojan@82164024
+  name: 🇦🇺AU-45.32.241.180-0568
+  server: 45.32.241.180
+  port: 443
+  udp: true
+  sni: au.tronsg.com
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -25,10 +32,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇦🇺[www.v2nodes.com] trojan-AU-...
+  - 🇦🇺AU-45.32.241.180-0568
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇦🇺[www.v2nodes.com] trojan-AU-...
+  - 🇦🇺AU-45.32.241.180-0568
 rules:
 - MATCH,SELECT

@@ -10,29 +10,9 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1291...
-  server: 149.22.87.240
-  port: 443
-  udp: true
-- type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  name: 🇯🇵 JP2@ripaojiedian
-  server: 45.196.233.54
-  port: 18549
-  udp: true
-  network: ws
-  tls: true
-  servername: speedtest.danfengno1.kdns.fr
-  ws-opts:
-    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stfp=firefox
-    headers:
-      Host: speedtest.danfengno1.kdns.fr
 - type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
   server: 103.75.118.228
   port: 11452
   udp: true
@@ -48,20 +28,26 @@ proxies:
   server: 149.22.87.204
   port: 443
   udp: true
+- type: vless
+  uuid: 8c7588f8-2d81-4b09-86d4-4a623e9f2dca
+  name: '🇯🇵 日本 | JPN #2'
+  server: 45.192.243.63
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: 5269t.pages.dev
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: 5269t.pages.dev
 - type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-  name: 🇯🇵JP-149.22.87.241-0200
-  server: 149.22.87.241
+  name: 🇯🇵JP-149.22.87.240-0169
+  server: 149.22.87.240
   port: 443
   udp: true
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
-  server: 167.179.108.225
-  port: 443
-  udp: true
-  sni: 167.179.108.225
 - type: vless
   uuid: ee18d188-14cc-417e-beb1-70e4add6d023
   name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
@@ -69,35 +55,16 @@ proxies:
   port: 443
   udp: true
   network: tcp
-- type: vmess
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知107
-  server: 168.138.43.75
-  port: 80
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇯🇵JP-149.22.87.241-0200
+  server: 149.22.87.241
+  port: 443
   udp: true
-  ws-opts:
-    path: /cctv13.m3u8
-- type: vmess
-  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知120
-  server: 140.83.57.20
-  port: 13118
-  udp: true
-  tls: true
-  servername: sg.11160321.de5.net
-  ws-opts:
-    path: /
-    headers:
-      Host: sg.11160321.de5.net
 - type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
   server: 3.114.220.22
   port: 10583
   udp: true
@@ -106,6 +73,45 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
+- type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  name: 🇯🇵 JP2@ripaojiedian
+  server: 45.196.233.54
+  port: 18549
+  udp: true
+  network: ws
+  tls: true
+  servername: speedtest.danfengno1.kdns.fr
+  ws-opts:
+    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stfp=firefox
+    headers:
+      Host: speedtest.danfengno1.kdns.fr
+- type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  name: '🇯🇵 日本 | JPN #1'
+  server: 46.250.248.210
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: fs.qicai99.com
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
+- type: vmess
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇯🇵JP-168.138.43.75-1769
+  server: 168.138.43.75
+  port: 80
+  udp: true
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: 168.138.43.75
 - type: ss
   cipher: aes-256-gcm
   password: 3eOFeNssde7PYYMv
@@ -115,53 +121,72 @@ proxies:
   udp: true
 - type: ss
   cipher: aes-256-gcm
-  password: BeaUf9c0AEWH40Pu
-  name: '🇯🇵 日本 | JPN #1'
-  server: 154.36.158.197
-  port: 8388
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
   password: 3eOFeNssde7PYYMv
   name: 🇯🇵JP-84.247.155.196-0229
   server: 84.247.155.196
   port: 80
   udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: BeaUf9c0AEWH40Pu
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1599...
+  server: 154.36.158.197
+  port: 8388
+  udp: true
+- type: vless
+  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  server: 152.69.195.67
+  port: 47878
+  udp: true
+  network: tcp
+- type: hysteria2
+  password: usqmqUKJFIlCmvkCNSY64L3k
+  name: 🇯🇵 日本 | JPN
+  server: 8.209.247.109
+  port: 443
+  udp: true
+  sni: bing.com
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇯🇵[www.v2nodes.com] ss-JP-1291...
-  - 🇯🇵 JP2@ripaojiedian
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
-  - 🇯🇵[www.v2nodes.com] ss-JP-5141...
-  - 🇯🇵JP-149.22.87.241-0200
-  - '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
-  - 未知107
-  - 未知120
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
-  - 🇯🇵[www.v2nodes.com] ss-JP-1544...
+  - 🇯🇵[www.v2nodes.com] ss-JP-5141...
+  - '🇯🇵 日本 | JPN #2'
+  - 🇯🇵JP-149.22.87.240-0169
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  - 🇯🇵JP-149.22.87.241-0200
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
+  - 🇯🇵 JP2@ripaojiedian
   - '🇯🇵 日本 | JPN #1'
+  - 🇯🇵JP-168.138.43.75-1769
+  - 🇯🇵[www.v2nodes.com] ss-JP-1544...
   - 🇯🇵JP-84.247.155.196-0229
+  - 🇯🇵[www.v2nodes.com] ss-JP-1599...
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  - 🇯🇵 日本 | JPN
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇯🇵[www.v2nodes.com] ss-JP-1291...
-  - 🇯🇵 JP2@ripaojiedian
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
-  - 🇯🇵[www.v2nodes.com] ss-JP-5141...
-  - 🇯🇵JP-149.22.87.241-0200
-  - '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
-  - 未知107
-  - 未知120
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
-  - 🇯🇵[www.v2nodes.com] ss-JP-1544...
+  - 🇯🇵[www.v2nodes.com] ss-JP-5141...
+  - '🇯🇵 日本 | JPN #2'
+  - 🇯🇵JP-149.22.87.240-0169
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  - 🇯🇵JP-149.22.87.241-0200
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
+  - 🇯🇵 JP2@ripaojiedian
   - '🇯🇵 日本 | JPN #1'
+  - 🇯🇵JP-168.138.43.75-1769
+  - 🇯🇵[www.v2nodes.com] ss-JP-1544...
   - 🇯🇵JP-84.247.155.196-0229
+  - 🇯🇵[www.v2nodes.com] ss-JP-1599...
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  - 🇯🇵 日本 | JPN
 rules:
 - MATCH,SELECT

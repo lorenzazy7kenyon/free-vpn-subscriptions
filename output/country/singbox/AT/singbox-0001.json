@@ -1,6 +1,25 @@
 {
   "outbounds": [
     {
+      "server": "85.192.27.171",
+      "server_port": 2053,
+      "tag": "🇩🇪 德国 | DEU #9",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "fs.qicai99.com"
+      },
+      "transport": {
+        "headers": {
+          "Host": "fs.qicai99.com"
+        },
+        "path": "/fp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "99c5b713-dedf-4a10-8070-916ff3f49b0e"
+    },
+    {
       "flow": "xtls-rprx-vision",
       "server": "178.22.31.72",
       "server_port": 443,
@@ -26,10 +45,31 @@
       "type": "ss"
     },
     {
+      "server": "193.219.97.198",
+      "server_port": 443,
+      "tag": "🇦🇹 奥地利 | AUT #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "fs.qicai99.com"
+      },
+      "transport": {
+        "headers": {
+          "Host": "fs.qicai99.com"
+        },
+        "path": "/fp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "99c5b713-dedf-4a10-8070-916ff3f49b0e"
+    },
+    {
       "interval": "5m",
       "outbounds": [
+        "🇩🇪 德国 | DEU #9",
         "🇦🇹[www.v2nodes.com] vless-AT-1...",
-        "🇦🇹[www.v2nodes.com] ss-AT-1614..."
+        "🇦🇹[www.v2nodes.com] ss-AT-1614...",
+        "🇦🇹 奥地利 | AUT #1"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -38,8 +78,10 @@
     {
       "outbounds": [
         "auto",
+        "🇩🇪 德国 | DEU #9",
         "🇦🇹[www.v2nodes.com] vless-AT-1...",
-        "🇦🇹[www.v2nodes.com] ss-AT-1614..."
+        "🇦🇹[www.v2nodes.com] ss-AT-1614...",
+        "🇦🇹 奥地利 | AUT #1"
       ],
       "tag": "select",
       "type": "selector"

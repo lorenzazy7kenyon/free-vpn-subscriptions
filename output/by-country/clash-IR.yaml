@@ -11,41 +11,38 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: f47057d5-120d-4b42-b6d6-30469aef6813
-  name: '🇮🇷 伊朗 | IRN #1'
-  server: 185.211.57.168
-  port: 48312
+  uuid: ca39b355-b488-9297-918f-9d011d075ba2
+  name: 🇹🇷 土耳其 | TUR
+  server: 171.22.27.161
+  port: 2083
   udp: true
-  network: tcp
+  network: xhttp
   tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: f47057d5-120d-4b42-b6d6-30469aef6813
-  name: 🇮🇷 伊朗 | IRN
-  server: 185.211.57.168
-  port: 48312
-  udp: true
-  network: http
-  tls: true
-  servername: www.cloudflare.com
+  servername: www.aparat.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: d9eM_jy8ztZrOf3DMq1m55VQSo7bnKcG1dRnO9ktJ2Y
-    short-id: 902c315efc
+    public-key: yeEgcP0ehhicUQZdFGJBhLuU3wsEMSRyg8l2voakZBs
+    short-id: 2f567c6d
+- type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: LD9xA0I5NrE/aPKvmXN0kQ==:hMvIGS4bymYJXcx2XXUy9Q==
+  name: '🇮🇹 意大利 | ITA #1'
+  server: 81.12.33.25
+  port: 8443
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇮🇷 伊朗 | IRN #1'
-  - 🇮🇷 伊朗 | IRN
+  - 🇹🇷 土耳其 | TUR
+  - '🇮🇹 意大利 | ITA #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇮🇷 伊朗 | IRN #1'
-  - 🇮🇷 伊朗 | IRN
+  - 🇹🇷 土耳其 | TUR
+  - '🇮🇹 意大利 | ITA #1'
 rules:
 - MATCH,SELECT

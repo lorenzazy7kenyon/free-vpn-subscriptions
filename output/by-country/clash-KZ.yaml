@@ -20,17 +20,6 @@ proxies:
   tls: true
   servername: yahoo.com
   client-fingerprint: chrome
-- type: vmess
-  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知145
-  server: 38.107.234.57
-  port: 80
-  udp: true
-  ws-opts:
-    path: /vmess/
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -38,12 +27,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇰🇿[www.v2nodes.com] vless-KZ-1...
-  - 未知145
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇰🇿[www.v2nodes.com] vless-KZ-1...
-  - 未知145
 rules:
 - MATCH,SELECT
