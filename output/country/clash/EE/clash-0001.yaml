@@ -11,10 +11,10 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #3'
-  server: 185.215.184.49
-  port: 443
+  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
+  server: 45.86.60.174
+  port: 16443
   udp: true
   network: tcp
 - type: vless
@@ -29,10 +29,10 @@ proxies:
   servername: ee2.japancase.site
   client-fingerprint: chrome
 - type: vless
-  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #6'
-  server: 45.86.60.174
-  port: 16443
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #3'
+  server: 185.215.184.49
+  port: 443
   udp: true
   network: tcp
 - type: vless
@@ -48,17 +48,17 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #3'
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #6'
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #3'
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #3'
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #6'
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #3'
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
 rules:
 - MATCH,SELECT

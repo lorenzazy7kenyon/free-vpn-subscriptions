@@ -11,16 +11,23 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
-  name: '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
-  server: 178.172.227.228
-  port: 14430
+  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
+  name: 🏳[www.v2nodes.com] vless-
+  server: 178.172.227.124
+  port: 10443
   udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 178.172.227.228
+  network: tcp
+- type: vless
+  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
+  name: '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  server: 95.128.71.79
+  port: 10444
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ads.x5.ru
+  client-fingerprint: safari
 - type: vless
   uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
   name: '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
@@ -33,16 +40,16 @@ proxies:
     headers:
       Host: 178.172.227.124
 - type: vless
-  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
-  name: '🇧🇾[www.v2nodes.com] vless-BY-1... #3'
-  server: 95.128.71.79
-  port: 10444
+  uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
+  name: '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
+  server: 178.172.227.228
+  port: 14430
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ads.x5.ru
-  client-fingerprint: safari
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 178.172.227.228
 - type: hysteria2
   password: a35c508f-4d5d-4531-842e-6e9d43c762c0
   name: برای اتصال دائمی جوین شو🍥 Tele...
@@ -56,17 +63,19 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
+  - 🏳[www.v2nodes.com] vless-
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #3'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - برای اتصال دائمی جوین شو🍥 Tele...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
+  - 🏳[www.v2nodes.com] vless-
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #3'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - برای اتصال دائمی جوین شو🍥 Tele...
 rules:
 - MATCH,SELECT

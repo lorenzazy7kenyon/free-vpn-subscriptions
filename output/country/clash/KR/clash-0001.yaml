@@ -10,15 +10,25 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇰🇷 韩国 | KOR #1'
+  server: 158.247.253.243
+  port: 443
+  udp: true
+  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
+  skip-cert-verify: true
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: 🇰🇷[www.v2nodes.com] vless-KR-4...
+  name: '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
   server: 64.110.79.66
   port: 8443
   udp: true
   network: ws
+  tls: true
+  servername: fs.qicai99.com
   ws-opts:
-    path: /fp=chromesecurity=tls
+    path: /fp=chrome
     headers:
       Host: fs.qicai99.com
 - type: vless
@@ -32,26 +42,16 @@ proxies:
   servername: cloudflare.com
   client-fingerprint: chrome
 - type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🇰🇷[www.v2nodes.com] vless-KR-3... #3'
-  server: 64.110.79.66
-  port: 8443
+  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
+  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
+  server: 47.80.19.173
+  port: 2053
   udp: true
-  network: ws
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: fs.qicai99.com
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: fs.qicai99.com
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇰🇷 韩国 | KOR #1'
-  server: 158.247.253.243
-  port: 443
-  udp: true
-  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
-  skip-cert-verify: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 - type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
   name: '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
@@ -75,59 +75,6 @@ proxies:
   servername: www.apple.com
   client-fingerprint: chrome
 - type: vless
-  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  server: 47.80.19.173
-  port: 2053
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  name: 🇰🇷 KR1@ripaojiedian
-  server: 109.61.127.247
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: speedtest.danfengno1.kdns.fr
-  ws-opts:
-    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stfp=firefox
-    headers:
-      Host: speedtest.danfengno1.kdns.fr
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: 🇰🇷KR-211.178.105.134-0246
-  server: 211.178.105.134
-  port: 6123
-  udp: true
-- type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  name: 🇰🇷 KR2@ripaojiedian
-  server: 121.154.67.134
-  port: 28017
-  udp: true
-  network: ws
-  tls: true
-  servername: speedtest.danfengno1.kdns.fr
-  ws-opts:
-    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stfp=firefox
-    headers:
-      Host: speedtest.danfengno1.kdns.fr
-- type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  server: 152.69.226.63
-  port: 25555
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-- type: vless
   uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
   name: '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
   server: 151.245.106.49
@@ -137,14 +84,33 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: 🇰🇷 韩国 | KOR
-  server: 3.34.186.157
-  port: 443
+- type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  name: '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
+  server: 64.110.79.66
+  port: 8443
   udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /fp=chromesecurity=tls
+    headers:
+      Host: fs.qicai99.com
+- type: vless
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  server: 152.69.226.63
+  port: 25555
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: 🇰🇷KR-211.178.105.134-0246
+  server: 211.178.105.134
+  port: 6123
+  udp: true
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   name: '🇰🇷 韩国 | KOR #2'
@@ -156,7 +122,7 @@ proxies:
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   name: '🇰🇷 韩国 | KOR #1'
-  server: 3.36.58.98
+  server: 43.202.4.139
   port: 443
   udp: true
   sni: www.bing.com
@@ -167,38 +133,32 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷[www.v2nodes.com] vless-KR-4...
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - '🇰🇷[www.v2nodes.com] vless-KR-3... #3'
   - '🇰🇷 韩国 | KOR #1'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
+  - '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - 🇰🇷 KR1@ripaojiedian
-  - 🇰🇷KR-211.178.105.134-0246
-  - 🇰🇷 KR2@ripaojiedian
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
-  - 🇰🇷 韩国 | KOR
+  - '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - 🇰🇷KR-211.178.105.134-0246
   - '🇰🇷 韩国 | KOR #2'
   - '🇰🇷 韩国 | KOR #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇰🇷[www.v2nodes.com] vless-KR-4...
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - '🇰🇷[www.v2nodes.com] vless-KR-3... #3'
   - '🇰🇷 韩国 | KOR #1'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
+  - '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - 🇰🇷 KR1@ripaojiedian
-  - 🇰🇷KR-211.178.105.134-0246
-  - 🇰🇷 KR2@ripaojiedian
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
-  - 🇰🇷 韩国 | KOR
+  - '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - 🇰🇷KR-211.178.105.134-0246
   - '🇰🇷 韩国 | KOR #2'
   - '🇰🇷 韩国 | KOR #1'
 rules:

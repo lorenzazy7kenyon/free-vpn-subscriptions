@@ -21,6 +21,13 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: fs.qicai99.com
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
+  name: 🇦🇹[www.v2nodes.com] ss-AT-1614...
+  server: 152.53.1.57
+  port: 8388
+  udp: true
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: '🇦🇹[www.v2nodes.com] vless-AT-3... #3'
@@ -34,26 +41,6 @@ proxies:
     path: /fp=chrome
     headers:
       Host: fs.qicai99.com
-- type: vless
-  uuid: 5b28a0c9-eda3-4c78-b07b-48cbd1670771
-  name: '🇧🇪 比利时 | BEL #1'
-  server: 152.53.100.50
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: eu-central.862400.xyz
-  ws-opts:
-    path: /announcement?ed=2048fp=random
-    headers:
-      Host: eu-central.862400.xyz
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
-  name: 🇦🇹[www.v2nodes.com] ss-AT-1614...
-  server: 152.53.1.57
-  port: 8388
-  udp: true
 - type: vless
   uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
   name: 🇦🇹[www.v2nodes.com] vless-AT-1...
@@ -72,18 +59,16 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇦🇹[www.v2nodes.com] vless-AT-2...
-  - '🇦🇹[www.v2nodes.com] vless-AT-3... #3'
-  - '🇧🇪 比利时 | BEL #1'
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
+  - '🇦🇹[www.v2nodes.com] vless-AT-3... #3'
   - 🇦🇹[www.v2nodes.com] vless-AT-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇦🇹[www.v2nodes.com] vless-AT-2...
-  - '🇦🇹[www.v2nodes.com] vless-AT-3... #3'
-  - '🇧🇪 比利时 | BEL #1'
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
+  - '🇦🇹[www.v2nodes.com] vless-AT-3... #3'
   - 🇦🇹[www.v2nodes.com] vless-AT-1...
 rules:
 - MATCH,SELECT

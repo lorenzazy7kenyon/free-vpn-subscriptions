@@ -12,17 +12,25 @@ dns:
 proxies:
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🇺🇸 美国 | USA #6'
-  server: 38.58.108.84
+  name: 🇯🇵[www.v2nodes.com] vless-JP-1...
+  server: 46.250.254.187
   port: 443
   udp: true
   network: ws
-  tls: true
-  servername: fs.qicai99.com
   ws-opts:
-    path: /fp=chrome
+    path: /fp=chromesecurity=tls
     headers:
       Host: fs.qicai99.com
+- type: vless
+  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
+  server: 46.250.250.149
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -40,20 +48,20 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇳🇱[www.v2nodes.com] ss-NL-1614...
-  server: 151.241.19.36
+  name: '🇳🇱[www.v2nodes.com] ss-NL-1614... #1'
+  server: 151.241.19.29
   port: 19999
   udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇳🇱[www.v2nodes.com] ss-NL-1614... #1'
-  server: 151.241.19.29
+  name: 🇳🇱[www.v2nodes.com] ss-NL-1614...
+  server: 151.241.19.36
   port: 19999
   udp: true
 - type: vless
   uuid: 64726966-0000-4000-8000-740000000000
-  name: '🇫🇷[www.v2nodes.com] vless-FR-2... #2'
+  name: '🇫🇷[www.v2nodes.com] vless-FR-2... #1'
   server: 178.104.70.11
   port: 443
   udp: true
@@ -63,25 +71,8 @@ proxies:
     headers:
       Host: parsa-panel-dy55x.railway1385-2a46.workers.dev
 - type: vless
-  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
-  server: 46.250.250.149
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
-  name: 🇿🇦[www.v2nodes.com] ss-ZA-1336...
-  server: 102.37.156.224
-  port: 443
-  udp: true
-- type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  name: '🏳[www.v2nodes.com] vless- #2'
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -90,46 +81,40 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
-- type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: 🇯🇵[www.v2nodes.com] vless-JP-1...
-  server: 46.250.254.187
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  name: 🇿🇦[www.v2nodes.com] ss-ZA-1336...
+  server: 102.37.156.224
   port: 443
   udp: true
-  network: ws
-  ws-opts:
-    path: /fp=chromesecurity=tls
-    headers:
-      Host: fs.qicai99.com
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇺🇸 美国 | USA #6'
+  - 🇯🇵[www.v2nodes.com] vless-JP-1...
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
   - 🇬🇧[www.v2nodes.com] ss-GB-1616...
   - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
-  - 🇳🇱[www.v2nodes.com] ss-NL-1614...
   - '🇳🇱[www.v2nodes.com] ss-NL-1614... #1'
-  - '🇫🇷[www.v2nodes.com] vless-FR-2... #2'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
+  - 🇳🇱[www.v2nodes.com] ss-NL-1614...
+  - '🇫🇷[www.v2nodes.com] vless-FR-2... #1'
+  - '🏳[www.v2nodes.com] vless- #2'
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
-  - 🇯🇵[www.v2nodes.com] vless-JP-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇺🇸 美国 | USA #6'
+  - 🇯🇵[www.v2nodes.com] vless-JP-1...
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
   - 🇬🇧[www.v2nodes.com] ss-GB-1616...
   - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
-  - 🇳🇱[www.v2nodes.com] ss-NL-1614...
   - '🇳🇱[www.v2nodes.com] ss-NL-1614... #1'
-  - '🇫🇷[www.v2nodes.com] vless-FR-2... #2'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
+  - 🇳🇱[www.v2nodes.com] ss-NL-1614...
+  - '🇫🇷[www.v2nodes.com] vless-FR-2... #1'
+  - '🏳[www.v2nodes.com] vless- #2'
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
-  - 🇯🇵[www.v2nodes.com] vless-JP-1...
 rules:
 - MATCH,SELECT

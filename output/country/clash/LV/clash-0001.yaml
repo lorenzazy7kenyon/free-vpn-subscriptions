@@ -12,16 +12,6 @@ dns:
 proxies:
 - type: vless
   uuid: b7374077-9fdc-4d28-9fb1-5cbc262fb53d
-  name: 🇩🇪 德国 | DEU
-  server: 185.22.172.249
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: fortuna.golden-dragon.de5.net
-  client-fingerprint: chrome
-- type: vless
-  uuid: b7374077-9fdc-4d28-9fb1-5cbc262fb53d
   name: '🇩🇪 德国 | DEU #9'
   server: 185.22.172.249
   port: 443
@@ -32,21 +22,21 @@ proxies:
   client-fingerprint: chrome
 - type: vless
   uuid: a35c508f-4d5d-4531-842e-6e9d43c762c0
-  name: 🇱🇻 拉脱维亚 | LVA
+  name: '🇱🇻 拉脱维亚 | LVA #1'
   server: 2.26.88.140
   port: 4443
   udp: true
-  network: xhttp
+  network: tcp
   tls: true
   servername: lv3.nexfile.net
   client-fingerprint: chrome
 - type: vless
   uuid: a35c508f-4d5d-4531-842e-6e9d43c762c0
-  name: '🇱🇻 拉脱维亚 | LVA #2'
+  name: 🇱🇻 拉脱维亚 | LVA
   server: 2.26.88.140
   port: 4443
   udp: true
-  network: tcp
+  network: xhttp
   tls: true
   servername: lv3.nexfile.net
   client-fingerprint: chrome
@@ -61,13 +51,20 @@ proxies:
   tls: true
   servername: www.bing.com
   client-fingerprint: qq
-- type: hysteria2
-  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-  name: '@meliproxyy #2'
-  server: 31.76.62.148
-  port: 4444
+- type: vless
+  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
+  name: 🇸🇪 瑞典 | SWE
+  server: 94.183.234.245
+  port: 443
   udp: true
-  sni: lv2.nexfile.net
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.bing.com
+  client-fingerprint: qq
+  reality-opts:
+    public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc
+    short-id: 7f1e29593aa94ad1
 - type: hysteria2
   password: 54d2f622-fd71-4f5f-8813-832b68f4ca3b
   name: '@meliproxyy'
@@ -75,29 +72,36 @@ proxies:
   port: 8443
   udp: true
   sni: speedtestmark.com
+- type: hysteria2
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  name: '@meliproxyy #2'
+  server: 31.76.62.148
+  port: 4444
+  udp: true
+  sni: lv2.nexfile.net
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪 德国 | DEU
   - '🇩🇪 德国 | DEU #9'
+  - '🇱🇻 拉脱维亚 | LVA #1'
   - 🇱🇻 拉脱维亚 | LVA
-  - '🇱🇻 拉脱维亚 | LVA #2'
   - '🇸🇪 瑞典 | SWE #1'
-  - '@meliproxyy #2'
+  - 🇸🇪 瑞典 | SWE
   - '@meliproxyy'
+  - '@meliproxyy #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇩🇪 德国 | DEU
   - '🇩🇪 德国 | DEU #9'
+  - '🇱🇻 拉脱维亚 | LVA #1'
   - 🇱🇻 拉脱维亚 | LVA
-  - '🇱🇻 拉脱维亚 | LVA #2'
   - '🇸🇪 瑞典 | SWE #1'
-  - '@meliproxyy #2'
+  - 🇸🇪 瑞典 | SWE
   - '@meliproxyy'
+  - '@meliproxyy #2'
 rules:
 - MATCH,SELECT
