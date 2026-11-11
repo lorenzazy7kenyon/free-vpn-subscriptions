@@ -12,7 +12,18 @@ dns:
 proxies:
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🇬🇷[www.v2nodes.com] vless-GR-3... #2'
+  name: '🇬🇷[www.v2nodes.com] vless-GR-3... #1'
+  server: 85.90.197.159
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=chromesecurity=tls
+    headers:
+      Host: fs.qicai99.com
+- type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  name: '🇬🇷[www.v2nodes.com] vless-GR-3... #3'
   server: 85.90.197.158
   port: 443
   udp: true
@@ -21,17 +32,6 @@ proxies:
   servername: fs.qicai99.com
   ws-opts:
     path: /fp=chrome
-    headers:
-      Host: fs.qicai99.com
-- type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: 🇬🇷[www.v2nodes.com] vless-GR-3...
-  server: 85.90.197.158
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: /fp=chromesecurity=tls
     headers:
       Host: fs.qicai99.com
 - type: vless
@@ -47,26 +47,13 @@ proxies:
   client-fingerprint: chrome
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🇬🇷[www.v2nodes.com] vless-GR-3... #1'
-  server: 85.90.197.159
+  name: '🇬🇷[www.v2nodes.com] vless-GR-3... #2'
+  server: 85.90.197.158
   port: 443
   udp: true
   network: ws
   ws-opts:
     path: /fp=chromesecurity=tls
-    headers:
-      Host: fs.qicai99.com
-- type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🇬🇷[www.v2nodes.com] vless-GR-3... #1'
-  server: 85.90.197.159
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: fs.qicai99.com
-  ws-opts:
-    path: /fp=chrome
     headers:
       Host: fs.qicai99.com
 proxy-groups:
@@ -75,19 +62,17 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇬🇷[www.v2nodes.com] vless-GR-3... #2'
-  - 🇬🇷[www.v2nodes.com] vless-GR-3...
+  - '🇬🇷[www.v2nodes.com] vless-GR-3... #1'
+  - '🇬🇷[www.v2nodes.com] vless-GR-3... #3'
   - 🇬🇷[www.v2nodes.com] vless-GR-1...
-  - '🇬🇷[www.v2nodes.com] vless-GR-3... #1'
-  - '🇬🇷[www.v2nodes.com] vless-GR-3... #1'
+  - '🇬🇷[www.v2nodes.com] vless-GR-3... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇬🇷[www.v2nodes.com] vless-GR-3... #2'
-  - 🇬🇷[www.v2nodes.com] vless-GR-3...
+  - '🇬🇷[www.v2nodes.com] vless-GR-3... #1'
+  - '🇬🇷[www.v2nodes.com] vless-GR-3... #3'
   - 🇬🇷[www.v2nodes.com] vless-GR-1...
-  - '🇬🇷[www.v2nodes.com] vless-GR-3... #1'
-  - '🇬🇷[www.v2nodes.com] vless-GR-3... #1'
+  - '🇬🇷[www.v2nodes.com] vless-GR-3... #2'
 rules:
 - MATCH,SELECT

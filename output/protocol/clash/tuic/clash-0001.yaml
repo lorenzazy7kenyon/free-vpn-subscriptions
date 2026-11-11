@@ -11,12 +11,12 @@ dns:
   - 8.8.8.8
 proxies:
 - type: tuic
-  uuid: 56d8a8fd-68b8-47f8-8c7f-98cc675902db
-  password: 56d8a8fd-68b8-47f8-8c7f-98cc675902db
-  sni: azure.microsoft.com
-  name: 🇺🇸 美国 | USA 10
-  server: us01.uzifan.monster
-  port: 8443
+  uuid: cd1106bc-1b71-4f11-8d29-d8870099adc6
+  password: cd1106bc-1b71-4f11-8d29-d8870099adc6
+  sni: www.bing.com
+  name: 🇺🇸 美国 | USA 8
+  server: 154.201.73.153
+  port: 53454
   udp: true
 proxy-groups:
 - name: AUTO
@@ -24,11 +24,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 | USA 10
+  - 🇺🇸 美国 | USA 8
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 | USA 10
+  - 🇺🇸 美国 | USA 8
 rules:
 - MATCH,SELECT

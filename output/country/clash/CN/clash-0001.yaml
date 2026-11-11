@@ -11,6 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
+  uuid: 2a489513-46b5-488c-9899-9faaf2d83cd9
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知133
+  server: 120.48.133.162
+  port: 10086
+  udp: true
+  ws-opts:
+    path: /
+- type: vmess
   uuid: b0253c6c-0b96-4950-bde1-669f13bc1a01
   alterId: 0
   cipher: auto
@@ -27,11 +38,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 未知133
   - 🇨🇳_CN_中国_IPV4
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 未知133
   - 🇨🇳_CN_中国_IPV4
 rules:
 - MATCH,SELECT

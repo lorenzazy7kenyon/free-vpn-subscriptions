@@ -22,27 +22,6 @@ proxies:
     headers:
       Host: 45.144.234.157
 - type: vless
-  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
-  name: '🇩🇪 德国 | DEU #7'
-  server: 213.176.92.168
-  port: 10444
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: video.yandex.ru
-  client-fingerprint: chrome
-- type: vless
-  uuid: cebc5f19-18d9-48e6-9029-fb4b04caf393
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
-  server: 45.38.143.210
-  port: 30584
-  udp: true
-  network: tcp
-  tls: true
-  servername: m.vk.com
-  client-fingerprint: chrome
-- type: vless
   uuid: b79d736d-0f10-4169-b626-362059d18204
   name: '🇫🇮[www.v2nodes.com] vless-FI-1... #8'
   server: 95.216.27.15
@@ -53,25 +32,60 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - type: vmess
-  uuid: 77fb7a80-4724-4e33-9558-4f20c1634c5a
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
   cipher: auto
-  network: tcp
-  name: 未知73
-  server: 65.108.240.210
-  port: 39018
-  udp: true
-- type: vless
-  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
-  name: 🇭🇰_HK_香港->🇩🇪_DE_德国_IPV4
-  server: 213.176.92.168
-  port: 14430
-  udp: true
   network: ws
+  name: 未知58
+  server: 132.243.22.80
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
   ws-opts:
-    path: /vless
+    path: /api/v1/gpu-stream/socket
     headers:
-      Host: 213.176.92.168
+      Host: renderer-stream-2-62.mirra.now
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知119
+  server: 91.217.76.237
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+- type: vless
+  uuid: cebc5f19-18d9-48e6-9029-fb4b04caf393
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
+  server: 45.38.143.210
+  port: 30584
+  udp: true
+  network: tcp
+  tls: true
+  servername: m.vk.com
+  client-fingerprint: chrome
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知139
+  server: 185.232.204.222
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
 - type: hysteria2
   password: 6aab8efdf13945829ae3699c342be406
   name: Telegram:@v2rayng3
@@ -88,22 +102,22 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
-  - '🇩🇪 德国 | DEU #7'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #8'
-  - 未知73
-  - 🇭🇰_HK_香港->🇩🇪_DE_德国_IPV4
+  - 未知58
+  - 未知119
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
+  - 未知139
   - Telegram:@v2rayng3
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
-  - '🇩🇪 德国 | DEU #7'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #8'
-  - 未知73
-  - 🇭🇰_HK_香港->🇩🇪_DE_德国_IPV4
+  - 未知58
+  - 未知119
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
+  - 未知139
   - Telegram:@v2rayng3
 rules:
 - MATCH,SELECT
