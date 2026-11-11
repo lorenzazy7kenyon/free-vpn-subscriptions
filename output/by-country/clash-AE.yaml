@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 40c8a202-4b7f-45a6-b0aa-37db0fac4df8
-  name: '🇵🇱 波兰 | POL #1'
+  name: '🇵🇱 波兰 | POL #3'
   server: 188.72.103.4
   port: 443
   udp: true
@@ -20,6 +20,19 @@ proxies:
   tls: true
   servername: cdn-ya.shamanapp.online
   client-fingerprint: chrome
+- type: vless
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  name: '🇬🇧 英国 | GBR #2'
+  server: 193.123.74.174
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: v1n3.11676767.xyz
+  ws-opts:
+    path: /go.php/productsfp=chrome
+    headers:
+      Host: v1n3.11676767.xyz
 - type: vless
   uuid: 40c8a202-4b7f-45a6-b0aa-37db0fac4df8
   name: 🇵🇱 波兰 | POL
@@ -47,14 +60,16 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇵🇱 波兰 | POL #1'
+  - '🇵🇱 波兰 | POL #3'
+  - '🇬🇧 英国 | GBR #2'
   - 🇵🇱 波兰 | POL
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇵🇱 波兰 | POL #1'
+  - '🇵🇱 波兰 | POL #3'
+  - '🇬🇧 英国 | GBR #2'
   - 🇵🇱 波兰 | POL
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
 rules:

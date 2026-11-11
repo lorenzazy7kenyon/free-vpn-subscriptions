@@ -11,29 +11,46 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
-  uuid: 824c58b1-65ba-4680-a609-663a000dbb92
+  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
   alterId: 0
   cipher: auto
   network: ws
-  name: 🏁RELAY-190.93.246.41-7835
-  server: 190.93.246.41
+  name: 🏁RELAY-190.93.245.3-4823
+  server: 190.93.245.3
   port: 443
   udp: true
   tls: true
-  servername: 190.93.246.41
+  servername: 190.93.245.3
   ws-opts:
-    path: /wss13889
+    path: /5QNROSRV
+- type: vmess
+  uuid: 5f1d6d32-76b3-4562-8982-df2b7c122708
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知149
+  server: 190.93.244.201
+  port: 443
+  udp: true
+  tls: true
+  servername: argo-tunnel.111874.xyz
+  ws-opts:
+    path: /5f1d6d32-76b3-4562-8982-df2b7c122708-vm
+    headers:
+      Host: argo-tunnel.111874.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🏁RELAY-190.93.246.41-7835
+  - 🏁RELAY-190.93.245.3-4823
+  - 未知149
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🏁RELAY-190.93.246.41-7835
+  - 🏁RELAY-190.93.245.3-4823
+  - 未知149
 rules:
 - MATCH,SELECT

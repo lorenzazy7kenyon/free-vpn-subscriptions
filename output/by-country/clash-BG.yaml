@@ -11,45 +11,27 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
-  name: 🇺🇸 美国 | USA
-  server: 91.215.153.162
+  uuid: 3f5e89d5-591f-4ac9-b071-b05680b573c3
+  name: 🇧🇬[www.v2nodes.com] vless-BG-1...
+  server: 131.123.43.103
   port: 443
   udp: true
-  network: ws
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: cat.ilovezhenjiu.top
-  client-fingerprint: chrome
-  ws-opts:
-    path: /cgciws
-    headers:
-      Host: cat.ilovezhenjiu.top
-- type: vless
-  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
-  name: '🇺🇸 美国 | USA #10'
-  server: 91.215.153.162
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: cat.ilovezhenjiu.top
-  ws-opts:
-    path: /cgciwsfp=chrome
-    headers:
-      Host: cat.ilovezhenjiu.top
+  servername: bg2.gacvpn.site
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 | USA
-  - '🇺🇸 美国 | USA #10'
+  - 🇧🇬[www.v2nodes.com] vless-BG-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 | USA
-  - '🇺🇸 美国 | USA #10'
+  - 🇧🇬[www.v2nodes.com] vless-BG-1...
 rules:
 - MATCH,SELECT

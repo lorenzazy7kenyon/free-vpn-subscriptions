@@ -11,6 +11,19 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  name: '🇱🇻 拉脱维亚 | LVA #1'
+  server: 31.56.197.205
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: v1n3.11676767.xyz
+  ws-opts:
+    path: /picture/lessonsfp=chrome
+    headers:
+      Host: v1n3.11676767.xyz
+- type: vless
   uuid: b7374077-9fdc-4d28-9fb1-5cbc262fb53d
   name: '🇩🇪 德国 | DEU #9'
   server: 185.22.172.249
@@ -21,8 +34,19 @@ proxies:
   servername: fortuna.golden-dragon.de5.net
   client-fingerprint: chrome
 - type: vless
+  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
+  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
+  server: 94.183.234.245
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.bing.com
+  client-fingerprint: qq
+- type: vless
   uuid: a35c508f-4d5d-4531-842e-6e9d43c762c0
-  name: '🇱🇻 拉脱维亚 | LVA #1'
+  name: '🇱🇻 拉脱维亚 | LVA #2'
   server: 2.26.88.140
   port: 4443
   udp: true
@@ -40,17 +64,6 @@ proxies:
   tls: true
   servername: lv3.nexfile.net
   client-fingerprint: chrome
-- type: vless
-  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
-  name: '🇸🇪 瑞典 | SWE #1'
-  server: 94.183.234.245
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.bing.com
-  client-fingerprint: qq
 - type: vless
   uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
   name: 🇸🇪 瑞典 | SWE
@@ -85,10 +98,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇩🇪 德国 | DEU #9'
   - '🇱🇻 拉脱维亚 | LVA #1'
+  - '🇩🇪 德国 | DEU #9'
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
+  - '🇱🇻 拉脱维亚 | LVA #2'
   - 🇱🇻 拉脱维亚 | LVA
-  - '🇸🇪 瑞典 | SWE #1'
   - 🇸🇪 瑞典 | SWE
   - '@meliproxyy'
   - '@meliproxyy #2'
@@ -96,10 +110,11 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - '🇩🇪 德国 | DEU #9'
   - '🇱🇻 拉脱维亚 | LVA #1'
+  - '🇩🇪 德国 | DEU #9'
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
+  - '🇱🇻 拉脱维亚 | LVA #2'
   - 🇱🇻 拉脱维亚 | LVA
-  - '🇸🇪 瑞典 | SWE #1'
   - 🇸🇪 瑞典 | SWE
   - '@meliproxyy'
   - '@meliproxyy #2'

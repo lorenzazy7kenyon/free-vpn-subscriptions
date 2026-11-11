@@ -1,0 +1,48 @@
+{
+  "outbounds": [
+    {
+      "server": "196.196.148.63",
+      "server_port": 443,
+      "tag": "🇪🇪 爱沙尼亚 | EST",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "717252g.nl8.h1clayd.click",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "service_name": "204adda7e3da",
+        "type": "grpc"
+      },
+      "type": "vless",
+      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "🇪🇪 爱沙尼亚 | EST"
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "🇪🇪 爱沙尼亚 | EST"
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

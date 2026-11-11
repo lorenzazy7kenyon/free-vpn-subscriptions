@@ -10,14 +10,32 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇰🇷 韩国 | KOR #1'
-  server: 158.247.253.243
+- type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  name: '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
+  server: 64.110.79.66
+  port: 8443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=chromesecurity=tls
+    headers:
+      Host: fs.qicai99.com
+- type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇰🇷KR-146.56.166.153-0067
+  server: 146.56.166.153
   port: 443
   udp: true
-  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
-  skip-cert-verify: true
+  tls: true
+  servername: lg30.cfcdn3.xyz
+  ws-opts:
+    path: /ray
+    headers:
+      Host: lg30.cfcdn3.xyz
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
@@ -32,6 +50,19 @@ proxies:
     headers:
       Host: fs.qicai99.com
 - type: vless
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  name: '🇰🇷 韩国 | KOR #3'
+  server: 131.186.16.166
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: v1n3.11676767.xyz
+  ws-opts:
+    path: /picture/lessonsfp=chrome
+    headers:
+      Host: v1n3.11676767.xyz
+- type: vless
   uuid: e15db5c2-2dca-49fc-857b-aa37a7ba1c79
   name: 🇰🇷[www.v2nodes.com] vless-KR-1...
   server: 43.108.85.54
@@ -41,6 +72,14 @@ proxies:
   tls: true
   servername: cloudflare.com
   client-fingerprint: chrome
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇰🇷[www.v2nodes.com] trojan-KR-...
+  server: 158.247.253.243
+  port: 443
+  udp: true
+  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
+  skip-cert-verify: true
 - type: vless
   uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
   name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
@@ -52,9 +91,16 @@ proxies:
   tls: true
   servername: gateway.icloud.com
   client-fingerprint: chrome
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: 🇰🇷KR-211.178.105.134-0274
+  server: 211.178.105.134
+  port: 6123
+  udp: true
 - type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
+  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
   server: 3.39.4.109
   port: 18967
   udp: true
@@ -63,6 +109,32 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
+- type: vless
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  name: '🇰🇷 韩国 | KOR #2'
+  server: 123.111.169.70
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: v1n3.11676767.xyz
+  ws-opts:
+    path: /go.php/productsfp=chrome
+    headers:
+      Host: v1n3.11676767.xyz
+- type: vless
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  name: '🇰🇷 韩国 | KOR #4'
+  server: 123.111.169.70
+  port: 2096
+  udp: true
+  network: ws
+  tls: true
+  servername: v1n3.11676767.xyz
+  ws-opts:
+    path: /go.php/productsfp=chrome
+    headers:
+      Host: v1n3.11676767.xyz
 - type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
   name: '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
@@ -75,27 +147,6 @@ proxies:
   servername: www.apple.com
   client-fingerprint: chrome
 - type: vless
-  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
-  server: 151.245.106.49
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
-  server: 64.110.79.66
-  port: 8443
-  udp: true
-  network: ws
-  ws-opts:
-    path: /fp=chromesecurity=tls
-    headers:
-      Host: fs.qicai99.com
-- type: vless
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   server: 152.69.226.63
@@ -104,13 +155,39 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: 🇰🇷KR-211.178.105.134-0246
-  server: 211.178.105.134
-  port: 6123
+- type: vless
+  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
+  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
+  server: 151.245.106.49
+  port: 2053
   udp: true
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇰🇷KR-138.2.122.225-0065
+  server: 138.2.122.225
+  port: 443
+  udp: true
+  tls: true
+  servername: lg30.cfcdn3.xyz
+  ws-opts:
+    path: /ray
+    headers:
+      Host: lg30.cfcdn3.xyz
+- type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: 🇰🇷 韩国 | KOR
+  server: 43.202.4.139
+  port: 443
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   name: '🇰🇷 韩国 | KOR #2'
@@ -121,8 +198,8 @@ proxies:
   skip-cert-verify: true
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: '🇰🇷 韩国 | KOR #1'
-  server: 43.202.4.139
+  name: '🇰🇷 韩国 | KOR #5'
+  server: 3.36.109.202
   port: 443
   udp: true
   sni: www.bing.com
@@ -133,33 +210,45 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
   - '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  - 🇰🇷KR-211.178.105.134-0246
+  - 🇰🇷KR-146.56.166.153-0067
+  - '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
+  - '🇰🇷 韩国 | KOR #3'
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
+  - 🇰🇷[www.v2nodes.com] trojan-KR-...
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
+  - 🇰🇷KR-211.178.105.134-0274
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
   - '🇰🇷 韩国 | KOR #2'
-  - '🇰🇷 韩国 | KOR #1'
+  - '🇰🇷 韩国 | KOR #4'
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
+  - 🇰🇷KR-138.2.122.225-0065
+  - 🇰🇷 韩国 | KOR
+  - '🇰🇷 韩国 | KOR #2'
+  - '🇰🇷 韩国 | KOR #5'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
   - '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  - 🇰🇷KR-211.178.105.134-0246
+  - 🇰🇷KR-146.56.166.153-0067
+  - '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
+  - '🇰🇷 韩国 | KOR #3'
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
+  - 🇰🇷[www.v2nodes.com] trojan-KR-...
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
+  - 🇰🇷KR-211.178.105.134-0274
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
   - '🇰🇷 韩国 | KOR #2'
-  - '🇰🇷 韩国 | KOR #1'
+  - '🇰🇷 韩国 | KOR #4'
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
+  - 🇰🇷KR-138.2.122.225-0065
+  - 🇰🇷 韩国 | KOR
+  - '🇰🇷 韩国 | KOR #2'
+  - '🇰🇷 韩国 | KOR #5'
 rules:
 - MATCH,SELECT

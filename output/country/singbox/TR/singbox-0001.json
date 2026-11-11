@@ -1,25 +1,45 @@
 {
   "outbounds": [
     {
-      "server": "151.241.226.201",
-      "server_port": 2053,
+      "flow": "xtls-rprx-vision",
+      "server": "78.135.73.47",
+      "server_port": 443,
       "tag": "🇹🇷[www.v2nodes.com] vless-TR-1... #2",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "www.apple.com",
+        "server_name": "www.datadoghq.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
       },
       "type": "vless",
-      "uuid": "0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8"
+      "uuid": "25e16692-d097-4e69-9e2d-8415609c1968"
+    },
+    {
+      "server": "185.255.93.189",
+      "server_port": 443,
+      "tag": "🇧🇬 保加利亚 | BGR #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "v1n3.11676767.xyz"
+      },
+      "transport": {
+        "headers": {
+          "Host": "v1n3.11676767.xyz"
+        },
+        "path": "/picture/lessonsfp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "5d7b401c-78fa-4254-872e-6d42bf7e75ec"
     },
     {
       "server": "62.133.63.45",
       "server_port": 8444,
-      "tag": "🇹🇷[www.v2nodes.com] vless-TR-1...",
+      "tag": "🇹🇷[www.v2nodes.com] vless-TR-1... #1",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -37,6 +57,23 @@
       "uuid": "a346c521-7a7f-452b-9356-a4893feb5982"
     },
     {
+      "flow": "xtls-rprx-vision-udp443",
+      "server": "185.255.95.131",
+      "server_port": 11738,
+      "tag": "🇹🇷TR_3|3.0MB/s",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.asus.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "e38111aa-f62a-46ad-a538-6f3003f2f43d"
+    },
+    {
       "server": "146.103.24.187",
       "server_port": 8443,
       "tag": "🇹🇷[www.v2nodes.com] vless-TR-3...",
@@ -51,29 +88,30 @@
       "uuid": "a1de0630-5786-48a0-84f6-dc6f2de10d6d"
     },
     {
-      "flow": "xtls-rprx-vision",
-      "server": "78.135.73.47",
-      "server_port": 443,
-      "tag": "🇹🇷[www.v2nodes.com] vless-TR-1... #1",
+      "server": "151.241.226.201",
+      "server_port": 2053,
+      "tag": "🏳[www.v2nodes.com] vless- #19",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "www.datadoghq.com",
+        "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
       },
       "type": "vless",
-      "uuid": "25e16692-d097-4e69-9e2d-8415609c1968"
+      "uuid": "0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8"
     },
     {
       "interval": "5m",
       "outbounds": [
         "🇹🇷[www.v2nodes.com] vless-TR-1... #2",
-        "🇹🇷[www.v2nodes.com] vless-TR-1...",
+        "🇧🇬 保加利亚 | BGR #1",
+        "🇹🇷[www.v2nodes.com] vless-TR-1... #1",
+        "🇹🇷TR_3|3.0MB/s",
         "🇹🇷[www.v2nodes.com] vless-TR-3...",
-        "🇹🇷[www.v2nodes.com] vless-TR-1... #1"
+        "🏳[www.v2nodes.com] vless- #19"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -83,9 +121,11 @@
       "outbounds": [
         "auto",
         "🇹🇷[www.v2nodes.com] vless-TR-1... #2",
-        "🇹🇷[www.v2nodes.com] vless-TR-1...",
+        "🇧🇬 保加利亚 | BGR #1",
+        "🇹🇷[www.v2nodes.com] vless-TR-1... #1",
+        "🇹🇷TR_3|3.0MB/s",
         "🇹🇷[www.v2nodes.com] vless-TR-3...",
-        "🇹🇷[www.v2nodes.com] vless-TR-1... #1"
+        "🏳[www.v2nodes.com] vless- #19"
       ],
       "tag": "select",
       "type": "selector"

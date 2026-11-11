@@ -11,36 +11,158 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  name: '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
-  server: 154.21.203.106
-  port: 51279
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  name: '🏳[www.v2nodes.com] vless- #12'
+  server: 38.207.177.204
+  port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: ws
+  ws-opts:
+    path: /fp=chromesecurity=tls
+    headers:
+      Host: fs.qicai99.com
+- type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  name: '🇭🇰 香港 | HKG #4'
+  server: 38.207.177.204
+  port: 443
+  udp: true
+  network: ws
   tls: true
-  servername: www.tesla.com
-  client-fingerprint: random
+  servername: fs.qicai99.com
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
+- type: vless
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  name: '🇭🇰 香港 | HKG #3'
+  server: 82.152.167.236
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: v1n3.11676767.xyz
+  ws-opts:
+    path: /go.php/productsfp=chrome
+    headers:
+      Host: v1n3.11676767.xyz
+- type: vmess
+  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
+  alterId: 0
+  cipher: auto
+  network: http
+  name: '🇭🇰 香港 | HKG #4'
+  server: 47.242.81.94
+  port: 52080
+  udp: true
 - type: vmess
   uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
   alterId: 0
   cipher: auto
   network: ws
-  name: '🇭🇰 香港 | HKG #1'
+  name: '🇭🇰 香港 | HKG #2'
   server: 47.244.120.197
   port: 36703
   udp: true
   ws-opts:
     path: /arki
 - type: vmess
-  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
+  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
   alterId: 0
   cipher: auto
-  network: http
-  name: '🇭🇰 香港 | HKG #3'
-  server: 47.242.81.94
-  port: 52080
+  network: ws
+  name: '🇭🇰 香港 | HKG #2'
+  server: 47.244.120.197
+  port: 23026
   udp: true
+  ws-opts:
+    path: /arki
+    headers:
+      Host: 47.244.120.197
+- type: vmess
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: '🇭🇰 香港 | HKG #5'
+  server: 47.244.120.197
+  port: 44867
+  udp: true
+  ws-opts:
+    path: /arki
+- type: vmess
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: HK3
+  server: 47.244.120.197
+  port: 36703
+  udp: true
+  ws-opts:
+    path: /arki?ed=2048
+- type: vmess
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: HK2
+  server: 47.243.194.125
+  port: 443
+  udp: true
+  tls: true
+  servername: nycqg19zkwacpm1b.v.3dns.vip
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: nycqg19zkwacpm1b.v.3dns.vip
+- type: vless
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  name: '🇭🇰 香港 | HKG #5'
+  server: 217.60.248.250
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: v1n3.11676767.xyz
+  ws-opts:
+    path: /go.php/productsfp=chrome
+    headers:
+      Host: v1n3.11676767.xyz
+- type: vmess
+  uuid: 1270bed5-f908-4ecc-f1c8-de246033b186
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: '🇭🇰 香港 | HKG #1'
+  server: 156.239.224.107
+  port: 57278
+  udp: true
+  ws-opts:
+    path: /
+- type: vmess
+  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇭🇰HK-156.245.232.239-0276
+  server: 156.245.232.239
+  port: 35043
+  udp: true
+  ws-opts:
+    path: /
+- type: vless
+  uuid: 3b8896fd-ba38-4da7-b365-d0f01f37aa40
+  name: 香港2|@ripaojiedian
+  server: 66.90.115.133
+  port: 2053
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 - type: vless
   uuid: 3b8896fd-ba38-4da7-b365-d0f01f37aa40
   name: 香港3|@ripaojiedian
@@ -63,41 +185,6 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: vless
-  uuid: 3b8896fd-ba38-4da7-b365-d0f01f37aa40
-  name: 香港2|@ripaojiedian
-  server: 66.90.115.133
-  port: 2053
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🇭🇰 香港 | HKG #4'
-  server: 38.207.177.204
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: fs.qicai99.com
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: fs.qicai99.com
-- type: vmess
-  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇭🇰HK-156.245.232.239-5451
-  server: 156.245.232.239
-  port: 35043
-  udp: true
-  ws-opts:
-    path: /
 - type: vless
   uuid: 7852e4df-db54-4f75-a35e-3b8fbe89e56d
   name: 🇭🇰[www.v2nodes.com] vless-HK-1...
@@ -122,30 +209,17 @@ proxies:
     path: /fp=chrome
     headers:
       Host: fs.qicai99.com
-- type: vmess
-  uuid: 1270bed5-f908-4ecc-f1c8-de246033b186
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: '🇭🇰 香港 | HKG #1'
-  server: 156.239.224.107
-  port: 57278
+- type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #3'
+  server: 68.64.182.205
+  port: 443
   udp: true
-  ws-opts:
-    path: /
-- type: vmess
-  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
-  alterId: 0
-  cipher: auto
   network: ws
-  name: '🇭🇰 香港 | HKG #2'
-  server: 47.244.120.197
-  port: 23026
-  udp: true
   ws-opts:
-    path: /arki
+    path: /fp=chromesecurity=tls
     headers:
-      Host: 47.244.120.197
+      Host: fs.qicai99.com
 - type: hysteria2
   password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
   name: 'برای اتصال دائمی جوین شو☄️ Tel... #4'
@@ -161,35 +235,47 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
-  - '🇭🇰 香港 | HKG #1'
+  - '🏳[www.v2nodes.com] vless- #12'
+  - '🇭🇰 香港 | HKG #4'
   - '🇭🇰 香港 | HKG #3'
+  - '🇭🇰 香港 | HKG #4'
+  - '🇭🇰 香港 | HKG #2'
+  - '🇭🇰 香港 | HKG #2'
+  - '🇭🇰 香港 | HKG #5'
+  - HK3
+  - HK2
+  - '🇭🇰 香港 | HKG #5'
+  - '🇭🇰 香港 | HKG #1'
+  - 🇭🇰HK-156.245.232.239-0276
+  - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港|@ripaojiedian
-  - 香港2|@ripaojiedian
-  - '🇭🇰 香港 | HKG #4'
-  - 🇭🇰HK-156.245.232.239-5451
   - 🇭🇰[www.v2nodes.com] vless-HK-1...
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
-  - '🇭🇰 香港 | HKG #1'
-  - '🇭🇰 香港 | HKG #2'
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #3'
   - 'برای اتصال دائمی جوین شو☄️ Tel... #4'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇻🇳[www.v2nodes.com] vless-VN-1... #1'
-  - '🇭🇰 香港 | HKG #1'
+  - '🏳[www.v2nodes.com] vless- #12'
+  - '🇭🇰 香港 | HKG #4'
   - '🇭🇰 香港 | HKG #3'
+  - '🇭🇰 香港 | HKG #4'
+  - '🇭🇰 香港 | HKG #2'
+  - '🇭🇰 香港 | HKG #2'
+  - '🇭🇰 香港 | HKG #5'
+  - HK3
+  - HK2
+  - '🇭🇰 香港 | HKG #5'
+  - '🇭🇰 香港 | HKG #1'
+  - 🇭🇰HK-156.245.232.239-0276
+  - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港|@ripaojiedian
-  - 香港2|@ripaojiedian
-  - '🇭🇰 香港 | HKG #4'
-  - 🇭🇰HK-156.245.232.239-5451
   - 🇭🇰[www.v2nodes.com] vless-HK-1...
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
-  - '🇭🇰 香港 | HKG #1'
-  - '🇭🇰 香港 | HKG #2'
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #3'
   - 'برای اتصال دائمی جوین شو☄️ Tel... #4'
 rules:
 - MATCH,SELECT

@@ -11,18 +11,32 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
   name: '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
-  server: 151.241.226.201
-  port: 2053
+  server: 78.135.73.47
+  port: 443
   udp: true
+  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.apple.com
+  servername: www.datadoghq.com
   client-fingerprint: firefox
 - type: vless
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  name: '🇧🇬 保加利亚 | BGR #1'
+  server: 185.255.93.189
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: v1n3.11676767.xyz
+  ws-opts:
+    path: /picture/lessonsfp=chrome
+    headers:
+      Host: v1n3.11676767.xyz
+- type: vless
   uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  name: 🇹🇷[www.v2nodes.com] vless-TR-1...
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
   server: 62.133.63.45
   port: 8444
   udp: true
@@ -30,6 +44,17 @@ proxies:
   tls: true
   servername: github.com
   client-fingerprint: safari
+- type: vless
+  uuid: e38111aa-f62a-46ad-a538-6f3003f2f43d
+  name: 🇹🇷TR_3|3.0MB/s
+  server: 185.255.95.131
+  port: 11738
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: www.asus.com
+  client-fingerprint: chrome
 - type: vless
   uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
   name: 🇹🇷[www.v2nodes.com] vless-TR-3...
@@ -42,15 +67,14 @@ proxies:
     headers:
       Host: vlso5.1d.mom
 - type: vless
-  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
-  server: 78.135.73.47
-  port: 443
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  name: '🏳[www.v2nodes.com] vless- #19'
+  server: 151.241.226.201
+  port: 2053
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.datadoghq.com
+  servername: www.apple.com
   client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
@@ -59,16 +83,20 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
-  - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - 🇹🇷[www.v2nodes.com] vless-TR-3...
+  - '🇧🇬 保加利亚 | BGR #1'
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  - 🇹🇷TR_3|3.0MB/s
+  - 🇹🇷[www.v2nodes.com] vless-TR-3...
+  - '🏳[www.v2nodes.com] vless- #19'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
-  - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - 🇹🇷[www.v2nodes.com] vless-TR-3...
+  - '🇧🇬 保加利亚 | BGR #1'
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  - 🇹🇷TR_3|3.0MB/s
+  - 🇹🇷[www.v2nodes.com] vless-TR-3...
+  - '🏳[www.v2nodes.com] vless- #19'
 rules:
 - MATCH,SELECT
