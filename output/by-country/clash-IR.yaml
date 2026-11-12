@@ -10,56 +10,25 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: fd26012b-e43b-4d6f-814f-c2c058e0d2eb
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知102
-  server: 185.143.232.178
-  port: 8080
+- type: hysteria2
+  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
+  name: 🇮🇷 12@exclavevpn
+  server: 94.183.164.119
+  port: 24433
   udp: true
-  ws-opts:
-    path: /s2BSpP6uUOPQ499phpYH87TsXl
-    headers:
-      Host: cdn.tr.one.nemava.com
-- type: vless
-  uuid: 17923e69-98e0-4952-a599-9c848c1b8ffe
-  name: 🇮🇷 伊朗 | IRN
-  server: 94.183.164.92
-  port: 8443
-  udp: true
-  network: grpc
-  tls: true
-  servername: x0c8j8znhp8ou.hat.onl
-  client-fingerprint: qq
-- type: vless
-  uuid: 25ce9135-58c0-46fb-97ad-a39eeff459e9
-  name: 🇮🇷 伊朗 | IRN
-  server: 94.183.164.141
-  port: 7443
-  udp: true
-  network: grpc
-  tls: true
-  servername: optim.tildacdn.pub
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: unNROkbh95ZZNHzG2RIkgrFftOLldNH0ccmtW63CziE
+  sni: ''
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知102
-  - 🇮🇷 伊朗 | IRN
-  - 🇮🇷 伊朗 | IRN
+  - 🇮🇷 12@exclavevpn
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知102
-  - 🇮🇷 伊朗 | IRN
-  - 🇮🇷 伊朗 | IRN
+  - 🇮🇷 12@exclavevpn
 rules:
 - MATCH,SELECT

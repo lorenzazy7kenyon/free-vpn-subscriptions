@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
-  name: 🇹🇼[www.v2nodes.com] vless-TW-1...
+  name: '🇹🇼 🇨🇳 台湾 | TWN #2'
   server: 83.147.13.74
   port: 8443
   udp: true
@@ -22,27 +22,13 @@ proxies:
   client-fingerprint: chrome
 - type: vless
   uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  name: '🇹🇼[www.v2nodes.com] vless-TW-1... #1'
+  name: '🇹🇼[www.v2nodes.com] vless-TW-1... #3'
   server: 60.248.219.78
   port: 443
   udp: true
   network: ws
   ws-opts:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530security=tls
-    headers:
-      Host: ty986gfazs.cainiaohub.xyz
-- type: vless
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  name: 🇹🇼 🇨🇳 台湾 | TWN
-  server: 60.248.219.53
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ty986gfazs.cainiaohub.xyz
-  client-fingerprint: chrome
-  ws-opts:
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: ty986gfazs.cainiaohub.xyz
 - type: vless
@@ -58,36 +44,21 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530fp=chrome
     headers:
       Host: ty986gfazs.cainiaohub.xyz
-- type: vless
-  uuid: 4d945644-69ab-47e0-98b3-d43a6313135d
-  name: 🇹🇼[www.v2nodes.com] vless-TW-3...
-  server: 85.237.207.141
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vl/SaXqikbSPA3ImtmZKAFin?ed=2560fp=chromesecurity=tls
-    headers:
-      Host: mhoX6Xz96zGe3qv5HISuFj9B.paGeS.DEV
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇼[www.v2nodes.com] vless-TW-1...
-  - '🇹🇼[www.v2nodes.com] vless-TW-1... #1'
-  - 🇹🇼 🇨🇳 台湾 | TWN
+  - '🇹🇼 🇨🇳 台湾 | TWN #2'
+  - '🇹🇼[www.v2nodes.com] vless-TW-1... #3'
   - '🇹🇼 🇨🇳 台湾 | TWN #1'
-  - 🇹🇼[www.v2nodes.com] vless-TW-3...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇹🇼[www.v2nodes.com] vless-TW-1...
-  - '🇹🇼[www.v2nodes.com] vless-TW-1... #1'
-  - 🇹🇼 🇨🇳 台湾 | TWN
+  - '🇹🇼 🇨🇳 台湾 | TWN #2'
+  - '🇹🇼[www.v2nodes.com] vless-TW-1... #3'
   - '🇹🇼 🇨🇳 台湾 | TWN #1'
-  - 🇹🇼[www.v2nodes.com] vless-TW-3...
 rules:
 - MATCH,SELECT

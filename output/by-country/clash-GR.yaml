@@ -12,17 +12,6 @@ dns:
 proxies:
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🏳[www.v2nodes.com] vless- #6'
-  server: 85.90.197.159
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: /fp=chromesecurity=tls
-    headers:
-      Host: fs.qicai99.com
-- type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: '🇬🇷[www.v2nodes.com] vless-GR-3... #2'
   server: 85.90.197.158
   port: 443
@@ -47,7 +36,7 @@ proxies:
   client-fingerprint: chrome
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🏳[www.v2nodes.com] vless- #7'
+  name: '🇬🇷[www.v2nodes.com] vless-GR-3... #3'
   server: 85.90.197.158
   port: 443
   udp: true
@@ -56,23 +45,30 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: fs.qicai99.com
+- type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  name: '🇬🇷[www.v2nodes.com] vless-GR-3... #2'
+  server: 85.90.197.158
+  port: 443
+  udp: true
+  network: tcp
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #6'
   - '🇬🇷[www.v2nodes.com] vless-GR-3... #2'
   - 🇬🇷[www.v2nodes.com] vless-GR-1...
-  - '🏳[www.v2nodes.com] vless- #7'
+  - '🇬🇷[www.v2nodes.com] vless-GR-3... #3'
+  - '🇬🇷[www.v2nodes.com] vless-GR-3... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #6'
   - '🇬🇷[www.v2nodes.com] vless-GR-3... #2'
   - 🇬🇷[www.v2nodes.com] vless-GR-1...
-  - '🏳[www.v2nodes.com] vless- #7'
+  - '🇬🇷[www.v2nodes.com] vless-GR-3... #3'
+  - '🇬🇷[www.v2nodes.com] vless-GR-3... #2'
 rules:
 - MATCH,SELECT

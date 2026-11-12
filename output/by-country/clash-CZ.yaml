@@ -11,17 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
-  name: 🇨🇿[www.v2nodes.com] vless-CZ-1...
-  server: 195.123.245.241
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- type: vless
   uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
   name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
   server: 212.102.38.25
@@ -33,33 +22,29 @@ proxies:
   servername: udemy.com
   client-fingerprint: ios
 - type: vless
-  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-  name: '🇩🇪 德国 | DEU #3'
-  server: 91.184.248.161
+  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
+  name: 🇨🇿[www.v2nodes.com] vless-CZ-1...
+  server: 195.123.245.241
   port: 443
   udp: true
-  network: ws
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: v1n3.11676767.xyz
-  ws-opts:
-    path: /manhua/doujinfp=chrome
-    headers:
-      Host: v1n3.11676767.xyz
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿[www.v2nodes.com] vless-CZ-1...
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
-  - '🇩🇪 德国 | DEU #3'
+  - 🇨🇿[www.v2nodes.com] vless-CZ-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇨🇿[www.v2nodes.com] vless-CZ-1...
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
-  - '🇩🇪 德国 | DEU #3'
+  - 🇨🇿[www.v2nodes.com] vless-CZ-1...
 rules:
 - MATCH,SELECT
