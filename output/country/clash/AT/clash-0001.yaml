@@ -11,6 +11,19 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  name: '🇦🇹[www.v2nodes.com] vless-AT-3... #4'
+  server: 193.219.97.198
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: fs.qicai99.com
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
+- type: vless
   uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
   name: '🇩🇪 德国 | DEU #6'
   server: 213.176.94.31
@@ -25,26 +38,6 @@ proxies:
       Host: v1n3.11676767.xyz
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🇦🇹[www.v2nodes.com] vless-AT-3... #4'
-  server: 193.219.97.198
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: fs.qicai99.com
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: fs.qicai99.com
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
-  name: 🇦🇹[www.v2nodes.com] ss-AT-1614...
-  server: 152.53.1.57
-  port: 8388
-  udp: true
-- type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: 🇦🇹[www.v2nodes.com] vless-AT-2...
   server: 193.219.97.198
   port: 443
@@ -54,36 +47,30 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: fs.qicai99.com
-- type: vless
-  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
-  name: 🇦🇹[www.v2nodes.com] vless-AT-1...
-  server: 178.22.31.72
-  port: 443
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
+  name: 🇦🇹[www.v2nodes.com] ss-AT-1614...
+  server: 152.53.1.57
+  port: 8388
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: at1.japancase.site
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇩🇪 德国 | DEU #6'
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #4'
-  - 🇦🇹[www.v2nodes.com] ss-AT-1614...
+  - '🇩🇪 德国 | DEU #6'
   - 🇦🇹[www.v2nodes.com] vless-AT-2...
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
+  - 🇦🇹[www.v2nodes.com] ss-AT-1614...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇩🇪 德国 | DEU #6'
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #4'
-  - 🇦🇹[www.v2nodes.com] ss-AT-1614...
+  - '🇩🇪 德国 | DEU #6'
   - 🇦🇹[www.v2nodes.com] vless-AT-2...
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
+  - 🇦🇹[www.v2nodes.com] ss-AT-1614...
 rules:
 - MATCH,SELECT

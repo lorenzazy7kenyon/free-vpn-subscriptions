@@ -10,24 +10,13 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 7163913b-0d6c-4a5a-933b-b6f61c1807da
-  name: 🇩🇪DE_3|3.1MB/s
-  server: 179.254.183.17
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇨🇭[www.v2nodes.com] trojan-CH-... #1'
+  server: 208.69.78.29
   port: 443
   udp: true
-  flow: xtls-rprx-vision-udp443
-  network: tcp
-  tls: true
-  servername: ch2.docuflow.pw
-  client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇨🇭[www.v2nodes.com] ss-CH-1616...
-  server: 23.166.88.127
-  port: 19999
-  udp: true
+  sni: 208.69.78.29
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   name: '🏳[www.v2nodes.com] trojan- #4'
@@ -37,11 +26,18 @@ proxies:
   sni: courses.yourultimateprofessionalcareerhub.com
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇨🇭[www.v2nodes.com] trojan-CH-... #5'
-  server: 208.69.78.208
+  name: '🇨🇭[www.v2nodes.com] trojan-CH-... #1'
+  server: 208.69.78.158
   port: 443
   udp: true
-  sni: 208.69.78.208
+  sni: 208.69.78.158
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇨🇭[www.v2nodes.com] ss-CH-1615... #1'
+  server: 79.127.184.104
+  port: 19999
+  udp: true
 - type: vless
   uuid: 3950b45e-740d-4dca-ac95-505ec8534592
   name: '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
@@ -56,24 +52,28 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇨🇭[www.v2nodes.com] ss-CH-1616...
+  server: 23.166.88.127
+  port: 19999
+  udp: true
+- type: vless
+  uuid: 7163913b-0d6c-4a5a-933b-b6f61c1807da
+  name: 🇩🇪DE_3|3.1MB/s
+  server: 179.254.183.17
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: ch2.docuflow.pw
+  client-fingerprint: chrome
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   name: 🇨🇭[www.v2nodes.com] ss-CH-1615...
   server: 186.190.215.251
   port: 19999
   udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇨🇭[www.v2nodes.com] ss-CH-1615... #1'
-  server: 79.127.184.104
-  port: 19999
-  udp: true
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇨🇭[www.v2nodes.com] trojan-CH-... #1'
-  server: 208.69.78.158
-  port: 443
-  udp: true
-  sni: 208.69.78.158
 - type: vless
   uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
   name: '🏳[www.v2nodes.com] vless- #1'
@@ -90,27 +90,27 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪DE_3|3.1MB/s
-  - 🇨🇭[www.v2nodes.com] ss-CH-1616...
-  - '🏳[www.v2nodes.com] trojan- #4'
-  - '🇨🇭[www.v2nodes.com] trojan-CH-... #5'
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
-  - 🇨🇭[www.v2nodes.com] ss-CH-1615...
-  - '🇨🇭[www.v2nodes.com] ss-CH-1615... #1'
   - '🇨🇭[www.v2nodes.com] trojan-CH-... #1'
+  - '🏳[www.v2nodes.com] trojan- #4'
+  - '🇨🇭[www.v2nodes.com] trojan-CH-... #1'
+  - '🇨🇭[www.v2nodes.com] ss-CH-1615... #1'
+  - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
+  - 🇨🇭[www.v2nodes.com] ss-CH-1616...
+  - 🇩🇪DE_3|3.1MB/s
+  - 🇨🇭[www.v2nodes.com] ss-CH-1615...
   - '🏳[www.v2nodes.com] vless- #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇩🇪DE_3|3.1MB/s
-  - 🇨🇭[www.v2nodes.com] ss-CH-1616...
-  - '🏳[www.v2nodes.com] trojan- #4'
-  - '🇨🇭[www.v2nodes.com] trojan-CH-... #5'
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
-  - 🇨🇭[www.v2nodes.com] ss-CH-1615...
-  - '🇨🇭[www.v2nodes.com] ss-CH-1615... #1'
   - '🇨🇭[www.v2nodes.com] trojan-CH-... #1'
+  - '🏳[www.v2nodes.com] trojan- #4'
+  - '🇨🇭[www.v2nodes.com] trojan-CH-... #1'
+  - '🇨🇭[www.v2nodes.com] ss-CH-1615... #1'
+  - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
+  - 🇨🇭[www.v2nodes.com] ss-CH-1616...
+  - 🇩🇪DE_3|3.1MB/s
+  - 🇨🇭[www.v2nodes.com] ss-CH-1615...
   - '🏳[www.v2nodes.com] vless- #1'
 rules:
 - MATCH,SELECT

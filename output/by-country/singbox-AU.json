@@ -13,9 +13,27 @@
       "type": "trojan"
     },
     {
+      "flow": "xtls-rprx-vision",
+      "server": "50.6.54.163",
+      "server_port": 443,
+      "tag": "🇦🇺[www.v2nodes.com] vless-AU-1...",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "dbf3f074-3b18-43f3-b82a-debd8c879c69"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "🇦🇺[www.v2nodes.com] trojan-AU-..."
+        "🇦🇺[www.v2nodes.com] trojan-AU-...",
+        "🇦🇺[www.v2nodes.com] vless-AU-1..."
       ],
       "tag": "auto",
       "type": "urltest",
@@ -24,7 +42,8 @@
     {
       "outbounds": [
         "auto",
-        "🇦🇺[www.v2nodes.com] trojan-AU-..."
+        "🇦🇺[www.v2nodes.com] trojan-AU-...",
+        "🇦🇺[www.v2nodes.com] vless-AU-1..."
       ],
       "tag": "select",
       "type": "selector"

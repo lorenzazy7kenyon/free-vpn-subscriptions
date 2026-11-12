@@ -10,16 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
-  server: 46.250.250.149
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -44,10 +34,25 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇳🇱[www.v2nodes.com] ss-NL-1614... #1'
+  name: 🇦🇪AE-151.241.19.29-0087
   server: 151.241.19.29
   port: 19999
   udp: true
+- type: vmess
+  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知149
+  server: 140.83.57.20
+  port: 13118
+  udp: true
+  tls: true
+  servername: sg.11160321.de5.net
+  ws-opts:
+    path: /
+    headers:
+      Host: sg.11160321.de5.net
 - type: vless
   uuid: 64726966-0000-4000-8000-740000000000
   name: '🇫🇷[www.v2nodes.com] vless-FR-2... #1'
@@ -59,6 +64,16 @@ proxies:
     path: /fp=firefoxsecurity=tls
     headers:
       Host: parsa-panel-dy55x.railway1385-2a46.workers.dev
+- type: vless
+  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
+  server: 46.250.250.149
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
@@ -88,33 +103,50 @@ proxies:
   server: 102.37.156.224
   port: 443
   udp: true
+- type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  name: 🇯🇵[www.v2nodes.com] vless-JP-2...
+  server: 46.250.254.187
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: fs.qicai99.com
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
   - 🇬🇧[www.v2nodes.com] ss-GB-1616...
   - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
   - 🇳🇱[www.v2nodes.com] ss-NL-1614...
-  - '🇳🇱[www.v2nodes.com] ss-NL-1614... #1'
+  - 🇦🇪AE-151.241.19.29-0087
+  - 未知149
   - '🇫🇷[www.v2nodes.com] vless-FR-2... #1'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
+  - 🇯🇵[www.v2nodes.com] vless-JP-2...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
   - 🇬🇧[www.v2nodes.com] ss-GB-1616...
   - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
   - 🇳🇱[www.v2nodes.com] ss-NL-1614...
-  - '🇳🇱[www.v2nodes.com] ss-NL-1614... #1'
+  - 🇦🇪AE-151.241.19.29-0087
+  - 未知149
   - '🇫🇷[www.v2nodes.com] vless-FR-2... #1'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
+  - 🇯🇵[www.v2nodes.com] vless-JP-2...
 rules:
 - MATCH,SELECT

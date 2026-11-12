@@ -10,32 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知63
-  server: 195.85.23.225
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-- type: vless
-  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
-  name: 🇨🇿[www.v2nodes.com] vless-CZ-1...
-  server: 195.123.245.241
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
 - type: vless
   uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
   name: '🏳[www.v2nodes.com] vless- #2'
@@ -48,18 +22,16 @@ proxies:
   servername: udemy.com
   client-fingerprint: ios
 - type: vless
-  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-  name: '🇩🇪 德国 | DEU #3'
-  server: 91.184.248.161
+  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
+  name: 🇨🇿[www.v2nodes.com] vless-CZ-1...
+  server: 195.123.245.241
   port: 443
   udp: true
-  network: ws
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: v1n3.11676767.xyz
-  ws-opts:
-    path: /manhua/doujinfp=chrome
-    headers:
-      Host: v1n3.11676767.xyz
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 - type: vless
   uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
   name: '🇨🇿 捷克 | CZE #1'
@@ -73,25 +45,36 @@ proxies:
     path: /go.php/productsfp=chrome
     headers:
       Host: v1n3.11676767.xyz
+- type: vless
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  name: '🇩🇪 德国 | DEU #3'
+  server: 91.184.248.161
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: v1n3.11676767.xyz
+  ws-opts:
+    path: /manhua/doujinfp=chrome
+    headers:
+      Host: v1n3.11676767.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知63
-  - 🇨🇿[www.v2nodes.com] vless-CZ-1...
   - '🏳[www.v2nodes.com] vless- #2'
-  - '🇩🇪 德国 | DEU #3'
+  - 🇨🇿[www.v2nodes.com] vless-CZ-1...
   - '🇨🇿 捷克 | CZE #1'
+  - '🇩🇪 德国 | DEU #3'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知63
-  - 🇨🇿[www.v2nodes.com] vless-CZ-1...
   - '🏳[www.v2nodes.com] vless- #2'
-  - '🇩🇪 德国 | DEU #3'
+  - 🇨🇿[www.v2nodes.com] vless-CZ-1...
   - '🇨🇿 捷克 | CZE #1'
+  - '🇩🇪 德国 | DEU #3'
 rules:
 - MATCH,SELECT
