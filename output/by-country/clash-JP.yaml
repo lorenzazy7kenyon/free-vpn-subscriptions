@@ -10,20 +10,36 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
-  server: 103.75.118.228
-  port: 11452
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇯🇵[www.v2nodes.com] ss-JP-5141...
+  server: 149.22.87.204
+  port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇯🇵[www.v2nodes.com] ss-JP-9223...
+  server: 149.22.87.241
+  port: 443
+  udp: true
 - type: vless
   uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  name: 🇵🇱PL_5|2.3MB/s
+  name: 🇵🇱PL_1|2.7MB/s
+  server: 3.169.9.125
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: djb2br1cgydas.cloudfront.net
+  ws-opts:
+    path: fp=chrome
+    headers:
+      Host: djb2br1cgydas.cloudfront.net
+- type: vless
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  name: 🇵🇱PL_2|2.3MB/s
   server: 3.169.9.125
   port: 443
   udp: true
@@ -36,17 +52,17 @@ proxies:
       Host: d2ex4nxd2e01ub.cloudfront.net
 - type: vless
   uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  name: 🇫🇷FR_5|1.2MB/s
+  name: 🇫🇷FR_2|1.6MB/s
   server: 3.169.9.125
   port: 443
   udp: true
   network: ws
   tls: true
-  servername: d1m31xp31bswc2.cloudfront.net
+  servername: d14jyezfrcyf60.cloudfront.net
   ws-opts:
     path: /fp=chrome
     headers:
-      Host: d1m31xp31bswc2.cloudfront.net
+      Host: d14jyezfrcyf60.cloudfront.net
 - type: vless
   uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
   name: 🇺🇸_US_美国_IPV4 (4)
@@ -61,51 +77,42 @@ proxies:
     path: /
     headers:
       Host: d14jyezfrcyf60.cloudfront.net
+- type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
+  server: 103.75.118.228
+  port: 11452
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 - type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-  name: 🇯🇵[www.v2nodes.com] ss-JP-5141...
-  server: 149.22.87.204
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1291...
+  server: 149.22.87.240
   port: 443
   udp: true
 - type: vmess
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  uuid: c3d17f1d-9201-4644-b184-6cd1414c6cc5
   alterId: 0
   cipher: auto
   network: ws
-  name: 🇯🇵JP-168.138.43.75-1126
-  server: 168.138.43.75
-  port: 80
-  udp: true
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: jp01.a0a.xyz
-- type: vmess
-  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知149
-  server: 140.83.57.20
-  port: 13118
+  name: 未知26
+  server: 151.242.165.160
+  port: 6233
   udp: true
   tls: true
-  servername: sg.11160321.de5.net
+  servername: v47.emnode.top
   ws-opts:
     path: /
     headers:
-      Host: sg.11160321.de5.net
-- type: ss
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1544...
-  server: 84.247.155.196
-  port: 80
-  udp: true
+      Host: v47.emnode.top
 - type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
   server: 3.114.220.22
   port: 10583
   udp: true
@@ -114,24 +121,125 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
-  server: 3.114.220.22
-  port: 19645
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1544...
-  server: 84.247.155.196
+- type: vmess
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知27
+  server: 210.138.37.53
   port: 443
   udp: true
+  tls: true
+  servername: DrBKg16eGf3FZlM3.v.3dns.vip
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: DrBKg16eGf3FZlM3.v.3dns.vip
+- type: vless
+  uuid: 0bb8b560-b056-4245-8b9d-231a0a78c54b
+  name: '🇺🇸 美国 | USA #2'
+  server: 154.36.178.44
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: vip.freevpn.cloudns.biz
+  ws-opts:
+    path: /0bb8b560-b056-4245-8b9d-231a0a78c54b?ed=2048fp=chrome
+    headers:
+      Host: vip.freevpn.cloudns.biz
+- type: vless
+  uuid: 0bb8b560-b056-4245-8b9d-231a0a78c54b
+  name: '🇯🇵 日本 | JPN #5'
+  server: 154.36.156.220
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: vip.freevpn.cloudns.biz
+  ws-opts:
+    path: /0bb8b560-b056-4245-8b9d-231a0a78c54b?ed=2048fp=chrome
+    headers:
+      Host: vip.freevpn.cloudns.biz
+- type: vless
+  uuid: 0bb8b560-b056-4245-8b9d-231a0a78c54b
+  name: '🇯🇵 日本 | JPN #10'
+  server: 154.36.155.12
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: vip.freevpn.cloudns.biz
+  ws-opts:
+    path: /0bb8b560-b056-4245-8b9d-231a0a78c54b?ed=2048fp=chrome
+    headers:
+      Host: vip.freevpn.cloudns.biz
+- type: vless
+  uuid: 0bb8b560-b056-4245-8b9d-231a0a78c54b
+  name: '🇯🇵 日本 | JPN #11'
+  server: 154.36.154.29
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: vip.freevpn.cloudns.biz
+  ws-opts:
+    path: /0bb8b560-b056-4245-8b9d-231a0a78c54b?ed=2048fp=chrome
+    headers:
+      Host: vip.freevpn.cloudns.biz
+- type: vless
+  uuid: 0bb8b560-b056-4245-8b9d-231a0a78c54b
+  name: '🇯🇵 日本 | JPN #6'
+  server: 154.36.183.110
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: vip.freevpn.cloudns.biz
+  ws-opts:
+    path: /0bb8b560-b056-4245-8b9d-231a0a78c54b?ed=2048fp=chrome
+    headers:
+      Host: vip.freevpn.cloudns.biz
+- type: vless
+  uuid: 0bb8b560-b056-4245-8b9d-231a0a78c54b
+  name: '🇯🇵 日本 | JPN #4'
+  server: 64.83.37.223
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: vip.freevpn.cloudns.biz
+  ws-opts:
+    path: /0bb8b560-b056-4245-8b9d-231a0a78c54b?ed=2048fp=chrome
+    headers:
+      Host: vip.freevpn.cloudns.biz
+- type: vless
+  uuid: 0bb8b560-b056-4245-8b9d-231a0a78c54b
+  name: '🇺🇸 美国 | USA #9'
+  server: 64.83.51.119
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: vip.freevpn.cloudns.biz
+  ws-opts:
+    path: /0bb8b560-b056-4245-8b9d-231a0a78c54b?ed=2048fp=chrome
+    headers:
+      Host: vip.freevpn.cloudns.biz
+- type: vless
+  uuid: 0bb8b560-b056-4245-8b9d-231a0a78c54b
+  name: '🇯🇵 日本 | JPN #7'
+  server: 64.83.36.18
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: vip.freevpn.cloudns.biz
+  ws-opts:
+    path: /0bb8b560-b056-4245-8b9d-231a0a78c54b?ed=2048fp=chrome
+    headers:
+      Host: vip.freevpn.cloudns.biz
 - type: ss
   cipher: aes-256-gcm
   password: BeaUf9c0AEWH40Pu
@@ -139,48 +247,73 @@ proxies:
   server: 154.36.158.197
   port: 8388
   udp: true
-- type: vless
-  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #8'
-  server: 152.69.195.67
-  port: 47878
+- type: ss
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
+  name: 🇯🇵JP-84.247.155.196-0222
+  server: 84.247.155.196
+  port: 443
   udp: true
-  network: tcp
+- type: ss
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1544...
+  server: 84.247.155.196
+  port: 80
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
-  - 🇵🇱PL_5|2.3MB/s
-  - 🇫🇷FR_5|1.2MB/s
-  - 🇺🇸_US_美国_IPV4 (4)
   - 🇯🇵[www.v2nodes.com] ss-JP-5141...
-  - 🇯🇵JP-168.138.43.75-1126
-  - 未知149
-  - 🇯🇵[www.v2nodes.com] ss-JP-1544...
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
-  - 🇯🇵[www.v2nodes.com] ss-JP-1544...
+  - 🇯🇵[www.v2nodes.com] ss-JP-9223...
+  - 🇵🇱PL_1|2.7MB/s
+  - 🇵🇱PL_2|2.3MB/s
+  - 🇫🇷FR_2|1.6MB/s
+  - 🇺🇸_US_美国_IPV4 (4)
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
+  - 🇯🇵[www.v2nodes.com] ss-JP-1291...
+  - 未知26
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  - 未知27
+  - '🇺🇸 美国 | USA #2'
+  - '🇯🇵 日本 | JPN #5'
+  - '🇯🇵 日本 | JPN #10'
+  - '🇯🇵 日本 | JPN #11'
+  - '🇯🇵 日本 | JPN #6'
+  - '🇯🇵 日本 | JPN #4'
+  - '🇺🇸 美国 | USA #9'
+  - '🇯🇵 日本 | JPN #7'
   - 🇯🇵[www.v2nodes.com] ss-JP-1599...
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #8'
+  - 🇯🇵JP-84.247.155.196-0222
+  - 🇯🇵[www.v2nodes.com] ss-JP-1544...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
-  - 🇵🇱PL_5|2.3MB/s
-  - 🇫🇷FR_5|1.2MB/s
-  - 🇺🇸_US_美国_IPV4 (4)
   - 🇯🇵[www.v2nodes.com] ss-JP-5141...
-  - 🇯🇵JP-168.138.43.75-1126
-  - 未知149
-  - 🇯🇵[www.v2nodes.com] ss-JP-1544...
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
-  - 🇯🇵[www.v2nodes.com] ss-JP-1544...
+  - 🇯🇵[www.v2nodes.com] ss-JP-9223...
+  - 🇵🇱PL_1|2.7MB/s
+  - 🇵🇱PL_2|2.3MB/s
+  - 🇫🇷FR_2|1.6MB/s
+  - 🇺🇸_US_美国_IPV4 (4)
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
+  - 🇯🇵[www.v2nodes.com] ss-JP-1291...
+  - 未知26
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  - 未知27
+  - '🇺🇸 美国 | USA #2'
+  - '🇯🇵 日本 | JPN #5'
+  - '🇯🇵 日本 | JPN #10'
+  - '🇯🇵 日本 | JPN #11'
+  - '🇯🇵 日本 | JPN #6'
+  - '🇯🇵 日本 | JPN #4'
+  - '🇺🇸 美国 | USA #9'
+  - '🇯🇵 日本 | JPN #7'
   - 🇯🇵[www.v2nodes.com] ss-JP-1599...
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #8'
+  - 🇯🇵JP-84.247.155.196-0222
+  - 🇯🇵[www.v2nodes.com] ss-JP-1544...
 rules:
 - MATCH,SELECT
