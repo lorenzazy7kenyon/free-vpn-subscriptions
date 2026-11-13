@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 1d46250c-f015-439d-a7fd-c4d9e2a4c63d
-  name: 🇧🇬 保加利亚 | BGR 2
+  name: 🇧🇬[www.v2nodes.com] vless-BG-1...
   server: 88.80.150.15
   port: 443
   udp: true
@@ -20,30 +20,17 @@ proxies:
   tls: true
   servername: bg2.oncloudvpn.com
   client-fingerprint: edge
-- type: vless
-  uuid: 3f5e89d5-591f-4ac9-b071-b05680b573c3
-  name: 🇧🇬[www.v2nodes.com] vless-BG-1...
-  server: 131.123.43.103
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: bg2.gacvpn.site
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇬 保加利亚 | BGR 2
   - 🇧🇬[www.v2nodes.com] vless-BG-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇧🇬 保加利亚 | BGR 2
   - 🇧🇬[www.v2nodes.com] vless-BG-1...
 rules:
 - MATCH,SELECT

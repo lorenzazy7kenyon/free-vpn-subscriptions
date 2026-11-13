@@ -15,34 +15,32 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-  name: 未知148
+  name: 未知152
   server: 112.132.215.108
   port: 50002
   udp: true
 - type: vmess
-  uuid: 2a489513-46b5-488c-9899-9faaf2d83cd9
+  uuid: 279c2c58-2001-4f1a-8c12-fa9bd992f4ef
   alterId: 0
   cipher: auto
-  network: ws
-  name: 未知98
-  server: 120.48.133.162
-  port: 10086
+  network: tcp
+  name: 未知89
+  server: 106.15.230.166
+  port: 64952
   udp: true
-  ws-opts:
-    path: /
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知148
-  - 未知98
+  - 未知152
+  - 未知89
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知148
-  - 未知98
+  - 未知152
+  - 未知89
 rules:
 - MATCH,SELECT

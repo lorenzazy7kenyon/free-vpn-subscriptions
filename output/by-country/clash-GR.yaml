@@ -12,14 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🇬🇷[www.v2nodes.com] vless-GR-3... #2'
-  server: 85.90.197.158
-  port: 443
-  udp: true
-  network: tcp
-- type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🏳[www.v2nodes.com] vless- #6'
+  name: '🏳[www.v2nodes.com] vless- #11'
   server: 85.90.197.159
   port: 443
   udp: true
@@ -28,6 +21,13 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: fs.qicai99.com
+- type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  name: '🇬🇷[www.v2nodes.com] vless-GR-3... #2'
+  server: 85.90.197.158
+  port: 443
+  udp: true
+  network: tcp
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: '🇬🇷[www.v2nodes.com] vless-GR-3... #3'
@@ -39,34 +39,21 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: fs.qicai99.com
-- type: vless
-  uuid: 8f704ed6-9a1a-4d04-94dd-1bff501716de
-  name: 🇬🇷[www.v2nodes.com] vless-GR-1...
-  server: 85.90.197.220
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🏳[www.v2nodes.com] vless- #11'
   - '🇬🇷[www.v2nodes.com] vless-GR-3... #2'
-  - '🏳[www.v2nodes.com] vless- #6'
   - '🇬🇷[www.v2nodes.com] vless-GR-3... #3'
-  - 🇬🇷[www.v2nodes.com] vless-GR-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🏳[www.v2nodes.com] vless- #11'
   - '🇬🇷[www.v2nodes.com] vless-GR-3... #2'
-  - '🏳[www.v2nodes.com] vless- #6'
   - '🇬🇷[www.v2nodes.com] vless-GR-3... #3'
-  - 🇬🇷[www.v2nodes.com] vless-GR-1...
 rules:
 - MATCH,SELECT

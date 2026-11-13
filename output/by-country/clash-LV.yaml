@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
+  name: 🇳🇱[www.v2nodes.com] vless-NL-1...
   server: 94.183.234.245
   port: 443
   udp: true
@@ -22,34 +22,34 @@ proxies:
   servername: www.bing.com
   client-fingerprint: qq
 - type: hysteria2
-  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-  name: '@V2ray_confiig #3'
-  server: 31.76.62.148
-  port: 4444
-  udp: true
-  sni: lv2.nexfile.net
-- type: hysteria2
   password: 54d2f622-fd71-4f5f-8813-832b68f4ca3b
   name: '@vpnsal'
   server: 104.165.205.42
   port: 8443
   udp: true
   sni: speedtestmark.com
+- type: hysteria2
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  name: '@V2ray_confiig #3'
+  server: 31.76.62.148
+  port: 4444
+  udp: true
+  sni: lv2.nexfile.net
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
-  - '@V2ray_confiig #3'
+  - 🇳🇱[www.v2nodes.com] vless-NL-1...
   - '@vpnsal'
+  - '@V2ray_confiig #3'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
-  - '@V2ray_confiig #3'
+  - 🇳🇱[www.v2nodes.com] vless-NL-1...
   - '@vpnsal'
+  - '@V2ray_confiig #3'
 rules:
 - MATCH,SELECT

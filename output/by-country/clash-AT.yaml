@@ -19,30 +19,6 @@ proxies:
   udp: true
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: 🇦🇹[www.v2nodes.com] vless-AT-4...
-  server: 193.219.97.198
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: fs.qicai99.com
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: fs.qicai99.com
-- type: vless
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  name: 🇦🇹[www.v2nodes.com] vless-AT-1...
-  server: 66.90.106.28
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: banket-restoran.su
-  client-fingerprint: chrome
-- type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: 🇦🇹[www.v2nodes.com] vless-AT-2...
   server: 193.219.97.198
   port: 443
@@ -59,16 +35,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
-  - 🇦🇹[www.v2nodes.com] vless-AT-4...
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
   - 🇦🇹[www.v2nodes.com] vless-AT-2...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
-  - 🇦🇹[www.v2nodes.com] vless-AT-4...
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
   - 🇦🇹[www.v2nodes.com] vless-AT-2...
 rules:
 - MATCH,SELECT

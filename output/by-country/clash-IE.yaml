@@ -17,16 +17,6 @@ proxies:
   server: 146.70.90.198
   port: 17456
   udp: true
-- type: vless
-  uuid: 232fa5fc-f8af-4c96-a6cf-f69d3c60fa33
-  name: '🇮🇪 爱尔兰 | IRL #1'
-  server: 83.141.88.177
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: vector-gate.ru
-  client-fingerprint: ios
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -34,12 +24,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇮🇪[www.v2nodes.com] ss-IE-1209...
-  - '🇮🇪 爱尔兰 | IRL #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇮🇪[www.v2nodes.com] ss-IE-1209...
-  - '🇮🇪 爱尔兰 | IRL #1'
 rules:
 - MATCH,SELECT
