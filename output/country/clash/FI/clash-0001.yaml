@@ -21,13 +21,6 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
-- type: vless
-  uuid: 622654a4-b666-000b-9260-fb717e05154f
-  name: 🇫🇮[www.v2nodes.com] vless-FI
-  server: 169.40.34.41
-  port: 443
-  udp: true
-  network: tcp
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
@@ -35,21 +28,6 @@ proxies:
   network: ws
   name: 未知130
   server: 193.124.181.123
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知145
-  server: 185.232.204.222
   port: 443
   udp: true
   tls: true
@@ -68,6 +46,28 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- type: vless
+  uuid: 622654a4-b666-000b-9260-fb717e05154f
+  name: 🇫🇮[www.v2nodes.com] vless-FI
+  server: 169.40.34.41
+  port: 443
+  udp: true
+  network: tcp
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知145
+  server: 185.232.204.222
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
 - type: vless
   uuid: cebc5f19-18d9-48e6-9029-fb4b04caf393
   name: '🏳[www.v2nodes.com] vless- #6'
@@ -94,10 +94,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇫🇮[www.v2nodes.com] vless-FI-1...
-  - 🇫🇮[www.v2nodes.com] vless-FI
   - 未知130
-  - 未知145
   - '🏳[www.v2nodes.com] vless- #7'
+  - 🇫🇮[www.v2nodes.com] vless-FI
+  - 未知145
   - '🏳[www.v2nodes.com] vless- #6'
   - Telegram:@v2rayng3
 - name: SELECT
@@ -105,10 +105,10 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇫🇮[www.v2nodes.com] vless-FI-1...
-  - 🇫🇮[www.v2nodes.com] vless-FI
   - 未知130
-  - 未知145
   - '🏳[www.v2nodes.com] vless- #7'
+  - 🇫🇮[www.v2nodes.com] vless-FI
+  - 未知145
   - '🏳[www.v2nodes.com] vless- #6'
   - Telegram:@v2rayng3
 rules:

@@ -11,6 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
+  name: 🏳[www.v2nodes.com] vless-
+  server: 178.172.227.228
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 178.172.227.228
+- type: vless
   uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
   name: '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   server: 178.172.227.124
@@ -32,41 +43,21 @@ proxies:
     path: /vless
     headers:
       Host: 95.128.71.79
-- type: vless
-  uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
-  name: 🏳[www.v2nodes.com] vless-
-  server: 178.172.227.228
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 178.172.227.228
-- type: hysteria2
-  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-  name: برای اتصال دائمی جوین شو🍥 Tele...
-  server: 13.143.188.143
-  port: 4444
-  udp: true
-  sni: bl1.nexfile.net
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🏳[www.v2nodes.com] vless-
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - '🏳[www.v2nodes.com] vless- #1'
-  - 🏳[www.v2nodes.com] vless-
-  - برای اتصال دائمی جوین شو🍥 Tele...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🏳[www.v2nodes.com] vless-
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - '🏳[www.v2nodes.com] vless- #1'
-  - 🏳[www.v2nodes.com] vless-
-  - برای اتصال دائمی جوین شو🍥 Tele...
 rules:
 - MATCH,SELECT

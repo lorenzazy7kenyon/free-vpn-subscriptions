@@ -10,20 +10,52 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇸🇬[www.v2nodes.com] ss-SG-1616... #1'
-  server: 15.235.182.183
-  port: 19999
+- type: vless
+  uuid: f46182d1-e13b-47d3-97e2-fa5426a93e7c
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+  server: 45.132.75.213
+  port: 2053
   udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #10'
-  server: 149.88.106.74
-  port: 19999
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: c5f59ef3-9540-49fa-bd1e-c6c2f79df49a
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  server: 134.255.211.36
+  port: 443
   udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: sg-sin.probe.geomyip.com
+  client-fingerprint: chrome
+- type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  name: 🇸🇬SG-68.183.227.4-0218
+  server: 68.183.227.4
+  port: 8080
+  udp: true
+- type: vless
+  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
+  server: 147.93.173.45
+  port: 10444
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: video.yandex.ru
+  client-fingerprint: safari
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇸🇬[www.v2nodes.com] trojan-SG-... #1'
+  server: 149.28.130.108
+  port: 443
+  udp: true
+  sni: searchcreativejobsandshowcaseyourartistictalents.com
 - type: vless
   uuid: bcdb425f-80bc-4ec8-92a5-8edf53639c01
   name: 🇸🇬[www.v2nodes.com] vless-SG-1...
@@ -34,45 +66,20 @@ proxies:
   tls: true
   servername: www.bing.com
   client-fingerprint: chrome
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇸🇬[www.v2nodes.com] trojan-SG-... #1'
-  server: 149.28.130.108
-  port: 443
-  udp: true
-  sni: searchcreativejobsandshowcaseyourartistictalents.com
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇸🇬SG-149.88.106.73-0168
-  server: 149.88.106.73
+  name: 🇸🇬[www.v2nodes.com] ss-SG-1616...
+  server: 51.79.228.131
   port: 19999
-  udp: true
-- type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  name: 🇸🇬SG-68.183.227.4-5807
-  server: 68.183.227.4
-  port: 8080
   udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇸🇬[www.v2nodes.com] ss-SG-1615...
-  server: 15.235.164.133
+  name: '🏳[www.v2nodes.com] ss- #10'
+  server: 149.88.106.74
   port: 19999
   udp: true
-- type: vless
-  uuid: 59b203b2-b1bc-4e9c-a9e5-ccb8f691bf72
-  name: '🏳[www.v2nodes.com] vless- #25'
-  server: 134.185.81.5
-  port: 47881
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.tesla.com
-  client-fingerprint: chrome
 - type: vless
   uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
   name: '🇸🇬[www.v2nodes.com] vless-SG-1... #4'
@@ -89,68 +96,10 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #1'
-  server: 149.88.107.74
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #2'
   server: 149.88.107.47
   port: 19999
   udp: true
-- type: vless
-  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
-  server: 147.93.173.45
-  port: 10444
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: video.yandex.ru
-  client-fingerprint: safari
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇸🇬[www.v2nodes.com] ss-SG-1616...
-  server: 51.79.228.131
-  port: 19999
-  udp: true
-- type: vless
-  uuid: 3eb38d44-2e61-4553-b6ae-026033eacba5
-  name: 新加坡3|@ripaojiedian
-  server: 67.159.49.27
-  port: 2053
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 3eb38d44-2e61-4553-b6ae-026033eacba5
-  name: 新加坡2|@ripaojiedian
-  server: 67.159.49.26
-  port: 2053
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: feccadec-8239-4c00-a336-c97c78b1689e
-  name: '🇸🇬 新加坡 | SGP #1'
-  server: 67.159.49.37
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
 - type: vless
   uuid: 3eb38d44-2e61-4553-b6ae-026033eacba5
   name: 新加坡|@ripaojiedian
@@ -162,17 +111,39 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: vless
-  uuid: c5f59ef3-9540-49fa-bd1e-c6c2f79df49a
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
-  server: 134.255.211.36
+- type: vmess
+  uuid: 0764a598-82c4-4b41-ba10-551a625beed5
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇸🇬SG-8.219.185.204-0076
+  server: 8.219.185.204
   port: 443
+  udp: true
+  tls: true
+  servername: uk2.v2rayserv.com
+  ws-opts:
+    path: /sshocean
+    headers:
+      Host: uk2.v2rayserv.com
+- type: vless
+  uuid: 3eb38d44-2e61-4553-b6ae-026033eacba5
+  name: 新加坡3|@ripaojiedian
+  server: 67.159.49.27
+  port: 2053
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: sg-sin.probe.geomyip.com
+  servername: www.apple.com
   client-fingerprint: chrome
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇸🇬SG-149.88.106.73-0194
+  server: 149.88.106.73
+  port: 19999
+  udp: true
 - type: vless
   uuid: a16bd0e2-ff2e-4e4c-a955-0c684255a065
   name: 🇸🇬[www.v2nodes.com] vless-SG
@@ -185,16 +156,74 @@ proxies:
   servername: sg.fasti.win
   client-fingerprint: chrome
 - type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
-  server: 3.0.111.82
-  port: 17623
+  uuid: 59b203b2-b1bc-4e9c-a9e5-ccb8f691bf72
+  name: '🏳[www.v2nodes.com] vless- #25'
+  server: 134.185.81.5
+  port: 47881
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.tesla.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 3eb38d44-2e61-4553-b6ae-026033eacba5
+  name: 新加坡2|@ripaojiedian
+  server: 67.159.49.26
+  port: 2053
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
+- type: vmess
+  uuid: 02c99c32-0058-4b87-b51a-8f5d6a59bddd
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇸🇬SG-51.79.157.223-0081
+  server: 51.79.157.223
+  port: 80
+  udp: true
+  ws-opts:
+    path: /sshocean
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1616... #1'
+  server: 15.235.182.183
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇸🇬[www.v2nodes.com] ss-SG-1615...
+  server: 15.235.164.133
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #1'
+  server: 149.88.107.74
+  port: 19999
+  udp: true
+- type: vmess
+  uuid: 0764a598-82c4-4b41-ba10-551a625beed5
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇸🇬SG-8.219.216.216-0075
+  server: 8.219.216.216
+  port: 443
+  udp: true
+  tls: true
+  servername: uk2.v2rayserv.com
+  ws-opts:
+    path: /sshocean
+    headers:
+      Host: uk2.v2rayserv.com
 - type: vless
   uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
   name: '🇸🇬[www.v2nodes.com] vless-SG-1... #5'
@@ -207,15 +236,16 @@ proxies:
   servername: www.intel.com
   client-fingerprint: chrome
 - type: vless
-  uuid: f46182d1-e13b-47d3-97e2-fa5426a93e7c
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
-  server: 45.132.75.213
-  port: 2053
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
+  server: 3.0.111.82
+  port: 17623
   udp: true
+  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
+  servername: www.apple.com
+  client-fingerprint: chrome
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   name: 🇸🇬[www.v2nodes.com] trojan-SG-...
@@ -223,61 +253,75 @@ proxies:
   port: 443
   udp: true
   sni: exploredigitaljobplatformandfindonlinework.com
+- type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: 🇸🇬 新加坡 | SGP
+  server: 56.10.136.212
+  port: 443
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇸🇬[www.v2nodes.com] ss-SG-1616... #1'
-  - '🏳[www.v2nodes.com] ss- #10'
-  - 🇸🇬[www.v2nodes.com] vless-SG-1...
-  - '🇸🇬[www.v2nodes.com] trojan-SG-... #1'
-  - 🇸🇬SG-149.88.106.73-0168
-  - 🇸🇬SG-68.183.227.4-5807
-  - 🇸🇬[www.v2nodes.com] ss-SG-1615...
-  - '🏳[www.v2nodes.com] vless- #25'
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #4'
-  - '🇸🇬[www.v2nodes.com] ss-SG-1615... #1'
-  - '🇸🇬[www.v2nodes.com] ss-SG-1615... #2'
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
-  - 🇸🇬[www.v2nodes.com] ss-SG-1616...
-  - 新加坡3|@ripaojiedian
-  - 新加坡2|@ripaojiedian
-  - '🇸🇬 新加坡 | SGP #1'
-  - 新加坡|@ripaojiedian
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
-  - 🇸🇬[www.v2nodes.com] vless-SG
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #5'
   - '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  - 🇸🇬SG-68.183.227.4-0218
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
+  - '🇸🇬[www.v2nodes.com] trojan-SG-... #1'
+  - 🇸🇬[www.v2nodes.com] vless-SG-1...
+  - 🇸🇬[www.v2nodes.com] ss-SG-1616...
+  - '🏳[www.v2nodes.com] ss- #10'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #4'
+  - '🇸🇬[www.v2nodes.com] ss-SG-1615... #2'
+  - 新加坡|@ripaojiedian
+  - 🇸🇬SG-8.219.185.204-0076
+  - 新加坡3|@ripaojiedian
+  - 🇸🇬SG-149.88.106.73-0194
+  - 🇸🇬[www.v2nodes.com] vless-SG
+  - '🏳[www.v2nodes.com] vless- #25'
+  - 新加坡2|@ripaojiedian
+  - 🇸🇬SG-51.79.157.223-0081
+  - '🇸🇬[www.v2nodes.com] ss-SG-1616... #1'
+  - 🇸🇬[www.v2nodes.com] ss-SG-1615...
+  - '🇸🇬[www.v2nodes.com] ss-SG-1615... #1'
+  - 🇸🇬SG-8.219.216.216-0075
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #5'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
   - 🇸🇬[www.v2nodes.com] trojan-SG-...
+  - 🇸🇬 新加坡 | SGP
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇸🇬[www.v2nodes.com] ss-SG-1616... #1'
-  - '🏳[www.v2nodes.com] ss- #10'
-  - 🇸🇬[www.v2nodes.com] vless-SG-1...
-  - '🇸🇬[www.v2nodes.com] trojan-SG-... #1'
-  - 🇸🇬SG-149.88.106.73-0168
-  - 🇸🇬SG-68.183.227.4-5807
-  - 🇸🇬[www.v2nodes.com] ss-SG-1615...
-  - '🏳[www.v2nodes.com] vless- #25'
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #4'
-  - '🇸🇬[www.v2nodes.com] ss-SG-1615... #1'
-  - '🇸🇬[www.v2nodes.com] ss-SG-1615... #2'
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
-  - 🇸🇬[www.v2nodes.com] ss-SG-1616...
-  - 新加坡3|@ripaojiedian
-  - 新加坡2|@ripaojiedian
-  - '🇸🇬 新加坡 | SGP #1'
-  - 新加坡|@ripaojiedian
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
-  - 🇸🇬[www.v2nodes.com] vless-SG
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #5'
   - '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  - 🇸🇬SG-68.183.227.4-0218
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
+  - '🇸🇬[www.v2nodes.com] trojan-SG-... #1'
+  - 🇸🇬[www.v2nodes.com] vless-SG-1...
+  - 🇸🇬[www.v2nodes.com] ss-SG-1616...
+  - '🏳[www.v2nodes.com] ss- #10'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #4'
+  - '🇸🇬[www.v2nodes.com] ss-SG-1615... #2'
+  - 新加坡|@ripaojiedian
+  - 🇸🇬SG-8.219.185.204-0076
+  - 新加坡3|@ripaojiedian
+  - 🇸🇬SG-149.88.106.73-0194
+  - 🇸🇬[www.v2nodes.com] vless-SG
+  - '🏳[www.v2nodes.com] vless- #25'
+  - 新加坡2|@ripaojiedian
+  - 🇸🇬SG-51.79.157.223-0081
+  - '🇸🇬[www.v2nodes.com] ss-SG-1616... #1'
+  - 🇸🇬[www.v2nodes.com] ss-SG-1615...
+  - '🇸🇬[www.v2nodes.com] ss-SG-1615... #1'
+  - 🇸🇬SG-8.219.216.216-0075
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #5'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
   - 🇸🇬[www.v2nodes.com] trojan-SG-...
+  - 🇸🇬 新加坡 | SGP
 rules:
 - MATCH,SELECT

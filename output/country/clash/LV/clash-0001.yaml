@@ -11,17 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: e9e44c8f-44e1-450f-806d-f0dca6d7dc95
-  name: '🇱🇻 拉脱维亚 | LVA #1'
-  server: 31.42.120.3
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: lv-rix3.probe.geomyip.com
-  client-fingerprint: chrome
-- type: vless
   uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
   name: '🏳[www.v2nodes.com] vless- #16'
   server: 94.183.234.245
@@ -41,7 +30,7 @@ proxies:
   sni: lv2.nexfile.net
 - type: hysteria2
   password: 54d2f622-fd71-4f5f-8813-832b68f4ca3b
-  name: '@meliproxyy'
+  name: '@vpnsal'
   server: 104.165.205.42
   port: 8443
   udp: true
@@ -52,17 +41,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇱🇻 拉脱维亚 | LVA #1'
   - '🏳[www.v2nodes.com] vless- #16'
   - '@meliproxyy #2'
-  - '@meliproxyy'
+  - '@vpnsal'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇱🇻 拉脱维亚 | LVA #1'
   - '🏳[www.v2nodes.com] vless- #16'
   - '@meliproxyy #2'
-  - '@meliproxyy'
+  - '@vpnsal'
 rules:
 - MATCH,SELECT
