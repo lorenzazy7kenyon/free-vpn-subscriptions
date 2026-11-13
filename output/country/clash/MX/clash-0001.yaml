@@ -10,16 +10,9 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-256-gcm
-  password: BWyPPTusFKhGgzKh
-  name: '🏳[www.v2nodes.com] ss- #8'
-  server: 64.177.90.30
-  port: 8388
-  udp: true
 - type: vless
   uuid: 39a390af-1f90-4c0e-89e4-4e2023732e4b
-  name: '🏳[www.v2nodes.com] vless- #18'
+  name: 🇲🇽[www.v2nodes.com] vless-MX-1...
   server: 147.78.1.253
   port: 443
   udp: true
@@ -28,19 +21,26 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
+- type: ss
+  cipher: aes-256-gcm
+  password: BWyPPTusFKhGgzKh
+  name: 🇲🇽[www.v2nodes.com] ss-MX-1564...
+  server: 64.177.90.30
+  port: 8388
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] ss- #8'
-  - '🏳[www.v2nodes.com] vless- #18'
+  - 🇲🇽[www.v2nodes.com] vless-MX-1...
+  - 🇲🇽[www.v2nodes.com] ss-MX-1564...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] ss- #8'
-  - '🏳[www.v2nodes.com] vless- #18'
+  - 🇲🇽[www.v2nodes.com] vless-MX-1...
+  - 🇲🇽[www.v2nodes.com] ss-MX-1564...
 rules:
 - MATCH,SELECT

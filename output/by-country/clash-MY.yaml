@@ -17,15 +17,6 @@ proxies:
   port: 443
   udp: true
   sni: 47.250.84.25
-- type: vmess
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知24
-  server: 192.228.145.118
-  port: 10086
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -33,12 +24,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
-  - 未知24
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
-  - 未知24
 rules:
 - MATCH,SELECT

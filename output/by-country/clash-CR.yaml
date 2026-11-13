@@ -10,47 +10,30 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: 5f1d6d32-76b3-4562-8982-df2b7c122708
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知159
-  server: 190.93.244.201
-  port: 443
+- type: vless
+  uuid: b2853d19-fada-44dc-8d44-967d1af122e0
+  name: 🇺🇸US_16|2.3MB/s
+  server: 190.93.244.166
+  port: 2096
   udp: true
+  network: ws
   tls: true
-  servername: argo-tunnel.111874.xyz
+  servername: wqa3miojjr8fyozhiui--su3-ucg1gdx.pages.dev
   ws-opts:
-    path: /5f1d6d32-76b3-4562-8982-df2b7c122708-vm
+    path: /eyJqdW5rIjoiWmFzVk5rd2siLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iXX0=fp=chrome
     headers:
-      Host: argo-tunnel.111874.xyz
-- type: vmess
-  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🏁RELAY-190.93.245.3-4823
-  server: 190.93.245.3
-  port: 443
-  udp: true
-  tls: true
-  servername: 190.93.245.3
-  ws-opts:
-    path: /5QNROSRV
+      Host: wqa3miojjr8fyozhiui--su3-ucg1gdx.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知159
-  - 🏁RELAY-190.93.245.3-4823
+  - 🇺🇸US_16|2.3MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知159
-  - 🏁RELAY-190.93.245.3-4823
+  - 🇺🇸US_16|2.3MB/s
 rules:
 - MATCH,SELECT

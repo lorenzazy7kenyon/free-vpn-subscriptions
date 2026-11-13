@@ -1,9 +1,26 @@
 {
   "outbounds": [
     {
+      "flow": "xtls-rprx-vision",
       "server": "196.196.149.80",
       "server_port": 443,
-      "tag": "🇪🇸ES_2|1.6MB/s",
+      "tag": "🇪🇸 西班牙 | ESP #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "7aa271t.es1.h1clayd.click",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "4201786b-d99b-4147-a5f0-20d47acddb81"
+    },
+    {
+      "server": "196.196.149.81",
+      "server_port": 443,
+      "tag": "🇪🇸 西班牙 | ESP #2",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -19,7 +36,8 @@
     {
       "interval": "5m",
       "outbounds": [
-        "🇪🇸ES_2|1.6MB/s"
+        "🇪🇸 西班牙 | ESP #1",
+        "🇪🇸 西班牙 | ESP #2"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -28,7 +46,8 @@
     {
       "outbounds": [
         "auto",
-        "🇪🇸ES_2|1.6MB/s"
+        "🇪🇸 西班牙 | ESP #1",
+        "🇪🇸 西班牙 | ESP #2"
       ],
       "tag": "select",
       "type": "selector"

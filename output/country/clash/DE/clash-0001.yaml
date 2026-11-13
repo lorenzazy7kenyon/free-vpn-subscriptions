@@ -10,9 +10,71 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇩🇪DE-193.108.119.29-0277
+  server: 193.108.119.29
+  port: 443
+  udp: true
+  sni: blog.iloverussia2026.com
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇩🇪DE-193.108.119.96-0141
+  server: 193.108.119.96
+  port: 443
+  udp: true
+  sni: learn.iloverussia2026.com
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇩🇪DE-193.108.119.193-0146
+  server: 193.108.119.193
+  port: 443
+  udp: true
+  sni: resources.iloverussia2026.com
+- type: vmess
+  uuid: 6b306661-93c7-4653-94d6-a8adb742b82f
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知55
+  server: 31.184.244.6
+  port: 2087
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇩🇪[www.v2nodes.com] ss-DE-1615... #2'
+  server: 193.108.119.2
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇩🇪[www.v2nodes.com] ss-DE-1615... #1'
+  server: 23.157.88.43
+  port: 19999
+  udp: true
+- type: vless
+  uuid: 746c7209-49e1-494e-9ad1-a630d48ed26d
+  name: 德国|@ripaojiedian
+  server: 50.7.86.203
+  port: 2053
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇩🇪DE-193.108.119.15-0135
+  server: 193.108.119.15
+  port: 443
+  udp: true
+  sni: courses.iloverussia2026.com
 - type: vless
   uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
+  name: '🏳[www.v2nodes.com] vless- #1'
   server: 5.83.129.236
   port: 443
   udp: true
@@ -31,96 +93,22 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇩🇪[www.v2nodes.com] ss-DE-1615...
-  server: 193.108.119.3
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #3'
-  server: 193.108.119.2
-  port: 19999
-  udp: true
-- type: vless
-  uuid: 746c7209-49e1-494e-9ad1-a630d48ed26d
-  name: 德国|@ripaojiedian
-  server: 50.7.86.203
-  port: 2053
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇩🇪DE-193.108.119.193-0186
-  server: 193.108.119.193
-  port: 443
-  udp: true
-  sni: resources.iloverussia2026.com
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #2'
-  server: 23.157.88.43
-  port: 19999
-  udp: true
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇩🇪DE-193.108.119.15-0135
-  server: 193.108.119.15
-  port: 443
-  udp: true
-  sni: courses.iloverussia2026.com
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇩🇪DE-193.108.119.96-0169
-  server: 193.108.119.96
-  port: 443
-  udp: true
-  sni: learn.iloverussia2026.com
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇩🇪DE-193.108.119.29-0168
-  server: 193.108.119.29
-  port: 443
-  udp: true
-  sni: blog.iloverussia2026.com
 - type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  uuid: 672cdade-bb05-4c86-b578-e5d09b79524a
   alterId: 0
   cipher: auto
-  network: tcp
-  name: 未知6
-  server: 193.108.117.61
-  port: 1270
-  udp: true
-  tls: true
-  servername: xmfhlpy.com
-- type: vmess
-  uuid: 6b306661-93c7-4653-94d6-a8adb742b82f
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知10
-  server: 31.184.244.6
-  port: 2087
+  network: http
+  name: '🇩🇪 德国 | DEU #1'
+  server: 23.165.200.150
+  port: 52080
   udp: true
 - type: vless
-  uuid: 1d46250c-f015-439d-a7fd-c4d9e2a4c63d
-  name: 🇳🇱 荷兰 | NLD 5
-  server: 212.113.116.181
-  port: 443
+  uuid: 855c7aaa-e7d6-463e-971e-d36032744428
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #7'
+  server: 159.195.207.238
+  port: 49313
   udp: true
-  network: grpc
-  tls: true
-  servername: de.oncloudvpn.com
-  client-fingerprint: chrome
+  network: tcp
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -128,32 +116,24 @@ proxies:
   server: 57.129.83.85
   port: 19999
   udp: true
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知142
-  server: 111.88.74.167
-  port: 443
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇩🇪[www.v2nodes.com] ss-DE-1615...
+  server: 193.108.119.3
+  port: 19999
   udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
 - type: vless
-  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
-  server: 31.22.10.239
+  uuid: 1d1eda2e-0bd7-4478-877b-1c5425c6c4dd
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
+  server: 144.31.157.41
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
+  servername: tradingview.com
+  client-fingerprint: firefox
 - type: vless
   uuid: ebdfaf99-41d8-4e48-8196-d54510ffb556
   name: '🇩🇪[www.v2nodes.com] vless-DE-1... #10'
@@ -165,13 +145,68 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知139
+  server: 64.188.106.254
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+- type: vmess
+  uuid: 78fb1a62-b276-4a13-ab57-f2b87d0f37a5
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知163
+  server: 178.105.210.96
+  port: 80
+  udp: true
 - type: vless
-  uuid: 855c7aaa-e7d6-463e-971e-d36032744428
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #4'
-  server: 159.195.207.238
-  port: 49313
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  name: 🇵🇱PL_4|1.3MB/s
+  server: 3.168.217.188
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: djb2br1cgydas.cloudfront.net
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: djb2br1cgydas.cloudfront.net
+- type: vless
+  uuid: 585a421d-d782-4420-912e-dd58ff5966d7
+  name: 🇪🇸ES_1|2.2MB/s
+  server: 9.247.174.134
+  port: 8443
   udp: true
   network: tcp
+  tls: true
+  servername: play.googleapis.com
+  client-fingerprint: chrome
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知168
+  server: 108.165.236.142
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
 - type: vless
   uuid: 46d221fa-e9b4-748c-4eae-019a88e42991
   name: 🇮🇸[www.v2nodes.com] vless-IS-3...
@@ -185,54 +220,33 @@ proxies:
     path: /tvpn-tor/isfp=chrome
     headers:
       Host: orbylume.my.to
-- type: vmess
-  uuid: 8e9687fc-a3a7-414a-8676-8e2136797cfe
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知158
-  server: 94.156.179.138
-  port: 110
+- type: hysteria2
+  password: 5icixgawam84vgrp
+  name: '@V2ray_confiig #1'
+  server: 109.70.74.213
+  port: 2098
   udp: true
-- type: vless
-  uuid: 1d1eda2e-0bd7-4478-877b-1c5425c6c4dd
-  name: '🏳[www.v2nodes.com] vless- #2'
-  server: 144.31.157.41
+  sni: 109.70.74.213
+  obfs: salamander
+  obfs-password: 7922smqtd5qm70fu
+- type: hysteria2
+  password: a2c74ce7-5daa-4bee-a1eb-52863873b3c3
+  name: 🗼31@oneclickvpnkeys
+  server: 194.48.250.233
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: tradingview.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: 585a421d-d782-4420-912e-dd58ff5966d7
-  name: 🇪🇸ES_1|2.2MB/s
-  server: 9.247.174.134
+  sni: mol.ultimagamest.com
+  skip-cert-verify: true
+- type: hysteria2
+  password: KevinZakarian
+  name: 🩵+@Azarakhsh_Proxy+🩷
+  server: 179.61.132.96
   port: 8443
   udp: true
-  network: tcp
-  tls: true
-  servername: play.googleapis.com
-  client-fingerprint: chrome
-- type: vmess
-  uuid: aa8a26cd-94f4-4f11-a3b3-48f30a127627
-  alterId: 0
-  cipher: auto
-  network: grpc
-  name: 未知102
-  server: 136.243.83.105
-  port: 46277
-  udp: true
-- type: vmess
-  uuid: 78ed2c82-20d6-48ed-a76d-294065803259
-  alterId: 0
-  cipher: auto
-  network: httpupgrade
-  name: 未知136
-  server: 91.107.169.224
-  port: 80
-  udp: true
+  sni: 179.61.132.96
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: KevinZakarian
 - type: hysteria2
   password: 146d567c-6335-4e63-a8aa-7ec068642440
   name: 🇩🇪 德国 | DEU
@@ -251,22 +265,12 @@ proxies:
   obfs: salamander
   obfs-password: 7922smqtd5qm70fu
 - type: hysteria2
-  password: KevinZakarian
-  name: 🩵+@Azarakhsh_Proxy+🩷
-  server: 179.61.132.96
-  port: 8443
-  udp: true
-  sni: 179.61.132.96
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: KevinZakarian
-- type: hysteria2
-  password: a2c74ce7-5daa-4bee-a1eb-52863873b3c3
-  name: 🗼31@oneclickvpnkeys
-  server: 194.48.250.233
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  name: 🫆92@oneclickvpnkeys
+  server: 3.69.232.199
   port: 443
   udp: true
-  sni: mol.ultimagamest.com
+  sni: vpn-de-002.fastervpn.world
   skip-cert-verify: true
 - type: hysteria2
   password: 2be4ee40-0d2a-43cb-a267-8769df96da2a
@@ -275,84 +279,73 @@ proxies:
   port: 443
   udp: true
   sni: va.stream-room.com
-- type: hysteria2
-  password: 5icixgawam84vgrp
-  name: '@V2ray_confiig #1'
-  server: 109.70.74.213
-  port: 2098
-  udp: true
-  sni: 109.70.74.213
-  obfs: salamander
-  obfs-password: 7922smqtd5qm70fu
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
-  - 德国2|@ripaojiedian
-  - 🇩🇪[www.v2nodes.com] ss-DE-1615...
-  - '🏳[www.v2nodes.com] ss- #3'
+  - 🇩🇪DE-193.108.119.29-0277
+  - 🇩🇪DE-193.108.119.96-0141
+  - 🇩🇪DE-193.108.119.193-0146
+  - 未知55
+  - '🇩🇪[www.v2nodes.com] ss-DE-1615... #2'
+  - '🇩🇪[www.v2nodes.com] ss-DE-1615... #1'
   - 德国|@ripaojiedian
-  - 🇩🇪DE-193.108.119.193-0186
-  - '🏳[www.v2nodes.com] ss- #2'
   - 🇩🇪DE-193.108.119.15-0135
-  - 🇩🇪DE-193.108.119.96-0169
-  - 🇩🇪DE-193.108.119.29-0168
-  - 未知6
-  - 未知10
-  - 🇳🇱 荷兰 | NLD 5
+  - '🏳[www.v2nodes.com] vless- #1'
+  - 德国2|@ripaojiedian
+  - '🇩🇪 德国 | DEU #1'
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #7'
   - 🇩🇪[www.v2nodes.com] ss-DE-1616...
-  - 未知142
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
+  - 🇩🇪[www.v2nodes.com] ss-DE-1615...
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #10'
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #4'
-  - 🇮🇸[www.v2nodes.com] vless-IS-3...
-  - 未知158
-  - '🏳[www.v2nodes.com] vless- #2'
+  - 未知139
+  - 未知163
+  - 🇵🇱PL_4|1.3MB/s
   - 🇪🇸ES_1|2.2MB/s
-  - 未知102
-  - 未知136
+  - 未知168
+  - 🇮🇸[www.v2nodes.com] vless-IS-3...
+  - '@V2ray_confiig #1'
+  - 🗼31@oneclickvpnkeys
+  - 🩵+@Azarakhsh_Proxy+🩷
   - 🇩🇪 德国 | DEU
   - T✰Join -> @v2raymelliii✰
-  - 🩵+@Azarakhsh_Proxy+🩷
-  - 🗼31@oneclickvpnkeys
+  - 🫆92@oneclickvpnkeys
   - 🫆12@oneclickvpnkeys
-  - '@V2ray_confiig #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
-  - 德国2|@ripaojiedian
-  - 🇩🇪[www.v2nodes.com] ss-DE-1615...
-  - '🏳[www.v2nodes.com] ss- #3'
+  - 🇩🇪DE-193.108.119.29-0277
+  - 🇩🇪DE-193.108.119.96-0141
+  - 🇩🇪DE-193.108.119.193-0146
+  - 未知55
+  - '🇩🇪[www.v2nodes.com] ss-DE-1615... #2'
+  - '🇩🇪[www.v2nodes.com] ss-DE-1615... #1'
   - 德国|@ripaojiedian
-  - 🇩🇪DE-193.108.119.193-0186
-  - '🏳[www.v2nodes.com] ss- #2'
   - 🇩🇪DE-193.108.119.15-0135
-  - 🇩🇪DE-193.108.119.96-0169
-  - 🇩🇪DE-193.108.119.29-0168
-  - 未知6
-  - 未知10
-  - 🇳🇱 荷兰 | NLD 5
+  - '🏳[www.v2nodes.com] vless- #1'
+  - 德国2|@ripaojiedian
+  - '🇩🇪 德国 | DEU #1'
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #7'
   - 🇩🇪[www.v2nodes.com] ss-DE-1616...
-  - 未知142
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
+  - 🇩🇪[www.v2nodes.com] ss-DE-1615...
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #10'
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #4'
-  - 🇮🇸[www.v2nodes.com] vless-IS-3...
-  - 未知158
-  - '🏳[www.v2nodes.com] vless- #2'
+  - 未知139
+  - 未知163
+  - 🇵🇱PL_4|1.3MB/s
   - 🇪🇸ES_1|2.2MB/s
-  - 未知102
-  - 未知136
+  - 未知168
+  - 🇮🇸[www.v2nodes.com] vless-IS-3...
+  - '@V2ray_confiig #1'
+  - 🗼31@oneclickvpnkeys
+  - 🩵+@Azarakhsh_Proxy+🩷
   - 🇩🇪 德国 | DEU
   - T✰Join -> @v2raymelliii✰
-  - 🩵+@Azarakhsh_Proxy+🩷
-  - 🗼31@oneclickvpnkeys
+  - 🫆92@oneclickvpnkeys
   - 🫆12@oneclickvpnkeys
-  - '@V2ray_confiig #1'
 rules:
 - MATCH,SELECT

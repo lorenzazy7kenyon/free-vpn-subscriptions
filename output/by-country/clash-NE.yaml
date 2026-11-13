@@ -12,7 +12,30 @@ dns:
 proxies:
 - type: vless
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: 🇳🇱NL_12|1.8MB/s
+  name: 🇳🇱NL_11|2.4MB/s
+  server: 196.196.148.63
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: 717252g.nl8.h1clayd.click
+  client-fingerprint: chrome
+- type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  name: 🇦🇱 AL_24
+  server: 196.196.148.85
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: 5d0319t.nl7.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
+    short-id: 361d0dd59c70516f
+- type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  name: '🇦🇱 AL_24 #1'
   server: 196.196.148.85
   port: 443
   udp: true
@@ -35,32 +58,33 @@ proxies:
     short-id: 7b2b1a14a6e0630d
 - type: vless
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: 🇦🇱 AL_24
-  server: 196.196.148.85
+  name: '🇧🇾 BY_24 #1'
+  server: 196.196.148.63
   port: 443
   udp: true
   network: tcp
   tls: true
-  servername: 5d0319t.nl7.h1clayd.click
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
-    short-id: 361d0dd59c70516f
+  servername: fc82dfx.nl8.h1clayd.click
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇱NL_12|1.8MB/s
-  - 🇧🇾 BY_30
+  - 🇳🇱NL_11|2.4MB/s
   - 🇦🇱 AL_24
+  - '🇦🇱 AL_24 #1'
+  - 🇧🇾 BY_30
+  - '🇧🇾 BY_24 #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇳🇱NL_12|1.8MB/s
-  - 🇧🇾 BY_30
+  - 🇳🇱NL_11|2.4MB/s
   - 🇦🇱 AL_24
+  - '🇦🇱 AL_24 #1'
+  - 🇧🇾 BY_30
+  - '🇧🇾 BY_24 #1'
 rules:
 - MATCH,SELECT
