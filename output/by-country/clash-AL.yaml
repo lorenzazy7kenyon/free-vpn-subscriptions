@@ -10,9 +10,16 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: yZiPrr484OdSYcivDUv+UIygwvyW+HQYytKsIgTw9tU=
+  name: 🏳[www.v2nodes.com] ss-
+  server: 130.49.189.158
+  port: 43558
+  udp: true
 - type: vless
   uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  name: '🏳[www.v2nodes.com] vless- #5'
+  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
   server: 79.182.70.212
   port: 443
   udp: true
@@ -21,26 +28,19 @@ proxies:
   tls: true
   servername: 7aa271t.es1.h1clayd.click
   client-fingerprint: firefox
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: yZiPrr484OdSYcivDUv+UIygwvyW+HQYytKsIgTw9tU=
-  name: 🇦🇱[www.v2nodes.com] ss-AL-1490...
-  server: 130.49.189.158
-  port: 43558
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #5'
-  - 🇦🇱[www.v2nodes.com] ss-AL-1490...
+  - 🏳[www.v2nodes.com] ss-
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #5'
-  - 🇦🇱[www.v2nodes.com] ss-AL-1490...
+  - 🏳[www.v2nodes.com] ss-
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
 rules:
 - MATCH,SELECT

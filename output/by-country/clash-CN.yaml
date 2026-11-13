@@ -11,15 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知152
-  server: 112.132.215.108
-  port: 50002
-  udp: true
-- type: vmess
   uuid: 279c2c58-2001-4f1a-8c12-fa9bd992f4ef
   alterId: 0
   cipher: auto
@@ -28,19 +19,28 @@ proxies:
   server: 106.15.230.166
   port: 64952
   udp: true
+- type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知152
+  server: 112.132.215.108
+  port: 50002
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知152
   - 未知89
+  - 未知152
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知152
   - 未知89
+  - 未知152
 rules:
 - MATCH,SELECT

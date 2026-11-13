@@ -11,29 +11,29 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 9c55c7eb-d53e-40fa-a0c9-e25d2a345073
-  name: 🇬🇪 GE_46
-  server: 94.43.238.112
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  name: '🇬🇪 GE_31 #1'
+  server: 194.135.119.82
   port: 2053
   udp: true
   network: ws
   tls: true
-  servername: jp-osa.862400.xyz
+  servername: fs.qicai99.com
   ws-opts:
-    path: /announcement?ed=2048fp=random
+    path: /fp=chrome
     headers:
-      Host: jp-osa.862400.xyz
+      Host: fs.qicai99.com
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇪 GE_46
+  - '🇬🇪 GE_31 #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇬🇪 GE_46
+  - '🇬🇪 GE_31 #1'
 rules:
 - MATCH,SELECT

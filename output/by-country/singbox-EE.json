@@ -3,14 +3,32 @@
     {
       "server": "45.86.60.174",
       "server_port": 16443,
-      "tag": "🇪🇪[www.v2nodes.com] vless-EE-1... #3",
+      "tag": "🇪🇪[www.v2nodes.com] vless-EE-1... #4",
       "type": "vless",
       "uuid": "13e541f3-d09d-4633-89df-8513db0ced20"
     },
     {
+      "flow": "xtls-rprx-vision",
+      "server": "178.214.125.1",
+      "server_port": 443,
+      "tag": "🇩🇪 德国 | DEU #5",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "conf.emaar.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "type": "vless",
+      "uuid": "3f3160a0-747d-4fed-bf3d-4d884bfa964d"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "🇪🇪[www.v2nodes.com] vless-EE-1... #3"
+        "🇪🇪[www.v2nodes.com] vless-EE-1... #4",
+        "🇩🇪 德国 | DEU #5"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -19,7 +37,8 @@
     {
       "outbounds": [
         "auto",
-        "🇪🇪[www.v2nodes.com] vless-EE-1... #3"
+        "🇪🇪[www.v2nodes.com] vless-EE-1... #4",
+        "🇩🇪 德国 | DEU #5"
       ],
       "tag": "select",
       "type": "selector"

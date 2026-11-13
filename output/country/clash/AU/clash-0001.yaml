@@ -10,16 +10,9 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🏳[www.v2nodes.com] trojan-
-  server: 45.63.30.142
-  port: 443
-  udp: true
-  sni: connectwithemployerstohireyouridealteam.com
 - type: vless
   uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
-  name: '🇦🇺[www.v2nodes.com] vless-AU-1... #1'
+  name: 🏳[www.v2nodes.com] vless-
   server: 50.6.54.163
   port: 443
   udp: true
@@ -28,19 +21,26 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇦🇺[www.v2nodes.com] trojan-AU-...
+  server: 45.63.30.142
+  port: 443
+  udp: true
+  sni: connectwithemployerstohireyouridealteam.com
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🏳[www.v2nodes.com] trojan-
-  - '🇦🇺[www.v2nodes.com] vless-AU-1... #1'
+  - 🏳[www.v2nodes.com] vless-
+  - 🇦🇺[www.v2nodes.com] trojan-AU-...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🏳[www.v2nodes.com] trojan-
-  - '🇦🇺[www.v2nodes.com] vless-AU-1... #1'
+  - 🏳[www.v2nodes.com] vless-
+  - 🇦🇺[www.v2nodes.com] trojan-AU-...
 rules:
 - MATCH,SELECT
