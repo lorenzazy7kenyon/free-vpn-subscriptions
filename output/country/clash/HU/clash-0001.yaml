@@ -12,20 +12,9 @@ dns:
 proxies:
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: 🇭🇺[www.v2nodes.com] vless-HU-3...
-  server: 38.180.225.247
-  port: 2053
-  udp: true
-  network: ws
-  ws-opts:
-    path: /fp=chromesecurity=tls
-    headers:
-      Host: fs.qicai99.com
-- type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: 🇭🇺[www.v2nodes.com] vless-HU-6...
-  server: 38.180.225.247
-  port: 2053
+  name: '🇭🇺 匈牙利 | HUN #1'
+  server: 212.73.137.80
+  port: 8443
   udp: true
   network: ws
   tls: true
@@ -40,13 +29,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇺[www.v2nodes.com] vless-HU-3...
-  - 🇭🇺[www.v2nodes.com] vless-HU-6...
+  - '🇭🇺 匈牙利 | HUN #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇭🇺[www.v2nodes.com] vless-HU-3...
-  - 🇭🇺[www.v2nodes.com] vless-HU-6...
+  - '🇭🇺 匈牙利 | HUN #1'
 rules:
 - MATCH,SELECT

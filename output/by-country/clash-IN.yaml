@@ -11,29 +11,8 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
-  server: 5.253.42.164
-  port: 40443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: deepl.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
-  name: '🏳[www.v2nodes.com] vless- #10'
-  server: 194.61.31.126
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-- type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🇳🇱 荷兰 | NLD #4'
+  name: '🇮🇳[www.v2nodes.com] vless-IN-3... #1'
   server: 5.253.30.226
   port: 443
   udp: true
@@ -44,17 +23,6 @@ proxies:
     path: /fp=chrome
     headers:
       Host: fs.qicai99.com
-- type: vless
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
-  server: 13.140.56.100
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 13.140.56.100
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: 🇳🇱 荷兰 | NLD
@@ -69,17 +37,38 @@ proxies:
     path: /
     headers:
       Host: fs.qicai99.com
-- type: vmess
-  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知113
-  server: 152.67.8.205
-  port: 80
+- type: vless
+  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
+  server: 13.140.56.100
+  port: 14430
   udp: true
+  network: ws
   ws-opts:
-    path: /
+    path: /vless
+    headers:
+      Host: 13.140.56.100
+- type: vless
+  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
+  server: 5.253.42.164
+  port: 40443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: deepl.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #5'
+  server: 194.61.31.126
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
 - type: vless
   uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
   name: '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
@@ -97,23 +86,21 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
-  - '🏳[www.v2nodes.com] vless- #10'
-  - '🇳🇱 荷兰 | NLD #4'
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
+  - '🇮🇳[www.v2nodes.com] vless-IN-3... #1'
   - 🇳🇱 荷兰 | NLD
-  - 未知113
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #5'
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
-  - '🏳[www.v2nodes.com] vless- #10'
-  - '🇳🇱 荷兰 | NLD #4'
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
+  - '🇮🇳[www.v2nodes.com] vless-IN-3... #1'
   - 🇳🇱 荷兰 | NLD
-  - 未知113
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #5'
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
 rules:
 - MATCH,SELECT

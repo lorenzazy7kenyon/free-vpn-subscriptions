@@ -12,42 +12,26 @@ dns:
 proxies:
 - type: vless
   uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
-  name: '🇳🇱 荷兰 | NLD #4'
-  server: 93.152.215.254
+  name: '🇳🇱 荷兰 | NLD #1'
+  server: 93.152.215.172
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: remote.propaint.cl
-  client-fingerprint: ios
-- type: vless
-  uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
-  name: 🇳🇱 荷兰 | NLD
-  server: 93.152.215.254
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: remote.propaint.cl
-  client-fingerprint: ios
-  reality-opts:
-    public-key: is-86tEDOjNbNAnVwc-YHHYSn1MF9SF68P6VjESfDHQ
-    short-id: a2fcac
+  servername: 93.152.215.172
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇳🇱 荷兰 | NLD #4'
-  - 🇳🇱 荷兰 | NLD
+  - '🇳🇱 荷兰 | NLD #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇳🇱 荷兰 | NLD #4'
-  - 🇳🇱 荷兰 | NLD
+  - '🇳🇱 荷兰 | NLD #1'
 rules:
 - MATCH,SELECT

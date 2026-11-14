@@ -12,17 +12,6 @@ dns:
 proxies:
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🇰🇷[www.v2nodes.com] vless-KR-3... #2'
-  server: 64.110.79.66
-  port: 8443
-  udp: true
-  network: ws
-  ws-opts:
-    path: /fp=chromesecurity=tls
-    headers:
-      Host: fs.qicai99.com
-- type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
   server: 64.110.79.66
   port: 8443
@@ -43,6 +32,17 @@ proxies:
   sni: connectgraduateswithjobopeningsandgrowprofessionally.com
   skip-cert-verify: true
 - type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  name: '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
+  server: 64.110.79.66
+  port: 8443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=chromesecurity=tls
+    headers:
+      Host: fs.qicai99.com
+- type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
   name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
   server: 3.39.4.109
@@ -53,13 +53,17 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: 🇰🇷KR-211.178.105.134-0210
-  server: 211.178.105.134
-  port: 6123
+- type: vless
+  uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: '🇰🇷 韩国 | KOR #2'
+  server: 52.79.253.83
+  port: 443
   udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: yjmotor.nepler.co
+  client-fingerprint: chrome
 - type: vless
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   name: 🇰🇷[www.v2nodes.com] vless-KR-1...
@@ -74,7 +78,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-  name: 未知39
+  name: 未知73 1.4MB/s
   server: 146.56.112.110
   port: 8888
   udp: true
@@ -88,10 +92,33 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: firefox
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: 🇰🇷KR-211.178.105.134-0206
+  server: 211.178.105.134
+  port: 6123
+  udp: true
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   name: '🇰🇷 韩国 | KOR #1'
+  server: 52.79.253.83
+  port: 443
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: 🇰🇷 韩国 | KOR
   server: 3.34.131.153
+  port: 443
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: '🇰🇷 韩国 | KOR #2'
+  server: 43.202.3.164
   port: 443
   udp: true
   sni: www.bing.com
@@ -102,27 +129,33 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇰🇷[www.v2nodes.com] vless-KR-3... #2'
   - '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
   - 🇰🇷[www.v2nodes.com] trojan-KR-...
+  - '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - 🇰🇷KR-211.178.105.134-0210
+  - '🇰🇷 韩国 | KOR #2'
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - 未知39
+  - 未知73 1.4MB/s
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - 🇰🇷KR-211.178.105.134-0206
   - '🇰🇷 韩国 | KOR #1'
+  - 🇰🇷 韩国 | KOR
+  - '🇰🇷 韩国 | KOR #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇰🇷[www.v2nodes.com] vless-KR-3... #2'
   - '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
   - 🇰🇷[www.v2nodes.com] trojan-KR-...
+  - '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - 🇰🇷KR-211.178.105.134-0210
+  - '🇰🇷 韩国 | KOR #2'
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - 未知39
+  - 未知73 1.4MB/s
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - 🇰🇷KR-211.178.105.134-0206
   - '🇰🇷 韩国 | KOR #1'
+  - 🇰🇷 韩国 | KOR
+  - '🇰🇷 韩国 | KOR #2'
 rules:
 - MATCH,SELECT
