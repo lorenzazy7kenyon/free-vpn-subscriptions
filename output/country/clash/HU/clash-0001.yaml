@@ -24,19 +24,6 @@ proxies:
     path: /
     headers:
       Host: fs.qicai99.com
-- type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🇭🇺 匈牙利 | HUN #1'
-  server: 212.73.137.80
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: fs.qicai99.com
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: fs.qicai99.com
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -44,12 +31,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇭🇺 匈牙利 | HUN
-  - '🇭🇺 匈牙利 | HUN #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇭🇺 匈牙利 | HUN
-  - '🇭🇺 匈牙利 | HUN #1'
 rules:
 - MATCH,SELECT

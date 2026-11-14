@@ -10,27 +10,78 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知24
+  server: 185.146.173.59
+  port: 443
+  udp: true
+  tls: true
+  servername: hms02.fxiaomi.sbs
+  ws-opts:
+    path: /link
+    headers:
+      Host: hms02.fxiaomi.sbs
+- type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  name: '🇫🇮[www.v2nodes.com] vless-FI #1'
+  server: 138.124.49.108
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: fs.qicai99.com
+  ws-opts:
+    path: /fp=chromefp=chrome
+    headers:
+      Host: fs.qicai99.com
+- type: vless
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
+  server: 193.188.21.253
+  port: 10444
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: video.yandex.ru
+  client-fingerprint: firefox
 - type: ss
-  cipher: aes-256-gcm
-  password: AxIYWtskJWIIaefW
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  server: 70.34.212.124
+  cipher: chacha20-ietf-poly1305
+  password: 2e555e46dbc421452416834962fd014f
+  name: 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  server: 62.182.193.228
   port: 8388
   udp: true
 - type: vless
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  server: 5.178.109.174
-  port: 14430
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #10'
+  server: 138.124.124.157
+  port: 443
   udp: true
   network: ws
+  tls: true
+  servername: fs.qicai99.com
   ws-opts:
-    path: /vless
+    path: /fp=chrome
     headers:
-      Host: 5.178.109.174
+      Host: fs.qicai99.com
+- type: vless
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
+  name: '🏳[www.v2nodes.com] vless- #17'
+  server: 138.124.86.230
+  port: 48115
+  udp: true
+  network: grpc
+  tls: true
+  servername: 138-124-86-230.sslip.io
+  client-fingerprint: firefox
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🏳[www.v2nodes.com] vless- #16'
+  name: '🏳[www.v2nodes.com] vless- #20'
   server: 109.120.134.181
   port: 443
   udp: true
@@ -41,13 +92,6 @@ proxies:
     path: /fp=chrome
     headers:
       Host: fs.qicai99.com
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 2e555e46dbc421452416834962fd014f
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1620...
-  server: 62.182.193.228
-  port: 8388
-  udp: true
 - type: vless
   uuid: f8cb3c89-32af-4255-bebc-d90aad175069
   name: 🇸🇪 瑞典 | SWE
@@ -62,37 +106,19 @@ proxies:
     public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ
     short-id: 27350908de933e09
 - type: vless
-  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
-  server: 138.124.86.230
-  port: 48115
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #11'
+  server: 138.124.49.108
+  port: 8443
   udp: true
-  network: grpc
-  tls: true
-  servername: 138-124-86-230.sslip.io
-  client-fingerprint: firefox
-- type: trojan
-  password: f426d3c9-fb43-43c0-868b-898dfa451a74
-  name: '🇸🇪[www.v2nodes.com] trojan-SE-... #1'
-  server: 121.127.33.130
-  port: 443
+  network: tcp
+- type: ss
+  cipher: aes-256-gcm
+  password: AxIYWtskJWIIaefW
+  name: 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  server: 70.34.212.124
+  port: 8388
   udp: true
-  sni: likejennie.pages.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: likejennie.pages.dev
-- type: vless
-  uuid: f8cb3c89-32af-4255-bebc-d90aad175069
-  name: 🇸🇪 瑞典 | SWE
-  server: 185.117.89.74
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: seb.kosmosapp.net
-  client-fingerprint: firefox
 - type: vless
   uuid: f59fdac3-5842-449b-8c8d-d5ebcdbf1768
   name: 🇸🇪[www.v2nodes.com] vless-SE-1...
@@ -119,73 +145,62 @@ proxies:
   udp: true
   sni: 95.143.196.97
 - type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #4'
-  server: 193.188.21.253
-  port: 10444
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: video.yandex.ru
-  client-fingerprint: firefox
-- type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #9'
-  server: 138.124.124.157
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: fs.qicai99.com
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: fs.qicai99.com
-- type: vless
   uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   server: 150.241.79.124
   port: 443
   udp: true
   network: tcp
+- type: vless
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  server: 5.178.109.174
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 5.178.109.174
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  - 未知24
+  - '🇫🇮[www.v2nodes.com] vless-FI #1'
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - '🏳[www.v2nodes.com] vless- #16'
   - 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #10'
+  - '🏳[www.v2nodes.com] vless- #17'
+  - '🏳[www.v2nodes.com] vless- #20'
   - 🇸🇪 瑞典 | SWE
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
-  - '🇸🇪[www.v2nodes.com] trojan-SE-... #1'
-  - 🇸🇪 瑞典 | SWE
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #11'
+  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
   - 🇸🇪[www.v2nodes.com] vless-SE-1...
   - 🇸🇪[www.v2nodes.com] ss-SE-1615...
   - 🇸🇪[www.v2nodes.com] trojan-SE-...
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #4'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #9'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  - 未知24
+  - '🇫🇮[www.v2nodes.com] vless-FI #1'
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - '🏳[www.v2nodes.com] vless- #16'
   - 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #10'
+  - '🏳[www.v2nodes.com] vless- #17'
+  - '🏳[www.v2nodes.com] vless- #20'
   - 🇸🇪 瑞典 | SWE
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
-  - '🇸🇪[www.v2nodes.com] trojan-SE-... #1'
-  - 🇸🇪 瑞典 | SWE
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #11'
+  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
   - 🇸🇪[www.v2nodes.com] vless-SE-1...
   - 🇸🇪[www.v2nodes.com] ss-SE-1615...
   - 🇸🇪[www.v2nodes.com] trojan-SE-...
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #4'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #9'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
 rules:
 - MATCH,SELECT

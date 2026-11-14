@@ -11,6 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
+  name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
+  server: 212.102.38.25
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: udemy.com
+  client-fingerprint: ios
+- type: vless
   uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
   name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
   server: 195.123.245.241
@@ -22,29 +33,42 @@ proxies:
   servername: gateway.icloud.com
   client-fingerprint: chrome
 - type: vless
-  uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
-  name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
-  server: 212.102.38.25
+  uuid: bbb918c0-a510-45f9-ac94-4d449aef6498
+  name: 🇰🇿 哈萨克斯坦 | KAZ
+  server: 194.58.60.217
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: grpc
   tls: true
-  servername: udemy.com
-  client-fingerprint: ios
+  servername: node43.lmdscdn.ru
+  client-fingerprint: firefox
+- type: vless
+  uuid: bbbc1b48-9539-4300-acab-25cea65b533c
+  name: 🇳🇱 荷兰 | NLD 2
+  server: 194.58.60.221
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: node43.lmdscdn.ru
+  client-fingerprint: edge
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
+  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
+  - 🇰🇿 哈萨克斯坦 | KAZ
+  - 🇳🇱 荷兰 | NLD 2
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #2'
+  - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
+  - 🇰🇿 哈萨克斯坦 | KAZ
+  - 🇳🇱 荷兰 | NLD 2
 rules:
 - MATCH,SELECT

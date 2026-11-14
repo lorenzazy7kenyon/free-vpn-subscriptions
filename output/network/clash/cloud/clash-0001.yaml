@@ -13,8 +13,8 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇬🇧[www.v2nodes.com] ss-GB-1616...
-  server: 198.244.201.129
+  name: '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
+  server: 198.244.202.215
   port: 19999
   udp: true
 - type: ss
@@ -31,16 +31,9 @@ proxies:
   server: 151.241.19.36
   port: 19999
   udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
-  server: 198.244.202.215
-  port: 19999
-  udp: true
 - type: vless
   uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
-  name: 🇨🇭[www.v2nodes.com] vless-CH-1...
+  name: 🏳[www.v2nodes.com] vless-
   server: 74.161.152.237
   port: 2083
   udp: true
@@ -75,7 +68,7 @@ proxies:
       Host: fs.qicai99.com
 - type: vless
   uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
   server: 46.250.250.149
   port: 2053
   udp: true
@@ -101,35 +94,57 @@ proxies:
   server: 102.37.156.224
   port: 443
   udp: true
+- type: vless
+  uuid: f1a7e2c8-b140-50d1-8acf-e62090f96599
+  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
+  server: 13.140.253.35
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: xray-bprkdwje-clever-comet-4.cloady.io
+  ws-opts:
+    path: /27dbf143acdd7bcafp=firefox
+    headers:
+      Host: xray-bprkdwje-clever-comet-4.cloady.io
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇬🇧[www.v2nodes.com] ss-GB-1616...
+  server: 198.244.201.129
+  port: 19999
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧[www.v2nodes.com] ss-GB-1616...
+  - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
   - 🇦🇪AE-151.241.19.29-0081
   - 🇦🇪AE-151.241.19.36-0082
-  - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
-  - 🇨🇭[www.v2nodes.com] vless-CH-1...
+  - 🏳[www.v2nodes.com] vless-
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #8'
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #10'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - 🇬🇧[www.v2nodes.com] ss-GB-1616...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇬🇧[www.v2nodes.com] ss-GB-1616...
+  - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
   - 🇦🇪AE-151.241.19.29-0081
   - 🇦🇪AE-151.241.19.36-0082
-  - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
-  - 🇨🇭[www.v2nodes.com] vless-CH-1...
+  - 🏳[www.v2nodes.com] vless-
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #8'
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #10'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - 🇬🇧[www.v2nodes.com] ss-GB-1616...
 rules:
 - MATCH,SELECT

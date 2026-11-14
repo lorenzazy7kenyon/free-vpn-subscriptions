@@ -11,11 +11,26 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇨🇳CN-113.31.124.147-0053
+  server: 113.31.124.147
+  port: 443
+  udp: true
+  tls: true
+  servername: lg30.cfcdn3.xyz
+  ws-opts:
+    path: /ray
+    headers:
+      Host: lg30.cfcdn3.xyz
+- type: vmess
   uuid: 2b910c43-51e3-4b15-9be8-b658106ba35e
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知3
+  name: 未知25
   server: 39.108.113.127
   port: 10086
   udp: true
@@ -38,13 +53,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知3
+  - 🇨🇳CN-113.31.124.147-0053
+  - 未知25
   - 🇨🇳_CN_中国_IPV4
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知3
+  - 🇨🇳CN-113.31.124.147-0053
+  - 未知25
   - 🇨🇳_CN_中国_IPV4
 rules:
 - MATCH,SELECT

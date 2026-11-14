@@ -12,40 +12,25 @@ dns:
 proxies:
 - type: vless
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: '🇳🇱 荷兰 | NLD #2'
-  server: 196.245.153.156
+  name: 🇦🇱[www.v2nodes.com] vless-AL-1...
+  server: 196.245.153.104
   port: 443
   udp: true
-  network: tcp
+  network: grpc
   tls: true
-  servername: 80cb66x.nl17.h1clayd.click
-  client-fingerprint: chrome
-- type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: 🇳🇱 荷兰 | NLD
-  server: 196.245.153.156
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: 80cb66x.nl17.h1clayd.click
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: jhVdP7NFUaEXGfrmOqJlMCHTvqn3fymbzPfPT6NO4i0
-    short-id: f72d4a2c7cbbacb1
+  servername: 15b171g.nl7.h1clayd.click
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇳🇱 荷兰 | NLD #2'
-  - 🇳🇱 荷兰 | NLD
+  - 🇦🇱[www.v2nodes.com] vless-AL-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇳🇱 荷兰 | NLD #2'
-  - 🇳🇱 荷兰 | NLD
+  - 🇦🇱[www.v2nodes.com] vless-AL-1...
 rules:
 - MATCH,SELECT

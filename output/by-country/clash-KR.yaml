@@ -11,6 +11,45 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  name: '🏳[www.v2nodes.com] vless- #11'
+  server: 152.69.226.63
+  port: 25555
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+- type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇰🇷KR-138.2.122.225-0064
+  server: 138.2.122.225
+  port: 443
+  udp: true
+  tls: true
+  servername: lg30.cfcdn3.xyz
+  ws-opts:
+    path: /ray
+    headers:
+      Host: lg30.cfcdn3.xyz
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: 🇰🇷KR-211.178.105.134-0206
+  server: 211.178.105.134
+  port: 6123
+  udp: true
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🏳[www.v2nodes.com] trojan- #4'
+  server: 158.247.253.243
+  port: 443
+  udp: true
+  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
+  skip-cert-verify: true
+- type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
   server: 64.110.79.66
@@ -21,6 +60,23 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: fs.qicai99.com
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: '12242'
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  server: 115.161.136.145
+  port: 10099
+  udp: true
+- type: vless
+  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
+  name: '🏳[www.v2nodes.com] vless- #12'
+  server: 151.245.106.49
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
@@ -34,43 +90,17 @@ proxies:
     path: /fp=chrome
     headers:
       Host: fs.qicai99.com
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🏳[www.v2nodes.com] trojan- #4'
-  server: 158.247.253.243
-  port: 443
-  udp: true
-  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
-  skip-cert-verify: true
-- type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
-  server: 152.69.226.63
-  port: 25555
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: 🇰🇷KR-211.178.105.134-0206
-  server: 211.178.105.134
-  port: 6123
-  udp: true
-- type: vless
-  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  server: 151.245.106.49
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   name: '🇰🇷 韩国 | KOR #1'
+  server: 3.36.121.247
+  port: 443
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: 🇰🇷 韩国 | KOR
   server: 52.79.253.83
   port: 443
   udp: true
@@ -90,25 +120,31 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
-  - '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
-  - '🏳[www.v2nodes.com] trojan- #4'
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
+  - '🏳[www.v2nodes.com] vless- #11'
+  - 🇰🇷KR-138.2.122.225-0064
   - 🇰🇷KR-211.178.105.134-0206
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - '🏳[www.v2nodes.com] trojan- #4'
+  - '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - '🏳[www.v2nodes.com] vless- #12'
+  - '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
   - '🇰🇷 韩国 | KOR #1'
+  - 🇰🇷 韩国 | KOR
   - '🇰🇷 韩国 | KOR #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
-  - '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
-  - '🏳[www.v2nodes.com] trojan- #4'
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
+  - '🏳[www.v2nodes.com] vless- #11'
+  - 🇰🇷KR-138.2.122.225-0064
   - 🇰🇷KR-211.178.105.134-0206
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - '🏳[www.v2nodes.com] trojan- #4'
+  - '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - '🏳[www.v2nodes.com] vless- #12'
+  - '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
   - '🇰🇷 韩国 | KOR #1'
+  - 🇰🇷 韩国 | KOR
   - '🇰🇷 韩国 | KOR #2'
 rules:
 - MATCH,SELECT
