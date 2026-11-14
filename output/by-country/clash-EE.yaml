@@ -11,15 +11,8 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
-  server: 45.86.60.174
-  port: 16443
-  udp: true
-  network: tcp
-- type: vless
   uuid: 3f3160a0-747d-4fed-bf3d-4d884bfa964d
-  name: 🇫🇮[www.v2nodes.com] vless-FI-1...
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
   server: 178.214.125.1
   port: 443
   udp: true
@@ -28,19 +21,26 @@ proxies:
   tls: true
   servername: conf.emaar.ru
   client-fingerprint: chrome
+- type: vless
+  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
+  server: 45.86.60.174
+  port: 16443
+  udp: true
+  network: tcp
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
-  - 🇫🇮[www.v2nodes.com] vless-FI-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
   - '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
-  - 🇫🇮[www.v2nodes.com] vless-FI-1...
 rules:
 - MATCH,SELECT

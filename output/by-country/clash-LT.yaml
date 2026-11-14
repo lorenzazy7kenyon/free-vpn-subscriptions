@@ -20,17 +20,6 @@ proxies:
   tls: true
   servername: edge-lt.lindenpixel.com
   client-fingerprint: edge
-- type: vless
-  uuid: a94d8907-6bbb-4570-80d3-dfdc314c1e7a
-  name: '🇱🇹 立陶宛 | LTU #1'
-  server: 84.32.51.250
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: lt.t1n2.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -38,12 +27,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇱🇹[www.v2nodes.com] vless-LT-1...
-  - '🇱🇹 立陶宛 | LTU #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇱🇹[www.v2nodes.com] vless-LT-1...
-  - '🇱🇹 立陶宛 | LTU #1'
 rules:
 - MATCH,SELECT

@@ -21,13 +21,6 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: fs.qicai99.com
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
-  name: 🇦🇹[www.v2nodes.com] ss-AT-1614...
-  server: 152.53.1.57
-  port: 8388
-  udp: true
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
@@ -35,6 +28,13 @@ proxies:
   port: 443
   udp: true
   network: tcp
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
+  name: 🇦🇹[www.v2nodes.com] ss-AT-1614...
+  server: 152.53.1.57
+  port: 8388
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -42,14 +42,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇦🇹[www.v2nodes.com] vless-AT-2...
-  - 🇦🇹[www.v2nodes.com] ss-AT-1614...
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
+  - 🇦🇹[www.v2nodes.com] ss-AT-1614...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇦🇹[www.v2nodes.com] vless-AT-2...
-  - 🇦🇹[www.v2nodes.com] ss-AT-1614...
   - '🇦🇹[www.v2nodes.com] vless-AT-3... #1'
+  - 🇦🇹[www.v2nodes.com] ss-AT-1614...
 rules:
 - MATCH,SELECT
