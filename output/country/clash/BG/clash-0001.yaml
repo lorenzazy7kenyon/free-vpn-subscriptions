@@ -17,16 +17,6 @@ proxies:
   port: 443
   udp: true
   network: tcp
-- type: vless
-  uuid: 1d46250c-f015-439d-a7fd-c4d9e2a4c63d
-  name: 🇧🇬 保加利亚 | BGR 2
-  server: 88.80.150.15
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: bg2.oncloudvpn.com
-  client-fingerprint: edge
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -34,12 +24,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇧🇬[www.v2nodes.com] vless-BG-1...
-  - 🇧🇬 保加利亚 | BGR 2
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇧🇬[www.v2nodes.com] vless-BG-1...
-  - 🇧🇬 保加利亚 | BGR 2
 rules:
 - MATCH,SELECT

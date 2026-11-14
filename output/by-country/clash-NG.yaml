@@ -21,16 +21,6 @@ proxies:
   tls: true
   servername: 7aa271t.es1.h1clayd.click
   client-fingerprint: firefox
-- type: vless
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  name: '🇪🇸 西班牙 | ESP #2'
-  server: 196.196.149.81
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: 38917fx.es1.h1clayd.click
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -38,12 +28,10 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
-  - '🇪🇸 西班牙 | ESP #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
-  - '🇪🇸 西班牙 | ESP #2'
 rules:
 - MATCH,SELECT

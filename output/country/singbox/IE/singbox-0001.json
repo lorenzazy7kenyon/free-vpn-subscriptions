@@ -9,9 +9,45 @@
       "type": "ss"
     },
     {
+      "flow": "xtls-rprx-vision-udp443",
+      "server": "83.141.69.239",
+      "server_port": 443,
+      "tag": "🇩🇪DE_10|1.4MB/s",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "83.141.69.239.sslip.io",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "1b487f79-6b87-4971-863c-526bd31abd44"
+    },
+    {
+      "flow": "xtls-rprx-vision-udp443",
+      "server": "83.141.69.220",
+      "server_port": 443,
+      "tag": "🇩🇪DE_9|1.2MB/s",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "13.143.195.113.sslip.io",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "70178a92-cfd2-4a4f-b9fb-7e916d231349"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "🇮🇪[www.v2nodes.com] ss-IE-1209..."
+        "🇮🇪[www.v2nodes.com] ss-IE-1209...",
+        "🇩🇪DE_10|1.4MB/s",
+        "🇩🇪DE_9|1.2MB/s"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -20,7 +56,9 @@
     {
       "outbounds": [
         "auto",
-        "🇮🇪[www.v2nodes.com] ss-IE-1209..."
+        "🇮🇪[www.v2nodes.com] ss-IE-1209...",
+        "🇩🇪DE_10|1.4MB/s",
+        "🇩🇪DE_9|1.2MB/s"
       ],
       "tag": "select",
       "type": "selector"

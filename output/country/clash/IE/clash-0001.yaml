@@ -17,6 +17,28 @@ proxies:
   server: 146.70.90.198
   port: 17456
   udp: true
+- type: vless
+  uuid: 1b487f79-6b87-4971-863c-526bd31abd44
+  name: 🇩🇪DE_10|1.4MB/s
+  server: 83.141.69.239
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: 83.141.69.239.sslip.io
+  client-fingerprint: firefox
+- type: vless
+  uuid: 70178a92-cfd2-4a4f-b9fb-7e916d231349
+  name: 🇩🇪DE_9|1.2MB/s
+  server: 83.141.69.220
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: 13.143.195.113.sslip.io
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -24,10 +46,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇮🇪[www.v2nodes.com] ss-IE-1209...
+  - 🇩🇪DE_10|1.4MB/s
+  - 🇩🇪DE_9|1.2MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇮🇪[www.v2nodes.com] ss-IE-1209...
+  - 🇩🇪DE_10|1.4MB/s
+  - 🇩🇪DE_9|1.2MB/s
 rules:
 - MATCH,SELECT

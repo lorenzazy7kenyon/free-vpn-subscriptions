@@ -17,17 +17,6 @@ proxies:
   server: 130.49.189.158
   port: 43558
   udp: true
-- type: vless
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
-  server: 79.182.70.212
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: 7aa271t.es1.h1clayd.click
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -35,12 +24,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🏳[www.v2nodes.com] ss-
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🏳[www.v2nodes.com] ss-
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
 rules:
 - MATCH,SELECT

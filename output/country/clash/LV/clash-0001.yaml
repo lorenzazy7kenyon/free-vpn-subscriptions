@@ -21,6 +21,16 @@ proxies:
   tls: true
   servername: www.bing.com
   client-fingerprint: qq
+- type: vless
+  uuid: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  name: 🇩🇪DE_8|1.0MB/s
+  server: 2.26.88.140
+  port: 4443
+  udp: true
+  network: tcp
+  tls: true
+  servername: lv3.nexfile.net
+  client-fingerprint: chrome
 - type: hysteria2
   password: 54d2f622-fd71-4f5f-8813-832b68f4ca3b
   name: '@vpnsal'
@@ -42,6 +52,7 @@ proxy-groups:
   interval: 300
   proxies:
   - '🏳[www.v2nodes.com] vless- #13'
+  - 🇩🇪DE_8|1.0MB/s
   - '@vpnsal'
   - '@V2ray_confiig #3'
 - name: SELECT
@@ -49,6 +60,7 @@ proxy-groups:
   proxies:
   - AUTO
   - '🏳[www.v2nodes.com] vless- #13'
+  - 🇩🇪DE_8|1.0MB/s
   - '@vpnsal'
   - '@V2ray_confiig #3'
 rules:
