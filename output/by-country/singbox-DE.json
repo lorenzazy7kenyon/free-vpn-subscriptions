@@ -1,40 +1,86 @@
 {
   "outbounds": [
     {
-      "server": "5.83.129.236",
+      "flow": "xtls-rprx-vision",
+      "server": "5.231.28.177",
       "server_port": 443,
-      "tag": "🇩🇪[www.v2nodes.com] vless-DE-1... #13",
+      "tag": "🇩🇪 德国 | DEU",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "host-de-upscale.cdn.cachefleet.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk",
+          "short_id": "1a2b3c4d"
+        },
+        "server_name": "images.porsche.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
+      "type": "vless",
+      "uuid": "555b35c4-30f9-40c6-a61a-7f53ab1bea45"
+    },
+    {
+      "alter_id": 0,
+      "security": "auto",
+      "server": "89.127.218.61",
+      "server_port": 443,
+      "tag": "未知83",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "renderer-stream-2-62.mirra.now"
+      },
       "transport": {
-        "service_name": "a9w9wmko0k2od14hv8v",
-        "type": "grpc"
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket",
+        "type": "ws"
+      },
+      "type": "vmess",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154"
+    },
+    {
+      "flow": "xtls-rprx-vision-udp443",
+      "server": "5.175.171.30",
+      "server_port": 8444,
+      "tag": "🇩🇪DE_7|3.1MB/s",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.volkswagen.de",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       },
       "type": "vless",
-      "uuid": "d86e6fda-e519-46ab-98eb-9ff9a9da5984"
+      "uuid": "555b35c4-30f9-40c6-a61a-7f53ab1bea45"
     },
     {
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-      "server": "193.108.119.3",
-      "server_port": 19999,
-      "tag": "🇩🇪[www.v2nodes.com] ss-DE-1615...",
-      "type": "ss"
-    },
-    {
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-      "server": "23.157.88.43",
-      "server_port": 19999,
-      "tag": "🇩🇪[www.v2nodes.com] ss-DE-1615... #1",
-      "type": "ss"
+      "flow": "xtls-rprx-vision",
+      "server": "178.18.158.12",
+      "server_port": 43000,
+      "tag": "🇩🇪 德国 | DEU",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "KeFxVlEEuDN8alZBsrXiX9yrcY2-H7lcdzXWjtrIWy0",
+          "short_id": "a9c3bda4"
+        },
+        "server_name": "178.18.158.12",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "a741d82e-6087-466d-b590-f24e2245d12c"
     },
     {
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -62,18 +108,6 @@
     },
     {
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "193.108.119.193",
-      "server_port": 443,
-      "tag": "🇩🇪DE-193.108.119.193-0110",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "resources.iloverussia2026.com"
-      },
-      "type": "trojan"
-    },
-    {
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "server": "193.108.119.15",
       "server_port": 443,
       "tag": "🇩🇪DE-193.108.119.15-0109",
@@ -85,12 +119,57 @@
       "type": "trojan"
     },
     {
+      "server": "5.83.129.236",
+      "server_port": 443,
+      "tag": "🇩🇪[www.v2nodes.com] vless-DE-1... #13",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "host-de-upscale.cdn.cachefleet.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "service_name": "a9w9wmko0k2od14hv8v",
+        "type": "grpc"
+      },
+      "type": "vless",
+      "uuid": "d86e6fda-e519-46ab-98eb-9ff9a9da5984"
+    },
+    {
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+      "server": "23.157.88.43",
+      "server_port": 19999,
+      "tag": "🇩🇪DE-23.157.88.43-0115",
+      "type": "ss"
+    },
+    {
       "method": "aes-256-gcm",
       "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
       "server": "193.108.119.2",
       "server_port": 19999,
       "tag": "🇩🇪DE-193.108.119.2-0204",
       "type": "ss"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "5.231.28.177",
+      "server_port": 443,
+      "tag": "🇩🇪 德国 | DEU #9",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "images.porsche.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "555b35c4-30f9-40c6-a61a-7f53ab1bea45"
     },
     {
       "alter_id": 0,
@@ -100,6 +179,23 @@
       "tag": "未知122",
       "type": "vmess",
       "uuid": "04621bae-ab36-11ec-b909-0242ac120002"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "50.7.86.203",
+      "server_port": 2053,
+      "tag": "德国|@ripaojiedian",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "746c7209-49e1-494e-9ad1-a630d48ed26d"
     },
     {
       "flow": "xtls-rprx-vision",
@@ -117,6 +213,64 @@
       },
       "type": "vless",
       "uuid": "746c7209-49e1-494e-9ad1-a630d48ed26d"
+    },
+    {
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=",
+      "server": "47.254.143.251",
+      "server_port": 443,
+      "tag": "🇩🇪 德国 | DEU #5",
+      "type": "ss"
+    },
+    {
+      "alter_id": 0,
+      "security": "auto",
+      "server": "91.98.221.107",
+      "server_port": 58804,
+      "tag": "🇩🇪 德国 | DEU",
+      "type": "vmess",
+      "uuid": "aa3e4b64-c119-44be-b0f3-f88293705e37"
+    },
+    {
+      "alter_id": 0,
+      "security": "auto",
+      "server": "167.233.242.189",
+      "server_port": 80,
+      "tag": "未知101",
+      "type": "vmess",
+      "uuid": "7209d7ee-cfd0-46c0-a580-d92e2f0c801c"
+    },
+    {
+      "flow": "xtls-rprx-vision-udp443",
+      "server": "5.175.171.30",
+      "server_port": 443,
+      "tag": "🇩🇪DE_8|1.5MB/s",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "assets-v2.porsche.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "555b35c4-30f9-40c6-a61a-7f53ab1bea45"
+    },
+    {
+      "server": "91.98.221.107",
+      "server_port": 42275,
+      "tag": "🇩🇪 德国 | DEU",
+      "type": "vless",
+      "uuid": "aa3e4b64-c119-44be-b0f3-f88293705e37"
+    },
+    {
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+      "server": "57.129.83.85",
+      "server_port": 19999,
+      "tag": "🇩🇪DE-57.129.83.85-0210",
+      "type": "ss"
     },
     {
       "alter_id": 0,
@@ -140,21 +294,86 @@
       "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154"
     },
     {
-      "flow": "xtls-rprx-vision",
-      "server": "50.7.86.203",
-      "server_port": 2053,
-      "tag": "德国|@ripaojiedian",
+      "server": "212.113.116.181",
+      "server_port": 443,
+      "tag": "🇳🇱[www.v2nodes.com] vless-NL-1... #8",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "www.apple.com",
+        "insecure": false,
+        "server_name": "de.oncloudvpn.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
+      "transport": {
+        "service_name": "grpc",
+        "type": "grpc"
+      },
       "type": "vless",
-      "uuid": "746c7209-49e1-494e-9ad1-a630d48ed26d"
+      "uuid": "1d46250c-f015-439d-a7fd-c4d9e2a4c63d"
+    },
+    {
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=",
+      "server": "47.254.169.3",
+      "server_port": 443,
+      "tag": "🇩🇪DE_2|1.5MB/s",
+      "type": "ss"
+    },
+    {
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "193.108.119.193",
+      "server_port": 443,
+      "tag": "🇩🇪DE-193.108.119.193-0110",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "resources.iloverussia2026.com"
+      },
+      "type": "trojan"
+    },
+    {
+      "alter_id": 0,
+      "security": "auto",
+      "server": "91.98.221.107",
+      "server_port": 58804,
+      "tag": "🇩🇪 德国 | DEU #13",
+      "type": "vmess",
+      "uuid": "aa3e4b64-c119-44be-b0f3-f88293705e37"
+    },
+    {
+      "alter_id": 0,
+      "security": "auto",
+      "server": "23.165.200.150",
+      "server_port": 52080,
+      "tag": "🇩🇪 德国 | DEU",
+      "type": "vmess",
+      "uuid": "672cdade-bb05-4c86-b578-e5d09b79524a"
+    },
+    {
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+      "server": "193.108.119.3",
+      "server_port": 19999,
+      "tag": "🇩🇪DE-193.108.119.3-0113",
+      "type": "ss"
+    },
+    {
+      "alter_id": 0,
+      "security": "auto",
+      "server": "23.165.200.150",
+      "server_port": 52080,
+      "tag": "🇩🇪 德国 | DEU #1",
+      "type": "vmess",
+      "uuid": "672cdade-bb05-4c86-b578-e5d09b79524a"
+    },
+    {
+      "server": "91.98.221.107",
+      "server_port": 42275,
+      "tag": "🇩🇪 德国 | DEU #14",
+      "type": "vless",
+      "uuid": "aa3e4b64-c119-44be-b0f3-f88293705e37"
     },
     {
       "server": "159.195.207.238",
@@ -164,72 +383,29 @@
       "uuid": "855c7aaa-e7d6-463e-971e-d36032744428"
     },
     {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "5.39.249.167",
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=",
+      "server": "47.254.175.2",
       "server_port": 443,
-      "tag": "未知173",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "renderer-stream-2-62.mirra.now"
-      },
-      "transport": {
-        "headers": {
-          "Host": "renderer-stream-2-62.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket",
-        "type": "ws"
-      },
-      "type": "vmess",
-      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154"
-    },
-    {
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-      "server": "57.129.83.85",
-      "server_port": 19999,
-      "tag": "🇩🇪[www.v2nodes.com] ss-DE-1616...",
+      "tag": "🇩🇪 德国 | DEU #7",
       "type": "ss"
     },
     {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "89.127.218.61",
-      "server_port": 443,
-      "tag": "未知83",
+      "flow": "xtls-rprx-vision",
+      "server": "178.18.158.12",
+      "server_port": 43000,
+      "tag": "🇩🇪 德国 | DEU #3",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "renderer-stream-2-62.mirra.now"
+        "server_name": "178.18.158.12",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       },
-      "transport": {
-        "headers": {
-          "Host": "renderer-stream-2-62.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket",
-        "type": "ws"
-      },
-      "type": "vmess",
-      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154"
-    },
-    {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "23.165.200.150",
-      "server_port": 52080,
-      "tag": "🇩🇪_DE_德国_IPV4",
-      "type": "vmess",
-      "uuid": "672cdade-bb05-4c86-b578-e5d09b79524a"
-    },
-    {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "167.233.242.189",
-      "server_port": 80,
-      "tag": "未知101",
-      "type": "vmess",
-      "uuid": "7209d7ee-cfd0-46c0-a580-d92e2f0c801c"
+      "type": "vless",
+      "uuid": "a741d82e-6087-466d-b590-f24e2245d12c"
     },
     {
       "alter_id": 0,
@@ -253,20 +429,62 @@
       "uuid": "5f72f180-b21b-4b7a-8484-240759012604"
     },
     {
-      "server": "130.78.31.25",
+      "server": "185.255.115.87",
       "server_port": 443,
-      "tag": "🇩🇪 德国 | DEU #4",
+      "tag": "🇺🇸 美国 | USA",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "pl2.obxodvpn.us",
+        "reality": {
+          "enabled": true,
+          "public_key": "ixnCbdlT5sAVd-ilp2nG11CvnNsBCf9xPD56TlXxlR4",
+          "short_id": "a91531ad58c8611c"
+        },
+        "server_name": "d58daft.plp1.h1cloud.net",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
       },
       "type": "vless",
-      "uuid": "146d567c-6335-4e63-a8aa-7ec068642440"
+      "uuid": "55458d10-24ab-4ea6-a522-13741b546f2a"
+    },
+    {
+      "server": "185.255.115.87",
+      "server_port": 443,
+      "tag": "🇺🇸 美国 | USA #2",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "d58daft.plp1.h1cloud.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "55458d10-24ab-4ea6-a522-13741b546f2a"
+    },
+    {
+      "alter_id": 0,
+      "security": "auto",
+      "server": "5.39.249.167",
+      "server_port": 443,
+      "tag": "未知173",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "renderer-stream-2-62.mirra.now"
+      },
+      "transport": {
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket",
+        "type": "ws"
+      },
+      "type": "vmess",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154"
     },
     {
       "obfs": {
@@ -285,14 +503,14 @@
       "type": "hysteria2"
     },
     {
-      "password": "2be4ee40-0d2a-43cb-a267-8769df96da2a",
-      "server": "45.88.12.158",
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "server": "3.76.203.180",
       "server_port": 443,
-      "tag": "🫆12@oneclickvpnkeys",
+      "tag": "@V2rayNPVTConfig",
       "tls": {
         "enabled": true,
-        "insecure": false,
-        "server_name": "va.stream-room.com"
+        "insecure": true,
+        "server_name": "127.0.0.1"
       },
       "type": "hysteria2"
     },
@@ -304,23 +522,7 @@
       "password": "5ictxgawam84vgrp",
       "server": "109.70.74.213",
       "server_port": 2098,
-      "tag": "T✰Join -> @v2raymelliii✰",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "109.70.74.213"
-      },
-      "type": "hysteria2"
-    },
-    {
-      "obfs": {
-        "password": "7922smqtd5qm70fu",
-        "type": "salamander"
-      },
-      "password": "5icixgawam84vgrp",
-      "server": "109.70.74.213",
-      "server_port": 2098,
-      "tag": "@V2ray_confiig #1",
+      "tag": "Telegram  ⚜️Join -> @tik7net_v...",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -341,46 +543,48 @@
       "type": "hysteria2"
     },
     {
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "server": "3.76.203.180",
-      "server_port": 443,
-      "tag": "@V2rayNPVTConfig",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "127.0.0.1"
-      },
-      "type": "hysteria2"
-    },
-    {
       "interval": "5m",
       "outbounds": [
-        "🇩🇪[www.v2nodes.com] vless-DE-1... #13",
-        "🇩🇪[www.v2nodes.com] ss-DE-1615...",
-        "🇩🇪[www.v2nodes.com] ss-DE-1615... #1",
+        "🇩🇪 德国 | DEU",
+        "未知83",
+        "🇩🇪DE_7|3.1MB/s",
+        "🇩🇪 德国 | DEU",
         "🇩🇪DE-193.108.119.29-0103",
         "🇩🇪DE-193.108.119.96-0114",
-        "🇩🇪DE-193.108.119.193-0110",
         "🇩🇪DE-193.108.119.15-0109",
+        "🇩🇪[www.v2nodes.com] vless-DE-1... #13",
+        "🇩🇪DE-23.157.88.43-0115",
         "🇩🇪DE-193.108.119.2-0204",
+        "🇩🇪 德国 | DEU #9",
         "未知122",
-        "德国2|@ripaojiedian",
-        "未知139",
         "德国|@ripaojiedian",
-        "🇩🇪[www.v2nodes.com] vless-DE-1... #10",
-        "未知173",
-        "🇩🇪[www.v2nodes.com] ss-DE-1616...",
-        "未知83",
-        "🇩🇪_DE_德国_IPV4",
+        "德国2|@ripaojiedian",
+        "🇩🇪 德国 | DEU #5",
+        "🇩🇪 德国 | DEU",
         "未知101",
+        "🇩🇪DE_8|1.5MB/s",
+        "🇩🇪 德国 | DEU",
+        "🇩🇪DE-57.129.83.85-0210",
+        "未知139",
+        "🇳🇱[www.v2nodes.com] vless-NL-1... #8",
+        "🇩🇪DE_2|1.5MB/s",
+        "🇩🇪DE-193.108.119.193-0110",
+        "🇩🇪 德国 | DEU #13",
+        "🇩🇪 德国 | DEU",
+        "🇩🇪DE-193.108.119.3-0113",
+        "🇩🇪 德国 | DEU #1",
+        "🇩🇪 德国 | DEU #14",
+        "🇩🇪[www.v2nodes.com] vless-DE-1... #10",
+        "🇩🇪 德国 | DEU #7",
+        "🇩🇪 德国 | DEU #3",
         "未知81",
-        "🇩🇪 德国 | DEU #4",
+        "🇺🇸 美国 | USA",
+        "🇺🇸 美国 | USA #2",
+        "未知173",
         "🩵+@Azarakhsh_Proxy+🩷",
-        "🫆12@oneclickvpnkeys",
-        "T✰Join -> @v2raymelliii✰",
-        "@V2ray_confiig #1",
-        "🫆92@oneclickvpnkeys",
-        "@V2rayNPVTConfig"
+        "@V2rayNPVTConfig",
+        "Telegram  ⚜️Join -> @tik7net_v...",
+        "🫆92@oneclickvpnkeys"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -389,32 +593,46 @@
     {
       "outbounds": [
         "auto",
-        "🇩🇪[www.v2nodes.com] vless-DE-1... #13",
-        "🇩🇪[www.v2nodes.com] ss-DE-1615...",
-        "🇩🇪[www.v2nodes.com] ss-DE-1615... #1",
+        "🇩🇪 德国 | DEU",
+        "未知83",
+        "🇩🇪DE_7|3.1MB/s",
+        "🇩🇪 德国 | DEU",
         "🇩🇪DE-193.108.119.29-0103",
         "🇩🇪DE-193.108.119.96-0114",
-        "🇩🇪DE-193.108.119.193-0110",
         "🇩🇪DE-193.108.119.15-0109",
+        "🇩🇪[www.v2nodes.com] vless-DE-1... #13",
+        "🇩🇪DE-23.157.88.43-0115",
         "🇩🇪DE-193.108.119.2-0204",
+        "🇩🇪 德国 | DEU #9",
         "未知122",
-        "德国2|@ripaojiedian",
-        "未知139",
         "德国|@ripaojiedian",
-        "🇩🇪[www.v2nodes.com] vless-DE-1... #10",
-        "未知173",
-        "🇩🇪[www.v2nodes.com] ss-DE-1616...",
-        "未知83",
-        "🇩🇪_DE_德国_IPV4",
+        "德国2|@ripaojiedian",
+        "🇩🇪 德国 | DEU #5",
+        "🇩🇪 德国 | DEU",
         "未知101",
+        "🇩🇪DE_8|1.5MB/s",
+        "🇩🇪 德国 | DEU",
+        "🇩🇪DE-57.129.83.85-0210",
+        "未知139",
+        "🇳🇱[www.v2nodes.com] vless-NL-1... #8",
+        "🇩🇪DE_2|1.5MB/s",
+        "🇩🇪DE-193.108.119.193-0110",
+        "🇩🇪 德国 | DEU #13",
+        "🇩🇪 德国 | DEU",
+        "🇩🇪DE-193.108.119.3-0113",
+        "🇩🇪 德国 | DEU #1",
+        "🇩🇪 德国 | DEU #14",
+        "🇩🇪[www.v2nodes.com] vless-DE-1... #10",
+        "🇩🇪 德国 | DEU #7",
+        "🇩🇪 德国 | DEU #3",
         "未知81",
-        "🇩🇪 德国 | DEU #4",
+        "🇺🇸 美国 | USA",
+        "🇺🇸 美国 | USA #2",
+        "未知173",
         "🩵+@Azarakhsh_Proxy+🩷",
-        "🫆12@oneclickvpnkeys",
-        "T✰Join -> @v2raymelliii✰",
-        "@V2ray_confiig #1",
-        "🫆92@oneclickvpnkeys",
-        "@V2rayNPVTConfig"
+        "@V2rayNPVTConfig",
+        "Telegram  ⚜️Join -> @tik7net_v...",
+        "🫆92@oneclickvpnkeys"
       ],
       "tag": "select",
       "type": "selector"

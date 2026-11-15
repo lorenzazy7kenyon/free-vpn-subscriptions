@@ -32,16 +32,6 @@ proxies:
   servername: www.datadoghq.com
   client-fingerprint: firefox
 - type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  server: 151.241.226.201
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-- type: vless
   uuid: ecc0e60a-f2cc-4266-8353-b228df89730a
   name: 🇹🇷[www.v2nodes.com] vless-TR-1...
   server: 45.92.219.47
@@ -53,8 +43,18 @@ proxies:
   servername: ty.galactichub.online
   client-fingerprint: chrome
 - type: vless
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
+  server: 151.241.226.201
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+- type: vless
   uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  name: '🏳[www.v2nodes.com] vless- #19'
+  name: '🏳[www.v2nodes.com] vless- #17'
   server: 62.133.63.45
   port: 8444
   udp: true
@@ -62,6 +62,28 @@ proxies:
   tls: true
   servername: github.com
   client-fingerprint: safari
+- type: vless
+  uuid: 1ca32dbf-2c2f-43af-8504-cdaaf85bfea2
+  name: '🇺🇸 美国 | USA #4'
+  server: 87.120.106.95
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: blog.worldoftanks.eu
+  client-fingerprint: firefox
+- type: vless
+  uuid: 1ca32dbf-2c2f-43af-8504-cdaaf85bfea2
+  name: 🇺🇸 美国 | USA
+  server: 87.120.106.95
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: blog.worldoftanks.eu
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: iQCvXMQZR-eT2MVmXP7c99cvcle22mVWuKem_345BWM
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -70,17 +92,21 @@ proxy-groups:
   proxies:
   - '🇪🇸 西班牙 | ESP #1'
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
   - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - '🏳[www.v2nodes.com] vless- #19'
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
+  - '🏳[www.v2nodes.com] vless- #17'
+  - '🇺🇸 美国 | USA #4'
+  - 🇺🇸 美国 | USA
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇪🇸 西班牙 | ESP #1'
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
   - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - '🏳[www.v2nodes.com] vless- #19'
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
+  - '🏳[www.v2nodes.com] vless- #17'
+  - '🇺🇸 美国 | USA #4'
+  - 🇺🇸 美国 | USA
 rules:
 - MATCH,SELECT
