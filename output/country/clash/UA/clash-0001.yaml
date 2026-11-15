@@ -27,6 +27,16 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- type: vless
+  uuid: ae46b75d-233b-42e4-a248-f29e605b0a50
+  name: '🇺🇦 乌克兰 | UKR #1'
+  server: 167.17.186.36
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: ua1.15min.club
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -35,11 +45,13 @@ proxy-groups:
   proxies:
   - 🇬🇧[www.v2nodes.com] ss-GB-1622...
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #5'
+  - '🇺🇦 乌克兰 | UKR #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇬🇧[www.v2nodes.com] ss-GB-1622...
   - '🇺🇦[www.v2nodes.com] vless-UA-1... #5'
+  - '🇺🇦 乌克兰 | UKR #1'
 rules:
 - MATCH,SELECT

@@ -1,19 +1,38 @@
 {
   "outbounds": [
     {
-      "server": "91.198.108.191",
+      "server": "77.91.68.117",
       "server_port": 443,
-      "tag": "🇦🇲 AM_26 #1",
+      "tag": "🇦🇲 AM_27 #1",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "v1n3.11676767.xyz"
+        "server_name": "cf-1rm.pages.dev"
       },
       "transport": {
         "headers": {
-          "Host": "v1n3.11676767.xyz"
+          "Host": "cf-1rm.pages.dev"
         },
-        "path": "/go.php/productsfp=chrome",
+        "path": "/fp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "5e610f80-fc6a-479d-8621-b672355b96a1"
+    },
+    {
+      "server": "88.218.92.157",
+      "server_port": 8443,
+      "tag": "🇦🇲 AM_28 #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "v2n4.11676767.xyz"
+      },
+      "transport": {
+        "headers": {
+          "Host": "v2n4.11676767.xyz"
+        },
+        "path": "/resource/topicsfp=chrome",
         "type": "ws"
       },
       "type": "vless",
@@ -22,7 +41,8 @@
     {
       "interval": "5m",
       "outbounds": [
-        "🇦🇲 AM_26 #1"
+        "🇦🇲 AM_27 #1",
+        "🇦🇲 AM_28 #1"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -31,7 +51,8 @@
     {
       "outbounds": [
         "auto",
-        "🇦🇲 AM_26 #1"
+        "🇦🇲 AM_27 #1",
+        "🇦🇲 AM_28 #1"
       ],
       "tag": "select",
       "type": "selector"

@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 2e69b088-6ef3-417f-8247-125cf257fafd
-  name: 🇫🇮FI_1|3.9MB/s
+  name: 🇫🇮FI_1|1.1MB/s
   server: 108.156.65.62
   port: 443
   udp: true
@@ -20,17 +20,6 @@ proxies:
   tls: true
   servername: d1ivx1xk58pr8u.cloudfront.net
   client-fingerprint: chrome
-- type: vless
-  uuid: 555b35c4-30f9-40c6-a61a-7f53ab1bea45
-  name: '🇮🇹 意大利 | ITA #5'
-  server: 83.141.92.190
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: images.porsche.com
-  client-fingerprint: firefox
 - type: vless
   uuid: 555b35c4-30f9-40c6-a61a-7f53ab1bea45
   name: 🇮🇹 意大利 | ITA
@@ -45,21 +34,32 @@ proxies:
   reality-opts:
     public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
     short-id: 1a2b3c4d
+- type: vless
+  uuid: 555b35c4-30f9-40c6-a61a-7f53ab1bea45
+  name: '🇮🇹 意大利 | ITA #5'
+  server: 83.141.92.190
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: images.porsche.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇮FI_1|3.9MB/s
-  - '🇮🇹 意大利 | ITA #5'
+  - 🇫🇮FI_1|1.1MB/s
   - 🇮🇹 意大利 | ITA
+  - '🇮🇹 意大利 | ITA #5'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇫🇮FI_1|3.9MB/s
-  - '🇮🇹 意大利 | ITA #5'
+  - 🇫🇮FI_1|1.1MB/s
   - 🇮🇹 意大利 | ITA
+  - '🇮🇹 意大利 | ITA #5'
 rules:
 - MATCH,SELECT

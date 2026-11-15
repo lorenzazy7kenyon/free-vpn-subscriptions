@@ -12,6 +12,16 @@ dns:
 proxies:
 - type: vless
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  name: '🇧🇾 BY_31 #1'
+  server: 196.245.153.111
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: 76574ct.nl8.h1clayd.click
+  client-fingerprint: firefox
+- type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   name: 🇦🇱[www.v2nodes.com] vless-AL-1...
   server: 196.245.153.104
   port: 443
@@ -26,11 +36,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇧🇾 BY_31 #1'
   - 🇦🇱[www.v2nodes.com] vless-AL-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇧🇾 BY_31 #1'
   - 🇦🇱[www.v2nodes.com] vless-AL-1...
 rules:
 - MATCH,SELECT

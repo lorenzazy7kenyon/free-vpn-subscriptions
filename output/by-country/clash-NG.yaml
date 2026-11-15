@@ -12,6 +12,16 @@ dns:
 proxies:
 - type: vless
   uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
+  server: 196.196.149.80
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: b3cd32g.es1.h1clayd.click
+  client-fingerprint: firefox
+- type: vless
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
   name: 🇪🇸 西班牙 | ESP
   server: 196.196.149.80
   port: 443
@@ -24,16 +34,6 @@ proxies:
   reality-opts:
     public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
     short-id: 42426c882c5fcd41
-- type: vless
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  name: '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
-  server: 196.196.149.80
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: b3cd32g.es1.h1clayd.click
-  client-fingerprint: firefox
 - type: vless
   uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
   name: '🇪🇸 西班牙 | ESP #2'
@@ -51,15 +51,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇸 西班牙 | ESP
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
+  - 🇪🇸 西班牙 | ESP
   - '🇪🇸 西班牙 | ESP #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇪🇸 西班牙 | ESP
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
+  - 🇪🇸 西班牙 | ESP
   - '🇪🇸 西班牙 | ESP #2'
 rules:
 - MATCH,SELECT

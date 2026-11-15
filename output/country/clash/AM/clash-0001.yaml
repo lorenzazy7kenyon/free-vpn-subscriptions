@@ -11,29 +11,44 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-  name: '🇦🇲 AM_26 #1'
-  server: 91.198.108.191
+  uuid: 5e610f80-fc6a-479d-8621-b672355b96a1
+  name: '🇦🇲 AM_27 #1'
+  server: 77.91.68.117
   port: 443
   udp: true
   network: ws
   tls: true
-  servername: v1n3.11676767.xyz
+  servername: cf-1rm.pages.dev
   ws-opts:
-    path: /go.php/productsfp=chrome
+    path: /fp=chrome
     headers:
-      Host: v1n3.11676767.xyz
+      Host: cf-1rm.pages.dev
+- type: vless
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  name: '🇦🇲 AM_28 #1'
+  server: 88.218.92.157
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: v2n4.11676767.xyz
+  ws-opts:
+    path: /resource/topicsfp=chrome
+    headers:
+      Host: v2n4.11676767.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇦🇲 AM_26 #1'
+  - '🇦🇲 AM_27 #1'
+  - '🇦🇲 AM_28 #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇦🇲 AM_26 #1'
+  - '🇦🇲 AM_27 #1'
+  - '🇦🇲 AM_28 #1'
 rules:
 - MATCH,SELECT
