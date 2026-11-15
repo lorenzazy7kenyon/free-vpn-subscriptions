@@ -21,7 +21,7 @@ proxies:
     path: /
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇰🇷[www.v2nodes.com] trojan-KR-...
+  name: '🏳[www.v2nodes.com] trojan- #5'
   server: 158.247.253.243
   port: 443
   udp: true
@@ -40,7 +40,7 @@ proxies:
       Host: fs.qicai99.com
 - type: vless
   uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
-  name: '🏳[www.v2nodes.com] vless- #11'
+  name: '🏳[www.v2nodes.com] vless- #20'
   server: 151.245.106.49
   port: 2053
   udp: true
@@ -50,7 +50,7 @@ proxies:
   client-fingerprint: firefox
 - type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
+  name: '🇰🇷[www.v2nodes.com] vless-KR-3... #5'
   server: 64.110.79.66
   port: 8443
   udp: true
@@ -64,7 +64,15 @@ proxies:
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   name: '🇰🇷 韩国 | KOR #1'
-  server: 3.36.121.247
+  server: 52.79.88.129
+  port: 443
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: '🇰🇷 韩国 | KOR #2'
+  server: 43.201.54.5
   port: 443
   udp: true
   sni: www.bing.com
@@ -76,20 +84,22 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - 🇰🇷[www.v2nodes.com] trojan-KR-...
+  - '🏳[www.v2nodes.com] trojan- #5'
   - '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
-  - '🏳[www.v2nodes.com] vless- #11'
-  - '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
+  - '🏳[www.v2nodes.com] vless- #20'
+  - '🇰🇷[www.v2nodes.com] vless-KR-3... #5'
   - '🇰🇷 韩国 | KOR #1'
+  - '🇰🇷 韩国 | KOR #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - 🇰🇷[www.v2nodes.com] trojan-KR-...
+  - '🏳[www.v2nodes.com] trojan- #5'
   - '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
-  - '🏳[www.v2nodes.com] vless- #11'
-  - '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
+  - '🏳[www.v2nodes.com] vless- #20'
+  - '🇰🇷[www.v2nodes.com] vless-KR-3... #5'
   - '🇰🇷 韩国 | KOR #1'
+  - '🇰🇷 韩国 | KOR #2'
 rules:
 - MATCH,SELECT

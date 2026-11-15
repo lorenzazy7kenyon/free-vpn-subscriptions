@@ -10,6 +10,15 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知158
+  server: 192.228.145.118
+  port: 10086
+  udp: true
 - type: trojan
   password: 5931134d1cde66bf83a54acdfebe7ab2
   name: 🇲🇾[www.v2nodes.com] trojan-MY-...
@@ -23,11 +32,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 未知158
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 未知158
   - 🇲🇾[www.v2nodes.com] trojan-MY-...
 rules:
 - MATCH,SELECT

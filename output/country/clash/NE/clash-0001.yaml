@@ -12,29 +12,6 @@ dns:
 proxies:
 - type: vless
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: '🇦🇱 AL_29 #1'
-  server: 196.196.148.85
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: 5d0319t.nl7.h1clayd.click
-  client-fingerprint: firefox
-- type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: 🇦🇱 AL_29
-  server: 196.196.148.85
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: 5d0319t.nl7.h1clayd.click
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
-    short-id: 361d0dd59c70516f
-- type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   name: 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
   server: 196.196.148.63
   port: 443
@@ -46,33 +23,17 @@ proxies:
   reality-opts:
     public-key: PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU
     short-id: d3bd772514c87d28
-- type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: 🇳🇱NL_12|1.6MB/s
-  server: 196.196.148.63
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: 717252g.nl8.h1clayd.click
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇦🇱 AL_29 #1'
-  - 🇦🇱 AL_29
   - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
-  - 🇳🇱NL_12|1.6MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇦🇱 AL_29 #1'
-  - 🇦🇱 AL_29
   - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
-  - 🇳🇱NL_12|1.6MB/s
 rules:
 - MATCH,SELECT

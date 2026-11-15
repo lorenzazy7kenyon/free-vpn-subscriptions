@@ -10,32 +10,25 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知41
-  server: 162.4.136.79
-  port: 443
+- type: trojan
+  password: 3b985d60-e252-4935-8e03-06afeb1144c9
+  name: 🇭🇰HK_1|1.7MB/s
+  server: 112.49.65.212
+  port: 18000
   udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
+  sni: www.biliimg.com
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知41
+  - 🇭🇰HK_1|1.7MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知41
+  - 🇭🇰HK_1|1.7MB/s
 rules:
 - MATCH,SELECT
