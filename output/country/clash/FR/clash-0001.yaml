@@ -11,6 +11,28 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  name: '🏳[www.v2nodes.com] vless- #9'
+  server: 138.124.70.41
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 138.124.70.41
+- type: vless
+  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+  name: 🇫🇷[www.v2nodes.com] vless-FR-1...
+  server: 20.19.83.143
+  port: 2083
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
   uuid: 98a24806-141a-43d3-b094-bd66c4eb93b8
   name: 🇮🇷[www.v2nodes.com] vless-IR-1...
   server: 198.16.113.218
@@ -34,7 +56,7 @@ proxies:
   client-fingerprint: chrome
 - type: vless
   uuid: 98a24806-141a-43d3-b094-bd66c4eb93b8
-  name: '🇮🇷[www.v2nodes.com] vless-IR-1... #3'
+  name: '🏳[www.v2nodes.com] vless- #14'
   server: 198.16.113.221
   port: 8443
   udp: true
@@ -43,6 +65,20 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇫🇷[www.v2nodes.com] ss-FR-1615...
+  server: 38.109.228.110
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
+  server: 172.99.189.142
+  port: 19999
+  udp: true
 - type: vless
   uuid: 98a24806-141a-43d3-b094-bd66c4eb93b8
   name: '🇮🇷[www.v2nodes.com] vless-IR-1... #2'
@@ -54,62 +90,38 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #12'
-  server: 38.109.228.110
-  port: 19999
+- type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇫🇷FR-152.228.191.232-0156
+  server: 152.228.191.232
+  port: 443
   udp: true
+  tls: true
+  servername: lg30.cfcdn3.xyz
+  ws-opts:
+    path: /ray
+    headers:
+      Host: lg30.cfcdn3.xyz
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #13'
-  server: 167.17.64.27
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1615...
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
   server: 167.17.64.22
   port: 19999
   udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #11'
-  server: 23.162.152.22
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #14'
-  server: 172.99.189.142
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #15'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
   server: 167.17.64.175
   port: 19999
   udp: true
 - type: vless
-  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
-  name: 🇫🇷[www.v2nodes.com] vless-FR-1...
-  server: 20.19.83.143
-  port: 2083
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
   uuid: edb50d20-2d3e-4c1e-8a75-a17168a89aa5
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
   server: 145.223.68.58
   port: 443
   udp: true
@@ -119,17 +131,31 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: firefox
 - type: ss
-  cipher: chacha20-ietf-poly1305
-  password: x19py0a8ipglqkbe
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #5'
-  server: 51.77.144.182
-  port: 8080
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🏳[www.v2nodes.com] ss- #5'
+  server: 23.162.152.22
+  port: 19999
   udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: 29irqk0paakcx19v
-  name: 🇫🇷FR-51.83.61.102-0329
+  name: 🇫🇷FR-51.83.61.102-0346
   server: 51.83.61.102
+  port: 8080
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
+  server: 167.17.64.27
+  port: 19999
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: x19py0a8ipglqkbe
+  name: '🏳[www.v2nodes.com] ss- #4'
+  server: 51.77.144.182
   port: 8080
   udp: true
 - type: vmess
@@ -137,7 +163,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
-  name: 🇫🇷FR-145.239.55.210-0315
+  name: 🇫🇷FR-145.239.55.210-0310
   server: 145.239.55.210
   port: 80
   udp: true
@@ -151,39 +177,43 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🏳[www.v2nodes.com] vless- #9'
+  - 🇫🇷[www.v2nodes.com] vless-FR-1...
   - 🇮🇷[www.v2nodes.com] vless-IR-1...
   - '🇮🇷[www.v2nodes.com] vless-IR-1... #1'
-  - '🇮🇷[www.v2nodes.com] vless-IR-1... #3'
-  - '🇮🇷[www.v2nodes.com] vless-IR-1... #2'
-  - '🏳[www.v2nodes.com] ss- #12'
-  - '🏳[www.v2nodes.com] ss- #13'
+  - '🏳[www.v2nodes.com] vless- #14'
   - 🇫🇷[www.v2nodes.com] ss-FR-1615...
-  - '🏳[www.v2nodes.com] ss- #11'
-  - '🏳[www.v2nodes.com] ss- #14'
-  - '🏳[www.v2nodes.com] ss- #15'
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
-  - '🇫🇷[www.v2nodes.com] ss-FR-1621... #5'
-  - 🇫🇷FR-51.83.61.102-0329
-  - 🇫🇷FR-145.239.55.210-0315
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
+  - '🇮🇷[www.v2nodes.com] vless-IR-1... #2'
+  - 🇫🇷FR-152.228.191.232-0156
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
+  - '🏳[www.v2nodes.com] ss- #5'
+  - 🇫🇷FR-51.83.61.102-0346
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
+  - '🏳[www.v2nodes.com] ss- #4'
+  - 🇫🇷FR-145.239.55.210-0310
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🏳[www.v2nodes.com] vless- #9'
+  - 🇫🇷[www.v2nodes.com] vless-FR-1...
   - 🇮🇷[www.v2nodes.com] vless-IR-1...
   - '🇮🇷[www.v2nodes.com] vless-IR-1... #1'
-  - '🇮🇷[www.v2nodes.com] vless-IR-1... #3'
-  - '🇮🇷[www.v2nodes.com] vless-IR-1... #2'
-  - '🏳[www.v2nodes.com] ss- #12'
-  - '🏳[www.v2nodes.com] ss- #13'
+  - '🏳[www.v2nodes.com] vless- #14'
   - 🇫🇷[www.v2nodes.com] ss-FR-1615...
-  - '🏳[www.v2nodes.com] ss- #11'
-  - '🏳[www.v2nodes.com] ss- #14'
-  - '🏳[www.v2nodes.com] ss- #15'
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
-  - '🇫🇷[www.v2nodes.com] ss-FR-1621... #5'
-  - 🇫🇷FR-51.83.61.102-0329
-  - 🇫🇷FR-145.239.55.210-0315
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
+  - '🇮🇷[www.v2nodes.com] vless-IR-1... #2'
+  - 🇫🇷FR-152.228.191.232-0156
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
+  - '🏳[www.v2nodes.com] ss- #5'
+  - 🇫🇷FR-51.83.61.102-0346
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
+  - '🏳[www.v2nodes.com] ss- #4'
+  - 🇫🇷FR-145.239.55.210-0310
 rules:
 - MATCH,SELECT

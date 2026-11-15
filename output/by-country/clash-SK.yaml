@@ -11,14 +11,14 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: 🇦🇱[www.v2nodes.com] vless-AL-1...
-  server: 196.245.153.104
+  uuid: 474638a5-dc58-4453-9e40-70bcaa4ef74c
+  name: '🇸🇰 斯洛伐克 | SVK #1'
+  server: 196.245.153.112
   port: 443
   udp: true
-  network: grpc
+  network: tcp
   tls: true
-  servername: 15b171g.nl7.h1clayd.click
+  servername: b998f03d.de-p2.h1clayd.click
   client-fingerprint: firefox
 - type: vless
   uuid: 474638a5-dc58-4453-9e40-70bcaa4ef74c
@@ -34,14 +34,14 @@ proxies:
     public-key: RjoTK5x2_y3hb4nsOUnjii7IAu6gy5GrC-VN-H_AIh0
     short-id: c10f4100fa3a8d47
 - type: vless
-  uuid: 474638a5-dc58-4453-9e40-70bcaa4ef74c
-  name: '🇸🇰 斯洛伐克 | SVK #1'
-  server: 196.245.153.112
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  name: 🇦🇱[www.v2nodes.com] vless-AL-1...
+  server: 196.245.153.104
   port: 443
   udp: true
-  network: tcp
+  network: grpc
   tls: true
-  servername: b998f03d.de-p2.h1clayd.click
+  servername: 15b171g.nl7.h1clayd.click
   client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
@@ -49,15 +49,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇱[www.v2nodes.com] vless-AL-1...
-  - 🇸🇰 斯洛伐克 | SVK
   - '🇸🇰 斯洛伐克 | SVK #1'
+  - 🇸🇰 斯洛伐克 | SVK
+  - 🇦🇱[www.v2nodes.com] vless-AL-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇦🇱[www.v2nodes.com] vless-AL-1...
-  - 🇸🇰 斯洛伐克 | SVK
   - '🇸🇰 斯洛伐克 | SVK #1'
+  - 🇸🇰 斯洛伐克 | SVK
+  - 🇦🇱[www.v2nodes.com] vless-AL-1...
 rules:
 - MATCH,SELECT

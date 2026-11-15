@@ -23,26 +23,11 @@ proxies:
   client-fingerprint: chrome
 - type: vless
   uuid: 13e541f3-d09d-4633-89df-8513db0ced20
-  name: '🏳[www.v2nodes.com] vless- #6'
+  name: '🏳[www.v2nodes.com] vless- #5'
   server: 45.86.60.174
   port: 16443
   udp: true
   network: tcp
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知31
-  server: 5.101.122.59
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -50,14 +35,12 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
-  - '🏳[www.v2nodes.com] vless- #6'
-  - 未知31
+  - '🏳[www.v2nodes.com] vless- #5'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
-  - '🏳[www.v2nodes.com] vless- #6'
-  - 未知31
+  - '🏳[www.v2nodes.com] vless- #5'
 rules:
 - MATCH,SELECT

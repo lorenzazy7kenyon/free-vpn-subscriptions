@@ -11,8 +11,19 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  server: 78.135.73.47
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.datadoghq.com
+  client-fingerprint: firefox
+- type: vless
   uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  name: '🏳[www.v2nodes.com] vless- #29'
+  name: 🇹🇷[www.v2nodes.com] vless-TR-1...
   server: 62.133.63.45
   port: 8444
   udp: true
@@ -31,19 +42,8 @@ proxies:
   servername: www.apple.com
   client-fingerprint: firefox
 - type: vless
-  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
-  server: 78.135.73.47
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.datadoghq.com
-  client-fingerprint: firefox
-- type: vless
   uuid: ecc0e60a-f2cc-4266-8353-b228df89730a
-  name: 🇹🇷[www.v2nodes.com] vless-TR-1...
+  name: '🏳[www.v2nodes.com] vless- #24'
   server: 45.92.219.47
   port: 443
   udp: true
@@ -58,17 +58,17 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #29'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
   - 🇹🇷[www.v2nodes.com] vless-TR-1...
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
+  - '🏳[www.v2nodes.com] vless- #24'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #29'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
   - 🇹🇷[www.v2nodes.com] vless-TR-1...
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
+  - '🏳[www.v2nodes.com] vless- #24'
 rules:
 - MATCH,SELECT

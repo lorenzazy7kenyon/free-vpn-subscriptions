@@ -12,19 +12,19 @@ dns:
 proxies:
 - type: hysteria2
   password: b36a14f8-fc3f-4142-968f-48031cf5f330
-  name: 🇺🇸 美国 | USA 8
-  server: 196.240.181.10
-  port: 25282
-  udp: true
-  sni: 314c8dt.us12.h1clayd.click
-  skip-cert-verify: true
-- type: hysteria2
-  password: b36a14f8-fc3f-4142-968f-48031cf5f330
   name: 🇱🇹 立陶宛 | LTU
   server: 196.240.181.9
   port: 25318
   udp: true
   sni: 775c8bt.lt4.h1clayd.click
+  skip-cert-verify: true
+- type: hysteria2
+  password: b36a14f8-fc3f-4142-968f-48031cf5f330
+  name: 🇺🇸 美国 | USA 8
+  server: 196.240.181.10
+  port: 25282
+  udp: true
+  sni: 314c8dt.us12.h1clayd.click
   skip-cert-verify: true
 proxy-groups:
 - name: AUTO
@@ -32,13 +32,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 | USA 8
   - 🇱🇹 立陶宛 | LTU
+  - 🇺🇸 美国 | USA 8
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 | USA 8
   - 🇱🇹 立陶宛 | LTU
+  - 🇺🇸 美国 | USA 8
 rules:
 - MATCH,SELECT

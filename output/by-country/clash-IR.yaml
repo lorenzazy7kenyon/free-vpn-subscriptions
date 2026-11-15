@@ -10,19 +10,16 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知130
-  server: 185.143.234.120
-  port: 80
+- type: vless
+  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
+  name: '🇳🇱 荷兰 | NLD #5'
+  server: 194.60.228.97
+  port: 443
   udp: true
-  ws-opts:
-    path: /graphql
-    headers:
-      Host: koochehpas.com
+  network: tcp
+  tls: true
+  servername: base.hosamobenl.co.uk
+  client-fingerprint: chrome
 - type: vless
   uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
   name: 🇳🇱 荷兰 | NLD
@@ -33,16 +30,15 @@ proxies:
   tls: true
   servername: base.hosamobenl.co.uk
   client-fingerprint: chrome
-- type: vless
-  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
-  name: '🇳🇱 荷兰 | NLD #2'
-  server: 194.60.228.97
+- type: vmess
+  uuid: db392ddc-5ac9-459b-9ce3-6f6dc87b650e
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知99
+  server: 91.216.217.181
   port: 443
   udp: true
-  network: tcp
-  tls: true
-  servername: base.hosamobenl.co.uk
-  client-fingerprint: chrome
 - type: hysteria2
   password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
   name: 🇮🇷 12@exclavevpn
@@ -57,17 +53,17 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知130
+  - '🇳🇱 荷兰 | NLD #5'
   - 🇳🇱 荷兰 | NLD
-  - '🇳🇱 荷兰 | NLD #2'
+  - 未知99
   - 🇮🇷 12@exclavevpn
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知130
+  - '🇳🇱 荷兰 | NLD #5'
   - 🇳🇱 荷兰 | NLD
-  - '🇳🇱 荷兰 | NLD #2'
+  - 未知99
   - 🇮🇷 12@exclavevpn
 rules:
 - MATCH,SELECT

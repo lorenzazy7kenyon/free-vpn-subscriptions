@@ -12,27 +12,22 @@ dns:
 proxies:
 - type: trojan
   password: humanity
-  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #6'
-  server: 45.130.125.160
+  name: 🏁RELAY-45.130.125.112-5627
+  server: 45.130.125.112
   port: 443
   udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
+  sni: 45.130.125.112
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #6'
+  - 🏁RELAY-45.130.125.112-5627
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #6'
+  - 🏁RELAY-45.130.125.112-5627
 rules:
 - MATCH,SELECT
