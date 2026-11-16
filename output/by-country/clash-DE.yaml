@@ -11,72 +11,12 @@ dns:
   - 8.8.8.8
 proxies:
 - type: ss
-  cipher: chacha20-ietf-poly1305
-  password: zZMNTGpPl38ASlbI1EKOBJ
-  name: 🇩🇪[www.v2nodes.com] ss-DE-1621...
-  server: 135.220.178.46
-  port: 46303
-  udp: true
-- type: vless
-  uuid: 555b35c4-30f9-40c6-a61a-7f53ab1bea45
-  name: 🇩🇪 德国 | DEU
-  server: 5.231.45.196
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  name: '🇩🇪 德国 | DEU #4'
+  server: 47.254.175.2
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: images.porsche.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
-    short-id: 1a2b3c4d
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇩🇪DE-193.108.119.2-0239
-  server: 193.108.119.2
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇩🇪DE-23.157.88.43-0243
-  server: 23.157.88.43
-  port: 19999
-  udp: true
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇩🇪DE-193.108.119.29-0219
-  server: 193.108.119.29
-  port: 443
-  udp: true
-  sni: blog.iloverussia2026.com
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇩🇪DE-193.108.119.15-0236
-  server: 193.108.119.15
-  port: 443
-  udp: true
-  sni: courses.iloverussia2026.com
-- type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知56
-  server: 185.177.229.95
-  port: 1270
-  udp: true
-  tls: true
-  servername: xmfhlpy.com
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇩🇪DE-193.108.119.193-0234
-  server: 193.108.119.193
-  port: 443
-  udp: true
-  sni: resources.iloverussia2026.com
 - type: vmess
   uuid: 7add6c87-86cb-412a-b3ab-d7e0fb276f09
   alterId: 0
@@ -99,17 +39,24 @@ proxies:
   server: 47.254.169.3
   port: 443
   udp: true
-- type: vless
-  uuid: 555b35c4-30f9-40c6-a61a-7f53ab1bea45
-  name: '🇩🇪 德国 | DEU #6'
-  server: 5.231.45.196
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
+- type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
   network: tcp
+  name: 未知56
+  server: 185.177.229.95
+  port: 1270
+  udp: true
   tls: true
-  servername: images.porsche.com
-  client-fingerprint: firefox
+  servername: xmfhlpy.com
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇩🇪DE-193.108.119.2-0239
+  server: 193.108.119.2
+  port: 19999
+  udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -117,23 +64,41 @@ proxies:
   server: 193.108.119.3
   port: 19999
   udp: true
-- type: vless
-  uuid: 1d46250c-f015-439d-a7fd-c4d9e2a4c63d
-  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
-  server: 212.113.116.181
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: de.oncloudvpn.com
-  client-fingerprint: chrome
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇩🇪DE-57.129.83.85-0285
-  server: 57.129.83.85
+  name: 🇩🇪DE-23.157.88.43-0243
+  server: 23.157.88.43
   port: 19999
   udp: true
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇩🇪DE-193.108.119.29-0219
+  server: 193.108.119.29
+  port: 443
+  udp: true
+  sni: blog.iloverussia2026.com
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇩🇪DE-193.108.119.193-0234
+  server: 193.108.119.193
+  port: 443
+  udp: true
+  sni: resources.iloverussia2026.com
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇩🇪DE-193.108.119.15-0236
+  server: 193.108.119.15
+  port: 443
+  udp: true
+  sni: courses.iloverussia2026.com
+- type: vless
+  uuid: 855c7aaa-e7d6-463e-971e-d36032744428
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #12'
+  server: 159.195.207.238
+  port: 49313
+  udp: true
+  network: tcp
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
@@ -149,13 +114,23 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
-- type: vless
-  uuid: 855c7aaa-e7d6-463e-971e-d36032744428
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #11'
-  server: 159.195.207.238
-  port: 49313
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇩🇪DE-57.129.83.85-0285
+  server: 57.129.83.85
+  port: 19999
   udp: true
-  network: tcp
+- type: vless
+  uuid: 1d46250c-f015-439d-a7fd-c4d9e2a4c63d
+  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #6'
+  server: 212.113.116.181
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: de.oncloudvpn.com
+  client-fingerprint: chrome
 - type: vmess
   uuid: 6bb70a79-c55b-4180-89e3-fc29bfab6662
   alterId: 0
@@ -191,7 +166,7 @@ proxies:
       Host: apjhdggyx.com
 - type: vless
   uuid: 146d567c-6335-4e63-a8aa-7ec068642440
-  name: '🇮🇹 意大利 | ITA #6'
+  name: '🇩🇪 德国 | DEU #6'
   server: 130.78.31.25
   port: 443
   udp: true
@@ -199,13 +174,20 @@ proxies:
   tls: true
   servername: pl2.obxodvpn.us
   client-fingerprint: firefox
-- type: hysteria2
-  password: b36a14f8-fc3f-4142-968f-48031cf5f330
-  name: 🇱🇹 15@exclavevpn
-  server: 179.254.127.219
-  port: 25318
+- type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  name: 🇩🇪DE_2|3.3MB/s
+  server: 47.254.143.251
+  port: 443
   udp: true
-  sni: 775c8bt.lt4.h1clayd.click
+- type: hysteria2
+  password: 833539ec-fbba-40e8-ba6c-ac31bf6b3b4c
+  name: 🇩🇪216664 | ⚡️Telegram = t.me/L...
+  server: 144.31.168.201
+  port: 443
+  udp: true
+  sni: fastconv-mirror.ru
 - type: hysteria2
   password: 5ictxgawam84vgrp
   name: Telegram  ⚜️Join -> @tik7net_v...
@@ -216,6 +198,20 @@ proxies:
   obfs: salamander
   obfs-password: 7922smqtd5qm70fu
 - type: hysteria2
+  password: lvu_1f46c9c7e44bef3f9974936d87ee4f44_1f900674c11bcad65b09ef1f77502ea5
+  name: 🇩🇪216653 | ⚡️Telegram = t.me/L...
+  server: 212.102.227.131
+  port: 443
+  udp: true
+  sni: n34.neproxy.net
+- type: hysteria2
+  password: b36a14f8-fc3f-4142-968f-48031cf5f330
+  name: 🇱🇹 15@exclavevpn
+  server: 179.254.127.219
+  port: 25318
+  udp: true
+  sni: 775c8bt.lt4.h1clayd.click
+- type: hysteria2
   password: KevinZakarian
   name: 🩵+@Azarakhsh_Proxy+🩷
   server: 179.61.132.96
@@ -225,6 +221,13 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: KevinZakarian
+- type: hysteria2
+  password: e45c1654-9184-40c7-b68b-2929ce2a0a89
+  name: 🇩🇪216655 | ⚡️Telegram = t.me/L...
+  server: 86.107.179.245
+  port: 443
+  udp: true
+  sni: cruises-cdn.travel-blogmir.blog
 - type: hysteria2
   password: 146d567c-6335-4e63-a8aa-7ec068642440
   name: ⚕️15@oneclickvpnkeys
@@ -239,57 +242,61 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪[www.v2nodes.com] ss-DE-1621...
-  - 🇩🇪 德国 | DEU
-  - 🇩🇪DE-193.108.119.2-0239
-  - 🇩🇪DE-23.157.88.43-0243
-  - 🇩🇪DE-193.108.119.29-0219
-  - 🇩🇪DE-193.108.119.15-0236
-  - 未知56
-  - 🇩🇪DE-193.108.119.193-0234
+  - '🇩🇪 德国 | DEU #4'
   - 未知130
   - 🇩🇪[www.v2nodes.com] ss-DE-1622...
-  - '🇩🇪 德国 | DEU #6'
+  - 未知56
+  - 🇩🇪DE-193.108.119.2-0239
   - 🇩🇪DE-193.108.119.3-0225
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
-  - 🇩🇪DE-57.129.83.85-0285
+  - 🇩🇪DE-23.157.88.43-0243
+  - 🇩🇪DE-193.108.119.29-0219
+  - 🇩🇪DE-193.108.119.193-0234
+  - 🇩🇪DE-193.108.119.15-0236
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #12'
   - 未知3
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #11'
+  - 🇩🇪DE-57.129.83.85-0285
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #6'
   - 未知91
   - 未知25
   - 未知90
-  - '🇮🇹 意大利 | ITA #6'
-  - 🇱🇹 15@exclavevpn
+  - '🇩🇪 德国 | DEU #6'
+  - 🇩🇪DE_2|3.3MB/s
+  - 🇩🇪216664 | ⚡️Telegram = t.me/L...
   - Telegram  ⚜️Join -> @tik7net_v...
+  - 🇩🇪216653 | ⚡️Telegram = t.me/L...
+  - 🇱🇹 15@exclavevpn
   - 🩵+@Azarakhsh_Proxy+🩷
+  - 🇩🇪216655 | ⚡️Telegram = t.me/L...
   - ⚕️15@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇩🇪[www.v2nodes.com] ss-DE-1621...
-  - 🇩🇪 德国 | DEU
-  - 🇩🇪DE-193.108.119.2-0239
-  - 🇩🇪DE-23.157.88.43-0243
-  - 🇩🇪DE-193.108.119.29-0219
-  - 🇩🇪DE-193.108.119.15-0236
-  - 未知56
-  - 🇩🇪DE-193.108.119.193-0234
+  - '🇩🇪 德国 | DEU #4'
   - 未知130
   - 🇩🇪[www.v2nodes.com] ss-DE-1622...
-  - '🇩🇪 德国 | DEU #6'
+  - 未知56
+  - 🇩🇪DE-193.108.119.2-0239
   - 🇩🇪DE-193.108.119.3-0225
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
-  - 🇩🇪DE-57.129.83.85-0285
+  - 🇩🇪DE-23.157.88.43-0243
+  - 🇩🇪DE-193.108.119.29-0219
+  - 🇩🇪DE-193.108.119.193-0234
+  - 🇩🇪DE-193.108.119.15-0236
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #12'
   - 未知3
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #11'
+  - 🇩🇪DE-57.129.83.85-0285
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #6'
   - 未知91
   - 未知25
   - 未知90
-  - '🇮🇹 意大利 | ITA #6'
-  - 🇱🇹 15@exclavevpn
+  - '🇩🇪 德国 | DEU #6'
+  - 🇩🇪DE_2|3.3MB/s
+  - 🇩🇪216664 | ⚡️Telegram = t.me/L...
   - Telegram  ⚜️Join -> @tik7net_v...
+  - 🇩🇪216653 | ⚡️Telegram = t.me/L...
+  - 🇱🇹 15@exclavevpn
   - 🩵+@Azarakhsh_Proxy+🩷
+  - 🇩🇪216655 | ⚡️Telegram = t.me/L...
   - ⚕️15@oneclickvpnkeys
 rules:
 - MATCH,SELECT

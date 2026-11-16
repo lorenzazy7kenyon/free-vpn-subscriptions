@@ -1,6 +1,23 @@
 {
   "outbounds": [
     {
+      "flow": "xtls-rprx-vision",
+      "server": "194.135.119.135",
+      "server_port": 443,
+      "tag": "🇬🇪 GE_130 #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "ge1.gofizzin.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "8197b9b9-8945-460f-99c9-325ef8a8a7c3"
+    },
+    {
       "server": "194.135.119.82",
       "server_port": 2053,
       "tag": "🇬🇪[www.v2nodes.com] vless-GE-1...",
@@ -22,6 +39,7 @@
     {
       "interval": "5m",
       "outbounds": [
+        "🇬🇪 GE_130 #1",
         "🇬🇪[www.v2nodes.com] vless-GE-1..."
       ],
       "tag": "auto",
@@ -31,6 +49,7 @@
     {
       "outbounds": [
         "auto",
+        "🇬🇪 GE_130 #1",
         "🇬🇪[www.v2nodes.com] vless-GE-1..."
       ],
       "tag": "select",

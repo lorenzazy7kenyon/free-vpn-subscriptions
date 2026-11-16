@@ -11,6 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
+  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  server: 47.80.19.173
+  port: 2053
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: '🇰🇷[www.v2nodes.com] vless-KR-3... #5'
   server: 64.110.79.66
@@ -49,16 +60,9 @@ proxies:
   server: 211.178.105.134
   port: 6123
   udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: '12242'
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  server: 115.161.136.145
-  port: 10099
-  udp: true
 - type: vless
   uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
-  name: '🏳[www.v2nodes.com] vless- #15'
+  name: '🏳[www.v2nodes.com] vless- #10'
   server: 151.245.106.49
   port: 2053
   udp: true
@@ -77,14 +81,6 @@ proxies:
     path: /
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: '🇰🇷 韩国 | KOR #1'
-  server: 52.79.88.129
-  port: 443
-  udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   name: '🇰🇷 韩国 | KOR #2'
   server: 43.201.54.5
   port: 443
@@ -97,27 +93,25 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   - '🇰🇷[www.v2nodes.com] vless-KR-3... #5'
   - '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
   - 🇰🇷[www.v2nodes.com] trojan-KR-...
   - 🇰🇷KR-211.178.105.134-5836
-  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  - '🏳[www.v2nodes.com] vless- #15'
+  - '🏳[www.v2nodes.com] vless- #10'
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - '🇰🇷 韩国 | KOR #1'
   - '🇰🇷 韩国 | KOR #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   - '🇰🇷[www.v2nodes.com] vless-KR-3... #5'
   - '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
   - 🇰🇷[www.v2nodes.com] trojan-KR-...
   - 🇰🇷KR-211.178.105.134-5836
-  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  - '🏳[www.v2nodes.com] vless- #15'
+  - '🏳[www.v2nodes.com] vless- #10'
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - '🇰🇷 韩国 | KOR #1'
   - '🇰🇷 韩国 | KOR #2'
 rules:
 - MATCH,SELECT

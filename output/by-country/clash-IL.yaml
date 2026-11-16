@@ -11,8 +11,19 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+  name: '🇮🇱 以色列 | ISR #1'
+  server: 45.150.108.180
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: il1.gofizzin.com
+  client-fingerprint: firefox
+- type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🏳[www.v2nodes.com] vless- #13'
+  name: '🏳[www.v2nodes.com] vless- #9'
   server: 192.71.27.237
   port: 443
   udp: true
@@ -29,11 +40,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #13'
+  - '🇮🇱 以色列 | ISR #1'
+  - '🏳[www.v2nodes.com] vless- #9'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #13'
+  - '🇮🇱 以色列 | ISR #1'
+  - '🏳[www.v2nodes.com] vless- #9'
 rules:
 - MATCH,SELECT

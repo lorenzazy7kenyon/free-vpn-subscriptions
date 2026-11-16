@@ -11,6 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+  name: '🇬🇪 GE_130 #1'
+  server: 194.135.119.135
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ge1.gofizzin.com
+  client-fingerprint: firefox
+- type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   name: 🇬🇪[www.v2nodes.com] vless-GE-1...
   server: 194.135.119.82
@@ -29,11 +40,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇬🇪 GE_130 #1'
   - 🇬🇪[www.v2nodes.com] vless-GE-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇬🇪 GE_130 #1'
   - 🇬🇪[www.v2nodes.com] vless-GE-1...
 rules:
 - MATCH,SELECT

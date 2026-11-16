@@ -10,14 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: 3b985d60-e252-4935-8e03-06afeb1144c9
-  name: 🇭🇰HK_1|2.9MB/s
-  server: 112.49.65.212
-  port: 18000
-  udp: true
-  sni: www.biliimg.com
-  skip-cert-verify: true
 - type: vmess
   uuid: 2a489513-46b5-488c-9899-9faaf2d83cd9
   alterId: 0
@@ -35,13 +27,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇰HK_1|2.9MB/s
   - 未知9
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇭🇰HK_1|2.9MB/s
   - 未知9
 rules:
 - MATCH,SELECT
