@@ -1,0 +1,70 @@
+{
+  "outbounds": [
+    {
+      "server": "103.175.79.6",
+      "server_port": 8443,
+      "tag": "🇵🇰 巴基斯坦 | PAK",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "download.nvidia.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "service_name": "TunService",
+        "type": "grpc"
+      },
+      "type": "vless",
+      "uuid": "97ab2e86-83c5-0a32-4914-5dbe1af97839"
+    },
+    {
+      "server": "103.175.79.6",
+      "server_port": 8443,
+      "tag": "🇵🇰 巴基斯坦 | PAK",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "JeVpfwIwteGa8xfysPJUzrbHgmOPyLGomRqyH8Pi7W0"
+        },
+        "server_name": "download.nvidia.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "97ab2e86-83c5-0a32-4914-5dbe1af97839"
+    },
+    {
+      "interval": "5m",
+      "outbounds": [
+        "🇵🇰 巴基斯坦 | PAK",
+        "🇵🇰 巴基斯坦 | PAK"
+      ],
+      "tag": "auto",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "outbounds": [
+        "auto",
+        "🇵🇰 巴基斯坦 | PAK",
+        "🇵🇰 巴基斯坦 | PAK"
+      ],
+      "tag": "select",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "final": "select"
+  }
+}

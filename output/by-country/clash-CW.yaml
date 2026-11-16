@@ -11,27 +11,29 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  name: EPODONIOS
-  server: 62.72.166.30
-  port: 8880
+  uuid: 50414e45-4c5f-5a45-5553-47be357e54da
+  name: 🇬🇧[www.v2nodes.com] vless-GB-1...
+  server: 88.216.67.54
+  port: 443
   udp: true
   network: ws
+  tls: true
+  servername: 52z4vtewuass.game4090taking.workers.dev
   ws-opts:
-    path: /
+    path: /stream/PANEL_ZEUS/47be357e54da/loc-0fp=chrome
     headers:
-      Host: vms.lifetime40.workers.dev
+      Host: 52z4vtewuass.game4090taking.workers.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - EPODONIOS
+  - 🇬🇧[www.v2nodes.com] vless-GB-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - EPODONIOS
+  - 🇬🇧[www.v2nodes.com] vless-GB-1...
 rules:
 - MATCH,SELECT

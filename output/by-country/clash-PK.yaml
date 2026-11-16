@@ -1,0 +1,50 @@
+mode: rule
+log-level: info
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- type: vless
+  uuid: 97ab2e86-83c5-0a32-4914-5dbe1af97839
+  name: 🇵🇰 巴基斯坦 | PAK
+  server: 103.175.79.6
+  port: 8443
+  udp: true
+  network: grpc
+  tls: true
+  servername: download.nvidia.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: 97ab2e86-83c5-0a32-4914-5dbe1af97839
+  name: 🇵🇰 巴基斯坦 | PAK
+  server: 103.175.79.6
+  port: 8443
+  udp: true
+  network: grpc
+  tls: true
+  servername: download.nvidia.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: JeVpfwIwteGa8xfysPJUzrbHgmOPyLGomRqyH8Pi7W0
+proxy-groups:
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇵🇰 巴基斯坦 | PAK
+  - 🇵🇰 巴基斯坦 | PAK
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - 🇵🇰 巴基斯坦 | PAK
+  - 🇵🇰 巴基斯坦 | PAK
+rules:
+- MATCH,SELECT

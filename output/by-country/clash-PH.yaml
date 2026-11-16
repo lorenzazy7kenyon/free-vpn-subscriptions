@@ -11,15 +11,14 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
-  name: '🇵🇭 菲律宾 | PHL #1'
-  server: 120.89.61.213
+  uuid: 3dbd9377-43cc-46c3-b32c-2605908024eb
+  name: '🇨🇿 捷克 | CZE #2'
+  server: 103.118.211.38
   port: 443
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: ph1.gofizz.in
+  servername: czechia.richforever.ru
   client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
@@ -27,11 +26,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇵🇭 菲律宾 | PHL #1'
+  - '🇨🇿 捷克 | CZE #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇵🇭 菲律宾 | PHL #1'
+  - '🇨🇿 捷克 | CZE #2'
 rules:
 - MATCH,SELECT

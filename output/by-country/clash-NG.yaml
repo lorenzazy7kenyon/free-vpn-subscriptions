@@ -21,6 +21,16 @@ proxies:
   tls: true
   servername: 7aa271t.es1.h1clayd.click
   client-fingerprint: firefox
+- type: vless
+  uuid: 4618cebd-e1e9-45c3-be98-d9d6e3ee8bef
+  name: 🇩🇪 德国 | DEU 7
+  server: 196.196.149.20
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: a566d1g.de18.h1clayd.click
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -28,10 +38,12 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
+  - 🇩🇪 德国 | DEU 7
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
+  - 🇩🇪 德国 | DEU 7
 rules:
 - MATCH,SELECT

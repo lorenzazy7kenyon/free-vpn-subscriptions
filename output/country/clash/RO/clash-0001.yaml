@@ -10,6 +10,13 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: U83u9OGpvSatIUW7LsWffr
+  name: 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  server: 194.68.44.42
+  port: 64546
+  udp: true
 - type: vless
   uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
   name: 🇷🇴[www.v2nodes.com] vless-RO-1...
@@ -21,13 +28,6 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: U83u9OGpvSatIUW7LsWffr
-  name: 🇷🇴[www.v2nodes.com] ss-RO-1595...
-  server: 194.68.44.42
-  port: 64546
-  udp: true
 - type: hysteria2
   password: ccb8ff48-3934-4250-b4ec-bb76b95d154f
   name: 🙏68@oneclickvpnkeys
@@ -41,15 +41,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - 🙏68@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - 🇷🇴[www.v2nodes.com] vless-RO-1...
   - 🙏68@oneclickvpnkeys
 rules:
 - MATCH,SELECT

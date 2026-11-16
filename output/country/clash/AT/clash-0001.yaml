@@ -18,6 +18,29 @@ proxies:
   udp: true
   network: tcp
 - type: vless
+  uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
+  name: '🇦🇹 奥地利 | AUT #1'
+  server: 50.7.115.245
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: beck.mossgill.top
+  client-fingerprint: firefox
+- type: vless
+  uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
+  name: 🇦🇹 奥地利 | AUT
+  server: 50.7.115.245
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: beck.mossgill.top
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: Mwczt2QjgQo3q8N10PVx8bWNubwiNhgka5GvxUy-GHQ
+    short-id: 53df2804
+- type: vless
   uuid: 399049fd-9cd6-4425-8114-6ea2f5040fe4
   name: 🇦🇹[www.v2nodes.com] vless-AT-1...
   server: 195.133.88.165
@@ -41,6 +64,8 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇦🇹[www.v2nodes.com] vless-AT-3...
+  - '🇦🇹 奥地利 | AUT #1'
+  - 🇦🇹 奥地利 | AUT
   - 🇦🇹[www.v2nodes.com] vless-AT-1...
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
 - name: SELECT
@@ -48,6 +73,8 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇦🇹[www.v2nodes.com] vless-AT-3...
+  - '🇦🇹 奥地利 | AUT #1'
+  - 🇦🇹 奥地利 | AUT
   - 🇦🇹[www.v2nodes.com] vless-AT-1...
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
 rules:
