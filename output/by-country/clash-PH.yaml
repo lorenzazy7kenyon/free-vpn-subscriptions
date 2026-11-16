@@ -10,24 +10,28 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-  name: 🇵🇭[www.v2nodes.com] ss-PH-1540...
-  server: 149.104.109.252
-  port: 8882
+- type: vless
+  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+  name: '🇵🇭 菲律宾 | PHL #1'
+  server: 120.89.61.213
+  port: 443
   udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ph1.gofizz.in
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇭[www.v2nodes.com] ss-PH-1540...
+  - '🇵🇭 菲律宾 | PHL #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇵🇭[www.v2nodes.com] ss-PH-1540...
+  - '🇵🇭 菲律宾 | PHL #1'
 rules:
 - MATCH,SELECT

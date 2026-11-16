@@ -11,16 +11,16 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  server: 84.235.244.108
-  port: 22573
+  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+  name: '🇦🇪 阿联酋 | ARE #1'
+  server: 45.86.228.39
+  port: 443
   udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: ae1.gofizzin.com
+  client-fingerprint: edge
 - type: vless
   uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
   name: 🇦🇪[www.v2nodes.com] vless-AE-1...
@@ -32,19 +32,32 @@ proxies:
     path: /vless
     headers:
       Host: 95.174.68.188
+- type: vless
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  server: 84.235.244.108
+  port: 22573
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - '🇦🇪 阿联酋 | ARE #1'
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - '🇦🇪 阿联酋 | ARE #1'
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
 rules:
 - MATCH,SELECT

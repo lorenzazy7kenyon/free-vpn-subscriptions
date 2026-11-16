@@ -10,6 +10,19 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知158
+  server: 185.143.234.120
+  port: 80
+  udp: true
+  ws-opts:
+    path: /graphql
+    headers:
+      Host: koochehpas.com
 - type: vless
   uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
   name: 🇳🇱NL_1|1.4MB/s
@@ -20,15 +33,6 @@ proxies:
   tls: true
   servername: base.hosamobenl.co.uk
   client-fingerprint: chrome
-- type: vmess
-  uuid: db392ddc-5ac9-459b-9ce3-6f6dc87b650e
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知99
-  server: 91.216.217.181
-  port: 443
-  udp: true
 - type: hysteria2
   password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
   name: 🇮🇷 12@exclavevpn
@@ -43,15 +47,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 未知158
   - 🇳🇱NL_1|1.4MB/s
-  - 未知99
   - 🇮🇷 12@exclavevpn
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 未知158
   - 🇳🇱NL_1|1.4MB/s
-  - 未知99
   - 🇮🇷 12@exclavevpn
 rules:
 - MATCH,SELECT

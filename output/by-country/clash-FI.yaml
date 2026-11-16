@@ -10,23 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-256-gcm
-  password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
-  name: 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  server: 213.176.92.148
-  port: 40647
-  udp: true
-- type: vless
-  uuid: cebc5f19-18d9-48e6-9029-fb4b04caf393
-  name: '🏳[www.v2nodes.com] vless- #5'
-  server: 45.38.143.210
-  port: 30584
-  udp: true
-  network: tcp
-  tls: true
-  servername: m.vk.com
-  client-fingerprint: chrome
 - type: vless
   uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
   name: '🇸🇪 瑞典 | SWE #1'
@@ -47,6 +30,24 @@ proxies:
   tls: true
   servername: pl-origin.krabvpn.pro
   client-fingerprint: firefox
+- type: ss
+  cipher: aes-256-gcm
+  password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
+  name: 🇫🇮[www.v2nodes.com] ss-FI-1621...
+  server: 213.176.92.148
+  port: 40647
+  udp: true
+- type: vless
+  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+  name: '🇩🇪 德国 | DEU #2'
+  server: 85.192.49.126
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: fi3.gofizzin.com
+  client-fingerprint: firefox
 - type: vless
   uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
   name: '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
@@ -59,6 +60,16 @@ proxies:
     headers:
       Host: 45.144.234.157
 - type: vless
+  uuid: b79d736d-0f10-4169-b626-362059d18204
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
+  server: 95.216.27.15
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: vless
   uuid: 2208b003-78b1-453c-b5ca-ce847ff0efd6
   name: '🇩🇪 德国 | DEU #9'
   server: 196.196.208.20
@@ -70,15 +81,24 @@ proxies:
   servername: 45b545t.fi7.h1clayd.click
   client-fingerprint: firefox
 - type: vless
-  uuid: b79d736d-0f10-4169-b626-362059d18204
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
-  server: 95.216.27.15
-  port: 2053
+  uuid: cebc5f19-18d9-48e6-9029-fb4b04caf393
+  name: '🏳[www.v2nodes.com] vless- #5'
+  server: 45.38.143.210
+  port: 30584
   udp: true
   network: tcp
   tls: true
-  servername: www.cloudflare.com
+  servername: m.vk.com
   client-fingerprint: chrome
+- type: hysteria2
+  password: 6aab8efdf13945829ae3699c342be406
+  name: Telegram:@v2rayng3
+  server: 31.76.80.69
+  port: 443
+  udp: true
+  sni: fiproxy1.lockdwn.com
+  obfs: salamander
+  obfs-password: uw9b2qq5rx
 - type: hysteria2
   password: 247802ca-0fbb-428a-b807-91a6e571b5c7
   name: 🪅42@oneclickvpnkeys
@@ -89,42 +109,35 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: AJyvWNsoDgVkMkboZ3juMJXYNRf6uEQE
-- type: hysteria2
-  password: 6aab8efdf13945829ae3699c342be406
-  name: Telegram:@v2rayng3
-  server: 31.76.80.69
-  port: 443
-  udp: true
-  sni: fiproxy1.lockdwn.com
-  obfs: salamander
-  obfs-password: uw9b2qq5rx
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  - '🏳[www.v2nodes.com] vless- #5'
   - '🇸🇪 瑞典 | SWE #1'
   - '🇸🇪 瑞典 | SWE #3'
+  - 🇫🇮[www.v2nodes.com] ss-FI-1621...
+  - '🇩🇪 德国 | DEU #2'
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
-  - '🇩🇪 德国 | DEU #9'
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
-  - 🪅42@oneclickvpnkeys
+  - '🇩🇪 德国 | DEU #9'
+  - '🏳[www.v2nodes.com] vless- #5'
   - Telegram:@v2rayng3
+  - 🪅42@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  - '🏳[www.v2nodes.com] vless- #5'
   - '🇸🇪 瑞典 | SWE #1'
   - '🇸🇪 瑞典 | SWE #3'
+  - 🇫🇮[www.v2nodes.com] ss-FI-1621...
+  - '🇩🇪 德国 | DEU #2'
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
-  - '🇩🇪 德国 | DEU #9'
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
-  - 🪅42@oneclickvpnkeys
+  - '🇩🇪 德国 | DEU #9'
+  - '🏳[www.v2nodes.com] vless- #5'
   - Telegram:@v2rayng3
+  - 🪅42@oneclickvpnkeys
 rules:
 - MATCH,SELECT
