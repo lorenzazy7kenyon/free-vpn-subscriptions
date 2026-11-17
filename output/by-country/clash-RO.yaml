@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  name: '🏳[www.v2nodes.com] vless- #15'
+  name: '🏳[www.v2nodes.com] vless- #18'
   server: 46.28.67.55
   port: 443
   udp: true
@@ -28,28 +28,19 @@ proxies:
   server: 194.68.44.42
   port: 64546
   udp: true
-- type: hysteria2
-  password: ccb8ff48-3934-4250-b4ec-bb76b95d154f
-  name: 🙏68@oneclickvpnkeys
-  server: 185.126.237.178
-  port: 443
-  udp: true
-  sni: 185.126.237.178
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #15'
+  - '🏳[www.v2nodes.com] vless- #18'
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
-  - 🙏68@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #15'
+  - '🏳[www.v2nodes.com] vless- #18'
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
-  - 🙏68@oneclickvpnkeys
 rules:
 - MATCH,SELECT

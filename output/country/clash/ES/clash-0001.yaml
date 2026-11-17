@@ -10,21 +10,48 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知92
-  server: 34.175.202.195
-  port: 443
+- type: ss
+  cipher: aes-256-cfb
+  password: p9z5BVADH2YFs3MN
+  name: 🇪🇸ES-5.188.181.201-0234
+  server: 5.188.181.201
+  port: 9040
   udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
+- type: ss
+  cipher: aes-256-cfb
+  password: UkXRsXvR6buDMG2Y
+  name: 🇪🇸ES-5.188.181.201-0238
+  server: 5.188.181.201
+  port: 9001
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: GA9KzeEgvfxNrgmM
+  name: 🇪🇸ES-5.188.181.201-0244
+  server: 5.188.181.201
+  port: 9019
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: ZET59LF6DvCC8KVt
+  name: 🇪🇸ES-5.188.181.201-0239
+  server: 5.188.181.201
+  port: 9005
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: EXN3S3eQpjE7EJu8
+  name: 🇪🇸ES-5.188.181.201-0236
+  server: 5.188.181.201
+  port: 9027
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: GeregetR8cvQHzYr
+  name: 🇪🇸ES-5.188.181.201-0237
+  server: 5.188.181.201
+  port: 9030
+  udp: true
 - type: vless
   uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
   name: 🇪🇸[www.v2nodes.com] vless-ES-1...
@@ -37,12 +64,79 @@ proxies:
   servername: www.apple.com
   client-fingerprint: chrome
 - type: ss
+  cipher: aes-256-cfb
+  password: S7KwUu7yBy58S3Ga
+  name: 🇪🇸ES-5.188.181.201-5770
+  server: 5.188.181.201
+  port: 9042
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: dU3DSNS8wYPXzEKw
+  name: 🇪🇸ES-5.188.181.201-0212
+  server: 5.188.181.201
+  port: 9029
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: JdmRK9gMEqFgs8nP
+  name: 🇪🇸ES-5.188.181.201-0245
+  server: 5.188.181.201
+  port: 9003
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: U6qnYRhfyDmn8sgn
+  name: 🇪🇸ES-5.188.181.201-0249
+  server: 5.188.181.201
+  port: 9041
+  udp: true
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知152
+  server: 34.175.202.195
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+- type: vless
+  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
+  name: '🏳[www.v2nodes.com] vless- #4'
+  server: 212.227.235.66
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+- type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   name: 🇪🇸[www.v2nodes.com] ss-ES-1615...
   server: 66.163.118.103
   port: 19999
   udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇪🇸[www.v2nodes.com] ss-ES-1615... #1'
+  server: 167.17.71.167
+  port: 19999
+  udp: true
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇪🇸[www.v2nodes.com] trojan-ES-...
+  server: 66.163.118.40
+  port: 443
+  udp: true
+  sni: 66.163.118.40
 - type: vless
   uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
   name: '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
@@ -54,16 +148,9 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇪🇸[www.v2nodes.com] ss-ES-1615... #1'
-  server: 167.17.71.167
-  port: 19999
-  udp: true
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇪🇸[www.v2nodes.com] trojan-ES-... #5'
+  name: '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
   server: 66.163.118.244
   port: 443
   udp: true
@@ -71,13 +158,6 @@ proxies:
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   name: '🇪🇸[www.v2nodes.com] trojan-ES-... #2'
-  server: 66.163.118.40
-  port: 443
-  udp: true
-  sni: 66.163.118.40
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇪🇸[www.v2nodes.com] trojan-ES-... #4'
   server: 66.163.118.203
   port: 443
   udp: true
@@ -93,39 +173,16 @@ proxies:
   servername: dune.brackenhill.top
   client-fingerprint: firefox
 - type: vless
-  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
-  name: 🇪🇸 西班牙 | ESP
-  server: 66.163.118.113
+  uuid: 12c53e32-e589-47d6-b857-e4132294f767
+  name: '🏳[www.v2nodes.com] vless- #3'
+  server: 46.28.71.247
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: PwN5VWqwWKVfrqqrbLE4kzVu9vIXSENAUiAPjMWIrVY
-    short-id: 32209e627ee109c7
-- type: vless
-  uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
-  name: 🇪🇸 西班牙 | ESP
-  server: 138.124.181.197
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: dune.brackenhill.top
+  servername: www.cloudflare.com
   client-fingerprint: firefox
-  reality-opts:
-    public-key: is57aC-2dUxQGNRcwwdYPyfpPwh2Spmu695NcweLC1k
-    short-id: ff97c04684f118c8
-- type: vless
-  uuid: 8d227481-09ea-4d8f-94f5-b25bf72360c0
-  name: 🇪🇸 西班牙 | ESP 2
-  server: 213.182.201.133
-  port: 3090
-  udp: true
-  network: grpc
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -133,170 +190,59 @@ proxies:
   server: 79.127.139.242
   port: 19999
   udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: dU3DSNS8wYPXzEKw
-  name: 🇪🇸ES-5.188.181.201-5814
-  server: 5.188.181.201
-  port: 9029
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: p9z5BVADH2YFs3MN
-  name: 🇪🇸ES-5.188.181.201-0282
-  server: 5.188.181.201
-  port: 9040
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: BwcAUZk8hUFAkDGN
-  name: 🇪🇸ES-5.188.181.201-0293
-  server: 5.188.181.201
-  port: 9031
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: EXN3S3eQpjE7EJu8
-  name: 🇪🇸ES-5.188.181.201-0290
-  server: 5.188.181.201
-  port: 9027
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: GeregetR8cvQHzYr
-  name: 🇪🇸ES-5.188.181.201-0291
-  server: 5.188.181.201
-  port: 9030
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: UkXRsXvR6buDMG2Y
-  name: 🇪🇸ES-5.188.181.201-0292
-  server: 5.188.181.201
-  port: 9001
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: ZET59LF6DvCC8KVt
-  name: 🇪🇸ES-5.188.181.201-0271
-  server: 5.188.181.201
-  port: 9005
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: M3t2ZEQcMGRWBjRa
-  name: 🇪🇸ES-5.188.181.201-5743
-  server: 5.188.181.201
-  port: 9011
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: GA9KzeEgvfxNrgmM
-  name: 🇪🇸ES-5.188.181.201-5744
-  server: 5.188.181.201
-  port: 9019
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: XPtzA9sCug3SPR4c
-  name: 🇪🇸ES-5.188.181.201-5742
-  server: 5.188.181.201
-  port: 9025
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: U6qnYRhfyDmn8sgn
-  name: 🇪🇸ES-5.188.181.201-0276
-  server: 5.188.181.201
-  port: 9041
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: KnJGad3FqTvjqbaX
-  name: 🇪🇸ES-5.188.181.201-0273
-  server: 5.188.181.201
-  port: 9014
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: JdmRK9gMEqFgs8nP
-  name: 🇪🇸ES-5.188.181.201-5745
-  server: 5.188.181.201
-  port: 9003
-  udp: true
-- type: vless
-  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
-  name: '🏳[www.v2nodes.com] vless- #4'
-  server: 212.227.235.66
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知92
+  - 🇪🇸ES-5.188.181.201-0234
+  - 🇪🇸ES-5.188.181.201-0238
+  - 🇪🇸ES-5.188.181.201-0244
+  - 🇪🇸ES-5.188.181.201-0239
+  - 🇪🇸ES-5.188.181.201-0236
+  - 🇪🇸ES-5.188.181.201-0237
   - 🇪🇸[www.v2nodes.com] vless-ES-1...
-  - 🇪🇸[www.v2nodes.com] ss-ES-1615...
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
-  - '🇪🇸[www.v2nodes.com] ss-ES-1615... #1'
-  - '🇪🇸[www.v2nodes.com] trojan-ES-... #5'
-  - '🇪🇸[www.v2nodes.com] trojan-ES-... #2'
-  - '🇪🇸[www.v2nodes.com] trojan-ES-... #4'
-  - 🇪🇸 西班牙 | ESP 2
-  - 🇪🇸 西班牙 | ESP
-  - 🇪🇸 西班牙 | ESP
-  - 🇪🇸 西班牙 | ESP 2
-  - '🇪🇸[www.v2nodes.com] ss-ES-1615... #2'
-  - 🇪🇸ES-5.188.181.201-5814
-  - 🇪🇸ES-5.188.181.201-0282
-  - 🇪🇸ES-5.188.181.201-0293
-  - 🇪🇸ES-5.188.181.201-0290
-  - 🇪🇸ES-5.188.181.201-0291
-  - 🇪🇸ES-5.188.181.201-0292
-  - 🇪🇸ES-5.188.181.201-0271
-  - 🇪🇸ES-5.188.181.201-5743
-  - 🇪🇸ES-5.188.181.201-5744
-  - 🇪🇸ES-5.188.181.201-5742
-  - 🇪🇸ES-5.188.181.201-0276
-  - 🇪🇸ES-5.188.181.201-0273
-  - 🇪🇸ES-5.188.181.201-5745
+  - 🇪🇸ES-5.188.181.201-5770
+  - 🇪🇸ES-5.188.181.201-0212
+  - 🇪🇸ES-5.188.181.201-0245
+  - 🇪🇸ES-5.188.181.201-0249
+  - 未知152
   - '🏳[www.v2nodes.com] vless- #4'
+  - 🇪🇸[www.v2nodes.com] ss-ES-1615...
+  - '🇪🇸[www.v2nodes.com] ss-ES-1615... #1'
+  - 🇪🇸[www.v2nodes.com] trojan-ES-...
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
+  - '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
+  - '🇪🇸[www.v2nodes.com] trojan-ES-... #2'
+  - 🇪🇸 西班牙 | ESP 2
+  - '🏳[www.v2nodes.com] vless- #3'
+  - '🇪🇸[www.v2nodes.com] ss-ES-1615... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知92
+  - 🇪🇸ES-5.188.181.201-0234
+  - 🇪🇸ES-5.188.181.201-0238
+  - 🇪🇸ES-5.188.181.201-0244
+  - 🇪🇸ES-5.188.181.201-0239
+  - 🇪🇸ES-5.188.181.201-0236
+  - 🇪🇸ES-5.188.181.201-0237
   - 🇪🇸[www.v2nodes.com] vless-ES-1...
-  - 🇪🇸[www.v2nodes.com] ss-ES-1615...
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
-  - '🇪🇸[www.v2nodes.com] ss-ES-1615... #1'
-  - '🇪🇸[www.v2nodes.com] trojan-ES-... #5'
-  - '🇪🇸[www.v2nodes.com] trojan-ES-... #2'
-  - '🇪🇸[www.v2nodes.com] trojan-ES-... #4'
-  - 🇪🇸 西班牙 | ESP 2
-  - 🇪🇸 西班牙 | ESP
-  - 🇪🇸 西班牙 | ESP
-  - 🇪🇸 西班牙 | ESP 2
-  - '🇪🇸[www.v2nodes.com] ss-ES-1615... #2'
-  - 🇪🇸ES-5.188.181.201-5814
-  - 🇪🇸ES-5.188.181.201-0282
-  - 🇪🇸ES-5.188.181.201-0293
-  - 🇪🇸ES-5.188.181.201-0290
-  - 🇪🇸ES-5.188.181.201-0291
-  - 🇪🇸ES-5.188.181.201-0292
-  - 🇪🇸ES-5.188.181.201-0271
-  - 🇪🇸ES-5.188.181.201-5743
-  - 🇪🇸ES-5.188.181.201-5744
-  - 🇪🇸ES-5.188.181.201-5742
-  - 🇪🇸ES-5.188.181.201-0276
-  - 🇪🇸ES-5.188.181.201-0273
-  - 🇪🇸ES-5.188.181.201-5745
+  - 🇪🇸ES-5.188.181.201-5770
+  - 🇪🇸ES-5.188.181.201-0212
+  - 🇪🇸ES-5.188.181.201-0245
+  - 🇪🇸ES-5.188.181.201-0249
+  - 未知152
   - '🏳[www.v2nodes.com] vless- #4'
+  - 🇪🇸[www.v2nodes.com] ss-ES-1615...
+  - '🇪🇸[www.v2nodes.com] ss-ES-1615... #1'
+  - 🇪🇸[www.v2nodes.com] trojan-ES-...
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #2'
+  - '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
+  - '🇪🇸[www.v2nodes.com] trojan-ES-... #2'
+  - 🇪🇸 西班牙 | ESP 2
+  - '🏳[www.v2nodes.com] vless- #3'
+  - '🇪🇸[www.v2nodes.com] ss-ES-1615... #2'
 rules:
 - MATCH,SELECT
