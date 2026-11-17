@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 13e541f3-d09d-4633-89df-8513db0ced20
-  name: '🏳[www.v2nodes.com] vless- #2'
+  name: 🇪🇪[www.v2nodes.com] vless-EE-1...
   server: 45.86.60.174
   port: 16443
   udp: true
@@ -27,44 +27,19 @@ proxies:
   tls: true
   servername: 717252g.nl8.h1clayd.click
   client-fingerprint: firefox
-- type: vless
-  uuid: 40ec5509-5da9-44b8-bb25-e6091ac9c6db
-  name: '🇹🇷 土耳其 | TUR #1'
-  server: 143.246.41.216
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: 831545x.de28.h1clayd.shop
-  client-fingerprint: firefox
-- type: vless
-  uuid: 2208b003-78b1-453c-b5ca-ce847ff0efd6
-  name: '🇵🇱 波兰 | POL #2'
-  server: 212.87.190.249
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: d4a338t.pl8.h1clayd.click
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #2'
+  - 🇪🇪[www.v2nodes.com] vless-EE-1...
   - 🇳🇱 荷兰 | NLD
-  - '🇹🇷 土耳其 | TUR #1'
-  - '🇵🇱 波兰 | POL #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #2'
+  - 🇪🇪[www.v2nodes.com] vless-EE-1...
   - 🇳🇱 荷兰 | NLD
-  - '🇹🇷 土耳其 | TUR #1'
-  - '🇵🇱 波兰 | POL #2'
 rules:
 - MATCH,SELECT

@@ -11,6 +11,61 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+  name: '🏳[www.v2nodes.com] vless- #10'
+  server: 20.215.66.17
+  port: 2083
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+  name: '🇵🇱 波兰 | POL #1'
+  server: 80.47.10.106
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: pl8.galioncc.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: d7ddade6-b7a0-4cab-a910-d5d5c378d98a
+  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
+  server: 201.58.189.105
+  port: 2083
+  udp: true
+  network: grpc
+  tls: true
+  servername: dl.google.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
+  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
+  server: 150.251.113.34
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
+  name: '🇸🇪 瑞典 | SWE #9'
+  server: 5.22.222.157
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: se-sto.862400.xyz
+  ws-opts:
+    path: /announcement?ed=2048fp=random
+    headers:
+      Host: se-sto.862400.xyz
+- type: vless
   uuid: 80a06811-f74b-4b82-ac99-7e66c2a98e1c
   name: '🇵🇱 波兰 | POL #1'
   server: 185.253.7.22
@@ -23,27 +78,13 @@ proxies:
     path: /api/de6/streamfp=firefox
     headers:
       Host: clover.filnex.baby
-- type: vless
-  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
-  name: '🏳[www.v2nodes.com] vless- #13'
-  server: 20.215.66.17
-  port: 2083
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: eetk7pw
+  name: 🇵🇱[www.v2nodes.com] ss-PL-1273...
+  server: 54.36.174.140
+  port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: d7ddade6-b7a0-4cab-a910-d5d5c378d98a
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  server: 201.58.189.105
-  port: 2083
-  udp: true
-  network: grpc
-  tls: true
-  servername: dl.google.com
-  client-fingerprint: chrome
 - type: vless
   uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
   name: '🇵🇱[www.v2nodes.com] vless-PL-1... #3'
@@ -55,31 +96,6 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: safari
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: eetk7pw
-  name: '🏳[www.v2nodes.com] ss- #9'
-  server: 54.36.174.140
-  port: 443
-  udp: true
-- type: vless
-  uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
-  server: 150.251.113.34
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-cfb
-  password: wjTugX3ZtHMB9c3Z
-  name: 🇵🇱PL-217.30.10.70-5895
-  server: 217.30.10.70
-  port: 9057
-  udp: true
 - type: hysteria2
   password: a35c508f-4d5d-4531-842e-6e9d43c762c0
   name: '@OutlineReleasedKey #6'
@@ -93,25 +109,27 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🏳[www.v2nodes.com] vless- #10'
   - '🇵🇱 波兰 | POL #1'
-  - '🏳[www.v2nodes.com] vless- #13'
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #3'
-  - '🏳[www.v2nodes.com] ss- #9'
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
-  - 🇵🇱PL-217.30.10.70-5895
+  - '🇸🇪 瑞典 | SWE #9'
+  - '🇵🇱 波兰 | POL #1'
+  - 🇵🇱[www.v2nodes.com] ss-PL-1273...
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #3'
   - '@OutlineReleasedKey #6'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🏳[www.v2nodes.com] vless- #10'
   - '🇵🇱 波兰 | POL #1'
-  - '🏳[www.v2nodes.com] vless- #13'
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #3'
-  - '🏳[www.v2nodes.com] ss- #9'
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
-  - 🇵🇱PL-217.30.10.70-5895
+  - '🇸🇪 瑞典 | SWE #9'
+  - '🇵🇱 波兰 | POL #1'
+  - 🇵🇱[www.v2nodes.com] ss-PL-1273...
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #3'
   - '@OutlineReleasedKey #6'
 rules:
 - MATCH,SELECT

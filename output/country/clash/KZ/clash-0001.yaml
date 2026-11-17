@@ -10,6 +10,19 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
+  alterId: 64
+  cipher: auto
+  network: ws
+  name: 未知70
+  server: 38.107.234.57
+  port: 80
+  udp: true
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: 3h-kazakhstan1.09vpn.com
 - type: vless
   uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
   name: 🇰🇿[www.v2nodes.com] vless-KZ-1...
@@ -20,17 +33,34 @@ proxies:
   tls: true
   servername: yahoo.com
   client-fingerprint: chrome
+- type: vless
+  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
+  name: '🇺🇸 美国 | USA #8'
+  server: 109.248.18.169
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: us-lax.862400.xyz
+  ws-opts:
+    path: /announcement?ed=2048fp=random
+    headers:
+      Host: us-lax.862400.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 未知70
   - 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  - '🇺🇸 美国 | USA #8'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 未知70
   - 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  - '🇺🇸 美国 | USA #8'
 rules:
 - MATCH,SELECT

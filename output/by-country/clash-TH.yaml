@@ -10,46 +10,47 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: 4d24fbde-cb0e-4025-98ec-222933847d3d
+  alterId: 64
+  cipher: auto
+  network: ws
+  name: 🇹🇭TH-119.59.98.39-1297
+  server: 119.59.98.39
+  port: 30001
+  udp: true
+  tls: true
+  servername: www.98666598.xyz
+  ws-opts:
+    path: /path/191019072927
+    headers:
+      Host: www.98666598.xyz
 - type: vless
-  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
-  name: 🇹🇭 泰国 | THA
-  server: 103.107.53.42
+  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
+  name: '🇸🇬 新加坡 | SGP #6'
+  server: 101.108.49.121
   port: 443
   udp: true
   network: ws
   tls: true
-  servername: cat.ilovezhenjiu.top
-  client-fingerprint: chrome
+  servername: ap-south.862400.xyz
   ws-opts:
-    path: /cgciws
+    path: /announcement?ed=2048fp=random
     headers:
-      Host: cat.ilovezhenjiu.top
-- type: vless
-  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
-  name: '🇹🇭 泰国 | THA #1'
-  server: 103.107.53.42
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: cat.ilovezhenjiu.top
-  ws-opts:
-    path: /cgciwsfp=chrome
-    headers:
-      Host: cat.ilovezhenjiu.top
+      Host: ap-south.862400.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇭 泰国 | THA
-  - '🇹🇭 泰国 | THA #1'
+  - 🇹🇭TH-119.59.98.39-1297
+  - '🇸🇬 新加坡 | SGP #6'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇹🇭 泰国 | THA
-  - '🇹🇭 泰国 | THA #1'
+  - 🇹🇭TH-119.59.98.39-1297
+  - '🇸🇬 新加坡 | SGP #6'
 rules:
 - MATCH,SELECT

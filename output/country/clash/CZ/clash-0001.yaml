@@ -11,16 +11,18 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
-  name: 🇨🇿[www.v2nodes.com] vless-CZ-1...
-  server: 195.123.245.241
+  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
+  name: '🇸🇪 瑞典 | SWE #8'
+  server: 193.124.58.5
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: ws
   tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
+  servername: se-sto.862400.xyz
+  ws-opts:
+    path: /announcement?ed=2048fp=random
+    headers:
+      Host: se-sto.862400.xyz
 - type: vless
   uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
   name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
@@ -32,19 +34,32 @@ proxies:
   tls: true
   servername: udemy.com
   client-fingerprint: ios
+- type: vless
+  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
+  name: 🇨🇿[www.v2nodes.com] vless-CZ-1...
+  server: 195.123.245.241
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿[www.v2nodes.com] vless-CZ-1...
+  - '🇸🇪 瑞典 | SWE #8'
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
+  - 🇨🇿[www.v2nodes.com] vless-CZ-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇨🇿[www.v2nodes.com] vless-CZ-1...
+  - '🇸🇪 瑞典 | SWE #8'
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
+  - 🇨🇿[www.v2nodes.com] vless-CZ-1...
 rules:
 - MATCH,SELECT

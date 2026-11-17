@@ -11,26 +11,29 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-  name: 🇳🇱NL_9|1.4MB/s
-  server: 193.111.205.104
-  port: 8443
+  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
+  name: '🇦🇲 AM_08 #1'
+  server: 91.195.254.34
+  port: 443
   udp: true
-  network: tcp
+  network: ws
   tls: true
-  servername: assets.study.golangwikito.cfd
-  client-fingerprint: chrome
+  servername: us-lax.862400.xyz
+  ws-opts:
+    path: /announcement?ed=2048fp=random
+    headers:
+      Host: us-lax.862400.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇱NL_9|1.4MB/s
+  - '🇦🇲 AM_08 #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇳🇱NL_9|1.4MB/s
+  - '🇦🇲 AM_08 #1'
 rules:
 - MATCH,SELECT

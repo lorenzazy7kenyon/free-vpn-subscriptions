@@ -11,23 +11,29 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 1d46250c-f015-439d-a7fd-c4d9e2a4c63d
-  name: 🇧🇬[www.v2nodes.com] vless-BG-1...
-  server: 88.80.150.15
+  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
+  name: '🇺🇸 美国 | USA #2'
+  server: 217.217.227.132
   port: 443
   udp: true
-  network: tcp
+  network: ws
+  tls: true
+  servername: jp-osa.862400.xyz
+  ws-opts:
+    path: /announcement?ed=2048fp=random
+    headers:
+      Host: jp-osa.862400.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇬[www.v2nodes.com] vless-BG-1...
+  - '🇺🇸 美国 | USA #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇧🇬[www.v2nodes.com] vless-BG-1...
+  - '🇺🇸 美国 | USA #2'
 rules:
 - MATCH,SELECT

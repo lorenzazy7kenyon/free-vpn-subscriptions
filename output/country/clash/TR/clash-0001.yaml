@@ -11,6 +11,16 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
+  server: 151.241.226.201
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+- type: vless
   uuid: a346c521-7a7f-452b-9356-a4893feb5982
   name: '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
   server: 62.133.63.45
@@ -20,6 +30,19 @@ proxies:
   tls: true
   servername: github.com
   client-fingerprint: safari
+- type: vless
+  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
+  name: '🇸🇪 瑞典 | SWE #1'
+  server: 213.155.119.28
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: se-sto.862400.xyz
+  ws-opts:
+    path: /announcement?ed=2048fp=random
+    headers:
+      Host: se-sto.862400.xyz
 - type: vless
   uuid: ecc0e60a-f2cc-4266-8353-b228df89730a
   name: 🇹🇷[www.v2nodes.com] vless-TR-1...
@@ -31,31 +54,34 @@ proxies:
   tls: true
   servername: ty.galactichub.online
   client-fingerprint: chrome
-- type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
-  server: 151.241.226.201
-  port: 2053
-  udp: true
+- type: vmess
+  uuid: 32c017e7-2fa6-4a43-98ef-b21bb63d92e6
+  alterId: 0
+  cipher: auto
   network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
+  name: 未知12
+  server: 206.1.96.187
+  port: 443
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
-  - 🇹🇷[www.v2nodes.com] vless-TR-1...
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  - '🇸🇪 瑞典 | SWE #1'
+  - 🇹🇷[www.v2nodes.com] vless-TR-1...
+  - 未知12
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
-  - 🇹🇷[www.v2nodes.com] vless-TR-1...
   - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  - '🇸🇪 瑞典 | SWE #1'
+  - 🇹🇷[www.v2nodes.com] vless-TR-1...
+  - 未知12
 rules:
 - MATCH,SELECT

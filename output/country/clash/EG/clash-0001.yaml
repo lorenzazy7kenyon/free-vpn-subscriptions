@@ -12,20 +12,6 @@ dns:
 proxies:
 - type: vless
   uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
-  name: 🇪🇬 埃及 | EGY
-  server: 41.196.0.128
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: eg1.gofizz.in
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: tyklNbOfb-FctP-J1OQa1yUHPY9p4co70RyYuRe9nR8
-    short-id: f68db13f
-- type: vless
-  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
   name: '🇪🇬 埃及 | EGY #1'
   server: 41.196.0.128
   port: 443
@@ -41,13 +27,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇬 埃及 | EGY
   - '🇪🇬 埃及 | EGY #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇪🇬 埃及 | EGY
   - '🇪🇬 埃及 | EGY #1'
 rules:
 - MATCH,SELECT

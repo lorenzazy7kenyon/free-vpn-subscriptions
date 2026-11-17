@@ -1,21 +1,23 @@
 {
   "outbounds": [
     {
-      "flow": "xtls-rprx-vision",
-      "server": "195.123.245.241",
+      "server": "193.124.58.5",
       "server_port": 443,
-      "tag": "🇨🇿[www.v2nodes.com] vless-CZ-1...",
+      "tag": "🇸🇪 瑞典 | SWE #8",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "gateway.icloud.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "se-sto.862400.xyz"
+      },
+      "transport": {
+        "headers": {
+          "Host": "se-sto.862400.xyz"
+        },
+        "path": "/announcement?ed=2048fp=random",
+        "type": "ws"
       },
       "type": "vless",
-      "uuid": "7c053ca8-38cc-45e2-930c-eda1fd66f903"
+      "uuid": "5bbbbf2c-9031-4511-8222-b6cecd5a5291"
     },
     {
       "flow": "xtls-rprx-vision",
@@ -35,10 +37,28 @@
       "uuid": "b34a52cb-cd52-49a8-9362-b8e97c151d49"
     },
     {
+      "flow": "xtls-rprx-vision",
+      "server": "195.123.245.241",
+      "server_port": 443,
+      "tag": "🇨🇿[www.v2nodes.com] vless-CZ-1...",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "gateway.icloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "7c053ca8-38cc-45e2-930c-eda1fd66f903"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "🇨🇿[www.v2nodes.com] vless-CZ-1...",
-        "🇨🇿[www.v2nodes.com] vless-CZ-1... #1"
+        "🇸🇪 瑞典 | SWE #8",
+        "🇨🇿[www.v2nodes.com] vless-CZ-1... #1",
+        "🇨🇿[www.v2nodes.com] vless-CZ-1..."
       ],
       "tag": "auto",
       "type": "urltest",
@@ -47,8 +67,9 @@
     {
       "outbounds": [
         "auto",
-        "🇨🇿[www.v2nodes.com] vless-CZ-1...",
-        "🇨🇿[www.v2nodes.com] vless-CZ-1... #1"
+        "🇸🇪 瑞典 | SWE #8",
+        "🇨🇿[www.v2nodes.com] vless-CZ-1... #1",
+        "🇨🇿[www.v2nodes.com] vless-CZ-1..."
       ],
       "tag": "select",
       "type": "selector"
