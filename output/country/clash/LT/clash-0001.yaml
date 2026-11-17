@@ -11,24 +11,14 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
-  name: 🇱🇹 立陶宛 | LTU 2
-  server: 84.32.149.221
+  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+  name: '🇱🇹 立陶宛 | LTU #2'
+  server: 84.32.248.124
   port: 443
   udp: true
-  network: grpc
+  network: tcp
   tls: true
-  servername: rill.willowfen.top
-  client-fingerprint: firefox
-- type: vless
-  uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
-  name: 🇱🇹 立陶宛 | LTU
-  server: 84.32.149.223
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: loom.willowfen.top
+  servername: net-io-api.galioncc.com
   client-fingerprint: firefox
 - type: vless
   uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
@@ -41,50 +31,87 @@ proxies:
   servername: folio.willowfen.top
   client-fingerprint: firefox
 - type: vless
-  uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
+  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
   name: 🇱🇹 立陶宛 | LTU
-  server: 84.32.149.223
+  server: 84.32.248.124
   port: 443
   udp: true
-  network: grpc
+  network: tcp
   tls: true
-  servername: loom.willowfen.top
+  servername: net-io-api.galioncc.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: 4fCcmGeQF-kDDuFl92IrZFKYVdP0_4spvnvHIlBd3zI
-    short-id: fc7866c012374441
+    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+    short-id: a7d309e4c16b825f
+- type: vless
+  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+  name: 🇱🇹 立陶宛 | LTU
+  server: 84.32.83.197
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: api-dns-gw.galioncc.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+    short-id: a7d309e4c16b825f
 - type: vless
   uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
   name: 🇱🇹 立陶宛 | LTU
-  server: 84.32.149.221
+  server: 84.32.149.211
   port: 443
   udp: true
   network: grpc
   tls: true
-  servername: rill.willowfen.top
+  servername: acorn.willowfen.top
   client-fingerprint: firefox
   reality-opts:
-    public-key: oR4uufqddEio7ngLS-tBsgqlFC9ndB94gUwIrY2xoWQ
-    short-id: 2c25ffa1927ebf0f
+    public-key: M-cE7q2hNgBeNv7COM8DS2QC3GGi6Pu7pD1lvUfG0mo
+    short-id: e4fc6803b3212ad4
+- type: vless
+  uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
+  name: 🇱🇹 立陶宛 | LTU
+  server: 84.32.149.211
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: acorn.willowfen.top
+  client-fingerprint: firefox
+- type: vless
+  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+  name: '🇱🇹 立陶宛 | LTU #3'
+  server: 84.32.83.197
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: api-dns-gw.galioncc.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇹 立陶宛 | LTU 2
+  - '🇱🇹 立陶宛 | LTU #2'
   - 🇱🇹 立陶宛 | LTU
   - 🇱🇹 立陶宛 | LTU
   - 🇱🇹 立陶宛 | LTU
   - 🇱🇹 立陶宛 | LTU
+  - 🇱🇹 立陶宛 | LTU
+  - '🇱🇹 立陶宛 | LTU #3'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇱🇹 立陶宛 | LTU 2
+  - '🇱🇹 立陶宛 | LTU #2'
   - 🇱🇹 立陶宛 | LTU
   - 🇱🇹 立陶宛 | LTU
   - 🇱🇹 立陶宛 | LTU
   - 🇱🇹 立陶宛 | LTU
+  - 🇱🇹 立陶宛 | LTU
+  - '🇱🇹 立陶宛 | LTU #3'
 rules:
 - MATCH,SELECT

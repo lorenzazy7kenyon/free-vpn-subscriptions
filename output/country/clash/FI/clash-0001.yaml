@@ -10,6 +10,80 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: ss
+  cipher: aes-256-gcm
+  password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
+  name: 🇫🇮[www.v2nodes.com] ss-FI-1621...
+  server: 213.176.92.148
+  port: 40647
+  udp: true
+- type: vless
+  uuid: 40ec5509-5da9-44b8-bb25-e6091ac9c6db
+  name: 🇫🇮FI_1|1.9MB/s
+  server: 196.196.204.162
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: 8e526cg.fi12.h1clayd.click
+  client-fingerprint: chrome
+- type: vless
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
+  name: 🇸🇪 瑞典 | SWE
+  server: 191.217.205.175
+  port: 5443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: sw.krabvpn.pro
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: YWaSbf7NwwCZNuB3cQ_VCF20mUwWJBcfMysIZN4j6mI
+    short-id: 7a8c9b0e1d2f3456
+- type: vless
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
+  name: 🇳🇱 荷兰 | NLD
+  server: 191.217.205.175
+  port: 6443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: nl.krabvpn.pro
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: RBQhVV7u-QBkQL79vHRE2tQEeR1SA8CJ9zI9i99XA24
+    short-id: 3bcbfe3856680516
+- type: vless
+  uuid: b79d736d-0f10-4169-b626-362059d18204
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
+  server: 95.216.27.15
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
+  server: 45.144.234.157
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
+- type: vless
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
+  name: '🇩🇪 德国 | DEU #5'
+  server: 191.217.205.175
+  port: 8443
+  udp: true
+  network: tcp
+  tls: true
+  servername: de.krabvpn.pro
+  client-fingerprint: firefox
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
@@ -26,46 +100,14 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
 - type: vless
-  uuid: 97ab2e86-83c5-0a32-4914-5dbe1af97839
-  name: 🇩🇪 德国 | DEU
-  server: 122.8.47.8
-  port: 8443
-  udp: true
-  network: grpc
-  tls: true
-  servername: www.hp.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: QzFNQqkvBnDKIyjXUHJQe9jruaw9G5AV44vDC-qvnlo
-- type: vless
-  uuid: cebc5f19-18d9-48e6-9029-fb4b04caf393
-  name: '🏳[www.v2nodes.com] vless- #7'
-  server: 45.38.143.210
-  port: 30584
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
+  name: '🇸🇪 瑞典 | SWE #2'
+  server: 191.217.205.175
+  port: 5443
   udp: true
   network: tcp
   tls: true
-  servername: m.vk.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: b79d736d-0f10-4169-b626-362059d18204
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #7'
-  server: 95.216.27.15
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 97ab2e86-83c5-0a32-4914-5dbe1af97839
-  name: 🇫🇷 法国 | FRA 4
-  server: 122.8.47.9
-  port: 8443
-  udp: true
-  network: grpc
-  tls: true
-  servername: www.epson.com
+  servername: sw.krabvpn.pro
   client-fingerprint: firefox
 - type: vless
   uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
@@ -79,54 +121,24 @@ proxies:
   client-fingerprint: firefox
 - type: vless
   uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
-  name: '🇩🇪 德国 | DEU #5'
+  name: '🇳🇱 荷兰 | NLD #11'
   server: 191.217.205.175
-  port: 8443
+  port: 6443
   udp: true
   network: tcp
   tls: true
-  servername: de.krabvpn.pro
+  servername: nl.krabvpn.pro
   client-fingerprint: firefox
 - type: vless
-  uuid: 97ab2e86-83c5-0a32-4914-5dbe1af97839
-  name: 🇫🇷 法国 | FRA
-  server: 122.8.47.9
-  port: 8443
+  uuid: cebc5f19-18d9-48e6-9029-fb4b04caf393
+  name: '🏳[www.v2nodes.com] vless- #6'
+  server: 45.38.143.210
+  port: 30584
   udp: true
-  network: grpc
+  network: tcp
   tls: true
-  servername: www.epson.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: -GbQJg3bnEGEVFjVaRRu01cgF1f0K_maI4d5MWtMb28
-- type: ss
-  cipher: aes-256-gcm
-  password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
-  name: 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  server: 213.176.92.148
-  port: 40647
-  udp: true
-- type: vless
-  uuid: 97ab2e86-83c5-0a32-4914-5dbe1af97839
-  name: 🇩🇪 德国 | DEU 3
-  server: 122.8.47.8
-  port: 8443
-  udp: true
-  network: grpc
-  tls: true
-  servername: www.hp.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
-  server: 45.144.234.157
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.144.234.157
+  servername: m.vk.com
+  client-fingerprint: chrome
 - type: hysteria2
   password: 6aab8efdf13945829ae3699c342be406
   name: Telegram:@v2rayng3
@@ -142,33 +154,35 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知141
-  - 🇩🇪 德国 | DEU
-  - '🏳[www.v2nodes.com] vless- #7'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #7'
-  - 🇫🇷 法国 | FRA 4
-  - '🇩🇪 德国 | DEU #2'
-  - '🇩🇪 德国 | DEU #5'
-  - 🇫🇷 法国 | FRA
   - 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  - 🇩🇪 德国 | DEU 3
+  - 🇫🇮FI_1|1.9MB/s
+  - 🇸🇪 瑞典 | SWE
+  - 🇳🇱 荷兰 | NLD
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
+  - '🇩🇪 德国 | DEU #5'
+  - 未知141
+  - '🇸🇪 瑞典 | SWE #2'
+  - '🇩🇪 德国 | DEU #2'
+  - '🇳🇱 荷兰 | NLD #11'
+  - '🏳[www.v2nodes.com] vless- #6'
   - Telegram:@v2rayng3
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知141
-  - 🇩🇪 德国 | DEU
-  - '🏳[www.v2nodes.com] vless- #7'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #7'
-  - 🇫🇷 法国 | FRA 4
-  - '🇩🇪 德国 | DEU #2'
-  - '🇩🇪 德国 | DEU #5'
-  - 🇫🇷 法国 | FRA
   - 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  - 🇩🇪 德国 | DEU 3
+  - 🇫🇮FI_1|1.9MB/s
+  - 🇸🇪 瑞典 | SWE
+  - 🇳🇱 荷兰 | NLD
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #5'
+  - '🇩🇪 德国 | DEU #5'
+  - 未知141
+  - '🇸🇪 瑞典 | SWE #2'
+  - '🇩🇪 德国 | DEU #2'
+  - '🇳🇱 荷兰 | NLD #11'
+  - '🏳[www.v2nodes.com] vless- #6'
   - Telegram:@v2rayng3
 rules:
 - MATCH,SELECT

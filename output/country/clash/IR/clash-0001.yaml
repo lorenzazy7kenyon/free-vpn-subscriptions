@@ -12,17 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
-  name: '🇳🇱 荷兰 | NLD #2'
-  server: 194.60.228.97
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: base.hosamobenl.co.uk
-  client-fingerprint: chrome
-- type: vless
-  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
-  name: 🇳🇱 荷兰 | NLD
+  name: '🇳🇱 荷兰 | NLD #8'
   server: 194.60.228.97
   port: 443
   udp: true
@@ -32,27 +22,24 @@ proxies:
   client-fingerprint: chrome
 - type: hysteria2
   password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  name: 🇮🇷 12@exclavevpn
+  name: '@OutlineReleasedKey #3'
   server: 94.183.164.119
   port: 24433
   udp: true
-  sni: ''
-  skip-cert-verify: true
+  sni: lakes.blog-forme.ru
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇳🇱 荷兰 | NLD #2'
-  - 🇳🇱 荷兰 | NLD
-  - 🇮🇷 12@exclavevpn
+  - '🇳🇱 荷兰 | NLD #8'
+  - '@OutlineReleasedKey #3'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇳🇱 荷兰 | NLD #2'
-  - 🇳🇱 荷兰 | NLD
-  - 🇮🇷 12@exclavevpn
+  - '🇳🇱 荷兰 | NLD #8'
+  - '@OutlineReleasedKey #3'
 rules:
 - MATCH,SELECT
