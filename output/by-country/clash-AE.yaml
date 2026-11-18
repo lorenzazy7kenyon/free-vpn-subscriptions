@@ -10,26 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: cfd341d9-47d5-4dab-bb60-b588e643c778
-  alterId: 0
-  cipher: auto
-  network: xhttp
-  name: 未知131
-  server: 46.8.100.213
-  port: 8080
-  udp: true
-- type: vless
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  server: 84.235.244.108
-  port: 22573
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
 - type: vless
   uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
   name: 🇦🇪[www.v2nodes.com] vless-AE-1...
@@ -47,15 +27,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知131
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知131
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
 rules:
 - MATCH,SELECT

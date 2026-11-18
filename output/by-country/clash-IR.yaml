@@ -10,19 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知150
-  server: 185.143.234.120
-  port: 80
-  udp: true
-  ws-opts:
-    path: /graphql
-    headers:
-      Host: koochehpas.com
 - type: vless
   uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
   name: '🇳🇱[www.v2nodes.com] vless-NL-1... #6'
@@ -35,7 +22,7 @@ proxies:
   client-fingerprint: chrome
 - type: hysteria2
   password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  name: '@OutlineReleasedKey #5'
+  name: '@OutlineReleasedKey #4'
   server: 94.183.164.119
   port: 24433
   udp: true
@@ -46,15 +33,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知150
   - '🇳🇱[www.v2nodes.com] vless-NL-1... #6'
-  - '@OutlineReleasedKey #5'
+  - '@OutlineReleasedKey #4'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知150
   - '🇳🇱[www.v2nodes.com] vless-NL-1... #6'
-  - '@OutlineReleasedKey #5'
+  - '@OutlineReleasedKey #4'
 rules:
 - MATCH,SELECT

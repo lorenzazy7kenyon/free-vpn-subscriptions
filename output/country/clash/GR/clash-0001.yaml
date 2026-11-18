@@ -11,19 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  name: '🇳🇱 荷兰 | NLD #1'
-  server: 85.90.197.157
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: nl-ams.862400.xyz
-  ws-opts:
-    path: /announcement?ed=2048fp=random
-    headers:
-      Host: nl-ams.862400.xyz
-- type: vless
   uuid: 8f704ed6-9a1a-4d04-94dd-1bff501716de
   name: 🇬🇷[www.v2nodes.com] vless-GR-1...
   server: 85.90.197.220
@@ -40,13 +27,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇳🇱 荷兰 | NLD #1'
   - 🇬🇷[www.v2nodes.com] vless-GR-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇳🇱 荷兰 | NLD #1'
   - 🇬🇷[www.v2nodes.com] vless-GR-1...
 rules:
 - MATCH,SELECT

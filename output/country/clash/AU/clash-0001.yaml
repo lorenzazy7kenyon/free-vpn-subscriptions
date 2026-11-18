@@ -12,50 +12,22 @@ dns:
 proxies:
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇦🇺[www.v2nodes.com] trojan-AU-...
+  name: '🏳[www.v2nodes.com] trojan- #2'
   server: 45.63.30.142
   port: 443
   udp: true
   sni: connectwithemployerstohireyouridealteam.com
-- type: vless
-  uuid: 36e89875-9c53-482b-bc41-d3890e9da176
-  name: 🇦🇺[www.v2nodes.com] vless-AU-1...
-  server: 51.161.204.244
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  name: '🇯🇵 日本 | JPN #7'
-  server: 202.27.229.7
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: jp-osa.862400.xyz
-  ws-opts:
-    path: /announcement?ed=2048fp=random
-    headers:
-      Host: jp-osa.862400.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇺[www.v2nodes.com] trojan-AU-...
-  - 🇦🇺[www.v2nodes.com] vless-AU-1...
-  - '🇯🇵 日本 | JPN #7'
+  - '🏳[www.v2nodes.com] trojan- #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇦🇺[www.v2nodes.com] trojan-AU-...
-  - 🇦🇺[www.v2nodes.com] vless-AU-1...
-  - '🇯🇵 日本 | JPN #7'
+  - '🏳[www.v2nodes.com] trojan- #2'
 rules:
 - MATCH,SELECT

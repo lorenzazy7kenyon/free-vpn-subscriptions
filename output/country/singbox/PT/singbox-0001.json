@@ -1,28 +1,48 @@
 {
   "outbounds": [
     {
-      "server": "195.133.92.228",
+      "flow": "xtls-rprx-vision",
+      "server": "201.58.174.23",
       "server_port": 443,
-      "tag": "🇨🇦 加拿大 | CAN #3",
+      "tag": "🇵🇹 葡萄牙 | PRT #1",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "v1-24z.pages.dev"
-      },
-      "transport": {
-        "headers": {
-          "Host": "v1-24z.pages.dev"
-        },
-        "path": "/fp=chrome",
-        "type": "ws"
+        "server_name": "201.58.174.23",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       },
       "type": "vless",
-      "uuid": "bf14dc50-e9f2-49fd-8642-620446edeafb"
+      "uuid": "2bba3b63-eb4c-470b-aa58-ae9d4a1430c8"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "201.58.174.23",
+      "server_port": 443,
+      "tag": "🇵🇹 葡萄牙 | PRT",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "m6US_Wo7oYwRvmXWu2_bMRST1FB_rVcPpW3TqZX5_xY"
+        },
+        "server_name": "201.58.174.23",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "2bba3b63-eb4c-470b-aa58-ae9d4a1430c8"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇨🇦 加拿大 | CAN #3"
+        "🇵🇹 葡萄牙 | PRT #1",
+        "🇵🇹 葡萄牙 | PRT"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -31,7 +51,8 @@
     {
       "outbounds": [
         "auto",
-        "🇨🇦 加拿大 | CAN #3"
+        "🇵🇹 葡萄牙 | PRT #1",
+        "🇵🇹 葡萄牙 | PRT"
       ],
       "tag": "select",
       "type": "selector"

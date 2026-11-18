@@ -1,63 +1,48 @@
 {
   "outbounds": [
     {
-      "server": "84.32.149.211",
+      "flow": "xtls-rprx-vision",
+      "server": "88.216.127.115",
       "server_port": 443,
       "tag": "🇱🇹 立陶宛 | LTU",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "acorn.willowfen.top",
+        "reality": {
+          "enabled": true,
+          "public_key": "cc2mDH9C31IlAwrn1eEhbuzZ3l4Ijw3mKl7rF75GUDo"
+        },
+        "server_name": "lt-modx.nodexphere.net",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
       },
-      "transport": {
-        "service_name": "grpc",
-        "type": "grpc"
-      },
       "type": "vless",
-      "uuid": "49db4ce7-ad48-41a3-9b6f-4c6dabd94504"
+      "uuid": "955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6"
     },
     {
-      "server": "84.32.248.124",
+      "flow": "xtls-rprx-vision",
+      "server": "88.216.127.115",
       "server_port": 443,
-      "tag": "🇱🇹 立陶宛 | LTU #2",
+      "tag": "🇱🇹 立陶宛 | LTU #1",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "net-io-api.galioncc.com",
+        "server_name": "lt-modx.nodexphere.net",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
       },
       "type": "vless",
-      "uuid": "a30903dc-1bf0-4be5-8b1b-603a3a56211c"
-    },
-    {
-      "server": "84.32.83.197",
-      "server_port": 443,
-      "tag": "🇱🇹 立陶宛 | LTU #3",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "api-dns-gw.galioncc.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "type": "vless",
-      "uuid": "a30903dc-1bf0-4be5-8b1b-603a3a56211c"
+      "uuid": "955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6"
     },
     {
       "interval": "5m",
       "outbounds": [
         "🇱🇹 立陶宛 | LTU",
-        "🇱🇹 立陶宛 | LTU #2",
-        "🇱🇹 立陶宛 | LTU #3"
+        "🇱🇹 立陶宛 | LTU #1"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -67,8 +52,7 @@
       "outbounds": [
         "auto",
         "🇱🇹 立陶宛 | LTU",
-        "🇱🇹 立陶宛 | LTU #2",
-        "🇱🇹 立陶宛 | LTU #3"
+        "🇱🇹 立陶宛 | LTU #1"
       ],
       "tag": "select",
       "type": "selector"

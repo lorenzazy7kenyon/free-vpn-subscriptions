@@ -12,6 +12,17 @@ dns:
 proxies:
 - type: vless
   uuid: c98a16e4-0dc5-42f0-b3db-30f04525c123
+  name: 🇨🇦[www.v2nodes.com] vless-CA
+  server: 27.50.48.6
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp=chromesecurity=tls
+    headers:
+      Host: vless2-8vx.pages.dev
+- type: vless
+  uuid: c98a16e4-0dc5-42f0-b3db-30f04525c123
   name: '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
   server: 27.50.48.6
   port: 443
@@ -24,135 +35,10 @@ proxies:
     headers:
       Host: vless2-8vx.pages.dev
 - type: vless
-  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-  name: '🇸🇬[www.v2nodes.com] vless-SG-8... #1'
-  server: 27.50.49.154
-  port: 2083
-  udp: true
-  network: ws
-  tls: true
-  servername: proxy-34l.pages.dev
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: proxy-34l.pages.dev
-- type: vless
-  uuid: c98a16e4-0dc5-42f0-b3db-30f04525c123
-  name: 🇨🇦[www.v2nodes.com] vless-CA
-  server: 27.50.48.6
-  port: 443
-  udp: true
-  network: ws
-  ws-opts:
-    path: /fp=chromesecurity=tls
-    headers:
-      Host: vless2-8vx.pages.dev
-- type: ss
-  cipher: aes-256-gcm
-  password: AMok40FfaM+Ikwre16psBpVk6JHxsQZw
-  name: 🇭🇰[www.v2nodes.com] ss-HK-1621...
-  server: 209.248.57.105
-  port: 8388
-  udp: true
-- type: vless
-  uuid: 2232d904-8e6a-4202-8240-6efd8aec02e9
-  name: 🇩🇪[www.v2nodes.com] vless-DE-1...
-  server: 31.58.213.31
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: app.streamru2.net
-  client-fingerprint: firefox
-- type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: HK2
-  server: 47.243.65.243
-  port: 443
-  udp: true
-  tls: true
-  servername: lcv8v9l7oyamxxfz.v.3dns.vip
-  ws-opts:
-    path: /ws-vmess
-- type: vless
   uuid: 8b17beac-b143-447d-aa68-14cbb121a602
   name: '🇭🇰 香港 | HKG #1'
   server: 8.217.1.203
   port: 8443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vmess
-  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
-  alterId: 0
-  cipher: auto
-  network: http
-  name: 🇭🇰 香港 | HKG
-  server: 47.242.81.94
-  port: 52080
-  udp: true
-- type: vmess
-  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
-  alterId: 0
-  cipher: auto
-  network: http
-  name: '🇭🇰 香港 | HKG #4'
-  server: 47.242.81.94
-  port: 52080
-  udp: true
-- type: vmess
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: HK3
-  server: 8.217.254.88
-  port: 443
-  udp: true
-  tls: true
-  servername: 2b9hwy8ocx7q74nm.v.3dns.vip
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: 2b9hwY8oCx7Q74NM.v.3dns.vip
-- type: vmess
-  uuid: 5840ab2d-ab59-4eb0-9dea-122d0fbbd2d9
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: HK4
-  server: 38.207.164.31
-  port: 26925
-  udp: true
-  tls: true
-  servername: cfhk.393930.xyz
-  ws-opts:
-    path: /
-    headers:
-      Host: cfhk.393930.xyz
-- type: vmess
-  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇭🇰HK-156.245.232.239-0219
-  server: 156.245.232.239
-  port: 35043
-  udp: true
-  ws-opts:
-    path: /
-- type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  name: 🇦🇺[www.v2nodes.com] vless-AU-1...
-  server: 39.109.111.23
-  port: 48158
   udp: true
   flow: xtls-rprx-vision
   network: tcp
@@ -173,6 +59,28 @@ proxies:
   reality-opts:
     public-key: 74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38
     short-id: 0bf55f64
+- type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇭🇰HK-159.100.206.88-0052
+  server: 159.100.206.88
+  port: 443
+  udp: true
+  tls: true
+  servername: lg30.cfcdn3.xyz
+  ws-opts:
+    path: /ray
+    headers:
+      Host: lg30.cfcdn3.xyz
+- type: ss
+  cipher: aes-256-gcm
+  password: AMok40FfaM+Ikwre16psBpVk6JHxsQZw
+  name: 🇭🇰[www.v2nodes.com] ss-HK-1621...
+  server: 209.248.57.105
+  port: 8388
+  udp: true
 - type: vless
   uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
   name: 🇭🇰[www.v2nodes.com] vless-HK-1...
@@ -184,13 +92,17 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: firefox
-- type: hysteria2
-  password: VR7zICGZd3cB34G0FxSYQra3
-  name: 🇭🇰217666 | ⚡️Telegram = t.me/L...
-  server: 82.152.161.146
-  port: 10086
+- type: vless
+  uuid: 2232d904-8e6a-4202-8240-6efd8aec02e9
+  name: 🇩🇪[www.v2nodes.com] vless-DE-1...
+  server: 31.58.213.31
+  port: 443
   udp: true
-  sni: pic.bstarstatic.com
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: app.streamru2.net
+  client-fingerprint: firefox
 - type: hysteria2
   password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
   name: '@Nexus_Panell چنل تلگرام #1'
@@ -206,43 +118,27 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
-  - '🇸🇬[www.v2nodes.com] vless-SG-8... #1'
   - 🇨🇦[www.v2nodes.com] vless-CA
-  - 🇭🇰[www.v2nodes.com] ss-HK-1621...
-  - 🇩🇪[www.v2nodes.com] vless-DE-1...
-  - HK2
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
   - '🇭🇰 香港 | HKG #1'
   - 🇭🇰 香港 | HKG
-  - '🇭🇰 香港 | HKG #4'
-  - HK3
-  - HK4
-  - 🇭🇰HK-156.245.232.239-0219
-  - 🇦🇺[www.v2nodes.com] vless-AU-1...
-  - 🇭🇰 香港 | HKG
+  - 🇭🇰HK-159.100.206.88-0052
+  - 🇭🇰[www.v2nodes.com] ss-HK-1621...
   - 🇭🇰[www.v2nodes.com] vless-HK-1...
-  - 🇭🇰217666 | ⚡️Telegram = t.me/L...
+  - 🇩🇪[www.v2nodes.com] vless-DE-1...
   - '@Nexus_Panell چنل تلگرام #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
-  - '🇸🇬[www.v2nodes.com] vless-SG-8... #1'
   - 🇨🇦[www.v2nodes.com] vless-CA
-  - 🇭🇰[www.v2nodes.com] ss-HK-1621...
-  - 🇩🇪[www.v2nodes.com] vless-DE-1...
-  - HK2
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
   - '🇭🇰 香港 | HKG #1'
   - 🇭🇰 香港 | HKG
-  - '🇭🇰 香港 | HKG #4'
-  - HK3
-  - HK4
-  - 🇭🇰HK-156.245.232.239-0219
-  - 🇦🇺[www.v2nodes.com] vless-AU-1...
-  - 🇭🇰 香港 | HKG
+  - 🇭🇰HK-159.100.206.88-0052
+  - 🇭🇰[www.v2nodes.com] ss-HK-1621...
   - 🇭🇰[www.v2nodes.com] vless-HK-1...
-  - 🇭🇰217666 | ⚡️Telegram = t.me/L...
+  - 🇩🇪[www.v2nodes.com] vless-DE-1...
   - '@Nexus_Panell چنل تلگرام #1'
 rules:
 - MATCH,SELECT

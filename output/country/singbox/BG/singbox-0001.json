@@ -1,28 +1,48 @@
 {
   "outbounds": [
     {
-      "server": "217.217.227.132",
+      "flow": "xtls-rprx-vision",
+      "server": "191.217.223.246",
       "server_port": 443,
-      "tag": "🇺🇸 美国 | USA #2",
+      "tag": "🇧🇬 保加利亚 | BGR #2",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "jp-osa.862400.xyz"
-      },
-      "transport": {
-        "headers": {
-          "Host": "jp-osa.862400.xyz"
-        },
-        "path": "/announcement?ed=2048fp=random",
-        "type": "ws"
+        "server_name": "191.217.223.246",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       },
       "type": "vless",
-      "uuid": "5bbbbf2c-9031-4511-8222-b6cecd5a5291"
+      "uuid": "2bba3b63-eb4c-470b-aa58-ae9d4a1430c8"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "191.217.223.246",
+      "server_port": 443,
+      "tag": "🇧🇬 保加利亚 | BGR",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "m6US_Wo7oYwRvmXWu2_bMRST1FB_rVcPpW3TqZX5_xY"
+        },
+        "server_name": "191.217.223.246",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "2bba3b63-eb4c-470b-aa58-ae9d4a1430c8"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇺🇸 美国 | USA #2"
+        "🇧🇬 保加利亚 | BGR #2",
+        "🇧🇬 保加利亚 | BGR"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -31,7 +51,8 @@
     {
       "outbounds": [
         "auto",
-        "🇺🇸 美国 | USA #2"
+        "🇧🇬 保加利亚 | BGR #2",
+        "🇧🇬 保加利亚 | BGR"
       ],
       "tag": "select",
       "type": "selector"

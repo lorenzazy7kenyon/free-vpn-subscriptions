@@ -10,18 +10,17 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
-  server: 152.69.226.63
-  port: 25555
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🏳[www.v2nodes.com] trojan- #7'
+  server: 158.247.253.243
+  port: 443
   udp: true
-  network: ws
-  ws-opts:
-    path: /
+  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
+  skip-cert-verify: true
 - type: vless
   uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
   server: 47.80.19.173
   port: 2053
   udp: true
@@ -30,37 +29,9 @@ proxies:
   tls: true
   servername: gateway.icloud.com
   client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: 🇰🇷KR-211.178.105.134-0199
-  server: 211.178.105.134
-  port: 6123
-  udp: true
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇰🇷[www.v2nodes.com] trojan-KR-...
-  server: 158.247.253.243
-  port: 443
-  udp: true
-  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
-  skip-cert-verify: true
-- type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  name: '🇯🇵 日本 | JPN #5'
-  server: 141.164.44.60
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: jp-osa.862400.xyz
-  ws-opts:
-    path: /announcement?ed=2048fp=random
-    headers:
-      Host: jp-osa.862400.xyz
 - type: vless
   uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
+  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   server: 151.245.106.49
   port: 2053
   udp: true
@@ -68,37 +39,50 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: '🇰🇷 韩国 | KOR #1'
-  server: 3.38.149.130
-  port: 443
+- type: vless
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  name: '🏳[www.v2nodes.com] vless- #9'
+  server: 152.69.226.63
+  port: 25555
   udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: 🇰🇷KR-211.178.105.134-0185
+  server: 211.178.105.134
+  port: 6123
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: '12242'
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  server: 115.161.136.145
+  port: 10099
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🏳[www.v2nodes.com] trojan- #7'
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  - 🇰🇷KR-211.178.105.134-0199
-  - 🇰🇷[www.v2nodes.com] trojan-KR-...
-  - '🇯🇵 日本 | JPN #5'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - '🇰🇷 韩国 | KOR #1'
+  - '🏳[www.v2nodes.com] vless- #9'
+  - 🇰🇷KR-211.178.105.134-0185
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🏳[www.v2nodes.com] trojan- #7'
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  - 🇰🇷KR-211.178.105.134-0199
-  - 🇰🇷[www.v2nodes.com] trojan-KR-...
-  - '🇯🇵 日本 | JPN #5'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - '🇰🇷 韩国 | KOR #1'
+  - '🏳[www.v2nodes.com] vless- #9'
+  - 🇰🇷KR-211.178.105.134-0185
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
 rules:
 - MATCH,SELECT

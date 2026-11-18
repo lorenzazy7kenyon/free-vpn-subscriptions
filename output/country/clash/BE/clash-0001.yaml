@@ -15,7 +15,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知128
+  name: 未知117
   server: 35.241.172.224
   port: 443
   udp: true
@@ -25,17 +25,45 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
+- type: vless
+  uuid: 2bba3b63-eb4c-470b-aa58-ae9d4a1430c8
+  name: '🇧🇪 比利时 | BEL #1'
+  server: 191.217.198.88
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 191.217.198.88
+  client-fingerprint: firefox
+- type: vless
+  uuid: 2bba3b63-eb4c-470b-aa58-ae9d4a1430c8
+  name: 🇧🇪 比利时 | BEL
+  server: 191.217.198.88
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 191.217.198.88
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: m6US_Wo7oYwRvmXWu2_bMRST1FB_rVcPpW3TqZX5_xY
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知128
+  - 未知117
+  - '🇧🇪 比利时 | BEL #1'
+  - 🇧🇪 比利时 | BEL
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知128
+  - 未知117
+  - '🇧🇪 比利时 | BEL #1'
+  - 🇧🇪 比利时 | BEL
 rules:
 - MATCH,SELECT

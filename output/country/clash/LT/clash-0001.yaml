@@ -11,34 +11,28 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
+  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
   name: 🇱🇹 立陶宛 | LTU
-  server: 84.32.149.211
+  server: 88.216.127.115
   port: 443
   udp: true
-  network: grpc
-  tls: true
-  servername: acorn.willowfen.top
-  client-fingerprint: firefox
-- type: vless
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
-  name: '🇱🇹 立陶宛 | LTU #2'
-  server: 84.32.248.124
-  port: 443
-  udp: true
+  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: net-io-api.galioncc.com
+  servername: lt-modx.nodexphere.net
   client-fingerprint: firefox
+  reality-opts:
+    public-key: cc2mDH9C31IlAwrn1eEhbuzZ3l4Ijw3mKl7rF75GUDo
 - type: vless
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
-  name: '🇱🇹 立陶宛 | LTU #3'
-  server: 84.32.83.197
+  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
+  name: '🇱🇹 立陶宛 | LTU #1'
+  server: 88.216.127.115
   port: 443
   udp: true
+  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: api-dns-gw.galioncc.com
+  servername: lt-modx.nodexphere.net
   client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
@@ -47,14 +41,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇱🇹 立陶宛 | LTU
-  - '🇱🇹 立陶宛 | LTU #2'
-  - '🇱🇹 立陶宛 | LTU #3'
+  - '🇱🇹 立陶宛 | LTU #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇱🇹 立陶宛 | LTU
-  - '🇱🇹 立陶宛 | LTU #2'
-  - '🇱🇹 立陶宛 | LTU #3'
+  - '🇱🇹 立陶宛 | LTU #1'
 rules:
 - MATCH,SELECT
