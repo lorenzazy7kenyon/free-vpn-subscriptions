@@ -11,29 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
-  name: '🇳🇱 荷兰 | NLD #5'
-  server: 191.217.205.175
-  port: 6443
-  udp: true
-  network: tcp
-  tls: true
-  servername: nl.krabvpn.pro
-  client-fingerprint: firefox
-- type: vless
-  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
-  name: 🇩🇪 德国 | DEU
-  server: 191.217.205.175
-  port: 8443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: de.krabvpn.pro
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 1SldfhWqqF_Rg9QlPKQqufcHi5GhkxwcEV5HGyOy4Qg
-    short-id: 64ad711102f56ca2
-- type: vless
   uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
   name: '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
   server: 45.144.234.157
@@ -44,39 +21,13 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
-- type: vless
-  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
-  name: '🇩🇪 德国 | DEU #3'
-  server: 191.217.205.175
-  port: 8443
+- type: ss
+  cipher: aes-256-gcm
+  password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
+  name: 🇫🇮[www.v2nodes.com] ss-FI-1621...
+  server: 213.176.92.148
+  port: 40647
   udp: true
-  network: tcp
-  tls: true
-  servername: de.krabvpn.pro
-  client-fingerprint: firefox
-- type: vless
-  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
-  name: 🇸🇪 瑞典 | SWE
-  server: 191.217.205.175
-  port: 7443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: pl-origin.krabvpn.pro
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: NmMggGv5jmohnMmZytnLdenxmpNwa4P9E2PZW1EV8go
-    short-id: 5e25bf4462660ed8
-- type: vless
-  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
-  name: '🇩🇪 德国 | DEU #5'
-  server: 191.217.205.175
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: fin.krabvpn.pro
-  client-fingerprint: firefox
 - type: vless
   uuid: b79d736d-0f10-4169-b626-362059d18204
   name: '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
@@ -87,39 +38,9 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-gcm
-  password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
-  name: 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  server: 213.176.92.148
-  port: 40647
-  udp: true
-- type: vless
-  uuid: 40ec5509-5da9-44b8-bb25-e6091ac9c6db
-  name: '🇩🇪 德国 | DEU #8'
-  server: 196.196.204.162
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: 485d74x.fi12.h1clayd.click
-  client-fingerprint: firefox
-- type: vless
-  uuid: 3ede439b-410f-4eae-b449-4e15064c0706
-  name: 🇵🇱 波兰 | POL
-  server: 109.172.54.235
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: 13e1cfg.plp1.h1cloud.net
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: cWC6AGVZ9ke_eCTWXEB-eLdf670CuoP9zP-1k8DrPxo
-    short-id: 8ae9cc8c9447c95a
 - type: vless
   uuid: cebc5f19-18d9-48e6-9029-fb4b04caf393
-  name: '🏳[www.v2nodes.com] vless- #6'
+  name: '🏳[www.v2nodes.com] vless- #5'
   server: 45.38.143.210
   port: 30584
   udp: true
@@ -142,33 +63,19 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇳🇱 荷兰 | NLD #5'
-  - 🇩🇪 德国 | DEU
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
-  - '🇩🇪 德国 | DEU #3'
-  - 🇸🇪 瑞典 | SWE
-  - '🇩🇪 德国 | DEU #5'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
   - 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  - '🇩🇪 德国 | DEU #8'
-  - 🇵🇱 波兰 | POL
-  - '🏳[www.v2nodes.com] vless- #6'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
+  - '🏳[www.v2nodes.com] vless- #5'
   - Telegram:@v2rayng3
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇳🇱 荷兰 | NLD #5'
-  - 🇩🇪 德国 | DEU
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
-  - '🇩🇪 德国 | DEU #3'
-  - 🇸🇪 瑞典 | SWE
-  - '🇩🇪 德国 | DEU #5'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
   - 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  - '🇩🇪 德国 | DEU #8'
-  - 🇵🇱 波兰 | POL
-  - '🏳[www.v2nodes.com] vless- #6'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
+  - '🏳[www.v2nodes.com] vless- #5'
   - Telegram:@v2rayng3
 rules:
 - MATCH,SELECT

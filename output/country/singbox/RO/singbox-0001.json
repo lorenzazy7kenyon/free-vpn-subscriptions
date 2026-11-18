@@ -9,9 +9,27 @@
       "type": "ss"
     },
     {
+      "flow": "xtls-rprx-vision",
+      "server": "46.28.67.55",
+      "server_port": 443,
+      "tag": "🏳[www.v2nodes.com] vless- #10",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "d1a6a033-fdbd-46a6-a177-3370ba042b9f"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "🇷🇴[www.v2nodes.com] ss-RO-1595..."
+        "🇷🇴[www.v2nodes.com] ss-RO-1595...",
+        "🏳[www.v2nodes.com] vless- #10"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -20,7 +38,8 @@
     {
       "outbounds": [
         "auto",
-        "🇷🇴[www.v2nodes.com] ss-RO-1595..."
+        "🇷🇴[www.v2nodes.com] ss-RO-1595...",
+        "🏳[www.v2nodes.com] vless- #10"
       ],
       "tag": "select",
       "type": "selector"

@@ -11,26 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
-  server: 151.241.226.201
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
-  server: 62.133.63.45
-  port: 8444
-  udp: true
-  network: grpc
-  tls: true
-  servername: github.com
-  client-fingerprint: safari
-- type: vless
   uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
   name: '🇸🇪 瑞典 | SWE #1'
   server: 213.155.119.28
@@ -44,16 +24,15 @@ proxies:
     headers:
       Host: se-sto.862400.xyz
 - type: vless
-  uuid: ecc0e60a-f2cc-4266-8353-b228df89730a
-  name: 🇹🇷[www.v2nodes.com] vless-TR-1...
-  server: 45.92.219.47
-  port: 443
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  server: 151.241.226.201
+  port: 2053
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: ty.galactichub.online
-  client-fingerprint: chrome
+  servername: www.apple.com
+  client-fingerprint: firefox
 - type: vmess
   uuid: 32c017e7-2fa6-4a43-98ef-b21bb63d92e6
   alterId: 0
@@ -63,25 +42,60 @@ proxies:
   server: 206.1.96.187
   port: 443
   udp: true
+- type: vless
+  uuid: a346c521-7a7f-452b-9356-a4893feb5982
+  name: 🇹🇷[www.v2nodes.com] vless-TR-1...
+  server: 62.133.63.45
+  port: 8444
+  udp: true
+  network: grpc
+  tls: true
+  servername: github.com
+  client-fingerprint: safari
+- type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  name: 🇺🇸 美国 | USA
+  server: 153.56.230.6
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: 0592efg.us8.h1clayd.click
+  client-fingerprint: edge
+  reality-opts:
+    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
+    short-id: bd8f712209a9c283
+- type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  name: 🇺🇸 美国 | USA 4
+  server: 153.56.230.6
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: 0592efg.us8.h1clayd.click
+  client-fingerprint: edge
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
   - '🇸🇪 瑞典 | SWE #1'
-  - 🇹🇷[www.v2nodes.com] vless-TR-1...
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
   - 未知12
+  - 🇹🇷[www.v2nodes.com] vless-TR-1...
+  - 🇺🇸 美国 | USA
+  - 🇺🇸 美国 | USA 4
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #2'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
   - '🇸🇪 瑞典 | SWE #1'
-  - 🇹🇷[www.v2nodes.com] vless-TR-1...
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
   - 未知12
+  - 🇹🇷[www.v2nodes.com] vless-TR-1...
+  - 🇺🇸 美国 | USA
+  - 🇺🇸 美国 | USA 4
 rules:
 - MATCH,SELECT

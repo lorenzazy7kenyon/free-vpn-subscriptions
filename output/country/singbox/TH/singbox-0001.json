@@ -1,6 +1,25 @@
 {
   "outbounds": [
     {
+      "server": "101.108.49.121",
+      "server_port": 443,
+      "tag": "🇸🇬 新加坡 | SGP #6",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "ap-south.862400.xyz"
+      },
+      "transport": {
+        "headers": {
+          "Host": "ap-south.862400.xyz"
+        },
+        "path": "/announcement?ed=2048fp=random",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "5bbbbf2c-9031-4511-8222-b6cecd5a5291"
+    },
+    {
       "alter_id": 64,
       "security": "auto",
       "server": "119.59.98.39",
@@ -22,29 +41,10 @@
       "uuid": "4d24fbde-cb0e-4025-98ec-222933847d3d"
     },
     {
-      "server": "101.108.49.121",
-      "server_port": 443,
-      "tag": "🇸🇬 新加坡 | SGP #6",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "ap-south.862400.xyz"
-      },
-      "transport": {
-        "headers": {
-          "Host": "ap-south.862400.xyz"
-        },
-        "path": "/announcement?ed=2048fp=random",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "5bbbbf2c-9031-4511-8222-b6cecd5a5291"
-    },
-    {
       "interval": "5m",
       "outbounds": [
-        "🇹🇭TH-119.59.98.39-1297",
-        "🇸🇬 新加坡 | SGP #6"
+        "🇸🇬 新加坡 | SGP #6",
+        "🇹🇭TH-119.59.98.39-1297"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -53,8 +53,8 @@
     {
       "outbounds": [
         "auto",
-        "🇹🇭TH-119.59.98.39-1297",
-        "🇸🇬 新加坡 | SGP #6"
+        "🇸🇬 新加坡 | SGP #6",
+        "🇹🇭TH-119.59.98.39-1297"
       ],
       "tag": "select",
       "type": "selector"

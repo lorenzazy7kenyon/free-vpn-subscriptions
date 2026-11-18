@@ -12,16 +12,6 @@ dns:
 proxies:
 - type: vless
   uuid: 3dbd9377-43cc-46c3-b32c-2605908024eb
-  name: '🇨🇿 捷克 | CZE #1'
-  server: 103.118.211.38
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: czechia.richforever.ru
-  client-fingerprint: firefox
-- type: vless
-  uuid: 3dbd9377-43cc-46c3-b32c-2605908024eb
   name: 🇨🇿 捷克 | CZE
   server: 103.118.211.38
   port: 443
@@ -33,19 +23,29 @@ proxies:
   reality-opts:
     public-key: PA1xWXjxZLn68I-6cjWVdqc0dYhWbu9W5c1GpjEOZgE
     short-id: 8a9442353eebbe0f
+- type: vless
+  uuid: 3dbd9377-43cc-46c3-b32c-2605908024eb
+  name: '🇨🇿 捷克 | CZE #2'
+  server: 103.118.211.38
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: czechia.richforever.ru
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇨🇿 捷克 | CZE #1'
   - 🇨🇿 捷克 | CZE
+  - '🇨🇿 捷克 | CZE #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇨🇿 捷克 | CZE #1'
   - 🇨🇿 捷克 | CZE
+  - '🇨🇿 捷克 | CZE #2'
 rules:
 - MATCH,SELECT

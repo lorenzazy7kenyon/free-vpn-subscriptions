@@ -12,19 +12,6 @@ dns:
 proxies:
 - type: vless
   uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  name: '🇮🇹 意大利 | ITA #6'
-  server: 5.157.30.2
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: it-mil.862400.xyz
-  ws-opts:
-    path: /announcement?ed=2048fp=random
-    headers:
-      Host: it-mil.862400.xyz
-- type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
   name: '🇺🇸 美国 | USA #1'
   server: 5.157.30.26
   port: 8443
@@ -37,18 +24,18 @@ proxies:
     headers:
       Host: us-lax.862400.xyz
 - type: vless
-  uuid: 4859c235-2530-4062-9a0b-ea859cbbf861
-  name: '🇮🇪 爱尔兰 | IRL #1'
-  server: 5.157.30.28
+  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
+  name: '🇮🇹 意大利 | ITA #6'
+  server: 5.157.30.2
   port: 8443
   udp: true
   network: ws
   tls: true
-  servername: 1.proxy2.us.ci.
+  servername: it-mil.862400.xyz
   ws-opts:
-    path: /?ed=2560fp=ios
+    path: /announcement?ed=2048fp=random
     headers:
-      Host: 1.proxy2.us.ci.
+      Host: it-mil.862400.xyz
 - type: vless
   uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
   name: '🇸🇪 瑞典 | SWE #6'
@@ -64,6 +51,27 @@ proxies:
       Host: se-sto.862400.xyz
 - type: vless
   uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+  name: '🇸🇪 瑞典 | SWE #1'
+  server: 88.216.214.159
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: api-svc-mgr.galioncc.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  name: '🏳[www.v2nodes.com] vless- #12'
+  server: 5.178.109.174
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 5.178.109.174
+- type: vless
+  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
   name: 🇸🇪 瑞典 | SWE
   server: 88.216.214.159
   port: 443
@@ -75,26 +83,13 @@ proxies:
   reality-opts:
     public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
     short-id: a7c92e4b10d6f835
-- type: vless
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
-  name: '🇸🇪 瑞典 | SWE #5'
-  server: 88.216.214.159
-  port: 443
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 2e555e46dbc421452416834962fd014f
+  name: 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  server: 62.182.193.228
+  port: 8388
   udp: true
-  network: tcp
-  tls: true
-  servername: api-svc-mgr.galioncc.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
-  name: '🇸🇪 瑞典 | SWE #1'
-  server: 88.216.60.73
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: ns-api-gw.galioncc.com
-  client-fingerprint: firefox
 - type: vless
   uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
   name: '🇸🇪 瑞典 | SWE #2'
@@ -108,6 +103,16 @@ proxies:
     path: /announcement?ed=2048fp=random
     headers:
       Host: jp-osa.862400.xyz
+- type: vless
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
+  name: '🏳[www.v2nodes.com] vless- #11'
+  server: 138.124.86.230
+  port: 48115
+  udp: true
+  network: grpc
+  tls: true
+  servername: 138-124-86-230.sslip.io
+  client-fingerprint: firefox
 - type: ss
   cipher: aes-256-gcm
   password: AxIYWtskJWIIaefW
@@ -115,33 +120,6 @@ proxies:
   server: 70.34.212.124
   port: 8388
   udp: true
-- type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
-  server: 138.124.49.108
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: fs.qicai99.com
-  ws-opts:
-    path: /fp=chromefp=chrome
-    headers:
-      Host: fs.qicai99.com
-- type: vless
-  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
-  name: 🇸🇪 瑞典 | SWE
-  server: 195.72.62.7
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: fexzoo.net
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: GQC47B2ZbBygpgJap7Em9lZmCZZkzlckiadXWXlVxGU
-    short-id: 2a67748b0d641e16
 - type: vless
   uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
   name: 🇸🇪[www.v2nodes.com] vless-SE-1...
@@ -167,38 +145,35 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #9'
+  name: 🇸🇪[www.v2nodes.com] ss-SE-1615...
   server: 138.199.55.243
   port: 19999
   udp: true
 - type: vless
-  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
-  server: 138.124.86.230
-  port: 48115
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  name: 🇳🇱 荷兰 | NLD
+  server: 136.148.208.221
+  port: 443
   udp: true
-  network: grpc
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: 138-124-86-230.sslip.io
-  client-fingerprint: firefox
+  servername: 8a2e72t.nl20.h1clayd.shop
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
+    short-id: 8d0d0679f42ffd98
 - type: vless
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  server: 5.178.109.174
-  port: 14430
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  name: '🇳🇱 荷兰 | NLD #5'
+  server: 136.148.208.221
+  port: 443
   udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 5.178.109.174
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 2e555e46dbc421452416834962fd014f
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1620...
-  server: 62.182.193.228
-  port: 8388
-  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 8a2e72t.nl20.h1clayd.shop
+  client-fingerprint: chrome
 - type: hysteria2
   password: d4ca9415f0eac7897472e1e5b86d2e96
   name: '@OutlineReleasedKey #9'
@@ -212,45 +187,41 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇮🇹 意大利 | ITA #6'
   - '🇺🇸 美国 | USA #1'
-  - '🇮🇪 爱尔兰 | IRL #1'
+  - '🇮🇹 意大利 | ITA #6'
   - '🇸🇪 瑞典 | SWE #6'
-  - 🇸🇪 瑞典 | SWE
-  - '🇸🇪 瑞典 | SWE #5'
   - '🇸🇪 瑞典 | SWE #1'
-  - '🇸🇪 瑞典 | SWE #2'
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
+  - '🏳[www.v2nodes.com] vless- #12'
   - 🇸🇪 瑞典 | SWE
+  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  - '🇸🇪 瑞典 | SWE #2'
+  - '🏳[www.v2nodes.com] vless- #11'
+  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
   - 🇸🇪[www.v2nodes.com] vless-SE-1...
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
-  - '🏳[www.v2nodes.com] ss- #9'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  - 🇸🇪[www.v2nodes.com] ss-SE-1615...
+  - 🇳🇱 荷兰 | NLD
+  - '🇳🇱 荷兰 | NLD #5'
   - '@OutlineReleasedKey #9'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇮🇹 意大利 | ITA #6'
   - '🇺🇸 美国 | USA #1'
-  - '🇮🇪 爱尔兰 | IRL #1'
+  - '🇮🇹 意大利 | ITA #6'
   - '🇸🇪 瑞典 | SWE #6'
-  - 🇸🇪 瑞典 | SWE
-  - '🇸🇪 瑞典 | SWE #5'
   - '🇸🇪 瑞典 | SWE #1'
-  - '🇸🇪 瑞典 | SWE #2'
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #6'
+  - '🏳[www.v2nodes.com] vless- #12'
   - 🇸🇪 瑞典 | SWE
+  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  - '🇸🇪 瑞典 | SWE #2'
+  - '🏳[www.v2nodes.com] vless- #11'
+  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
   - 🇸🇪[www.v2nodes.com] vless-SE-1...
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
-  - '🏳[www.v2nodes.com] ss- #9'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  - 🇸🇪[www.v2nodes.com] ss-SE-1615...
+  - 🇳🇱 荷兰 | NLD
+  - '🇳🇱 荷兰 | NLD #5'
   - '@OutlineReleasedKey #9'
 rules:
 - MATCH,SELECT

@@ -10,6 +10,33 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
+  server: 152.69.226.63
+  port: 25555
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+- type: vless
+  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
+  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  server: 47.80.19.173
+  port: 2053
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: 🇰🇷KR-211.178.105.134-0199
+  server: 211.178.105.134
+  port: 6123
+  udp: true
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   name: 🇰🇷[www.v2nodes.com] trojan-KR-...
@@ -31,63 +58,6 @@ proxies:
     path: /announcement?ed=2048fp=random
     headers:
       Host: jp-osa.862400.xyz
-- type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇰🇷KR-132.145.80.230-0175
-  server: 132.145.80.230
-  port: 80
-  udp: true
-  ws-opts:
-    path: /
-    headers:
-      Host: kr02.a0a.xyz
-- type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  name: '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
-  server: 64.110.79.66
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: fs.qicai99.com
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: fs.qicai99.com
-- type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇰🇷KR-132.145.80.230-1014
-  server: 132.145.80.230
-  port: 80
-  udp: true
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: kr02.a0a.xyz
-- type: vless
-  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  server: 47.80.19.173
-  port: 2053
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: 🇰🇷KR-211.178.105.134-0199
-  server: 211.178.105.134
-  port: 6123
-  udp: true
 - type: vless
   uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
   name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
@@ -98,27 +68,10 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
-  server: 152.69.226.63
-  port: 25555
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   name: '🇰🇷 韩国 | KOR #1'
   server: 3.38.149.130
-  port: 443
-  udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: 🇰🇷 韩国 | KOR
-  server: 43.201.148.176
   port: 443
   udp: true
   sni: www.bing.com
@@ -129,31 +82,23 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷[www.v2nodes.com] trojan-KR-...
-  - '🇯🇵 日本 | JPN #5'
-  - 🇰🇷KR-132.145.80.230-0175
-  - '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
-  - 🇰🇷KR-132.145.80.230-1014
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   - 🇰🇷KR-211.178.105.134-0199
+  - 🇰🇷[www.v2nodes.com] trojan-KR-...
+  - '🇯🇵 日本 | JPN #5'
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷 韩国 | KOR #1'
-  - 🇰🇷 韩国 | KOR
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇰🇷[www.v2nodes.com] trojan-KR-...
-  - '🇯🇵 日本 | JPN #5'
-  - 🇰🇷KR-132.145.80.230-0175
-  - '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
-  - 🇰🇷KR-132.145.80.230-1014
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   - 🇰🇷KR-211.178.105.134-0199
+  - 🇰🇷[www.v2nodes.com] trojan-KR-...
+  - '🇯🇵 日本 | JPN #5'
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷 韩国 | KOR #1'
-  - 🇰🇷 韩国 | KOR
 rules:
 - MATCH,SELECT

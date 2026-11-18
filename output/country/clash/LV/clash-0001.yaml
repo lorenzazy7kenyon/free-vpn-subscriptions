@@ -36,6 +36,33 @@ proxies:
   tls: true
   servername: www.bing.com
   client-fingerprint: qq
+- type: vless
+  uuid: 80a06811-f74b-4b82-ac99-7e66c2a98e1c
+  name: 🇩🇪 德国 | DEU
+  server: 46.8.64.51
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: clover.filnex.baby
+  client-fingerprint: firefox
+  ws-opts:
+    path: /api/de6/stream
+    headers:
+      Host: clover.filnex.baby
+- type: vless
+  uuid: 80a06811-f74b-4b82-ac99-7e66c2a98e1c
+  name: '🇩🇪 德国 | DEU #7'
+  server: 46.8.64.51
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: clover.filnex.baby
+  ws-opts:
+    path: /api/de6/streamfp=firefox
+    headers:
+      Host: clover.filnex.baby
 - type: hysteria2
   password: 54d2f622-fd71-4f5f-8813-832b68f4ca3b
   name: '@vpnsal'
@@ -51,6 +78,8 @@ proxy-groups:
   proxies:
   - 未知37
   - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
+  - 🇩🇪 德国 | DEU
+  - '🇩🇪 德国 | DEU #7'
   - '@vpnsal'
 - name: SELECT
   type: select
@@ -58,6 +87,8 @@ proxy-groups:
   - AUTO
   - 未知37
   - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
+  - 🇩🇪 德国 | DEU
+  - '🇩🇪 德国 | DEU #7'
   - '@vpnsal'
 rules:
 - MATCH,SELECT

@@ -10,6 +10,19 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
+  name: '🇸🇬 新加坡 | SGP #6'
+  server: 101.108.49.121
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ap-south.862400.xyz
+  ws-opts:
+    path: /announcement?ed=2048fp=random
+    headers:
+      Host: ap-south.862400.xyz
 - type: vmess
   uuid: 4d24fbde-cb0e-4025-98ec-222933847d3d
   alterId: 64
@@ -25,32 +38,19 @@ proxies:
     path: /path/191019072927
     headers:
       Host: www.98666598.xyz
-- type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  name: '🇸🇬 新加坡 | SGP #6'
-  server: 101.108.49.121
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: ap-south.862400.xyz
-  ws-opts:
-    path: /announcement?ed=2048fp=random
-    headers:
-      Host: ap-south.862400.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇭TH-119.59.98.39-1297
   - '🇸🇬 新加坡 | SGP #6'
+  - 🇹🇭TH-119.59.98.39-1297
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇹🇭TH-119.59.98.39-1297
   - '🇸🇬 新加坡 | SGP #6'
+  - 🇹🇭TH-119.59.98.39-1297
 rules:
 - MATCH,SELECT

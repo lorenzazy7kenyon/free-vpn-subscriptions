@@ -11,6 +11,20 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: f3a227cb-8a8b-4ccb-b613-9143c4a1346c
+  name: 🇬🇧 英国 | GBR
+  server: 13.143.239.148
+  port: 25090
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: dbb72fr.fi20.h1clayd.shop
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 7G4Jpyi1yaMHx6mhqxcoF2DgpWrfGJl714sWzSRK_Ws
+    short-id: c02d36577fecf7ca
+- type: vless
   uuid: 13e541f3-d09d-4633-89df-8513db0ced20
   name: 🇪🇪[www.v2nodes.com] vless-EE-1...
   server: 45.86.60.174
@@ -18,14 +32,15 @@ proxies:
   udp: true
   network: tcp
 - type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: 🇳🇱 荷兰 | NLD
-  server: 143.246.41.217
-  port: 443
+  uuid: f3a227cb-8a8b-4ccb-b613-9143c4a1346c
+  name: '🇬🇧 英国 | GBR #1'
+  server: 13.143.239.148
+  port: 25090
   udp: true
-  network: grpc
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: 717252g.nl8.h1clayd.click
+  servername: dbb72fr.fi20.h1clayd.shop
   client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
@@ -33,13 +48,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇬🇧 英国 | GBR
   - 🇪🇪[www.v2nodes.com] vless-EE-1...
-  - 🇳🇱 荷兰 | NLD
+  - '🇬🇧 英国 | GBR #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇬🇧 英国 | GBR
   - 🇪🇪[www.v2nodes.com] vless-EE-1...
-  - 🇳🇱 荷兰 | NLD
+  - '🇬🇧 英国 | GBR #1'
 rules:
 - MATCH,SELECT
