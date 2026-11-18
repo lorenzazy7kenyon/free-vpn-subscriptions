@@ -22,6 +22,17 @@ proxies:
   servername: 191.217.220.239
   client-fingerprint: firefox
 - type: vless
+  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  name: '🏳[www.v2nodes.com] vless- #15'
+  server: 46.28.67.55
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: vless
   uuid: 2bba3b63-eb4c-470b-aa58-ae9d4a1430c8
   name: 🇷🇴 罗马尼亚 | ROU
   server: 191.217.220.239
@@ -34,17 +45,6 @@ proxies:
   client-fingerprint: firefox
   reality-opts:
     public-key: m6US_Wo7oYwRvmXWu2_bMRST1FB_rVcPpW3TqZX5_xY
-- type: vless
-  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  name: '🏳[www.v2nodes.com] vless- #15'
-  server: 46.28.67.55
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: U83u9OGpvSatIUW7LsWffr
@@ -59,16 +59,16 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇷🇴 罗马尼亚 | ROU #1'
-  - 🇷🇴 罗马尼亚 | ROU
   - '🏳[www.v2nodes.com] vless- #15'
+  - 🇷🇴 罗马尼亚 | ROU
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇷🇴 罗马尼亚 | ROU #1'
-  - 🇷🇴 罗马尼亚 | ROU
   - '🏳[www.v2nodes.com] vless- #15'
+  - 🇷🇴 罗马尼亚 | ROU
   - 🇷🇴[www.v2nodes.com] ss-RO-1595...
 rules:
 - MATCH,SELECT

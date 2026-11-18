@@ -10,28 +10,24 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: f5f293ed-e177-4c91-84df-ccf4c9a3e262
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知88
-  server: 93.114.98.23
-  port: 2083
+- type: vless
+  uuid: c34a41b6-598f-46ac-bea3-8b39a906f922
+  name: '🇹🇷 土耳其 | TUR #2'
+  server: 87.76.154.28
+  port: 57231
   udp: true
-  tls: true
-  servername: ty7v85hv2391.dx1dx.com
+  network: tcp
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知88
+  - '🇹🇷 土耳其 | TUR #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知88
+  - '🇹🇷 土耳其 | TUR #2'
 rules:
 - MATCH,SELECT

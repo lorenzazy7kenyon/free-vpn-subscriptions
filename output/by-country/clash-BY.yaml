@@ -28,17 +28,13 @@ proxies:
     path: /vless
     headers:
       Host: 178.172.227.228
-- type: vless
-  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
-  name: '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
-  server: 95.128.71.79
-  port: 14430
+- type: hysteria2
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  name: 🔹44@oneclickvpnkeys
+  server: 179.254.191.251
+  port: 4444
   udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 95.128.71.79
+  sni: bl1.nexfile.net
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -47,13 +43,13 @@ proxy-groups:
   proxies:
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  - 🔹44@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
   - 🇧🇾[www.v2nodes.com] vless-BY-1...
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  - 🔹44@oneclickvpnkeys
 rules:
 - MATCH,SELECT
