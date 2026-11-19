@@ -11,8 +11,28 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: b4192dfb-f458-4303-b877-29a41a6d8416
+  name: 🇳🇱NL_2|1.0MB/s
+  server: 94.183.164.176
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: optim.tildacdn.pub
+  client-fingerprint: chrome
+- type: vless
+  uuid: 12776e55-6230-48b9-b069-1bb8a04b4237
+  name: 🇳🇱NL_1|1.3MB/s
+  server: 94.183.164.176
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: optim.tildacdn.pub
+  client-fingerprint: chrome
+- type: vless
   uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
-  name: '🏳[www.v2nodes.com] vless- #9'
+  name: '🏳[www.v2nodes.com] vless- #7'
   server: 194.60.228.97
   port: 443
   udp: true
@@ -33,13 +53,17 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #9'
+  - 🇳🇱NL_2|1.0MB/s
+  - 🇳🇱NL_1|1.3MB/s
+  - '🏳[www.v2nodes.com] vless- #7'
   - '@OutlineReleasedKey #4'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #9'
+  - 🇳🇱NL_2|1.0MB/s
+  - 🇳🇱NL_1|1.3MB/s
+  - '🏳[www.v2nodes.com] vless- #7'
   - '@OutlineReleasedKey #4'
 rules:
 - MATCH,SELECT

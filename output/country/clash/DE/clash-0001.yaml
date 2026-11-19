@@ -10,6 +10,13 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇩🇪[www.v2nodes.com] trojan-DE-... #4'
+  server: 193.108.119.78
+  port: 443
+  udp: true
+  sni: 193.108.119.78
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -20,15 +27,41 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇩🇪[www.v2nodes.com] ss-DE-1615... #1'
-  server: 23.157.88.43
+  name: '🏳[www.v2nodes.com] ss- #3'
+  server: 193.108.119.2
   port: 19999
   udp: true
+- type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知26
+  server: 185.177.229.95
+  port: 1270
+  udp: true
+  tls: true
+  servername: xmfhlpy.com
+- type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知149
+  server: 193.108.117.54
+  port: 443
+  udp: true
+  tls: true
+  servername: aidrivercat.org
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: aidrivercat.org
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇩🇪[www.v2nodes.com] ss-DE-1615... #2'
-  server: 193.108.119.2
+  name: '🇩🇪[www.v2nodes.com] ss-DE-1615... #1'
+  server: 23.157.88.43
   port: 19999
   udp: true
 - type: trojan
@@ -40,13 +73,6 @@ proxies:
   sni: learn.iloverussia2026.com
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇩🇪[www.v2nodes.com] trojan-DE-... #4'
-  server: 193.108.119.78
-  port: 443
-  udp: true
-  sni: 193.108.119.78
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   name: '🏳[www.v2nodes.com] trojan- #4'
   server: 193.108.119.15
   port: 443
@@ -54,14 +80,51 @@ proxies:
   sni: courses.iloverussia2026.com
 - type: ss
   cipher: 2022-blake3-chacha20-poly1305
+  password: FmB4HBM/+63LZr+sjxs5zkFIvZmB//5BPqdf8W+wntg=
+  name: '🇩🇪 德国 | DEU #5'
+  server: 79.76.105.62
+  port: 59924
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🏳[www.v2nodes.com] ss- #2'
+  server: 57.129.83.85
+  port: 19999
+  udp: true
+- type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: wWdQLZS5jWNT9FjKPBA15TdXtH7ABPXqFaHHQojZmnw=
+  name: '🇩🇪 德国 | DEU #9'
+  server: 89.168.104.141
+  port: 59924
+  udp: true
+- type: ss
+  cipher: 2022-blake3-chacha20-poly1305
   password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
   name: 🇩🇪[www.v2nodes.com] ss-DE-1622...
   server: 47.254.143.251
   port: 443
   udp: true
+- type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: uou5NTq+xna9PBIG+8jtSSyQ6idxiXZgeK+Uw52qopY=
+  name: 🇩🇪[www.v2nodes.com] ss-DE-1623...
+  server: 130.61.145.251
+  port: 59924
+  udp: true
+- type: vmess
+  uuid: 78ed2c82-20d6-48ed-a76d-294065803259
+  alterId: 0
+  cipher: auto
+  network: httpupgrade
+  name: 未知18
+  server: 91.107.169.224
+  port: 80
+  udp: true
 - type: vless
   uuid: ebdfaf99-41d8-4e48-8196-d54510ffb556
-  name: '🏳[www.v2nodes.com] vless- #4'
+  name: '🏳[www.v2nodes.com] vless- #2'
   server: 45.129.242.56
   port: 443
   udp: true
@@ -70,42 +133,69 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #2'
-  server: 57.129.83.85
-  port: 19999
+- type: vmess
+  uuid: 78fb1a62-b276-4a13-ab57-f2b87d0f37a5
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知130
+  server: 178.105.210.96
+  port: 80
   udp: true
 - type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知32
-  server: 57.129.28.64
+  name: 未知81
+  server: 5.39.249.167
   port: 443
   udp: true
   tls: true
-  servername: serkat.org
+  servername: renderer-stream-2-62.mirra.now
   ws-opts:
-    path: linkvws
+    path: /api/v1/gpu-stream/socket
     headers:
-      Host: serkat.org
+      Host: renderer-stream-2-62.mirra.now
 - type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: uou5NTq+xna9PBIG+8jtSSyQ6idxiXZgeK+Uw52qopY=
-  name: 🇩🇪[www.v2nodes.com] ss-DE-1623...
-  server: 130.61.145.251
+  password: oQirp3av7ALs6ICJj5Qf2U8wBxlAxnCk1yk6aoAAN3A=
+  name: '🇩🇪 德国 | DEU #3'
+  server: 92.5.21.171
+  port: 59924
+  udp: true
+- type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 1xJS+82JzziMfKGNrEtiG5FG9/vneVWuTjt0iwiXsfA=
+  name: '🇩🇪 德国 | DEU #2'
+  server: 92.5.15.46
   port: 59924
   udp: true
 - type: hysteria2
-  password: 2d399e38-245c-4f07-abf2-cfce7397ba9c
-  name: 🔹9@oneclickvpnkeys
-  server: 31.76.106.92
-  port: 8443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  name: 🔹69@oneclickvpnkeys
+  server: 18.194.242.173
+  port: 443
   udp: true
-  sni: va.stream-room.com
+  sni: 127.0.0.1
+  skip-cert-verify: true
+- type: hysteria2
+  password: HATATEAYA
+  name: 'Channel : @Daily_Configs'
+  server: 77.90.15.183
+  port: 8964
+  udp: true
+  sni: ganlanc.at
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: HATATEAYA
+- type: hysteria2
+  password: b36a14f8-fc3f-4142-968f-48031cf5f330
+  name: 🇱🇹 15@exclavevpn
+  server: 179.254.127.219
+  port: 25318
+  udp: true
+  sni: 775c8bt.lt4.h1clayd.click
 - type: hysteria2
   password: KevinZakarian
   name: 🩵+@Azarakhsh_Proxy+🩷
@@ -117,23 +207,12 @@ proxies:
   obfs: salamander
   obfs-password: KevinZakarian
 - type: hysteria2
-  password: HATATEAYA
-  name: 🔹66@oneclickvpnkeys
-  server: 77.90.15.183
-  port: 8964
+  password: 2d399e38-245c-4f07-abf2-cfce7397ba9c
+  name: 🔹9@oneclickvpnkeys
+  server: 31.76.106.92
+  port: 8443
   udp: true
-  sni: ganlanc.at
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: HATATEAYA
-- type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  name: 🔹69@oneclickvpnkeys
-  server: 18.194.242.173
-  port: 443
-  udp: true
-  sni: 127.0.0.1
-  skip-cert-verify: true
+  sni: va.stream-room.com
 - type: hysteria2
   password: 5ictxgawam84vgrp
   name: Telegram  ⚜️Join -> @tik7net_v...
@@ -143,56 +222,65 @@ proxies:
   sni: 109.70.74.213
   obfs: salamander
   obfs-password: 7922smqtd5qm70fu
-- type: hysteria2
-  password: b36a14f8-fc3f-4142-968f-48031cf5f330
-  name: 🇱🇹 15@exclavevpn
-  server: 179.254.127.219
-  port: 25318
-  udp: true
-  sni: 775c8bt.lt4.h1clayd.click
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪[www.v2nodes.com] ss-DE-1615...
-  - '🇩🇪[www.v2nodes.com] ss-DE-1615... #1'
-  - '🇩🇪[www.v2nodes.com] ss-DE-1615... #2'
-  - '🇩🇪[www.v2nodes.com] trojan-DE-... #1'
   - '🇩🇪[www.v2nodes.com] trojan-DE-... #4'
+  - 🇩🇪[www.v2nodes.com] ss-DE-1615...
+  - '🏳[www.v2nodes.com] ss- #3'
+  - 未知26
+  - 未知149
+  - '🇩🇪[www.v2nodes.com] ss-DE-1615... #1'
+  - '🇩🇪[www.v2nodes.com] trojan-DE-... #1'
   - '🏳[www.v2nodes.com] trojan- #4'
-  - 🇩🇪[www.v2nodes.com] ss-DE-1622...
-  - '🏳[www.v2nodes.com] vless- #4'
+  - '🇩🇪 德国 | DEU #5'
   - '🏳[www.v2nodes.com] ss- #2'
-  - 未知32
+  - '🇩🇪 德国 | DEU #9'
+  - 🇩🇪[www.v2nodes.com] ss-DE-1622...
   - 🇩🇪[www.v2nodes.com] ss-DE-1623...
-  - 🔹9@oneclickvpnkeys
-  - 🩵+@Azarakhsh_Proxy+🩷
-  - 🔹66@oneclickvpnkeys
+  - 未知18
+  - '🏳[www.v2nodes.com] vless- #2'
+  - 未知130
+  - 未知81
+  - '🇩🇪 德国 | DEU #3'
+  - '🇩🇪 德国 | DEU #2'
   - 🔹69@oneclickvpnkeys
-  - Telegram  ⚜️Join -> @tik7net_v...
+  - 'Channel : @Daily_Configs'
   - 🇱🇹 15@exclavevpn
+  - 🩵+@Azarakhsh_Proxy+🩷
+  - 🔹9@oneclickvpnkeys
+  - Telegram  ⚜️Join -> @tik7net_v...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇩🇪[www.v2nodes.com] ss-DE-1615...
-  - '🇩🇪[www.v2nodes.com] ss-DE-1615... #1'
-  - '🇩🇪[www.v2nodes.com] ss-DE-1615... #2'
-  - '🇩🇪[www.v2nodes.com] trojan-DE-... #1'
   - '🇩🇪[www.v2nodes.com] trojan-DE-... #4'
+  - 🇩🇪[www.v2nodes.com] ss-DE-1615...
+  - '🏳[www.v2nodes.com] ss- #3'
+  - 未知26
+  - 未知149
+  - '🇩🇪[www.v2nodes.com] ss-DE-1615... #1'
+  - '🇩🇪[www.v2nodes.com] trojan-DE-... #1'
   - '🏳[www.v2nodes.com] trojan- #4'
-  - 🇩🇪[www.v2nodes.com] ss-DE-1622...
-  - '🏳[www.v2nodes.com] vless- #4'
+  - '🇩🇪 德国 | DEU #5'
   - '🏳[www.v2nodes.com] ss- #2'
-  - 未知32
+  - '🇩🇪 德国 | DEU #9'
+  - 🇩🇪[www.v2nodes.com] ss-DE-1622...
   - 🇩🇪[www.v2nodes.com] ss-DE-1623...
-  - 🔹9@oneclickvpnkeys
-  - 🩵+@Azarakhsh_Proxy+🩷
-  - 🔹66@oneclickvpnkeys
+  - 未知18
+  - '🏳[www.v2nodes.com] vless- #2'
+  - 未知130
+  - 未知81
+  - '🇩🇪 德国 | DEU #3'
+  - '🇩🇪 德国 | DEU #2'
   - 🔹69@oneclickvpnkeys
-  - Telegram  ⚜️Join -> @tik7net_v...
+  - 'Channel : @Daily_Configs'
   - 🇱🇹 15@exclavevpn
+  - 🩵+@Azarakhsh_Proxy+🩷
+  - 🔹9@oneclickvpnkeys
+  - Telegram  ⚜️Join -> @tik7net_v...
 rules:
 - MATCH,SELECT

@@ -10,6 +10,28 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇰🇷[www.v2nodes.com] trojan-KR-...
+  server: 158.247.253.243
+  port: 443
+  udp: true
+  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
+  skip-cert-verify: true
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: 🇰🇷KR-211.178.105.134-0165
+  server: 211.178.105.134
+  port: 6123
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: '12242'
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  server: 115.161.136.145
+  port: 10099
+  udp: true
 - type: vless
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   name: 🇰🇷[www.v2nodes.com] vless-KR-1...
@@ -19,53 +41,10 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- type: vless
-  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  server: 47.80.19.173
-  port: 2053
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: '12242'
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  server: 115.161.136.145
-  port: 10099
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: 🇰🇷KR-211.178.105.134-0165
-  server: 211.178.105.134
-  port: 6123
-  udp: true
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇰🇷[www.v2nodes.com] trojan-KR-...
-  server: 158.247.253.243
-  port: 443
-  udp: true
-  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
-  skip-cert-verify: true
-- type: vless
-  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  server: 151.245.106.49
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: 🇰🇷 韩国 | KOR
-  server: 3.36.48.199
+  name: '🇰🇷 韩国 | KOR #2'
+  server: 43.203.123.202
   port: 443
   udp: true
   sni: www.bing.com
@@ -78,41 +57,27 @@ proxies:
   udp: true
   sni: www.bing.com
   skip-cert-verify: true
-- type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: '🇰🇷 韩国 | KOR #1'
-  server: 3.38.150.98
-  port: 443
-  udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  - 🇰🇷KR-211.178.105.134-0165
   - 🇰🇷[www.v2nodes.com] trojan-KR-...
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - 🇰🇷 韩国 | KOR
+  - 🇰🇷KR-211.178.105.134-0165
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷 韩国 | KOR #2'
-  - '🇰🇷 韩国 | KOR #1'
+  - '🇰🇷 韩国 | KOR #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  - 🇰🇷KR-211.178.105.134-0165
   - 🇰🇷[www.v2nodes.com] trojan-KR-...
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  - 🇰🇷 韩国 | KOR
+  - 🇰🇷KR-211.178.105.134-0165
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷 韩国 | KOR #2'
-  - '🇰🇷 韩国 | KOR #1'
+  - '🇰🇷 韩国 | KOR #2'
 rules:
 - MATCH,SELECT
