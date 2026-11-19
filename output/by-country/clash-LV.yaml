@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
-  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
+  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #3'
   server: 94.183.234.245
   port: 443
   udp: true
@@ -21,19 +21,6 @@ proxies:
   tls: true
   servername: www.bing.com
   client-fingerprint: qq
-- type: vless
-  uuid: 5e610f80-fc6a-479d-8621-b672355b96a1
-  name: 🇸🇪SE_1|1.2MB/s
-  server: 31.56.227.253
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: cf-1rm.pages.dev
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: cf-1rm.pages.dev
 - type: hysteria2
   password: 54d2f622-fd71-4f5f-8813-832b68f4ca3b
   name: '@vpnsal'
@@ -47,15 +34,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
-  - 🇸🇪SE_1|1.2MB/s
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #3'
   - '@vpnsal'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
-  - 🇸🇪SE_1|1.2MB/s
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #3'
   - '@vpnsal'
 rules:
 - MATCH,SELECT

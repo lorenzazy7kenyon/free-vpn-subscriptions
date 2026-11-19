@@ -11,25 +11,15 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 12910384-1ef8-40a3-818a-57277063ea66
-  name: 🇧🇾 BY_24
-  server: 13.143.188.155
-  port: 8443
-  udp: true
-  network: grpc
-  tls: true
-  servername: kk-by-155.testkknegr.online
-  client-fingerprint: firefox
-- type: vless
   uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
-  name: '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
+  name: '🏳[www.v2nodes.com] vless- #2'
   server: 178.172.227.124
   port: 10443
   udp: true
   network: tcp
 - type: vless
   uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
-  name: 🇧🇾[www.v2nodes.com] vless-BY-1...
+  name: '🏳[www.v2nodes.com] vless- #1'
   server: 178.172.227.228
   port: 14430
   udp: true
@@ -51,17 +41,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇾 BY_24
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
-  - 🇧🇾[www.v2nodes.com] vless-BY-1...
+  - '🏳[www.v2nodes.com] vless- #2'
+  - '🏳[www.v2nodes.com] vless- #1'
   - 🔹44@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇧🇾 BY_24
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
-  - 🇧🇾[www.v2nodes.com] vless-BY-1...
+  - '🏳[www.v2nodes.com] vless- #2'
+  - '🏳[www.v2nodes.com] vless- #1'
   - 🔹44@oneclickvpnkeys
 rules:
 - MATCH,SELECT
