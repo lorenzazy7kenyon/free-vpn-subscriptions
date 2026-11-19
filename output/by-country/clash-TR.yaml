@@ -11,6 +11,16 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 12910384-1ef8-40a3-818a-57277063ea66
+  name: 🇵🇱PL_2|2.1MB/s
+  server: 13.143.197.74
+  port: 8443
+  udp: true
+  network: grpc
+  tls: true
+  servername: kk-tr-74.testkknegr.online
+  client-fingerprint: chrome
+- type: vless
   uuid: c34a41b6-598f-46ac-bea3-8b39a906f922
   name: '🇹🇷 土耳其 | TUR #2'
   server: 87.76.154.28
@@ -23,11 +33,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇵🇱PL_2|2.1MB/s
   - '🇹🇷 土耳其 | TUR #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇵🇱PL_2|2.1MB/s
   - '🇹🇷 土耳其 | TUR #2'
 rules:
 - MATCH,SELECT

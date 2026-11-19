@@ -24,19 +24,18 @@ proxies:
     public-key: PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU
     short-id: d3bd772514c87d28
 - type: vless
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
-  server: 196.196.148.76
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  name: '🇦🇱 AL_21 #1'
+  server: 196.196.148.85
   port: 443
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: 8a2e72t.nl20.h1clayd.shop
-  client-fingerprint: firefox
+  servername: 5d0319t.nl7.h1clayd.click
+  client-fingerprint: chrome
 - type: vless
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: 🇦🇱 AL_18
+  name: 🇦🇱 AL_21
   server: 196.196.148.85
   port: 443
   udp: true
@@ -49,14 +48,48 @@ proxies:
     short-id: 361d0dd59c70516f
 - type: vless
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: '🇦🇱 AL_18 #1'
-  server: 196.196.148.85
+  name: 🇳🇱NL_10|1.1MB/s
+  server: 196.196.148.63
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: 717252g.nl8.h1clayd.click
+  client-fingerprint: firefox
+- type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  name: 🇳🇱 荷兰 | NLD
+  server: 196.196.148.63
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: fc82dfx.nl8.h1clayd.click
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: dtO7khFLUkpFDQOtNzo4Th4hJKLoPSY2VtD_9k4Hgiw
+    short-id: 7b2b1a14a6e0630d
+- type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  name: '🇳🇱 荷兰 | NLD #3'
+  server: 196.196.148.63
   port: 443
   udp: true
   network: tcp
   tls: true
-  servername: 5d0319t.nl7.h1clayd.click
+  servername: fc82dfx.nl8.h1clayd.click
   client-fingerprint: chrome
+- type: vless
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #3'
+  server: 196.196.148.76
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 8a2e72t.nl20.h1clayd.shop
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -64,16 +97,22 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
-  - 🇦🇱 AL_18
-  - '🇦🇱 AL_18 #1'
+  - '🇦🇱 AL_21 #1'
+  - 🇦🇱 AL_21
+  - 🇳🇱NL_10|1.1MB/s
+  - 🇳🇱 荷兰 | NLD
+  - '🇳🇱 荷兰 | NLD #3'
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #3'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
-  - 🇦🇱 AL_18
-  - '🇦🇱 AL_18 #1'
+  - '🇦🇱 AL_21 #1'
+  - 🇦🇱 AL_21
+  - 🇳🇱NL_10|1.1MB/s
+  - 🇳🇱 荷兰 | NLD
+  - '🇳🇱 荷兰 | NLD #3'
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #3'
 rules:
 - MATCH,SELECT

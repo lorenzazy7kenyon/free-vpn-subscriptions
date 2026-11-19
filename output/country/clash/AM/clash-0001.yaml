@@ -11,29 +11,29 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  name: '🇦🇲 AM_08 #1'
-  server: 91.195.254.34
+  uuid: 5e610f80-fc6a-479d-8621-b672355b96a1
+  name: 🇦🇲AM_1|1.7MB/s
+  server: 77.91.68.117
   port: 443
   udp: true
   network: ws
   tls: true
-  servername: us-lax.862400.xyz
+  servername: cf-1rm.pages.dev
   ws-opts:
-    path: /announcement?ed=2048fp=random
+    path: /fp=chrome
     headers:
-      Host: us-lax.862400.xyz
+      Host: cf-1rm.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇦🇲 AM_08 #1'
+  - 🇦🇲AM_1|1.7MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇦🇲 AM_08 #1'
+  - 🇦🇲AM_1|1.7MB/s
 rules:
 - MATCH,SELECT
