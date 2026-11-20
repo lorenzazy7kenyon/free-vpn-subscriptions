@@ -10,27 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
-  server: 13.140.56.100
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 13.140.56.100
-- type: vless
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
-  server: 194.61.31.126
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
 - type: vmess
   uuid: 9db4c708-aef8-4359-821b-38e47990be0d
   alterId: 0
@@ -42,21 +21,30 @@ proxies:
   udp: true
   ws-opts:
     path: /
+- type: vless
+  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
+  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
+  server: 13.140.56.100
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 13.140.56.100
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇳[www.v2nodes.com] vless-IN-1...
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 未知71 106.5KB/s
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇮🇳[www.v2nodes.com] vless-IN-1...
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 未知71 106.5KB/s
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
 rules:
 - MATCH,SELECT

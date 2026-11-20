@@ -22,16 +22,30 @@ proxies:
     headers:
       Host: 95.174.68.188
 - type: vless
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  server: 84.235.244.108
-  port: 22573
+  uuid: 0259e5aa-c188-4334-b204-32cd5ea859f6
+  name: 🇦🇪 阿联酋 | ARE
+  server: 135.136.183.53
+  port: 443
   udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: dubai-cdn-keno.keno.su
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 56r4YuaW-BUEapWGlOvv-QX75OgLNP8KuE_Z1bBxO1g
+    short-id: 47912f9d36a0a52b
+- type: vless
+  uuid: 0259e5aa-c188-4334-b204-32cd5ea859f6
+  name: '🇦🇪 阿联酋 | ARE #1'
+  server: 135.136.183.53
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: dubai-cdn-keno.keno.su
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -39,12 +53,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - 🇦🇪 阿联酋 | ARE
+  - '🇦🇪 阿联酋 | ARE #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - 🇦🇪 阿联酋 | ARE
+  - '🇦🇪 阿联酋 | ARE #1'
 rules:
 - MATCH,SELECT

@@ -11,29 +11,26 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 5e610f80-fc6a-479d-8621-b672355b96a1
-  name: 🇦🇲AM_1|1.7MB/s
-  server: 77.91.68.117
-  port: 443
+  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+  name: 🇳🇱NL_9|1.9MB/s
+  server: 193.111.204.84
+  port: 8443
   udp: true
-  network: ws
+  network: tcp
   tls: true
-  servername: cf-1rm.pages.dev
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: cf-1rm.pages.dev
+  servername: assets.study.golangwikito.cfd
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇲AM_1|1.7MB/s
+  - 🇳🇱NL_9|1.9MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇦🇲AM_1|1.7MB/s
+  - 🇳🇱NL_9|1.9MB/s
 rules:
 - MATCH,SELECT
