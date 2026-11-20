@@ -17,13 +17,6 @@ proxies:
   server: 152.53.1.57
   port: 8388
   udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: wuW04H6Tq10Zw7ZVOUg6j1
-  name: '🇦🇹 奥地利 | AUT #1'
-  server: 89.58.16.116
-  port: 2342
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -31,12 +24,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
-  - '🇦🇹 奥地利 | AUT #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
-  - '🇦🇹 奥地利 | AUT #1'
 rules:
 - MATCH,SELECT

@@ -10,17 +10,47 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
-  name: 🇫🇷[www.v2nodes.com] vless-FR-1...
-  server: 138.124.70.41
-  port: 14430
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇫🇷[www.v2nodes.com] ss-FR-1616...
+  server: 23.162.152.22
+  port: 19999
   udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 138.124.70.41
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇫🇷[www.v2nodes.com] ss-FR-1615...
+  server: 38.109.228.110
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
+  server: 172.99.189.142
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
+  server: 167.17.64.175
+  port: 19999
+  udp: true
+- type: vless
+  uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+  name: 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+  server: 163.245.42.87
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: mother-earth.fyi
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
 - type: vless
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   name: '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
@@ -43,41 +73,44 @@ proxies:
   tls: true
   servername: fuck.rkn
   client-fingerprint: chrome
-- type: vless
-  uuid: a6142d9d-3f9f-47b7-b7e9-1245dd6a15d6
-  name: 🇫🇷 法国 | FRA
-  server: 45.95.98.139
-  port: 443
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
+  server: 167.17.64.27
+  port: 19999
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: 45.95.98.130
-  client-fingerprint: firefox
 - type: vless
-  uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
-  name: 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
-  server: 163.245.42.87
-  port: 443
+  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  server: 152.228.139.33
+  port: 35108
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: grpc
   tls: true
-  servername: mother-earth.fyi
+  servername: www.nvidia.com
   client-fingerprint: firefox
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-- type: vless
-  uuid: a6142d9d-3f9f-47b7-b7e9-1245dd6a15d6
-  name: '🇫🇷 法国 | FRA #1'
-  server: 45.95.98.139
-  port: 443
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
+  server: 167.17.64.22
+  port: 19999
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: 45.95.98.130
-  client-fingerprint: firefox
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 29irqk0paakcx19v
+  name: 🇫🇷[www.v2nodes.com] ss-FR-1621...
+  server: 51.83.61.102
+  port: 8080
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: itzvpn@321
+  name: 🇫🇷FR-107.161.160.28-0212
+  server: 107.161.160.28
+  port: 8388
+  udp: true
 - type: vmess
   uuid: 2bc80e77-9590-4ded-a48b-0eda493f611b
   alterId: 0
@@ -92,77 +125,11 @@ proxies:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
 - type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1616...
-  server: 23.162.152.22
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
-  server: 167.17.64.175
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
-  server: 167.17.64.22
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1615...
-  server: 38.109.228.110
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
-  server: 167.17.64.27
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
-  server: 172.99.189.142
-  port: 19999
-  udp: true
-- type: vless
-  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
-  server: 152.228.139.33
-  port: 35108
-  udp: true
-  network: grpc
-  tls: true
-  servername: www.nvidia.com
-  client-fingerprint: firefox
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 29irqk0paakcx19v
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1621...
-  server: 51.83.61.102
-  port: 8080
-  udp: true
-- type: ss
   cipher: chacha20-ietf-poly1305
   password: x19py0a8ipglqkbe
   name: 🇫🇷FR-51.77.144.182-0250
   server: 51.77.144.182
   port: 8080
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: itzvpn@321
-  name: 🇫🇷FR-107.161.160.28-0212
-  server: 107.161.160.28
-  port: 8388
   udp: true
 proxy-groups:
 - name: AUTO
@@ -170,43 +137,37 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
+  - 🇫🇷[www.v2nodes.com] ss-FR-1616...
+  - 🇫🇷[www.v2nodes.com] ss-FR-1615...
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
+  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #2'
-  - 🇫🇷 法国 | FRA
-  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
-  - '🇫🇷 法国 | FRA #1'
-  - 🇫🇷FR-145.239.55.210-0198
-  - 🇫🇷[www.v2nodes.com] ss-FR-1616...
-  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
-  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
-  - 🇫🇷[www.v2nodes.com] ss-FR-1615...
   - '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
-  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
   - 🇫🇷[www.v2nodes.com] ss-FR-1621...
-  - 🇫🇷FR-51.77.144.182-0250
   - 🇫🇷FR-107.161.160.28-0212
+  - 🇫🇷FR-145.239.55.210-0198
+  - 🇫🇷FR-51.77.144.182-0250
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
+  - 🇫🇷[www.v2nodes.com] ss-FR-1616...
+  - 🇫🇷[www.v2nodes.com] ss-FR-1615...
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
+  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #2'
-  - 🇫🇷 法国 | FRA
-  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
-  - '🇫🇷 法国 | FRA #1'
-  - 🇫🇷FR-145.239.55.210-0198
-  - 🇫🇷[www.v2nodes.com] ss-FR-1616...
-  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
-  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
-  - 🇫🇷[www.v2nodes.com] ss-FR-1615...
   - '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
-  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
   - 🇫🇷[www.v2nodes.com] ss-FR-1621...
-  - 🇫🇷FR-51.77.144.182-0250
   - 🇫🇷FR-107.161.160.28-0212
+  - 🇫🇷FR-145.239.55.210-0198
+  - 🇫🇷FR-51.77.144.182-0250
 rules:
 - MATCH,SELECT
