@@ -20,15 +20,6 @@ proxies:
   tls: true
   servername: kk-tr-74.testkknegr.online
   client-fingerprint: chrome
-- type: vmess
-  uuid: 106760ec-33f3-47cc-8b50-0e6df48d6784
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知15
-  server: 206.1.103.212
-  port: 8080
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -36,12 +27,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - 未知15
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - 未知15
 rules:
 - MATCH,SELECT

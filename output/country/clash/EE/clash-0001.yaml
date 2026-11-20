@@ -12,29 +12,18 @@ dns:
 proxies:
 - type: vless
   uuid: a6142d9d-3f9f-47b7-b7e9-1245dd6a15d6
-  name: '🇺🇸 美国 | USA #1'
+  name: 🇪🇪EE_1|2.8MB/s
   server: 217.60.100.222
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: 217.60.100.222
-  client-fingerprint: firefox
-- type: vless
-  uuid: a6142d9d-3f9f-47b7-b7e9-1245dd6a15d6
-  name: 🇺🇸 美国 | USA
-  server: 217.60.100.222
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
+  flow: xtls-rprx-vision-udp443
   network: tcp
   tls: true
   servername: 217.60.100.222
   client-fingerprint: firefox
 - type: vless
   uuid: 13e541f3-d09d-4633-89df-8513db0ced20
-  name: 🇪🇪[www.v2nodes.com] vless-EE-1...
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
   server: 45.86.60.174
   port: 16443
   udp: true
@@ -45,15 +34,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇺🇸 美国 | USA #1'
-  - 🇺🇸 美国 | USA
-  - 🇪🇪[www.v2nodes.com] vless-EE-1...
+  - 🇪🇪EE_1|2.8MB/s
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇺🇸 美国 | USA #1'
-  - 🇺🇸 美国 | USA
-  - 🇪🇪[www.v2nodes.com] vless-EE-1...
+  - 🇪🇪EE_1|2.8MB/s
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
 rules:
 - MATCH,SELECT

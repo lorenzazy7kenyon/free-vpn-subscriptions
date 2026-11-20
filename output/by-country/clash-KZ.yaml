@@ -11,6 +11,26 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: cc99c57d-6c93-4031-9153-73f510636533
+  name: 🇰🇿 哈萨克斯坦 | KAZ
+  server: 31.43.179.196
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: mama51.baklajann.ru
+  client-fingerprint: chrome
+- type: vless
+  uuid: cc99c57d-6c93-4031-9153-73f510636533
+  name: '🇰🇿 哈萨克斯坦 | KAZ #1'
+  server: 31.43.179.196
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: mama51.baklajann.ru
+  client-fingerprint: chrome
+- type: vless
   uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
   name: 🇰🇿[www.v2nodes.com] vless-KZ-1...
   server: 109.248.170.119
@@ -20,17 +40,50 @@ proxies:
   tls: true
   servername: yahoo.com
   client-fingerprint: chrome
+- type: vless
+  uuid: e44962da-9e02-41aa-b86f-a83a521875b6
+  name: 🇰🇿 哈萨克斯坦 | KAZ
+  server: 91.224.74.146
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 212.192.156.15
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: a9O5evb8g385KJm77j9SKlB7MvHzUBGes6c8BAxyO1U
+    short-id: 5fd3245e96291c37
+- type: vless
+  uuid: e44962da-9e02-41aa-b86f-a83a521875b6
+  name: '🇰🇿 哈萨克斯坦 | KAZ #2'
+  server: 91.224.74.146
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 212.192.156.15
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇰🇿 哈萨克斯坦 | KAZ
+  - '🇰🇿 哈萨克斯坦 | KAZ #1'
   - 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  - 🇰🇿 哈萨克斯坦 | KAZ
+  - '🇰🇿 哈萨克斯坦 | KAZ #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇰🇿 哈萨克斯坦 | KAZ
+  - '🇰🇿 哈萨克斯坦 | KAZ #1'
   - 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  - 🇰🇿 哈萨克斯坦 | KAZ
+  - '🇰🇿 哈萨克斯坦 | KAZ #2'
 rules:
 - MATCH,SELECT
