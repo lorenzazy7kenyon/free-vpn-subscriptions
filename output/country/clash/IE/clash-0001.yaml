@@ -12,19 +12,6 @@ dns:
 proxies:
 - type: vless
   uuid: 9be9e1e4-d1fc-4423-b22d-cd07a4381acb
-  name: '🇮🇪 爱尔兰 | IRL #1'
-  server: 23.94.67.209
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: cj1-e06.pages.dev
-  ws-opts:
-    path: /fp=random
-    headers:
-      Host: cj1-e06.pages.dev
-- type: vless
-  uuid: 9be9e1e4-d1fc-4423-b22d-cd07a4381acb
   name: 🇮🇪[www.v2nodes.com] vless-IE-3...
   server: 23.94.67.209
   port: 443
@@ -40,13 +27,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇮🇪 爱尔兰 | IRL #1'
   - 🇮🇪[www.v2nodes.com] vless-IE-3...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇮🇪 爱尔兰 | IRL #1'
   - 🇮🇪[www.v2nodes.com] vless-IE-3...
 rules:
 - MATCH,SELECT

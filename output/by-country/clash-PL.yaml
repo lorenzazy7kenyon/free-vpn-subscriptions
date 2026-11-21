@@ -10,16 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: d7ddade6-b7a0-4cab-a910-d5d5c378d98a
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  server: 201.58.189.105
-  port: 2083
-  udp: true
-  network: grpc
-  tls: true
-  servername: dl.google.com
-  client-fingerprint: chrome
 - type: ss
   cipher: aes-256-cfb
   password: BNmAXXxAHYpTRdzu
@@ -35,23 +25,28 @@ proxies:
   port: 9098
   udp: true
 - type: vless
-  uuid: 44ddb84a-f152-47ef-a970-fd63f2df9b30
-  name: 🇵🇱[www.v2nodes.com] vless-PL-1...
-  server: 93.88.206.70
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  name: '🇵🇱 波兰 | POL #1'
+  server: 144.31.3.89
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: ws
   tls: true
-  servername: pulse.sevka.xyz
-  client-fingerprint: firefox
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: eetk7pw
-  name: '🏳[www.v2nodes.com] ss- #10'
-  server: 54.36.174.140
+  servername: clearingmatch.melodramaonline.net
+  ws-opts:
+    path: /media/ws/fp=firefox
+- type: vless
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  name: 🇵🇱 波兰 | POL
+  server: 144.31.3.89
   port: 443
   udp: true
+  network: ws
+  tls: true
+  servername: clearingmatch.melodramaonline.net
+  client-fingerprint: firefox
+  ws-opts:
+    path: /media/ws/
 - type: vless
   uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
   name: '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
@@ -63,49 +58,25 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- type: vless
-  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  server: 82.118.22.161
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: safari
-- type: hysteria2
-  password: ca60984f-b1f0-4073-bd33-4c75168f749a
-  name: 🇵🇱PL_1|2.6MB/s
-  server: 31.58.117.133
-  port: 443
-  udp: true
-  sni: kraw-pl-5.fantoff.online
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
   - 🇵🇱PL-217.30.10.70-5407
   - 🇵🇱PL-217.30.10.70-5406
-  - 🇵🇱[www.v2nodes.com] vless-PL-1...
-  - '🏳[www.v2nodes.com] ss- #10'
+  - '🇵🇱 波兰 | POL #1'
+  - 🇵🇱 波兰 | POL
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  - 🇵🇱PL_1|2.6MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
   - 🇵🇱PL-217.30.10.70-5407
   - 🇵🇱PL-217.30.10.70-5406
-  - 🇵🇱[www.v2nodes.com] vless-PL-1...
-  - '🏳[www.v2nodes.com] ss- #10'
+  - '🇵🇱 波兰 | POL #1'
+  - 🇵🇱 波兰 | POL
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  - 🇵🇱PL_1|2.6MB/s
 rules:
 - MATCH,SELECT

@@ -10,21 +10,47 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知66
-  server: 185.146.173.59
+- type: vless
+  uuid: ecc0e60a-f2cc-4266-8353-b228df89730a
+  name: '🇸🇪 瑞典 | SWE #1'
+  server: 150.241.87.52
   port: 443
   udp: true
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: hms02.fxiaomi.sbs
+  servername: pl.galacticworld.online
+  client-fingerprint: chrome
+- type: vless
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  name: '🇸🇪 瑞典 | SWE #2'
+  server: 77.232.143.142
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: volumestyle.komediyatorg.net
   ws-opts:
-    path: /link
-    headers:
-      Host: hms02.fxiaomi.sbs
+    path: /media/ws/fp=firefox
+- type: vless
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  name: 🇸🇪 瑞典 | SWE
+  server: 77.232.143.142
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: volumestyle.komediyatorg.net
+  client-fingerprint: firefox
+  ws-opts:
+    path: /media/ws/
+- type: trojan
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  name: 🇸🇪[www.v2nodes.com] trojan-SE-...
+  server: 95.143.196.97
+  port: 443
+  udp: true
+  sni: 95.143.196.97
 - type: vless
   uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
   name: '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
@@ -35,6 +61,26 @@ proxies:
   tls: true
   servername: 138-124-86-230.sslip.io
   client-fingerprint: firefox
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇸🇪[www.v2nodes.com] ss-SE-1615...
+  server: 138.199.55.243
+  port: 19999
+  udp: true
+- type: vless
+  uuid: ecc0e60a-f2cc-4266-8353-b228df89730a
+  name: 🇸🇪 瑞典 | SWE
+  server: 150.241.87.52
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: pl.galacticworld.online
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: GBO_paFyK9FihgPMH8r_vHa4IKMkSGfvAQ2fhPK_1H4
 - type: vless
   uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
   name: '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
@@ -46,61 +92,40 @@ proxies:
     path: /vless
     headers:
       Host: 5.178.109.174
-- type: vless
-  uuid: 4fabeed0-790e-9724-8f12-138ed31ac60e
-  name: 🇫🇮FI_1|4.3MB/s
-  server: 122.8.92.7
-  port: 8443
-  udp: true
-  network: grpc
-  tls: true
-  servername: download.nvidia.com
-  client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1615...
-  server: 138.199.55.243
-  port: 19999
-  udp: true
 - type: hysteria2
   password: d4ca9415f0eac7897472e1e5b86d2e96
-  name: '@OutlineReleasedKey #9'
+  name: '@OutlineReleasedKey #10'
   server: 50.7.38.243
   port: 443
   udp: true
   sni: promo.betust.net
-- type: hysteria2
-  password: 917f4b0a-8b3b-404c-aa60-b47e83a33e8f
-  name: '🇸🇪 瑞典 | SWE #1'
-  server: 150.241.74.160
-  port: 30443
-  udp: true
-  sni: tll.nikomy.uk
-  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知66
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - 🇫🇮FI_1|4.3MB/s
-  - 🇸🇪[www.v2nodes.com] ss-SE-1615...
-  - '@OutlineReleasedKey #9'
   - '🇸🇪 瑞典 | SWE #1'
+  - '🇸🇪 瑞典 | SWE #2'
+  - 🇸🇪 瑞典 | SWE
+  - 🇸🇪[www.v2nodes.com] trojan-SE-...
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  - 🇸🇪[www.v2nodes.com] ss-SE-1615...
+  - 🇸🇪 瑞典 | SWE
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
+  - '@OutlineReleasedKey #10'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知66
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - 🇫🇮FI_1|4.3MB/s
-  - 🇸🇪[www.v2nodes.com] ss-SE-1615...
-  - '@OutlineReleasedKey #9'
   - '🇸🇪 瑞典 | SWE #1'
+  - '🇸🇪 瑞典 | SWE #2'
+  - 🇸🇪 瑞典 | SWE
+  - 🇸🇪[www.v2nodes.com] trojan-SE-...
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  - 🇸🇪[www.v2nodes.com] ss-SE-1615...
+  - 🇸🇪 瑞典 | SWE
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
+  - '@OutlineReleasedKey #10'
 rules:
 - MATCH,SELECT

@@ -20,6 +20,30 @@ proxies:
   tls: true
   servername: kk-tr-74.testkknegr.online
   client-fingerprint: chrome
+- type: vless
+  uuid: 3dfc0554-e264-424c-8836-d35fc7b5e731
+  name: '🇺🇸 美国 | USA #2'
+  server: 87.120.106.21
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: lockheart.info
+  client-fingerprint: chrome
+- type: vless
+  uuid: 3dfc0554-e264-424c-8836-d35fc7b5e731
+  name: 🇺🇸 美国 | USA
+  server: 87.120.106.21
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: lockheart.info
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 6dc3iKXilOQpA_JFrKlk5-CsFjSmOm_5p0kSQcO9qi4
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -27,10 +51,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇹🇷[www.v2nodes.com] vless-TR-1...
+  - '🇺🇸 美国 | USA #2'
+  - 🇺🇸 美国 | USA
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇹🇷[www.v2nodes.com] vless-TR-1...
+  - '🇺🇸 美国 | USA #2'
+  - 🇺🇸 美国 | USA
 rules:
 - MATCH,SELECT
