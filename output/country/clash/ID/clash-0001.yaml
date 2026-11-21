@@ -11,26 +11,29 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  name: 🇮🇩[www.v2nodes.com] vless-ID-1...
-  server: 130.94.95.198
-  port: 57353
+  uuid: f520bd45-8e26-4a23-a227-2f91acb67928
+  name: '🇮🇹 意大利 | ITA #14'
+  server: 43.229.254.71
+  port: 443
   udp: true
-  network: tcp
+  network: ws
   tls: true
-  servername: in001.zestapp778.com
-  client-fingerprint: firefox
+  servername: it-mil.862400.xyz
+  ws-opts:
+    path: /announcementfp=random
+    headers:
+      Host: it-mil.862400.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
+  - '🇮🇹 意大利 | ITA #14'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
+  - '🇮🇹 意大利 | ITA #14'
 rules:
 - MATCH,SELECT

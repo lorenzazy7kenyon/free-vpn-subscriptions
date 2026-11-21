@@ -1,17 +1,9 @@
 {
   "outbounds": [
     {
-      "method": "aes-256-cfb",
-      "password": "c3NtHJ5ujV2tGDfj",
-      "server": "217.30.10.70",
-      "server_port": 9084,
-      "tag": "🇵🇱PL-217.30.10.70-0207",
-      "type": "ss"
-    },
-    {
       "server": "201.58.189.105",
       "server_port": 2083,
-      "tag": "🇵🇱[www.v2nodes.com] vless-PL-1... #2",
+      "tag": "🇵🇱[www.v2nodes.com] vless-PL-1... #1",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -30,20 +22,28 @@
     },
     {
       "flow": "xtls-rprx-vision",
-      "server": "82.118.22.161",
+      "server": "150.251.113.34",
       "server_port": 443,
       "tag": "🇵🇱[www.v2nodes.com] vless-PL-1... #4",
       "tls": {
         "enabled": true,
-        "insecure": false,
+        "insecure": true,
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       },
       "type": "vless",
-      "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2"
+      "uuid": "d7d724b5-17ce-4f3c-877d-dfbf0f07afa1"
+    },
+    {
+      "method": "chacha20-ietf-poly1305",
+      "password": "eetk7pw",
+      "server": "54.36.174.140",
+      "server_port": 443,
+      "tag": "🏳[www.v2nodes.com] ss- #8",
+      "type": "ss"
     },
     {
       "flow": "xtls-rprx-vision",
@@ -63,52 +63,43 @@
       "uuid": "44ddb84a-f152-47ef-a970-fd63f2df9b30"
     },
     {
-      "method": "chacha20-ietf-poly1305",
-      "password": "eetk7pw",
-      "server": "54.36.174.140",
-      "server_port": 443,
-      "tag": "🏳[www.v2nodes.com] ss- #13",
-      "type": "ss"
-    },
-    {
       "flow": "xtls-rprx-vision",
-      "server": "150.251.113.34",
+      "server": "82.118.22.161",
       "server_port": 443,
-      "tag": "🇵🇱[www.v2nodes.com] vless-PL-1... #5",
+      "tag": "🇵🇱[www.v2nodes.com] vless-PL-1... #3",
       "tls": {
         "enabled": true,
-        "insecure": true,
+        "insecure": false,
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
       },
       "type": "vless",
-      "uuid": "d7d724b5-17ce-4f3c-877d-dfbf0f07afa1"
+      "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2"
     },
     {
       "password": "ca60984f-b1f0-4073-bd33-4c75168f749a",
-      "server": "82.40.63.138",
+      "server": "31.58.117.133",
       "server_port": 443,
-      "tag": "🇵🇱PL_1|3.9MB/s",
+      "tag": "🇵🇱PL_1|2.6MB/s",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "kraw-pl-4.fantoff.online"
+        "insecure": false,
+        "server_name": "kraw-pl-5.fantoff.online"
       },
       "type": "hysteria2"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇵🇱PL-217.30.10.70-0207",
-        "🇵🇱[www.v2nodes.com] vless-PL-1... #2",
+        "🇵🇱[www.v2nodes.com] vless-PL-1... #1",
         "🇵🇱[www.v2nodes.com] vless-PL-1... #4",
+        "🏳[www.v2nodes.com] ss- #8",
         "🇵🇱[www.v2nodes.com] vless-PL-1...",
-        "🏳[www.v2nodes.com] ss- #13",
-        "🇵🇱[www.v2nodes.com] vless-PL-1... #5",
-        "🇵🇱PL_1|3.9MB/s"
+        "🇵🇱[www.v2nodes.com] vless-PL-1... #3",
+        "🇵🇱PL_1|2.6MB/s"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -117,13 +108,12 @@
     {
       "outbounds": [
         "auto",
-        "🇵🇱PL-217.30.10.70-0207",
-        "🇵🇱[www.v2nodes.com] vless-PL-1... #2",
+        "🇵🇱[www.v2nodes.com] vless-PL-1... #1",
         "🇵🇱[www.v2nodes.com] vless-PL-1... #4",
+        "🏳[www.v2nodes.com] ss- #8",
         "🇵🇱[www.v2nodes.com] vless-PL-1...",
-        "🏳[www.v2nodes.com] ss- #13",
-        "🇵🇱[www.v2nodes.com] vless-PL-1... #5",
-        "🇵🇱PL_1|3.9MB/s"
+        "🇵🇱[www.v2nodes.com] vless-PL-1... #3",
+        "🇵🇱PL_1|2.6MB/s"
       ],
       "tag": "select",
       "type": "selector"

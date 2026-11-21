@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  name: '🏳[www.v2nodes.com] vless- #7'
+  name: '🏳[www.v2nodes.com] vless- #12'
   server: 46.28.67.55
   port: 443
   udp: true
@@ -21,17 +21,39 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- type: vless
+  uuid: 0f2dc4af-951f-4690-922e-07c6e8bab26a
+  name: 🇷🇴RO_3|3.4MB/s
+  server: 31.6.1.115
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: cdn.winter-jam.site
+  client-fingerprint: firefox
+- type: hysteria2
+  password: gf1
+  name: 🇷🇴RO-🚀@VPNine1
+  server: 185.156.44.99
+  port: 443
+  udp: true
+  sni: www.amazon.com
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #7'
+  - '🏳[www.v2nodes.com] vless- #12'
+  - 🇷🇴RO_3|3.4MB/s
+  - 🇷🇴RO-🚀@VPNine1
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #7'
+  - '🏳[www.v2nodes.com] vless- #12'
+  - 🇷🇴RO_3|3.4MB/s
+  - 🇷🇴RO-🚀@VPNine1
 rules:
 - MATCH,SELECT

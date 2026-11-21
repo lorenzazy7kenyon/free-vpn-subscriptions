@@ -11,30 +11,18 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+  uuid: 9be9e1e4-d1fc-4423-b22d-cd07a4381acb
   name: '🇦🇷 阿根廷 | ARG #1'
-  server: 186.122.177.79
+  server: 131.255.6.88
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: ws
   tls: true
-  servername: ar1.gofizz.in
-  client-fingerprint: firefox
-- type: vless
-  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
-  name: 🇦🇷 阿根廷 | ARG
-  server: 186.122.177.79
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ar1.gofizz.in
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: pBEW9XYZQsXxjgt44pCQcxoEOe-B1CdxaTdTnL2QhAA
-    short-id: a5d67406
+  servername: cj1-e06.pages.dev
+  ws-opts:
+    path: /?ed=2560fp=random
+    headers:
+      Host: cj1-e06.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -42,12 +30,10 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇦🇷 阿根廷 | ARG #1'
-  - 🇦🇷 阿根廷 | ARG
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇦🇷 阿根廷 | ARG #1'
-  - 🇦🇷 阿根廷 | ARG
 rules:
 - MATCH,SELECT

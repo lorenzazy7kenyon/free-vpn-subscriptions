@@ -10,10 +10,23 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: f520bd45-8e26-4a23-a227-2f91acb67928
+  name: '🇮🇹 意大利 | ITA #9'
+  server: 159.195.249.188
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: it-mil.862400.xyz
+  ws-opts:
+    path: /announcementfp=random
+    headers:
+      Host: it-mil.862400.xyz
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
-  name: 🏳[www.v2nodes.com] ss-
+  name: 🇦🇹[www.v2nodes.com] ss-AT-1614...
   server: 152.53.1.57
   port: 8388
   udp: true
@@ -23,11 +36,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🏳[www.v2nodes.com] ss-
+  - '🇮🇹 意大利 | ITA #9'
+  - 🇦🇹[www.v2nodes.com] ss-AT-1614...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🏳[www.v2nodes.com] ss-
+  - '🇮🇹 意大利 | ITA #9'
+  - 🇦🇹[www.v2nodes.com] ss-AT-1614...
 rules:
 - MATCH,SELECT

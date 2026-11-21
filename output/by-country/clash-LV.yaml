@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
-  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
+  name: 🇳🇱[www.v2nodes.com] vless-NL-1...
   server: 94.183.234.245
   port: 443
   udp: true
@@ -21,17 +21,33 @@ proxies:
   tls: true
   servername: www.bing.com
   client-fingerprint: qq
+- type: vless
+  uuid: 70f1696c-8b82-4614-9c1e-8ec21201684d
+  name: 🇱🇻 拉脱维亚 | LVA
+  server: 185.220.223.78
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: lv.meltun.org
+  client-fingerprint: safari
+  reality-opts:
+    public-key: wEJIqlLqor9Z_LMHvcsXh5FSoKMz3NbbcORwPDBgbhw
+    short-id: 5a8e1a04f3d92b67
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
+  - 🇳🇱[www.v2nodes.com] vless-NL-1...
+  - 🇱🇻 拉脱维亚 | LVA
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
+  - 🇳🇱[www.v2nodes.com] vless-NL-1...
+  - 🇱🇻 拉脱维亚 | LVA
 rules:
 - MATCH,SELECT

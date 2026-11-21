@@ -11,27 +11,29 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 555b35c4-30f9-40c6-a61a-7f53ab1bea45
-  name: '🇮🇹[www.v2nodes.com] vless-IT-1... #1'
-  server: 83.141.92.190
+  uuid: 9be9e1e4-d1fc-4423-b22d-cd07a4381acb
+  name: '🇮🇪 爱尔兰 | IRL #1'
+  server: 23.94.67.209
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: ws
   tls: true
-  servername: images.porsche.com
-  client-fingerprint: firefox
+  servername: cj1-e06.pages.dev
+  ws-opts:
+    path: /fp=random
+    headers:
+      Host: cj1-e06.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇮🇹[www.v2nodes.com] vless-IT-1... #1'
+  - '🇮🇪 爱尔兰 | IRL #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇮🇹[www.v2nodes.com] vless-IT-1... #1'
+  - '🇮🇪 爱尔兰 | IRL #1'
 rules:
 - MATCH,SELECT

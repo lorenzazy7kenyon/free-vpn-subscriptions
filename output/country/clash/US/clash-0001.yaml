@@ -10,14 +10,58 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: MiTiVPN
-  name: 美国4|@ripaojiedian
-  server: 167.82.76.27
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-167.88.62.203-0097
+  server: 167.88.62.203
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-156.146.38.169-0214
+  server: 156.146.38.169
   port: 443
   udp: true
-  sni: ssl.fastly.com
-  skip-cert-verify: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-156.146.38.170-0221
+  server: 156.146.38.170
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-156.146.38.168-0216
+  server: 156.146.38.168
+  port: 443
+  udp: true
+- type: vmess
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
+  server: 188.114.99.137
+  port: 443
+  udp: true
+  tls: true
+  servername: guanwang.awsno.com
+  ws-opts:
+    path: /hls/cctv5phd.m3u8
+    headers:
+      Host: guanwang.awsno.com
+- type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: US10
+  server: 167.88.62.124
+  port: 22324
+  udp: true
 - type: trojan
   password: Mitivpn
   name: 美国5|@ripaojiedian
@@ -26,53 +70,17 @@ proxies:
   udp: true
   sni: ssl.fastly.com
   skip-cert-verify: true
-- type: vless
-  uuid: c2de4998-c75d-49fa-9413-66d1f9aed9c4
-  name: 🇳🇱NL_2|2.1MB/s
-  server: 167.82.76.31
+- type: trojan
+  password: MiTiVPN
+  name: 美国4|@ripaojiedian
+  server: 167.82.76.27
   port: 443
   udp: true
-  network: tcp
-  tls: true
-  servername: cdn.akamai.steamstatic.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 79105268-2a3f-4b02-a299-839c8919b365
-  name: '🇩🇪 德国 | DEU #8'
-  server: 146.75.57.120
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: cdn.akamai.steamstatic.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: 79105268-2a3f-4b02-a299-839c8919b365
-  name: 🇩🇪 德国 | DEU
-  server: 146.75.57.120
-  port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: cdn.akamai.steamstatic.com
-  client-fingerprint: firefox
-- type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: a3PPcJa65qkdjt0mH9YBf5j1uAwMP21kNWRPTlI4nFc=
-  name: '🇺🇸 美国 | USA #2'
-  server: 137.131.48.233
-  port: 50356
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-95.215.201.18-0142
-  server: 95.215.201.18
-  port: 19999
-  udp: true
+  sni: ssl.fastly.com
+  skip-cert-verify: true
 - type: vless
   uuid: 8c392beb-524d-4d0a-a3a6-4d542d54a1ff
-  name: 🇺🇸_US_美国_IPV4 (3)
+  name: 🇺🇸_US_美国_IPV4 (2)
   server: 45.32.70.42
   port: 443
   udp: true
@@ -88,30 +96,9 @@ proxies:
     headers:
       Host: itunes.apple.com
 - type: vless
-  uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
-  name: '🇺🇸[www.v2nodes.com] vless-US-1... #3'
-  server: 156.229.167.109
-  port: 8443
-  udp: true
-  network: tcp
-  tls: true
-  servername: github.githubassets.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: fa895069-bfe5-42c9-9f30-f918e1e442c1
-  name: 🇺🇸[www.v2nodes.com] vless-US-1...
-  server: 143.246.60.254
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: d95f222c-3a63-47f8-8e61-af83e1f143f5
-  name: 🇺🇸_US_美国_IPV4 (2)
-  server: 172.235.63.167
+  uuid: 4444e77e-3d2a-4dc9-bf31-936f038f5570
+  name: 🇺🇸_US_美国_IPV4 (8)
+  server: 107.191.58.86
   port: 443
   udp: true
   network: ws
@@ -119,25 +106,8 @@ proxies:
   servername: itunes.apple.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: oxf_WPNwjjrO2uknpE9vbM9uwiQ4vbasL-Bgy3lwCHg
-    short-id: dd78b5c3
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- type: vless
-  uuid: 3c8a110d-f04d-4f0e-9579-fd00631b8830
-  name: 🇺🇸_US_美国_IPV4 (4)
-  server: 172.236.227.60
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: BHBzo_I0M-sChoOqTyOczYBP8l1L_dkmB6u3ijAOaGo
-    short-id: 664c1530
+    public-key: ZZwZGoX0Us8t6nLvckDWskC1c25F9rL0_nUXmd8BFxQ
+    short-id: 8dd324c1
   ws-opts:
     path: /ws
     headers:
@@ -158,8 +128,166 @@ proxies:
     headers:
       Host: cg1c15.waimaojd.com
 - type: vless
+  uuid: 327b1113-049e-4256-8d72-8815643dbb65
+  name: '🇺🇸[www.v2nodes.com] vless-US-1... #3'
+  server: 148.135.86.162
+  port: 10000
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-38.121.43.225-0166
+  server: 38.121.43.225
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-38.121.43.231-0105
+  server: 38.121.43.231
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-172.111.36.123-0159
+  server: 172.111.36.123
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-167.88.63.99-0107
+  server: 167.88.63.99
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-38.22.17.219-0111
+  server: 38.22.17.219
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-38.22.17.129-0098
+  server: 38.22.17.129
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-38.121.43.18-0106
+  server: 38.121.43.18
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-149.40.57.138-0113
+  server: 149.40.57.138
+  port: 19999
+  udp: true
+- type: vless
+  uuid: 40a4b915-5e6f-4316-9bb1-e899f30608e3
+  name: 🇺🇸_US_美国_IPV4 (11)
+  server: 172.233.129.172
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: LWfC_chpo4uDtzJ9VVnuTcf6zTzWKx-LCJAE2Ltl7h4
+    short-id: 5818adc3
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-149.40.57.134-0200
+  server: 149.40.57.134
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-149.40.57.133-0139
+  server: 149.40.57.133
+  port: 19999
+  udp: true
+- type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: US5
+  server: 172.111.36.137
+  port: 1270
+  udp: true
+  tls: true
+  servername: xmfhlpy.com
+- type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: US9
+  server: 167.88.63.99
+  port: 1270
+  udp: true
+  tls: true
+  servername: xmfhlpy.com
+- type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: US14
+  server: 172.111.36.123
+  port: 1270
+  udp: true
+  tls: true
+  servername: <nil>
+- type: vless
+  uuid: d95f222c-3a63-47f8-8e61-af83e1f143f5
+  name: 🇺🇸_US_美国_IPV4
+  server: 172.235.63.167
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: oxf_WPNwjjrO2uknpE9vbM9uwiQ4vbasL-Bgy3lwCHg
+    short-id: dd78b5c3
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- type: vless
+  uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
+  name: '🇺🇸[www.v2nodes.com] vless-US-1... #4'
+  server: 156.229.167.109
+  port: 8443
+  udp: true
+  network: tcp
+  tls: true
+  servername: github.githubassets.com
+  client-fingerprint: chrome
+- type: vless
   uuid: 61e3954d-0d66-4b69-b6cd-9b4fc2352303
-  name: 🇺🇸_US_美国_IPV4 (5)
+  name: 🇺🇸_US_美国_IPV4 (4)
   server: 172.233.142.149
   port: 443
   udp: true
@@ -175,194 +303,8 @@ proxies:
     headers:
       Host: itunes.apple.com
 - type: vless
-  uuid: c923b26b-a941-456d-8ccc-834f3b4080e0
-  name: 🇺🇸_US_美国_IPV4 (10)
-  server: 172.235.48.245
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: WoN4MfFQoLTmHhsa6cgsjjDtditjn2VfDbp9jd3hbSs
-    short-id: 7378fab7
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- type: vless
-  uuid: 9d91b606-9117-4f8f-8df7-dda7facf3a57
-  name: 🇺🇸_US_美国_IPV4 (11)
-  server: 172.233.129.65
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Z-RbKKLYcL0Rs6FgAjrrIyN6pAuZjP0JmaP9kLKoER0
-    short-id: 08d9f55d
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- type: vless
-  uuid: 40a4b915-5e6f-4316-9bb1-e899f30608e3
-  name: 🇺🇸_US_美国_IPV4 (12)
-  server: 172.233.129.172
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: LWfC_chpo4uDtzJ9VVnuTcf6zTzWKx-LCJAE2Ltl7h4
-    short-id: 5818adc3
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- type: vmess
-  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
-  server: 188.114.99.137
-  port: 443
-  udp: true
-  tls: true
-  servername: guanwang.awsno.com
-  ws-opts:
-    path: /hls/cctv5phd.m3u8
-    headers:
-      Host: guanwang.awsno.com
-- type: vless
-  uuid: 327b1113-049e-4256-8d72-8815643dbb65
-  name: '🇺🇸[www.v2nodes.com] vless-US-1... #2'
-  server: 148.135.86.162
-  port: 10000
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- type: vless
-  uuid: 38ae2bc6-577c-4e0a-b49c-81c44a0b4383
-  name: 美国2|@ripaojiedian
-  server: 172.235.53.103
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /wsflow=
-- type: vless
-  uuid: 6b4861de-7316-4a5a-bc45-0cbd8bf97eab
-  name: 美国3|@ripaojiedian
-  server: 172.236.239.126
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /wsflow=
-- type: vmess
-  uuid: de4e0335-2a3b-4006-d746-c939fa85fdc3
-  alterId: 0
-  cipher: auto
-  network: http
-  name: 🇺🇸 美国 | USA
-  server: 192.220.47.85
-  port: 44441
-  udp: true
-- type: vless
-  uuid: dbac71f3-ab05-4194-985b-f07088bf1a4a
-  name: 🇺🇸_US_美国_IPV4 (7)
-  server: 172.235.37.168
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1iwAzh_XzSCYWZEVZ0lfczKFd--jXx3coCt5le58gEM
-    short-id: c52e85fe
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- type: vless
-  uuid: a663dc28-28dc-4f97-9665-6ac215c8e567
-  name: 🇺🇸_US_美国_IPV4 (8)
-  server: 172.236.233.130
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 4wXbhUoSy9s9bGy9PaK18XVTTw3wXkBDjEusiMHaMB4
-    short-id: '53908445'
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- type: vless
-  uuid: 4444e77e-3d2a-4dc9-bf31-936f038f5570
-  name: 🇺🇸_US_美国_IPV4 (9)
-  server: 107.191.58.86
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: ZZwZGoX0Us8t6nLvckDWskC1c25F9rL0_nUXmd8BFxQ
-    short-id: 8dd324c1
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: US
-  server: 144.225.130.23
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-- type: vless
-  uuid: cdb7fa1d-6e7a-467c-da9c-da363c7bf779
-  name: '🇺🇸[www.v2nodes.com] vless-US-1... #1'
-  server: 147.224.54.25
-  port: 2053
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- type: vless
   uuid: 21117a67-21c2-4e2a-ba8f-bc49e23b0ae8
-  name: 🇺🇸_US_美国_IPV4 (6)
+  name: 🇺🇸_US_美国_IPV4 (5)
   server: 172.236.241.130
   port: 443
   udp: true
@@ -377,275 +319,104 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-23.150.152.38-0126
-  server: 23.150.152.38
-  port: 19999
-  udp: true
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇺🇸US-167.88.61.52-0134
-  server: 167.88.61.52
+- type: vless
+  uuid: dbac71f3-ab05-4194-985b-f07088bf1a4a
+  name: 🇺🇸_US_美国_IPV4 (6)
+  server: 172.235.37.168
   port: 443
   udp: true
-  sni: courses.browseseniorrolesandenhanceyourcareertoday.com
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-169.197.142.68-0158
-  server: 169.197.142.68
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-173.244.56.6-0147
-  server: 173.244.56.6
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-137.184.89.151-0058
-  server: 137.184.89.151
-  port: 19999
-  udp: true
-- type: vmess
-  uuid: de4e0335-2a3b-4006-d746-c939fa85fdc3
-  alterId: 0
-  cipher: auto
-  network: http
-  name: '🇺🇸 美国 | USA #10'
-  server: 192.220.47.85
-  port: 44441
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-173.244.56.9-0136
-  server: 173.244.56.9
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-156.146.38.170-0227
-  server: 156.146.38.170
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-156.146.38.169-0233
-  server: 156.146.38.169
-  port: 443
-  udp: true
-- type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
   network: ws
-  name: '🇺🇸 美国 | USA #11'
-  server: 192.74.236.148
-  port: 30004
-  udp: true
   tls: true
-  servername: www.91334565.xyz
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1iwAzh_XzSCYWZEVZ0lfczKFd--jXx3coCt5le58gEM
+    short-id: c52e85fe
   ws-opts:
-    path: /path/1733477783705
+    path: /ws
     headers:
-      Host: www.91334565.xyz
-- type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  network: ws
-  name: US15 6.2MB/s
-  server: 38.11.69.48
-  port: 30004
-  udp: true
-  tls: true
-  servername: www.83761815.xyz
-  ws-opts:
-    path: /path/1698843555400
-    headers:
-      Host: www.83761815.xyz
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-156.146.38.168-0228
-  server: 156.146.38.168
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-156.146.38.167-0229
-  server: 156.146.38.167
-  port: 443
-  udp: true
-- type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: US21
-  server: 169.197.143.116
-  port: 22324
-  udp: true
+      Host: itunes.apple.com
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-167.88.62.203-0109
-  server: 167.88.62.203
-  port: 19999
-  udp: true
-- type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: US10
-  server: 167.88.62.124
-  port: 22324
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸[www.v2nodes.com] ss-US-1616...
-  server: 149.40.57.134
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-149.40.57.138-0098
-  server: 149.40.57.138
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-172.111.36.123-0119
-  server: 172.111.36.123
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-38.121.43.18-0113
-  server: 38.121.43.18
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-38.22.17.219-0120
-  server: 38.22.17.219
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-38.22.17.129-0096
-  server: 38.22.17.129
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-45.86.51.18-0132
-  server: 45.86.51.18
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-185.230.230.18-0068
-  server: 185.230.230.18
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-167.88.63.99-0112
-  server: 167.88.63.99
-  port: 19999
-  udp: true
-- type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: US14
-  server: 172.111.36.123
-  port: 1270
-  udp: true
-  tls: true
-  servername: <nil>
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-149.40.57.133-0137
-  server: 149.40.57.133
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-37.19.198.236-0054
-  server: 37.19.198.236
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-37.19.198.160-0056
-  server: 37.19.198.160
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-37.19.198.244-5709
-  server: 37.19.198.244
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-172.111.38.72-0116
+  name: 🇺🇸US-172.111.38.72-0240
   server: 172.111.38.72
   port: 19999
   udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-38.121.43.231-0105
-  server: 38.121.43.231
-  port: 19999
+- type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: US24 953.9KB/s
+  server: 67.220.95.3
+  port: 18000
   udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-38.121.43.225-0155
-  server: 38.121.43.225
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-37.19.198.243-0092
-  server: 37.19.198.243
+- type: vless
+  uuid: 6b4861de-7316-4a5a-bc45-0cbd8bf97eab
+  name: 美国3|@ripaojiedian
+  server: 172.236.239.126
   port: 443
   udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /wsflow=
+- type: vless
+  uuid: 3c8a110d-f04d-4f0e-9579-fd00631b8830
+  name: 🇺🇸_US_美国_IPV4 (3)
+  server: 172.236.227.60
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: BHBzo_I0M-sChoOqTyOczYBP8l1L_dkmB6u3ijAOaGo
+    short-id: 664c1530
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- type: vless
+  uuid: c923b26b-a941-456d-8ccc-834f3b4080e0
+  name: 🇺🇸_US_美国_IPV4 (9)
+  server: 172.235.48.245
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: WoN4MfFQoLTmHhsa6cgsjjDtditjn2VfDbp9jd3hbSs
+    short-id: 7378fab7
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-193.151.160.9-0055
-  server: 193.151.160.9
+  name: 🇺🇸US-193.151.160.18-0073
+  server: 193.151.160.18
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-38.128.66.32-0108
+  server: 38.128.66.32
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-95.215.201.18-0076
+  server: 95.215.201.18
   port: 19999
   udp: true
 - type: vmess
@@ -653,19 +424,12 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-  name: US5
-  server: 172.111.36.137
+  name: US6
+  server: 38.64.138.187
   port: 1270
   udp: true
   tls: true
   servername: xmfhlpy.com
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-38.91.100.39-0133
-  server: 38.91.100.39
-  port: 19999
-  udp: true
 - type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
   alterId: 0
@@ -677,31 +441,83 @@ proxies:
   udp: true
   tls: true
   servername: xmfhlpy.com
-- type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: US24 953.9KB/s
-  server: 67.220.95.3
-  port: 18000
+- type: vless
+  uuid: 1a21796e-49d4-4e01-8abf-c0d25a12c492
+  name: '🇺🇸 美国 | USA #4'
+  server: 192.220.13.168
+  port: 443
   udp: true
-- type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
+  flow: xtls-rprx-vision
   network: tcp
-  name: US9
-  server: 167.88.63.99
-  port: 1270
-  udp: true
   tls: true
-  servername: xmfhlpy.com
+  servername: swdist.apple.com
+  client-fingerprint: chrome
+- type: vmess
+  uuid: 700dc5c3-9b7b-4ac8-8ee5-010ca3d03789
+  alterId: 0
+  cipher: auto
+  network: http
+  name: 🇺🇸US_11|3.4MB/s
+  server: 192.204.58.87
+  port: 52080
+  udp: true
+- type: vless
+  uuid: a663dc28-28dc-4f97-9665-6ac215c8e567
+  name: 🇺🇸_US_美国_IPV4 (7)
+  server: 172.236.233.130
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 4wXbhUoSy9s9bGy9PaK18XVTTw3wXkBDjEusiMHaMB4
+    short-id: '53908445'
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-216.106.178.169-0149
+  name: 🇺🇸US-193.151.160.9-0071
+  server: 193.151.160.9
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-185.230.230.18-0069
+  server: 185.230.230.18
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-162.251.62.31-0114
+  server: 162.251.62.31
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-38.91.107.188-0118
+  server: 38.91.107.188
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-216.106.178.169-0102
   server: 216.106.178.169
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-137.184.89.151-0112
+  server: 137.184.89.151
   port: 19999
   udp: true
 - type: vmess
@@ -729,30 +545,163 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-38.128.66.32-0123
-  server: 38.128.66.32
+  name: 🇺🇸US-45.86.51.18-0104
+  server: 45.86.51.18
+  port: 19999
+  udp: true
+- type: vless
+  uuid: cdb7fa1d-6e7a-467c-da9c-da363c7bf779
+  name: '🇺🇸[www.v2nodes.com] vless-US-1... #1'
+  server: 147.224.54.25
+  port: 2053
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-37.19.198.160-0070
+  server: 37.19.198.160
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+  name: 🇺🇸US-15.204.247.206-0176
+  server: 15.204.247.206
+  port: 4444
+  udp: true
+- type: vless
+  uuid: 38ae2bc6-577c-4e0a-b49c-81c44a0b4383
+  name: 美国2|@ripaojiedian
+  server: 172.235.53.103
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /wsflow=
+- type: vless
+  uuid: 9d91b606-9117-4f8f-8df7-dda7facf3a57
+  name: 🇺🇸_US_美国_IPV4 (10)
+  server: 172.233.129.65
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Z-RbKKLYcL0Rs6FgAjrrIyN6pAuZjP0JmaP9kLKoER0
+    short-id: 08d9f55d
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-23.150.152.38-0128
+  server: 23.150.152.38
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-37.19.198.243-0100
+  server: 37.19.198.243
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-37.19.198.244-0074
+  server: 37.19.198.244
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-37.19.198.236-0072
+  server: 37.19.198.236
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-173.244.56.9-0123
+  server: 173.244.56.9
+  port: 443
+  udp: true
+- type: vless
+  uuid: f520bd45-8e26-4a23-a227-2f91acb67928
+  name: '🇮🇹 意大利 | ITA #13'
+  server: 191.222.247.89
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: it-mil.862400.xyz
+  ws-opts:
+    path: /announcementfp=random
+    headers:
+      Host: it-mil.862400.xyz
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-173.244.56.6-0125
+  server: 173.244.56.6
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-38.91.100.39-0144
+  server: 38.91.100.39
   port: 19999
   udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-38.91.107.188-0095
-  server: 38.91.107.188
+  name: 🇺🇸US-193.151.163.18-0095
+  server: 193.151.163.18
   port: 19999
   udp: true
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇺🇸US-167.88.61.52-0089
+  server: 167.88.61.52
+  port: 443
+  udp: true
+  sni: courses.browseseniorrolesandenhanceyourcareertoday.com
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-193.151.160.18-0057
-  server: 193.151.160.18
+  name: 🇺🇸US-169.197.142.68-0110
+  server: 169.197.142.68
   port: 19999
   udp: true
+- type: vless
+  uuid: 59548d2d-5d7c-4328-aa81-0d5614da0c1b
+  name: '🇺🇸[www.v2nodes.com] vless-US-1... #2'
+  server: 198.247.127.131
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
 - type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-162.251.62.31-0104
-  server: 162.251.62.31
-  port: 19999
+  cipher: chacha20-ietf-poly1305
+  password: eDfN7SODQceIOmIAbtJJtK
+  name: 🇺🇸US-198.98.53.130-0208
+  server: 198.98.53.130
+  port: 443
   udp: true
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
@@ -769,73 +718,136 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
-- type: ss
-  cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
-  name: 🇺🇸US-15.204.247.206-0195
-  server: 15.204.247.206
-  port: 4444
+- type: vless
+  uuid: fa895069-bfe5-42c9-9f30-f918e1e442c1
+  name: 🇺🇸[www.v2nodes.com] vless-US-1...
+  server: 143.246.60.254
+  port: 443
   udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: f520bd45-8e26-4a23-a227-2f91acb67928
+  name: '🇸🇬 新加坡 | SGP #3'
+  server: 141.98.41.109
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: ap-south.862400.xyz
+  ws-opts:
+    path: /announcementfp=random
+    headers:
+      Host: ap-south.862400.xyz
+- type: vless
+  uuid: 9be9e1e4-d1fc-4423-b22d-cd07a4381acb
+  name: '🇺🇸 美国 | USA #1'
+  server: 141.98.41.28
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: cj1-e06.pages.dev
+  ws-opts:
+    path: /?ed=2560fp=random
+    headers:
+      Host: cj1-e06.pages.dev
 - type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
   network: tcp
-  name: US6
-  server: 38.64.138.187
-  port: 1270
+  name: US21
+  server: 169.197.143.116
+  port: 22324
   udp: true
-  tls: true
-  servername: xmfhlpy.com
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: eDfN7SODQceIOmIAbtJJtK
-  name: 🇺🇸US-198.98.53.130-0231
-  server: 198.98.53.130
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: US
+  server: 144.225.130.23
   port: 443
   udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-193.151.163.18-0053
-  server: 193.151.163.18
-  port: 19999
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+- type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  network: ws
+  name: '🇺🇸 美国 | USA #5'
+  server: 192.74.236.148
+  port: 30004
   udp: true
+  tls: true
+  servername: www.91334565.xyz
+  ws-opts:
+    path: /path/1733477783705
+    headers:
+      Host: www.91334565.xyz
+- type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  network: ws
+  name: 🇺🇸US-192.74.236.148-0145
+  server: 192.74.236.148
+  port: 30004
+  udp: true
+  tls: true
+  servername: www.91334565.xyz
+  ws-opts:
+    path: /
+    headers:
+      Host: www.91334565.xyz
+- type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  network: ws
+  name: US15 6.2MB/s
+  server: 38.11.69.48
+  port: 30004
+  udp: true
+  tls: true
+  servername: www.83761815.xyz
+  ws-opts:
+    path: /path/1698843555400
+    headers:
+      Host: www.83761815.xyz
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: ijoUwfdnkz7mX4pWdkSpmEixTZCt2TRm1JDr4BSaBAWkLxYGoXBHXadFKY5D5ZfoVTwqsx46jCmEUDnQUizJDYrM7B5anhnu
-  name: '🏳[www.v2nodes.com] ss- #17'
+  name: 🇺🇸[www.v2nodes.com] ss-US-1620...
   server: 23.230.52.119
   port: 42878
   udp: true
+- type: vless
+  uuid: 0f2dc4af-951f-4690-922e-07c6e8bab26a
+  name: 🇺🇸 美国 | USA
+  server: 45.86.245.122
+  port: 8444
+  udp: true
+  network: xhttp
+  tls: true
+  servername: at-43-wt6w.new-wave-split.site
+  client-fingerprint: firefox
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-84.20.27.183-0089
+  name: 🇺🇸US-84.20.27.183-0090
   server: 84.20.27.183
   port: 19999
   udp: true
-- type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: EP/0kIjk18c43tfkqeJqdVQm8lGArteYkhhwgBJ3q70=
-  name: '🇺🇸 美国 | USA #3'
-  server: 161.153.38.61
-  port: 50356
-  udp: true
-- type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 3NBsnBLanPfG6i3S2GTHineswr6EeSJPb0PCeMQoGoA=
-  name: '🇺🇸 美国 | USA #4'
-  server: 47.85.162.44
-  port: 443
-  udp: true
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇺🇸US-66.163.112.13-0106
-  server: 66.163.112.13
-  port: 443
-  udp: true
-  sni: blog.unlockyourfuturefindyourperfectcareer.com
 - type: hysteria2
   password: 23c82941-70f4-4381-90db-bd28e9a902e9
   name: '@OutlineReleasedKey'
@@ -843,6 +855,15 @@ proxies:
   port: 443
   udp: true
   sni: steel7.hadsvpn.com
+- type: hysteria2
+  password: HPzKAhFXV5XgEmRSTM33DRuTHeFcB5ON
+  name: 🇺🇸US-🚀@VPNine1
+  server: 89.117.172.45
+  port: 443
+  udp: true
+  sni: eth.todsm.com
+  obfs: salamander
+  obfs-password: 0dRexOATy4t9J1ckKOLpPy9HrNoU5FmN
 - type: hysteria2
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
   name: 🇺🇸139909 | ⚡️Telegram = t.me/S...
@@ -857,183 +878,181 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 美国4|@ripaojiedian
-  - 美国5|@ripaojiedian
-  - 🇳🇱NL_2|2.1MB/s
-  - '🇩🇪 德国 | DEU #8'
-  - 🇩🇪 德国 | DEU
-  - '🇺🇸 美国 | USA #2'
-  - 🇺🇸US-95.215.201.18-0142
-  - 🇺🇸_US_美国_IPV4 (3)
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #3'
-  - 🇺🇸[www.v2nodes.com] vless-US-1...
-  - 🇺🇸_US_美国_IPV4 (2)
-  - 🇺🇸_US_美国_IPV4 (4)
-  - US2
-  - 🇺🇸_US_美国_IPV4 (5)
-  - 🇺🇸_US_美国_IPV4 (10)
-  - 🇺🇸_US_美国_IPV4 (11)
-  - 🇺🇸_US_美国_IPV4 (12)
+  - 🇺🇸US-167.88.62.203-0097
+  - 🇺🇸US-156.146.38.169-0214
+  - 🇺🇸US-156.146.38.170-0221
+  - 🇺🇸US-156.146.38.168-0216
   - 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #2'
-  - 美国2|@ripaojiedian
-  - 美国3|@ripaojiedian
-  - 🇺🇸 美国 | USA
-  - 🇺🇸_US_美国_IPV4 (7)
-  - 🇺🇸_US_美国_IPV4 (8)
-  - 🇺🇸_US_美国_IPV4 (9)
-  - US
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #1'
-  - 🇺🇸_US_美国_IPV4 (6)
-  - 🇺🇸US-23.150.152.38-0126
-  - 🇺🇸US-167.88.61.52-0134
-  - 🇺🇸US-169.197.142.68-0158
-  - 🇺🇸US-173.244.56.6-0147
-  - 🇺🇸US-137.184.89.151-0058
-  - '🇺🇸 美国 | USA #10'
-  - 🇺🇸US-173.244.56.9-0136
-  - 🇺🇸US-156.146.38.170-0227
-  - 🇺🇸US-156.146.38.169-0233
-  - '🇺🇸 美国 | USA #11'
-  - US15 6.2MB/s
-  - 🇺🇸US-156.146.38.168-0228
-  - 🇺🇸US-156.146.38.167-0229
-  - US21
-  - 🇺🇸US-167.88.62.203-0109
   - US10
-  - 🇺🇸[www.v2nodes.com] ss-US-1616...
-  - 🇺🇸US-149.40.57.138-0098
-  - 🇺🇸US-172.111.36.123-0119
-  - 🇺🇸US-38.121.43.18-0113
-  - 🇺🇸US-38.22.17.219-0120
-  - 🇺🇸US-38.22.17.129-0096
-  - 🇺🇸US-45.86.51.18-0132
-  - 🇺🇸US-185.230.230.18-0068
-  - 🇺🇸US-167.88.63.99-0112
-  - US14
-  - 🇺🇸US-149.40.57.133-0137
-  - 🇺🇸US-37.19.198.236-0054
-  - 🇺🇸US-37.19.198.160-0056
-  - 🇺🇸US-37.19.198.244-5709
-  - 🇺🇸US-172.111.38.72-0116
+  - 美国5|@ripaojiedian
+  - 美国4|@ripaojiedian
+  - 🇺🇸_US_美国_IPV4 (2)
+  - 🇺🇸_US_美国_IPV4 (8)
+  - US2
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #3'
+  - 🇺🇸US-38.121.43.225-0166
   - 🇺🇸US-38.121.43.231-0105
-  - 🇺🇸US-38.121.43.225-0155
-  - 🇺🇸US-37.19.198.243-0092
-  - 🇺🇸US-193.151.160.9-0055
+  - 🇺🇸US-172.111.36.123-0159
+  - 🇺🇸US-167.88.63.99-0107
+  - 🇺🇸US-38.22.17.219-0111
+  - 🇺🇸US-38.22.17.129-0098
+  - 🇺🇸US-38.121.43.18-0106
+  - 🇺🇸US-149.40.57.138-0113
+  - 🇺🇸_US_美国_IPV4 (11)
+  - 🇺🇸US-149.40.57.134-0200
+  - 🇺🇸US-149.40.57.133-0139
   - US5
-  - 🇺🇸US-38.91.100.39-0133
-  - US7
-  - US24 953.9KB/s
   - US9
-  - 🇺🇸US-216.106.178.169-0149
+  - US14
+  - 🇺🇸_US_美国_IPV4
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #4'
+  - 🇺🇸_US_美国_IPV4 (4)
+  - 🇺🇸_US_美国_IPV4 (5)
+  - 🇺🇸_US_美国_IPV4 (6)
+  - 🇺🇸US-172.111.38.72-0240
+  - US24 953.9KB/s
+  - 美国3|@ripaojiedian
+  - 🇺🇸_US_美国_IPV4 (3)
+  - 🇺🇸_US_美国_IPV4 (9)
+  - 🇺🇸US-193.151.160.18-0073
+  - 🇺🇸US-38.128.66.32-0108
+  - 🇺🇸US-95.215.201.18-0076
+  - US6
+  - US7
+  - '🇺🇸 美国 | USA #4'
+  - 🇺🇸US_11|3.4MB/s
+  - 🇺🇸_US_美国_IPV4 (7)
+  - 🇺🇸US-193.151.160.9-0071
+  - 🇺🇸US-185.230.230.18-0069
+  - 🇺🇸US-162.251.62.31-0114
+  - 🇺🇸US-38.91.107.188-0118
+  - 🇺🇸US-216.106.178.169-0102
+  - 🇺🇸US-137.184.89.151-0112
   - US17
   - US20
-  - 🇺🇸US-38.128.66.32-0123
-  - 🇺🇸US-38.91.107.188-0095
-  - 🇺🇸US-193.151.160.18-0057
-  - 🇺🇸US-162.251.62.31-0104
+  - 🇺🇸US-45.86.51.18-0104
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #1'
+  - 🇺🇸US-37.19.198.160-0070
+  - 🇺🇸US-15.204.247.206-0176
+  - 美国2|@ripaojiedian
+  - 🇺🇸_US_美国_IPV4 (10)
+  - 🇺🇸US-23.150.152.38-0128
+  - 🇺🇸US-37.19.198.243-0100
+  - 🇺🇸US-37.19.198.244-0074
+  - 🇺🇸US-37.19.198.236-0072
+  - 🇺🇸US-173.244.56.9-0123
+  - '🇮🇹 意大利 | ITA #13'
+  - 🇺🇸US-173.244.56.6-0125
+  - 🇺🇸US-38.91.100.39-0144
+  - 🇺🇸US-193.151.163.18-0095
+  - 🇺🇸US-167.88.61.52-0089
+  - 🇺🇸US-169.197.142.68-0110
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #2'
+  - 🇺🇸US-198.98.53.130-0208
   - US13
-  - 🇺🇸US-15.204.247.206-0195
-  - US6
-  - 🇺🇸US-198.98.53.130-0231
-  - 🇺🇸US-193.151.163.18-0053
-  - '🏳[www.v2nodes.com] ss- #17'
-  - 🇺🇸US-84.20.27.183-0089
-  - '🇺🇸 美国 | USA #3'
-  - '🇺🇸 美国 | USA #4'
-  - 🇺🇸US-66.163.112.13-0106
+  - 🇺🇸[www.v2nodes.com] vless-US-1...
+  - '🇸🇬 新加坡 | SGP #3'
+  - '🇺🇸 美国 | USA #1'
+  - US21
+  - US
+  - '🇺🇸 美国 | USA #5'
+  - 🇺🇸US-192.74.236.148-0145
+  - US15 6.2MB/s
+  - 🇺🇸[www.v2nodes.com] ss-US-1620...
+  - 🇺🇸 美国 | USA
+  - 🇺🇸US-84.20.27.183-0090
   - '@OutlineReleasedKey'
+  - 🇺🇸US-🚀@VPNine1
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 美国4|@ripaojiedian
-  - 美国5|@ripaojiedian
-  - 🇳🇱NL_2|2.1MB/s
-  - '🇩🇪 德国 | DEU #8'
-  - 🇩🇪 德国 | DEU
-  - '🇺🇸 美国 | USA #2'
-  - 🇺🇸US-95.215.201.18-0142
-  - 🇺🇸_US_美国_IPV4 (3)
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #3'
-  - 🇺🇸[www.v2nodes.com] vless-US-1...
-  - 🇺🇸_US_美国_IPV4 (2)
-  - 🇺🇸_US_美国_IPV4 (4)
-  - US2
-  - 🇺🇸_US_美国_IPV4 (5)
-  - 🇺🇸_US_美国_IPV4 (10)
-  - 🇺🇸_US_美国_IPV4 (11)
-  - 🇺🇸_US_美国_IPV4 (12)
+  - 🇺🇸US-167.88.62.203-0097
+  - 🇺🇸US-156.146.38.169-0214
+  - 🇺🇸US-156.146.38.170-0221
+  - 🇺🇸US-156.146.38.168-0216
   - 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #2'
-  - 美国2|@ripaojiedian
-  - 美国3|@ripaojiedian
-  - 🇺🇸 美国 | USA
-  - 🇺🇸_US_美国_IPV4 (7)
-  - 🇺🇸_US_美国_IPV4 (8)
-  - 🇺🇸_US_美国_IPV4 (9)
-  - US
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #1'
-  - 🇺🇸_US_美国_IPV4 (6)
-  - 🇺🇸US-23.150.152.38-0126
-  - 🇺🇸US-167.88.61.52-0134
-  - 🇺🇸US-169.197.142.68-0158
-  - 🇺🇸US-173.244.56.6-0147
-  - 🇺🇸US-137.184.89.151-0058
-  - '🇺🇸 美国 | USA #10'
-  - 🇺🇸US-173.244.56.9-0136
-  - 🇺🇸US-156.146.38.170-0227
-  - 🇺🇸US-156.146.38.169-0233
-  - '🇺🇸 美国 | USA #11'
-  - US15 6.2MB/s
-  - 🇺🇸US-156.146.38.168-0228
-  - 🇺🇸US-156.146.38.167-0229
-  - US21
-  - 🇺🇸US-167.88.62.203-0109
   - US10
-  - 🇺🇸[www.v2nodes.com] ss-US-1616...
-  - 🇺🇸US-149.40.57.138-0098
-  - 🇺🇸US-172.111.36.123-0119
-  - 🇺🇸US-38.121.43.18-0113
-  - 🇺🇸US-38.22.17.219-0120
-  - 🇺🇸US-38.22.17.129-0096
-  - 🇺🇸US-45.86.51.18-0132
-  - 🇺🇸US-185.230.230.18-0068
-  - 🇺🇸US-167.88.63.99-0112
-  - US14
-  - 🇺🇸US-149.40.57.133-0137
-  - 🇺🇸US-37.19.198.236-0054
-  - 🇺🇸US-37.19.198.160-0056
-  - 🇺🇸US-37.19.198.244-5709
-  - 🇺🇸US-172.111.38.72-0116
+  - 美国5|@ripaojiedian
+  - 美国4|@ripaojiedian
+  - 🇺🇸_US_美国_IPV4 (2)
+  - 🇺🇸_US_美国_IPV4 (8)
+  - US2
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #3'
+  - 🇺🇸US-38.121.43.225-0166
   - 🇺🇸US-38.121.43.231-0105
-  - 🇺🇸US-38.121.43.225-0155
-  - 🇺🇸US-37.19.198.243-0092
-  - 🇺🇸US-193.151.160.9-0055
+  - 🇺🇸US-172.111.36.123-0159
+  - 🇺🇸US-167.88.63.99-0107
+  - 🇺🇸US-38.22.17.219-0111
+  - 🇺🇸US-38.22.17.129-0098
+  - 🇺🇸US-38.121.43.18-0106
+  - 🇺🇸US-149.40.57.138-0113
+  - 🇺🇸_US_美国_IPV4 (11)
+  - 🇺🇸US-149.40.57.134-0200
+  - 🇺🇸US-149.40.57.133-0139
   - US5
-  - 🇺🇸US-38.91.100.39-0133
-  - US7
-  - US24 953.9KB/s
   - US9
-  - 🇺🇸US-216.106.178.169-0149
+  - US14
+  - 🇺🇸_US_美国_IPV4
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #4'
+  - 🇺🇸_US_美国_IPV4 (4)
+  - 🇺🇸_US_美国_IPV4 (5)
+  - 🇺🇸_US_美国_IPV4 (6)
+  - 🇺🇸US-172.111.38.72-0240
+  - US24 953.9KB/s
+  - 美国3|@ripaojiedian
+  - 🇺🇸_US_美国_IPV4 (3)
+  - 🇺🇸_US_美国_IPV4 (9)
+  - 🇺🇸US-193.151.160.18-0073
+  - 🇺🇸US-38.128.66.32-0108
+  - 🇺🇸US-95.215.201.18-0076
+  - US6
+  - US7
+  - '🇺🇸 美国 | USA #4'
+  - 🇺🇸US_11|3.4MB/s
+  - 🇺🇸_US_美国_IPV4 (7)
+  - 🇺🇸US-193.151.160.9-0071
+  - 🇺🇸US-185.230.230.18-0069
+  - 🇺🇸US-162.251.62.31-0114
+  - 🇺🇸US-38.91.107.188-0118
+  - 🇺🇸US-216.106.178.169-0102
+  - 🇺🇸US-137.184.89.151-0112
   - US17
   - US20
-  - 🇺🇸US-38.128.66.32-0123
-  - 🇺🇸US-38.91.107.188-0095
-  - 🇺🇸US-193.151.160.18-0057
-  - 🇺🇸US-162.251.62.31-0104
+  - 🇺🇸US-45.86.51.18-0104
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #1'
+  - 🇺🇸US-37.19.198.160-0070
+  - 🇺🇸US-15.204.247.206-0176
+  - 美国2|@ripaojiedian
+  - 🇺🇸_US_美国_IPV4 (10)
+  - 🇺🇸US-23.150.152.38-0128
+  - 🇺🇸US-37.19.198.243-0100
+  - 🇺🇸US-37.19.198.244-0074
+  - 🇺🇸US-37.19.198.236-0072
+  - 🇺🇸US-173.244.56.9-0123
+  - '🇮🇹 意大利 | ITA #13'
+  - 🇺🇸US-173.244.56.6-0125
+  - 🇺🇸US-38.91.100.39-0144
+  - 🇺🇸US-193.151.163.18-0095
+  - 🇺🇸US-167.88.61.52-0089
+  - 🇺🇸US-169.197.142.68-0110
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #2'
+  - 🇺🇸US-198.98.53.130-0208
   - US13
-  - 🇺🇸US-15.204.247.206-0195
-  - US6
-  - 🇺🇸US-198.98.53.130-0231
-  - 🇺🇸US-193.151.163.18-0053
-  - '🏳[www.v2nodes.com] ss- #17'
-  - 🇺🇸US-84.20.27.183-0089
-  - '🇺🇸 美国 | USA #3'
-  - '🇺🇸 美国 | USA #4'
-  - 🇺🇸US-66.163.112.13-0106
+  - 🇺🇸[www.v2nodes.com] vless-US-1...
+  - '🇸🇬 新加坡 | SGP #3'
+  - '🇺🇸 美国 | USA #1'
+  - US21
+  - US
+  - '🇺🇸 美国 | USA #5'
+  - 🇺🇸US-192.74.236.148-0145
+  - US15 6.2MB/s
+  - 🇺🇸[www.v2nodes.com] ss-US-1620...
+  - 🇺🇸 美国 | USA
+  - 🇺🇸US-84.20.27.183-0090
   - '@OutlineReleasedKey'
+  - 🇺🇸US-🚀@VPNine1
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
 rules:
 - MATCH,SELECT

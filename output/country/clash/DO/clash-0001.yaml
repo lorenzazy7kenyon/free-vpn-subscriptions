@@ -11,30 +11,29 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  name: 🇩🇴 DO_58
+  uuid: 9be9e1e4-d1fc-4423-b22d-cd07a4381acb
+  name: '🇺🇸 美国 | USA #2'
   server: 181.36.229.212
   port: 443
   udp: true
   network: ws
   tls: true
-  servername: snip.edgeoneai.cc.cd
-  client-fingerprint: chrome
+  servername: cj1-e06.pages.dev
   ws-opts:
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+    path: /fp=random
     headers:
-      Host: snip.edgeoneai.cc.cd
+      Host: cj1-e06.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇴 DO_58
+  - '🇺🇸 美国 | USA #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇩🇴 DO_58
+  - '🇺🇸 美国 | USA #2'
 rules:
 - MATCH,SELECT
