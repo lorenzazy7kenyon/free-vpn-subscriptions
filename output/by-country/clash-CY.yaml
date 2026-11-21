@@ -10,24 +10,24 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: hysteria2
-  password: 3a17ce52-4547-45aa-9820-a7d03ad5faca
-  name: 🔹71@oneclickvpnkeys
-  server: 45.86.74.193
-  port: 443
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lDe8uY-MIsa2C_PfpwUaqUHsMkf5tqPE
+  name: '🇨🇾 塞浦路斯 | CYP #1'
+  server: 45.83.85.31
+  port: 1080
   udp: true
-  sni: media.embrofree.org
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🔹71@oneclickvpnkeys
+  - '🇨🇾 塞浦路斯 | CYP #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🔹71@oneclickvpnkeys
+  - '🇨🇾 塞浦路斯 | CYP #1'
 rules:
 - MATCH,SELECT

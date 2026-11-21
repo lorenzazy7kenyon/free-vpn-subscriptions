@@ -1,9 +1,30 @@
 {
   "outbounds": [
     {
+      "alter_id": 0,
+      "security": "auto",
+      "server": "185.146.173.59",
+      "server_port": 443,
+      "tag": "未知66",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "hms02.fxiaomi.sbs"
+      },
+      "transport": {
+        "headers": {
+          "Host": "hms02.fxiaomi.sbs"
+        },
+        "path": "/link",
+        "type": "ws"
+      },
+      "type": "vmess",
+      "uuid": "6c168fcc-2231-4f3b-8c1e-f6391692df4a"
+    },
+    {
       "server": "138.124.86.230",
       "server_port": 48115,
-      "tag": "🏳[www.v2nodes.com] vless- #13",
+      "tag": "🇸🇪[www.v2nodes.com] vless-SE-1... #2",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -23,7 +44,7 @@
     {
       "server": "5.178.109.174",
       "server_port": 14430,
-      "tag": "🇸🇪[www.v2nodes.com] vless-SE-1... #2",
+      "tag": "🇸🇪[www.v2nodes.com] vless-SE-1... #3",
       "transport": {
         "headers": {
           "Host": "5.178.109.174"
@@ -33,6 +54,26 @@
       },
       "type": "vless",
       "uuid": "80de563a-cac8-40ea-8cb0-4cb082dd92f9"
+    },
+    {
+      "server": "122.8.92.7",
+      "server_port": 8443,
+      "tag": "🇫🇮FI_1|4.3MB/s",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "download.nvidia.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "service_name": "TunService",
+        "type": "grpc"
+      },
+      "type": "vless",
+      "uuid": "4fabeed0-790e-9724-8f12-138ed31ac60e"
     },
     {
       "method": "aes-256-gcm",
@@ -58,7 +99,7 @@
       "password": "917f4b0a-8b3b-404c-aa60-b47e83a33e8f",
       "server": "150.241.74.160",
       "server_port": 30443,
-      "tag": "🇸🇪 瑞典 | SWE",
+      "tag": "🇸🇪 瑞典 | SWE #1",
       "tls": {
         "enabled": true,
         "insecure": true,
@@ -69,11 +110,13 @@
     {
       "interval": "5m",
       "outbounds": [
-        "🏳[www.v2nodes.com] vless- #13",
+        "未知66",
         "🇸🇪[www.v2nodes.com] vless-SE-1... #2",
+        "🇸🇪[www.v2nodes.com] vless-SE-1... #3",
+        "🇫🇮FI_1|4.3MB/s",
         "🇸🇪[www.v2nodes.com] ss-SE-1615...",
         "@OutlineReleasedKey #9",
-        "🇸🇪 瑞典 | SWE"
+        "🇸🇪 瑞典 | SWE #1"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -82,11 +125,13 @@
     {
       "outbounds": [
         "auto",
-        "🏳[www.v2nodes.com] vless- #13",
+        "未知66",
         "🇸🇪[www.v2nodes.com] vless-SE-1... #2",
+        "🇸🇪[www.v2nodes.com] vless-SE-1... #3",
+        "🇫🇮FI_1|4.3MB/s",
         "🇸🇪[www.v2nodes.com] ss-SE-1615...",
         "@OutlineReleasedKey #9",
-        "🇸🇪 瑞典 | SWE"
+        "🇸🇪 瑞典 | SWE #1"
       ],
       "tag": "select",
       "type": "selector"

@@ -17,17 +17,6 @@ proxies:
   server: 213.176.92.148
   port: 40647
   udp: true
-- type: vless
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  name: '🏳[www.v2nodes.com] vless- #5'
-  server: 45.144.234.157
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.144.234.157
 - type: hysteria2
   password: 6aab8efdf13945829ae3699c342be406
   name: Telegram:@v2rayng3
@@ -44,14 +33,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  - '🏳[www.v2nodes.com] vless- #5'
   - Telegram:@v2rayng3
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  - '🏳[www.v2nodes.com] vless- #5'
   - Telegram:@v2rayng3
 rules:
 - MATCH,SELECT

@@ -10,19 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇰🇷KR-132.145.80.230-1047
-  server: 132.145.80.230
-  port: 80
-  udp: true
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: kr02.a0a.xyz
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   name: 🇰🇷[www.v2nodes.com] trojan-KR-...
@@ -31,36 +18,44 @@ proxies:
   udp: true
   sni: connectgraduateswithjobopeningsandgrowprofessionally.com
   skip-cert-verify: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: 🇰🇷 韩国 | KOR
-  server: 15.165.75.243
-  port: 8443
+- type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇰🇷KR-132.145.80.230-1069
+  server: 132.145.80.230
+  port: 80
   udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: '12242'
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  server: 115.161.136.145
-  port: 10099
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: 🇰🇷KR-211.178.105.134-0177
-  server: 211.178.105.134
-  port: 6123
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: kr02.a0a.xyz
+- type: vmess
+  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知40
+  server: 146.56.112.110
+  port: 8888
   udp: true
 - type: vless
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  name: '🏳[www.v2nodes.com] vless- #7'
+  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
   server: 152.69.226.63
   port: 25555
   udp: true
   network: ws
   ws-opts:
     path: /
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: 🇰🇷KR-211.178.105.134-0245
+  server: 211.178.105.134
+  port: 6123
+  udp: true
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   name: '🇰🇷 韩国 | KOR #1'
@@ -71,7 +66,7 @@ proxies:
   skip-cert-verify: true
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: 🇰🇷 韩国 | KOR
+  name: '🇰🇷 韩国 | KOR #2'
   server: 15.165.75.243
   port: 443
   udp: true
@@ -83,25 +78,23 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷KR-132.145.80.230-1047
   - 🇰🇷[www.v2nodes.com] trojan-KR-...
-  - 🇰🇷 韩国 | KOR
-  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  - 🇰🇷KR-211.178.105.134-0177
-  - '🏳[www.v2nodes.com] vless- #7'
+  - 🇰🇷KR-132.145.80.230-1069
+  - 未知40
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
+  - 🇰🇷KR-211.178.105.134-0245
   - '🇰🇷 韩国 | KOR #1'
-  - 🇰🇷 韩国 | KOR
+  - '🇰🇷 韩国 | KOR #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇰🇷KR-132.145.80.230-1047
   - 🇰🇷[www.v2nodes.com] trojan-KR-...
-  - 🇰🇷 韩国 | KOR
-  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  - 🇰🇷KR-211.178.105.134-0177
-  - '🏳[www.v2nodes.com] vless- #7'
+  - 🇰🇷KR-132.145.80.230-1069
+  - 未知40
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
+  - 🇰🇷KR-211.178.105.134-0245
   - '🇰🇷 韩国 | KOR #1'
-  - 🇰🇷 韩国 | KOR
+  - '🇰🇷 韩国 | KOR #2'
 rules:
 - MATCH,SELECT
