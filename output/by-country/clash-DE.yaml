@@ -10,20 +10,49 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: a6142d9d-3f9f-47b7-b7e9-1245dd6a15d6
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #3'
+  server: 88.216.74.37
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: yw0ein72.dendi.top
+  client-fingerprint: firefox
+- type: vless
+  uuid: bc93a03d-13b5-0004-8ee7-d50c11459dab
+  name: '🇩🇪 德国 | DEU #1'
+  server: 109.106.15.99
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: key-master-saver.com
+  client-fingerprint: chrome
+- type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  name: 🇩🇪[www.v2nodes.com] ss-DE-1622...
+  server: 47.254.143.251
+  port: 443
+  udp: true
+- type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  name: 🇩🇪_DE_德国_IPV4
+  server: 47.254.167.157
+  port: 443
+  udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇩🇪DE-193.108.119.3-0141
-  server: 193.108.119.3
+  name: 🇩🇪DE-57.129.83.85-0137
+  server: 57.129.83.85
   port: 19999
   udp: true
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇩🇪DE-193.108.119.15-0299
-  server: 193.108.119.15
-  port: 443
-  udp: true
-  sni: courses.iloverussia2026.com
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -38,17 +67,20 @@ proxies:
   server: 193.108.119.2
   port: 19999
   udp: true
-- type: vless
-  uuid: a6142d9d-3f9f-47b7-b7e9-1245dd6a15d6
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
-  server: 88.216.74.37
-  port: 443
+- type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: FmB4HBM/+63LZr+sjxs5zkFIvZmB//5BPqdf8W+wntg=
+  name: '🏳[www.v2nodes.com] ss- #5'
+  server: 79.76.105.62
+  port: 59924
   udp: true
-  flow: xtls-rprx-vision
+- type: vless
+  uuid: 5ab065b0-2c7a-45a0-829d-9af9af7d8e05
+  name: '🇩🇪 德国 | DEU #2'
+  server: 152.53.120.90
+  port: 50955
+  udp: true
   network: tcp
-  tls: true
-  servername: yw0ein72.dendi.top
-  client-fingerprint: firefox
 - type: vless
   uuid: 10e60745-9685-4b7e-8539-a1fd06ce0d4e
   name: 🇫🇷 法国 | FRA
@@ -62,27 +94,16 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇩🇪DE-57.129.83.85-0137
-  server: 57.129.83.85
+  name: 🇩🇪DE-193.108.119.3-0141
+  server: 193.108.119.3
   port: 19999
   udp: true
-- type: vmess
-  uuid: 678a8a2c-aca8-11f1-b342-afa6288e22f8
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知54
-  server: 51.75.74.253
-  port: 10000
-  udp: true
-  ws-opts:
-    path: /vpnjantit
 - type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
-  name: 🇩🇪[www.v2nodes.com] ss-DE-1622...
-  server: 47.254.143.251
-  port: 443
+  password: GmAn0fXarz+xB3bw2aCzwnZxcNuDx8xpqI+vGufI3jI=
+  name: 🇩🇪[www.v2nodes.com] ss-DE-1623...
+  server: 92.5.114.103
+  port: 59924
   udp: true
 - type: vless
   uuid: 10e60745-9685-4b7e-8539-a1fd06ce0d4e
@@ -93,24 +114,6 @@ proxies:
   network: tcp
   tls: true
   servername: api.gcore.com
-  client-fingerprint: chrome
-- type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
-  name: 🇩🇪_DE_德国_IPV4
-  server: 47.254.167.157
-  port: 443
-  udp: true
-- type: vless
-  uuid: bc93a03d-13b5-0004-8ee7-d50c11459dab
-  name: '🇩🇪 德国 | DEU #2'
-  server: 109.106.15.99
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: key-master-saver.com
   client-fingerprint: chrome
 - type: vless
   uuid: bc93a03d-13b5-0004-8ee7-d50c11459dab
@@ -137,32 +140,25 @@ proxies:
   tls: true
   servername: 185.125.50.21
   client-fingerprint: firefox
-- type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: GmAn0fXarz+xB3bw2aCzwnZxcNuDx8xpqI+vGufI3jI=
-  name: '🏳[www.v2nodes.com] ss- #2'
-  server: 92.5.114.103
-  port: 59924
+- type: vmess
+  uuid: 2ea9a4c4-820d-4c78-9bca-e86ec65a89da
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知14
+  server: 176.9.199.190
+  port: 44602
   udp: true
-- type: hysteria2
-  password: KevinZakarian
-  name: 🩵+@Azarakhsh_Proxy+🩷
-  server: 179.61.132.96
-  port: 8443
+- type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  name: '🇺🇸 美国 | USA #3'
+  server: 217.69.174.175
+  port: 443
   udp: true
-  sni: 179.61.132.96
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: KevinZakarian
-- type: hysteria2
-  password: 5ictxgawam84vgrp
-  name: Telegram  ⚜️Join -> @tik7net_v...
-  server: 109.70.74.213
-  port: 2098
-  udp: true
-  sni: 109.70.74.213
-  obfs: salamander
-  obfs-password: 7922smqtd5qm70fu
+  network: tcp
+  tls: true
+  servername: 04535dt.us8.h1clayd.click
+  client-fingerprint: firefox
 - type: hysteria2
   password: HATATEAYA
   name: 'Channel : @Daily_Configs'
@@ -173,51 +169,85 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: HATATEAYA
+- type: hysteria2
+  password: 5s7qa8f78hznlw8g
+  name: ᴛᴇʟᴇɢʀᴀᴍ ɪᴅ = @ꜰxxɴᴇᴛ🐶
+  server: 3.120.145.15
+  port: 41018
+  udp: true
+  sni: quotes.ali-khamenei.world
+  obfs: salamander
+  obfs-password: v0qq015d7c8zgzu7
+- type: hysteria2
+  password: 5ictxgawam84vgrp
+  name: Telegram  ⚜️Join -> @tik7net_v...
+  server: 109.70.74.213
+  port: 2098
+  udp: true
+  sni: 109.70.74.213
+  obfs: salamander
+  obfs-password: 7922smqtd5qm70fu
+- type: hysteria2
+  password: KevinZakarian
+  name: 🩵+@Azarakhsh_Proxy+🩷
+  server: 179.61.132.96
+  port: 8443
+  udp: true
+  sni: 179.61.132.96
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: KevinZakarian
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪DE-193.108.119.3-0141
-  - 🇩🇪DE-193.108.119.15-0299
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #3'
+  - '🇩🇪 德国 | DEU #1'
+  - 🇩🇪[www.v2nodes.com] ss-DE-1622...
+  - 🇩🇪_DE_德国_IPV4
+  - 🇩🇪DE-57.129.83.85-0137
   - 🇩🇪DE-23.157.88.43-0150
   - 🇩🇪DE-193.108.119.2-0136
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
-  - 🇫🇷 法国 | FRA
-  - 🇩🇪DE-57.129.83.85-0137
-  - 未知54
-  - 🇩🇪[www.v2nodes.com] ss-DE-1622...
-  - '🇫🇷 法国 | FRA #2'
-  - 🇩🇪_DE_德国_IPV4
+  - '🏳[www.v2nodes.com] ss- #5'
   - '🇩🇪 德国 | DEU #2'
+  - 🇫🇷 法国 | FRA
+  - 🇩🇪DE-193.108.119.3-0141
+  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
+  - '🇫🇷 法国 | FRA #2'
   - 🇩🇪 德国 | DEU
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #1'
-  - '🏳[www.v2nodes.com] ss- #2'
-  - 🩵+@Azarakhsh_Proxy+🩷
-  - Telegram  ⚜️Join -> @tik7net_v...
+  - 未知14
+  - '🇺🇸 美国 | USA #3'
   - 'Channel : @Daily_Configs'
+  - ᴛᴇʟᴇɢʀᴀᴍ ɪᴅ = @ꜰxxɴᴇᴛ🐶
+  - Telegram  ⚜️Join -> @tik7net_v...
+  - 🩵+@Azarakhsh_Proxy+🩷
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇩🇪DE-193.108.119.3-0141
-  - 🇩🇪DE-193.108.119.15-0299
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #3'
+  - '🇩🇪 德国 | DEU #1'
+  - 🇩🇪[www.v2nodes.com] ss-DE-1622...
+  - 🇩🇪_DE_德国_IPV4
+  - 🇩🇪DE-57.129.83.85-0137
   - 🇩🇪DE-23.157.88.43-0150
   - 🇩🇪DE-193.108.119.2-0136
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
-  - 🇫🇷 法国 | FRA
-  - 🇩🇪DE-57.129.83.85-0137
-  - 未知54
-  - 🇩🇪[www.v2nodes.com] ss-DE-1622...
-  - '🇫🇷 法国 | FRA #2'
-  - 🇩🇪_DE_德国_IPV4
+  - '🏳[www.v2nodes.com] ss- #5'
   - '🇩🇪 德国 | DEU #2'
+  - 🇫🇷 法国 | FRA
+  - 🇩🇪DE-193.108.119.3-0141
+  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
+  - '🇫🇷 法国 | FRA #2'
   - 🇩🇪 德国 | DEU
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #1'
-  - '🏳[www.v2nodes.com] ss- #2'
-  - 🩵+@Azarakhsh_Proxy+🩷
-  - Telegram  ⚜️Join -> @tik7net_v...
+  - 未知14
+  - '🇺🇸 美国 | USA #3'
   - 'Channel : @Daily_Configs'
+  - ᴛᴇʟᴇɢʀᴀᴍ ɪᴅ = @ꜰxxɴᴇᴛ🐶
+  - Telegram  ⚜️Join -> @tik7net_v...
+  - 🩵+@Azarakhsh_Proxy+🩷
 rules:
 - MATCH,SELECT

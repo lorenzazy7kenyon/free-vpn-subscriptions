@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
-  name: '🏳[www.v2nodes.com] vless- #6'
+  name: '🏳[www.v2nodes.com] vless- #5'
   server: 194.60.228.97
   port: 443
   udp: true
@@ -20,28 +20,17 @@ proxies:
   tls: true
   servername: base.hosamobenl.co.uk
   client-fingerprint: chrome
-- type: vmess
-  uuid: db392ddc-5ac9-459b-9ce3-6f6dc87b650e
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知58
-  server: 91.216.217.181
-  port: 443
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #6'
-  - 未知58
+  - '🏳[www.v2nodes.com] vless- #5'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #6'
-  - 未知58
+  - '🏳[www.v2nodes.com] vless- #5'
 rules:
 - MATCH,SELECT

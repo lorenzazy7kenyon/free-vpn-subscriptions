@@ -34,19 +34,14 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇰🇷KR-132.145.80.230-1069
-  server: 132.145.80.230
-  port: 80
+- type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: '🇰🇷 韩国 | KOR #1'
+  server: 43.201.17.144
+  port: 443
   udp: true
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: kr02.a0a.xyz
+  sni: www.bing.com
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -56,7 +51,7 @@ proxy-groups:
   - 🇰🇷[www.v2nodes.com] trojan-KR-...
   - 🇰🇷KR-211.178.105.134-0245
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - 🇰🇷KR-132.145.80.230-1069
+  - '🇰🇷 韩国 | KOR #1'
 - name: SELECT
   type: select
   proxies:
@@ -64,6 +59,6 @@ proxy-groups:
   - 🇰🇷[www.v2nodes.com] trojan-KR-...
   - 🇰🇷KR-211.178.105.134-0245
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - 🇰🇷KR-132.145.80.230-1069
+  - '🇰🇷 韩国 | KOR #1'
 rules:
 - MATCH,SELECT

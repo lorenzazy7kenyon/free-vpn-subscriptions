@@ -20,6 +20,14 @@ proxies:
   tls: true
   servername: yahoo.com
   client-fingerprint: chrome
+- type: hysteria2
+  password: GIFCjtpiGVOsrCy2kgBmgndXX5lUP7Eb
+  name: '🇰🇿 哈萨克斯坦 | KAZ #1'
+  server: 185.102.75.145
+  port: 777
+  udp: true
+  sni: fin5.cft-razor.online
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -27,10 +35,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  - '🇰🇿 哈萨克斯坦 | KAZ #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇰🇿[www.v2nodes.com] vless-KZ-1...
+  - '🇰🇿 哈萨克斯坦 | KAZ #1'
 rules:
 - MATCH,SELECT
