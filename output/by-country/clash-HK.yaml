@@ -21,19 +21,11 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: vless2-8vx.pages.dev
-- type: trojan
-  password: '12012'
-  name: 🇭🇰[www.v2nodes.com] trojan-HK-...
-  server: 47.242.93.89
-  port: 12012
-  udp: true
-  sni: ali-hk.b-gfw.cfd
-  skip-cert-verify: true
 - type: vless
-  uuid: 27c26119-090b-4ae3-80d2-e9f08a575862
-  name: 香港3|@ripaojiedian
-  server: 47.243.230.253
-  port: 443
+  uuid: bb836d81-d0c5-4f01-a584-806cdf65e36a
+  name: 香港|@ripaojiedian
+  server: 116.213.43.43
+  port: 11103
   udp: true
   flow: xtls-rprx-vision
   network: tcp
@@ -60,11 +52,19 @@ proxies:
   server: 47.242.81.94
   port: 52080
   udp: true
+- type: trojan
+  password: '12012'
+  name: 🇭🇰[www.v2nodes.com] trojan-HK-...
+  server: 47.242.93.89
+  port: 12012
+  udp: true
+  sni: ali-hk.b-gfw.cfd
+  skip-cert-verify: true
 - type: vless
-  uuid: bb836d81-d0c5-4f01-a584-806cdf65e36a
-  name: 香港|@ripaojiedian
+  uuid: 530d31fc-2690-49e4-bfc9-3f991e145008
+  name: 台湾|@ripaojiedian
   server: 116.213.43.43
-  port: 11103
+  port: 11102
   udp: true
   flow: xtls-rprx-vision
   network: tcp
@@ -82,17 +82,83 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
+- type: vmess
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: HK12
+  server: 47.243.194.125
+  port: 443
+  udp: true
+  tls: true
+  servername: nycqg19zkwacpm1b.v.3dns.vip
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: nycqg19zkwacpm1b.v.3dns.vip
+- type: vmess
+  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: HK6
+  server: 47.244.120.197
+  port: 23026
+  udp: true
+  ws-opts:
+    path: /arki
+- type: vmess
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: HK3
+  server: 47.243.80.106
+  port: 443
+  udp: true
+  tls: true
+  servername: wwafj5LHl6bI8aU9.v.3dns.vip
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: wwafj5LHl6bI8aU9.v.3dns.vip
 - type: vless
-  uuid: 530d31fc-2690-49e4-bfc9-3f991e145008
-  name: 台湾|@ripaojiedian
-  server: 116.213.43.43
-  port: 11102
+  uuid: 8b17beac-b143-447d-aa68-14cbb121a602
+  name: 🇭🇰 香港 | HKG
+  server: 8.217.1.203
+  port: 8443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
+  reality-opts:
+    public-key: 74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38
+    short-id: 0bf55f64
+- type: vless
+  uuid: 27c26119-090b-4ae3-80d2-e9f08a575862
+  name: 香港3|@ripaojiedian
+  server: 47.243.230.253
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vmess
+  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇭🇰HK-156.245.232.239-5748
+  server: 156.245.232.239
+  port: 35043
+  udp: true
+  ws-opts:
+    path: /
 - type: vless
   uuid: ca69a29d-60ef-433a-91bc-27537be993c8
   name: 日本|@ripaojiedian
@@ -122,41 +188,14 @@ proxies:
   server: 209.248.57.105
   port: 8388
   udp: true
-- type: vless
-  uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
-  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
-  server: 156.226.168.221
-  port: 35193
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: 8b17beac-b143-447d-aa68-14cbb121a602
-  name: 🇭🇰 香港 | HKG
-  server: 8.217.1.203
-  port: 8443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38
-    short-id: 0bf55f64
 - type: hysteria2
-  password: 8294f130408299df8cab08c80bf6f819
-  name: 🔵93@oneclickvpnkeys
-  server: 24.233.8.109
-  port: 443
+  password: ePPsH1bMFD
+  name: '@V2rayNPVTConfig #1'
+  server: 23.141.172.229
+  port: 50541
   udp: true
-  sni: www.bing.com
+  sni: is1-ssl.mzstatic.com
   skip-cert-verify: true
-  obfs: salamander
-  obfs-password: c8827ab99e316c5bd414e21afa915ddf
 - type: hysteria2
   password: hAUdd15a7YGHUSgiPOUz
   name: 🇭🇰HK_2|2.5MB/s
@@ -168,13 +207,15 @@ proxies:
   obfs: salamander
   obfs-password: 9veAh9pTbrAfDwM1fIYI
 - type: hysteria2
-  password: ePPsH1bMFD
-  name: '@V2rayNPVTConfig #1'
-  server: 23.141.172.229
-  port: 50541
+  password: 8294f130408299df8cab08c80bf6f819
+  name: 🔵93@oneclickvpnkeys
+  server: 24.233.8.109
+  port: 443
   udp: true
-  sni: is1-ssl.mzstatic.com
+  sni: www.bing.com
   skip-cert-verify: true
+  obfs: salamander
+  obfs-password: c8827ab99e316c5bd414e21afa915ddf
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -182,40 +223,46 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇸🇬[www.v2nodes.com] vless-SG
-  - 🇭🇰[www.v2nodes.com] trojan-HK-...
-  - 香港3|@ripaojiedian
+  - 香港|@ripaojiedian
   - '🇭🇰 香港 | HKG #1'
   - '🇭🇰 香港 | HKG #2'
-  - 香港|@ripaojiedian
-  - 香港2|@ripaojiedian
+  - 🇭🇰[www.v2nodes.com] trojan-HK-...
   - 台湾|@ripaojiedian
+  - 香港2|@ripaojiedian
+  - HK12
+  - HK6
+  - HK3
+  - 🇭🇰 香港 | HKG
+  - 香港3|@ripaojiedian
+  - 🇭🇰HK-156.245.232.239-5748
   - 日本|@ripaojiedian
   - 美国2|@ripaojiedian
   - 🇭🇰[www.v2nodes.com] ss-HK-1621...
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
-  - 🇭🇰 香港 | HKG
-  - 🔵93@oneclickvpnkeys
-  - 🇭🇰HK_2|2.5MB/s
   - '@V2rayNPVTConfig #1'
+  - 🇭🇰HK_2|2.5MB/s
+  - 🔵93@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇸🇬[www.v2nodes.com] vless-SG
-  - 🇭🇰[www.v2nodes.com] trojan-HK-...
-  - 香港3|@ripaojiedian
+  - 香港|@ripaojiedian
   - '🇭🇰 香港 | HKG #1'
   - '🇭🇰 香港 | HKG #2'
-  - 香港|@ripaojiedian
-  - 香港2|@ripaojiedian
+  - 🇭🇰[www.v2nodes.com] trojan-HK-...
   - 台湾|@ripaojiedian
+  - 香港2|@ripaojiedian
+  - HK12
+  - HK6
+  - HK3
+  - 🇭🇰 香港 | HKG
+  - 香港3|@ripaojiedian
+  - 🇭🇰HK-156.245.232.239-5748
   - 日本|@ripaojiedian
   - 美国2|@ripaojiedian
   - 🇭🇰[www.v2nodes.com] ss-HK-1621...
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
-  - 🇭🇰 香港 | HKG
-  - 🔵93@oneclickvpnkeys
-  - 🇭🇰HK_2|2.5MB/s
   - '@V2rayNPVTConfig #1'
+  - 🇭🇰HK_2|2.5MB/s
+  - 🔵93@oneclickvpnkeys
 rules:
 - MATCH,SELECT

@@ -15,8 +15,8 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知78
-  server: 193.180.211.155
+  name: 未知126
+  server: 193.181.212.81
   port: 443
   udp: true
   tls: true
@@ -25,32 +25,17 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
-- type: vless
-  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-  name: 🇩🇰[www.v2nodes.com] vless-DK-1...
-  server: 193.180.208.167
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: v2n5.11676767.xyz
-  ws-opts:
-    path: /doujin/channels/cbfp=chrome
-    headers:
-      Host: v2n5.11676767.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知78
-  - 🇩🇰[www.v2nodes.com] vless-DK-1...
+  - 未知126
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知78
-  - 🇩🇰[www.v2nodes.com] vless-DK-1...
+  - 未知126
 rules:
 - MATCH,SELECT

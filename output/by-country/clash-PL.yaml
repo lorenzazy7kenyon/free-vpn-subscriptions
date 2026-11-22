@@ -10,20 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-256-cfb
-  password: KBGjZYcy4SyRShmA
-  name: 🇵🇱PL-217.30.10.70-7648
-  server: 217.30.10.70
-  port: 9044
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: wjTugX3ZtHMB9c3Z
-  name: 🇵🇱PL-217.30.10.70-5409
-  server: 217.30.10.70
-  port: 9057
-  udp: true
 - type: vless
   uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
   name: 🇵🇱[www.v2nodes.com] vless-PL-1...
@@ -35,21 +21,35 @@ proxies:
   servername: clearingmatch.melodramaonline.net
   ws-opts:
     path: /media/ws/fp=firefox
+- type: ss
+  cipher: aes-256-cfb
+  password: KBGjZYcy4SyRShmA
+  name: 🇵🇱PL-217.30.10.70-0235
+  server: 217.30.10.70
+  port: 9044
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: wjTugX3ZtHMB9c3Z
+  name: 🇵🇱PL-217.30.10.70-0208
+  server: 217.30.10.70
+  port: 9057
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇱PL-217.30.10.70-7648
-  - 🇵🇱PL-217.30.10.70-5409
   - 🇵🇱[www.v2nodes.com] vless-PL-1...
+  - 🇵🇱PL-217.30.10.70-0235
+  - 🇵🇱PL-217.30.10.70-0208
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇵🇱PL-217.30.10.70-7648
-  - 🇵🇱PL-217.30.10.70-5409
   - 🇵🇱[www.v2nodes.com] vless-PL-1...
+  - 🇵🇱PL-217.30.10.70-0235
+  - 🇵🇱PL-217.30.10.70-0208
 rules:
 - MATCH,SELECT
