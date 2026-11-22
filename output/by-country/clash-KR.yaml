@@ -18,12 +18,30 @@ proxies:
   udp: true
   sni: connectgraduateswithjobopeningsandgrowprofessionally.com
   skip-cert-verify: true
+- type: vless
+  uuid: 4ded3111-b418-475a-93de-0360932508b2
+  name: 韩国|@ripaojiedian
+  server: 43.108.109.112
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.samsung.com
+  client-fingerprint: chrome
 - type: ss
   cipher: aes-256-cfb
   password: qwerREWQ@@
   name: 🇰🇷KR-211.178.105.134-0245
   server: 211.178.105.134
   port: 6123
+  udp: true
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: '12242'
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  server: 115.161.136.145
+  port: 10099
   udp: true
 - type: vless
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
@@ -49,7 +67,9 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇰🇷[www.v2nodes.com] trojan-KR-...
+  - 韩国|@ripaojiedian
   - 🇰🇷KR-211.178.105.134-0245
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷 韩国 | KOR #1'
 - name: SELECT
@@ -57,7 +77,9 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇰🇷[www.v2nodes.com] trojan-KR-...
+  - 韩国|@ripaojiedian
   - 🇰🇷KR-211.178.105.134-0245
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - '🇰🇷 韩国 | KOR #1'
 rules:

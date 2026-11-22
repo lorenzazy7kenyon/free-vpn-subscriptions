@@ -10,24 +10,28 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇧🇷[www.v2nodes.com] trojan-BR-...
-  server: 216.238.104.154
+- type: vless
+  uuid: 89be587f-0e93-4c67-822e-98ad0a56c29e
+  name: 美国|@ripaojiedian
+  server: 103.119.15.175
   port: 443
   udp: true
-  sni: 216.238.104.154
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.amazon.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇷[www.v2nodes.com] trojan-BR-...
+  - 美国|@ripaojiedian
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇧🇷[www.v2nodes.com] trojan-BR-...
+  - 美国|@ripaojiedian
 rules:
 - MATCH,SELECT

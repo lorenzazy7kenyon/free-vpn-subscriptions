@@ -11,46 +11,27 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  name: '🇸🇬 新加坡 | SGP #6'
-  server: 101.108.49.121
+  uuid: 33330382-a046-428d-9e95-9aae8bd6b90e
+  name: 泰国|@ripaojiedian
+  server: 47.81.32.116
   port: 443
   udp: true
-  network: ws
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: ap-south.862400.xyz
-  ws-opts:
-    path: /announcement?ed=2048fp=random
-    headers:
-      Host: ap-south.862400.xyz
-- type: vmess
-  uuid: 4d24fbde-cb0e-4025-98ec-222933847d3d
-  alterId: 64
-  cipher: auto
-  network: ws
-  name: 🇹🇭TH-119.59.98.39-1297
-  server: 119.59.98.39
-  port: 30001
-  udp: true
-  tls: true
-  servername: www.98666598.xyz
-  ws-opts:
-    path: /path/191019072927
-    headers:
-      Host: www.98666598.xyz
+  servername: www.amazon.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇸🇬 新加坡 | SGP #6'
-  - 🇹🇭TH-119.59.98.39-1297
+  - 泰国|@ripaojiedian
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇸🇬 新加坡 | SGP #6'
-  - 🇹🇭TH-119.59.98.39-1297
+  - 泰国|@ripaojiedian
 rules:
 - MATCH,SELECT

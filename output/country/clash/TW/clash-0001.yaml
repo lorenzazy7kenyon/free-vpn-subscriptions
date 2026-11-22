@@ -10,6 +10,13 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  name: 🇹🇼 🇨🇳 台湾 | TWN
+  server: 60.248.221.27
+  port: 2377
+  udp: true
 - type: vless
   uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   name: 🇹🇼[www.v2nodes.com] vless-TW-1...
@@ -29,11 +36,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇹🇼 🇨🇳 台湾 | TWN
   - 🇹🇼[www.v2nodes.com] vless-TW-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇹🇼 🇨🇳 台湾 | TWN
   - 🇹🇼[www.v2nodes.com] vless-TW-1...
 rules:
 - MATCH,SELECT

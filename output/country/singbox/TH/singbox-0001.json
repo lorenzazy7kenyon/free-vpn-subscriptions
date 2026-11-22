@@ -1,50 +1,26 @@
 {
   "outbounds": [
     {
-      "server": "101.108.49.121",
+      "flow": "xtls-rprx-vision",
+      "server": "47.81.32.116",
       "server_port": 443,
-      "tag": "🇸🇬 新加坡 | SGP #6",
+      "tag": "泰国|@ripaojiedian",
       "tls": {
         "enabled": true,
-        "insecure": false,
-        "server_name": "ap-south.862400.xyz"
-      },
-      "transport": {
-        "headers": {
-          "Host": "ap-south.862400.xyz"
-        },
-        "path": "/announcement?ed=2048fp=random",
-        "type": "ws"
+        "insecure": true,
+        "server_name": "www.amazon.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "type": "vless",
-      "uuid": "5bbbbf2c-9031-4511-8222-b6cecd5a5291"
-    },
-    {
-      "alter_id": 64,
-      "security": "auto",
-      "server": "119.59.98.39",
-      "server_port": 30001,
-      "tag": "🇹🇭TH-119.59.98.39-1297",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.98666598.xyz"
-      },
-      "transport": {
-        "headers": {
-          "Host": "www.98666598.xyz"
-        },
-        "path": "/path/191019072927",
-        "type": "ws"
-      },
-      "type": "vmess",
-      "uuid": "4d24fbde-cb0e-4025-98ec-222933847d3d"
+      "uuid": "33330382-a046-428d-9e95-9aae8bd6b90e"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇸🇬 新加坡 | SGP #6",
-        "🇹🇭TH-119.59.98.39-1297"
+        "泰国|@ripaojiedian"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -53,8 +29,7 @@
     {
       "outbounds": [
         "auto",
-        "🇸🇬 新加坡 | SGP #6",
-        "🇹🇭TH-119.59.98.39-1297"
+        "泰国|@ripaojiedian"
       ],
       "tag": "select",
       "type": "selector"

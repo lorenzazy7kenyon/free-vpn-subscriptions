@@ -20,14 +20,7 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
-  server: 198.244.202.215
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #15'
+  name: '🇳🇱[www.v2nodes.com] ss-NL-1614... #1'
   server: 151.241.19.29
   port: 19999
   udp: true
@@ -38,6 +31,24 @@ proxies:
   server: 151.241.19.36
   port: 19999
   udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
+  server: 198.244.202.215
+  port: 19999
+  udp: true
+- type: vless
+  uuid: 6c49810a-e6e7-4948-8061-6f6243b0124d
+  name: 🇩🇪DE_17|4.1MB/s
+  server: 2.28.45.87
+  port: 3939
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: ai.android
+  client-fingerprint: firefox
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: aduB9HGxQHjA2SBMRjkHX6
@@ -63,9 +74,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇬🇧[www.v2nodes.com] ss-GB-1616...
-  - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
-  - '🏳[www.v2nodes.com] ss- #15'
+  - '🇳🇱[www.v2nodes.com] ss-NL-1614... #1'
   - 🇳🇱[www.v2nodes.com] ss-NL-1614...
+  - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
+  - 🇩🇪DE_17|4.1MB/s
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
   - 🇮🇳[www.v2nodes.com] vless-IN-1...
 - name: SELECT
@@ -73,9 +85,10 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇬🇧[www.v2nodes.com] ss-GB-1616...
-  - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
-  - '🏳[www.v2nodes.com] ss- #15'
+  - '🇳🇱[www.v2nodes.com] ss-NL-1614... #1'
   - 🇳🇱[www.v2nodes.com] ss-NL-1614...
+  - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
+  - 🇩🇪DE_17|4.1MB/s
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
   - 🇮🇳[www.v2nodes.com] vless-IN-1...
 rules:

@@ -21,13 +21,6 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: vless2-8vx.pages.dev
-- type: ss
-  cipher: aes-256-gcm
-  password: AMok40FfaM+Ikwre16psBpVk6JHxsQZw
-  name: 🇭🇰[www.v2nodes.com] ss-HK-1621...
-  server: 209.248.57.105
-  port: 8388
-  udp: true
 - type: trojan
   password: '12012'
   name: 🇭🇰[www.v2nodes.com] trojan-HK-...
@@ -36,15 +29,17 @@ proxies:
   udp: true
   sni: ali-hk.b-gfw.cfd
   skip-cert-verify: true
-- type: vmess
-  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
-  alterId: 0
-  cipher: auto
-  network: http
-  name: 🇭🇰 香港 | HKG
-  server: 47.242.81.94
-  port: 52080
+- type: vless
+  uuid: 27c26119-090b-4ae3-80d2-e9f08a575862
+  name: 香港3|@ripaojiedian
+  server: 47.243.230.253
+  port: 443
   udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 - type: vless
   uuid: 8b17beac-b143-447d-aa68-14cbb121a602
   name: '🇭🇰 香港 | HKG #1'
@@ -66,6 +61,79 @@ proxies:
   port: 52080
   udp: true
 - type: vless
+  uuid: bb836d81-d0c5-4f01-a584-806cdf65e36a
+  name: 香港|@ripaojiedian
+  server: 116.213.43.43
+  port: 11103
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 08a37d1f-7bf1-4b5d-a2ec-5ced6a633d7f
+  name: 香港2|@ripaojiedian
+  server: 116.213.43.43
+  port: 11107
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 530d31fc-2690-49e4-bfc9-3f991e145008
+  name: 台湾|@ripaojiedian
+  server: 116.213.43.43
+  port: 11102
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: ca69a29d-60ef-433a-91bc-27537be993c8
+  name: 日本|@ripaojiedian
+  server: 116.213.43.43
+  port: 11101
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 31d5b95e-aff2-4ffb-8160-b5ae941b46f6
+  name: 美国2|@ripaojiedian
+  server: 116.213.43.43
+  port: 11105
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: ss
+  cipher: aes-256-gcm
+  password: AMok40FfaM+Ikwre16psBpVk6JHxsQZw
+  name: 🇭🇰[www.v2nodes.com] ss-HK-1621...
+  server: 209.248.57.105
+  port: 8388
+  udp: true
+- type: vless
+  uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
+  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
+  server: 156.226.168.221
+  port: 35193
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+- type: vless
   uuid: 8b17beac-b143-447d-aa68-14cbb121a602
   name: 🇭🇰 香港 | HKG
   server: 8.217.1.203
@@ -79,17 +147,6 @@ proxies:
   reality-opts:
     public-key: 74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38
     short-id: 0bf55f64
-- type: vless
-  uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
-  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
-  server: 156.226.168.221
-  port: 35193
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
 - type: hysteria2
   password: 8294f130408299df8cab08c80bf6f819
   name: 🔵93@oneclickvpnkeys
@@ -111,14 +168,13 @@ proxies:
   obfs: salamander
   obfs-password: 9veAh9pTbrAfDwM1fIYI
 - type: hysteria2
-  password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
-  name: '@Nexus_Panell چنل تلگرام #1'
-  server: 152.32.254.68
-  port: 5010
+  password: ePPsH1bMFD
+  name: '@V2rayNPVTConfig #1'
+  server: 23.141.172.229
+  port: 50541
   udp: true
-  sni: nas.aizhzo.com
-  obfs: salamander
-  obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
+  sni: is1-ssl.mzstatic.com
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -126,30 +182,40 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇸🇬[www.v2nodes.com] vless-SG
-  - 🇭🇰[www.v2nodes.com] ss-HK-1621...
   - 🇭🇰[www.v2nodes.com] trojan-HK-...
-  - 🇭🇰 香港 | HKG
+  - 香港3|@ripaojiedian
   - '🇭🇰 香港 | HKG #1'
   - '🇭🇰 香港 | HKG #2'
-  - 🇭🇰 香港 | HKG
+  - 香港|@ripaojiedian
+  - 香港2|@ripaojiedian
+  - 台湾|@ripaojiedian
+  - 日本|@ripaojiedian
+  - 美国2|@ripaojiedian
+  - 🇭🇰[www.v2nodes.com] ss-HK-1621...
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
+  - 🇭🇰 香港 | HKG
   - 🔵93@oneclickvpnkeys
   - 🇭🇰HK_2|2.5MB/s
-  - '@Nexus_Panell چنل تلگرام #1'
+  - '@V2rayNPVTConfig #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇸🇬[www.v2nodes.com] vless-SG
-  - 🇭🇰[www.v2nodes.com] ss-HK-1621...
   - 🇭🇰[www.v2nodes.com] trojan-HK-...
-  - 🇭🇰 香港 | HKG
+  - 香港3|@ripaojiedian
   - '🇭🇰 香港 | HKG #1'
   - '🇭🇰 香港 | HKG #2'
-  - 🇭🇰 香港 | HKG
+  - 香港|@ripaojiedian
+  - 香港2|@ripaojiedian
+  - 台湾|@ripaojiedian
+  - 日本|@ripaojiedian
+  - 美国2|@ripaojiedian
+  - 🇭🇰[www.v2nodes.com] ss-HK-1621...
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
+  - 🇭🇰 香港 | HKG
   - 🔵93@oneclickvpnkeys
   - 🇭🇰HK_2|2.5MB/s
-  - '@Nexus_Panell چنل تلگرام #1'
+  - '@V2rayNPVTConfig #1'
 rules:
 - MATCH,SELECT

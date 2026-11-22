@@ -11,36 +11,27 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
-  uuid: 2b910c43-51e3-4b15-9be8-b658106ba35e
+  uuid: a625d148-e988-4008-b957-e9051a6371d2
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知112
+  name: 🇨🇳_CN_中国_IPV4
   server: 39.108.113.127
   port: 10086
   udp: true
   ws-opts:
     path: /
-- type: ss
-  cipher: 2022-blake3-aes-128-gcm
-  password: qryl6xVLkWXZlqD7CccpQw==
-  name: '🇺🇸 美国 | USA #2'
-  server: 103.238.140.162
-  port: 10002
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知112
-  - '🇺🇸 美国 | USA #2'
+  - 🇨🇳_CN_中国_IPV4
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知112
-  - '🇺🇸 美国 | USA #2'
+  - 🇨🇳_CN_中国_IPV4
 rules:
 - MATCH,SELECT

@@ -1,20 +1,26 @@
 {
   "outbounds": [
     {
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "216.238.104.154",
+      "flow": "xtls-rprx-vision",
+      "server": "103.119.15.175",
       "server_port": 443,
-      "tag": "🇧🇷[www.v2nodes.com] trojan-BR-...",
+      "tag": "美国|@ripaojiedian",
       "tls": {
         "enabled": true,
-        "insecure": false
+        "insecure": true,
+        "server_name": "www.amazon.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
-      "type": "trojan"
+      "type": "vless",
+      "uuid": "89be587f-0e93-4c67-822e-98ad0a56c29e"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇧🇷[www.v2nodes.com] trojan-BR-..."
+        "美国|@ripaojiedian"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -23,7 +29,7 @@
     {
       "outbounds": [
         "auto",
-        "🇧🇷[www.v2nodes.com] trojan-BR-..."
+        "美国|@ripaojiedian"
       ],
       "tag": "select",
       "type": "selector"

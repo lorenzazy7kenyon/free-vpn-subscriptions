@@ -10,63 +10,38 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 53d95125-a38b-4a51-8155-66d3d00b1832
-  name: 🇩🇪 德国 | DEU
-  server: 144.31.90.152
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: live.cdnguard.org
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 6nZacX6g09t3m4dVrNOAG0IsiRwEICVT8Qq-wd7G2H8
-    short-id: 9b2e20557aa8f88a
 - type: ss
   cipher: aes-256-gcm
   password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
-  name: '🏳[www.v2nodes.com] ss- #6'
+  name: '🏳[www.v2nodes.com] ss- #1'
   server: 213.176.92.148
   port: 40647
   udp: true
 - type: vless
-  uuid: 53d95125-a38b-4a51-8155-66d3d00b1832
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
+  server: 45.144.234.157
+  port: 14430
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
+- type: vless
+  uuid: 66c78912-4e2d-41dc-8742-aaae2590804e
   name: '🇩🇪 德国 | DEU #6'
-  server: 144.31.90.152
+  server: 13.143.187.220
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: live.cdnguard.org
-  client-fingerprint: firefox
+  servername: fi-s1.kadrhub.tech
+  client-fingerprint: chrome
 - type: vless
-  uuid: 78a2cdf1-22e5-4ad7-bf89-91aa13d8b76c
+  uuid: 66c78912-4e2d-41dc-8742-aaae2590804e
   name: 🇩🇪 德国 | DEU
-  server: 45.144.52.205
-  port: 4243
-  udp: true
-  network: grpc
-  tls: true
-  servername: fi.convert-cloud.guru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: vCHucdoD_m-TKVHS7si1akKgP6r4dvTLUX8y1TTZQG4
-- type: vless
-  uuid: 78a2cdf1-22e5-4ad7-bf89-91aa13d8b76c
-  name: 🇩🇪 德国 | DEU 4
-  server: 45.144.52.205
-  port: 4243
-  udp: true
-  network: grpc
-  tls: true
-  servername: fi.convert-cloud.guru
-  client-fingerprint: firefox
-- type: vless
-  uuid: 66c78912-4e2d-41dc-8742-aaae2590804e
-  name: '🇺🇦 乌克兰 | UKR #1'
   server: 13.143.187.220
   port: 443
   udp: true
@@ -74,18 +49,7 @@ proxies:
   network: tcp
   tls: true
   servername: fi-s1.kadrhub.tech
-  client-fingerprint: firefox
-- type: vless
-  uuid: 66c78912-4e2d-41dc-8742-aaae2590804e
-  name: 🇺🇦 乌克兰 | UKR
-  server: 13.143.187.220
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: fi-s1.kadrhub.tech
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   reality-opts:
     public-key: eDzVz3bxkv3IoN3BUCa_aA-RicoeG7ACylYSnmS2Pgg
 - type: vmess
@@ -103,31 +67,6 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
-- type: vless
-  uuid: cac10246-5b76-4809-9fd0-417c58a3ca90
-  name: '🇰🇿 哈萨克斯坦 | KAZ #1'
-  server: 144.31.90.235
-  port: 8445
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: portal.gifmems.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: cac10246-5b76-4809-9fd0-417c58a3ca90
-  name: 🇰🇿 哈萨克斯坦 | KAZ
-  server: 144.31.90.235
-  port: 8445
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: portal.gifmems.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 32eua16pKE179lLHv-VNZGrX287qQFMXA3n0VgEzNTQ
-    short-id: b3a633bc754b648d
 - type: hysteria2
   password: 6aab8efdf13945829ae3699c342be406
   name: Telegram:@v2rayng3
@@ -143,31 +82,21 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪 德国 | DEU
-  - '🏳[www.v2nodes.com] ss- #6'
+  - '🏳[www.v2nodes.com] ss- #1'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
   - '🇩🇪 德国 | DEU #6'
   - 🇩🇪 德国 | DEU
-  - 🇩🇪 德国 | DEU 4
-  - '🇺🇦 乌克兰 | UKR #1'
-  - 🇺🇦 乌克兰 | UKR
   - 未知141
-  - '🇰🇿 哈萨克斯坦 | KAZ #1'
-  - 🇰🇿 哈萨克斯坦 | KAZ
   - Telegram:@v2rayng3
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇩🇪 德国 | DEU
-  - '🏳[www.v2nodes.com] ss- #6'
+  - '🏳[www.v2nodes.com] ss- #1'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
   - '🇩🇪 德国 | DEU #6'
   - 🇩🇪 德国 | DEU
-  - 🇩🇪 德国 | DEU 4
-  - '🇺🇦 乌克兰 | UKR #1'
-  - 🇺🇦 乌克兰 | UKR
   - 未知141
-  - '🇰🇿 哈萨克斯坦 | KAZ #1'
-  - 🇰🇿 哈萨克斯坦 | KAZ
   - Telegram:@v2rayng3
 rules:
 - MATCH,SELECT

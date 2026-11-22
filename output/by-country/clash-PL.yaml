@@ -12,21 +12,21 @@ dns:
 proxies:
 - type: ss
   cipher: aes-256-cfb
-  password: wjTugX3ZtHMB9c3Z
-  name: 🇵🇱PL-217.30.10.70-5409
-  server: 217.30.10.70
-  port: 9057
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
   password: KBGjZYcy4SyRShmA
   name: 🇵🇱PL-217.30.10.70-7648
   server: 217.30.10.70
   port: 9044
   udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: wjTugX3ZtHMB9c3Z
+  name: 🇵🇱PL-217.30.10.70-5409
+  server: 217.30.10.70
+  port: 9057
+  udp: true
 - type: vless
   uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
-  name: '🇵🇱 波兰 | POL #1'
+  name: 🇵🇱[www.v2nodes.com] vless-PL-1...
   server: 144.31.3.89
   port: 443
   udp: true
@@ -35,48 +35,21 @@ proxies:
   servername: clearingmatch.melodramaonline.net
   ws-opts:
     path: /media/ws/fp=firefox
-- type: vless
-  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
-  name: 🇵🇱 波兰 | POL
-  server: 144.31.3.89
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: clearingmatch.melodramaonline.net
-  client-fingerprint: firefox
-  ws-opts:
-    path: /media/ws/
-- type: vless
-  uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  server: 150.251.113.34
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇱PL-217.30.10.70-5409
   - 🇵🇱PL-217.30.10.70-7648
-  - '🇵🇱 波兰 | POL #1'
-  - 🇵🇱 波兰 | POL
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
+  - 🇵🇱PL-217.30.10.70-5409
+  - 🇵🇱[www.v2nodes.com] vless-PL-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇵🇱PL-217.30.10.70-5409
   - 🇵🇱PL-217.30.10.70-7648
-  - '🇵🇱 波兰 | POL #1'
-  - 🇵🇱 波兰 | POL
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
+  - 🇵🇱PL-217.30.10.70-5409
+  - 🇵🇱[www.v2nodes.com] vless-PL-1...
 rules:
 - MATCH,SELECT

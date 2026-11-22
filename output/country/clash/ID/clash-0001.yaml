@@ -11,29 +11,27 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: f520bd45-8e26-4a23-a227-2f91acb67928
-  name: '🇮🇹 意大利 | ITA #14'
-  server: 43.229.254.71
+  uuid: a197af05-7048-478e-8d99-c3151adb4064
+  name: 印尼|@ripaojiedian
+  server: 147.139.197.200
   port: 443
   udp: true
-  network: ws
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: it-mil.862400.xyz
-  ws-opts:
-    path: /announcementfp=random
-    headers:
-      Host: it-mil.862400.xyz
+  servername: www.ebay.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇮🇹 意大利 | ITA #14'
+  - 印尼|@ripaojiedian
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇮🇹 意大利 | ITA #14'
+  - 印尼|@ripaojiedian
 rules:
 - MATCH,SELECT

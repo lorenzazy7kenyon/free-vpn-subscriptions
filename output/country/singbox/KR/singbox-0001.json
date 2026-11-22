@@ -13,11 +13,36 @@
       "type": "trojan"
     },
     {
+      "flow": "xtls-rprx-vision",
+      "server": "43.108.109.112",
+      "server_port": 443,
+      "tag": "韩国|@ripaojiedian",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "www.samsung.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "4ded3111-b418-475a-93de-0360932508b2"
+    },
+    {
       "method": "aes-256-cfb",
       "password": "qwerREWQ@@",
       "server": "211.178.105.134",
       "server_port": 6123,
       "tag": "🇰🇷KR-211.178.105.134-0245",
+      "type": "ss"
+    },
+    {
+      "method": "chacha20-ietf-poly1305",
+      "password": "12242",
+      "server": "115.161.136.145",
+      "server_port": 10099,
+      "tag": "🇰🇷[www.v2nodes.com] ss-KR-1126...",
       "type": "ss"
     },
     {
@@ -47,7 +72,9 @@
       "interval": "5m",
       "outbounds": [
         "🇰🇷[www.v2nodes.com] trojan-KR-...",
+        "韩国|@ripaojiedian",
         "🇰🇷KR-211.178.105.134-0245",
+        "🇰🇷[www.v2nodes.com] ss-KR-1126...",
         "🇰🇷[www.v2nodes.com] vless-KR-1...",
         "🇰🇷 韩国 | KOR #1"
       ],
@@ -59,7 +86,9 @@
       "outbounds": [
         "auto",
         "🇰🇷[www.v2nodes.com] trojan-KR-...",
+        "韩国|@ripaojiedian",
         "🇰🇷KR-211.178.105.134-0245",
+        "🇰🇷[www.v2nodes.com] ss-KR-1126...",
         "🇰🇷[www.v2nodes.com] vless-KR-1...",
         "🇰🇷 韩国 | KOR #1"
       ],

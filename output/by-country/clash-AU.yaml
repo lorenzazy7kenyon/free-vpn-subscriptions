@@ -17,6 +17,29 @@ proxies:
   port: 443
   udp: true
   sni: connectwithemployerstohireyouridealteam.com
+- type: vless
+  uuid: e3a1c7f2-9b4d-4e8a-a6c5-1f2d3b4a5e6f
+  name: '🇦🇺 澳大利亚 | AUS #1'
+  server: 13.211.155.89
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: www.microsoft.com
+  ws-opts:
+    path: /7b9977b2af9da85fa86adc065c362efefp=chrome
+- type: vless
+  uuid: e3a1c7f2-9b4d-4e8a-a6c5-1f2d3b4a5e6f
+  name: 🇦🇺 澳大利亚 | AUS
+  server: 13.211.155.89
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: www.microsoft.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /7b9977b2af9da85fa86adc065c362efe
 - type: hysteria2
   password: linlin-2026
   name: 🔵100@oneclickvpnkeys
@@ -32,12 +55,16 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇦🇺[www.v2nodes.com] trojan-AU-...
+  - '🇦🇺 澳大利亚 | AUS #1'
+  - 🇦🇺 澳大利亚 | AUS
   - 🔵100@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇦🇺[www.v2nodes.com] trojan-AU-...
+  - '🇦🇺 澳大利亚 | AUS #1'
+  - 🇦🇺 澳大利亚 | AUS
   - 🔵100@oneclickvpnkeys
 rules:
 - MATCH,SELECT
