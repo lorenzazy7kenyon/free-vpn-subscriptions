@@ -35,6 +35,17 @@ proxies:
   servername: clearingmatch.melodramaonline.net
   ws-opts:
     path: /media/ws/fp=firefox
+- type: vless
+  uuid: 6dd17e9f-5b7c-466d-a53a-7c30f5dc8338
+  name: '🇵🇱 波兰 | POL #1'
+  server: 191.217.253.12
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 191.217.253.12
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -44,6 +55,7 @@ proxy-groups:
   - 🇵🇱PL-217.30.10.70-0235
   - 🇵🇱PL-217.30.10.70-0208
   - 🇵🇱[www.v2nodes.com] vless-PL-1...
+  - '🇵🇱 波兰 | POL #1'
 - name: SELECT
   type: select
   proxies:
@@ -51,5 +63,6 @@ proxy-groups:
   - 🇵🇱PL-217.30.10.70-0235
   - 🇵🇱PL-217.30.10.70-0208
   - 🇵🇱[www.v2nodes.com] vless-PL-1...
+  - '🇵🇱 波兰 | POL #1'
 rules:
 - MATCH,SELECT

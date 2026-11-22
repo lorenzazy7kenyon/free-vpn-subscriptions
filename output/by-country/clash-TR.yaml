@@ -20,6 +20,17 @@ proxies:
   tls: true
   servername: kk-tr-74.testkknegr.online
   client-fingerprint: chrome
+- type: vless
+  uuid: 04920673-035c-410d-94e4-5b1469d3fb6f
+  name: '🇷🇺 俄罗斯 | RUS #5'
+  server: 91.132.190.161
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 171.22.183.166
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -27,10 +38,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇹🇷[www.v2nodes.com] vless-TR-1...
+  - '🇷🇺 俄罗斯 | RUS #5'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇹🇷[www.v2nodes.com] vless-TR-1...
+  - '🇷🇺 俄罗斯 | RUS #5'
 rules:
 - MATCH,SELECT

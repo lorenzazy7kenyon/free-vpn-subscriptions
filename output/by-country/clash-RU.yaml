@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: fbe22815-0718-4eae-816f-e91c67d15b54
-  name: '🇩🇪 德国 | DEU #1'
+  name: 🇩🇪 德国 | DEU
   server: 191.217.215.186
   port: 2053
   udp: true
@@ -23,7 +23,7 @@ proxies:
   client-fingerprint: chrome
 - type: vless
   uuid: fbe22815-0718-4eae-816f-e91c67d15b54
-  name: 🇩🇪 德国 | DEU
+  name: '🇩🇪 德国 | DEU #4'
   server: 191.217.215.186
   port: 2053
   udp: true
@@ -32,6 +32,92 @@ proxies:
   tls: true
   servername: 191.217.215.186
   client-fingerprint: chrome
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: VVlAff77CnAU43Aoc5j15Y
+  name: 🇷🇺[www.v2nodes.com] ss-RU-1163...
+  server: 90.156.203.62
+  port: 5112
+  udp: true
+- type: vless
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  name: 🇷🇺 俄罗斯 | RUS
+  server: 201.24.116.192
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: vps3.nemnogogo.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #8'
+  server: 176.98.176.60
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: mosaic.topp-con.xyz
+  client-fingerprint: firefox
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知155
+  server: 194.226.142.120
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+- type: vless
+  uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
+  name: '🇩🇪 德国 | DEU #14'
+  server: 193.160.208.240
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: 193.160.208.240
+  client-fingerprint: firefox
+- type: vless
+  uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
+  name: 🇩🇪 德国 | DEU
+  server: 193.160.208.240
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: 193.160.208.240
+  client-fingerprint: firefox
+- type: vless
+  uuid: fd90e601-a56c-42b8-aab7-aa02d26fcb04
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #7'
+  server: 46.243.205.192
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: 46.243.205.192
+  ws-opts:
+    path: /catalog/feed/H9eui7WsW3xSfp=chrome
+    headers:
+      Host: 46.243.205.192
+- type: vless
+  uuid: aea0ed55-4e5e-0001-a4fe-5d626d914a9f
+  name: '🇷🇺 俄罗斯 | RUS #3'
+  server: 168.113.253.178
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: uzndiuvzvqqljdyhzs.fcloudservices.site
+  client-fingerprint: firefox
 - type: vless
   uuid: eb88bb1a-7bf0-0001-b9cd-4f97c89f0e9b
   name: '🇷🇺 俄罗斯 | RUS #3'
@@ -43,18 +129,15 @@ proxies:
   servername: uzndiuvzvqqljdyhzs.fcloudservices.site
   client-fingerprint: chrome
 - type: vless
-  uuid: ef5a57c7-84d5-4f86-b99c-875a16da485f
-  name: '🇳🇱 荷兰 | NLD #2'
-  server: 31.177.111.136
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  name: 🇷🇺 俄罗斯 | RUS 2
+  server: 201.51.12.98
   port: 443
   udp: true
-  network: ws
+  network: grpc
   tls: true
-  servername: q075gi2cms.schoolbag.top
-  ws-opts:
-    path: /collector/runtime/channel/openfp=firefox
-    headers:
-      Host: q075gi2cms.schoolbag.top
+  servername: vps3.nemnogogo.com
+  client-fingerprint: firefox
 - type: vless
   uuid: eb88bb1a-7bf0-0001-b9cd-4f97c89f0e9b
   name: 🇷🇺 俄罗斯 | RUS
@@ -77,7 +160,7 @@ proxies:
   client-fingerprint: chrome
 - type: vless
   uuid: fd90e601-a56c-42b8-aab7-aa02d26fcb04
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
+  name: 🇸🇪[www.v2nodes.com] vless-SE-1...
   server: 87.242.94.43
   port: 443
   udp: true
@@ -88,13 +171,19 @@ proxies:
     path: /api/v2/session/CAgikYAkk4z7fp=chrome
     headers:
       Host: 87.242.94.43
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: VVlAff77CnAU43Aoc5j15Y
-  name: 🇷🇺[www.v2nodes.com] ss-RU-1163...
-  server: 90.156.203.62
-  port: 5112
+- type: vless
+  uuid: ef5a57c7-84d5-4f86-b99c-875a16da485f
+  name: '🇳🇱 荷兰 | NLD #5'
+  server: 31.177.111.136
+  port: 443
   udp: true
+  network: ws
+  tls: true
+  servername: q075gi2cms.schoolbag.top
+  ws-opts:
+    path: /collector/runtime/channel/openfp=firefox
+    headers:
+      Host: q075gi2cms.schoolbag.top
 - type: vless
   uuid: d6d40100-9442-0001-b5b9-6d259318c421
   name: 🇷🇺 俄罗斯 | RUS
@@ -105,34 +194,6 @@ proxies:
   tls: true
   servername: uzndiuvzvqqljdyhzs.fcloudservices.site
   client-fingerprint: chrome
-- type: vless
-  uuid: fd90e601-a56c-42b8-aab7-aa02d26fcb04
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #8'
-  server: 46.243.205.192
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: 46.243.205.192
-  ws-opts:
-    path: /catalog/feed/H9eui7WsW3xSfp=chrome
-    headers:
-      Host: 46.243.205.192
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知155
-  server: 194.226.142.120
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
 - type: vless
   uuid: ef5a57c7-84d5-4f86-b99c-875a16da485f
   name: 🇳🇱 荷兰 | NLD
@@ -147,27 +208,14 @@ proxies:
     path: /collector/runtime/channel/open
     headers:
       Host: q075gi2cms.schoolbag.top
-- type: vless
-  uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
-  name: '🇩🇪 德国 | DEU #5'
-  server: 193.160.208.240
-  port: 443
+- type: hysteria2
+  password: GIFCjtpiGVOsrCy2kgBmgndXX5lUP7Eb
+  name: '🇩🇪 德国 | DEU #11'
+  server: 94.141.102.196
+  port: 21
   udp: true
-  network: tcp
-  tls: true
-  servername: 193.160.208.240
-  client-fingerprint: firefox
-- type: vless
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  name: '🏳[www.v2nodes.com] vless- #2'
-  server: 176.98.176.60
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: mosaic.topp-con.xyz
-  client-fingerprint: firefox
+  sni: fin9.cft-razor.online
+  skip-cert-verify: true
 - type: hysteria2
   password: b7941807-1f4d-4bda-a878-92d708b84494
   name: 🇷🇺223650 | ⚡️Telegram = t.me/L...
@@ -183,39 +231,49 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇩🇪 德国 | DEU #1'
   - 🇩🇪 德国 | DEU
-  - '🇷🇺 俄罗斯 | RUS #3'
-  - '🇳🇱 荷兰 | NLD #2'
-  - 🇷🇺 俄罗斯 | RUS
-  - '🇷🇺 俄罗斯 | RUS #1'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
+  - '🇩🇪 德国 | DEU #4'
   - 🇷🇺[www.v2nodes.com] ss-RU-1163...
   - 🇷🇺 俄罗斯 | RUS
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #8'
   - 未知155
+  - '🇩🇪 德国 | DEU #14'
+  - 🇩🇪 德国 | DEU
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #7'
+  - '🇷🇺 俄罗斯 | RUS #3'
+  - '🇷🇺 俄罗斯 | RUS #3'
+  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇷🇺 俄罗斯 | RUS
+  - '🇷🇺 俄罗斯 | RUS #1'
+  - 🇸🇪[www.v2nodes.com] vless-SE-1...
+  - '🇳🇱 荷兰 | NLD #5'
+  - 🇷🇺 俄罗斯 | RUS
   - 🇳🇱 荷兰 | NLD
-  - '🇩🇪 德国 | DEU #5'
-  - '🏳[www.v2nodes.com] vless- #2'
+  - '🇩🇪 德国 | DEU #11'
   - 🇷🇺223650 | ⚡️Telegram = t.me/L...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇩🇪 德国 | DEU #1'
   - 🇩🇪 德国 | DEU
-  - '🇷🇺 俄罗斯 | RUS #3'
-  - '🇳🇱 荷兰 | NLD #2'
-  - 🇷🇺 俄罗斯 | RUS
-  - '🇷🇺 俄罗斯 | RUS #1'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
+  - '🇩🇪 德国 | DEU #4'
   - 🇷🇺[www.v2nodes.com] ss-RU-1163...
   - 🇷🇺 俄罗斯 | RUS
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #8'
   - 未知155
+  - '🇩🇪 德国 | DEU #14'
+  - 🇩🇪 德国 | DEU
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #7'
+  - '🇷🇺 俄罗斯 | RUS #3'
+  - '🇷🇺 俄罗斯 | RUS #3'
+  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇷🇺 俄罗斯 | RUS
+  - '🇷🇺 俄罗斯 | RUS #1'
+  - 🇸🇪[www.v2nodes.com] vless-SE-1...
+  - '🇳🇱 荷兰 | NLD #5'
+  - 🇷🇺 俄罗斯 | RUS
   - 🇳🇱 荷兰 | NLD
-  - '🇩🇪 德国 | DEU #5'
-  - '🏳[www.v2nodes.com] vless- #2'
+  - '🇩🇪 德国 | DEU #11'
   - 🇷🇺223650 | ⚡️Telegram = t.me/L...
 rules:
 - MATCH,SELECT

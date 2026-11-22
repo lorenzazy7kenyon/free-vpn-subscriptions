@@ -11,6 +11,21 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
+  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🏁RELAY-203.30.191.5-1493
+  server: 203.30.191.5
+  port: 443
+  udp: true
+  tls: true
+  servername: oplg1.cfcdn2.xyz
+  ws-opts:
+    path: /AUIKN8AU
+    headers:
+      Host: oplg1.cfcdn2.xyz
+- type: vmess
   uuid: 9ac947aa-de86-41c3-9a60-4c061c7c95f0
   alterId: 0
   cipher: none
@@ -29,11 +44,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🏁RELAY-203.30.191.5-1493
   - 未知81
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🏁RELAY-203.30.191.5-1493
   - 未知81
 rules:
 - MATCH,SELECT

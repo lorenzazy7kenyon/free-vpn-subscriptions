@@ -10,16 +10,9 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-256-gcm
-  password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
-  name: 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  server: 213.176.92.148
-  port: 40647
-  udp: true
 - type: vless
   uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  name: '🏳[www.v2nodes.com] vless- #3'
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
   server: 45.144.234.157
   port: 14430
   udp: true
@@ -28,6 +21,39 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
+- type: ss
+  cipher: aes-256-gcm
+  password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
+  name: 🇫🇮[www.v2nodes.com] ss-FI-1621...
+  server: 213.176.92.148
+  port: 40647
+  udp: true
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知19
+  server: 95.81.126.119
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+- type: vless
+  uuid: 85b8b4a4-d9c6-4357-a016-3a3ee04bf984
+  name: '🇩🇪 德国 | DEU #16'
+  server: 144.31.119.69
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: fi.superspidy.com
+  client-fingerprint: firefox
 - type: hysteria2
   password: 6aab8efdf13945829ae3699c342be406
   name: Telegram:@v2rayng3
@@ -43,15 +69,19 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
   - 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  - '🏳[www.v2nodes.com] vless- #3'
+  - 未知19
+  - '🇩🇪 德国 | DEU #16'
   - Telegram:@v2rayng3
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
   - 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  - '🏳[www.v2nodes.com] vless- #3'
+  - 未知19
+  - '🇩🇪 德国 | DEU #16'
   - Telegram:@v2rayng3
 rules:
 - MATCH,SELECT
