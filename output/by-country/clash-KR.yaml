@@ -10,6 +10,25 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知27 3.3MB/s
+  server: 132.145.80.230
+  port: 80
+  udp: true
+  ws-opts:
+    path: /cctv13.m3u8
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: 🇰🇷[www.v2nodes.com] trojan-KR-...
+  server: 158.247.253.243
+  port: 443
+  udp: true
+  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
+  skip-cert-verify: true
 - type: vless
   uuid: 4ded3111-b418-475a-93de-0360932508b2
   name: 韩国|@ripaojiedian
@@ -37,74 +56,25 @@ proxies:
   server: 211.178.105.134
   port: 6123
   udp: true
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: 🇰🇷[www.v2nodes.com] trojan-KR-...
-  server: 158.247.253.243
-  port: 443
-  udp: true
-  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
-  skip-cert-verify: true
-- type: vmess
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知71
-  server: 146.56.112.110
-  port: 8888
-  udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: '12242'
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  server: 115.161.136.145
-  port: 10099
-  udp: true
-- type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知87
-  server: 132.145.80.230
-  port: 80
-  udp: true
-  ws-opts:
-    path: /cctv13.m3u8
-- type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: '🇰🇷 韩国 | KOR #1'
-  server: 43.201.17.144
-  port: 443
-  udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 未知27 3.3MB/s
+  - 🇰🇷[www.v2nodes.com] trojan-KR-...
   - 韩国|@ripaojiedian
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - 🇰🇷KR-211.178.105.134-0202
-  - 🇰🇷[www.v2nodes.com] trojan-KR-...
-  - 未知71
-  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  - 未知87
-  - '🇰🇷 韩国 | KOR #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 未知27 3.3MB/s
+  - 🇰🇷[www.v2nodes.com] trojan-KR-...
   - 韩国|@ripaojiedian
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - 🇰🇷KR-211.178.105.134-0202
-  - 🇰🇷[www.v2nodes.com] trojan-KR-...
-  - 未知71
-  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  - 未知87
-  - '🇰🇷 韩国 | KOR #1'
 rules:
 - MATCH,SELECT

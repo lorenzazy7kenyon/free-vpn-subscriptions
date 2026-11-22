@@ -17,6 +17,17 @@ proxies:
   server: 152.53.1.57
   port: 8388
   udp: true
+- type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知100
+  server: 154.47.19.225
+  port: 1270
+  udp: true
+  tls: true
+  servername: xmfhlpy.com
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -24,10 +35,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
+  - 未知100
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇦🇹[www.v2nodes.com] ss-AT-1614...
+  - 未知100
 rules:
 - MATCH,SELECT
