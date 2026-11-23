@@ -1,14 +1,6 @@
 {
   "outbounds": [
     {
-      "method": "aes-256-gcm",
-      "password": "AMok40FfaM+Ikwre16psBpVk6JHxsQZw",
-      "server": "209.248.57.105",
-      "server_port": 8388,
-      "tag": "🇭🇰[www.v2nodes.com] ss-HK-1621...",
-      "type": "ss"
-    },
-    {
       "server": "151.158.0.83",
       "server_port": 8443,
       "tag": "香港3|@ripaojiedian",
@@ -32,6 +24,31 @@
       "uuid": "b69cf773-da16-486e-afce-a45b94f998b3"
     },
     {
+      "password": "12012",
+      "server": "47.242.93.89",
+      "server_port": 12012,
+      "tag": "🇭🇰 香港 | HKG #4",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "ali-hk.b-gfw.cfd"
+      },
+      "type": "trojan"
+    },
+    {
+      "alter_id": 0,
+      "security": "auto",
+      "server": "47.244.120.197",
+      "server_port": 36703,
+      "tag": "🇭🇰HK-47.244.120.197-0520",
+      "transport": {
+        "path": "/arki",
+        "type": "ws"
+      },
+      "type": "vmess",
+      "uuid": "45b83519-9c4f-4052-a11b-02e017b636d4"
+    },
+    {
       "alter_id": 0,
       "security": "auto",
       "server": "47.244.120.197",
@@ -48,35 +65,49 @@
       "uuid": "b9de1bc9-baa7-41ac-86f7-ccd59695cb21"
     },
     {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "47.244.120.197",
-      "server_port": 36703,
-      "tag": "🇭🇰HK-47.244.120.197-0520",
-      "transport": {
-        "path": "/arki",
-        "type": "ws"
-      },
-      "type": "vmess",
-      "uuid": "45b83519-9c4f-4052-a11b-02e017b636d4"
-    },
-    {
-      "password": "57beeeb0-03fc-4fc9-94da-7604488a7134",
-      "server": "64.118.130.152",
-      "server_port": 443,
-      "tag": "🇭🇰 香港 | HKG #3",
+      "flow": "xtls-rprx-vision",
+      "server": "8.217.1.203",
+      "server_port": 8443,
+      "tag": "🇭🇰 香港 | HKG",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "nb1hk.hikigo.com"
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38",
+          "short_id": "0bf55f64"
+        },
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
-      "type": "trojan"
+      "type": "vless",
+      "uuid": "8b17beac-b143-447d-aa68-14cbb121a602"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "8.217.1.203",
+      "server_port": 8443,
+      "tag": "🇭🇰 香港 | HKG #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "8b17beac-b143-447d-aa68-14cbb121a602"
     },
     {
       "flow": "xtls-rprx-vision",
       "server": "116.213.43.43",
-      "server_port": 11107,
-      "tag": "🇭🇰 香港 | HKG #2",
+      "server_port": 11102,
+      "tag": "台湾|@ripaojiedian",
       "tls": {
         "enabled": true,
         "insecure": true,
@@ -87,23 +118,7 @@
         }
       },
       "type": "vless",
-      "uuid": "08a37d1f-7bf1-4b5d-a2ec-5ced6a633d7f"
-    },
-    {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "47.244.120.197",
-      "server_port": 44867,
-      "tag": "🇭🇰 香港 | HKG #2",
-      "transport": {
-        "headers": {
-          "Host": "47.244.120.197"
-        },
-        "path": "/arki",
-        "type": "ws"
-      },
-      "type": "vmess",
-      "uuid": "845e6b08-2919-4290-ade0-5dc7dcea59ca"
+      "uuid": "530d31fc-2690-49e4-bfc9-3f991e145008"
     },
     {
       "alter_id": 0,
@@ -117,28 +132,6 @@
       },
       "type": "vmess",
       "uuid": "b15e481d-17e4-41a8-84c2-23d4f0514d9a"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "116.213.43.43",
-      "server_port": 11106,
-      "tag": "🇭🇰 香港 | HKG",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "reality": {
-          "enabled": true,
-          "public_key": "-13uTSuqk44pCU0x6yvldaskzyRIlO2ihmDvM0FsBns",
-          "short_id": "da12e31124830d42"
-        },
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "2e7bd251-52be-4ffa-b79e-108e1fe07185"
     },
     {
       "server": "45.133.73.167",
@@ -160,38 +153,12 @@
       "uuid": "0fc0ded7-32b3-4e36-a623-6e7670225247"
     },
     {
-      "flow": "xtls-rprx-vision",
-      "server": "116.213.43.43",
-      "server_port": 11102,
-      "tag": "台湾|@ripaojiedian",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "530d31fc-2690-49e4-bfc9-3f991e145008"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "116.213.43.43",
-      "server_port": 11103,
-      "tag": "香港|@ripaojiedian",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "bb836d81-d0c5-4f01-a584-806cdf65e36a"
+      "method": "aes-256-gcm",
+      "password": "AMok40FfaM+Ikwre16psBpVk6JHxsQZw",
+      "server": "209.248.57.105",
+      "server_port": 8388,
+      "tag": "🇭🇰[www.v2nodes.com] ss-HK-1621...",
+      "type": "ss"
     },
     {
       "server": "206.237.18.145",
@@ -217,57 +184,6 @@
       "uuid": "b69cf773-da16-486e-afce-a45b94f998b3"
     },
     {
-      "flow": "xtls-rprx-vision",
-      "server": "116.213.43.43",
-      "server_port": 11106,
-      "tag": "🇭🇰 香港 | HKG #5",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "2e7bd251-52be-4ffa-b79e-108e1fe07185"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "116.213.43.43",
-      "server_port": 11101,
-      "tag": "日本|@ripaojiedian",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "ca69a29d-60ef-433a-91bc-27537be993c8"
-    },
-    {
-      "flow": "xtls-rprx-vision",
-      "server": "116.213.43.43",
-      "server_port": 11105,
-      "tag": "美国2|@ripaojiedian",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "type": "vless",
-      "uuid": "31d5b95e-aff2-4ffb-8160-b5ae941b46f6"
-    },
-    {
       "obfs": {
         "password": "7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9",
         "type": "salamander"
@@ -275,7 +191,7 @@
       "password": "eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ",
       "server": "152.32.254.68",
       "server_port": 5010,
-      "tag": "@meliproxyy #1",
+      "tag": "برای اتصال دائمی جوین شو🦠 Tele...",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -284,25 +200,36 @@
       "type": "hysteria2"
     },
     {
+      "obfs": {
+        "password": "9veAh9pTbrAfDwM1fIYI",
+        "type": "salamander"
+      },
+      "password": "hAUdd15a7YGHUSgiPOUz",
+      "server": "43.103.2.53",
+      "server_port": 443,
+      "tag": "@VPsave #3",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "type": "hysteria2"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "🇭🇰[www.v2nodes.com] ss-HK-1621...",
         "香港3|@ripaojiedian",
-        "🇭🇰HK-47.244.120.197-1050",
+        "🇭🇰 香港 | HKG #4",
         "🇭🇰HK-47.244.120.197-0520",
-        "🇭🇰 香港 | HKG #3",
-        "🇭🇰 香港 | HKG #2",
-        "🇭🇰 香港 | HKG #2",
-        "🇭🇰HK-156.245.232.239-0266",
+        "🇭🇰HK-47.244.120.197-1050",
         "🇭🇰 香港 | HKG",
-        "🇭🇰[www.v2nodes.com] vless-HK",
+        "🇭🇰 香港 | HKG #1",
         "台湾|@ripaojiedian",
-        "香港|@ripaojiedian",
+        "🇭🇰HK-156.245.232.239-0266",
+        "🇭🇰[www.v2nodes.com] vless-HK",
+        "🇭🇰[www.v2nodes.com] ss-HK-1621...",
         "香港4|@ripaojiedian",
-        "🇭🇰 香港 | HKG #5",
-        "日本|@ripaojiedian",
-        "美国2|@ripaojiedian",
-        "@meliproxyy #1"
+        "برای اتصال دائمی جوین شو🦠 Tele...",
+        "@VPsave #3"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -311,23 +238,19 @@
     {
       "outbounds": [
         "auto",
-        "🇭🇰[www.v2nodes.com] ss-HK-1621...",
         "香港3|@ripaojiedian",
-        "🇭🇰HK-47.244.120.197-1050",
+        "🇭🇰 香港 | HKG #4",
         "🇭🇰HK-47.244.120.197-0520",
-        "🇭🇰 香港 | HKG #3",
-        "🇭🇰 香港 | HKG #2",
-        "🇭🇰 香港 | HKG #2",
-        "🇭🇰HK-156.245.232.239-0266",
+        "🇭🇰HK-47.244.120.197-1050",
         "🇭🇰 香港 | HKG",
-        "🇭🇰[www.v2nodes.com] vless-HK",
+        "🇭🇰 香港 | HKG #1",
         "台湾|@ripaojiedian",
-        "香港|@ripaojiedian",
+        "🇭🇰HK-156.245.232.239-0266",
+        "🇭🇰[www.v2nodes.com] vless-HK",
+        "🇭🇰[www.v2nodes.com] ss-HK-1621...",
         "香港4|@ripaojiedian",
-        "🇭🇰 香港 | HKG #5",
-        "日本|@ripaojiedian",
-        "美国2|@ripaojiedian",
-        "@meliproxyy #1"
+        "برای اتصال دائمی جوین شو🦠 Tele...",
+        "@VPsave #3"
       ],
       "tag": "select",
       "type": "selector"

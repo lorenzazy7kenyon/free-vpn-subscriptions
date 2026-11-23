@@ -11,26 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 4ded3111-b418-475a-93de-0360932508b2
-  name: 韩国|@ripaojiedian
-  server: 43.108.109.112
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.samsung.com
-  client-fingerprint: chrome
-- type: vmess
-  uuid: 3722ad16-f3e1-4406-b04a-929b529d8e0d
-  alterId: 0
-  cipher: auto
-  network: http
-  name: '🇰🇷 韩国 | KOR #2'
-  server: 43.155.199.22
-  port: 80
-  udp: true
-- type: vless
   uuid: b69cf773-da16-486e-afce-a45b94f998b3
   name: 韩国|@ripaojiedian
   server: 131.186.22.95
@@ -52,6 +32,17 @@ proxies:
   port: 6123
   udp: true
 - type: vless
+  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
+  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  server: 47.80.19.173
+  port: 2053
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- type: vless
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   name: 🇰🇷[www.v2nodes.com] vless-KR-1...
   server: 152.69.226.63
@@ -60,14 +51,6 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🏳[www.v2nodes.com] trojan- #3'
-  server: 158.247.253.243
-  port: 443
-  udp: true
-  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
-  skip-cert-verify: true
 - type: vless
   uuid: b69cf773-da16-486e-afce-a45b94f998b3
   name: 韩国2|@ripaojiedian
@@ -82,22 +65,6 @@ proxies:
     path: /flow=
     headers:
       Host: senflarelink-node-nwz76h.pages.dev
-- type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: '🇰🇷 韩国 | KOR #1'
-  server: 3.35.138.10
-  port: 443
-  udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: '🇰🇷 韩国 | KOR #1'
-  server: 43.203.225.155
-  port: 443
-  udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -105,26 +72,18 @@ proxy-groups:
   interval: 300
   proxies:
   - 韩国|@ripaojiedian
-  - '🇰🇷 韩国 | KOR #2'
-  - 韩国|@ripaojiedian
   - 🇰🇷KR-211.178.105.134-0258
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - '🏳[www.v2nodes.com] trojan- #3'
   - 韩国2|@ripaojiedian
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇰🇷 韩国 | KOR #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 韩国|@ripaojiedian
-  - '🇰🇷 韩国 | KOR #2'
-  - 韩国|@ripaojiedian
   - 🇰🇷KR-211.178.105.134-0258
+  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
-  - '🏳[www.v2nodes.com] trojan- #3'
   - 韩国2|@ripaojiedian
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇰🇷 韩国 | KOR #1'
 rules:
 - MATCH,SELECT

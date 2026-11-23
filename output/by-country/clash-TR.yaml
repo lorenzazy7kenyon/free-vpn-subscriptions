@@ -12,18 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 04920673-035c-410d-94e4-5b1469d3fb6f
-  name: 🇳🇱 荷兰 | NLD
-  server: 91.132.190.161
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: 171.22.183.166
-  client-fingerprint: firefox
-- type: vless
-  uuid: 04920673-035c-410d-94e4-5b1469d3fb6f
-  name: '🇳🇱 荷兰 | NLD #3'
+  name: 🇳🇱[www.v2nodes.com] vless-NL-1...
   server: 91.132.190.161
   port: 443
   udp: true
@@ -38,13 +27,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇱 荷兰 | NLD
-  - '🇳🇱 荷兰 | NLD #3'
+  - 🇳🇱[www.v2nodes.com] vless-NL-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇳🇱 荷兰 | NLD
-  - '🇳🇱 荷兰 | NLD #3'
+  - 🇳🇱[www.v2nodes.com] vless-NL-1...
 rules:
 - MATCH,SELECT

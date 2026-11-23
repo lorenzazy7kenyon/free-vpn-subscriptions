@@ -11,18 +11,47 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
-  server: 43.170.8.95
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
+  server: 103.75.118.228
+  port: 12683
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
+  name: 日本2|@ripaojiedian
+  server: 172.104.86.181
   port: 443
   udp: true
   network: ws
   tls: true
-  servername: jp3.yohototo.top
+  servername: itunes.apple.com
+  client-fingerprint: chrome
   ws-opts:
-    path: /tyxywsfp=unsafe
+    path: /wsflow=
     headers:
-      Host: jp3.yohototo.top
+      Host: itunes.apple.com
+- type: vless
+  uuid: aa1a9052-720f-4bb0-92be-21b6baf9f386
+  name: 🇯🇵_JP_日本_IPV4
+  server: 149.28.29.156
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: qgCGmxD1lyAEIGZVEk4buAMGcvGvHLl9wGxPQlHCYX0
+    short-id: e535df57
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
 - type: ss
   cipher: aes-128-gcm
   password: shadowsocks
@@ -45,6 +74,20 @@ proxies:
   port: 443
   udp: true
 - type: vless
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
+  name: 日本5|@ripaojiedian
+  server: 45.32.57.15
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: senflarelink-node-nwz76h.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /flow=
+    headers:
+      Host: senflarelink-node-nwz76h.pages.dev
+- type: vless
   uuid: 8f21c635-ef0a-4b05-8356-f44d463b6e34
   name: 🇯🇵_JP_日本_IPV4 (2)
   server: 198.13.53.39
@@ -61,17 +104,26 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
-  server: 103.75.118.228
-  port: 12683
+- type: ss
+  cipher: aes-128-gcm
+  password: Bwlqh7GcFB
+  name: 🇯🇵JP-168.138.205.100-0237
+  server: 168.138.205.100
+  port: 53758
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+- type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  server: 43.170.8.95
+  port: 443
+  udp: true
+  network: ws
   tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
+  servername: jp3.yohototo.top
+  ws-opts:
+    path: /tyxywsfp=unsafe
+    headers:
+      Host: jp3.yohototo.top
 - type: vless
   uuid: b4ec7f6b-b41e-4018-9f76-19204e138db9
   name: 日本3|@ripaojiedian
@@ -87,77 +139,8 @@ proxies:
     headers:
       Host: itunes.apple.com
 - type: vless
-  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
-  name: 日本2|@ripaojiedian
-  server: 172.104.86.181
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /wsflow=
-    headers:
-      Host: itunes.apple.com
-- type: vless
-  uuid: b69cf773-da16-486e-afce-a45b94f998b3
-  name: 日本5|@ripaojiedian
-  server: 45.32.57.15
-  port: 8443
-  udp: true
-  network: ws
-  tls: true
-  servername: senflarelink-node-nwz76h.pages.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /flow=
-    headers:
-      Host: senflarelink-node-nwz76h.pages.dev
-- type: vless
-  uuid: aa1a9052-720f-4bb0-92be-21b6baf9f386
-  name: 🇯🇵_JP_日本_IPV4
-  server: 149.28.29.156
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: qgCGmxD1lyAEIGZVEk4buAMGcvGvHLl9wGxPQlHCYX0
-    short-id: e535df57
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- type: vless
-  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
-  name: 🇯🇵_JP_日本_IPV4 (3)
-  server: 172.104.86.181
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: ujYDprigWFLxcj4BtitDNa-hoPjIbpSzrnEcqp3cgjk
-    short-id: c8559ca1
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- type: ss
-  cipher: aes-128-gcm
-  password: Bwlqh7GcFB
-  name: 🇯🇵JP-168.138.205.100-0237
-  server: 168.138.205.100
-  port: 53758
-  udp: true
-- type: vless
   uuid: bd95a04e-e3e1-460e-b89d-e9a693d393e0
-  name: 🇯🇵_JP_日本_IPV4 (4)
+  name: 🇯🇵_JP_日本_IPV4 (3)
   server: 45.76.222.108
   port: 443
   udp: true
@@ -186,14 +169,6 @@ proxies:
     path: /flow=
     headers:
       Host: senflarelink-node-71i.pages.dev
-- type: trojan
-  password: LDSLDq9XlM4-92pvTPOUuklMb99BLOCrdyejsupEca4
-  name: 🇯🇵[www.v2nodes.com] trojan-JP-...
-  server: 156.246.93.237
-  port: 17443
-  udp: true
-  sni: jpk.wentibuxiaobuda.xyz
-  skip-cert-verify: true
 - type: ss
   cipher: aes-256-gcm
   password: 3eOFeNssde7PYYMv
@@ -208,25 +183,13 @@ proxies:
   server: 84.247.155.196
   port: 443
   udp: true
-- type: vless
-  uuid: 7318caa1-93d1-4a9d-c481-504599902700
-  name: 🇯🇵[www.v2nodes.com] vless-JP-1...
-  server: 155.248.175.201
-  port: 23169
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: djj.zjlo.top
-  client-fingerprint: firefox
 - type: hysteria2
-  password: u63SxILNwtrQZ7Y1ZrFaZfsA
-  name: ⭕94@oneclickvpnkeys
-  server: 8.211.175.236
-  port: 8443
+  password: gG1JyjbJgDmEMvdTgcD9wVOS
+  name: ' 🇯🇵 20@exclavevpn'
+  server: 35.221.91.82
+  port: 443
   udp: true
-  sni: 8.211.175.236
-  skip-cert-verify: true
+  sni: www.microsoft.com
 - type: hysteria2
   password: oracle_hy2_pass_2026
   name: 📗96@oneclickvpnkeys
@@ -235,64 +198,49 @@ proxies:
   udp: true
   sni: bing.com
   skip-cert-verify: true
-- type: hysteria2
-  password: gG1JyjbJgDmEMvdTgcD9wVOS
-  name: ' 🇯🇵 20@exclavevpn'
-  server: 35.221.91.82
-  port: 443
-  udp: true
-  sni: www.microsoft.com
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
+  - 日本2|@ripaojiedian
+  - 🇯🇵_JP_日本_IPV4
   - 🇯🇵[www.v2nodes.com] ss-JP-5141...
   - 🇯🇵[www.v2nodes.com] ss-JP-1291...
   - 🇯🇵[www.v2nodes.com] ss-JP-9223...
-  - 🇯🇵_JP_日本_IPV4 (2)
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
-  - 日本3|@ripaojiedian
-  - 日本2|@ripaojiedian
   - 日本5|@ripaojiedian
-  - 🇯🇵_JP_日本_IPV4
-  - 🇯🇵_JP_日本_IPV4 (3)
+  - 🇯🇵_JP_日本_IPV4 (2)
   - 🇯🇵JP-168.138.205.100-0237
-  - 🇯🇵_JP_日本_IPV4 (4)
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  - 日本3|@ripaojiedian
+  - 🇯🇵_JP_日本_IPV4 (3)
   - 日本4|@ripaojiedian
-  - 🇯🇵[www.v2nodes.com] trojan-JP-...
   - 🇯🇵[www.v2nodes.com] ss-JP-1544...
   - 🇯🇵JP-84.247.155.196-0256
-  - 🇯🇵[www.v2nodes.com] vless-JP-1...
-  - ⭕94@oneclickvpnkeys
-  - 📗96@oneclickvpnkeys
   - ' 🇯🇵 20@exclavevpn'
+  - 📗96@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
+  - 日本2|@ripaojiedian
+  - 🇯🇵_JP_日本_IPV4
   - 🇯🇵[www.v2nodes.com] ss-JP-5141...
   - 🇯🇵[www.v2nodes.com] ss-JP-1291...
   - 🇯🇵[www.v2nodes.com] ss-JP-9223...
-  - 🇯🇵_JP_日本_IPV4 (2)
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
-  - 日本3|@ripaojiedian
-  - 日本2|@ripaojiedian
   - 日本5|@ripaojiedian
-  - 🇯🇵_JP_日本_IPV4
-  - 🇯🇵_JP_日本_IPV4 (3)
+  - 🇯🇵_JP_日本_IPV4 (2)
   - 🇯🇵JP-168.138.205.100-0237
-  - 🇯🇵_JP_日本_IPV4 (4)
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  - 日本3|@ripaojiedian
+  - 🇯🇵_JP_日本_IPV4 (3)
   - 日本4|@ripaojiedian
-  - 🇯🇵[www.v2nodes.com] trojan-JP-...
   - 🇯🇵[www.v2nodes.com] ss-JP-1544...
   - 🇯🇵JP-84.247.155.196-0256
-  - 🇯🇵[www.v2nodes.com] vless-JP-1...
-  - ⭕94@oneclickvpnkeys
-  - 📗96@oneclickvpnkeys
   - ' 🇯🇵 20@exclavevpn'
+  - 📗96@oneclickvpnkeys
 rules:
 - MATCH,SELECT

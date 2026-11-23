@@ -10,17 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  name: '🏳[www.v2nodes.com] vless- #5'
-  server: 45.144.234.157
-  port: 14430
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.144.234.157
 - type: ss
   cipher: aes-256-gcm
   password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
@@ -29,16 +18,28 @@ proxies:
   port: 40647
   udp: true
 - type: vless
-  uuid: 85b8b4a4-d9c6-4357-a016-3a3ee04bf984
-  name: '🇩🇪 德国 | DEU #16'
-  server: 144.31.119.69
+  uuid: cae99415-10a6-4317-81bd-19a4586b5d76
+  name: '🇬🇧 英国 | GBR #2'
+  server: 196.196.208.22
   port: 443
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: fi.superspidy.com
+  servername: 9303d6x.fi-p1b.h1clayd.click
   client-fingerprint: firefox
+- type: vless
+  uuid: cae99415-10a6-4317-81bd-19a4586b5d76
+  name: 🇬🇧 英国 | GBR
+  server: 196.196.208.22
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: 9303d6x.fi-p1b.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: _yJGJ5q-8IxTuWFcoy5wpKKYtk9p9q4lQ6svfXC1IUU
+    short-id: 621290c77645b731
 - type: hysteria2
   password: 6aab8efdf13945829ae3699c342be406
   name: Telegram:@v2rayng3
@@ -54,17 +55,17 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #5'
   - 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  - '🇩🇪 德国 | DEU #16'
+  - '🇬🇧 英国 | GBR #2'
+  - 🇬🇧 英国 | GBR
   - Telegram:@v2rayng3
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #5'
   - 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  - '🇩🇪 德国 | DEU #16'
+  - '🇬🇧 英国 | GBR #2'
+  - 🇬🇧 英国 | GBR
   - Telegram:@v2rayng3
 rules:
 - MATCH,SELECT
