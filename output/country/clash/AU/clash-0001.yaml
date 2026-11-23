@@ -28,6 +28,18 @@ proxies:
   port: 443
   udp: true
   sni: connectwithemployerstohireyouridealteam.com
+- type: vless
+  uuid: e3a1c7f2-9b4d-4e8a-a6c5-1f2d3b4a5e6f
+  name: 🇦🇺 澳大利亚 | AUS
+  server: 13.211.155.89
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: www.microsoft.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /7b9977b2af9da85fa86adc065c362efe
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -36,11 +48,13 @@ proxy-groups:
   proxies:
   - '🇦🇺 澳大利亚 | AUS #1'
   - 🏳[www.v2nodes.com] trojan-
+  - 🇦🇺 澳大利亚 | AUS
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇦🇺 澳大利亚 | AUS #1'
   - 🏳[www.v2nodes.com] trojan-
+  - 🇦🇺 澳大利亚 | AUS
 rules:
 - MATCH,SELECT

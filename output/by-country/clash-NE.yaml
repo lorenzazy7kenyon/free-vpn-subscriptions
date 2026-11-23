@@ -11,6 +11,56 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  name: '🇪🇪 爱沙尼亚 | EST #1'
+  server: 196.196.148.177
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 4935e4t.de25.h1clayd.click
+  client-fingerprint: firefox
+- type: vless
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  name: '🇩🇪 德国 | DEU #3'
+  server: 196.196.148.76
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 8a2e72t.nl20.h1clayd.shop
+  client-fingerprint: firefox
+- type: vless
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  name: 🇪🇪 爱沙尼亚 | EST
+  server: 196.196.148.177
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 4935e4t.de25.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
+    short-id: 6976d670818644cc
+- type: vless
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  name: 🇩🇪 德国 | DEU
+  server: 196.196.148.76
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 8a2e72t.nl20.h1clayd.shop
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
+    short-id: 8d0d0679f42ffd98
+- type: vless
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   name: 🇳🇱 荷兰 | NLD
   server: 196.196.148.63
@@ -26,11 +76,19 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇪🇪 爱沙尼亚 | EST #1'
+  - '🇩🇪 德国 | DEU #3'
+  - 🇪🇪 爱沙尼亚 | EST
+  - 🇩🇪 德国 | DEU
   - 🇳🇱 荷兰 | NLD
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇪🇪 爱沙尼亚 | EST #1'
+  - '🇩🇪 德国 | DEU #3'
+  - 🇪🇪 爱沙尼亚 | EST
+  - 🇩🇪 德国 | DEU
   - 🇳🇱 荷兰 | NLD
 rules:
 - MATCH,SELECT
