@@ -24,13 +24,30 @@ proxies:
     path: /flow=
     headers:
       Host: senflarelink-node-il65vh.pages.dev
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: 🇰🇷KR-211.178.105.134-0258
-  server: 211.178.105.134
-  port: 6123
+- type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇰🇷KR-132.145.80.230-1133
+  server: 132.145.80.230
+  port: 80
   udp: true
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: kr02.a0a.xyz
+- type: vless
+  uuid: e45c8289-54d3-431f-9510-4bc14636862e
+  name: '🇰🇷 韩国 | KOR #2'
+  server: 211.173.70.32
+  port: 28443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.shopify.com
+  client-fingerprint: chrome
 - type: vless
   uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
   name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
@@ -65,6 +82,22 @@ proxies:
     path: /flow=
     headers:
       Host: senflarelink-node-nwz76h.pages.dev
+- type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: '🇰🇷 韩国 | KOR #1'
+  server: 3.36.94.245
+  port: 443
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: '🇰🇷 韩国 | KOR #1'
+  server: 13.124.216.73
+  port: 443
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -72,18 +105,24 @@ proxy-groups:
   interval: 300
   proxies:
   - 韩国|@ripaojiedian
-  - 🇰🇷KR-211.178.105.134-0258
+  - 🇰🇷KR-132.145.80.230-1133
+  - '🇰🇷 韩国 | KOR #2'
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - 韩国2|@ripaojiedian
+  - '🇰🇷 韩国 | KOR #1'
+  - '🇰🇷 韩国 | KOR #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 韩国|@ripaojiedian
-  - 🇰🇷KR-211.178.105.134-0258
+  - 🇰🇷KR-132.145.80.230-1133
+  - '🇰🇷 韩国 | KOR #2'
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   - 🇰🇷[www.v2nodes.com] vless-KR-1...
   - 韩国2|@ripaojiedian
+  - '🇰🇷 韩国 | KOR #1'
+  - '🇰🇷 韩国 | KOR #1'
 rules:
 - MATCH,SELECT

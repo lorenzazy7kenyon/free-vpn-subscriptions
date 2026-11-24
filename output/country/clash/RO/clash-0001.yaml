@@ -11,37 +11,26 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  name: '🏳[www.v2nodes.com] vless- #7'
-  server: 46.28.67.55
+  uuid: 2ccb06b6-9eac-44eb-ade7-c1e5afb8e7df
+  name: 🇫🇮FI_5|3.4MB/s
+  server: 13.141.36.15
   port: 443
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- type: hysteria2
-  password: gf1
-  name: ⭕62@oneclickvpnkeys
-  server: 185.156.44.99
-  port: 443
-  udp: true
-  sni: www.amazon.com
-  skip-cert-verify: true
+  servername: a80b5386.fi2.h1clayd.click
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #7'
-  - ⭕62@oneclickvpnkeys
+  - 🇫🇮FI_5|3.4MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #7'
-  - ⭕62@oneclickvpnkeys
+  - 🇫🇮FI_5|3.4MB/s
 rules:
 - MATCH,SELECT

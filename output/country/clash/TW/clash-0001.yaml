@@ -37,6 +37,19 @@ proxies:
     path: /flow=
     headers:
       Host: senflarelink-node-wj1gsa.pages.dev
+- type: vless
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
+  name: '🏳[www.v2nodes.com] vless- #6'
+  server: 154.40.61.186
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: senflarelink-node-wj1gsa.pages.dev
+  ws-opts:
+    path: /flow=fp=chrome
+    headers:
+      Host: senflarelink-node-wj1gsa.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -45,11 +58,13 @@ proxy-groups:
   proxies:
   - 🇹🇼[www.v2nodes.com] vless-TW-1...
   - 台湾3|@ripaojiedian
+  - '🏳[www.v2nodes.com] vless- #6'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇹🇼[www.v2nodes.com] vless-TW-1...
   - 台湾3|@ripaojiedian
+  - '🏳[www.v2nodes.com] vless- #6'
 rules:
 - MATCH,SELECT
