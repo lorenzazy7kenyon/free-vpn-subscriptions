@@ -11,6 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
+  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  server: 47.80.19.173
+  port: 2053
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- type: vless
   uuid: b69cf773-da16-486e-afce-a45b94f998b3
   name: 韩国|@ripaojiedian
   server: 131.186.22.95
@@ -29,7 +40,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
-  name: 🇰🇷KR-132.145.80.230-1133
+  name: 🇰🇷KR-132.145.80.230-1088
   server: 132.145.80.230
   port: 80
   udp: true
@@ -37,37 +48,13 @@ proxies:
     path: /cctv13.m3u8
     headers:
       Host: kr02.a0a.xyz
-- type: vless
-  uuid: e45c8289-54d3-431f-9510-4bc14636862e
-  name: '🇰🇷 韩国 | KOR #2'
-  server: 211.173.70.32
-  port: 28443
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: 🇰🇷KR-211.178.105.134-0282
+  server: 211.178.105.134
+  port: 6123
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.shopify.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  server: 47.80.19.173
-  port: 2053
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
-  server: 152.69.226.63
-  port: 25555
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
 - type: vless
   uuid: b69cf773-da16-486e-afce-a45b94f998b3
   name: 韩国2|@ripaojiedian
@@ -82,47 +69,36 @@ proxies:
     path: /flow=
     headers:
       Host: senflarelink-node-nwz76h.pages.dev
-- type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: '🇰🇷 韩国 | KOR #1'
-  server: 3.36.94.245
-  port: 443
+- type: vless
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
+  server: 152.69.226.63
+  port: 25555
   udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: '🇰🇷 韩国 | KOR #1'
-  server: 13.124.216.73
-  port: 443
-  udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 韩国|@ripaojiedian
-  - 🇰🇷KR-132.145.80.230-1133
-  - '🇰🇷 韩国 | KOR #2'
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
+  - 韩国|@ripaojiedian
+  - 🇰🇷KR-132.145.80.230-1088
+  - 🇰🇷KR-211.178.105.134-0282
   - 韩国2|@ripaojiedian
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇰🇷 韩国 | KOR #1'
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 韩国|@ripaojiedian
-  - 🇰🇷KR-132.145.80.230-1133
-  - '🇰🇷 韩国 | KOR #2'
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  - 🇰🇷[www.v2nodes.com] vless-KR-1...
+  - 韩国|@ripaojiedian
+  - 🇰🇷KR-132.145.80.230-1088
+  - 🇰🇷KR-211.178.105.134-0282
   - 韩国2|@ripaojiedian
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇰🇷 韩国 | KOR #1'
+  - 🇰🇷[www.v2nodes.com] vless-KR-1...
 rules:
 - MATCH,SELECT

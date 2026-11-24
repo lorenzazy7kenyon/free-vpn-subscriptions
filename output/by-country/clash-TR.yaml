@@ -10,91 +10,26 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 3a1c6827-72a1-4d1c-9413-44109ff815f4
-  name: '🇹🇷 土耳其 | TUR #1'
-  server: 130.94.2.227
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: navi.bankrate.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 3a1c6827-72a1-4d1c-9413-44109ff815f4
-  name: 🇹🇷 土耳其 | TUR
-  server: 130.94.2.227
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: navi.bankrate.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
-    short-id: 2da72ce6
-- type: vmess
-  uuid: f5f293ed-e177-4c91-84df-ccf4c9a3e262
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知165
-  server: 93.114.98.23
-  port: 2083
-  udp: true
-  tls: true
-  servername: ty7v85hv2391.dx1dx.com
-- type: vless
-  uuid: 6ae5e517-c618-4ff6-9d71-8b717507221a
-  name: '🇺🇸 美国 | USA #5'
-  server: 87.120.106.95
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: lockheart.info
-  client-fingerprint: chrome
 - type: vmess
   uuid: 32c017e7-2fa6-4a43-98ef-b21bb63d92e6
   alterId: 0
   cipher: auto
   network: tcp
-  name: 未知130
+  name: 未知68
   server: 206.1.96.187
   port: 443
   udp: true
-- type: vless
-  uuid: 04920673-035c-410d-94e4-5b1469d3fb6f
-  name: '🏳[www.v2nodes.com] vless- #8'
-  server: 91.132.190.161
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: 171.22.183.166
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇹🇷 土耳其 | TUR #1'
-  - 🇹🇷 土耳其 | TUR
-  - 未知165
-  - '🇺🇸 美国 | USA #5'
-  - 未知130
-  - '🏳[www.v2nodes.com] vless- #8'
+  - 未知68
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇹🇷 土耳其 | TUR #1'
-  - 🇹🇷 土耳其 | TUR
-  - 未知165
-  - '🇺🇸 美国 | USA #5'
-  - 未知130
-  - '🏳[www.v2nodes.com] vless- #8'
+  - 未知68
 rules:
 - MATCH,SELECT

@@ -11,26 +11,41 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 2ccb06b6-9eac-44eb-ade7-c1e5afb8e7df
-  name: 🇫🇮FI_5|3.4MB/s
-  server: 13.141.36.15
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  name: '🇺🇸 美国 | USA #5'
+  server: 13.141.36.75
   port: 443
   udp: true
   network: tcp
   tls: true
-  servername: a80b5386.fi2.h1clayd.click
-  client-fingerprint: firefox
+  servername: 80cb66x.nl13.h1clayd.click
+  client-fingerprint: chrome
+- type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  name: 🇩🇪 德国 | DEU
+  server: 13.141.36.75
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: 80cb66x.nl13.h1clayd.click
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: jhVdP7NFUaEXGfrmOqJlMCHTvqn3fymbzPfPT6NO4i0
+    short-id: f72d4a2c7cbbacb1
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇮FI_5|3.4MB/s
+  - '🇺🇸 美国 | USA #5'
+  - 🇩🇪 德国 | DEU
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇫🇮FI_5|3.4MB/s
+  - '🇺🇸 美国 | USA #5'
+  - 🇩🇪 德国 | DEU
 rules:
 - MATCH,SELECT

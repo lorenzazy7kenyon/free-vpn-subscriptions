@@ -45,17 +45,6 @@ proxies:
   server: 138.199.55.243
   port: 19999
   udp: true
-- type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
-  server: 193.188.21.253
-  port: 10444
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: video.yandex.ru
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -66,7 +55,6 @@ proxy-groups:
   - 🇸🇪[www.v2nodes.com] trojan-SE-...
   - 🇸🇪[www.v2nodes.com] vless-SE-1...
   - 🇸🇪[www.v2nodes.com] ss-SE-1615...
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
 - name: SELECT
   type: select
   proxies:
@@ -75,6 +63,5 @@ proxy-groups:
   - 🇸🇪[www.v2nodes.com] trojan-SE-...
   - 🇸🇪[www.v2nodes.com] vless-SE-1...
   - 🇸🇪[www.v2nodes.com] ss-SE-1615...
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
 rules:
 - MATCH,SELECT

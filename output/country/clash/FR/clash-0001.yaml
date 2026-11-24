@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: b538377e-c372-414d-bd02-becfed21852f
-  name: '🏳[www.v2nodes.com] vless- #14'
+  name: '🏳[www.v2nodes.com] vless- #10'
   server: 185.16.110.62
   port: 443
   udp: true
@@ -35,37 +35,6 @@ proxies:
   servername: fuck.rkn
   client-fingerprint: chrome
 - type: vless
-  uuid: 51a6ab93-e805-4b8b-89d1-d3ab85a118ce
-  name: 🇫🇷[www.v2nodes.com] vless-FR-1...
-  server: 54.36.102.152
-  port: 2083
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless-kulo
-- type: vless
-  uuid: 1697852e-cd5c-472d-b377-0def0f301d98
-  name: 🇫🇷FR_1|3.4MB/s
-  server: 88.151.197.87
-  port: 2025
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-- type: vless
-  uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
-  name: 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
-  server: 163.245.42.87
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: mother-earth.fyi
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-- type: vless
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   name: '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
   server: 62.210.91.10
@@ -76,11 +45,40 @@ proxies:
   tls: true
   servername: fuck.rkn
   client-fingerprint: chrome
+- type: vmess
+  uuid: 2bc80e77-9590-4ded-a48b-0eda493f611b
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇫🇷FR-145.239.55.210-0250
+  server: 145.239.55.210
+  port: 80
+  udp: true
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
+- type: vless
+  uuid: 51a6ab93-e805-4b8b-89d1-d3ab85a118ce
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  server: 54.36.102.152
+  port: 2083
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless-kulo
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #6'
+  name: 🇫🇷[www.v2nodes.com] ss-FR-1616...
   server: 23.162.152.22
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
+  server: 167.17.64.175
   port: 19999
   udp: true
 - type: vless
@@ -94,34 +92,6 @@ proxies:
   servername: www.nvidia.com
   client-fingerprint: firefox
 - type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 29irqk0paakcx19v
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1621...
-  server: 51.83.61.102
-  port: 8080
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1615...
-  server: 38.109.228.110
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #8'
-  server: 167.17.64.22
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #7'
-  server: 172.99.189.142
-  port: 19999
-  udp: true
-- type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
@@ -132,59 +102,43 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
-  server: 167.17.64.175
+  server: 172.99.189.142
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
+  server: 167.17.64.22
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇫🇷[www.v2nodes.com] ss-FR-1615...
+  server: 38.109.228.110
   port: 19999
   udp: true
 - type: vless
   uuid: 00000000-0000-0001-0000-000000000000
-  name: 🇬🇧 英国 | GBR
-  server: 136.148.83.71
+  name: '🇬🇧 英国 | GBR #3'
+  server: 136.148.83.70
   port: 443
   udp: true
   network: tcp
   tls: true
-  servername: wccfu-ru-79dc.my-fade.cloud
-  client-fingerprint: qq
-- type: vless
-  uuid: 7dff1be7-b930-0001-a8ad-dc7850168215
-  name: 🇬🇧 英国 | GBR
-  server: 136.148.83.69
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: szqbx-ru-77dc.my-fade.cloud
-  client-fingerprint: chrome
-- type: vless
-  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
-  name: 🇬🇧 英国 | GBR
-  server: 136.148.83.69
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: szqbx-ru-77dc.my-fade.cloud
+  servername: aszbk-ru-78dc.my-fade.cloud
   client-fingerprint: qq
 - type: vless
   uuid: 00000000-0000-0001-0000-000000000000
-  name: '🇬🇧 英国 | GBR #1'
-  server: 136.148.83.71
+  name: 🇬🇧 英国 | GBR
+  server: 136.148.83.70
   port: 443
   udp: true
   network: tcp
   tls: true
-  servername: wccfu-ru-79dc.my-fade.cloud
+  servername: aszbk-ru-78dc.my-fade.cloud
   client-fingerprint: qq
-- type: vless
-  uuid: 7dff1be7-b930-0001-a8ad-dc7850168215
-  name: '🇬🇧 英国 | GBR #3'
-  server: 136.148.83.69
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: szqbx-ru-77dc.my-fade.cloud
-  client-fingerprint: chrome
 - type: vless
   uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
   name: '🇬🇧 英国 | GBR #1'
@@ -195,80 +149,45 @@ proxies:
   tls: true
   servername: szqbx-ru-77dc.my-fade.cloud
   client-fingerprint: qq
-- type: vmess
-  uuid: 2bc80e77-9590-4ded-a48b-0eda493f611b
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇫🇷FR-145.239.55.210-0244
-  server: 145.239.55.210
-  port: 80
-  udp: true
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-- type: hysteria2
-  password: 87bb2ac4-b7a1-0001-b11d-2107709ea6cb
-  name: '🇬🇧 英国 | GBR #5'
-  server: 136.148.83.69
-  port: 443
-  udp: true
-  sni: szqbx-ru-77dc.my-fade.cloud
-  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] vless- #14'
+  - '🏳[www.v2nodes.com] vless- #10'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - 🇫🇷FR_1|3.4MB/s
-  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
-  - '🏳[www.v2nodes.com] ss- #6'
+  - 🇫🇷FR-145.239.55.210-0250
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - 🇫🇷[www.v2nodes.com] ss-FR-1616...
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #2'
-  - 🇫🇷[www.v2nodes.com] ss-FR-1621...
-  - 🇫🇷[www.v2nodes.com] ss-FR-1615...
-  - '🏳[www.v2nodes.com] ss- #8'
-  - '🏳[www.v2nodes.com] ss- #7'
   - '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
   - '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
-  - 🇬🇧 英国 | GBR
-  - 🇬🇧 英国 | GBR
-  - 🇬🇧 英国 | GBR
-  - '🇬🇧 英国 | GBR #1'
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
+  - 🇫🇷[www.v2nodes.com] ss-FR-1615...
   - '🇬🇧 英国 | GBR #3'
+  - 🇬🇧 英国 | GBR
   - '🇬🇧 英国 | GBR #1'
-  - 🇫🇷FR-145.239.55.210-0244
-  - '🇬🇧 英国 | GBR #5'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] vless- #14'
+  - '🏳[www.v2nodes.com] vless- #10'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - 🇫🇷FR_1|3.4MB/s
-  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
-  - '🏳[www.v2nodes.com] ss- #6'
+  - 🇫🇷FR-145.239.55.210-0250
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - 🇫🇷[www.v2nodes.com] ss-FR-1616...
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #2'
-  - 🇫🇷[www.v2nodes.com] ss-FR-1621...
-  - 🇫🇷[www.v2nodes.com] ss-FR-1615...
-  - '🏳[www.v2nodes.com] ss- #8'
-  - '🏳[www.v2nodes.com] ss- #7'
   - '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
   - '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
-  - 🇬🇧 英国 | GBR
-  - 🇬🇧 英国 | GBR
-  - 🇬🇧 英国 | GBR
-  - '🇬🇧 英国 | GBR #1'
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
+  - 🇫🇷[www.v2nodes.com] ss-FR-1615...
   - '🇬🇧 英国 | GBR #3'
+  - 🇬🇧 英国 | GBR
   - '🇬🇧 英国 | GBR #1'
-  - 🇫🇷FR-145.239.55.210-0244
-  - '🇬🇧 英国 | GBR #5'
 rules:
 - MATCH,SELECT
