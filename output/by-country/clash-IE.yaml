@@ -11,27 +11,29 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 9be9e1e4-d1fc-4423-b22d-cd07a4381acb
-  name: 🇮🇪[www.v2nodes.com] vless-IE-3...
-  server: 23.94.67.209
+  uuid: 57a3fb3c-5788-4777-933e-882dd22f5b82
+  name: 🇮🇪 爱尔兰 | IRL
+  server: 83.141.73.252
   port: 443
   udp: true
-  network: ws
-  ws-opts:
-    path: /fp=randomsecurity=tls
-    headers:
-      Host: cj1-e06.pages.dev
+  network: xhttp
+  tls: true
+  servername: bfb3f7x.nl13.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: hLLpX2tIyVWm1rIVVXa_UsCjSOA_p-vIJZNIuPel6RA
+    short-id: 679c0122c53ebd6d
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇪[www.v2nodes.com] vless-IE-3...
+  - 🇮🇪 爱尔兰 | IRL
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇮🇪[www.v2nodes.com] vless-IE-3...
+  - 🇮🇪 爱尔兰 | IRL
 rules:
 - MATCH,SELECT

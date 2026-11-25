@@ -12,10 +12,10 @@ dns:
 proxies:
 - type: ss
   cipher: aes-256-cfb
-  password: 9XwYyZsK8SNzQDtY
-  name: 🇵🇱PL-217.30.10.70-0189
+  password: c3NtHJ5ujV2tGDfj
+  name: 🇵🇱PL-217.30.10.70-0191
   server: 217.30.10.70
-  port: 9059
+  port: 9084
   udp: true
 - type: ss
   cipher: aes-256-cfb
@@ -23,6 +23,13 @@ proxies:
   name: 🇵🇱PL-217.30.10.70-0179
   server: 217.30.10.70
   port: 9045
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: 9XwYyZsK8SNzQDtY
+  name: 🇵🇱PL-217.30.10.70-0189
+  server: 217.30.10.70
+  port: 9059
   udp: true
 - type: ss
   cipher: aes-256-cfb
@@ -38,30 +45,9 @@ proxies:
   server: 217.30.10.70
   port: 9044
   udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: c3NtHJ5ujV2tGDfj
-  name: 🇵🇱PL-217.30.10.70-0191
-  server: 217.30.10.70
-  port: 9084
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: fG2artUmHfNT2cX7
-  name: 🇵🇱PL-217.30.10.70-0192
-  server: 217.30.10.70
-  port: 9018
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: p9z5BVADH2YFs3MN
-  name: 🇵🇱PL-217.30.10.70-0176
-  server: 217.30.10.70
-  port: 9040
-  udp: true
 - type: vless
   uuid: d7121b33-e335-4921-bb00-4c0b157e7fc1
-  name: 🇵🇱PL_1|1011KB/s
+  name: 🇵🇱[www.v2nodes.com] vless-PL-1...
   server: 94.183.167.172
   port: 443
   udp: true
@@ -69,6 +55,33 @@ proxies:
   tls: true
   servername: s8k4.scan-cdn.com
   client-fingerprint: chrome
+- type: ss
+  cipher: aes-256-cfb
+  password: fG2artUmHfNT2cX7
+  name: 🇵🇱PL-217.30.10.70-0192
+  server: 217.30.10.70
+  port: 9018
+  udp: true
+- type: vless
+  uuid: f8cb3c89-32af-4255-bebc-d90aad175069
+  name: 🇵🇱 波兰 | POL
+  server: 212.2.34.15
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: plb.899themes.pro
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ
+    short-id: 27350908de933e09
+- type: ss
+  cipher: aes-256-cfb
+  password: p9z5BVADH2YFs3MN
+  name: 🇵🇱PL-217.30.10.70-0176
+  server: 217.30.10.70
+  port: 9040
+  udp: true
 - type: hysteria2
   password: 04920673-035c-410d-94e4-5b1469d3fb6f
   name: 🔰66@oneclickvpnkeys
@@ -82,27 +95,29 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇱PL-217.30.10.70-0189
+  - 🇵🇱PL-217.30.10.70-0191
   - 🇵🇱PL-217.30.10.70-0179
+  - 🇵🇱PL-217.30.10.70-0189
   - 🇵🇱PL-217.30.10.70-0190
   - 🇵🇱PL-217.30.10.70-0173
-  - 🇵🇱PL-217.30.10.70-0191
+  - 🇵🇱[www.v2nodes.com] vless-PL-1...
   - 🇵🇱PL-217.30.10.70-0192
+  - 🇵🇱 波兰 | POL
   - 🇵🇱PL-217.30.10.70-0176
-  - 🇵🇱PL_1|1011KB/s
   - 🔰66@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇵🇱PL-217.30.10.70-0189
+  - 🇵🇱PL-217.30.10.70-0191
   - 🇵🇱PL-217.30.10.70-0179
+  - 🇵🇱PL-217.30.10.70-0189
   - 🇵🇱PL-217.30.10.70-0190
   - 🇵🇱PL-217.30.10.70-0173
-  - 🇵🇱PL-217.30.10.70-0191
+  - 🇵🇱[www.v2nodes.com] vless-PL-1...
   - 🇵🇱PL-217.30.10.70-0192
+  - 🇵🇱 波兰 | POL
   - 🇵🇱PL-217.30.10.70-0176
-  - 🇵🇱PL_1|1011KB/s
   - 🔰66@oneclickvpnkeys
 rules:
 - MATCH,SELECT

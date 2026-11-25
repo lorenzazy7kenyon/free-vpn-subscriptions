@@ -10,6 +10,19 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: f8cb3c89-32af-4255-bebc-d90aad175069
+  name: 🇳🇴 挪威 | NOR
+  server: 104.233.8.78
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: noa.899themes.pro
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ
+    short-id: 27350908de933e09
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
@@ -23,11 +36,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇳🇴 挪威 | NOR
   - 🇳🇴[www.v2nodes.com] ss-NO-1220...
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇳🇴 挪威 | NOR
   - 🇳🇴[www.v2nodes.com] ss-NO-1220...
 rules:
 - MATCH,SELECT

@@ -10,24 +10,9 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知63
-  server: 20.235.220.189
-  port: 443
-  udp: true
-  tls: true
-  servername: 6JDvArazgU3qQR6Q.v.3dns.vip
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: 6JDvArazgU3qQR6Q.v.3dns.vip
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -42,13 +27,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知63
-  - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知63
-  - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
 rules:
 - MATCH,SELECT

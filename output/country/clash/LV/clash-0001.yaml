@@ -12,20 +12,6 @@ dns:
 proxies:
 - type: vless
   uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
-  name: 🇩🇪 德国 | DEU
-  server: 77.73.71.200
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: lagoon.gerqix.online
-  client-fingerprint: firefox
-  ws-opts:
-    path: /api/de5/stream
-    headers:
-      Host: lagoon.gerqix.online
-- type: vless
-  uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
   name: '🇩🇪 德国 | DEU #4'
   server: 77.73.71.200
   port: 443
@@ -38,6 +24,19 @@ proxies:
     headers:
       Host: lagoon.gerqix.online
 - type: vless
+  uuid: f8cb3c89-32af-4255-bebc-d90aad175069
+  name: 🇱🇻 拉脱维亚 | LVA
+  server: 195.123.213.83
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: lva.899themes.pro
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ
+    short-id: 27350908de933e09
+- type: vless
   uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
   name: 🇱🇺[www.v2nodes.com] vless-LU-1...
   server: 94.183.234.245
@@ -48,83 +47,21 @@ proxies:
   tls: true
   servername: www.bing.com
   client-fingerprint: qq
-- type: vless
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  name: 🇩🇪 德国 | DEU
-  server: 31.57.28.199
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: inlay.merlano.monster
-  client-fingerprint: firefox
-  ws-opts:
-    path: /api/de3/stream
-    headers:
-      Host: inlay.merlano.monster
-- type: vless
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  name: '🇩🇪 德国 | DEU #25'
-  server: 31.57.28.199
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: inlay.merlano.monster
-  ws-opts:
-    path: /api/de3/streamfp=firefox
-    headers:
-      Host: inlay.merlano.monster
-- type: vless
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  name: 🇩🇪 德国 | DEU
-  server: 31.57.28.169
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: inlay.merlano.monster
-  client-fingerprint: firefox
-  ws-opts:
-    path: /api/de3/stream
-    headers:
-      Host: inlay.merlano.monster
-- type: vless
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  name: '🇩🇪 德国 | DEU #17'
-  server: 31.57.28.169
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: inlay.merlano.monster
-  ws-opts:
-    path: /api/de3/streamfp=firefox
-    headers:
-      Host: inlay.merlano.monster
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪 德国 | DEU
   - '🇩🇪 德国 | DEU #4'
+  - 🇱🇻 拉脱维亚 | LVA
   - 🇱🇺[www.v2nodes.com] vless-LU-1...
-  - 🇩🇪 德国 | DEU
-  - '🇩🇪 德国 | DEU #25'
-  - 🇩🇪 德国 | DEU
-  - '🇩🇪 德国 | DEU #17'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇩🇪 德国 | DEU
   - '🇩🇪 德国 | DEU #4'
+  - 🇱🇻 拉脱维亚 | LVA
   - 🇱🇺[www.v2nodes.com] vless-LU-1...
-  - 🇩🇪 德国 | DEU
-  - '🇩🇪 德国 | DEU #25'
-  - 🇩🇪 德国 | DEU
-  - '🇩🇪 德国 | DEU #17'
 rules:
 - MATCH,SELECT
