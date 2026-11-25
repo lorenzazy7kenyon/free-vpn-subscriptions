@@ -10,13 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: 2022-blake3-aes-128-gcm
-  password: SOg9NNrasz6s7bbtrDE7Fw==:U37BOpo3wk5w58w1CsCkPA==
-  name: '🇳🇱 荷兰 | NLD #2'
-  server: 81.12.33.254
-  port: 8443
-  udp: true
 - type: hysteria2
   password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
   name: '@OutlineReleasedKey #2'
@@ -30,13 +23,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇳🇱 荷兰 | NLD #2'
   - '@OutlineReleasedKey #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇳🇱 荷兰 | NLD #2'
   - '@OutlineReleasedKey #2'
 rules:
 - MATCH,SELECT

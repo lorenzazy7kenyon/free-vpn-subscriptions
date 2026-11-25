@@ -21,13 +21,6 @@ proxies:
     path: /vless
     headers:
       Host: 5.178.109.174
-- type: trojan
-  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
-  name: 🇸🇪[www.v2nodes.com] trojan-SE-...
-  server: 95.143.196.97
-  port: 443
-  udp: true
-  sni: 95.143.196.97
 - type: vless
   uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
   name: 🇸🇪[www.v2nodes.com] vless-SE-1...
@@ -45,6 +38,14 @@ proxies:
   server: 138.199.55.243
   port: 19999
   udp: true
+- type: hysteria2
+  password: d4ca9415f0eac7897472e1e5b86d2e96
+  name: 🇳🇱24@exclavevpn
+  server: 50.7.38.243
+  port: 443
+  udp: true
+  sni: promo.betust.net
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -52,16 +53,16 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
-  - 🇸🇪[www.v2nodes.com] trojan-SE-...
   - 🇸🇪[www.v2nodes.com] vless-SE-1...
   - 🇸🇪[www.v2nodes.com] ss-SE-1615...
+  - 🇳🇱24@exclavevpn
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
-  - 🇸🇪[www.v2nodes.com] trojan-SE-...
   - 🇸🇪[www.v2nodes.com] vless-SE-1...
   - 🇸🇪[www.v2nodes.com] ss-SE-1615...
+  - 🇳🇱24@exclavevpn
 rules:
 - MATCH,SELECT

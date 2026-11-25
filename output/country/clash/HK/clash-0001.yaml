@@ -10,6 +10,59 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: ss
+  cipher: aes-256-gcm
+  password: AMok40FfaM+Ikwre16psBpVk6JHxsQZw
+  name: 🇭🇰[www.v2nodes.com] ss-HK-1621...
+  server: 209.248.57.105
+  port: 8388
+  udp: true
+- type: vmess
+  uuid: 234a8041-2b4d-44a3-a8d8-523cbfd58dc4
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: '🇭🇰 香港 | HKG #2'
+  server: 47.86.90.31
+  port: 443
+  udp: true
+  tls: true
+  servername: bywxdhirqkjj8xaz.v.3dns.vip
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: bywxdhirqkjj8xaz.v.3dns.vip
+- type: vmess
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇭🇰 香港 | HKG
+  server: 47.244.120.197
+  port: 44867
+  udp: true
+  ws-opts:
+    path: /arki
+    headers:
+      Host: 47.244.120.197
+- type: vless
+  uuid: 8b17beac-b143-447d-aa68-14cbb121a602
+  name: '🇭🇰 香港 | HKG #4'
+  server: 8.217.1.203
+  port: 8443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+- type: trojan
+  password: SyOxpKxC8u5jgNa3DCZ34y3D9CRenFcaABpYATEeqI2RSaXD76zS8YF0Owl3lZ
+  name: 🇭🇰HK-219.76.13.181-0074
+  server: 219.76.13.181
+  port: 443
+  udp: true
+  sni: arbettp.freetrade.link
 - type: vless
   uuid: b69cf773-da16-486e-afce-a45b94f998b3
   name: 香港3|@ripaojiedian
@@ -25,20 +78,11 @@ proxies:
     headers:
       Host: senflarelink-node-6b9.pages.dev
 - type: vmess
-  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
-  alterId: 0
-  cipher: auto
-  network: http
-  name: '🇭🇰 香港 | HKG #2'
-  server: 47.242.81.94
-  port: 52080
-  udp: true
-- type: vmess
   uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
   alterId: 0
   cipher: auto
   network: ws
-  name: '🇭🇰 香港 | HKG #3'
+  name: '🇭🇰 香港 | HKG #1'
   server: 47.244.120.197
   port: 23026
   udp: true
@@ -46,43 +90,17 @@ proxies:
     path: /arki
     headers:
       Host: 47.244.120.197
-- type: vmess
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇭🇰HK-47.244.120.197-5739
-  server: 47.244.120.197
-  port: 44867
-  udp: true
-  ws-opts:
-    path: /arki
-- type: vmess
-  uuid: 234a8041-2b4d-44a3-a8d8-523cbfd58dc4
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: '🇭🇰 香港 | HKG #1'
-  server: 47.86.90.31
-  port: 443
-  udp: true
-  tls: true
-  servername: bywxdhirqkjj8xaz.v.3dns.vip
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: bywxdhirqkjj8xaz.v.3dns.vip
 - type: vless
-  uuid: 0fc0ded7-32b3-4e36-a623-6e7670225247
-  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
-  server: 45.133.73.167
-  port: 443
+  uuid: 530d31fc-2690-49e4-bfc9-3f991e145008
+  name: 台湾|@ripaojiedian
+  server: 116.213.43.43
+  port: 11102
   udp: true
-  network: ws
-  ws-opts:
-    path: /html/order/torrentfp=chromesecurity=tls
-    headers:
-      Host: zmxoo.de5.net
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 - type: vless
   uuid: 0fc0ded7-32b3-4e36-a623-6e7670225247
   name: 🇭🇰[www.v2nodes.com] vless-HK
@@ -96,12 +114,23 @@ proxies:
     path: /html/order/torrentfp=chrome
     headers:
       Host: zmxoo.de5.net
+- type: vless
+  uuid: 0fc0ded7-32b3-4e36-a623-6e7670225247
+  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
+  server: 45.133.73.167
+  port: 443
+  udp: true
+  network: ws
+  ws-opts:
+    path: /html/order/torrentfp=chromesecurity=tls
+    headers:
+      Host: zmxoo.de5.net
 - type: vmess
   uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
   alterId: 0
   cipher: auto
   network: ws
-  name: 🇭🇰HK-156.245.232.239-0288
+  name: 🇭🇰HK-156.245.232.239-0308
   server: 156.245.232.239
   port: 35043
   udp: true
@@ -121,33 +150,14 @@ proxies:
     path: /flow=
     headers:
       Host: senflarelink-node-m3bfbn.pages.dev
-- type: ss
-  cipher: aes-256-gcm
-  password: AMok40FfaM+Ikwre16psBpVk6JHxsQZw
-  name: 🇭🇰[www.v2nodes.com] ss-HK-1621...
-  server: 209.248.57.105
-  port: 8388
-  udp: true
-- type: vless
-  uuid: 530d31fc-2690-49e4-bfc9-3f991e145008
-  name: 台湾|@ripaojiedian
-  server: 116.213.43.43
-  port: 11102
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
 - type: hysteria2
-  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  name: '@tootffarangi🍓-5'
-  server: 103.30.76.18
-  port: 443
+  password: ePPsH1bMFD
+  name: 🇭🇰 香港 | HKG
+  server: 23.141.172.229
+  port: 50541
   udp: true
-  sni: hkzfsg2.mateflora.com
-  obfs: salamander
-  obfs-password: fcfqz5o4znnjqtrp
+  sni: is1-ssl.mzstatic.com
+  skip-cert-verify: true
 - type: hysteria2
   password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
   name: برای اتصال دائمی جوین شو🦠 Tele...
@@ -157,41 +167,54 @@ proxies:
   sni: nas.aizhzo.com
   obfs: salamander
   obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
+- type: hysteria2
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  name: '@tootffarangi🍓-5'
+  server: 103.30.76.18
+  port: 443
+  udp: true
+  sni: hkzfsg2.mateflora.com
+  obfs: salamander
+  obfs-password: fcfqz5o4znnjqtrp
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 香港3|@ripaojiedian
-  - '🇭🇰 香港 | HKG #2'
-  - '🇭🇰 香港 | HKG #3'
-  - 🇭🇰HK-47.244.120.197-5739
-  - '🇭🇰 香港 | HKG #1'
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
-  - 🇭🇰[www.v2nodes.com] vless-HK
-  - 🇭🇰HK-156.245.232.239-0288
-  - 香港4|@ripaojiedian
   - 🇭🇰[www.v2nodes.com] ss-HK-1621...
+  - '🇭🇰 香港 | HKG #2'
+  - 🇭🇰 香港 | HKG
+  - '🇭🇰 香港 | HKG #4'
+  - 🇭🇰HK-219.76.13.181-0074
+  - 香港3|@ripaojiedian
+  - '🇭🇰 香港 | HKG #1'
   - 台湾|@ripaojiedian
-  - '@tootffarangi🍓-5'
+  - 🇭🇰[www.v2nodes.com] vless-HK
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
+  - 🇭🇰HK-156.245.232.239-0308
+  - 香港4|@ripaojiedian
+  - 🇭🇰 香港 | HKG
   - برای اتصال دائمی جوین شو🦠 Tele...
+  - '@tootffarangi🍓-5'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 香港3|@ripaojiedian
-  - '🇭🇰 香港 | HKG #2'
-  - '🇭🇰 香港 | HKG #3'
-  - 🇭🇰HK-47.244.120.197-5739
-  - '🇭🇰 香港 | HKG #1'
-  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
-  - 🇭🇰[www.v2nodes.com] vless-HK
-  - 🇭🇰HK-156.245.232.239-0288
-  - 香港4|@ripaojiedian
   - 🇭🇰[www.v2nodes.com] ss-HK-1621...
+  - '🇭🇰 香港 | HKG #2'
+  - 🇭🇰 香港 | HKG
+  - '🇭🇰 香港 | HKG #4'
+  - 🇭🇰HK-219.76.13.181-0074
+  - 香港3|@ripaojiedian
+  - '🇭🇰 香港 | HKG #1'
   - 台湾|@ripaojiedian
-  - '@tootffarangi🍓-5'
+  - 🇭🇰[www.v2nodes.com] vless-HK
+  - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
+  - 🇭🇰HK-156.245.232.239-0308
+  - 香港4|@ripaojiedian
+  - 🇭🇰 香港 | HKG
   - برای اتصال دائمی جوین شو🦠 Tele...
+  - '@tootffarangi🍓-5'
 rules:
 - MATCH,SELECT

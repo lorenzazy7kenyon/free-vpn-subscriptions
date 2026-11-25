@@ -10,6 +10,20 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  name: 🇸🇪 瑞典 | SWE
+  server: 45.74.158.105
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: accessfooter.cleanfoodshop.org
+  client-fingerprint: firefox
+  ws-opts:
+    path: /media/ws/
+    headers:
+      Host: accessfooter.cleanfoodshop.org
 - type: vmess
   uuid: 32c017e7-2fa6-4a43-98ef-b21bb63d92e6
   alterId: 0
@@ -25,11 +39,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇸🇪 瑞典 | SWE
   - 未知68
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇸🇪 瑞典 | SWE
   - 未知68
 rules:
 - MATCH,SELECT

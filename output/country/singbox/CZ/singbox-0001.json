@@ -1,26 +1,32 @@
 {
   "outbounds": [
     {
-      "flow": "xtls-rprx-vision",
-      "server": "153.52.69.249",
+      "server": "193.124.56.100",
       "server_port": 443,
-      "tag": "🇨🇿 捷克 | CZE #1",
+      "tag": "🇨🇿 捷克 | CZE",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "cache-78.topp-con.xyz",
+        "server_name": "parchment.merlano.monster",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
+      "transport": {
+        "headers": {
+          "Host": "parchment.merlano.monster"
+        },
+        "path": "/api/de7/stream",
+        "type": "ws"
+      },
       "type": "vless",
-      "uuid": "7ad63b26-bf70-4872-8fab-ebaf73a1e19d"
+      "uuid": "0b6a7fe0-206b-4071-9f96-cd397d1ec01a"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇨🇿 捷克 | CZE #1"
+        "🇨🇿 捷克 | CZE"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -29,7 +35,7 @@
     {
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 | CZE #1"
+        "🇨🇿 捷克 | CZE"
       ],
       "tag": "select",
       "type": "selector"

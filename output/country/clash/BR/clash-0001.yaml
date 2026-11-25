@@ -11,27 +11,26 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 89be587f-0e93-4c67-822e-98ad0a56c29e
-  name: 美国|@ripaojiedian
-  server: 103.119.15.175
-  port: 443
+  uuid: cb7ceae2-6f47-4059-8bf0-371b62a0f0ce
+  name: '🇧🇷 巴西 | BRA #1'
+  server: 157.228.157.19
+  port: 25813
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.amazon.com
-  client-fingerprint: chrome
+  servername: br.jetstoreapp.ru
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 美国|@ripaojiedian
+  - '🇧🇷 巴西 | BRA #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 美国|@ripaojiedian
+  - '🇧🇷 巴西 | BRA #1'
 rules:
 - MATCH,SELECT

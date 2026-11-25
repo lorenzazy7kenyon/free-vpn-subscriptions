@@ -11,27 +11,30 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  name: '🇨🇿 捷克 | CZE #1'
-  server: 153.52.69.249
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  name: 🇨🇿 捷克 | CZE
+  server: 193.124.56.100
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: ws
   tls: true
-  servername: cache-78.topp-con.xyz
-  client-fingerprint: chrome
+  servername: parchment.merlano.monster
+  client-fingerprint: firefox
+  ws-opts:
+    path: /api/de7/stream
+    headers:
+      Host: parchment.merlano.monster
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇨🇿 捷克 | CZE #1'
+  - 🇨🇿 捷克 | CZE
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇨🇿 捷克 | CZE #1'
+  - 🇨🇿 捷克 | CZE
 rules:
 - MATCH,SELECT
