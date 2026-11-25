@@ -21,16 +21,6 @@ proxies:
   tls: true
   servername: lt.memepn.com
   client-fingerprint: firefox
-- type: vless
-  uuid: cae99415-10a6-4317-81bd-19a4586b5d76
-  name: 🇱🇹LT_2|2.1MB/s
-  server: 176.223.131.60
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: 7bc4aex.lt3.h1clayd.click
-  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -38,12 +28,10 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇱🇹 立陶宛 | LTU #1'
-  - 🇱🇹LT_2|2.1MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇱🇹 立陶宛 | LTU #1'
-  - 🇱🇹LT_2|2.1MB/s
 rules:
 - MATCH,SELECT

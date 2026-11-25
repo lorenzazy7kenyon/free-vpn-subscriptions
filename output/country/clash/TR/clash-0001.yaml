@@ -24,15 +24,19 @@ proxies:
     path: /media/ws/
     headers:
       Host: accessfooter.cleanfoodshop.org
-- type: vmess
-  uuid: 32c017e7-2fa6-4a43-98ef-b21bb63d92e6
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知68
-  server: 206.1.96.187
+- type: vless
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  name: '🇸🇪 瑞典 | SWE #3'
+  server: 45.74.158.105
   port: 443
   udp: true
+  network: ws
+  tls: true
+  servername: accessfooter.cleanfoodshop.org
+  ws-opts:
+    path: /media/ws/fp=firefox
+    headers:
+      Host: accessfooter.cleanfoodshop.org
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -40,12 +44,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇸🇪 瑞典 | SWE
-  - 未知68
+  - '🇸🇪 瑞典 | SWE #3'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇸🇪 瑞典 | SWE
-  - 未知68
+  - '🇸🇪 瑞典 | SWE #3'
 rules:
 - MATCH,SELECT

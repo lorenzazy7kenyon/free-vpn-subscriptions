@@ -10,6 +10,47 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知56
+  server: 195.85.23.225
+  port: 443
+  udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+- type: vless
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  name: '🇨🇿 捷克 | CZE #1'
+  server: 193.124.56.100
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: accessfooter.cleanfoodshop.org
+  ws-opts:
+    path: /media/ws/fp=firefox
+    headers:
+      Host: accessfooter.cleanfoodshop.org
+- type: vless
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  name: '🇨🇿 捷克 | CZE #1'
+  server: 193.124.56.100
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: parchment.merlano.monster
+  ws-opts:
+    path: /api/de7/streamfp=firefox
+    headers:
+      Host: parchment.merlano.monster
 - type: vless
   uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
   name: 🇨🇿 捷克 | CZE
@@ -30,11 +71,17 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 未知56
+  - '🇨🇿 捷克 | CZE #1'
+  - '🇨🇿 捷克 | CZE #1'
   - 🇨🇿 捷克 | CZE
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 未知56
+  - '🇨🇿 捷克 | CZE #1'
+  - '🇨🇿 捷克 | CZE #1'
   - 🇨🇿 捷克 | CZE
 rules:
 - MATCH,SELECT

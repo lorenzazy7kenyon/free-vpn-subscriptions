@@ -12,53 +12,63 @@ dns:
 proxies:
 - type: ss
   cipher: aes-256-cfb
+  password: 9XwYyZsK8SNzQDtY
+  name: 🇵🇱PL-217.30.10.70-0189
+  server: 217.30.10.70
+  port: 9059
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
   password: Lp27rqyJq72bZsqX
-  name: 🇵🇱PL-217.30.10.70-0260
+  name: 🇵🇱PL-217.30.10.70-0179
   server: 217.30.10.70
   port: 9045
   udp: true
 - type: ss
   cipher: aes-256-cfb
-  password: c3NtHJ5ujV2tGDfj
-  name: 🇵🇱PL-217.30.10.70-0276
-  server: 217.30.10.70
-  port: 9084
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: KBGjZYcy4SyRShmA
-  name: 🇵🇱PL-217.30.10.70-0246
-  server: 217.30.10.70
-  port: 9044
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: p9z5BVADH2YFs3MN
-  name: 🇵🇱PL-217.30.10.70-0287
-  server: 217.30.10.70
-  port: 9040
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
   password: aLpQtfEZe445QyHk
-  name: 🇵🇱PL-217.30.10.70-0279
+  name: 🇵🇱PL-217.30.10.70-0190
   server: 217.30.10.70
   port: 9098
   udp: true
 - type: ss
   cipher: aes-256-cfb
+  password: KBGjZYcy4SyRShmA
+  name: 🇵🇱PL-217.30.10.70-0173
+  server: 217.30.10.70
+  port: 9044
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: c3NtHJ5ujV2tGDfj
+  name: 🇵🇱PL-217.30.10.70-0191
+  server: 217.30.10.70
+  port: 9084
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
   password: fG2artUmHfNT2cX7
-  name: 🇵🇱PL-217.30.10.70-0277
+  name: 🇵🇱PL-217.30.10.70-0192
   server: 217.30.10.70
   port: 9018
   udp: true
 - type: ss
   cipher: aes-256-cfb
-  password: 9XwYyZsK8SNzQDtY
-  name: 🇵🇱PL-217.30.10.70-0273
+  password: p9z5BVADH2YFs3MN
+  name: 🇵🇱PL-217.30.10.70-0176
   server: 217.30.10.70
-  port: 9059
+  port: 9040
   udp: true
+- type: vless
+  uuid: d7121b33-e335-4921-bb00-4c0b157e7fc1
+  name: 🇵🇱PL_1|1011KB/s
+  server: 94.183.167.172
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: s8k4.scan-cdn.com
+  client-fingerprint: chrome
 - type: hysteria2
   password: 04920673-035c-410d-94e4-5b1469d3fb6f
   name: 🔰66@oneclickvpnkeys
@@ -72,25 +82,27 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇱PL-217.30.10.70-0260
-  - 🇵🇱PL-217.30.10.70-0276
-  - 🇵🇱PL-217.30.10.70-0246
-  - 🇵🇱PL-217.30.10.70-0287
-  - 🇵🇱PL-217.30.10.70-0279
-  - 🇵🇱PL-217.30.10.70-0277
-  - 🇵🇱PL-217.30.10.70-0273
+  - 🇵🇱PL-217.30.10.70-0189
+  - 🇵🇱PL-217.30.10.70-0179
+  - 🇵🇱PL-217.30.10.70-0190
+  - 🇵🇱PL-217.30.10.70-0173
+  - 🇵🇱PL-217.30.10.70-0191
+  - 🇵🇱PL-217.30.10.70-0192
+  - 🇵🇱PL-217.30.10.70-0176
+  - 🇵🇱PL_1|1011KB/s
   - 🔰66@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇵🇱PL-217.30.10.70-0260
-  - 🇵🇱PL-217.30.10.70-0276
-  - 🇵🇱PL-217.30.10.70-0246
-  - 🇵🇱PL-217.30.10.70-0287
-  - 🇵🇱PL-217.30.10.70-0279
-  - 🇵🇱PL-217.30.10.70-0277
-  - 🇵🇱PL-217.30.10.70-0273
+  - 🇵🇱PL-217.30.10.70-0189
+  - 🇵🇱PL-217.30.10.70-0179
+  - 🇵🇱PL-217.30.10.70-0190
+  - 🇵🇱PL-217.30.10.70-0173
+  - 🇵🇱PL-217.30.10.70-0191
+  - 🇵🇱PL-217.30.10.70-0192
+  - 🇵🇱PL-217.30.10.70-0176
+  - 🇵🇱PL_1|1011KB/s
   - 🔰66@oneclickvpnkeys
 rules:
 - MATCH,SELECT

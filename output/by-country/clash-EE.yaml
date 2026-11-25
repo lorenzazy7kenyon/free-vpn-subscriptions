@@ -11,26 +11,41 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: '🇺🇸 美国 | USA #3'
-  server: 212.87.190.232
+  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
+  name: 🇪🇪 爱沙尼亚 | EST
+  server: 87.232.116.22
   port: 443
   udp: true
-  network: tcp
+  network: grpc
   tls: true
-  servername: f0d7aft.nl13.h1clayd.click
-  client-fingerprint: chrome
+  servername: fafeqdhlett2p5la6d.cdn.cachefleet.com
+  client-fingerprint: firefox
+- type: vless
+  uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
+  name: '🇪🇪 爱沙尼亚 | EST #2'
+  server: 188.214.37.231
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: lagoon.gerqix.online
+  ws-opts:
+    path: /api/de5/streamfp=firefox
+    headers:
+      Host: lagoon.gerqix.online
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇺🇸 美国 | USA #3'
+  - 🇪🇪 爱沙尼亚 | EST
+  - '🇪🇪 爱沙尼亚 | EST #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇺🇸 美国 | USA #3'
+  - 🇪🇪 爱沙尼亚 | EST
+  - '🇪🇪 爱沙尼亚 | EST #2'
 rules:
 - MATCH,SELECT
