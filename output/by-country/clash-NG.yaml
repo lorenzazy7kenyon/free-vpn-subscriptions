@@ -12,26 +12,17 @@ dns:
 proxies:
 - type: vless
   uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  name: 🇪🇸[www.v2nodes.com] vless-ES-1...
+  name: 🇪🇸 西班牙 | ESP
   server: 196.196.149.81
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  network: xhttp
   tls: true
-  servername: 7aa271t.es1.h1clayd.click
-  client-fingerprint: firefox
-- type: vless
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  name: '🇪🇸 西班牙 | ESP #1'
-  server: 196.196.149.80
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: 7aa271t.es1.h1clayd.click
+  servername: 38917fx.es1.h1clayd.click
   client-fingerprint: chrome
+  reality-opts:
+    public-key: 4mgkA2kT_Im0rkGi-fVSUU5CyF5xvMVcjA6MXBSEDAA
+    short-id: d5501b156391e01d
 - type: vless
   uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
   name: 🇪🇸 西班牙 | ESP
@@ -42,23 +33,31 @@ proxies:
   network: tcp
   tls: true
   servername: 7aa271t.es1.h1clayd.click
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   reality-opts:
     public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
     short-id: 42426c882c5fcd41
 - type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: 🇺🇸 美国 | USA
-  server: 196.196.149.34
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  name: '🇪🇸 西班牙 | ESP #1'
+  server: 196.196.149.81
   port: 443
   udp: true
-  network: xhttp
+  network: tcp
   tls: true
-  servername: 35295cx.us8.h1clayd.click
-  client-fingerprint: qq
-  reality-opts:
-    public-key: LsaTohbE6CqCH9UbYKwIybVXG3E5Wgz_X9czqas2LAI
-    short-id: 9acff4d98e2fbcc6
+  servername: 38917fx.es1.h1clayd.click
+  client-fingerprint: chrome
+- type: vless
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  name: '🇪🇸 西班牙 | ESP #3'
+  server: 196.196.149.80
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 7aa271t.es1.h1clayd.click
+  client-fingerprint: firefox
 - type: vless
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   name: '🇺🇸 美国 | USA #1'
@@ -75,19 +74,19 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇸[www.v2nodes.com] vless-ES-1...
-  - '🇪🇸 西班牙 | ESP #1'
   - 🇪🇸 西班牙 | ESP
-  - 🇺🇸 美国 | USA
+  - 🇪🇸 西班牙 | ESP
+  - '🇪🇸 西班牙 | ESP #1'
+  - '🇪🇸 西班牙 | ESP #3'
   - '🇺🇸 美国 | USA #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇪🇸[www.v2nodes.com] vless-ES-1...
-  - '🇪🇸 西班牙 | ESP #1'
   - 🇪🇸 西班牙 | ESP
-  - 🇺🇸 美国 | USA
+  - 🇪🇸 西班牙 | ESP
+  - '🇪🇸 西班牙 | ESP #1'
+  - '🇪🇸 西班牙 | ESP #3'
   - '🇺🇸 美国 | USA #1'
 rules:
 - MATCH,SELECT
