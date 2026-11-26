@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
-  name: 🇸🇪[www.v2nodes.com] vless-SE-1...
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   server: 185.247.224.206
   port: 443
   udp: true
@@ -23,29 +23,17 @@ proxies:
     path: /media/ws/fp=firefox
     headers:
       Host: accessfooter.cleanfoodshop.org
-- type: vless
-  uuid: 73ebb72a-e2a8-44c8-a0e3-938740a4f578
-  name: '🇪🇪 爱沙尼亚 | EST #1'
-  server: 13.141.36.163
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: 079b6et.ee5.h1clayd.shop
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇪[www.v2nodes.com] vless-SE-1...
-  - '🇪🇪 爱沙尼亚 | EST #1'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇸🇪[www.v2nodes.com] vless-SE-1...
-  - '🇪🇪 爱沙尼亚 | EST #1'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
 rules:
 - MATCH,SELECT

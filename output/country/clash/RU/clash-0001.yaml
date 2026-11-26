@@ -10,9 +10,16 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: ss
+  cipher: aes-256-gcm
+  password: 5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe
+  name: 🇷🇺[www.v2nodes.com] ss-RU-1624...
+  server: 194.87.69.12
+  port: 18443
+  udp: true
 - type: vless
   uuid: 0173d52e-8e1b-4681-831e-11529677b72f
-  name: '🇪🇪 爱沙尼亚 | EST #1'
+  name: 🇪🇪[www.v2nodes.com] vless-EE-1...
   server: 165.231.157.126
   port: 8443
   udp: true
@@ -21,6 +28,26 @@ proxies:
   tls: true
   servername: api-6b04608f.adhil.uk
   client-fingerprint: safari
+- type: vless
+  uuid: 026ecbd6-2838-40f6-b530-d2c303c4f629
+  name: '🇷🇺 俄罗斯 | RUS #1'
+  server: 194.26.229.207
+  port: 4100
+  udp: true
+  network: ws
+  ws-opts:
+    path: /v1
+    headers:
+      Host: live.ok.ru
+- type: vless
+  uuid: f2d2907c-1d74-43eb-8fd2-fc55dfd92427
+  name: '🇷🇺 俄罗斯 | RUS #4'
+  server: 194.26.229.207
+  port: 2200
+  udp: true
+  network: ws
+  ws-opts:
+    path: /v1
 - type: vless
   uuid: 0173d52e-8e1b-4681-831e-11529677b72f
   name: 🇪🇪 爱沙尼亚 | EST
@@ -33,41 +60,35 @@ proxies:
   servername: api-6b04608f.adhil.uk
   client-fingerprint: safari
 - type: vless
-  uuid: b432a23a-acff-425c-bf69-70480cd6ed09
-  name: '🇩🇪 德国 | DEU #4'
-  server: 188.225.33.67
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
+  server: 176.98.176.60
   port: 443
   udp: true
-  network: ws
-  tls: true
-  servername: e2.cdnwh.icu
-  ws-opts:
-    path: /stream/segment/3078a41dd7eb/fp=firefox
-    headers:
-      Host: e2.cdnwh.icu
-- type: ss
-  cipher: aes-256-gcm
-  password: 5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe
-  name: '🇷🇺 俄罗斯 | RUS #1'
-  server: 194.87.69.12
-  port: 18443
-  udp: true
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: VVlAff77CnAU43Aoc5j15Y
-  name: 🇷🇺[www.v2nodes.com] ss-RU-1163...
-  server: 90.156.203.62
-  port: 5112
-  udp: true
-- type: vless
-  uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
-  name: '🇩🇪 德国 | DEU #1'
-  server: 193.160.208.240
-  port: 443
-  udp: true
+  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: 193.160.208.240
+  servername: mosaic.topp-con.xyz
+  client-fingerprint: firefox
+- type: vless
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
+  server: 5.129.253.99
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: rookery.moltex.click
+  client-fingerprint: firefox
+- type: vless
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  name: 🇷🇺 俄罗斯 | RUS 7
+  server: 201.24.116.192
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: vps3.nemnogogo.com
   client-fingerprint: firefox
 - type: vless
   uuid: b432a23a-acff-425c-bf69-70480cd6ed09
@@ -83,59 +104,44 @@ proxies:
     path: /stream/segment/3078a41dd7eb/
     headers:
       Host: e2.cdnwh.icu
-- type: vless
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  server: 176.98.176.60
+- type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知120
+  server: 194.226.142.120
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
   tls: true
-  servername: mosaic.topp-con.xyz
-  client-fingerprint: firefox
-- type: vless
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
-  name: 🇷🇺 俄罗斯 | RUS 7
-  server: 201.24.116.192
-  port: 443
+  servername: renderer-stream-2-62.mirra.now
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: VVlAff77CnAU43Aoc5j15Y
+  name: 🇷🇺[www.v2nodes.com] ss-RU-1163...
+  server: 90.156.203.62
+  port: 5112
   udp: true
-  network: grpc
-  tls: true
-  servername: vps3.nemnogogo.com
-  client-fingerprint: firefox
 - type: vless
-  uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
-  name: 🇩🇪 德国 | DEU
-  server: 193.160.208.240
+  uuid: b432a23a-acff-425c-bf69-70480cd6ed09
+  name: 🇩🇪[www.v2nodes.com] vless-DE-1...
+  server: 188.225.33.67
   port: 443
-  udp: true
-  network: xhttp
-  tls: true
-  servername: 193.160.208.240
-  client-fingerprint: firefox
-- type: vless
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
-  server: 5.129.253.99
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: rookery.moltex.click
-  client-fingerprint: firefox
-- type: vless
-  uuid: f2d2907c-1d74-43eb-8fd2-fc55dfd92427
-  name: '🇷🇺 俄罗斯 | RUS #2'
-  server: 194.26.229.207
-  port: 2200
   udp: true
   network: ws
+  tls: true
+  servername: e2.cdnwh.icu
   ws-opts:
-    path: /v1
+    path: /stream/segment/3078a41dd7eb/fp=firefox
+    headers:
+      Host: e2.cdnwh.icu
 - type: vless
   uuid: 026ecbd6-2838-40f6-b530-d2c303c4f629
-  name: '🇷🇺 俄罗斯 | RUS #8'
+  name: '🇷🇺 俄罗斯 | RUS #2'
   server: 194.26.229.207
   port: 2200
   udp: true
@@ -144,46 +150,6 @@ proxies:
     path: /v1
     headers:
       Host: rzd.ru
-- type: vless
-  uuid: 9a591702-24c7-4abf-9f14-ac59438a64e6
-  name: '🇺🇸 美国 | USA #3'
-  server: 176.114.95.245
-  port: 443
-  udp: true
-  network: tcp
-- type: vless
-  uuid: 9df9ee1a-0671-4c6c-93c7-65598fb946f7
-  name: '🇩🇪 德国 | DEU #1'
-  server: 5.42.104.42
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: rugermicro2.gangplatform.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: 026ecbd6-2838-40f6-b530-d2c303c4f629
-  name: '🇷🇺 俄罗斯 | RUS #4'
-  server: 194.26.229.207
-  port: 4100
-  udp: true
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-- type: vless
-  uuid: 9df9ee1a-0671-4c6c-93c7-65598fb946f7
-  name: '🇷🇺 俄罗斯 | RUS #5'
-  server: 193.124.66.208
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: rufinmicro1.gangplatform.com
-  client-fingerprint: chrome
 - type: vless
   uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
   name: 🇱🇻 拉脱维亚 | LVA
@@ -196,24 +162,9 @@ proxies:
   client-fingerprint: firefox
   ws-opts:
     path: /ws
-- type: vmess
-  uuid: 27653b37-603c-4c90-b1f5-25c4d23f8932
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知9
-  server: 37.220.161.249
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-129.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-129.mirra.now
 - type: vless
   uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
-  name: '🇱🇻 拉脱维亚 | LVA #1'
+  name: 🇱🇻[www.v2nodes.com] vless-LV-1...
   server: 213.183.45.23
   port: 8450
   udp: true
@@ -223,35 +174,14 @@ proxies:
   ws-opts:
     path: /wsfp=firefox
 - type: vless
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
-  name: 🇷🇺 俄罗斯 | RUS 3
-  server: 201.51.12.98
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: vps3.nemnogogo.com
-  client-fingerprint: firefox
-- type: vless
   uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
-  name: '🇦🇪 阿联酋 | ARE #1'
+  name: '🇷🇺 俄罗斯 | RUS #7'
   server: 213.183.41.31
   port: 8459
   udp: true
   network: ws
   tls: true
   servername: photos.plumstatic.com
-  ws-opts:
-    path: /wsfp=firefox
-- type: vless
-  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
-  name: '🇸🇬 新加坡 | SGP #1'
-  server: 213.183.45.23
-  port: 8444
-  udp: true
-  network: ws
-  tls: true
-  servername: media.plumstatic.com
   ws-opts:
     path: /wsfp=firefox
 - type: vless
@@ -266,6 +196,17 @@ proxies:
   client-fingerprint: firefox
   ws-opts:
     path: /ws
+- type: vless
+  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
+  name: '🏳[www.v2nodes.com] vless- #7'
+  server: 213.183.45.23
+  port: 8444
+  udp: true
+  network: ws
+  tls: true
+  servername: media.plumstatic.com
+  ws-opts:
+    path: /wsfp=firefox
 - type: vless
   uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
   name: 🇯🇵[www.v2nodes.com] vless-JP-1...
@@ -283,59 +224,47 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇪🇪 爱沙尼亚 | EST #1'
-  - 🇪🇪 爱沙尼亚 | EST
-  - '🇩🇪 德国 | DEU #4'
+  - 🇷🇺[www.v2nodes.com] ss-RU-1624...
+  - 🇪🇪[www.v2nodes.com] vless-EE-1...
   - '🇷🇺 俄罗斯 | RUS #1'
-  - 🇷🇺[www.v2nodes.com] ss-RU-1163...
-  - '🇩🇪 德国 | DEU #1'
-  - 🇩🇪 德国 | DEU
+  - '🇷🇺 俄罗斯 | RUS #4'
+  - 🇪🇪 爱沙尼亚 | EST
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
   - 🇷🇺 俄罗斯 | RUS 7
   - 🇩🇪 德国 | DEU
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
+  - 未知120
+  - 🇷🇺[www.v2nodes.com] ss-RU-1163...
+  - 🇩🇪[www.v2nodes.com] vless-DE-1...
   - '🇷🇺 俄罗斯 | RUS #2'
-  - '🇷🇺 俄罗斯 | RUS #8'
-  - '🇺🇸 美国 | USA #3'
-  - '🇩🇪 德国 | DEU #1'
-  - '🇷🇺 俄罗斯 | RUS #4'
-  - '🇷🇺 俄罗斯 | RUS #5'
   - 🇱🇻 拉脱维亚 | LVA
-  - 未知9
-  - '🇱🇻 拉脱维亚 | LVA #1'
-  - 🇷🇺 俄罗斯 | RUS 3
-  - '🇦🇪 阿联酋 | ARE #1'
-  - '🇸🇬 新加坡 | SGP #1'
+  - 🇱🇻[www.v2nodes.com] vless-LV-1...
+  - '🇷🇺 俄罗斯 | RUS #7'
   - 🇸🇬 新加坡 | SGP
+  - '🏳[www.v2nodes.com] vless- #7'
   - 🇯🇵[www.v2nodes.com] vless-JP-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇪🇪 爱沙尼亚 | EST #1'
-  - 🇪🇪 爱沙尼亚 | EST
-  - '🇩🇪 德国 | DEU #4'
+  - 🇷🇺[www.v2nodes.com] ss-RU-1624...
+  - 🇪🇪[www.v2nodes.com] vless-EE-1...
   - '🇷🇺 俄罗斯 | RUS #1'
-  - 🇷🇺[www.v2nodes.com] ss-RU-1163...
-  - '🇩🇪 德国 | DEU #1'
-  - 🇩🇪 德国 | DEU
+  - '🇷🇺 俄罗斯 | RUS #4'
+  - 🇪🇪 爱沙尼亚 | EST
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
   - 🇷🇺 俄罗斯 | RUS 7
   - 🇩🇪 德国 | DEU
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
+  - 未知120
+  - 🇷🇺[www.v2nodes.com] ss-RU-1163...
+  - 🇩🇪[www.v2nodes.com] vless-DE-1...
   - '🇷🇺 俄罗斯 | RUS #2'
-  - '🇷🇺 俄罗斯 | RUS #8'
-  - '🇺🇸 美国 | USA #3'
-  - '🇩🇪 德国 | DEU #1'
-  - '🇷🇺 俄罗斯 | RUS #4'
-  - '🇷🇺 俄罗斯 | RUS #5'
   - 🇱🇻 拉脱维亚 | LVA
-  - 未知9
-  - '🇱🇻 拉脱维亚 | LVA #1'
-  - 🇷🇺 俄罗斯 | RUS 3
-  - '🇦🇪 阿联酋 | ARE #1'
-  - '🇸🇬 新加坡 | SGP #1'
+  - 🇱🇻[www.v2nodes.com] vless-LV-1...
+  - '🇷🇺 俄罗斯 | RUS #7'
   - 🇸🇬 新加坡 | SGP
+  - '🏳[www.v2nodes.com] vless- #7'
   - 🇯🇵[www.v2nodes.com] vless-JP-1...
 rules:
 - MATCH,SELECT

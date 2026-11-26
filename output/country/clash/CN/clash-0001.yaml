@@ -11,27 +11,31 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
-  uuid: 2b910c43-51e3-4b15-9be8-b658106ba35e
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知
-  server: 39.108.113.127
-  port: 10086
+  name: 未知52
+  server: 162.4.136.79
+  port: 443
   udp: true
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
   ws-opts:
-    path: /
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知
+  - 未知52
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知
+  - 未知52
 rules:
 - MATCH,SELECT

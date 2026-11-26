@@ -10,25 +10,53 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: a5b1d16b-719b-4bd6-9d7b-fe6d84607da9
+  name: 🇺🇸US_3|1006KB/s
+  server: 3.219.184.102
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: fortuna.masynbazar.ru
+  client-fingerprint: chrome
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-185.230.230.18-0069
+  name: 🇺🇸US-185.230.230.18-0033
   server: 185.230.230.18
   port: 19999
   udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-45.86.51.18-0068
-  server: 45.86.51.18
+  name: 🇺🇸US-172.111.38.72-0117
+  server: 172.111.38.72
   port: 19999
+  udp: true
+- type: vless
+  uuid: c762af05-2e92-4133-bc30-8cf45dd40a28
+  name: 🇫🇷[www.v2nodes.com] vless-FR-1...
+  server: 188.114.99.137
+  port: 80
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: suh.cryptofront.uk
+- type: ss
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+  name: 🇺🇸[www.v2nodes.com] ss-US-1551...
+  server: 15.204.246.108
+  port: 8881
   udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-172.111.38.72-0163
-  server: 172.111.38.72
+  name: 🇺🇸US-45.86.51.18-0035
+  server: 45.86.51.18
   port: 19999
   udp: true
 - type: vmess
@@ -36,7 +64,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
-  name: US3
+  name: US13
   server: 188.114.99.137
   port: 80
   udp: true
@@ -53,42 +81,67 @@ proxies:
   udp: true
 - type: ss
   cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-  name: 🇺🇸[www.v2nodes.com] ss-US-1551...
-  server: 15.204.246.108
-  port: 8881
+  password: FoOiGlkAA9yPEGP
+  name: 🇺🇸[www.v2nodes.com] ss-US-1544...
+  server: 15.204.246.132
+  port: 7307
   udp: true
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🏳[www.v2nodes.com] trojan- #2'
-  server: 66.163.122.25
-  port: 443
-  udp: true
-  sni: cdn.searchnationwidecareerchangehelperandguidancetoday.com
-- type: vless
-  uuid: c762af05-2e92-4133-bc30-8cf45dd40a28
-  name: 🇫🇷[www.v2nodes.com] vless-FR-1...
-  server: 188.114.99.137
-  port: 80
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: suh.cryptofront.uk
 - type: ss
   cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
-  name: 🇺🇸[www.v2nodes.com] ss-US-1539...
-  server: 15.204.247.124
-  port: 2375
+  password: pKEW8JPByTVTLtM
+  name: 🇺🇸US-15.204.247.206-0169
+  server: 15.204.247.206
+  port: 4444
+  udp: true
+- type: vmess
+  uuid: ac251237-576f-40c8-a543-554960c958b1
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: US20
+  server: 188.114.99.137
+  port: 2083
+  udp: true
+  tls: true
+  servername: cdn.sfacg.uk
+  ws-opts:
+    path: /or3
+    headers:
+      Host: or3.sfacg.uk
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-37.19.198.244-0041
+  server: 37.19.198.244
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-37.19.198.236-0039
+  server: 37.19.198.236
+  port: 443
   udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-38.91.100.39-0129
-  server: 38.91.100.39
+  name: 🇺🇸US-193.151.163.18-0032
+  server: 193.151.163.18
   port: 19999
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-37.19.198.160-0034
+  server: 37.19.198.160
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-37.19.198.243-0038
+  server: 37.19.198.243
+  port: 443
   udp: true
 - type: vless
   uuid: 1f8cf47a-b66a-4916-979f-26edfcf44eea
@@ -101,283 +154,225 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
-- type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  name: '🇺🇸[www.v2nodes.com] vless-US-1... #7'
-  server: 169.40.42.168
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: ios
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-193.151.163.18-0073
-  server: 193.151.163.18
+  name: 🇺🇸US-38.91.100.39-0102
+  server: 38.91.100.39
   port: 19999
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-37.19.198.236-0070
-  server: 37.19.198.236
-  port: 443
   udp: true
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: eDfN7SODQceIOmIAbtJJtK
-  name: 🇺🇸US-198.98.53.130-0228
+  name: 🇺🇸US-198.98.53.130-0185
   server: 198.98.53.130
   port: 443
   udp: true
 - type: ss
   cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  name: 🇺🇸[www.v2nodes.com] ss-US-1544...
-  server: 15.204.246.132
-  port: 7307
-  udp: true
-- type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  name: '🇺🇸[www.v2nodes.com] vless-US-1... #8'
-  server: 169.40.42.163
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: ios
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-37.19.198.160-0079
-  server: 37.19.198.160
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-149.40.57.134-0132
-  server: 149.40.57.134
+  name: 🇺🇸US-38.22.17.129-0114
+  server: 38.22.17.129
   port: 19999
   udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-149.40.57.133-0152
-  server: 149.40.57.133
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-37.19.198.243-0072
-  server: 37.19.198.243
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-37.19.198.244-0071
-  server: 37.19.198.244
-  port: 443
-  udp: true
-- type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  name: '🏳[www.v2nodes.com] vless- #14'
-  server: 169.40.42.231
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: ios
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-149.40.57.138-0149
-  server: 149.40.57.138
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-38.128.66.32-0125
-  server: 38.128.66.32
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-216.106.178.169-0135
-  server: 216.106.178.169
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-193.151.160.9-0077
-  server: 193.151.160.9
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-193.151.160.18-0074
-  server: 193.151.160.18
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-162.251.62.31-0134
-  server: 162.251.62.31
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-38.91.107.188-0123
-  server: 38.91.107.188
-  port: 19999
-  udp: true
-- type: vmess
-  uuid: 1c3fb1c0-1204-49db-b842-f72d50f014c1
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知121
-  server: 66.154.113.180
-  port: 443
-  udp: true
-  tls: true
-  servername: my.lovehk.xyz
-  ws-opts:
-    path: /KualaLumpur1
-    headers:
-      Host: my.lovehk.xyz
-- type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: US19 3.2MB/s
-  server: 38.91.107.49
-  port: 18000
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-38.121.43.18-0141
-  server: 38.121.43.18
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-172.111.36.123-0119
-  server: 172.111.36.123
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-38.121.43.225-0143
+  name: 🇺🇸US-38.121.43.225-0105
   server: 38.121.43.225
   port: 19999
   udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-38.22.17.129-0136
-  server: 38.22.17.129
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
-  name: 🇺🇸US-15.204.247.206-0204
-  server: 15.204.247.206
-  port: 4444
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-156.146.38.168-0128
-  server: 156.146.38.168
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇺🇸US-156.146.38.169-0121
-  server: 156.146.38.169
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-38.22.17.219-0140
-  server: 38.22.17.219
+  name: 🇺🇸US-38.121.43.18-0103
+  server: 38.121.43.18
   port: 19999
   udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-38.121.43.231-0139
+  name: 🇺🇸US-38.121.43.231-0100
   server: 38.121.43.231
   port: 19999
   udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-167.88.63.99-0138
+  name: 🇺🇸US-167.88.63.99-0089
   server: 167.88.63.99
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-38.22.17.219-0099
+  server: 38.22.17.219
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-149.40.57.138-0080
+  server: 149.40.57.138
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-149.40.57.134-0090
+  server: 149.40.57.134
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-172.111.36.123-0082
+  server: 172.111.36.123
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-149.40.57.133-0112
+  server: 149.40.57.133
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-193.151.160.18-0037
+  server: 193.151.160.18
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-38.91.107.188-0081
+  server: 38.91.107.188
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-193.151.160.9-0036
+  server: 193.151.160.9
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-162.251.62.31-0079
+  server: 162.251.62.31
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-38.128.66.32-0078
+  server: 38.128.66.32
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-216.106.178.169-0098
+  server: 216.106.178.169
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-84.20.27.183-0075
+  server: 84.20.27.183
   port: 19999
   udp: true
 - type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-  name: 🇺🇸US-156.146.38.170-0127
+  name: 🇺🇸US-156.146.38.170-0084
   server: 156.146.38.170
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-156.146.38.168-0096
+  server: 156.146.38.168
+  port: 443
+  udp: true
+- type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: US10
+  server: 167.88.62.124
+  port: 22324
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇺🇸US-156.146.38.169-0085
+  server: 156.146.38.169
+  port: 443
+  udp: true
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇺🇸 美国 | USA #7'
+  server: 66.163.114.106
+  port: 443
+  udp: true
+  sni: www.findconnectwithemployersandbuildprofessionalnetwork.com
+  skip-cert-verify: true
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇺🇸 美国 | USA #10'
+  server: 66.163.114.166
+  port: 443
+  udp: true
+  sni: blog.findconnectwithemployersandbuildprofessionalnetwork.com
+  skip-cert-verify: true
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇺🇸 美国 | USA #5'
+  server: 66.163.114.114
+  port: 443
+  udp: true
+  sni: 66.163.114.114
+  skip-cert-verify: true
+- type: ss
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+  name: 🇺🇸[www.v2nodes.com] ss-US-1554...
+  server: 15.204.247.244
   port: 443
   udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-95.215.201.18-0144
+  name: 🇺🇸US-95.215.201.18-0064
   server: 95.215.201.18
   port: 19999
   udp: true
-- type: vmess
-  uuid: 273695bd-c2fb-4c54-9477-4b702a606242
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: US15
-  server: 142.171.48.179
-  port: 28167
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇺🇸[www.v2nodes.com] trojan-US-... #6'
+  server: 66.163.112.13
+  port: 443
   udp: true
-  ws-opts:
-    path: /
-    headers:
-      Host: gw.alicdn.com
+  sni: blog.unlockyourfuturefindyourperfectcareer.com
 - type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-  name: 🇺🇸US-173.244.56.9-0153
+  name: 🇺🇸US-173.244.56.9-0104
   server: 173.244.56.9
   port: 443
   udp: true
 - type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-  name: 🇺🇸US-173.244.56.6-0156
+  name: 🇺🇸US-173.244.56.6-0108
   server: 173.244.56.6
   port: 443
   udp: true
@@ -391,29 +386,16 @@ proxies:
   tls: true
   servername: github.githubassets.com
   client-fingerprint: chrome
-- type: vless
-  uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
-  name: 🇺🇸 美国 | USA
-  server: 156.229.167.109
-  port: 8443
-  udp: true
-  network: tcp
-  tls: true
-  servername: github.githubassets.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 4g6gX0ueJap7pY_iTDx23h6bzo3KIOTcFzP1Uacn0QA
-    short-id: 4ad2e4e660550e43
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-23.150.152.38-0150
+  name: 🇺🇸US-23.150.152.38-0119
   server: 23.150.152.38
   port: 19999
   udp: true
 - type: vless
   uuid: ce18d0eb-5c71-41f9-96e5-1632e22456e4
-  name: '🇺🇸[www.v2nodes.com] vless-US-1... #3'
+  name: '🇺🇸[www.v2nodes.com] vless-US-1... #4'
   server: 195.123.240.65
   port: 443
   udp: true
@@ -422,20 +404,6 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: ios
-- type: vless
-  uuid: 40a4b915-5e6f-4316-9bb1-e899f30608e3
-  name: 美国|@ripaojiedian
-  server: 172.233.129.172
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /wsflow=
-    headers:
-      Host: itunes.apple.com
 - type: vless
   uuid: b69cf773-da16-486e-afce-a45b94f998b3
   name: 美国4|@ripaojiedian
@@ -451,6 +419,19 @@ proxies:
     headers:
       Host: senflarelink-node-xfcyh2.pages.dev
 - type: vless
+  uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
+  name: 🇺🇸 美国 | USA
+  server: 156.229.167.109
+  port: 8443
+  udp: true
+  network: tcp
+  tls: true
+  servername: github.githubassets.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 4g6gX0ueJap7pY_iTDx23h6bzo3KIOTcFzP1Uacn0QA
+    short-id: 4ad2e4e660550e43
+- type: vless
   uuid: e1ce77dc-8bb4-4f53-a791-a93a0ab04f54
   name: '🇨🇦 加拿大 | CAN #1'
   server: 69.8.129.43
@@ -463,48 +444,6 @@ proxies:
     path: /492fbb0e1ab5996dfp=chrome
     headers:
       Host: us1.1am.cc.cd
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-137.184.89.151-0126
-  server: 137.184.89.151
-  port: 19999
-  udp: true
-- type: vless
-  uuid: 975fc322-6e38-434b-a53c-d39fed49b9a9
-  name: '🇺🇸[www.v2nodes.com] vless-US-1... #2'
-  server: 47.251.108.158
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  name: '🇺🇸[www.v2nodes.com] trojan-US-... #2'
-  server: 167.88.61.52
-  port: 443
-  udp: true
-  sni: courses.browseseniorrolesandenhanceyourcareertoday.com
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-169.197.142.68-0131
-  server: 169.197.142.68
-  port: 19999
-  udp: true
-- type: vless
-  uuid: a52ac672-0f5f-4070-b8fd-6b5685fc8004
-  name: '🇺🇸[www.v2nodes.com] vless-US-1... #1'
-  server: 199.7.140.201
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 - type: vless
   uuid: e1ce77dc-8bb4-4f53-a791-a93a0ab04f54
   name: 🇨🇦 加拿大 | CAN
@@ -519,6 +458,55 @@ proxies:
     path: /492fbb0e1ab5996d
     headers:
       Host: us1.1am.cc.cd
+- type: trojan
+  password: qpbw_r_Ykr5EZTGKX3mNZSVTj9liEAL3
+  name: '🇺🇸 美国 | USA #8'
+  server: 186.241.106.5
+  port: 443
+  udp: true
+  sni: 186.241.106.5
+  skip-cert-verify: true
+- type: vmess
+  uuid: 273695bd-c2fb-4c54-9477-4b702a606242
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: US22
+  server: 142.171.48.179
+  port: 28167
+  udp: true
+  ws-opts:
+    path: /
+    headers:
+      Host: gw.alicdn.com
+- type: vless
+  uuid: 40a4b915-5e6f-4316-9bb1-e899f30608e3
+  name: 美国|@ripaojiedian
+  server: 172.233.129.172
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /wsflow=
+    headers:
+      Host: itunes.apple.com
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇺🇸[www.v2nodes.com] trojan-US-... #4'
+  server: 167.88.61.52
+  port: 443
+  udp: true
+  sni: courses.browseseniorrolesandenhanceyourcareertoday.com
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-169.197.142.68-0093
+  server: 169.197.142.68
+  port: 19999
+  udp: true
 - type: vless
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   name: '🇺🇸[www.v2nodes.com] vless-US-1... #5'
@@ -532,24 +520,11 @@ proxies:
   client-fingerprint: chrome
 - type: ss
   cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
-  name: 🇺🇸[www.v2nodes.com] ss-US-1554...
-  server: 15.204.247.244
-  port: 443
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇺🇸US-137.184.89.151-0042
+  server: 137.184.89.151
+  port: 19999
   udp: true
-- type: vless
-  uuid: ef5a57c7-84d5-4f86-b99c-875a16da485f
-  name: '🏳[www.v2nodes.com] vless- #10'
-  server: 48.102.173.24
-  port: 444
-  udp: true
-  network: ws
-  tls: true
-  servername: neplay603.gangtype.com
-  ws-opts:
-    path: /stream/updates/a66d7902fp=firefox
-    headers:
-      Host: neplay603.gangtype.com
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: ijoUwfdnkz7mX4pWdkSpmEixTZCt2TRm1JDr4BSaBAWkLxYGoXBHXadFKY5D5ZfoVTwqsx46jCmEUDnQUizJDYrM7B5anhnu
@@ -559,7 +534,7 @@ proxies:
   udp: true
 - type: vless
   uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
-  name: '🇺🇸[www.v2nodes.com] vless-US-1... #2'
+  name: '🇺🇸[www.v2nodes.com] vless-US-1... #3'
   server: 46.29.255.123
   port: 59539
   udp: true
@@ -568,13 +543,6 @@ proxies:
   tls: true
   servername: cloudflare-dns.com
   client-fingerprint: firefox
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇺🇸US-84.20.27.183-0118
-  server: 84.20.27.183
-  port: 19999
-  udp: true
 - type: vless
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   name: 🇺🇸 美国 | USA
@@ -588,9 +556,24 @@ proxies:
   reality-opts:
     public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
     short-id: bd8f712209a9c283
+- type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  network: ws
+  name: 🇺🇸US-38.11.69.48-0175
+  server: 38.11.69.48
+  port: 30004
+  udp: true
+  tls: true
+  servername: www.83761815.xyz
+  ws-opts:
+    path: /
+    headers:
+      Host: www.83761815.xyz
 - type: vless
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: 🇺🇸 美国 | USA 8
+  name: 🇺🇸 美国 | USA 12
   server: 162.35.101.177
   port: 443
   udp: true
@@ -609,31 +592,16 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  network: ws
-  name: 🇺🇸US-38.11.69.48-0529
-  server: 38.11.69.48
-  port: 30004
-  udp: true
-  tls: true
-  servername: www.83761815.xyz
-  ws-opts:
-    path: /path/1698843555400
-    headers:
-      Host: www.83761815.xyz
-- type: hysteria2
-  password: 111a64ce-3aaf-4154-9ee9-7bcc0e214d7c
-  name: '@VPsave'
-  server: 177.3.252.187
+- type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '🇺🇸[www.v2nodes.com] trojan-US-... #8'
+  server: 66.163.122.25
   port: 443
   udp: true
-  sni: quattro-vpn-zalupa.cxhub.su
+  sni: cdn.searchnationwidecareerchangehelperandguidancetoday.com
 - type: hysteria2
-  password: c358d323-c2c7-4457-bfdb-dd736ba16d38
-  name: '@VPsave #3'
+  password: 4dea9141-914b-4a25-86b4-c5f98616cb8d
+  name: '@VPsave #1'
   server: 177.3.252.187
   port: 443
   udp: true
@@ -648,14 +616,6 @@ proxies:
   obfs: salamander
   obfs-password: JGIhnEi-CcIJOfNTqvNxX_5wRAYUZ0J2
 - type: hysteria2
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  name: 🇺🇸139909 | ⚡️Telegram = t.me/S...
-  server: 54.213.89.22
-  port: 443
-  udp: true
-  sni: vk.com
-  skip-cert-verify: true
-- type: hysteria2
   password: EelIYEc5ZR8RT6thWcK9ohYkp3bYZGcn
   name: 🇺🇸231154 | ⚡️Telegram = t.me/L...
   server: 137.175.93.155
@@ -663,6 +623,13 @@ proxies:
   udp: true
   sni: www.microsoft.com
   skip-cert-verify: true
+- type: hysteria2
+  password: c358d323-c2c7-4457-bfdb-dd736ba16d38
+  name: '@VPsave #3'
+  server: 177.3.252.187
+  port: 443
+  udp: true
+  sni: quattro-vpn-zalupa.cxhub.su
 - type: hysteria2
   password: 247802ca-0fbb-428a-b807-91a6e571b5c7
   name: ✅  @vistav2ray کانال ما ✅
@@ -673,6 +640,21 @@ proxies:
   obfs: salamander
   obfs-password: a7rK-GlWiXFjHnfCYQeiNGqPgqj7sfRr
 - type: hysteria2
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  name: 🇺🇸139909 | ⚡️Telegram = t.me/S...
+  server: 54.213.89.22
+  port: 443
+  udp: true
+  sni: vk.com
+  skip-cert-verify: true
+- type: hysteria2
+  password: 111a64ce-3aaf-4154-9ee9-7bcc0e214d7c
+  name: '@VPsave'
+  server: 177.3.252.187
+  port: 443
+  udp: true
+  sni: quattro-vpn-zalupa.cxhub.su
+- type: hysteria2
   password: 57beeeb0-03fc-4fc9-94da-7604488a7134
   name: 🇺🇸 24@exclavevpn
   server: 154.40.49.216
@@ -682,178 +664,169 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: re61ep4ancwplwh8
-- type: hysteria2
-  password: 4dea9141-914b-4a25-86b4-c5f98616cb8d
-  name: '@VPsave #1'
-  server: 177.3.252.187
-  port: 443
-  udp: true
-  sni: quattro-vpn-zalupa.cxhub.su
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸US-185.230.230.18-0069
-  - 🇺🇸US-45.86.51.18-0068
-  - 🇺🇸US-172.111.38.72-0163
-  - US3
-  - 🇺🇸[www.v2nodes.com] ss-US-1560...
-  - 🇺🇸[www.v2nodes.com] ss-US-1551...
-  - '🏳[www.v2nodes.com] trojan- #2'
+  - 🇺🇸US_3|1006KB/s
+  - 🇺🇸US-185.230.230.18-0033
+  - 🇺🇸US-172.111.38.72-0117
   - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - 🇺🇸[www.v2nodes.com] ss-US-1539...
-  - 🇺🇸US-38.91.100.39-0129
-  - '🏳[www.v2nodes.com] vless- #11'
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #7'
-  - 🇺🇸US-193.151.163.18-0073
-  - 🇺🇸US-37.19.198.236-0070
-  - 🇺🇸US-198.98.53.130-0228
+  - 🇺🇸[www.v2nodes.com] ss-US-1551...
+  - 🇺🇸US-45.86.51.18-0035
+  - US13
+  - 🇺🇸[www.v2nodes.com] ss-US-1560...
   - 🇺🇸[www.v2nodes.com] ss-US-1544...
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #8'
-  - 🇺🇸US-37.19.198.160-0079
-  - 🇺🇸US-149.40.57.134-0132
-  - 🇺🇸US-149.40.57.133-0152
-  - 🇺🇸US-37.19.198.243-0072
-  - 🇺🇸US-37.19.198.244-0071
-  - '🏳[www.v2nodes.com] vless- #14'
-  - 🇺🇸US-149.40.57.138-0149
-  - 🇺🇸US-38.128.66.32-0125
-  - 🇺🇸US-216.106.178.169-0135
-  - 🇺🇸US-193.151.160.9-0077
-  - 🇺🇸US-193.151.160.18-0074
-  - 🇺🇸US-162.251.62.31-0134
-  - 🇺🇸US-38.91.107.188-0123
-  - 未知121
-  - US19 3.2MB/s
-  - 🇺🇸US-38.121.43.18-0141
-  - 🇺🇸US-172.111.36.123-0119
-  - 🇺🇸US-38.121.43.225-0143
-  - 🇺🇸US-38.22.17.129-0136
-  - 🇺🇸US-15.204.247.206-0204
-  - 🇺🇸US-156.146.38.168-0128
-  - 🇺🇸US-156.146.38.169-0121
-  - 🇺🇸US-38.22.17.219-0140
-  - 🇺🇸US-38.121.43.231-0139
-  - 🇺🇸US-167.88.63.99-0138
-  - 🇺🇸US-156.146.38.170-0127
-  - 🇺🇸US-95.215.201.18-0144
-  - US15
-  - 🇺🇸US-173.244.56.9-0153
-  - 🇺🇸US-173.244.56.6-0156
-  - '🇺🇸 美国 | USA #8'
-  - 🇺🇸 美国 | USA
-  - 🇺🇸US-23.150.152.38-0150
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #3'
-  - 美国|@ripaojiedian
-  - 美国4|@ripaojiedian
-  - '🇨🇦 加拿大 | CAN #1'
-  - 🇺🇸US-137.184.89.151-0126
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #2'
-  - '🇺🇸[www.v2nodes.com] trojan-US-... #2'
-  - 🇺🇸US-169.197.142.68-0131
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #1'
-  - 🇨🇦 加拿大 | CAN
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #5'
+  - 🇺🇸US-15.204.247.206-0169
+  - US20
+  - 🇺🇸US-37.19.198.244-0041
+  - 🇺🇸US-37.19.198.236-0039
+  - 🇺🇸US-193.151.163.18-0032
+  - 🇺🇸US-37.19.198.160-0034
+  - 🇺🇸US-37.19.198.243-0038
+  - '🏳[www.v2nodes.com] vless- #11'
+  - 🇺🇸US-38.91.100.39-0102
+  - 🇺🇸US-198.98.53.130-0185
+  - 🇺🇸US-38.22.17.129-0114
+  - 🇺🇸US-38.121.43.225-0105
+  - 🇺🇸US-38.121.43.18-0103
+  - 🇺🇸US-38.121.43.231-0100
+  - 🇺🇸US-167.88.63.99-0089
+  - 🇺🇸US-38.22.17.219-0099
+  - 🇺🇸US-149.40.57.138-0080
+  - 🇺🇸US-149.40.57.134-0090
+  - 🇺🇸US-172.111.36.123-0082
+  - 🇺🇸US-149.40.57.133-0112
+  - 🇺🇸US-193.151.160.18-0037
+  - 🇺🇸US-38.91.107.188-0081
+  - 🇺🇸US-193.151.160.9-0036
+  - 🇺🇸US-162.251.62.31-0079
+  - 🇺🇸US-38.128.66.32-0078
+  - 🇺🇸US-216.106.178.169-0098
+  - 🇺🇸US-84.20.27.183-0075
+  - 🇺🇸US-156.146.38.170-0084
+  - 🇺🇸US-156.146.38.168-0096
+  - US10
+  - 🇺🇸US-156.146.38.169-0085
+  - '🇺🇸 美国 | USA #7'
+  - '🇺🇸 美国 | USA #10'
+  - '🇺🇸 美国 | USA #5'
   - 🇺🇸[www.v2nodes.com] ss-US-1554...
-  - '🏳[www.v2nodes.com] vless- #10'
-  - 🇺🇸[www.v2nodes.com] ss-US-1620...
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #2'
-  - 🇺🇸US-84.20.27.183-0118
-  - 🇺🇸 美国 | USA
-  - 🇺🇸 美国 | USA 8
+  - 🇺🇸US-95.215.201.18-0064
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #6'
+  - 🇺🇸US-173.244.56.9-0104
+  - 🇺🇸US-173.244.56.6-0108
+  - '🇺🇸 美国 | USA #8'
+  - 🇺🇸US-23.150.152.38-0119
   - '🇺🇸[www.v2nodes.com] vless-US-1... #4'
-  - 🇺🇸US-38.11.69.48-0529
-  - '@VPsave'
-  - '@VPsave #3'
-  - '✅  @vistav2ray کانال ما ✅ #1'
-  - 🇺🇸139909 | ⚡️Telegram = t.me/S...
-  - 🇺🇸231154 | ⚡️Telegram = t.me/L...
-  - ✅  @vistav2ray کانال ما ✅
-  - 🇺🇸 24@exclavevpn
+  - 美国4|@ripaojiedian
+  - 🇺🇸 美国 | USA
+  - '🇨🇦 加拿大 | CAN #1'
+  - 🇨🇦 加拿大 | CAN
+  - '🇺🇸 美国 | USA #8'
+  - US22
+  - 美国|@ripaojiedian
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #4'
+  - 🇺🇸US-169.197.142.68-0093
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #5'
+  - 🇺🇸US-137.184.89.151-0042
+  - 🇺🇸[www.v2nodes.com] ss-US-1620...
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #3'
+  - 🇺🇸 美国 | USA
+  - 🇺🇸US-38.11.69.48-0175
+  - 🇺🇸 美国 | USA 12
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #4'
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #8'
   - '@VPsave #1'
+  - '✅  @vistav2ray کانال ما ✅ #1'
+  - 🇺🇸231154 | ⚡️Telegram = t.me/L...
+  - '@VPsave #3'
+  - ✅  @vistav2ray کانال ما ✅
+  - 🇺🇸139909 | ⚡️Telegram = t.me/S...
+  - '@VPsave'
+  - 🇺🇸 24@exclavevpn
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇺🇸US-185.230.230.18-0069
-  - 🇺🇸US-45.86.51.18-0068
-  - 🇺🇸US-172.111.38.72-0163
-  - US3
-  - 🇺🇸[www.v2nodes.com] ss-US-1560...
-  - 🇺🇸[www.v2nodes.com] ss-US-1551...
-  - '🏳[www.v2nodes.com] trojan- #2'
+  - 🇺🇸US_3|1006KB/s
+  - 🇺🇸US-185.230.230.18-0033
+  - 🇺🇸US-172.111.38.72-0117
   - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - 🇺🇸[www.v2nodes.com] ss-US-1539...
-  - 🇺🇸US-38.91.100.39-0129
-  - '🏳[www.v2nodes.com] vless- #11'
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #7'
-  - 🇺🇸US-193.151.163.18-0073
-  - 🇺🇸US-37.19.198.236-0070
-  - 🇺🇸US-198.98.53.130-0228
+  - 🇺🇸[www.v2nodes.com] ss-US-1551...
+  - 🇺🇸US-45.86.51.18-0035
+  - US13
+  - 🇺🇸[www.v2nodes.com] ss-US-1560...
   - 🇺🇸[www.v2nodes.com] ss-US-1544...
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #8'
-  - 🇺🇸US-37.19.198.160-0079
-  - 🇺🇸US-149.40.57.134-0132
-  - 🇺🇸US-149.40.57.133-0152
-  - 🇺🇸US-37.19.198.243-0072
-  - 🇺🇸US-37.19.198.244-0071
-  - '🏳[www.v2nodes.com] vless- #14'
-  - 🇺🇸US-149.40.57.138-0149
-  - 🇺🇸US-38.128.66.32-0125
-  - 🇺🇸US-216.106.178.169-0135
-  - 🇺🇸US-193.151.160.9-0077
-  - 🇺🇸US-193.151.160.18-0074
-  - 🇺🇸US-162.251.62.31-0134
-  - 🇺🇸US-38.91.107.188-0123
-  - 未知121
-  - US19 3.2MB/s
-  - 🇺🇸US-38.121.43.18-0141
-  - 🇺🇸US-172.111.36.123-0119
-  - 🇺🇸US-38.121.43.225-0143
-  - 🇺🇸US-38.22.17.129-0136
-  - 🇺🇸US-15.204.247.206-0204
-  - 🇺🇸US-156.146.38.168-0128
-  - 🇺🇸US-156.146.38.169-0121
-  - 🇺🇸US-38.22.17.219-0140
-  - 🇺🇸US-38.121.43.231-0139
-  - 🇺🇸US-167.88.63.99-0138
-  - 🇺🇸US-156.146.38.170-0127
-  - 🇺🇸US-95.215.201.18-0144
-  - US15
-  - 🇺🇸US-173.244.56.9-0153
-  - 🇺🇸US-173.244.56.6-0156
-  - '🇺🇸 美国 | USA #8'
-  - 🇺🇸 美国 | USA
-  - 🇺🇸US-23.150.152.38-0150
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #3'
-  - 美国|@ripaojiedian
-  - 美国4|@ripaojiedian
-  - '🇨🇦 加拿大 | CAN #1'
-  - 🇺🇸US-137.184.89.151-0126
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #2'
-  - '🇺🇸[www.v2nodes.com] trojan-US-... #2'
-  - 🇺🇸US-169.197.142.68-0131
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #1'
-  - 🇨🇦 加拿大 | CAN
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #5'
+  - 🇺🇸US-15.204.247.206-0169
+  - US20
+  - 🇺🇸US-37.19.198.244-0041
+  - 🇺🇸US-37.19.198.236-0039
+  - 🇺🇸US-193.151.163.18-0032
+  - 🇺🇸US-37.19.198.160-0034
+  - 🇺🇸US-37.19.198.243-0038
+  - '🏳[www.v2nodes.com] vless- #11'
+  - 🇺🇸US-38.91.100.39-0102
+  - 🇺🇸US-198.98.53.130-0185
+  - 🇺🇸US-38.22.17.129-0114
+  - 🇺🇸US-38.121.43.225-0105
+  - 🇺🇸US-38.121.43.18-0103
+  - 🇺🇸US-38.121.43.231-0100
+  - 🇺🇸US-167.88.63.99-0089
+  - 🇺🇸US-38.22.17.219-0099
+  - 🇺🇸US-149.40.57.138-0080
+  - 🇺🇸US-149.40.57.134-0090
+  - 🇺🇸US-172.111.36.123-0082
+  - 🇺🇸US-149.40.57.133-0112
+  - 🇺🇸US-193.151.160.18-0037
+  - 🇺🇸US-38.91.107.188-0081
+  - 🇺🇸US-193.151.160.9-0036
+  - 🇺🇸US-162.251.62.31-0079
+  - 🇺🇸US-38.128.66.32-0078
+  - 🇺🇸US-216.106.178.169-0098
+  - 🇺🇸US-84.20.27.183-0075
+  - 🇺🇸US-156.146.38.170-0084
+  - 🇺🇸US-156.146.38.168-0096
+  - US10
+  - 🇺🇸US-156.146.38.169-0085
+  - '🇺🇸 美国 | USA #7'
+  - '🇺🇸 美国 | USA #10'
+  - '🇺🇸 美国 | USA #5'
   - 🇺🇸[www.v2nodes.com] ss-US-1554...
-  - '🏳[www.v2nodes.com] vless- #10'
-  - 🇺🇸[www.v2nodes.com] ss-US-1620...
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #2'
-  - 🇺🇸US-84.20.27.183-0118
-  - 🇺🇸 美国 | USA
-  - 🇺🇸 美国 | USA 8
+  - 🇺🇸US-95.215.201.18-0064
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #6'
+  - 🇺🇸US-173.244.56.9-0104
+  - 🇺🇸US-173.244.56.6-0108
+  - '🇺🇸 美国 | USA #8'
+  - 🇺🇸US-23.150.152.38-0119
   - '🇺🇸[www.v2nodes.com] vless-US-1... #4'
-  - 🇺🇸US-38.11.69.48-0529
-  - '@VPsave'
-  - '@VPsave #3'
-  - '✅  @vistav2ray کانال ما ✅ #1'
-  - 🇺🇸139909 | ⚡️Telegram = t.me/S...
-  - 🇺🇸231154 | ⚡️Telegram = t.me/L...
-  - ✅  @vistav2ray کانال ما ✅
-  - 🇺🇸 24@exclavevpn
+  - 美国4|@ripaojiedian
+  - 🇺🇸 美国 | USA
+  - '🇨🇦 加拿大 | CAN #1'
+  - 🇨🇦 加拿大 | CAN
+  - '🇺🇸 美国 | USA #8'
+  - US22
+  - 美国|@ripaojiedian
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #4'
+  - 🇺🇸US-169.197.142.68-0093
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #5'
+  - 🇺🇸US-137.184.89.151-0042
+  - 🇺🇸[www.v2nodes.com] ss-US-1620...
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #3'
+  - 🇺🇸 美国 | USA
+  - 🇺🇸US-38.11.69.48-0175
+  - 🇺🇸 美国 | USA 12
+  - '🇺🇸[www.v2nodes.com] vless-US-1... #4'
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #8'
   - '@VPsave #1'
+  - '✅  @vistav2ray کانال ما ✅ #1'
+  - 🇺🇸231154 | ⚡️Telegram = t.me/L...
+  - '@VPsave #3'
+  - ✅  @vistav2ray کانال ما ✅
+  - 🇺🇸139909 | ⚡️Telegram = t.me/S...
+  - '@VPsave'
+  - 🇺🇸 24@exclavevpn
 rules:
 - MATCH,SELECT

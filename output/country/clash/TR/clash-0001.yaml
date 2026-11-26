@@ -12,6 +12,16 @@ dns:
 proxies:
 - type: vless
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  name: 🇺🇸 美国 | USA 5
+  server: 153.56.230.6
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: 0592efg.us8.h1clayd.click
+  client-fingerprint: edge
+- type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   name: 🇺🇸 美国 | USA
   server: 153.56.230.6
   port: 443
@@ -23,29 +33,19 @@ proxies:
   reality-opts:
     public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
     short-id: bd8f712209a9c283
-- type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: 🇺🇸 美国 | USA 5
-  server: 153.56.230.6
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: 0592efg.us8.h1clayd.click
-  client-fingerprint: edge
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 | USA
   - 🇺🇸 美国 | USA 5
+  - 🇺🇸 美国 | USA
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 | USA
   - 🇺🇸 美国 | USA 5
+  - 🇺🇸 美国 | USA
 rules:
 - MATCH,SELECT
