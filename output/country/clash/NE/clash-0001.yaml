@@ -12,7 +12,18 @@ dns:
 proxies:
 - type: vless
   uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
+  name: 🇳🇱NL_6|1.1MB/s
+  server: 196.196.148.76
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: 8a2e72t.nl20.h1clayd.shop
+  client-fingerprint: firefox
+- type: vless
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
   server: 196.196.148.177
   port: 443
   udp: true
@@ -27,11 +38,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
+  - 🇳🇱NL_6|1.1MB/s
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
+  - 🇳🇱NL_6|1.1MB/s
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
 rules:
 - MATCH,SELECT

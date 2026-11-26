@@ -10,6 +10,17 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  server: 103.75.118.228
+  port: 12683
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
 - type: ss
   cipher: aes-128-gcm
   password: shadowsocks
@@ -17,10 +28,64 @@ proxies:
   server: 149.22.87.204
   port: 443
   udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1291...
+  server: 149.22.87.240
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇯🇵[www.v2nodes.com] ss-JP-9223...
+  server: 149.22.87.241
+  port: 443
+  udp: true
+- type: vmess
+  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇯🇵JP-168.110.63.247-5345
+  server: 168.110.63.247
+  port: 8081
+  udp: true
+  ws-opts:
+    path: /vless
+- type: ss
+  cipher: aes-128-gcm
+  password: Bwlqh7GcFB
+  name: 🇯🇵JP-168.138.205.100-0195
+  server: 168.138.205.100
+  port: 53758
+  udp: true
+- type: vmess
+  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇯🇵JP-168.110.63.247-0197
+  server: 168.110.63.247
+  port: 8081
+  udp: true
+  ws-opts:
+    path: /
 - type: vless
-  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
-  name: 日本2|@ripaojiedian
-  server: 172.104.86.181
+  uuid: 7318caa1-93d1-4a9d-c481-504599902700
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
+  server: 155.248.175.201
+  port: 23169
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: djj.zjlo.top
+  client-fingerprint: firefox
+- type: vless
+  uuid: b4ec7f6b-b41e-4018-9f76-19204e138db9
+  name: 日本3|@ripaojiedian
+  server: 139.162.91.182
   port: 443
   udp: true
   network: ws
@@ -31,28 +96,10 @@ proxies:
     path: /wsflow=
     headers:
       Host: itunes.apple.com
-- type: ss
-  cipher: aes-128-gcm
-  password: Bwlqh7GcFB
-  name: 🇯🇵JP-168.138.205.100-0195
-  server: 168.138.205.100
-  port: 53758
-  udp: true
 - type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
-  server: 103.75.118.228
-  port: 12683
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: b4ec7f6b-b41e-4018-9f76-19204e138db9
-  name: 日本3|@ripaojiedian
-  server: 139.162.91.182
+  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
+  name: 日本2|@ripaojiedian
+  server: 172.104.86.181
   port: 443
   udp: true
   network: ws
@@ -94,56 +141,32 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- type: vmess
-  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇯🇵JP-168.110.63.247-5345
-  server: 168.110.63.247
-  port: 8081
-  udp: true
-  ws-opts:
-    path: /vless
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1291...
-  server: 149.22.87.240
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇯🇵[www.v2nodes.com] ss-JP-9223...
-  server: 149.22.87.241
-  port: 443
-  udp: true
 - type: vless
   uuid: aff1b196-478c-425a-9403-7ea15d9aafdf
-  name: 🇯🇵 日本 | JPN
+  name: 🇭🇰[www.v2nodes.com] vless-HK-1...
   server: 185.200.64.124
   port: 443
   udp: true
   network: ws
   tls: true
   servername: hkg.kkp.us.ci
-  client-fingerprint: chrome
   ws-opts:
-    path: /487e07e6-2930-4e71-99b3-6792e5909f16
+    path: /487e07e6-2930-4e71-99b3-6792e5909f16fp=chrome
     headers:
       Host: hkg.kkp.us.ci
-- type: vmess
-  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🇯🇵JP-168.110.63.247-0197
-  server: 168.110.63.247
-  port: 8081
+- type: vless
+  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
+  name: 🇯🇵 日本 | JPN
+  server: 156.231.117.190
+  port: 443
   udp: true
-  ws-opts:
-    path: /
+  network: tcp
+  tls: true
+  servername: navi.bankrate.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
+    short-id: 2da72ce6
 - type: vless
   uuid: b69cf773-da16-486e-afce-a45b94f998b3
   name: 日本4|@ripaojiedian
@@ -159,29 +182,15 @@ proxies:
     headers:
       Host: senflarelink-node-71i.pages.dev
 - type: vless
-  uuid: aff1b196-478c-425a-9403-7ea15d9aafdf
-  name: 🇭🇰[www.v2nodes.com] vless-HK-1...
-  server: 185.200.64.124
+  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
+  name: '🇯🇵 日本 | JPN #1'
+  server: 156.231.117.190
   port: 443
   udp: true
-  network: ws
-  tls: true
-  servername: hkg.kkp.us.ci
-  ws-opts:
-    path: /487e07e6-2930-4e71-99b3-6792e5909f16fp=chrome
-    headers:
-      Host: hkg.kkp.us.ci
-- type: vless
-  uuid: 7318caa1-93d1-4a9d-c481-504599902700
-  name: 🇯🇵[www.v2nodes.com] vless-JP-1...
-  server: 155.248.175.201
-  port: 23169
-  udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: djj.zjlo.top
-  client-fingerprint: firefox
+  servername: navi.bankrate.com
+  client-fingerprint: chrome
 - type: hysteria2
   password: GeH9cDNl6FcXvgpfU8Sz0MNwQgPEm7Cv
   name: '🇯🇵 日本 | JPN #1'
@@ -196,41 +205,43 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
   - 🇯🇵[www.v2nodes.com] ss-JP-5141...
-  - 日本2|@ripaojiedian
-  - 🇯🇵JP-168.138.205.100-0195
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
-  - 日本3|@ripaojiedian
-  - 日本5|@ripaojiedian
-  - 🇯🇵_JP_日本_IPV4
-  - 🇯🇵JP-168.110.63.247-5345
   - 🇯🇵[www.v2nodes.com] ss-JP-1291...
   - 🇯🇵[www.v2nodes.com] ss-JP-9223...
-  - 🇯🇵 日本 | JPN
+  - 🇯🇵JP-168.110.63.247-5345
+  - 🇯🇵JP-168.138.205.100-0195
   - 🇯🇵JP-168.110.63.247-0197
-  - 日本4|@ripaojiedian
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
+  - 日本3|@ripaojiedian
+  - 日本2|@ripaojiedian
+  - 日本5|@ripaojiedian
+  - 🇯🇵_JP_日本_IPV4
   - 🇭🇰[www.v2nodes.com] vless-HK-1...
-  - 🇯🇵[www.v2nodes.com] vless-JP-1...
+  - 🇯🇵 日本 | JPN
+  - 日本4|@ripaojiedian
+  - '🇯🇵 日本 | JPN #1'
   - '🇯🇵 日本 | JPN #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
   - 🇯🇵[www.v2nodes.com] ss-JP-5141...
-  - 日本2|@ripaojiedian
-  - 🇯🇵JP-168.138.205.100-0195
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
-  - 日本3|@ripaojiedian
-  - 日本5|@ripaojiedian
-  - 🇯🇵_JP_日本_IPV4
-  - 🇯🇵JP-168.110.63.247-5345
   - 🇯🇵[www.v2nodes.com] ss-JP-1291...
   - 🇯🇵[www.v2nodes.com] ss-JP-9223...
-  - 🇯🇵 日本 | JPN
+  - 🇯🇵JP-168.110.63.247-5345
+  - 🇯🇵JP-168.138.205.100-0195
   - 🇯🇵JP-168.110.63.247-0197
-  - 日本4|@ripaojiedian
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
+  - 日本3|@ripaojiedian
+  - 日本2|@ripaojiedian
+  - 日本5|@ripaojiedian
+  - 🇯🇵_JP_日本_IPV4
   - 🇭🇰[www.v2nodes.com] vless-HK-1...
-  - 🇯🇵[www.v2nodes.com] vless-JP-1...
+  - 🇯🇵 日本 | JPN
+  - 日本4|@ripaojiedian
+  - '🇯🇵 日本 | JPN #1'
   - '🇯🇵 日本 | JPN #1'
 rules:
 - MATCH,SELECT

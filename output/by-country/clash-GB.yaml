@@ -20,41 +20,6 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇬🇧[www.v2nodes.com] ss-GB-1602...
-  server: 185.176.206.9
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇬🇧[www.v2nodes.com] ss-GB-1616...
-  server: 198.244.201.129
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
-  server: 198.244.202.215
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  name: 🇬🇧[www.v2nodes.com] ss-GB-1247...
-  server: 94.156.250.148
-  port: 7001
-  udp: true
-- type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  name: 🇬🇧GB-146.70.61.37-0070
-  server: 146.70.61.37
-  port: 8080
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   name: 🇬🇧[www.v2nodes.com] ss-GB-1615...
   server: 142.202.51.22
   port: 19999
@@ -67,25 +32,39 @@ proxies:
   port: 443
   udp: true
 - type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇬🇧GB-141.98.101.182-0196
-  server: 141.98.101.182
-  port: 443
-  udp: true
-- type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇦🇹[www.v2nodes.com] ss-AT-1595...
-  server: 82.110.60.9
+  name: 🇬🇧[www.v2nodes.com] ss-GB-1602...
+  server: 185.176.206.9
   port: 19999
   udp: true
 - type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇬🇧GB-141.98.101.179-5297
-  server: 141.98.101.179
-  port: 443
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  name: 🇬🇧GB-146.70.61.37-0070
+  server: 146.70.61.37
+  port: 8080
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  name: 🇬🇧[www.v2nodes.com] ss-GB-1247...
+  server: 94.156.250.148
+  port: 7001
+  udp: true
+- type: vless
+  uuid: dbb78c94-9f87-4d7d-b945-2000b60352fd
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #1'
+  server: 57.129.132.223
+  port: 80
+  udp: true
+  network: tcp
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
+  server: 198.244.202.215
+  port: 19999
   udp: true
 - type: ss
   cipher: aes-128-gcm
@@ -97,21 +76,38 @@ proxies:
 - type: ss
   cipher: aes-128-gcm
   password: shadowsocks
+  name: 🇬🇧GB-141.98.101.179-5297
+  server: 141.98.101.179
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
   name: 🇬🇧[www.v2nodes.com] ss-GB-9184...
   server: 141.98.101.181
   port: 443
   udp: true
-- type: vless
-  uuid: 9e20b04d-5a81-4e16-b421-01e502f0aac6
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
-  server: 57.129.132.223
-  port: 80
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇬🇧GB-141.98.101.182-0196
+  server: 141.98.101.182
+  port: 443
   udp: true
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: google.com
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇬🇧[www.v2nodes.com] ss-GB-1616...
+  server: 198.244.201.129
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇦🇹[www.v2nodes.com] ss-AT-1595...
+  server: 82.110.60.9
+  port: 19999
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -119,36 +115,36 @@ proxy-groups:
   interval: 300
   proxies:
   - '🇬🇧[www.v2nodes.com] ss-GB-1615... #1'
-  - 🇬🇧[www.v2nodes.com] ss-GB-1602...
-  - 🇬🇧[www.v2nodes.com] ss-GB-1616...
-  - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
-  - 🇬🇧[www.v2nodes.com] ss-GB-1247...
-  - 🇬🇧GB-146.70.61.37-0070
   - 🇬🇧[www.v2nodes.com] ss-GB-1615...
   - 🇬🇧[www.v2nodes.com] ss-GB-1451...
-  - 🇬🇧GB-141.98.101.182-0196
-  - 🇦🇹[www.v2nodes.com] ss-AT-1595...
-  - 🇬🇧GB-141.98.101.179-5297
+  - 🇬🇧[www.v2nodes.com] ss-GB-1602...
+  - 🇬🇧GB-146.70.61.37-0070
+  - 🇬🇧[www.v2nodes.com] ss-GB-1247...
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #1'
+  - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
   - 🇬🇧[www.v2nodes.com] ss-GB-8004...
+  - 🇬🇧GB-141.98.101.179-5297
   - 🇬🇧[www.v2nodes.com] ss-GB-9184...
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
+  - 🇬🇧GB-141.98.101.182-0196
+  - 🇬🇧[www.v2nodes.com] ss-GB-1616...
+  - 🇦🇹[www.v2nodes.com] ss-AT-1595...
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇬🇧[www.v2nodes.com] ss-GB-1615... #1'
-  - 🇬🇧[www.v2nodes.com] ss-GB-1602...
-  - 🇬🇧[www.v2nodes.com] ss-GB-1616...
-  - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
-  - 🇬🇧[www.v2nodes.com] ss-GB-1247...
-  - 🇬🇧GB-146.70.61.37-0070
   - 🇬🇧[www.v2nodes.com] ss-GB-1615...
   - 🇬🇧[www.v2nodes.com] ss-GB-1451...
-  - 🇬🇧GB-141.98.101.182-0196
-  - 🇦🇹[www.v2nodes.com] ss-AT-1595...
-  - 🇬🇧GB-141.98.101.179-5297
+  - 🇬🇧[www.v2nodes.com] ss-GB-1602...
+  - 🇬🇧GB-146.70.61.37-0070
+  - 🇬🇧[www.v2nodes.com] ss-GB-1247...
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #1'
+  - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
   - 🇬🇧[www.v2nodes.com] ss-GB-8004...
+  - 🇬🇧GB-141.98.101.179-5297
   - 🇬🇧[www.v2nodes.com] ss-GB-9184...
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
+  - 🇬🇧GB-141.98.101.182-0196
+  - 🇬🇧[www.v2nodes.com] ss-GB-1616...
+  - 🇦🇹[www.v2nodes.com] ss-AT-1595...
 rules:
 - MATCH,SELECT

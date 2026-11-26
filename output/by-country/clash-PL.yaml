@@ -12,6 +12,20 @@ dns:
 proxies:
 - type: ss
   cipher: aes-256-cfb
+  password: aLpQtfEZe445QyHk
+  name: 🇵🇱PL-217.30.10.70-0190
+  server: 217.30.10.70
+  port: 9098
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: 9XwYyZsK8SNzQDtY
+  name: 🇵🇱PL-217.30.10.70-0189
+  server: 217.30.10.70
+  port: 9059
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
   password: c3NtHJ5ujV2tGDfj
   name: 🇵🇱PL-217.30.10.70-0191
   server: 217.30.10.70
@@ -23,20 +37,6 @@ proxies:
   name: 🇵🇱PL-217.30.10.70-0179
   server: 217.30.10.70
   port: 9045
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: 9XwYyZsK8SNzQDtY
-  name: 🇵🇱PL-217.30.10.70-0189
-  server: 217.30.10.70
-  port: 9059
-  udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: aLpQtfEZe445QyHk
-  name: 🇵🇱PL-217.30.10.70-0190
-  server: 217.30.10.70
-  port: 9098
   udp: true
 - type: ss
   cipher: aes-256-cfb
@@ -55,32 +55,30 @@ proxies:
   tls: true
   servername: s8k4.scan-cdn.com
   client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-cfb
-  password: fG2artUmHfNT2cX7
-  name: 🇵🇱PL-217.30.10.70-0192
-  server: 217.30.10.70
-  port: 9018
-  udp: true
 - type: vless
-  uuid: f8cb3c89-32af-4255-bebc-d90aad175069
-  name: 🇵🇱 波兰 | POL
-  server: 212.2.34.15
+  uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
+  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
+  server: 150.251.113.34
   port: 443
   udp: true
-  network: grpc
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: plb.899themes.pro
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ
-    short-id: 27350908de933e09
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 - type: ss
   cipher: aes-256-cfb
   password: p9z5BVADH2YFs3MN
   name: 🇵🇱PL-217.30.10.70-0176
   server: 217.30.10.70
   port: 9040
+  udp: true
+- type: ss
+  cipher: aes-256-cfb
+  password: fG2artUmHfNT2cX7
+  name: 🇵🇱PL-217.30.10.70-0192
+  server: 217.30.10.70
+  port: 9018
   udp: true
 - type: hysteria2
   password: 04920673-035c-410d-94e4-5b1469d3fb6f
@@ -95,29 +93,29 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇵🇱PL-217.30.10.70-0190
+  - 🇵🇱PL-217.30.10.70-0189
   - 🇵🇱PL-217.30.10.70-0191
   - 🇵🇱PL-217.30.10.70-0179
-  - 🇵🇱PL-217.30.10.70-0189
-  - 🇵🇱PL-217.30.10.70-0190
   - 🇵🇱PL-217.30.10.70-0173
   - 🇵🇱[www.v2nodes.com] vless-PL-1...
-  - 🇵🇱PL-217.30.10.70-0192
-  - 🇵🇱 波兰 | POL
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
   - 🇵🇱PL-217.30.10.70-0176
+  - 🇵🇱PL-217.30.10.70-0192
   - 🔰66@oneclickvpnkeys
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇵🇱PL-217.30.10.70-0190
+  - 🇵🇱PL-217.30.10.70-0189
   - 🇵🇱PL-217.30.10.70-0191
   - 🇵🇱PL-217.30.10.70-0179
-  - 🇵🇱PL-217.30.10.70-0189
-  - 🇵🇱PL-217.30.10.70-0190
   - 🇵🇱PL-217.30.10.70-0173
   - 🇵🇱[www.v2nodes.com] vless-PL-1...
-  - 🇵🇱PL-217.30.10.70-0192
-  - 🇵🇱 波兰 | POL
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
   - 🇵🇱PL-217.30.10.70-0176
+  - 🇵🇱PL-217.30.10.70-0192
   - 🔰66@oneclickvpnkeys
 rules:
 - MATCH,SELECT

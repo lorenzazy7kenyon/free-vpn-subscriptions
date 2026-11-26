@@ -10,13 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-256-gcm
-  password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
-  name: 🇫🇮[www.v2nodes.com] ss-FI-1621...
-  server: 213.176.92.148
-  port: 40647
-  udp: true
 - type: vless
   uuid: b69cf773-da16-486e-afce-a45b94f998b3
   name: 新加坡|@ripaojiedian
@@ -31,14 +24,12 @@ proxies:
     path: /flow=
     headers:
       Host: senflarelink-node-6b9.pages.dev
-- type: vmess
-  uuid: 77fb7a80-4724-4e33-9558-4f20c1634c5a
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知155 10.6MB/s
-  server: 65.108.240.210
-  port: 39018
+- type: ss
+  cipher: aes-256-gcm
+  password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
+  name: 🇫🇮[www.v2nodes.com] ss-FI-1621...
+  server: 213.176.92.148
+  port: 40647
   udp: true
 - type: hysteria2
   password: 6aab8efdf13945829ae3699c342be406
@@ -55,17 +46,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇮[www.v2nodes.com] ss-FI-1621...
   - 新加坡|@ripaojiedian
-  - 未知155 10.6MB/s
+  - 🇫🇮[www.v2nodes.com] ss-FI-1621...
   - Telegram:@v2rayng3
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇫🇮[www.v2nodes.com] ss-FI-1621...
   - 新加坡|@ripaojiedian
-  - 未知155 10.6MB/s
+  - 🇫🇮[www.v2nodes.com] ss-FI-1621...
   - Telegram:@v2rayng3
 rules:
 - MATCH,SELECT
