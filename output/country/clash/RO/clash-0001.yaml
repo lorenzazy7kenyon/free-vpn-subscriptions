@@ -11,6 +11,17 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  name: 🇳🇱NL_1|1.2MB/s
+  server: 13.141.36.43
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  network: tcp
+  tls: true
+  servername: 6bf329t.nl18.h1clayd.click
+  client-fingerprint: chrome
+- type: vless
   uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
   name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   server: 185.247.224.206
@@ -29,11 +40,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇳🇱NL_1|1.2MB/s
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇳🇱NL_1|1.2MB/s
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
 rules:
 - MATCH,SELECT

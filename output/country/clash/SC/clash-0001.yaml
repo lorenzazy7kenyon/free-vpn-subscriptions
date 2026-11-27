@@ -11,23 +11,26 @@ dns:
   - 8.8.8.8
 proxies:
 - type: trojan
-  password: humanity
-  name: 🏁RELAY-45.130.125.112-5627
-  server: 45.130.125.112
+  password: ff5aeddc-8fea-4d17-b504-1a9fdacca802
+  name: 🇺🇸US_12|1.1MB/s
+  server: 45.130.125.160
   port: 443
   udp: true
-  sni: 45.130.125.112
+  sni: go.appsflyer.com.r3xxe.eu.cc
+  network: ws
+  ws-opts:
+    path: /br-orcl
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🏁RELAY-45.130.125.112-5627
+  - 🇺🇸US_12|1.1MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🏁RELAY-45.130.125.112-5627
+  - 🇺🇸US_12|1.1MB/s
 rules:
 - MATCH,SELECT

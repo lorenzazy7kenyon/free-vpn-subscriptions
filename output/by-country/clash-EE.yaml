@@ -10,19 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
-  server: 188.214.37.231
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: lagoon.gerqix.online
-  ws-opts:
-    path: /api/de5/streamfp=firefox
-    headers:
-      Host: lagoon.gerqix.online
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
@@ -39,12 +26,35 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
 - type: vless
+  uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
+  server: 188.214.37.231
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: lagoon.gerqix.online
+  ws-opts:
+    path: /api/de5/streamfp=firefox
+    headers:
+      Host: lagoon.gerqix.online
+- type: vless
   uuid: 0173d52e-8e1b-4681-831e-11529677b72f
-  name: 🇪🇪EE_1|1.5MB/s
+  name: '🇰🇿 哈萨克斯坦 | KAZ #1'
   server: 165.231.177.60
   port: 443
   udp: true
   network: tcp
+  tls: true
+  servername: cab-6b07048f.ferrin.uk
+  client-fingerprint: safari
+- type: vless
+  uuid: 0173d52e-8e1b-4681-831e-11529677b72f
+  name: 🇰🇿 哈萨克斯坦 | KAZ
+  server: 165.231.177.60
+  port: 443
+  udp: true
+  network: xhttp
   tls: true
   servername: cab-6b07048f.ferrin.uk
   client-fingerprint: safari
@@ -54,15 +64,17 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
   - 未知116
-  - 🇪🇪EE_1|1.5MB/s
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
+  - '🇰🇿 哈萨克斯坦 | KAZ #1'
+  - 🇰🇿 哈萨克斯坦 | KAZ
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
   - 未知116
-  - 🇪🇪EE_1|1.5MB/s
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
+  - '🇰🇿 哈萨克斯坦 | KAZ #1'
+  - 🇰🇿 哈萨克斯坦 | KAZ
 rules:
 - MATCH,SELECT

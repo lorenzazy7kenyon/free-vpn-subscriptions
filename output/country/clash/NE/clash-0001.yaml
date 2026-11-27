@@ -12,14 +12,28 @@ dns:
 proxies:
 - type: vless
   uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
-  server: 196.196.148.177
+  name: 🇳🇱 荷兰 | NLD
+  server: 196.196.148.76
   port: 443
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: 4935e4t.de25.h1clayd.click
+  servername: 8a2e72t.nl20.h1clayd.shop
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
+    short-id: 8d0d0679f42ffd98
+- type: vless
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  name: '🇳🇱 荷兰 | NLD #1'
+  server: 196.196.148.76
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 8a2e72t.nl20.h1clayd.shop
   client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
@@ -27,11 +41,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
+  - 🇳🇱 荷兰 | NLD
+  - '🇳🇱 荷兰 | NLD #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
+  - 🇳🇱 荷兰 | NLD
+  - '🇳🇱 荷兰 | NLD #1'
 rules:
 - MATCH,SELECT

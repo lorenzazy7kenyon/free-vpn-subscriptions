@@ -11,41 +11,27 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: 🇺🇸 美国 | USA 5
-  server: 153.56.230.6
+  uuid: 04920673-035c-410d-94e4-5b1469d3fb6f
+  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #1'
+  server: 91.132.190.161
   port: 443
   udp: true
-  network: grpc
+  flow: xtls-rprx-vision
+  network: tcp
   tls: true
-  servername: 0592efg.us8.h1clayd.click
-  client-fingerprint: edge
-- type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: 🇺🇸 美国 | USA
-  server: 153.56.230.6
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: 0592efg.us8.h1clayd.click
-  client-fingerprint: edge
-  reality-opts:
-    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
-    short-id: bd8f712209a9c283
+  servername: 171.22.183.166
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 | USA 5
-  - 🇺🇸 美国 | USA
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 | USA 5
-  - 🇺🇸 美国 | USA
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #1'
 rules:
 - MATCH,SELECT
