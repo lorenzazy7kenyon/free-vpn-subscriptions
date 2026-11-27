@@ -10,19 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
-  name: 🇯🇵 日本 | JPN 10
-  server: 85.206.161.198
-  port: 443
-  udp: true
-  sni: eofino.bpjp2027.top
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /images
-    headers:
-      Host: eofino.bpjp2027.top
 - type: vless
   uuid: bf14dc50-e9f2-49fd-8642-620446edeafb
   name: 🇱🇹 立陶宛 | LTU
@@ -37,6 +24,19 @@ proxies:
     path: /
     headers:
       Host: v4-77j.pages.dev
+- type: trojan
+  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
+  name: 🇯🇵 日本 | JPN 10
+  server: 85.206.161.198
+  port: 443
+  udp: true
+  sni: eofino.bpjp2027.top
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /images
+    headers:
+      Host: eofino.bpjp2027.top
 - type: vless
   uuid: bf14dc50-e9f2-49fd-8642-620446edeafb
   name: '🇱🇹 立陶宛 | LTU #1'
@@ -56,15 +56,15 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇯🇵 日本 | JPN 10
   - 🇱🇹 立陶宛 | LTU
+  - 🇯🇵 日本 | JPN 10
   - '🇱🇹 立陶宛 | LTU #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇯🇵 日本 | JPN 10
   - 🇱🇹 立陶宛 | LTU
+  - 🇯🇵 日本 | JPN 10
   - '🇱🇹 立陶宛 | LTU #1'
 rules:
 - MATCH,SELECT

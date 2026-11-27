@@ -10,24 +10,28 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: chacha20-ietf-poly1305
-  password: lDe8uY-MIsa2C_PfpwUaqUHsMkf5tqPE
-  name: '🇨🇾 塞浦路斯 | CYP #1'
-  server: 45.83.85.31
-  port: 1080
+- type: vmess
+  uuid: dd41b5cb-b72e-4a8c-c75a-3ecc928d6eb3
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🏁RELAY-154.92.9.101-8400
+  server: 154.92.9.101
+  port: 80
   udp: true
+  ws-opts:
+    path: /blue
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇨🇾 塞浦路斯 | CYP #1'
+  - 🏁RELAY-154.92.9.101-8400
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇨🇾 塞浦路斯 | CYP #1'
+  - 🏁RELAY-154.92.9.101-8400
 rules:
 - MATCH,SELECT

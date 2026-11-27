@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
-  name: 🇨🇿[www.v2nodes.com] vless-CZ-1...
+  name: 🇬🇧[www.v2nodes.com] vless-GB-1...
   server: 94.183.234.245
   port: 443
   udp: true
@@ -21,17 +21,26 @@ proxies:
   tls: true
   servername: www.bing.com
   client-fingerprint: qq
+- type: ss
+  cipher: aes-128-gcm
+  password: EE2VWeKohIwTx6HGOo1X2p1jjNAUfRWS
+  name: '🇱🇻 拉脱维亚 | LVA #1'
+  server: 109.248.148.141
+  port: 11471
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿[www.v2nodes.com] vless-CZ-1...
+  - 🇬🇧[www.v2nodes.com] vless-GB-1...
+  - '🇱🇻 拉脱维亚 | LVA #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇨🇿[www.v2nodes.com] vless-CZ-1...
+  - 🇬🇧[www.v2nodes.com] vless-GB-1...
+  - '🇱🇻 拉脱维亚 | LVA #1'
 rules:
 - MATCH,SELECT

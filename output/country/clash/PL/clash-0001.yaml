@@ -11,6 +11,28 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
+  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
+  server: 82.118.22.161
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: safari
+- type: vless
+  uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
+  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
+  server: 150.251.113.34
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: vless
   uuid: d7121b33-e335-4921-bb00-4c0b157e7fc1
   name: 🇵🇱[www.v2nodes.com] vless-PL-1...
   server: 94.183.167.172
@@ -19,17 +41,6 @@ proxies:
   network: tcp
   tls: true
   servername: s8k4.scan-cdn.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  server: 150.251.113.34
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
   client-fingerprint: chrome
 - type: hysteria2
   password: lvu_3390f238bef4e3058ac47c87473755cf_07cd5acf7265adf5c1210040ca46facf:np2.1.HJjJucZ0-OZZUq5Njkl48v1gYx7ol9rXjxYXZUxrQdM
@@ -60,8 +71,9 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇱[www.v2nodes.com] vless-PL-1...
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
+  - 🇵🇱[www.v2nodes.com] vless-PL-1...
   - 🇺🇸 美国 | USA 33
   - '🇺🇸 美国 | USA #33'
   - 🇰🇿KZ_1|2.1MB/s
@@ -69,8 +81,9 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇵🇱[www.v2nodes.com] vless-PL-1...
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
+  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
+  - 🇵🇱[www.v2nodes.com] vless-PL-1...
   - 🇺🇸 美国 | USA 33
   - '🇺🇸 美国 | USA #33'
   - 🇰🇿KZ_1|2.1MB/s

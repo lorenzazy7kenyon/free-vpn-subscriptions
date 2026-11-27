@@ -26,6 +26,19 @@ proxies:
     headers:
       Host: 6JDvArazgU3qQR6Q.v.3dns.vip
 - type: vless
+  uuid: 591e7de6-f2dd-4ff9-ae21-8e00d5affa2a
+  name: '🇮🇳 印度 | IND #1'
+  server: 147.93.171.8
+  port: 8443
+  udp: true
+  network: ws
+  tls: true
+  servername: 147-93-171-8.sslip.io
+  ws-opts:
+    path: /vpn-livefp=firefox
+    headers:
+      Host: 147-93-171-8.sslip.io
+- type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   server: 13.140.56.100
@@ -43,12 +56,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 未知26
+  - '🇮🇳 印度 | IND #1'
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 未知26
+  - '🇮🇳 印度 | IND #1'
   - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
 rules:
 - MATCH,SELECT

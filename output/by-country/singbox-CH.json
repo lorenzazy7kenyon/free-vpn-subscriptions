@@ -1,25 +1,6 @@
 {
   "outbounds": [
     {
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "208.69.78.158",
-      "server_port": 443,
-      "tag": "🏳[www.v2nodes.com] trojan- #1",
-      "tls": {
-        "enabled": true,
-        "insecure": false
-      },
-      "type": "trojan"
-    },
-    {
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-      "server": "23.166.88.127",
-      "server_port": 19999,
-      "tag": "🏳[www.v2nodes.com] ss- #1",
-      "type": "ss"
-    },
-    {
       "method": "aes-256-gcm",
       "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
       "server": "186.190.215.251",
@@ -29,15 +10,31 @@
     },
     {
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "208.69.78.33",
+      "server": "208.69.78.158",
       "server_port": 443,
       "tag": "🇨🇭[www.v2nodes.com] trojan-CH-... #4",
       "tls": {
         "enabled": true,
-        "insecure": false,
-        "server_name": "courses.yourultimateprofessionalcareerhub.com"
+        "insecure": false
       },
       "type": "trojan"
+    },
+    {
+      "flow": "xtls-rprx-vision",
+      "server": "45.90.59.15",
+      "server_port": 443,
+      "tag": "🏳[www.v2nodes.com] vless-",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "type": "vless",
+      "uuid": "3950b45e-740d-4dca-ac95-505ec8534592"
     },
     {
       "method": "aes-256-gcm",
@@ -48,13 +45,34 @@
       "type": "ss"
     },
     {
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+      "server": "23.166.88.127",
+      "server_port": 19999,
+      "tag": "🏳[www.v2nodes.com] ss- #2",
+      "type": "ss"
+    },
+    {
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "208.69.78.33",
+      "server_port": 443,
+      "tag": "🇨🇭[www.v2nodes.com] trojan-CH-... #5",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "courses.yourultimateprofessionalcareerhub.com"
+      },
+      "type": "trojan"
+    },
+    {
       "interval": "5m",
       "outbounds": [
-        "🏳[www.v2nodes.com] trojan- #1",
-        "🏳[www.v2nodes.com] ss- #1",
         "🇨🇭[www.v2nodes.com] ss-CH-1615...",
         "🇨🇭[www.v2nodes.com] trojan-CH-... #4",
-        "🇨🇭[www.v2nodes.com] ss-CH-1615... #1"
+        "🏳[www.v2nodes.com] vless-",
+        "🇨🇭[www.v2nodes.com] ss-CH-1615... #1",
+        "🏳[www.v2nodes.com] ss- #2",
+        "🇨🇭[www.v2nodes.com] trojan-CH-... #5"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -63,11 +81,12 @@
     {
       "outbounds": [
         "auto",
-        "🏳[www.v2nodes.com] trojan- #1",
-        "🏳[www.v2nodes.com] ss- #1",
         "🇨🇭[www.v2nodes.com] ss-CH-1615...",
         "🇨🇭[www.v2nodes.com] trojan-CH-... #4",
-        "🇨🇭[www.v2nodes.com] ss-CH-1615... #1"
+        "🏳[www.v2nodes.com] vless-",
+        "🇨🇭[www.v2nodes.com] ss-CH-1615... #1",
+        "🏳[www.v2nodes.com] ss- #2",
+        "🇨🇭[www.v2nodes.com] trojan-CH-... #5"
       ],
       "tag": "select",
       "type": "selector"
