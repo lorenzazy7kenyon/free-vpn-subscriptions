@@ -22,6 +22,28 @@ proxies:
   servername: 6bf329t.nl18.h1clayd.click
   client-fingerprint: chrome
 - type: vless
+  uuid: 89f361ea-a370-4cbe-b2b3-d3e9c0b7c4c1
+  name: '🇷🇴 罗马尼亚 | ROU #1'
+  server: 193.168.140.228
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.vodafone.ro
+  client-fingerprint: firefox
+- type: vless
+  uuid: 89f361ea-a370-4cbe-b2b3-d3e9c0b7c4c1
+  name: 🇷🇴 罗马尼亚 | ROU
+  server: 193.168.140.228
+  port: 443
+  udp: true
+  network: xhttp
+  tls: true
+  servername: www.vodafone.ro
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: UGeXXP0IS2_P7AWPDbbk_w7BzZLoPPrk3ha7OgI_0D4
+- type: vless
   uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
   name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   server: 185.247.224.206
@@ -41,12 +63,16 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇳🇱NL_1|1.2MB/s
+  - '🇷🇴 罗马尼亚 | ROU #1'
+  - 🇷🇴 罗马尼亚 | ROU
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇳🇱NL_1|1.2MB/s
+  - '🇷🇴 罗马尼亚 | ROU #1'
+  - 🇷🇴 罗马尼亚 | ROU
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
 rules:
 - MATCH,SELECT

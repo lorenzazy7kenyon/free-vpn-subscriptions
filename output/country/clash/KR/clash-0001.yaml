@@ -10,6 +10,29 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
+- type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇰🇷KR-132.145.80.230-0163
+  server: 132.145.80.230
+  port: 80
+  udp: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kr02.a0a.xyz
+- type: vless
+  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
+  name: '🇰🇷 韩国 | KOR #3'
+  server: 130.94.30.242
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: navi.bankrate.com
+  client-fingerprint: chrome
 - type: ss
   cipher: aes-256-gcm
   password: qpowi_vip_tunnel_2026_secure
@@ -17,13 +40,32 @@ proxies:
   server: 211.233.33.228
   port: 8388
   udp: true
-- type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  name: 🇰🇷KR-211.178.105.134-5197
-  server: 211.178.105.134
-  port: 6123
+- type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇰🇷KR-132.145.80.230-1026
+  server: 132.145.80.230
+  port: 80
   udp: true
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: kr02.a0a.xyz
+- type: vless
+  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
+  name: 🇰🇷 韩国 | KOR
+  server: 130.94.30.242
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: navi.bankrate.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
+    short-id: 2da72ce6
 - type: vless
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
@@ -33,6 +75,21 @@ proxies:
   network: ws
   ws-opts:
     path: /
+- type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  name: 🇰🇷KR-211.178.105.134-0162
+  server: 211.178.105.134
+  port: 6123
+  udp: true
+- type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: '🇰🇷 韩国 | KOR #1'
+  server: 3.35.175.163
+  port: 443
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   name: 🇰🇷KR-🚀@VPNine1
@@ -47,17 +104,27 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇰🇷KR-132.145.80.230-0163
+  - '🇰🇷 韩国 | KOR #3'
   - 🇰🇷[www.v2nodes.com] ss-KR-1624...
-  - 🇰🇷KR-211.178.105.134-5197
+  - 🇰🇷KR-132.145.80.230-1026
+  - 🇰🇷 韩国 | KOR
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - 🇰🇷KR-211.178.105.134-0162
+  - '🇰🇷 韩国 | KOR #1'
   - 🇰🇷KR-🚀@VPNine1
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇰🇷KR-132.145.80.230-0163
+  - '🇰🇷 韩国 | KOR #3'
   - 🇰🇷[www.v2nodes.com] ss-KR-1624...
-  - 🇰🇷KR-211.178.105.134-5197
+  - 🇰🇷KR-132.145.80.230-1026
+  - 🇰🇷 韩国 | KOR
   - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - 🇰🇷KR-211.178.105.134-0162
+  - '🇰🇷 韩国 | KOR #1'
   - 🇰🇷KR-🚀@VPNine1
 rules:
 - MATCH,SELECT

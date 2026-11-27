@@ -11,17 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  server: 84.235.244.108
-  port: 22573
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- type: vless
   uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
   name: 🇦🇪[www.v2nodes.com] vless-AE-1...
   server: 95.174.68.188
@@ -32,18 +21,42 @@ proxies:
     path: /vless
     headers:
       Host: 95.174.68.188
+- type: trojan
+  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
+  name: 🇦🇪 阿联酋 | ARE
+  server: 147.78.0.186
+  port: 8443
+  udp: true
+  sni: eofino.bpjp2027.top
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /images
+    headers:
+      Host: eofino.bpjp2027.top
+- type: vless
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  server: 84.235.244.108
+  port: 22573
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
 - type: hysteria2
   password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
-  name: 🇩🇪DE_7|2.8MB/s
-  server: 128.254.186.57
+  name: 🇩🇪DE_8|4.2MB/s
+  server: 128.254.186.190
   port: 13337
   udp: true
   sni: mother-earth.fyi
   skip-cert-verify: true
 - type: hysteria2
   password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
-  name: 🇩🇪DE_8|4.2MB/s
-  server: 128.254.186.190
+  name: 🇩🇪DE_7|2.8MB/s
+  server: 128.254.186.57
   port: 13337
   udp: true
   sni: mother-earth.fyi
@@ -54,17 +67,19 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
-  - 🇩🇪DE_7|2.8MB/s
+  - 🇦🇪 阿联酋 | ARE
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - 🇩🇪DE_8|4.2MB/s
+  - 🇩🇪DE_7|2.8MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - 🇦🇪[www.v2nodes.com] vless-AE-1...
-  - 🇩🇪DE_7|2.8MB/s
+  - 🇦🇪 阿联酋 | ARE
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - 🇩🇪DE_8|4.2MB/s
+  - 🇩🇪DE_7|2.8MB/s
 rules:
 - MATCH,SELECT

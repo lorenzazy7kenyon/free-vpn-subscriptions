@@ -10,28 +10,61 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: f69e272f-e0e5-4e9d-b180-5be63930cde9
-  name: '🇱🇹 立陶宛 | LTU #1'
-  server: 84.32.209.54
+- type: trojan
+  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
+  name: 🇯🇵 日本 | JPN 10
+  server: 85.206.161.198
   port: 443
   udp: true
-  flow: xtls-rprx-vision
-  network: tcp
+  sni: eofino.bpjp2027.top
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /images
+    headers:
+      Host: eofino.bpjp2027.top
+- type: vless
+  uuid: bf14dc50-e9f2-49fd-8642-620446edeafb
+  name: 🇱🇹 立陶宛 | LTU
+  server: 5.199.173.195
+  port: 443
+  udp: true
+  network: ws
   tls: true
-  servername: lt.memepn.com
-  client-fingerprint: firefox
+  servername: v4-77j.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: v4-77j.pages.dev
+- type: vless
+  uuid: bf14dc50-e9f2-49fd-8642-620446edeafb
+  name: '🇱🇹 立陶宛 | LTU #1'
+  server: 5.199.173.195
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: v4-77j.pages.dev
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: v4-77j.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇯🇵 日本 | JPN 10
+  - 🇱🇹 立陶宛 | LTU
   - '🇱🇹 立陶宛 | LTU #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇯🇵 日本 | JPN 10
+  - 🇱🇹 立陶宛 | LTU
   - '🇱🇹 立陶宛 | LTU #1'
 rules:
 - MATCH,SELECT

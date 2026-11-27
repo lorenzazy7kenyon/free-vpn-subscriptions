@@ -11,6 +11,74 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: bcdb425f-80bc-4ec8-92a5-8edf53639c01
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+  server: 207.148.124.12
+  port: 8443
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.bing.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 2b30d0df-6ebe-4aed-9bad-b7c554e35e1d
+  name: 🇸🇬_SG_新加坡_IPV4 (2)
+  server: 139.180.221.53
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: plfXwkb-ewI6iibJBTRmPnf8eqPId1BfdArMIm3_mB4
+    short-id: 2f6f6f87
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇸🇬SG-149.88.106.73-0117
+  server: 149.88.106.73
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇸🇬[www.v2nodes.com] ss-SG-1616...
+  server: 15.235.182.183
+  port: 19999
+  udp: true
+- type: trojan
+  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
+  name: 🇯🇵 日本 | JPN 5
+  server: 172.237.81.42
+  port: 443
+  udp: true
+  sni: eofino.bpjp2027.top
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /images
+    headers:
+      Host: eofino.bpjp2027.top
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇸🇬[www.v2nodes.com] ss-SG-1615...
+  server: 15.235.164.133
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #3'
+  server: 149.88.107.47
+  port: 19999
+  udp: true
+- type: vless
   uuid: 0dbe84f8-74fd-4bd1-99fe-e67eb7eaff85
   name: 新加坡2|@ripaojiedian
   server: 172.104.48.162
@@ -38,13 +106,6 @@ proxies:
     path: /wsflow=
     headers:
       Host: itunes.apple.com
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #1'
-  server: 149.88.106.74
-  port: 19999
-  udp: true
 - type: vless
   uuid: 87ff88cc-5c1f-4f46-86b8-c43f55b71dd2
   name: 新加坡|@ripaojiedian
@@ -59,11 +120,28 @@ proxies:
     path: /wsflow=
     headers:
       Host: itunes.apple.com
+- type: vless
+  uuid: 7f0270f9-1abc-4c4f-960d-0a23e32f1eb8
+  name: 🇸🇬_SG_新加坡_IPV4
+  server: 139.162.20.241
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: fG1u2AZj5pgSNWO3MBmkoY6K61xBwnuYX3_z1fSeR0o
+    short-id: 640c807d
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇸🇬[www.v2nodes.com] ss-SG-1615...
-  server: 15.235.164.133
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #1'
+  server: 149.88.106.74
   port: 19999
   udp: true
 - type: ss
@@ -72,57 +150,6 @@ proxies:
   name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #2'
   server: 149.88.107.74
   port: 19999
-  udp: true
-- type: vmess
-  uuid: 8a3d03bc-9b35-43b4-d901-c8531f2bbc6d
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: '🇸🇬 新加坡 | SGP #1'
-  server: 8.222.172.146
-  port: 54327
-  udp: true
-  ws-opts:
-    path: /pages
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇸🇬SG-149.88.106.73-0118
-  server: 149.88.106.73
-  port: 19999
-  udp: true
-- type: vless
-  uuid: bcdb425f-80bc-4ec8-92a5-8edf53639c01
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
-  server: 207.148.124.12
-  port: 8443
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.bing.com
-  client-fingerprint: chrome
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇸🇬[www.v2nodes.com] ss-SG-1616...
-  server: 15.235.182.183
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #3'
-  server: 149.88.107.47
-  port: 19999
-  udp: true
-- type: vmess
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知41 395.3KB/s
-  server: 195.133.135.238
-  port: 10086
   udp: true
 - type: vless
   uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
@@ -152,14 +179,13 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
 - type: hysteria2
-  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  name: '@tootffarangi🍓-6'
-  server: 77.93.89.197
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: '🇸🇬 新加坡 | SGP #2'
+  server: 13.229.56.229
   port: 443
   udp: true
-  sni: bgsg2.hikigo.com
-  obfs: salamander
-  obfs-password: sj1awrdwnn5lbuno
+  sni: www.bing.com
+  skip-cert-verify: true
 - type: hysteria2
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   name: 🇸🇬SG-🚀@VPNine1
@@ -168,49 +194,62 @@ proxies:
   udp: true
   sni: www.bing.com
   skip-cert-verify: true
+- type: hysteria2
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  name: '@tootffarangi🍓-6'
+  server: 77.93.89.197
+  port: 443
+  udp: true
+  sni: bgsg2.hikigo.com
+  obfs: salamander
+  obfs-password: sj1awrdwnn5lbuno
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+  - 🇸🇬_SG_新加坡_IPV4 (2)
+  - 🇸🇬SG-149.88.106.73-0117
+  - 🇸🇬[www.v2nodes.com] ss-SG-1616...
+  - 🇯🇵 日本 | JPN 5
+  - 🇸🇬[www.v2nodes.com] ss-SG-1615...
+  - '🇸🇬[www.v2nodes.com] ss-SG-1615... #3'
   - 新加坡2|@ripaojiedian
   - 新加坡3|@ripaojiedian
-  - '🇸🇬[www.v2nodes.com] ss-SG-1615... #1'
   - 新加坡|@ripaojiedian
-  - 🇸🇬[www.v2nodes.com] ss-SG-1615...
+  - 🇸🇬_SG_新加坡_IPV4
+  - '🇸🇬[www.v2nodes.com] ss-SG-1615... #1'
   - '🇸🇬[www.v2nodes.com] ss-SG-1615... #2'
-  - '🇸🇬 新加坡 | SGP #1'
-  - 🇸🇬SG-149.88.106.73-0118
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
-  - 🇸🇬[www.v2nodes.com] ss-SG-1616...
-  - '🇸🇬[www.v2nodes.com] ss-SG-1615... #3'
-  - 未知41 395.3KB/s
   - '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
   - 🇸🇬214601 | ⚡️Telegram = t.me/v...
   - '🇸🇬 新加坡 | SGP #2'
-  - '@tootffarangi🍓-6'
+  - '🇸🇬 新加坡 | SGP #2'
   - 🇸🇬SG-🚀@VPNine1
+  - '@tootffarangi🍓-6'
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+  - 🇸🇬_SG_新加坡_IPV4 (2)
+  - 🇸🇬SG-149.88.106.73-0117
+  - 🇸🇬[www.v2nodes.com] ss-SG-1616...
+  - 🇯🇵 日本 | JPN 5
+  - 🇸🇬[www.v2nodes.com] ss-SG-1615...
+  - '🇸🇬[www.v2nodes.com] ss-SG-1615... #3'
   - 新加坡2|@ripaojiedian
   - 新加坡3|@ripaojiedian
-  - '🇸🇬[www.v2nodes.com] ss-SG-1615... #1'
   - 新加坡|@ripaojiedian
-  - 🇸🇬[www.v2nodes.com] ss-SG-1615...
+  - 🇸🇬_SG_新加坡_IPV4
+  - '🇸🇬[www.v2nodes.com] ss-SG-1615... #1'
   - '🇸🇬[www.v2nodes.com] ss-SG-1615... #2'
-  - '🇸🇬 新加坡 | SGP #1'
-  - 🇸🇬SG-149.88.106.73-0118
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
-  - 🇸🇬[www.v2nodes.com] ss-SG-1616...
-  - '🇸🇬[www.v2nodes.com] ss-SG-1615... #3'
-  - 未知41 395.3KB/s
   - '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
   - 🇸🇬214601 | ⚡️Telegram = t.me/v...
   - '🇸🇬 新加坡 | SGP #2'
-  - '@tootffarangi🍓-6'
+  - '🇸🇬 新加坡 | SGP #2'
   - 🇸🇬SG-🚀@VPNine1
+  - '@tootffarangi🍓-6'
 rules:
 - MATCH,SELECT

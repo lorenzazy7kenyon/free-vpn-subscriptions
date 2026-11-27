@@ -33,13 +33,6 @@ proxies:
   client-fingerprint: chrome
 - type: hysteria2
   password: lvu_3390f238bef4e3058ac47c87473755cf_07cd5acf7265adf5c1210040ca46facf:np2.1.HJjJucZ0-OZZUq5Njkl48v1gYx7ol9rXjxYXZUxrQdM
-  name: 🇰🇿KZ_1|2.1MB/s
-  server: 194.87.224.137
-  port: 15443
-  udp: true
-  sni: n9.neproxy.net
-- type: hysteria2
-  password: lvu_3390f238bef4e3058ac47c87473755cf_07cd5acf7265adf5c1210040ca46facf:np2.1.HJjJucZ0-OZZUq5Njkl48v1gYx7ol9rXjxYXZUxrQdM
   name: 🇺🇸 美国 | USA 33
   server: 194.87.224.137
   port: 14443
@@ -54,6 +47,13 @@ proxies:
   udp: true
   sni: n37.neproxy.net
   skip-cert-verify: true
+- type: hysteria2
+  password: lvu_3390f238bef4e3058ac47c87473755cf_07cd5acf7265adf5c1210040ca46facf:np2.1.HJjJucZ0-OZZUq5Njkl48v1gYx7ol9rXjxYXZUxrQdM
+  name: 🇰🇿KZ_1|2.1MB/s
+  server: 194.87.224.137
+  port: 15443
+  udp: true
+  sni: n9.neproxy.net
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -62,17 +62,17 @@ proxy-groups:
   proxies:
   - 🇵🇱[www.v2nodes.com] vless-PL-1...
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  - 🇰🇿KZ_1|2.1MB/s
   - 🇺🇸 美国 | USA 33
   - '🇺🇸 美国 | USA #33'
+  - 🇰🇿KZ_1|2.1MB/s
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇵🇱[www.v2nodes.com] vless-PL-1...
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  - 🇰🇿KZ_1|2.1MB/s
   - 🇺🇸 美国 | USA 33
   - '🇺🇸 美国 | USA #33'
+  - 🇰🇿KZ_1|2.1MB/s
 rules:
 - MATCH,SELECT

@@ -11,14 +11,37 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: 51a6ab93-e805-4b8b-89d1-d3ab85a118ce
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
-  server: 54.36.102.152
-  port: 2083
+  uuid: 85432578-96fd-4613-a255-e235a81cc94b
+  name: '🇳🇱 荷兰 | NLD #1'
+  server: 185.16.110.62
+  port: 2052
   udp: true
   network: ws
   ws-opts:
-    path: /vless-kulo
+    path: /?ed=2052
+    headers:
+      Host: cd90.u8o.lol
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
+  server: 172.99.189.142
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
+  server: 167.17.64.22
+  port: 19999
+  udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 🇫🇷[www.v2nodes.com] ss-FR-1616...
+  server: 23.162.152.22
+  port: 19999
+  udp: true
 - type: vless
   uuid: e6d52328-2d60-4fcf-812c-9734493baf11
   name: 🇫🇷FR_1|2.6MB/s
@@ -29,26 +52,26 @@ proxies:
   tls: true
   servername: fl1.internium.forum
   client-fingerprint: chrome
-- type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  name: 🇳🇱 荷兰 | NLD
-  server: 13.141.37.245
-  port: 443
-  udp: true
-  network: grpc
-  tls: true
-  servername: 717252g.nl8.h1clayd.click
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU
-    short-id: d3bd772514c87d28
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
-  server: 167.17.64.175
+  name: 🇫🇷[www.v2nodes.com] ss-FR-1615...
+  server: 38.109.228.110
   port: 19999
   udp: true
+- type: trojan
+  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
+  name: 🇯🇵 日本 | JPN
+  server: 13.140.139.31
+  port: 8443
+  udp: true
+  sni: eofino.bpjp2027.top
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /images
+    headers:
+      Host: eofino.bpjp2027.top
 - type: vless
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   name: 🇳🇱 荷兰 | NLD 3
@@ -62,22 +85,15 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1616...
-  server: 23.162.152.22
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
+  server: 167.17.64.27
   port: 19999
   udp: true
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1615...
-  server: 38.109.228.110
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
-  server: 172.99.189.142
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
+  server: 167.17.64.175
   port: 19999
   udp: true
 - type: vless
@@ -87,23 +103,39 @@ proxies:
   port: 23576
   udp: true
   network: tcp
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
-  server: 167.17.64.27
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
-  server: 167.17.64.22
-  port: 19999
-  udp: true
 - type: vless
   uuid: 00000000-0000-0001-0000-000000000000
-  name: '🇬🇧 英国 | GBR #5'
+  name: '🇬🇧 英国 | GBR #3'
+  server: 136.148.83.70
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: aszbk-ru-78dc.my-fade.cloud
+  client-fingerprint: chrome
+- type: vless
+  uuid: 00000000-0000-0001-0000-000000000000
+  name: '🇬🇧 英国 | GBR #2'
+  server: 136.148.83.71
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: wccfu-ru-79dc.my-fade.cloud
+  client-fingerprint: qq
+- type: vless
+  uuid: 00000000-0000-0001-0000-000000000000
+  name: 🇬🇧 英国 | GBR
+  server: 136.148.83.70
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: aszbk-ru-78dc.my-fade.cloud
+  client-fingerprint: chrome
+- type: vless
+  uuid: 00000000-0000-0001-0000-000000000000
+  name: 🇬🇧 英国 | GBR
   server: 136.148.83.71
   port: 443
   udp: true
@@ -112,13 +144,6 @@ proxies:
   servername: wccfu-ru-79dc.my-fade.cloud
   client-fingerprint: qq
 - type: hysteria2
-  password: 87bb2ac4-b7a1-0001-b11d-2107709ea6cb
-  name: '@OutlineReleasedKey #2'
-  server: 136.148.83.69
-  port: 443
-  udp: true
-  sni: szqbx-ru-77dc.my-fade.cloud
-- type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   name: 🇫🇷24@exclavevpn
   server: 13.36.234.11
@@ -126,43 +151,56 @@ proxies:
   udp: true
   sni: vpn-fr-001.fastervpn.world
   skip-cert-verify: true
+- type: hysteria2
+  password: 87bb2ac4-b7a1-0001-b11d-2107709ea6cb
+  name: '@OutlineReleasedKey #2'
+  server: 136.148.83.69
+  port: 443
+  udp: true
+  sni: szqbx-ru-77dc.my-fade.cloud
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
-  - 🇫🇷FR_1|2.6MB/s
-  - 🇳🇱 荷兰 | NLD
-  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
-  - 🇳🇱 荷兰 | NLD 3
-  - 🇫🇷[www.v2nodes.com] ss-FR-1616...
-  - 🇫🇷[www.v2nodes.com] ss-FR-1615...
+  - '🇳🇱 荷兰 | NLD #1'
   - '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
-  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
   - '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
-  - '🇬🇧 英国 | GBR #5'
-  - '@OutlineReleasedKey #2'
+  - 🇫🇷[www.v2nodes.com] ss-FR-1616...
+  - 🇫🇷FR_1|2.6MB/s
+  - 🇫🇷[www.v2nodes.com] ss-FR-1615...
+  - 🇯🇵 日本 | JPN
+  - 🇳🇱 荷兰 | NLD 3
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
+  - '🇬🇧 英国 | GBR #3'
+  - '🇬🇧 英国 | GBR #2'
+  - 🇬🇧 英国 | GBR
+  - 🇬🇧 英国 | GBR
   - 🇫🇷24@exclavevpn
+  - '@OutlineReleasedKey #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
-  - 🇫🇷FR_1|2.6MB/s
-  - 🇳🇱 荷兰 | NLD
-  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
-  - 🇳🇱 荷兰 | NLD 3
-  - 🇫🇷[www.v2nodes.com] ss-FR-1616...
-  - 🇫🇷[www.v2nodes.com] ss-FR-1615...
+  - '🇳🇱 荷兰 | NLD #1'
   - '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
-  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
   - '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
-  - '🇬🇧 英国 | GBR #5'
-  - '@OutlineReleasedKey #2'
+  - 🇫🇷[www.v2nodes.com] ss-FR-1616...
+  - 🇫🇷FR_1|2.6MB/s
+  - 🇫🇷[www.v2nodes.com] ss-FR-1615...
+  - 🇯🇵 日本 | JPN
+  - 🇳🇱 荷兰 | NLD 3
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
+  - '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
+  - '🇬🇧 英国 | GBR #3'
+  - '🇬🇧 英国 | GBR #2'
+  - 🇬🇧 英国 | GBR
+  - 🇬🇧 英国 | GBR
   - 🇫🇷24@exclavevpn
+  - '@OutlineReleasedKey #2'
 rules:
 - MATCH,SELECT

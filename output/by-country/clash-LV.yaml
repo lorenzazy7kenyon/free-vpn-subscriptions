@@ -21,21 +21,6 @@ proxies:
   tls: true
   servername: www.bing.com
   client-fingerprint: qq
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知53
-  server: 85.159.228.232
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -43,12 +28,10 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇨🇿[www.v2nodes.com] vless-CZ-1...
-  - 未知53
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇨🇿[www.v2nodes.com] vless-CZ-1...
-  - 未知53
 rules:
 - MATCH,SELECT
