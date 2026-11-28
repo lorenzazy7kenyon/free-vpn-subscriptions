@@ -10,37 +10,60 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇯🇵[www.v2nodes.com] ss-JP-5141...
-  server: 149.22.87.204
-  port: 443
-  udp: true
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1291...
-  server: 149.22.87.240
-  port: 443
-  udp: true
 - type: vless
-  uuid: 81f4e114-5a60-41b5-9038-8d742380c84f
-  name: 日本4|@ripaojiedian
-  server: 172.105.197.24
+  uuid: 323aa578-bddb-47ed-bdb6-5650ade5825c
+  name: 🇯🇵_JP_日本_IPV4 (5)
+  server: 172.237.14.142
   port: 443
   udp: true
   network: ws
   tls: true
   servername: itunes.apple.com
   client-fingerprint: chrome
+  reality-opts:
+    public-key: UPeN2wAl3WQKsj-IchFF-81OnbhP1FQJ0EtcBFQn0Ak
+    short-id: 6093f81a
   ws-opts:
-    path: /wsflow=
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- type: vless
+  uuid: f4a4498a-c02f-4862-93ae-8f495c9cd2c0
+  name: 🇯🇵_JP_日本_IPV4 (4)
+  server: 172.238.18.103
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: BDt3yJpYIovC6b1iJF2h8qH4LfQAoSC0u3iVa0cFeSM
+    short-id: 6ff775ae
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- type: vless
+  uuid: aa1a9052-720f-4bb0-92be-21b6baf9f386
+  name: 🇯🇵_JP_日本_IPV4 (6)
+  server: 149.28.29.156
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: qgCGmxD1lyAEIGZVEk4buAMGcvGvHLl9wGxPQlHCYX0
+    short-id: e535df57
+  ws-opts:
+    path: /ws
     headers:
       Host: itunes.apple.com
 - type: vless
   uuid: 8f21c635-ef0a-4b05-8356-f44d463b6e34
-  name: 🇯🇵_JP_日本_IPV4 (2)
+  name: 🇯🇵_JP_日本_IPV4 (7)
   server: 198.13.53.39
   port: 443
   udp: true
@@ -53,6 +76,41 @@ proxies:
     short-id: 7a7cc838
   ws-opts:
     path: /ws
+    headers:
+      Host: itunes.apple.com
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇯🇵[www.v2nodes.com] ss-JP-5141...
+  server: 149.22.87.204
+  port: 443
+  udp: true
+- type: vless
+  uuid: c8c9b995-b4b9-4915-9c7d-dee94aa733ba
+  name: 日本|@ripaojiedian
+  server: 172.105.203.15
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /wsflow=
+    headers:
+      Host: itunes.apple.com
+- type: vless
+  uuid: 81f4e114-5a60-41b5-9038-8d742380c84f
+  name: 日本4|@ripaojiedian
+  server: 172.105.197.24
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /wsflow=
     headers:
       Host: itunes.apple.com
 - type: vless
@@ -69,18 +127,55 @@ proxies:
     path: /wsflow=
     headers:
       Host: itunes.apple.com
+- type: ss
+  cipher: aes-256-gcm
+  password: '123456'
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1624...
+  server: 47.245.40.193
+  port: 5555
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇯🇵[www.v2nodes.com] ss-JP-9223...
+  server: 149.22.87.241
+  port: 443
+  udp: true
+- type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1291...
+  server: 149.22.87.240
+  port: 443
+  udp: true
 - type: vless
-  uuid: c8c9b995-b4b9-4915-9c7d-dee94aa733ba
-  name: 日本|@ripaojiedian
-  server: 172.105.203.15
+  uuid: 92e8d9dc-8e3b-4f81-a278-d18c6bf1b962
+  name: 🇯🇵JP_2|2.2MB/s
+  server: 212.192.221.107
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: app-base-njw3ky.pages.dev
+  ws-opts:
+    path: /ws?ip=212.192.221.107:443fp=chrome
+    headers:
+      Host: app-base-njw3ky.pages.dev
+- type: vless
+  uuid: 1e709d98-d4c3-45c1-bdcc-4268cf83eff8
+  name: 🇯🇵_JP_日本_IPV4 (3)
+  server: 139.162.101.74
   port: 443
   udp: true
   network: ws
   tls: true
   servername: itunes.apple.com
   client-fingerprint: chrome
+  reality-opts:
+    public-key: jd8UNLpim43LVV-iEzIXlUgTVuvi9Pf7E0kgQb3o0CI
+    short-id: 7e1e09f4
   ws-opts:
-    path: /wsflow=
+    path: /ws
     headers:
       Host: itunes.apple.com
 - type: vless
@@ -97,24 +192,10 @@ proxies:
     path: /wsflow=
     headers:
       Host: itunes.apple.com
-- type: ss
-  cipher: aes-128-gcm
-  password: Bwlqh7GcFB
-  name: 🇯🇵JP-168.138.205.100-0245
-  server: 168.138.205.100
-  port: 53758
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: '123456'
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1624...
-  server: 47.245.40.193
-  port: 5555
-  udp: true
 - type: vless
-  uuid: aa1a9052-720f-4bb0-92be-21b6baf9f386
+  uuid: ff3038b1-a2f5-428f-89cd-5d5e4efba8e7
   name: 🇯🇵_JP_日本_IPV4
-  server: 149.28.29.156
+  server: 139.162.91.224
   port: 443
   udp: true
   network: ws
@@ -122,12 +203,46 @@ proxies:
   servername: itunes.apple.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: qgCGmxD1lyAEIGZVEk4buAMGcvGvHLl9wGxPQlHCYX0
-    short-id: e535df57
+    public-key: wmbc3kcjbG9-A9Fi7zaHuRVPH7A7UQkKNNvqyqJtMEk
+    short-id: e5b03494
   ws-opts:
     path: /ws
     headers:
       Host: itunes.apple.com
+- type: vless
+  uuid: 8cfdacf8-e781-42f0-9872-8d1d22469de5
+  name: 🇯🇵_JP_日本_IPV4 (2)
+  server: 139.162.91.247
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: _gFFckW3h8hFfllawgec9U2PDBeLJeCK_Jgk1S5tgC8
+    short-id: 536d7739
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- type: vless
+  uuid: 8840fac2-5361-4cb6-b887-cd1b95092394
+  name: 🇯🇵[www.v2nodes.com] vless-JP-1...
+  server: 50.7.159.242
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: jp.reddotcorp.org
+  client-fingerprint: firefox
+- type: ss
+  cipher: aes-128-gcm
+  password: Bwlqh7GcFB
+  name: 🇯🇵JP-168.138.205.100-0245
+  server: 168.138.205.100
+  port: 53758
+  udp: true
 - type: vless
   uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
   name: 日本2|@ripaojiedian
@@ -155,72 +270,68 @@ proxies:
     path: /487e07e6-2930-4e71-99b3-6792e5909f16fp=chrome
     headers:
       Host: hkg.kkp.us.ci
-- type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-  name: 🇯🇵[www.v2nodes.com] ss-JP-9223...
-  server: 149.22.87.241
-  port: 443
+- type: vmess
+  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 🇯🇵JP-168.110.63.247-0234
+  server: 168.110.63.247
+  port: 8081
   udp: true
-- type: vless
-  uuid: 8840fac2-5361-4cb6-b887-cd1b95092394
-  name: 🇯🇵[www.v2nodes.com] vless-JP-1...
-  server: 50.7.159.242
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: jp.reddotcorp.org
-  client-fingerprint: firefox
-- type: vless
-  uuid: 8840fac2-5361-4cb6-b887-cd1b95092394
-  name: 🇯🇵 日本 | JPN
-  server: 50.7.159.242
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: jp.reddotcorp.org
-  client-fingerprint: firefox
+  ws-opts:
+    path: /
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - 🇯🇵_JP_日本_IPV4 (5)
+  - 🇯🇵_JP_日本_IPV4 (4)
+  - 🇯🇵_JP_日本_IPV4 (6)
+  - 🇯🇵_JP_日本_IPV4 (7)
   - 🇯🇵[www.v2nodes.com] ss-JP-5141...
-  - 🇯🇵[www.v2nodes.com] ss-JP-1291...
-  - 日本4|@ripaojiedian
-  - 🇯🇵_JP_日本_IPV4 (2)
-  - 日本3|@ripaojiedian
   - 日本|@ripaojiedian
-  - 日本1|@ripaojiedian
-  - 🇯🇵JP-168.138.205.100-0245
+  - 日本4|@ripaojiedian
+  - 日本3|@ripaojiedian
   - 🇯🇵[www.v2nodes.com] ss-JP-1624...
+  - 🇯🇵[www.v2nodes.com] ss-JP-9223...
+  - 🇯🇵[www.v2nodes.com] ss-JP-1291...
+  - 🇯🇵JP_2|2.2MB/s
+  - 🇯🇵_JP_日本_IPV4 (3)
+  - 日本1|@ripaojiedian
   - 🇯🇵_JP_日本_IPV4
+  - 🇯🇵_JP_日本_IPV4 (2)
+  - 🇯🇵[www.v2nodes.com] vless-JP-1...
+  - 🇯🇵JP-168.138.205.100-0245
   - 日本2|@ripaojiedian
   - 🇭🇰[www.v2nodes.com] vless-HK-1...
-  - 🇯🇵[www.v2nodes.com] ss-JP-9223...
-  - 🇯🇵[www.v2nodes.com] vless-JP-1...
-  - 🇯🇵 日本 | JPN
+  - 🇯🇵JP-168.110.63.247-0234
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - 🇯🇵_JP_日本_IPV4 (5)
+  - 🇯🇵_JP_日本_IPV4 (4)
+  - 🇯🇵_JP_日本_IPV4 (6)
+  - 🇯🇵_JP_日本_IPV4 (7)
   - 🇯🇵[www.v2nodes.com] ss-JP-5141...
-  - 🇯🇵[www.v2nodes.com] ss-JP-1291...
-  - 日本4|@ripaojiedian
-  - 🇯🇵_JP_日本_IPV4 (2)
-  - 日本3|@ripaojiedian
   - 日本|@ripaojiedian
-  - 日本1|@ripaojiedian
-  - 🇯🇵JP-168.138.205.100-0245
+  - 日本4|@ripaojiedian
+  - 日本3|@ripaojiedian
   - 🇯🇵[www.v2nodes.com] ss-JP-1624...
+  - 🇯🇵[www.v2nodes.com] ss-JP-9223...
+  - 🇯🇵[www.v2nodes.com] ss-JP-1291...
+  - 🇯🇵JP_2|2.2MB/s
+  - 🇯🇵_JP_日本_IPV4 (3)
+  - 日本1|@ripaojiedian
   - 🇯🇵_JP_日本_IPV4
+  - 🇯🇵_JP_日本_IPV4 (2)
+  - 🇯🇵[www.v2nodes.com] vless-JP-1...
+  - 🇯🇵JP-168.138.205.100-0245
   - 日本2|@ripaojiedian
   - 🇭🇰[www.v2nodes.com] vless-HK-1...
-  - 🇯🇵[www.v2nodes.com] ss-JP-9223...
-  - 🇯🇵[www.v2nodes.com] vless-JP-1...
-  - 🇯🇵 日本 | JPN
+  - 🇯🇵JP-168.110.63.247-0234
 rules:
 - MATCH,SELECT

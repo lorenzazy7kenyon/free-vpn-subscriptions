@@ -10,19 +10,6 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: trojan
-  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
-  name: 🇯🇵 日本 | JPN 3
-  server: 109.120.138.102
-  port: 443
-  udp: true
-  sni: eofino.bpjp2027.top
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /images
-    headers:
-      Host: eofino.bpjp2027.top
 - type: ss
   cipher: 2022-blake3-chacha20-poly1305
   password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
@@ -30,21 +17,6 @@ proxies:
   server: 47.254.167.157
   port: 443
   udp: true
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知
-  server: 82.139.242.5
-  port: 443
-  udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
 - type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   name: 🏳[www.v2nodes.com] trojan-
@@ -52,9 +24,16 @@ proxies:
   port: 443
   udp: true
   sni: 193.108.119.78
+- type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  name: 🇩🇪[www.v2nodes.com] ss-DE-1608...
+  server: 8.211.56.98
+  port: 443
+  udp: true
 - type: vless
   uuid: 3af3f8f0-569f-4dd3-be99-2ef4bfe7867c
-  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #3'
+  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #4'
   server: 185.134.203.106
   port: 443
   udp: true
@@ -63,44 +42,36 @@ proxies:
   tls: true
   servername: api.vk.me
   client-fingerprint: chrome
-- type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知79
-  server: 89.127.218.61
+- type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  name: 🇩🇪DE_1|2.5MB/s
+  server: 47.254.128.109
   port: 443
   udp: true
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
 - type: vless
-  uuid: bf14dc50-e9f2-49fd-8642-620446edeafb
-  name: 🇩🇪 德国 | DEU
-  server: 77.90.63.17
+  uuid: 92e8d9dc-8e3b-4f81-a278-d18c6bf1b962
+  name: 🇳🇱NL_11|2.2MB/s
+  server: 95.140.154.46
   port: 443
   udp: true
   network: ws
   tls: true
-  servername: v4-77j.pages.dev
-  client-fingerprint: chrome
+  servername: app-base-njw3ky.pages.dev
   ws-opts:
-    path: /
+    path: /ws?ip=95.140.154.46:443fp=chrome
     headers:
-      Host: v4-77j.pages.dev
-- type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知33
-  server: 216.106.187.60
-  port: 22324
+      Host: app-base-njw3ky.pages.dev
+- type: vless
+  uuid: 7a42d986-f0b8-46e7-82cf-9516e168a613
+  name: 🇫🇷FR_3|2.4MB/s
+  server: 87.120.126.127
+  port: 443
   udp: true
+  network: tcp
+  tls: true
+  servername: mama147.baklajann.ru
+  client-fingerprint: chrome
 - type: vless
   uuid: 9000a7f3-df2a-49a8-ae56-3e7777bd32f7
   name: '🏳[www.v2nodes.com] vless- #1'
@@ -111,46 +82,6 @@ proxies:
   tls: true
   servername: v4.clequinix.globalinetforallalwaysandneverbanyoubelieveme.com
   client-fingerprint: firefox
-- type: vless
-  uuid: 80256d6f-7cd3-4a3a-8df6-2981e52551dc
-  name: 🇩🇪 德国 | DEU
-  server: 91.107.185.86
-  port: 16893
-  udp: true
-  network: tcp
-  tls: true
-  servername: play.google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: dpmXAfLC6-Sf6cPjkQKGx_NliRQRFZ_oUiiPA5ALW0I
-    short-id: 849711f2b99d1176
-- type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
-  name: 🇩🇪[www.v2nodes.com] ss-DE-1608...
-  server: 8.211.56.98
-  port: 443
-  udp: true
-- type: vless
-  uuid: bf14dc50-e9f2-49fd-8642-620446edeafb
-  name: '🇩🇪 德国 | DEU #3'
-  server: 77.90.63.17
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: v4-77j.pages.dev
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: v4-77j.pages.dev
-- type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  name: 🇩🇪DE-213.202.208.199-0279
-  server: 213.202.208.199
-  port: 7001
-  udp: true
 - type: vless
   uuid: fbe22815-0718-4eae-816f-e91c67d15b54
   name: '🏳[www.v2nodes.com] vless- #3'
@@ -173,19 +104,26 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- type: trojan
-  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
-  name: 🇯🇵 日本 | JPN 8
-  server: 46.101.110.88
-  port: 443
+- type: vmess
+  uuid: 8e9687fc-a3a7-414a-8676-8e2136797cfe
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知169
+  server: 94.156.179.138
+  port: 110
   udp: true
-  sni: eofino.bpjp2027.top
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /images
-    headers:
-      Host: eofino.bpjp2027.top
+- type: vless
+  uuid: 6c022fe4-9838-42fd-a702-1938c5d2ca33
+  name: '🇩🇪 德国 | DEU #3'
+  server: 167.233.217.107
+  port: 8443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: static.80.222.99.91.clients.your-server.de
+  client-fingerprint: firefox
 - type: vless
   uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
   name: '🇩🇪[www.v2nodes.com] vless-DE-1... #1'
@@ -193,34 +131,13 @@ proxies:
   port: 9543
   udp: true
   network: tcp
-- type: vless
-  uuid: 80256d6f-7cd3-4a3a-8df6-2981e52551dc
-  name: '🇩🇪 德国 | DEU #2'
-  server: 91.107.185.86
-  port: 16893
-  udp: true
-  network: tcp
-  tls: true
-  servername: play.google.com
-  client-fingerprint: chrome
-- type: vless
-  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  server: 82.118.19.153
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 - type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知65
-  server: 5.39.249.167
+  name: 未知147
+  server: 84.75.76.16
   port: 443
   udp: true
   tls: true
@@ -229,13 +146,88 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
+- type: vless
+  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
+  server: 82.118.19.153
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: ss
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  name: 🇩🇪DE-213.202.208.199-0279
+  server: 213.202.208.199
+  port: 7001
+  udp: true
+- type: vmess
+  uuid: 678a8a2c-aca8-11f1-b342-afa6288e22f8
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: 未知171
+  server: 51.75.74.253
+  port: 10000
+  udp: true
+  ws-opts:
+    path: /vpnjantit
+- type: vmess
+  uuid: 78fb1a62-b276-4a13-ab57-f2b87d0f37a5
+  alterId: 0
+  cipher: auto
+  network: tcp
+  name: 未知95
+  server: 178.105.210.96
+  port: 80
+  udp: true
+- type: vless
+  uuid: 6c022fe4-9838-42fd-a702-1938c5d2ca33
+  name: 🇩🇪 德国 | DEU
+  server: 167.233.217.107
+  port: 8443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: static.80.222.99.91.clients.your-server.de
+  client-fingerprint: firefox
 - type: ss
   cipher: chacha20-ietf-poly1305
   password: NcAXc0UZI6yQJE1p8QmOv8
-  name: '🏳[www.v2nodes.com] ss- #3'
+  name: '🏳[www.v2nodes.com] ss- #1'
   server: 57.129.113.16
   port: 8388
   udp: true
+- type: vmess
+  uuid: aa8a26cd-94f4-4f11-a3b3-48f30a127627
+  alterId: 0
+  cipher: auto
+  network: grpc
+  name: 未知141
+  server: 136.243.83.105
+  port: 46277
+  udp: true
+- type: hysteria2
+  password: 5s7qa8f78hznlw8g
+  name: '@B2Hub'
+  server: 3.120.145.15
+  port: 41018
+  udp: true
+  sni: quotes.ali-khamenei.world
+  obfs: salamander
+  obfs-password: v0qq015d7c8zgzu7
+- type: hysteria2
+  password: vpNJEy
+  name: '&obfs=salamander&obfs-password=Telegram@vpnjey#️⃣31@oneclickvpnkeys'
+  server: 179.61.138.145
+  port: 36264
+  udp: true
+  sni: de2.jey.cc.cd
+  skip-cert-verify: true
 - type: hysteria2
   password: KevinZakarian
   name: 🩵+@Azarakhsh_Proxy+🩷
@@ -246,70 +238,63 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: KevinZakarian
-- type: hysteria2
-  password: 5s7qa8f78hznlw8g
-  name: '@B2Hub'
-  server: 3.120.145.15
-  port: 41018
-  udp: true
-  sni: quotes.ali-khamenei.world
-  obfs: salamander
-  obfs-password: v0qq015d7c8zgzu7
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇯🇵 日本 | JPN 3
   - '🇩🇪[www.v2nodes.com] ss-DE-1624... #1'
-  - 未知
   - 🏳[www.v2nodes.com] trojan-
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #3'
-  - 未知79
-  - 🇩🇪 德国 | DEU
-  - 未知33
-  - '🏳[www.v2nodes.com] vless- #1'
-  - 🇩🇪 德国 | DEU
   - 🇩🇪[www.v2nodes.com] ss-DE-1608...
-  - '🇩🇪 德国 | DEU #3'
-  - 🇩🇪DE-213.202.208.199-0279
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #4'
+  - 🇩🇪DE_1|2.5MB/s
+  - 🇳🇱NL_11|2.2MB/s
+  - 🇫🇷FR_3|2.4MB/s
+  - '🏳[www.v2nodes.com] vless- #1'
   - '🏳[www.v2nodes.com] vless- #3'
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
-  - 🇯🇵 日本 | JPN 8
+  - 未知169
+  - '🇩🇪 德国 | DEU #3'
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #1'
-  - '🇩🇪 德国 | DEU #2'
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  - 未知65
-  - '🏳[www.v2nodes.com] ss- #3'
-  - 🩵+@Azarakhsh_Proxy+🩷
+  - 未知147
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
+  - 🇩🇪DE-213.202.208.199-0279
+  - 未知171
+  - 未知95
+  - 🇩🇪 德国 | DEU
+  - '🏳[www.v2nodes.com] ss- #1'
+  - 未知141
   - '@B2Hub'
+  - '&obfs=salamander&obfs-password=Telegram@vpnjey#️⃣31@oneclickvpnkeys'
+  - 🩵+@Azarakhsh_Proxy+🩷
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇯🇵 日本 | JPN 3
   - '🇩🇪[www.v2nodes.com] ss-DE-1624... #1'
-  - 未知
   - 🏳[www.v2nodes.com] trojan-
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #3'
-  - 未知79
-  - 🇩🇪 德国 | DEU
-  - 未知33
-  - '🏳[www.v2nodes.com] vless- #1'
-  - 🇩🇪 德国 | DEU
   - 🇩🇪[www.v2nodes.com] ss-DE-1608...
-  - '🇩🇪 德国 | DEU #3'
-  - 🇩🇪DE-213.202.208.199-0279
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #4'
+  - 🇩🇪DE_1|2.5MB/s
+  - 🇳🇱NL_11|2.2MB/s
+  - 🇫🇷FR_3|2.4MB/s
+  - '🏳[www.v2nodes.com] vless- #1'
   - '🏳[www.v2nodes.com] vless- #3'
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
-  - 🇯🇵 日本 | JPN 8
+  - 未知169
+  - '🇩🇪 德国 | DEU #3'
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #1'
-  - '🇩🇪 德国 | DEU #2'
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  - 未知65
-  - '🏳[www.v2nodes.com] ss- #3'
-  - 🩵+@Azarakhsh_Proxy+🩷
+  - 未知147
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
+  - 🇩🇪DE-213.202.208.199-0279
+  - 未知171
+  - 未知95
+  - 🇩🇪 德国 | DEU
+  - '🏳[www.v2nodes.com] ss- #1'
+  - 未知141
   - '@B2Hub'
+  - '&obfs=salamander&obfs-password=Telegram@vpnjey#️⃣31@oneclickvpnkeys'
+  - 🩵+@Azarakhsh_Proxy+🩷
 rules:
 - MATCH,SELECT

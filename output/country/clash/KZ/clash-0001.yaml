@@ -12,16 +12,6 @@ dns:
 proxies:
 - type: vless
   uuid: 0173d52e-8e1b-4681-831e-11529677b72f
-  name: '🇺🇸 美国 | USA #2'
-  server: 196.198.111.146
-  port: 443
-  udp: true
-  network: tcp
-  tls: true
-  servername: cab-6b07048f.ferrin.uk
-  client-fingerprint: firefox
-- type: vless
-  uuid: 0173d52e-8e1b-4681-831e-11529677b72f
   name: '🇪🇪 爱沙尼亚 | EST #1'
   server: 196.198.111.179
   port: 8443
@@ -35,6 +25,16 @@ proxies:
   uuid: 0173d52e-8e1b-4681-831e-11529677b72f
   name: '🇰🇿 哈萨克斯坦 | KAZ #1'
   server: 196.198.111.130
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: cab-6b07048f.ferrin.uk
+  client-fingerprint: firefox
+- type: vless
+  uuid: 0173d52e-8e1b-4681-831e-11529677b72f
+  name: '🇺🇸 美国 | USA #2'
+  server: 196.198.111.146
   port: 443
   udp: true
   network: tcp
@@ -57,17 +57,17 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇺🇸 美国 | USA #2'
   - '🇪🇪 爱沙尼亚 | EST #1'
   - '🇰🇿 哈萨克斯坦 | KAZ #1'
+  - '🇺🇸 美国 | USA #2'
   - 🇰🇿[www.v2nodes.com] vless-KZ-1...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇺🇸 美国 | USA #2'
   - '🇪🇪 爱沙尼亚 | EST #1'
   - '🇰🇿 哈萨克斯坦 | KAZ #1'
+  - '🇺🇸 美国 | USA #2'
   - 🇰🇿[www.v2nodes.com] vless-KZ-1...
 rules:
 - MATCH,SELECT

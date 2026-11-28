@@ -30,17 +30,6 @@ proxies:
   tls: true
   servername: samoanews.com
   client-fingerprint: firefox
-- type: vless
-  uuid: 04920673-035c-410d-94e4-5b1469d3fb6f
-  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #1'
-  server: 91.132.190.161
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: 171.22.183.166
-  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -49,13 +38,11 @@ proxy-groups:
   proxies:
   - '🇺🇸 美国 | USA #5'
   - '🇺🇸 美国 | USA #4'
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - '🇺🇸 美国 | USA #5'
   - '🇺🇸 美国 | USA #4'
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #1'
 rules:
 - MATCH,SELECT

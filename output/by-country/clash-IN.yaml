@@ -10,24 +10,9 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 未知26
-  server: 20.235.220.189
-  port: 443
-  udp: true
-  tls: true
-  servername: 6JDvArazgU3qQR6Q.v.3dns.vip
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: 6JDvArazgU3qQR6Q.v.3dns.vip
 - type: vless
   uuid: 591e7de6-f2dd-4ff9-ae21-8e00d5affa2a
-  name: '🇮🇳 印度 | IND #1'
+  name: 🇮🇳[www.v2nodes.com] vless-IN-1...
   server: 147.93.171.8
   port: 8443
   udp: true
@@ -40,7 +25,7 @@ proxies:
       Host: 147-93-171-8.sslip.io
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -55,15 +40,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知26
-  - '🇮🇳 印度 | IND #1'
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知26
-  - '🇮🇳 印度 | IND #1'
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - 🇮🇳[www.v2nodes.com] vless-IN-1...
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
 rules:
 - MATCH,SELECT

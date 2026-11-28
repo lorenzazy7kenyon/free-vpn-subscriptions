@@ -13,35 +13,17 @@ proxies:
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #6'
-  server: 198.244.202.215
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  name: '🏳[www.v2nodes.com] ss- #10'
-  server: 151.241.19.29
-  port: 19999
-  udp: true
-- type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   name: 🇬🇧[www.v2nodes.com] ss-GB-1616...
   server: 198.244.201.129
   port: 19999
   udp: true
-- type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  network: tcp
-  name: 未知139
-  server: 151.241.19.44
-  port: 1270
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
+  server: 198.244.202.215
+  port: 19999
   udp: true
-  tls: true
-  servername: xmfhlpy.com
 - type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -49,9 +31,16 @@ proxies:
   server: 151.241.19.36
   port: 19999
   udp: true
+- type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: '🇳🇱[www.v2nodes.com] ss-NL-1614... #1'
+  server: 151.241.19.29
+  port: 19999
+  udp: true
 - type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  name: '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -73,23 +62,21 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🏳[www.v2nodes.com] ss- #6'
-  - '🏳[www.v2nodes.com] ss- #10'
   - 🇬🇧[www.v2nodes.com] ss-GB-1616...
-  - 未知139
+  - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
   - 🇳🇱[www.v2nodes.com] ss-NL-1614...
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - '🇳🇱[www.v2nodes.com] ss-NL-1614... #1'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🏳[www.v2nodes.com] ss- #6'
-  - '🏳[www.v2nodes.com] ss- #10'
   - 🇬🇧[www.v2nodes.com] ss-GB-1616...
-  - 未知139
+  - '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
   - 🇳🇱[www.v2nodes.com] ss-NL-1614...
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
+  - '🇳🇱[www.v2nodes.com] ss-NL-1614... #1'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
   - 🇿🇦[www.v2nodes.com] ss-ZA-1336...
 rules:
 - MATCH,SELECT

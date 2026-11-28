@@ -12,7 +12,7 @@ dns:
 proxies:
 - type: vless
   uuid: c98a16e4-0dc5-42f0-b3db-30f04525c123
-  name: '🇸🇬[www.v2nodes.com] vless-SG #1'
+  name: '🇸🇬[www.v2nodes.com] vless-SG #2'
   server: 27.50.48.6
   port: 443
   udp: true
@@ -21,17 +21,40 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: vless2-8vx.pages.dev
-- type: trojan
-  password: '12012'
-  name: 🇭🇰[www.v2nodes.com] trojan-HK-...
-  server: 47.242.93.89
-  port: 12012
+- type: ss
+  cipher: chacha20-ietf-poly1305
+  password: abc62f00-95a8-4c2e-a85d-36a2cdc977da
+  name: 🇭🇰HK_2|2.8MB/s
+  server: 143.20.71.68
+  port: 28014
   udp: true
-  sni: ali-hk.b-gfw.cfd
-  skip-cert-verify: true
+- type: vless
+  uuid: e6552569-97ce-430c-a324-53ad1c546e05
+  name: 香港3|@ripaojiedian
+  server: 38.207.172.59
+  port: 28418
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: op.gg
+  client-fingerprint: chrome
+- type: vmess
+  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: '🇭🇰 香港 | HKG #2'
+  server: 47.244.120.197
+  port: 23026
+  udp: true
+  ws-opts:
+    path: /arki
+    headers:
+      Host: 47.244.120.197
 - type: vless
   uuid: 4fc9dc3d-0d57-49e7-9bc0-e323165241bf
-  name: '🇭🇰 香港 | HKG #2'
+  name: 🇭🇰 香港 | HKG
   server: 8.210.92.38
   port: 443
   udp: true
@@ -40,21 +63,42 @@ proxies:
   tls: true
   servername: www.ebay.com
   client-fingerprint: chrome
+  reality-opts:
+    public-key: vhu6gifBQ8-hRzW1gqKFkEXDlQbf6Ex8kKj1FcxhmzA
+    short-id: d78318845237d9a9
+- type: vless
+  uuid: e9923122-5d88-43f1-8548-5771d7750ef5
+  name: 香港|@ripaojiedian
+  server: 216.236.51.44
+  port: 1891
+  udp: true
+  network: ws
+  tls: true
+  servername: senflarelink-node-71i.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /flow=
+    headers:
+      Host: senflarelink-node-71i.pages.dev
 - type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
   alterId: 0
   cipher: auto
   network: ws
-  name: HK4
-  server: 47.243.92.155
-  port: 443
+  name: 🇭🇰HK-156.245.232.239-0273
+  server: 156.245.232.239
+  port: 35043
   udp: true
-  tls: true
-  servername: mTCKUNDiGePwU3uP.v.3dns.vip
   ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: mTCKUNDiGePwU3uP.v.3dns.vip
+    path: /
+- type: trojan
+  password: '12012'
+  name: '🇭🇰 香港 | HKG #3'
+  server: 47.242.93.89
+  port: 12012
+  udp: true
+  sni: ali-hk.b-gfw.cfd
+  skip-cert-verify: true
 - type: vmess
   uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
   alterId: 0
@@ -68,30 +112,32 @@ proxies:
     path: /arki
     headers:
       Host: 47.244.120.197
+- type: vless
+  uuid: 4fc9dc3d-0d57-49e7-9bc0-e323165241bf
+  name: '🇭🇰 香港 | HKG #5'
+  server: 8.210.92.38
+  port: 443
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.ebay.com
+  client-fingerprint: chrome
 - type: vmess
-  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
+  uuid: f23bb427c1f94373876c2f43e9f790f3
   alterId: 0
   cipher: auto
   network: ws
-  name: 🇭🇰HK-156.245.232.239-0273
-  server: 156.245.232.239
-  port: 35043
-  udp: true
-  ws-opts:
-    path: /
-- type: trojan
-  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
-  name: 🇯🇵 日本 | JPN 9
-  server: 68.64.180.218
+  name: HK4
+  server: 47.243.80.106
   port: 443
   udp: true
-  sni: eofino.bpjp2027.top
-  skip-cert-verify: true
-  network: ws
+  tls: true
+  servername: wwafj5LHl6bI8aU9.v.3dns.vip
   ws-opts:
-    path: /images
+    path: /ws-vmess
     headers:
-      Host: eofino.bpjp2027.top
+      Host: wwafj5LHl6bI8aU9.v.3dns.vip
 - type: vless
   uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
   name: '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
@@ -103,6 +149,17 @@ proxies:
   tls: true
   servername: www.apple.com
   client-fingerprint: firefox
+- type: vmess
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  alterId: 0
+  cipher: auto
+  network: ws
+  name: HK2 3.4KB/s
+  server: 47.244.120.197
+  port: 44867
+  udp: true
+  ws-opts:
+    path: /arki?ed=2048
 - type: ss
   cipher: aes-256-gcm
   password: AMok40FfaM+Ikwre16psBpVk6JHxsQZw
@@ -112,13 +169,21 @@ proxies:
   udp: true
 - type: hysteria2
   password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
-  name: برای اتصال دائمی جوین شو🦠 Tele...
+  name: '@ConfigV2RayNG 🇭🇰'
   server: 152.32.254.68
   port: 5010
   udp: true
   sni: nas.aizhzo.com
   obfs: salamander
   obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
+- type: hysteria2
+  password: ePPsH1bMFD
+  name: 🇭🇰 香港 | HKG 4
+  server: 23.141.172.229
+  port: 50541
+  udp: true
+  sni: is1-ssl.mzstatic.com
+  skip-cert-verify: true
 - type: hysteria2
   password: 57beeeb0-03fc-4fc9-94da-7604488a7134
   name: '@tootffarangi🍓-5'
@@ -134,31 +199,43 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇸🇬[www.v2nodes.com] vless-SG #1'
-  - 🇭🇰[www.v2nodes.com] trojan-HK-...
+  - '🇸🇬[www.v2nodes.com] vless-SG #2'
+  - 🇭🇰HK_2|2.8MB/s
+  - 香港3|@ripaojiedian
   - '🇭🇰 香港 | HKG #2'
-  - HK4
-  - '🇭🇰 香港 | HKG #1'
+  - 🇭🇰 香港 | HKG
+  - 香港|@ripaojiedian
   - 🇭🇰HK-156.245.232.239-0273
-  - 🇯🇵 日本 | JPN 9
+  - '🇭🇰 香港 | HKG #3'
+  - '🇭🇰 香港 | HKG #1'
+  - '🇭🇰 香港 | HKG #5'
+  - HK4
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
+  - HK2 3.4KB/s
   - 🇭🇰[www.v2nodes.com] ss-HK-1621...
-  - برای اتصال دائمی جوین شو🦠 Tele...
+  - '@ConfigV2RayNG 🇭🇰'
+  - 🇭🇰 香港 | HKG 4
   - '@tootffarangi🍓-5'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇸🇬[www.v2nodes.com] vless-SG #1'
-  - 🇭🇰[www.v2nodes.com] trojan-HK-...
+  - '🇸🇬[www.v2nodes.com] vless-SG #2'
+  - 🇭🇰HK_2|2.8MB/s
+  - 香港3|@ripaojiedian
   - '🇭🇰 香港 | HKG #2'
-  - HK4
-  - '🇭🇰 香港 | HKG #1'
+  - 🇭🇰 香港 | HKG
+  - 香港|@ripaojiedian
   - 🇭🇰HK-156.245.232.239-0273
-  - 🇯🇵 日本 | JPN 9
+  - '🇭🇰 香港 | HKG #3'
+  - '🇭🇰 香港 | HKG #1'
+  - '🇭🇰 香港 | HKG #5'
+  - HK4
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
+  - HK2 3.4KB/s
   - 🇭🇰[www.v2nodes.com] ss-HK-1621...
-  - برای اتصال دائمی جوین شو🦠 Tele...
+  - '@ConfigV2RayNG 🇭🇰'
+  - 🇭🇰 香港 | HKG 4
   - '@tootffarangi🍓-5'
 rules:
 - MATCH,SELECT
