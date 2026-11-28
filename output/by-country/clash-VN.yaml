@@ -17,6 +17,33 @@ proxies:
   port: 2086
   udp: true
   network: tcp
+- type: vless
+  uuid: 2144e802-a64f-4261-af53-41309fee1d99
+  name: 🇻🇳 越南 | VNM
+  server: 221.133.21.135
+  port: 8444
+  udp: true
+  network: ws
+  tls: true
+  servername: www.bing.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /tk
+    headers:
+      Host: 221.133.21.135
+- type: vless
+  uuid: 2144e802-a64f-4261-af53-41309fee1d99
+  name: '🇻🇳 越南 | VNM #1'
+  server: 221.133.21.135
+  port: 8444
+  udp: true
+  network: ws
+  tls: true
+  servername: www.bing.com
+  ws-opts:
+    path: /tkfp=chrome
+    headers:
+      Host: 221.133.21.135
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -24,10 +51,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
+  - 🇻🇳 越南 | VNM
+  - '🇻🇳 越南 | VNM #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
+  - 🇻🇳 越南 | VNM
+  - '🇻🇳 越南 | VNM #1'
 rules:
 - MATCH,SELECT

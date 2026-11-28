@@ -1,18 +1,67 @@
 {
   "outbounds": [
     {
-      "alter_id": 0,
-      "security": "auto",
-      "server": "8.213.211.160",
-      "server_port": 18565,
+      "server": "130.94.25.12",
+      "server_port": 443,
       "tag": "🇹🇭 泰国 | THA",
-      "type": "vmess",
-      "uuid": "853a251f-de85-40cc-84a6-ab8748c7258c"
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc",
+          "short_id": "2da72ce6"
+        },
+        "server_name": "navi.bankrate.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "ed94398f-893f-40c6-b14c-bf02b5f6be16"
+    },
+    {
+      "server": "130.94.25.12",
+      "server_port": 443,
+      "tag": "🇹🇭 泰国 | THA #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "navi.bankrate.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "type": "vless",
+      "uuid": "ed94398f-893f-40c6-b14c-bf02b5f6be16"
+    },
+    {
+      "server": "45.150.131.246",
+      "server_port": 443,
+      "tag": "🇹🇭 泰国 | THA #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "v1n4.11676767.xyz"
+      },
+      "transport": {
+        "headers": {
+          "Host": "v1n4.11676767.xyz"
+        },
+        "path": "/pdf/out.htmlfp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "5d7b401c-78fa-4254-872e-6d42bf7e75ec"
     },
     {
       "interval": "5m",
       "outbounds": [
-        "🇹🇭 泰国 | THA"
+        "🇹🇭 泰国 | THA",
+        "🇹🇭 泰国 | THA #1",
+        "🇹🇭 泰国 | THA #1"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -21,7 +70,9 @@
     {
       "outbounds": [
         "auto",
-        "🇹🇭 泰国 | THA"
+        "🇹🇭 泰国 | THA",
+        "🇹🇭 泰国 | THA #1",
+        "🇹🇭 泰国 | THA #1"
       ],
       "tag": "select",
       "type": "selector"

@@ -11,27 +11,41 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: a197af05-7048-478e-8d99-c3151adb4064
-  name: 印尼|@ripaojiedian
-  server: 147.139.197.200
+  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
+  name: '🇮🇩 印尼 | IDN #1'
+  server: 130.94.95.126
   port: 443
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: www.ebay.com
+  servername: navi.bankrate.com
   client-fingerprint: chrome
+- type: vless
+  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
+  name: 🇮🇩 印尼 | IDN
+  server: 130.94.95.126
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: navi.bankrate.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
+    short-id: 2da72ce6
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 印尼|@ripaojiedian
+  - '🇮🇩 印尼 | IDN #1'
+  - 🇮🇩 印尼 | IDN
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 印尼|@ripaojiedian
+  - '🇮🇩 印尼 | IDN #1'
+  - 🇮🇩 印尼 | IDN
 rules:
 - MATCH,SELECT

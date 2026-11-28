@@ -15,7 +15,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: ws
-  name: 未知5
+  name: 未知83
   server: 35.241.172.224
   port: 443
   udp: true
@@ -25,32 +25,17 @@ proxies:
     path: /api/v1/gpu-stream/socket
     headers:
       Host: renderer-stream-2-62.mirra.now
-- type: vless
-  uuid: 92e8d9dc-8e3b-4f81-a278-d18c6bf1b962
-  name: 🇩🇪DE_15|2.9MB/s
-  server: 35.210.99.51
-  port: 443
-  udp: true
-  network: ws
-  tls: true
-  servername: app-base-njw3ky.pages.dev
-  ws-opts:
-    path: /ws?ip=35.210.99.51:443fp=chrome
-    headers:
-      Host: app-base-njw3ky.pages.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知5
-  - 🇩🇪DE_15|2.9MB/s
+  - 未知83
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知5
-  - 🇩🇪DE_15|2.9MB/s
+  - 未知83
 rules:
 - MATCH,SELECT

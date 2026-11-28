@@ -10,15 +10,42 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: 853a251f-de85-40cc-84a6-ab8748c7258c
-  alterId: 0
-  cipher: auto
-  network: tcp
+- type: vless
+  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
   name: 🇹🇭 泰国 | THA
-  server: 8.213.211.160
-  port: 18565
+  server: 130.94.25.12
+  port: 443
   udp: true
+  network: tcp
+  tls: true
+  servername: navi.bankrate.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
+    short-id: 2da72ce6
+- type: vless
+  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
+  name: '🇹🇭 泰国 | THA #1'
+  server: 130.94.25.12
+  port: 443
+  udp: true
+  network: tcp
+  tls: true
+  servername: navi.bankrate.com
+  client-fingerprint: chrome
+- type: vless
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  name: '🇹🇭 泰国 | THA #1'
+  server: 45.150.131.246
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: v1n4.11676767.xyz
+  ws-opts:
+    path: /pdf/out.htmlfp=chrome
+    headers:
+      Host: v1n4.11676767.xyz
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -26,10 +53,14 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇹🇭 泰国 | THA
+  - '🇹🇭 泰国 | THA #1'
+  - '🇹🇭 泰国 | THA #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
   - 🇹🇭 泰国 | THA
+  - '🇹🇭 泰国 | THA #1'
+  - '🇹🇭 泰国 | THA #1'
 rules:
 - MATCH,SELECT

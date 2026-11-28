@@ -11,14 +11,15 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-  name: 🇳🇱NL_19|2.6MB/s
-  server: 193.111.204.84
-  port: 8443
+  uuid: ba373a70-295f-482d-a471-8bc17b54e23b
+  name: '🇦🇲 AM_20 #1'
+  server: 2.56.207.123
+  port: 443
   udp: true
+  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: assets.study.golangwikito.cfd
+  servername: ironlark.xyz
   client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
@@ -26,11 +27,11 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇱NL_19|2.6MB/s
+  - '🇦🇲 AM_20 #1'
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇳🇱NL_19|2.6MB/s
+  - '🇦🇲 AM_20 #1'
 rules:
 - MATCH,SELECT

@@ -11,6 +11,19 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  name: '🇦🇹 奥地利 | AUT #1'
+  server: 91.184.249.146
+  port: 443
+  udp: true
+  network: ws
+  tls: true
+  servername: v1n4.11676767.xyz
+  ws-opts:
+    path: /pdf/out.htmlfp=chrome
+    headers:
+      Host: v1n4.11676767.xyz
+- type: vless
   uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
   name: '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
   server: 195.123.245.241
@@ -22,21 +35,21 @@ proxies:
   servername: gateway.icloud.com
   client-fingerprint: chrome
 - type: vless
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  name: '🏳[www.v2nodes.com] vless- #2'
-  server: 193.124.56.100
+  uuid: bbbee51e-021e-4e65-ba03-bf7de175116f
+  name: 🇪🇸 西班牙 | ESP
+  server: 194.58.60.228
   port: 443
   udp: true
-  network: ws
+  network: grpc
   tls: true
-  servername: parchment.merlano.monster
-  ws-opts:
-    path: /api/de7/streamfp=firefox
-    headers:
-      Host: parchment.merlano.monster
+  servername: node43.lmdscdn.ru
+  client-fingerprint: edge
+  reality-opts:
+    public-key: PVlnR_I9tZ8hKhOHW6ySpSofhsaShcBQ_JV2-0TePVA
+    short-id: c5548af15927b698
 - type: vless
   uuid: bbbee51e-021e-4e65-ba03-bf7de175116f
-  name: 🇪🇸ES_1|2.7MB/s
+  name: 🇪🇸 西班牙 | ESP
   server: 194.58.60.228
   port: 443
   udp: true
@@ -50,15 +63,17 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - '🇦🇹 奥地利 | AUT #1'
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
-  - '🏳[www.v2nodes.com] vless- #2'
-  - 🇪🇸ES_1|2.7MB/s
+  - 🇪🇸 西班牙 | ESP
+  - 🇪🇸 西班牙 | ESP
 - name: SELECT
   type: select
   proxies:
   - AUTO
+  - '🇦🇹 奥地利 | AUT #1'
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
-  - '🏳[www.v2nodes.com] vless- #2'
-  - 🇪🇸ES_1|2.7MB/s
+  - 🇪🇸 西班牙 | ESP
+  - 🇪🇸 西班牙 | ESP
 rules:
 - MATCH,SELECT

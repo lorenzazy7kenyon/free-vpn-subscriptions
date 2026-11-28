@@ -1,6 +1,25 @@
 {
   "outbounds": [
     {
+      "server": "91.184.249.146",
+      "server_port": 443,
+      "tag": "🇦🇹 奥地利 | AUT #1",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "v1n4.11676767.xyz"
+      },
+      "transport": {
+        "headers": {
+          "Host": "v1n4.11676767.xyz"
+        },
+        "path": "/pdf/out.htmlfp=chrome",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "5d7b401c-78fa-4254-872e-6d42bf7e75ec"
+    },
+    {
       "flow": "xtls-rprx-vision",
       "server": "195.123.245.241",
       "server_port": 443,
@@ -18,28 +37,30 @@
       "uuid": "7c053ca8-38cc-45e2-930c-eda1fd66f903"
     },
     {
-      "server": "193.124.56.100",
+      "server": "194.58.60.228",
       "server_port": 443,
-      "tag": "🏳[www.v2nodes.com] vless- #2",
+      "tag": "🇪🇸 西班牙 | ESP",
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "parchment.merlano.monster"
-      },
-      "transport": {
-        "headers": {
-          "Host": "parchment.merlano.monster"
+        "reality": {
+          "enabled": true,
+          "public_key": "PVlnR_I9tZ8hKhOHW6ySpSofhsaShcBQ_JV2-0TePVA",
+          "short_id": "c5548af15927b698"
         },
-        "path": "/api/de7/streamfp=firefox",
-        "type": "ws"
+        "server_name": "node43.lmdscdn.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
       },
       "type": "vless",
-      "uuid": "0b6a7fe0-206b-4071-9f96-cd397d1ec01a"
+      "uuid": "bbbee51e-021e-4e65-ba03-bf7de175116f"
     },
     {
       "server": "194.58.60.228",
       "server_port": 443,
-      "tag": "🇪🇸ES_1|2.7MB/s",
+      "tag": "🇪🇸 西班牙 | ESP",
       "tls": {
         "enabled": true,
         "insecure": false,
@@ -59,9 +80,10 @@
     {
       "interval": "5m",
       "outbounds": [
+        "🇦🇹 奥地利 | AUT #1",
         "🇨🇿[www.v2nodes.com] vless-CZ-1... #1",
-        "🏳[www.v2nodes.com] vless- #2",
-        "🇪🇸ES_1|2.7MB/s"
+        "🇪🇸 西班牙 | ESP",
+        "🇪🇸 西班牙 | ESP"
       ],
       "tag": "auto",
       "type": "urltest",
@@ -70,9 +92,10 @@
     {
       "outbounds": [
         "auto",
+        "🇦🇹 奥地利 | AUT #1",
         "🇨🇿[www.v2nodes.com] vless-CZ-1... #1",
-        "🏳[www.v2nodes.com] vless- #2",
-        "🇪🇸ES_1|2.7MB/s"
+        "🇪🇸 西班牙 | ESP",
+        "🇪🇸 西班牙 | ESP"
       ],
       "tag": "select",
       "type": "selector"

@@ -11,31 +11,6 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vless
-  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
-  name: 🇫🇷 法国 | FRA
-  server: 13.141.36.43
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: 6bf329t.nl18.h1clayd.click
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: p35RUaaaItuoyNiCrLpGeStBUpEJMSiZ2AajdfhhmiM
-    short-id: 92aee92130b46fe2
-- type: vless
-  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
-  name: '🇫🇷 法国 | FRA #1'
-  server: 13.141.36.43
-  port: 443
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: 6bf329t.nl18.h1clayd.click
-  client-fingerprint: chrome
-- type: vless
   uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
   name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   server: 185.247.224.206
@@ -59,23 +34,31 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- type: vless
+  uuid: ba373a70-295f-482d-a471-8bc17b54e23b
+  name: 🇷🇴 罗马尼亚 | ROU
+  server: 46.28.67.210
+  port: 443
+  udp: true
+  network: grpc
+  tls: true
+  servername: foxbramble.xyz
+  client-fingerprint: firefox
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 | FRA
-  - '🇫🇷 法国 | FRA #1'
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   - 🇷🇴[www.v2nodes.com] vless-RO-1...
+  - 🇷🇴 罗马尼亚 | ROU
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 | FRA
-  - '🇫🇷 法国 | FRA #1'
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   - 🇷🇴[www.v2nodes.com] vless-RO-1...
+  - 🇷🇴 罗马尼亚 | ROU
 rules:
 - MATCH,SELECT

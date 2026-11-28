@@ -11,27 +11,25 @@ dns:
   - 8.8.8.8
 proxies:
 - type: vmess
-  uuid: 2a489513-46b5-488c-9899-9faaf2d83cd9
+  uuid: aeff933f-0ae6-4465-85bf-12f1394f35af
   alterId: 0
   cipher: auto
-  network: ws
-  name: 未知156
-  server: 120.48.133.162
-  port: 10086
+  network: tcp
+  name: 未知25
+  server: 150.242.244.116
+  port: 2648
   udp: true
-  ws-opts:
-    path: /
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 未知156
+  - 未知25
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 未知156
+  - 未知25
 rules:
 - MATCH,SELECT

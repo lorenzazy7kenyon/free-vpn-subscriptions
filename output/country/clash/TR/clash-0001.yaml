@@ -10,39 +10,28 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vless
-  uuid: fc2c3252-08cc-4b7c-ae27-cf85f2af3270
-  name: '🇺🇸 美国 | USA #5'
-  server: 87.120.106.95
-  port: 443
-  udp: true
+- type: vmess
+  uuid: f5f293ed-e177-4c91-84df-ccf4c9a3e262
+  alterId: 0
+  cipher: auto
   network: tcp
-  tls: true
-  servername: www.gr-cdn.com
-  client-fingerprint: firefox
-- type: vless
-  uuid: da9fa513-d8a6-48a0-b266-d31062375070
-  name: '🇺🇸 美国 | USA #4'
-  server: 87.120.106.95
-  port: 443
+  name: 未知23
+  server: 93.114.98.23
+  port: 2083
   udp: true
-  network: tcp
   tls: true
-  servername: samoanews.com
-  client-fingerprint: firefox
+  servername: ty7v85hv2391.dx1dx.com
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - '🇺🇸 美国 | USA #5'
-  - '🇺🇸 美国 | USA #4'
+  - 未知23
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - '🇺🇸 美国 | USA #5'
-  - '🇺🇸 美国 | USA #4'
+  - 未知23
 rules:
 - MATCH,SELECT

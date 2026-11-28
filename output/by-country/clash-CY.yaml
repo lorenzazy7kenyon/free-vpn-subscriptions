@@ -10,28 +10,25 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- type: vmess
-  uuid: dd41b5cb-b72e-4a8c-c75a-3ecc928d6eb3
-  alterId: 0
-  cipher: auto
-  network: ws
-  name: 🏁RELAY-154.92.9.101-8400
-  server: 154.92.9.101
-  port: 80
+- type: hysteria2
+  password: 216c50f9-37dc-457d-b3f5-90732791d10d
+  name: 🇺🇸 美国 | USA
+  server: 45.86.74.193
+  port: 443
   udp: true
-  ws-opts:
-    path: /blue
+  sni: media.embrofree.org
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🏁RELAY-154.92.9.101-8400
+  - 🇺🇸 美国 | USA
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - 🏁RELAY-154.92.9.101-8400
+  - 🇺🇸 美国 | USA
 rules:
 - MATCH,SELECT
